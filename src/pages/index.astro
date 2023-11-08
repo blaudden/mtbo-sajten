@@ -1,0 +1,79 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+
+---
+
+<Layout>
+  <Hero
+    image={{ src: '~/assets/images/hero.jpg', alt: 'Mountainbikeorienterare i full fart' }}
+  >
+    <Fragment slot="title">
+      <span class="block mb-1 sm:hidden">Välkommen!</span>
+      <span class="hidden sm:inline">Välkommen till
+        <span class="text-blue-700 highlight">mountainbike</span>
+        <span class="text-yellow-500  highlight">orientering.se</span>
+      </span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Här hittar du information och nyheter om mountainbikeorientering (MTBO) - orientering i full fart.
+    </Fragment>
+  </Hero>
+
+
+  <Features
+    id="utrustning"
+    tagline="Utrustning"
+    title="Det här är utrustningen som behövs för mountainbikeorientering"
+    subtitle="Med en cykel, hjälm och ett kartställ kan du vara med på en tävling. Saknar du kartställ eller tidtagningschip finns det vanligtvis att hyra på tävlingarna."
+    items={[
+      {
+        title: 'Cykel',
+        description:
+          'Cykeln ska vara avpassad för att kunna välja en väg där du så snabbt som möjligt kan ta dig fram mellan kontrollerna. Ibland innebär det en lång väg runt på en lättcyklad stig medans det i andra fall blir en kortare men långsammare och mer svårcyklad stig. Den cykeln du har och din egen förmåga att använda den är vad som är bäst just för dig. Dom flesta använder en mountainbike av cross-country modell då underlaget kan variera allt mellan asfalt, grus och gräs till olika enkel- eller svår-cyklade stigar.',
+        icon: 'tabler:bike',
+      },
+      {
+        title: 'Kartställ',
+        description:
+          'För att kunna läsa kartan i farten medans man cyklar används ett kartställ som fästs på styret, det kan roteras för att "passa" kartan så att den alltid är i färdriktningen. Det finns olika storlek och material på kartställ, det vanligaste är 30x30cm och gjort i plast. Större kartställ används för att undvika att behöva vika om kartan under tävlingen, det kan spara lite tid. Kartställ med platta gjord av kolfiber används framförallt för att minska vibrationer och därmed göra det enklare att läsa kartan i farten.',
+        icon: 'tabler:map-2',
+      },
+      {
+        title: 'Skydd',
+        description:
+          'Hjälm är obligatoriskt och utan den får man inte starta. För att hålla fartvinden borta och göra det lättare att läsa kartan används glasögon. Det kan också vara lämpligt att använda knä eller armbågsskydd för att skydda utsatta kroppsdelar.',
+        icon: 'tabler:helmet',
+      },
+      {
+        title: 'Klädsel',
+        description:
+          'Vanliga cykelkläder anpassade efter rådande väder brukar fungera bra. Ofta används uttrycket "fri klädsel" som betyder att man inte behöver ha heltäckande klädsel, det är annars är ett krav när man springer orientering i skogen.',
+        icon: 'tabler:shirt',
+      },
+      {
+        title: 'Kompass',
+        description:
+          'För att kunna passa kartan mot norr kan en kompass användas, men då man oftast följer tydliga terrängföremål är det vanligt att det fungerar lika bra att passa kartan efter naturen - dvs. utan kompass. Det finns speciella kompasser som fästs runt handleden eftersom en vanlig handhållen kompass är svår att använda samtidigt som man cyklar.',
+        icon: 'tabler:compass',
+      },
+      {
+        title: 'Tidtagning',
+        description:
+          'Varje deltagare har med sig ett tidtagningschip som registrerar kontrollerna, beroende på system behöver man antingen stanna för att "stämpla" eller så registreras kontrollen automatisk i farten. Det i dagsläget vanligaste är SportIdent Air+ med SIAC, då registreras kontrollen automatiskt vid passage.',
+        icon: 'tabler:clock-play',
+      },
+    ]}
+  />
+
+  <BlogLatestPosts
+    title="Blog"
+    information={`I vår blog hittar du intressanta artiklar om kommande tävlingar, träningsläger och allt annat som kan vara bra att veta för dig som gillar mountainbikeorientering.
+                 `}
+    count = 8
+  />
+</Layout>

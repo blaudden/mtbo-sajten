@@ -1,0 +1,122 @@
+---
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Om',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Sporten"
+    image={{
+      src: '~/assets/images/about.jpg',
+      alt: 'Mountainbikeorienterare på väg förbi kontroll',
+    }}
+  >
+    <Fragment slot="title">
+      Om mountainbikeorientering
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Mountainbikeorientering (MTBO) är en gren inom orientering där
+      man använder cykel för att ta sig runt en orienteringsbana. Banan går
+      mestadels på stigar och andra cykel-framkomliga områden. För att kunna
+      läsa kartan medan man cyklar har man den fäst på ett kartställ på
+      styret, kartstället går att vrida så att man alltid har kartan i färdriktningen,
+      det kallas för att "passa" kartan. På cykel färdas man mer än dubbelt
+      så fort som när man springer och det är därmed viktigare än någonsin att
+      hela tiden hålla reda på var man befinner sig för att kunna ta snabba beslut
+      om vart man ska ta vägen härnäst. Kartan har ett utseende som framhäver det
+      som är viktigt när man cyklar, så att det syns bättre helt enkelt. Vägar och stigars
+      snabbhet framgår av kartan och ju längre deras streck på kartan är, desto
+      snabbare går stigen att cykla.
+    </Fragment>
+  </Hero>
+
+  <Content
+    title="Kuriosa"
+    isReversed
+    items={[
+    {
+      title: 'Förkortning:',
+      description:
+        `MTBO är den vedertagna förkortningen av mountainbikeorientering - både i Sverie
+        och internationellt. Tidigare har förkortningarna MtbO och MTB-O använts men sedan
+        ett par år tillbaka är det alltså MTBO med stora bokstäver och utan bindestreck som
+        gäller.  Förkortningen MTBO används framförallt när man kommunicerar med dom som
+        redan är  insatta i sporten och i annat fall kan man använda sig av MTB-orientering,
+        cykelorientering eller helt enkelt skriva ut hela ordet mountainbikeorientering.
+        Alla vet vad orientering, cykel och mountainbike är!`,
+    },
+    {
+      title: 'Bakgrund:',
+      description: `Mountainbikeorientering (MTBO) har funnits i mer än 10 år i Sverige och tävlingar där alla är välkomna
+      arrangeras nu med jämna mellanrum. Sporten är relativt sett större i andra länder, framförallt
+      söderöver i Europa där cykling är en stor sport med mycket kunnande om hur man tränar cykling och arrangerar cykeltävlingar.
+      I Sverige där det finns många orienterare och konditionsidrottare finns stor potential för att sporten fortsätter växa.
+      Troligen har även andra länders avsaknad av allemansrätt medfört att man fått hålla sig till stigar och vägar.`,
+    },
+    ]}
+    image={{
+      src: '~/assets/images/about2.jpg',
+      alt: 'Mountainbikeorienterare närbild med kartställ och nummerlapp',
+    }}
+  >
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Content>
+
+
+
+  <Features2
+    title="Olika sätt att få mer information om mountainbikeorientering "
+    tagline="Kontakt"
+    columns={3}
+    items={[
+      {
+        title: 'Skicka mail',
+        description:
+          'Vid frågor om sajten mountainbikeorientering.se och dess innehåll.',
+        icon: 'tabler:mail',
+        callToAction: {
+          variant: 'primary',
+          target: '_blank',
+          text: 'Skicka mail',
+          href: 'mailto:mountainbikeorientering@gmail.com',
+        },
+      },
+      {
+        title: 'Facebook sidan',
+        description:
+          'Följ oss på facebook.com/mountainbikeorientering.',
+        icon: 'tabler:brand-facebook',
+        callToAction: {
+          variant: 'primary',
+          target: '_blank',
+          text: 'Facebook sida',
+          href: 'https://facebook.com/mountainbikeorientering',
+        },
+      },
+      {
+        title: 'MTBO Sverige gruppen',
+        description:
+          'Via Facebook gruppen "MTBO Sverige" kan du ställa frågor och få tips.',
+        icon: 'tabler:brand-facebook',
+        callToAction: {
+          variant: 'primary',
+          target: '_blank',
+          text: 'MTBO Sverige på Facebook',
+          href: 'https://www.facebook.com/groups/357934787713',
+        },
+      },
+    ]}
+  />
+</Layout>
