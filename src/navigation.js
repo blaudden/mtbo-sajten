@@ -32,7 +32,7 @@ export const footerData = {
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/blaudden/mtbo-sajten' },
   ],
-  footNote: ``
+  footNote: `© <a class="text-blue-700 hover:underline dark:text-gray-200" href="https://mountainbikeorientering.se/">mountainbikeorientering.se</a> 2023`
 
 
 };
