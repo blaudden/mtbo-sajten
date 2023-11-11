@@ -9,6 +9,7 @@ import { getPermalink } from '~/utils/permalinks';
 import { getFormattedDate } from '~/utils/utils';
 
 import type { Post } from '~/types';
+import { getPrettyCategory } from '~/utils/category';
 
 export interface Props {
   post: Post;
@@ -32,7 +33,7 @@ const { Content } = post;
                 {' '}
                 ·{' '}
                 <a class="capitalize hover:underline inline-block" href={getPermalink(post.category, 'category')}>
-                  {post.category.replaceAll('-', ' ')}
+                  {getPrettyCategory(post.category)}
                 </a>
               </>
             )
