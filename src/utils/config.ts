@@ -124,9 +124,7 @@ const getI18N = () => {
 
   return Object.assign(value, {
     dateFormatter: new Intl.DateTimeFormat(value.language, {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
+      dateStyle: 'short',
       timeZone: 'UTC',
     }),
   }) as I18NConfig;
