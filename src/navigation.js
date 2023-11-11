@@ -23,7 +23,7 @@ export const footerData = {
       links: [
         { text: 'Svenska Cupen', href: getPermalink('/svenska-cupen') },
         { text: 'O-Ringen', href: getPermalink('/oringen') },
-        { text: 'Eventor', href: 'https://eventor.orientering.se/Events?excludeAttributes=11&disciplines=MountainBike&startDate=2024-01-01&endDate=2024-12-31&map=false&mode=List' }
+        { text: 'Eventor', href: getPermalink('/eventor') }
       ],
     },
   ],
