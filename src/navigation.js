@@ -14,8 +14,16 @@ export const headerData = {
 
 export const footerData = {
   links: [
+    {
+      title: 'Tävlingar',
+      links: [
+        { text: 'Svenska Cupen', href: getPermalink('/svenska-cupen') },
+        { text: 'O-Ringen', href: getPermalink('/oringen') },
+      ],
+    },
   ],
   secondaryLinks: [
+
   ],
   socialLinks: [
     //    { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
@@ -25,5 +33,6 @@ export const footerData = {
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/blaudden/mtbo-sajten' },
   ],
   footNote: ``
+
 
 };

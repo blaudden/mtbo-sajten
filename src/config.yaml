@@ -11,7 +11,7 @@ metadata:
   title:
     default: Mountainbikeorientering
     template: '%s — mountainbikeorientering.se'
-  description: "Information om mountainbikeorientering, orientering på cykel"
+  description: "En blog med allt som kan vara bra att veta för dig som gillar mountainbikeorientering (MTBO)."
   robots:
     index: true
     follow: true
@@ -55,7 +55,7 @@ apps:
         index: true
 
     tag:
-      isEnabled: true
+      isEnabled: false
       pathname: 'tag' # Tag main path /tag/some-tag, you can change this to "topics" (/topics/some-category)
       robots:
         index: false
