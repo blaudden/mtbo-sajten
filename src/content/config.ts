@@ -5,6 +5,7 @@ const postCollection = defineCollection({
     publishDate: z.string(),
     updateDate: z.string().optional(),
     draft: z.boolean().optional(),
+    evergreen: z.boolean().optional(),
 
     title: z.string(),
     excerpt: z.string().optional(),
@@ -14,7 +15,7 @@ const postCollection = defineCollection({
     tags: z.array(z.string()).optional(),
     author: z.string().optional(),
 
-    metadata: z.object({canonical: z.string().optional()}).optional()
+    metadata: z.object({ canonical: z.string().optional() }).optional(),
   }),
 });
 

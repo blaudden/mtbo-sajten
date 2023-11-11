@@ -53,6 +53,7 @@ const getNormalizedPost = async (post: CollectionEntry<'posts'>): Promise<Post> 
     category: rawCategory,
     author,
     draft = false,
+    evergreen = false,
     metadata = {},
   } = data;
 
@@ -80,6 +81,8 @@ const getNormalizedPost = async (post: CollectionEntry<'posts'>): Promise<Post> 
 
     draft: draft,
 
+    evergreen: evergreen,
+
     metadata,
 
     Content: Content,
@@ -90,6 +93,8 @@ const getNormalizedPost = async (post: CollectionEntry<'posts'>): Promise<Post> 
 const load = async function (): Promise<Array<Post>> {
   const posts = await getCollection('posts');
   const normalizedPosts = posts.map(async (post) => await getNormalizedPost(post));
+
+  console.log(posts);
 
   const results = (await Promise.all(normalizedPosts))
     .sort((a, b) => b.publishDate.valueOf() - a.publishDate.valueOf())
@@ -152,9 +157,16 @@ export const findPostsByIds = async (ids: Array<string>): Promise<Array<Post>> =
 };
 
 /** */
+export const fetchBlogPosts = async (): Promise<Array<Post>> => {
+  const posts = await fetchPosts();
+
+  return posts ? posts.filter((post) => !post.evergreen ) : [];
+};
+
+/** */
 export const findLatestPosts = async ({ count }: { count?: number }): Promise<Array<Post>> => {
   const _count = count || 4;
-  const posts = await fetchPosts();
+  const posts = await fetchBlogPosts();
 
   return posts ? posts.slice(0, _count) : [];
 };
@@ -162,7 +174,7 @@ export const findLatestPosts = async ({ count }: { count?: number }): Promise<Ar
 /** */
 export const getStaticPathsBlogList = async ({ paginate }) => {
   if (!isBlogEnabled || !isBlogListRouteEnabled) return [];
-  return paginate(await fetchPosts(), {
+  return paginate(await fetchBlogPosts(), {
     params: { blog: BLOG_BASE || undefined },
     pageSize: blogPostsPerPage,
   });

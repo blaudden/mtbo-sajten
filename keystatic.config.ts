@@ -14,7 +14,7 @@ const storage: LocalConfig['storage'] | GitHubConfig['storage'] =
       };
 
 // Location of embedded images in Markdoc differ locally vs. online
-const embeddedImagePubPath: string = 
+const embeddedImagePubPath: string =
   process.env.NODE_ENV === 'development'
     ? 'src/assets/images/posts' :
       '~/assets/images/posts';
@@ -38,6 +38,10 @@ const posts = collection({
     draft: fields.checkbox({
       label: 'Draft',
       description: 'Sätt artikel som draft om den inte ska publiceras ännu',
+    }),
+    evergreen: fields.checkbox({
+      label: 'Evergreen',
+      description: 'Sätt artikel som evergreen, den får då inget datum',
     }),
     publishDate: fields.date({
       label: 'Published date',
