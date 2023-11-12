@@ -17,8 +17,7 @@ const storage: LocalConfig['storage'] | GitHubConfig['storage'] =
 const embeddedImagePubPath: string =
   process.env.NODE_ENV === 'development'
     ? 'src/assets/images/posts' :
-      '~/assets/images/posts';
-console.log(embeddedImagePubPath);
+      '~/assets/images/posts';;
 
 const posts = collection({
   label: 'Posts',
