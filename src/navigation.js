@@ -23,7 +23,7 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: 'Innehåll',
+      title: 'Tävlingar',
       links: [
         { text: 'Svenska Cupen', href: getPermalink('/svenska-cupen') },
         { text: 'O-Ringen', href: getPermalink('/oringen') },
@@ -31,7 +31,7 @@ export const footerData = {
       ],
     },
     {
-      title: '',
+      title: 'På sajten',
       links: [
         { text: 'Blog', href: getBlogPermalink() },
         { text: 'Om', href: getPermalink('about', 'page') },
