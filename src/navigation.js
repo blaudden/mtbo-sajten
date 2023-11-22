@@ -3,8 +3,12 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Svenska Cupen',
-      href: getPermalink('/svenska-cupen'),
+      text: 'Tävlingar',
+      links: [
+        { text: 'Svenska Cupen', href: getPermalink('/svenska-cupen') },
+        { text: 'O-Ringen', href: getPermalink('/oringen') },
+        { text: 'Eventor', href: getPermalink('/eventor') }
+      ],
     },
     {
       text: 'Blog',
@@ -19,12 +23,19 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: 'Tävlingar',
+      title: 'Innehåll',
       links: [
         { text: 'Svenska Cupen', href: getPermalink('/svenska-cupen') },
         { text: 'O-Ringen', href: getPermalink('/oringen') },
         { text: 'Eventor', href: getPermalink('/eventor') }
       ],
+    },
+    {
+      title: '',
+      links: [
+        { text: 'Blog', href: getBlogPermalink() },
+        { text: 'Om', href: getPermalink('about', 'page') },
+      ]
     },
   ],
   secondaryLinks: [

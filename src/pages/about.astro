@@ -1,5 +1,4 @@
 ---
-import Content from '~/components/widgets/Content.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Layout from '~/layouts/PageLayout.astro';
@@ -25,7 +24,7 @@ const metadata = {
 
     <Fragment slot="subtitle">
       Mountainbikeorientering (MTBO) är en gren inom orientering där
-      man använder cykel för att ta sig runt en orienteringsbana. Banan går
+      man använder cykel - oftast en mountainbike - för att ta sig runt en orienteringsbana. Banan går
       mestadels på stigar och andra cykel-framkomliga områden. För att kunna
       läsa kartan medan man cyklar har man den fäst på ett kartställ på
       styret, kartstället går att vrida så att man alltid har kartan i färdriktningen,
@@ -38,41 +37,6 @@ const metadata = {
       snabbare går stigen att cykla.
     </Fragment>
   </Hero>
-
-  <Content
-    isReversed
-    items={[
-    {
-      title: 'Förkortning:',
-      description:
-        `MTBO är den vedertagna förkortningen av mountainbikeorientering - både i Sverie
-        och internationellt. Tidigare har förkortningarna MtbO och MTB-O använts men sedan
-        ett par år tillbaka är det alltså MTBO med stora bokstäver och utan bindestreck som
-        gäller.  Förkortningen MTBO används framförallt när man kommunicerar med dom som
-        redan är  insatta i sporten och i annat fall kan man använda sig av MTB-orientering,
-        cykelorientering eller helt enkelt skriva ut hela ordet mountainbikeorientering.
-        Alla vet vad orientering, cykel och mountainbike är!`,
-    },
-    {
-      title: 'Bakgrund:',
-      description: `Mountainbikeorientering (MTBO) har funnits i mer än 10 år i Sverige och tävlingar där alla är välkomna
-      arrangeras nu med jämna mellanrum. Sporten är relativt sett större i andra länder, framförallt
-      söderöver i Europa där cykling är en stor sport med mycket kunnande om hur man tränar cykling och arrangerar cykeltävlingar.
-      I Sverige där det finns många orienterare och konditionsidrottare finns stor potential för att sporten fortsätter växa.
-      Troligen har även andra länders avsaknad av allemansrätt medfört att man fått hålla sig till stigar och vägar.`,
-    },
-    ]}
-    image={{
-      src: '~/assets/images/about2.jpg',
-      alt: 'Mountainbikeorienterare närbild med kartställ och nummerlapp',
-    }}
-  >
-
-  <Fragment slot="bg">
-    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-  </Fragment>
-</Content>
-
 
 
   <Features2
@@ -117,5 +81,9 @@ const metadata = {
         },
       },
     ]}
-  />
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
 </Layout>
