@@ -1,6 +1,6 @@
 site:
   name: Mountainbikeorientering
-  site: 'https://mountainbikeorientering.se'
+  site: 'https://www.mountainbikeorientering.se'
   base: '/'
   trailingSlash: false
 
@@ -11,7 +11,7 @@ metadata:
   title:
     default: Mountainbikeorientering
     template: '%s — mountainbikeorientering.se'
-  description: "En blog med allt som kan vara bra att veta för dig som gillar mountainbikeorientering (MTBO)."
+  description: "Här finns intressanta artiklar om kommande tävlingar och annat som är bra att veta för dig som gillar mountainbikeorientering (MTBO)"
   robots:
     index: true
     follow: true
