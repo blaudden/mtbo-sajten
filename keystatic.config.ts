@@ -34,6 +34,10 @@ const posts = collection({
         validation: { length: { min: 5, max: 64 } },
       },
     }),
+    subtitle: fields.text({
+      label: 'Subtitle',
+      description: 'Används för att skriv ut en mindre text under titlen, för tex ort+datum',
+    }),
     draft: fields.checkbox({
       label: 'Draft',
       description: 'Sätt artikel som draft om den inte ska publiceras ännu',

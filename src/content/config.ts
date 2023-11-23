@@ -8,6 +8,7 @@ const postCollection = defineCollection({
     evergreen: z.boolean().optional(),
 
     title: z.string(),
+    subtitle: z.string().optional(),
     excerpt: z.string().optional(),
     image: z.string(),
 
