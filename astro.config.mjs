@@ -23,6 +23,16 @@ const whenExternalScripts = (items = []) =>
       : [items()]
     : [];
 
+// Array with pages to eclude from sitemap
+const sitemap_exclude = [
+  // Remove canonical pages
+  'https://www.mountainbikeorientering.se/mountainbikeorientering-i-uppland-hosten-2023',
+  'https://www.mountainbikeorientering.se/mtbo-i-skutskaer-28-29-augusti-2021',
+  'https://www.mountainbikeorientering.se/sportident-air-utbildning-i-uppsala',
+  'https://www.mountainbikeorientering.se/mtbo-sommar-i-uppsala-2022',
+  'https://www.mountainbikeorientering.se/mtbo-i-osterbybruk-2021'
+];
+
 // https://astro.build/config
 export default defineConfig({
   site: SITE.site,
@@ -42,6 +52,7 @@ export default defineConfig({
           en: 'en-US',
         },
       },
+      filter: (page) => !sitemap_exclude.includes(page)
     }),
     mdx(),
     markdoc(),
