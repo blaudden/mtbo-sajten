@@ -34,7 +34,15 @@ export default defineConfig({
     tailwind({
       applyBaseStyles: false,
     }),
-    sitemap(),
+    sitemap({
+      i18n: {
+        defaultLocale: 'sv', // All urls that don't contain `sv` will be treated as default locale, i.e. `sv`
+        locales: {
+          sv: 'sv-SE', // The `defaultLocale` value must present in `locales` keys
+          en: 'en-US',
+        },
+      },
+    }),
     mdx(),
     markdoc(),
     react(),
