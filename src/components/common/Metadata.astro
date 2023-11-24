@@ -42,6 +42,7 @@ const seoProps: AstroSeoProps = merge(
     twitter: {
       cardType: openGraph?.images?.length ? 'summary_large_image' : 'summary',
     },
+    languageAlternates: [{hrefLang: 'x-default',  href: canonical }]
   },
   {
     title: METADATA?.title?.default,
