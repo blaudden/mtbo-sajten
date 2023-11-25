@@ -59,6 +59,8 @@ export interface MetaData {
 
   openGraph?: MetaDataOpenGraph;
   twitter?: MetaDataTwitter;
+
+  langRelated?: Array<string>;
 }
 
 export interface MetaDataRobots {

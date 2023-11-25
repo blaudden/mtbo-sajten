@@ -9,6 +9,7 @@ import type { MetaData } from '~/types';
 import { getCanonical } from '~/utils/permalinks';
 
 import { adaptOpenGraphImages } from '~/utils/images';
+import { getLangFromSlug } from '~/utils/i18n';
 
 export interface Props extends MetaData {
   dontUseTitleTemplate?: boolean;
@@ -22,7 +23,14 @@ const {
   description,
   openGraph = {},
   twitter = {},
+  langRelated = [],
 } = Astro.props;
+
+const langAlts = langRelated
+  .map((slug) => {
+    return { hrefLang: getLangFromSlug(slug), href: String(getCanonical(String(slug))) };
+  })
+  .concat({ hrefLang: 'x-default', href: String(getCanonical(String(langRelated[0]))) });
 
 const seoProps: AstroSeoProps = merge(
   {
@@ -42,7 +50,7 @@ const seoProps: AstroSeoProps = merge(
     twitter: {
       cardType: openGraph?.images?.length ? 'summary_large_image' : 'summary',
     },
-    languageAlternates: [{hrefLang: 'x-default',  href: canonical }]
+    languageAlternates: langAlts,
   },
   {
     title: METADATA?.title?.default,

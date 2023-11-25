@@ -155,6 +155,19 @@ export const findPostsByIds = async (ids: Array<string>): Promise<Array<Post>> =
 };
 
 /** */
+export const findLangRelatedPosts = async (slug: string): Promise<Array<string>> => {
+  if (slug.length == 0) return [];
+
+  const last = slug.split('/').pop();
+  const posts = await fetchBlogPosts();
+
+  return posts
+    .map((post) => post.slug)
+    .filter((slug) => slug.split('/').pop() === last)
+    .sort((a, b) => a.length - b.length);
+};
+
+/** */
 export const fetchBlogPosts = async (): Promise<Array<Post>> => {
   const posts = await fetchPosts();
 

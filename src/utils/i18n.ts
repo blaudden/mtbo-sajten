@@ -23,6 +23,12 @@ export function getLangFromUrl(url: URL) {
   return defaultLang;
 }
 
+export function getLangFromSlug(slug: string) {
+  const lang = slug.split('/')[0];
+  if (lang in ui) return lang;
+  return defaultLang;
+}
+
 export function useTranslations(lang: keyof typeof ui) {
   return function t(key: keyof (typeof ui)[typeof defaultLang]) {
     return ui[lang][key] || ui[defaultLang][key];
