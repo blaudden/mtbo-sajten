@@ -43,8 +43,6 @@ export interface Post {
   Content?: AstroComponentFactory;
   content?: string;
 
-  /**  */
-  readingTime?: number;
 }
 
 export interface MetaData {
