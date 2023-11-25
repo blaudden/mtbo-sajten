@@ -32,7 +32,6 @@ const langAlts = langRelated
   });
 const xDefault = langRelated[0] ? langRelated[0] : canonical;
 langAlts.push({ hrefLang: 'x-default', href: String(getCanonical(String(xDefault))) });
-console.log(langAlts);
 
 const seoProps: AstroSeoProps = merge(
   {
