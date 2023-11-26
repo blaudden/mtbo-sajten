@@ -34,10 +34,10 @@ const metadata = merge(
     },
     langRelated: langRelated
   },
-  { ...(post?.metadata ? { ...post.metadata, canonical: post.metadata?.canonical || url } : {}) }
+  { ...(post?.metadata ? { ...post.metadata, canonical: post.metadata?.canonical || String(url) } : {}) }
 );
 ---
 
 <Layout metadata={metadata}>
-  <SinglePost post={{ ...post, image: image }} url={url} />
+  <SinglePost post={{ ...post, image: image?.src }} url={url} />
 </Layout>
