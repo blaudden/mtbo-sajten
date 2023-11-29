@@ -28,6 +28,57 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
     </Fragment>
   </Hero>
 
+
+  <BlogLatestPosts
+    title="Blog"
+    linkText='Se alla artiklar'
+    information={`En blog med allt som kan vara bra att veta för dig som gillar mountainbikeorientering.`}
+    count = {8}
+  >
+  </BlogLatestPosts>
+
+  <Content
+    tagline="Sporten"
+    title="Om mountainbikeorientering"
+    subtitle=""
+    items={[
+    {
+      title: 'Sporten:',
+      description:
+        `Mountainbikeorientering (MTBO) är en gren inom orientering där
+      man använder cykel - oftast en mountainbike - för att ta sig runt en orienteringsbana.
+      Banorna går mest på stigar och andra cykel-framkomliga områden.`,
+    },
+    {
+      title: 'Karta:',
+      description:
+        `Kartan har ett utseende som framhäver det
+      som är viktigt när man cyklar. Vägar och stigars snabbhet framgår av kartan
+      och ju längre deras streck på kartan är, desto snabbare går stigen att cykla.
+      För att kunna läsa kartan medans man cyklar är den fäst på ett kartställ på
+      styret, kartstället går att vrida så att man alltid har kartan i färdriktningen -
+      det kallas för att "passa" kartan. `,
+    },
+    {
+      title: 'Full fart:',
+      description:
+        `På cykel färdas man mer än dubbelt
+      så fort som när man springer och det är därmed viktigare än någonsin att
+      hela tiden hålla reda på var man befinner sig för att kunna ta snabba beslut
+      om vart man ska ta vägen härnäst.`,
+    },
+    ]}
+    image={{
+      src: '~/assets/images/about.jpg',
+      alt: 'Mountainbikeorienterare på väg förbi kontroll',
+    }}
+  >
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
   <Features
     id="utrustning"
     tagline="Utrustning"
@@ -72,18 +123,8 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
       },
     ]}
   >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
   </Features>
 
-  <BlogLatestPosts
-    title="Blog"
-    linkText='Se alla artiklar'
-    information={`En blog med allt som kan vara bra att veta för dig som gillar mountainbikeorientering.`}
-    count = {8}
-  >
-  </BlogLatestPosts>
 
   <Content
     tagline="Lär dig mer"
