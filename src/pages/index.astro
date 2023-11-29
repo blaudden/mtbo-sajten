@@ -1,14 +1,14 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import Content from '~/components/widgets/Content.astro';
-import Hero2 from '~/components/widgets/Hero.astro';
+import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 
 ---
 
 <Layout>
-  <Hero2
+  <Hero
     image={{ src: '~/assets/images/hero.jpg', alt: 'Mountainbikeorienterare i full fart' }}
   >
     <Fragment slot="title">
@@ -25,7 +25,7 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
         <span class="text-accent  highlight">orientering.se</span>
       </span> hittar du intressanta artiklar om kommande tävlingar och annat som är bra att veta för dig som gillar mountainbikeorientering (MTBO).
     </Fragment>
-  </Hero2>
+  </Hero>
 
   <Features
     id="utrustning"
