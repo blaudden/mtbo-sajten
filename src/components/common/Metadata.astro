@@ -9,7 +9,7 @@ import type { MetaData } from '~/types';
 import { getCanonical } from '~/utils/permalinks';
 
 import { adaptOpenGraphImages } from '~/utils/images';
-import { getLangFromSlug } from '~/utils/i18n';
+import { getLangFromSlug, getLangFromUrl } from '~/utils/i18n';
 
 export interface Props extends MetaData {
   dontUseTitleTemplate?: boolean;
@@ -33,6 +33,8 @@ const langAlts = langRelated
 const xDefault = langRelated[0] ? langRelated[0] : canonical;
 langAlts.push({ hrefLang: 'x-default', href: String(getCanonical(String(xDefault))) });
 
+const language = getLangFromUrl(Astro.url);
+
 const seoProps: AstroSeoProps = merge(
   {
     title: '',
@@ -45,7 +47,7 @@ const seoProps: AstroSeoProps = merge(
       url: canonical,
       site_name: SITE?.name,
       images: [],
-      locale: I18N?.language || 'en',
+      locale: I18N?.language || language || 'en',
       type: 'website',
     },
     twitter: {

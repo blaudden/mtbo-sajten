@@ -30,7 +30,7 @@ const metadata = merge(
     },
     openGraph: {
       type: 'article',
-      ...(image ? { images: [{ url: image, width: image?.width, height: image?.height }] } : {}),
+      ...(image ? { images: [{ url: post.image, width: image?.width, height: image?.height }] } : {}),
     },
     langRelated: langRelated
   },
