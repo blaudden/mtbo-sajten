@@ -10,7 +10,7 @@ export const headerData = {
       text: 'Tävlingar',
       links: [
         { text: 'Svenska Cupen', href: getPermalink('/svenska-cupen') },
-        { text: 'O-Ringen', href: getPermalink('/oringen') },
+        { text: 'O-Ringen 2024', href: getPermalink('/mtbo-oringen-smalandskusten-2024') },
         { text: 'Eventor', href: getPermalink('/eventor') }
       ],
     },
