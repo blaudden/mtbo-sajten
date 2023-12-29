@@ -1,6 +1,7 @@
 ---
 import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
@@ -9,34 +10,90 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="Sporten"
+    tagline="Sajten"
     image={{
-      src: '~/assets/images/about.jpg',
-      alt: 'Mountainbikeorienterare på väg förbi kontroll',
+      src: '~/assets/images/about_hero.jpg',
+      alt: 'Kontroll längs stigen i skogen',
     }}
   >
     <Fragment slot="title">
-      Om mountainbikeorientering
+      Om
+      <span class="hidden sm:inline">
+        <span class="text-primary highlight">mountainbike</span>
+        <span class="text-accent  highlight">orientering.se</span>
+      </span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Mountainbikeorientering (MTBO) är en gren inom orientering där
-      man använder cykel - oftast en mountainbike - för att ta sig runt en orienteringsbana. Banan går
-      mestadels på stigar och andra cykel-framkomliga områden. För att kunna
-      läsa kartan medan man cyklar har man den fäst på ett kartställ på
-      styret, kartstället går att vrida så att man alltid har kartan i färdriktningen,
-      det kallas för att "passa" kartan. På cykel färdas man mer än dubbelt
-      så fort som när man springer och det är därmed viktigare än någonsin att
-      hela tiden hålla reda på var man befinner sig för att kunna ta snabba beslut
-      om vart man ska ta vägen härnäst. Kartan har ett utseende som framhäver det
-      som är viktigt när man cyklar, så att det syns bättre helt enkelt. Vägar och stigars
-      snabbhet framgår av kartan och ju längre deras streck på kartan är, desto
-      snabbare går stigen att cykla.
+      Den här sidan handlar om mountainbikeorientering med artiklar ungefär som
+      en blog! Här ska
+      man kunna läsa artiklar om framtida tävlingar, bra träningstips, vilken
+      utrustning man behövesr, hur man ritar kartor, bästa val av cykel, kartställ och kompass, eller hur man sätter ut kontroller
+      i skogen - helt enkelt det man behöver veta för att hålla på med
+      mountainbikeorientering (MTBO).
+      <br><br>
+      Allt som finns här på websajten är baserat på öppen källkod och tanken är att alla som vill
+      kan vara med och skriva om det den vill berätta om. Det finns olika sätt att vara med och bidra, läs mer nedan.
     </Fragment>
   </Hero>
+
+  <Content
+    items={[
+      {
+        title: 'Öppen källkod på Github',
+        description: `Hela sajten bygger på öppen källkod och finns tillgänglig
+          på <a class="text-primary hover:underline dark:text-gray-200" href=https://github.com/blaudden/mtbo-sajten>GitHub</a>.
+          På så sätt hoppas vi att flera ska vilja bidra till sajten.`,
+        icon: 'tabler:brand-github-filled',
+      },
+      {
+        title: 'Skicka in text och bild',
+        description: `Det finns olika sätt att vara med och bidra. Enklast är att
+          skicka in din artikel som en text och bild via mail.`,
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Github pull request',
+        description: `Den som själv vill skriva in eller utveckla någon ny funktion
+          gör det med hjälp av ett GitHub konto, efter att ha gjort sina föreslagna
+          ändringar skickar man in dom med en pull-request.`,
+        icon: 'tabler:git-pull-request',
+      },
+           {
+        title: 'Sociala medier',
+        description:
+          `Websajten har konton på Facebook, Instagram, Twitter och YouTube.
+          Där delas det som skrivs på sajten och annat som ger MTBO uppmärksamhet.
+          Där heter sajten i dom flesta fall "Mountanbikeorientering", se länkar längst ner.`,
+        icon: 'tabler:wand',
+      },
+      {
+        title: 'Både svenska och engelska',
+        description:
+          `Dom flesta artiklar är på svenska, men i flera fall vänder
+          sig sajten till mountainbiekorienterare i andra länder och då
+          skrivs artiklarna även på engelska.`,
+        icon: 'tabler:world',
+      },
+      {
+        title: 'Initiativtagare och administratör',
+        description: `Initiativtagare till sajten och dess administratär är
+          Magnus Blåudd, med sin erfarenhet av systemutveckling ansvarar han
+          både för sajtens innehåll och funktion.`,
+        icon: 'tabler:hammer',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/about_skog.jpg',
+      alt: 'Stig i MTBO skogen',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Så fungerar sajten</h3>
+    </Fragment>
+  </Content>
 
 
   <Features2
