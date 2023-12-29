@@ -20,8 +20,7 @@ export interface Props {
 
 const { metadata = {} } = Astro.props;
 const { textDirection } = I18N;
-
-const language = metadata.openGraph ? metadata.openGraph.locale : "en";
+const language = metadata.openGraph ? metadata.openGraph.locale : "sv";
 ---
 
 <!DOCTYPE html>
