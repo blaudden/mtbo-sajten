@@ -14,7 +14,7 @@
     "lint:eslint": "eslint . --ext .js,.ts,.astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.3.1",
+    "@astrojs/check": "^0.4.1",
     "@astrojs/markdoc": "^0.8.0",
     "@astrojs/netlify": "^3.0.4",
     "@astrojs/react": "^3.0.4",
