@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev --host 127.0.0.1",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro build",
     "check": "astro check",
     "preview": "astro preview",
     "astro": "astro",
