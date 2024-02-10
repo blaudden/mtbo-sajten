@@ -58,7 +58,18 @@
     "tailwindcss": "^3.3.5",
     "typescript": "^5.2.2"
   },
+
+  "overrides": {
+    "astro-compress": {
+      "sharp": "0.33.1"
+    },
+    "astro": {
+      "sharp": "0.33.1"
+    }
+  },
+
   "engines": {
     "node": ">=18.14.1"
   }
+
 }
