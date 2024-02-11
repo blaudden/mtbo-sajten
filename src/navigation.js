@@ -13,6 +13,7 @@ export const headerData = {
         { text: 'SM Ulricehamn 2024', href: getPermalink('/svenska-maesterskapen-mtbo-2024') },
         { text: 'Värnamo 2024', href: getPermalink('/svenska-cupen-varnamo-2024') },
         { text: 'O-Ringen 2024', href: getPermalink('/mtbo-oringen-smalandskusten-2024') },
+        { text: 'Surahammar 2024', href: getPermalink('/svenska-cupen-surahammar-2024') },
         { text: 'Eventor', href: getPermalink('/eventor') },
 
         { text: 'VeteranCupen 2024', href: getPermalink('/svenska-veterancupen-2024') },
@@ -47,6 +48,7 @@ export const footerData = {
         { text: 'O-Ringen 2024', href: getPermalink('/mtbo-oringen-smalandskusten-2024') },
         { text: 'Landslagets tävlingar 2024', href: getPermalink('/mtbo-worldcup-2024') },
         { text: 'Veteran-VM 2024', href: getPermalink('/wmmtboc2024') },
+        { text: 'Surahammar 2024', href: getPermalink('/svenska-cupen-surahammar-2024') },
       ],
     },
     {
