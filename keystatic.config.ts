@@ -1,4 +1,4 @@
-import { config, fields, collection } from '@keystatic/core';
+import { config, fields, collection, component } from '@keystatic/core';
 import type { LocalConfig, GitHubConfig } from '@keystatic/core';
 
 // Storage strategy
@@ -95,6 +95,21 @@ const posts = collection({
       images: {
         directory: 'src/assets/images/posts',
         publicPath: embeddedImagePubPath,
+      },
+      componentBlocks: {
+        BlogListBySlug: component({
+          label: 'BlogListBySlug',
+          schema: {
+            title: fields.text({
+              label: 'Title',
+            }),
+            slugs: fields.array(fields.text({ label: 'Slug' }), {
+              label: 'Slug',
+              itemLabel: (props) => props.value,
+            }),
+          },
+          preview: () => null,
+        }),
       },
     }),
     metadata: fields.object({

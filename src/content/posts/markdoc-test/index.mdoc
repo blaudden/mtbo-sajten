@@ -1,0 +1,25 @@
+---
+title: markdoc-test
+draft: true
+evergreen: false
+publishDate: '2024-02-25'
+excerpt: >-
+  Artikel för att testa dom olika taggar som kan användas i Markdoc
+  integrationen.
+image: ~/assets/images/posts/markdoc-test/image.png
+category: ''
+tags: []
+author: Magnus Blåudd
+metadata: {}
+---
+## BlogListBySlug
+
+Visa lista med bloggartiklar
+
+- title - text som visas ovanför listan
+- slugs - lista av dom slugs som ska visas i listan
+
+{% BlogListBySlug
+   slugs=["mtbo-oringen-smalandskusten-2024", "en/mtbo-oringen-smalandskusten-2024"] /%}
+
+---
