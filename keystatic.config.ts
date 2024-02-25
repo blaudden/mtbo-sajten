@@ -110,6 +110,32 @@ const posts = collection({
           },
           preview: () => null,
         }),
+        YoutubeVideo: component({
+          label: 'YouTube Video',
+          schema: {
+            videoid: fields.text({
+              label: 'YouTube Video ID',
+              description: 'The ID of YouTube video (not the full URL)',
+              validation: {
+                length: {
+                  min: 1,
+                },
+              },
+            }),
+            title: fields.text({
+              label: 'Titel',
+              description: 'Videons titel (visas ovanpå filmens preview)',
+              validation: {
+                length: {
+                  min: 1,
+                },
+              },
+            }),
+          },
+          preview: (props) => {
+            props.fields.videoid.value ? props.fields.videoid.value : 'Please enter a YouTube video ID';
+          },
+        }),
       },
     }),
     metadata: fields.object({
