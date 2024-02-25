@@ -1,0 +1,21 @@
+---
+import {YouTube} from 'astro-lazy-youtube-embed'
+
+export interface Props {
+  title: string;
+  videoid: string;
+}
+
+const {
+  title = await Astro.slots.render("title"),
+  videoid = await Astro.slots.render("videoid"),
+} = Astro.props;
+
+---
+
+<YouTube
+  class="rounded-lg"
+  videoId={videoid}
+  title={title}
+  thumbnailRes={'maxres'}
+  />

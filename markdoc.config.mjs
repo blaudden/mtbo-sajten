@@ -8,6 +8,13 @@ export default defineMarkdocConfig({
         title: { type: 'String' },
         slugs: { type: 'Array' }
       },
+    },
+    YoutubeVideo : {
+      render: component('./src/components/markdoc/YoutubeVideo.astro'),
+      attributes: {
+        videoid: { type: 'String' },
+        title: { type: 'String' },
+      },
     }
   },
 });
