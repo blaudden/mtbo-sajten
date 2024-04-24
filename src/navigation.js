@@ -33,6 +33,12 @@ export const footerData = {
       ],
     },
     {
+      title: 'Läger',
+      links: [
+        { text: 'MTBO Rikslägret', href: getPermalink('/mtbo-rikslaeger-2024') },
+      ],
+    },
+    {
       title: 'På sajten',
       links: [
         { text: 'Blog', href: getBlogPermalink() },
