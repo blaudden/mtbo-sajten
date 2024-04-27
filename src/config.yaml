@@ -10,8 +10,8 @@ site:
 metadata:
   title:
     default: Mountainbikeorientering
-    template: '%s — mountainbikeorientering.se'
-  description: "Här finns intressanta artiklar om kommande tävlingar och annat som är bra att veta för dig som gillar mountainbikeorientering (MTBO)"
+    template: '%s'
+  description: "Information om kommande MTBO tävlingar, läger för MTB-orientering, tips om MTB-O och annat för dig som gillar mountainbikeorientering (MTBO)"
   robots:
     index: true
     follow: true
