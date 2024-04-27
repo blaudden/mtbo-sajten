@@ -11,6 +11,7 @@ export const headerData = {
       links: [
         { text: 'Svenska Cupen 2024', href: getPermalink('/svenska-cupen-mtbo-2024') },
         { text: 'SM Ulricehamn 2024', href: getPermalink('/svenska-maesterskapen-mtbo-2024') },
+        { text: 'Värnamo 2024', href: getPermalink('/svenska-cupen-varnamo-2024') },
         { text: 'O-Ringen 2024', href: getPermalink('/mtbo-oringen-smalandskusten-2024') },
         { text: 'Eventor', href: getPermalink('/eventor') }
       ],
@@ -24,12 +25,20 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: 'Tävlingar',
+      title: 'Info',
       links: [
         { text: 'Svenska Cupen', href: getPermalink('/svenska-cupen') },
-        { text: 'SM 2024', href: getPermalink('/svenska-maesterskapen-mtbo-2024') },
         { text: 'O-Ringen', href: getPermalink('/oringen') },
         { text: 'Eventor', href: getPermalink('/eventor') }
+      ],
+    },
+    {
+      title: 'Tävlingar 2024',
+      links: [
+        { text: 'Svenska Cupen 2024', href: getPermalink('/svenska-cupen-mtbo-2024') },
+        { text: 'SM 2024', href: getPermalink('/svenska-maesterskapen-mtbo-2024') },
+        { text: 'Värnamo 2024', href: getPermalink('/svenska-cupen-varnamo-2024') },
+        { text: 'O-Ringen 2024', href: getPermalink('/mtbo-oringen-smalandskusten-2024') },
       ],
     },
     {
