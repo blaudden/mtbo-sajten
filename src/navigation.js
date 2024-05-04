@@ -36,6 +36,7 @@ export const footerData = {
       title: 'Tävlingar 2024',
       links: [
         { text: 'Svenska Cupen 2024', href: getPermalink('/svenska-cupen-mtbo-2024') },
+        { text: 'Svenska VeteranCupen 2024', href: getPermalink('/svenska-veterancupen-2024') },
         { text: 'SM 2024', href: getPermalink('/svenska-maesterskapen-mtbo-2024') },
         { text: 'Värnamo 2024', href: getPermalink('/svenska-cupen-varnamo-2024') },
         { text: 'O-Ringen 2024', href: getPermalink('/mtbo-oringen-smalandskusten-2024') },
