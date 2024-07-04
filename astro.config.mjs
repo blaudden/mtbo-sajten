@@ -105,4 +105,9 @@ export default defineConfig({
       },
     },
   },
+
+  redirects: {
+    '/en/mtbo-': '/en/mtbo-oringen-smalandskusten-2024',
+    '/svenska-': '/svenska-cupen'
+  }
 });
