@@ -11,7 +11,7 @@ import tasks from './src/utils/tasks.mjs';
 import { ANALYTICS, SITE } from './src/utils/config.ts';
 import react from "@astrojs/react";
 import markdoc from "@astrojs/markdoc";
-import keystatic from '@keystatic/astro';
+//import keystatic from '@keystatic/astro';
 import netlify from "@astrojs/netlify";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -38,7 +38,7 @@ export default defineConfig({
   site: SITE.site,
   base: SITE.base,
   trailingSlash: SITE.trailingSlash ? 'always' : 'never',
-  output: 'hybrid',
+  output: 'static',
   adapter: netlify(),
   integrations: [
     tailwind({
@@ -57,7 +57,7 @@ export default defineConfig({
     mdx(),
     markdoc(),
     react(),
-    keystatic(),
+    //keystatic(),
     icon({
       include: {
         tabler: ['*'],
