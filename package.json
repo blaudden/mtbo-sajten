@@ -2,7 +2,11 @@
   "name": "mtbo-sajten",
   "description": "Package for MTBO sajten mountainbikeorientering.se.",
   "version": "1.0.0",
+  "type": "module",
   "private": true,
+    "engines": {
+    "node": ">=18.14.1"
+  },
   "scripts": {
     "dev": "astro dev --host 127.0.0.1",
     "start": "astro dev",
@@ -11,12 +15,12 @@
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier -w .",
-    "lint:eslint": "eslint . --ext .js,.ts,.astro"
+    "lint:eslint": "eslint ."
   },
   "dependencies": {
     "@astrojs/check": "^0.5.2",
     "@astrojs/markdoc": "^0.8.3",
-    "@astrojs/mdx": "^2.2.3",
+    "@astrojs/mdx": "^2.2.4",
     "@astrojs/netlify": "^5.1.0",
     "@astrojs/react": "^3.0.10",
     "@astrojs/rss": "^4.0.5",
@@ -28,7 +32,7 @@
     "@keystatic/core": "^0.3.17",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
-    "astro": "^4.5.15",
+    "astro": "^4.5.16",
     "astro-icon": "^1.1.0",
     "astro-lazy-youtube-embed": "^0.3.1",
     "limax": "4.1.0",
@@ -41,23 +45,27 @@
   "devDependencies": {
     "@astrojs/partytown": "^2.0.4",
     "@astrojs/tailwind": "^5.1.0",
+    "@eslint/js": "^9.0.0",
     "@iconify-json/flat-color-icons": "^1.1.10",
     "@iconify-json/tabler": "^1.1.109",
     "@tailwindcss/typography": "^0.5.12",
     "@types/js-yaml": "^4.0.9",
     "@types/lodash.merge": "^4.6.9",
-    "@typescript-eslint/eslint-plugin": "^7.5.0",
-    "@typescript-eslint/parser": "^7.5.0",
-    "astro-compress": "^2.2.21",
-    "eslint": "^8.57.0",
-    "eslint-plugin-astro": "^0.33.1",
+    "@typescript-eslint/eslint-plugin": "^7.6.0",
+    "@typescript-eslint/parser": "^7.6.0",
+    "astro-eslint-parser": "^0.17.0",
+    "@playform/compress": "^0.0.3",
+    "eslint": "^8.56.0",
+    "eslint-plugin-astro": "^0.34.0",
     "eslint-plugin-jsx-a11y": "^6.8.0",
+    "globals": "^15.0.0",
     "js-yaml": "^4.1.0",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0",
     "tailwind-merge": "^2.2.2",
     "tailwindcss": "^3.4.3",
-    "typescript": "^5.4.3"
+    "typescript": "^5.4.4",
+    "typescript-eslint": "^8.6.0"
   },
   "overrides": {
     "astro-compress": {
@@ -66,8 +74,5 @@
     "astro": {
       "sharp": "0.33.1"
     }
-  },
-  "engines": {
-    "node": ">=18.14.1"
   }
 }
