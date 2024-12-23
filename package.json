@@ -30,7 +30,7 @@
     "@types/react-dom": "^18.2.19",
     "astro": "^4.3.5",
     "astro-icon": "^1.1.0",
-    "astro-lazy-youtube-embed": "^0.4.0",
+    "astro-lazy-youtube-embed": "^0.5.1",
     "limax": "4.1.0",
     "lodash.merge": "^4.6.2",
     "react": "^18.2.0",
