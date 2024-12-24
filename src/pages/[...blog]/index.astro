@@ -11,7 +11,7 @@ import { getLangFromUrl } from '~/utils/i18n';
 
 export const prerender = true;
 
-export async function getStaticPaths () {
+export async function getStaticPaths() {
   return await getStaticPathsBlogPost();
 }
 
@@ -33,14 +33,16 @@ const metadata = merge(
     openGraph: {
       type: 'article',
       ...(image ? { images: [{ url: post.image, width: image?.width, height: image?.height }] } : {}),
-      locale: language
+      locale: language,
     },
-    langRelated: langRelated
+    langRelated: langRelated,
   },
   { ...(post?.metadata ? { ...post.metadata, canonical: post.metadata?.canonical || String(url) } : {}) }
 );
 ---
 
 <Layout metadata={metadata}>
-  <SinglePost post={{ ...post, image: image?.src }} url={url} />
+  <SinglePost post={{ ...post, image: image?.src }} url={url}>
+    {post.Content ? <post.Content /> : <Fragment set:html={post.content || ''} />}
+  </SinglePost>
 </Layout>
