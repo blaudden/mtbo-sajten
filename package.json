@@ -5,7 +5,7 @@
   "type": "module",
   "private": true,
     "engines": {
-    "node": ">=18.14.1"
+    "node": "^18.17.1 || ^20.3.0 || >= 21.0.0"
   },
   "scripts": {
     "dev": "astro dev --host 127.0.0.1",
@@ -20,7 +20,7 @@
   "dependencies": {
     "@astrojs/check": "^0.5.2",
     "@astrojs/markdoc": "^0.8.3",
-    "@astrojs/mdx": "^2.2.4",
+    "@astrojs/mdx": "^2.3.0",
     "@astrojs/netlify": "^5.1.0",
     "@astrojs/react": "^3.0.10",
     "@astrojs/rss": "^4.0.5",
@@ -32,7 +32,7 @@
     "@keystatic/core": "^0.3.17",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
-    "astro": "^4.5.18",
+    "astro": "^4.6.1",
     "astro-icon": "^1.1.0",
     "astro-lazy-youtube-embed": "^0.3.1",
     "limax": "4.1.0",
@@ -47,7 +47,7 @@
     "@astrojs/tailwind": "^5.1.0",
     "@eslint/js": "^9.0.0",
     "@iconify-json/flat-color-icons": "^1.1.10",
-    "@iconify-json/tabler": "^1.1.109",
+    "@iconify-json/tabler": "^1.1.110",
     "@tailwindcss/typography": "^0.5.12",
     "@types/js-yaml": "^4.0.9",
     "@types/lodash.merge": "^4.6.9",
