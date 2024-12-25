@@ -53,7 +53,8 @@ const seoProps: AstroSeoProps = merge(
     twitter: {
       cardType: openGraph?.images?.length ? 'summary_large_image' : 'summary',
     },
-    languageAlternates: langAlts,
+    // Wrong structure of langAlts
+    //languageAlternates: langAlts,
   },
   {
     title: METADATA?.title?.default,
