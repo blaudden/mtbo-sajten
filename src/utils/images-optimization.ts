@@ -215,12 +215,6 @@ export const astroAsseetsOptimizer: ImagesOptimizer = async (image, breakpoints,
     return [];
   }
 
-  // Disable optimization for local image files?
-  if (typeof image === 'string') {
-    //console.log(image);
-    return [];
-  }
-
   return Promise.all(
     breakpoints.map(async (w: number) => {
       const url = (await getImage({ src: image, width: w, inferSize: true })).src;
