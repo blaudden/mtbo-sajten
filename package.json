@@ -11,14 +11,17 @@
     "dev": "astro dev --host 127.0.0.1",
     "start": "astro dev",
     "build": "astro build",
-    "check": "astro check",
     "preview": "astro preview",
     "astro": "astro",
-    "format": "prettier -w .",
-    "lint:eslint": "eslint ."
+    "check": "npm run check:astro && npm run check:eslint && npm run check:prettier",
+    "check:astro": "astro check",
+    "check:eslint": "eslint .",
+    "check:prettier": "prettier --check .",
+    "fix": "npm run fix:eslint && npm run fix:prettier",
+    "fix:eslint": "eslint --fix .",
+    "fix:prettier": "prettier -w ."
   },
   "dependencies": {
-    "@astrojs/check": "^0.5.2",
     "@astrojs/markdoc": "^0.8.3",
     "@astrojs/mdx": "^3.1.4",
     "@astrojs/netlify": "^5.1.0",
@@ -43,6 +46,7 @@
     "unpic": "^3.18.0"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.3",
     "@astrojs/partytown": "^2.1.1",
     "@astrojs/tailwind": "^5.1.0",
     "@eslint/js": "^9.9.1",
