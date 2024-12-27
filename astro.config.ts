@@ -9,9 +9,6 @@ import compress from 'astro-compress';
 import icon from 'astro-icon';
 import tasks from './src/utils/tasks.mjs';
 import { ANALYTICS, SITE } from './src/utils/config.ts';
-import react from "@astrojs/react";
-import markdoc from "@astrojs/markdoc";
-import keystatic from '@keystatic/astro';
 import netlify from "@astrojs/netlify";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -55,9 +52,6 @@ export default defineConfig({
       filter: (page) => !sitemap_exclude.includes(page)
     }),
     mdx(),
-    markdoc(),
-    react(),
-    keystatic(),
     icon({
       include: {
         tabler: ['*'],
