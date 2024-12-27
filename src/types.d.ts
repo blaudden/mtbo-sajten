@@ -24,9 +24,9 @@ export interface Post {
   image?: string;
 
   /**  */
-  category?: string;
+  category?: Taxonomy;
   /**  */
-  tags?: Array<string>;
+  tags?: Taxonomy[];
   /**  */
   author?: string;
 
@@ -43,6 +43,11 @@ export interface Post {
   Content?: AstroComponentFactory;
   content?: string;
 
+}
+
+export interface Taxonomy {
+  slug: string;
+  title: string;
 }
 
 export interface MetaData {

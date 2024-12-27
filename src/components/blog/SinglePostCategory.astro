@@ -5,9 +5,10 @@ import { getFormattedDate } from '~/utils/utils';
 import { Icon } from 'astro-icon/components';
 
 import { getPrettyCategory } from '~/utils/category';
+import type { Taxonomy } from '~/types';
 
 export interface Props {
-  category?: string;
+  category?: Taxonomy;
   publishDate: Date;
 }
 
@@ -23,8 +24,8 @@ const { category = '', publishDate } = Astro.props;
       <>
         {' '}
         ·{' '}
-        <a class="capitalize hover:underline inline-block" href={getPermalink(category, 'category')}>
-          {getPrettyCategory(category)}
+        <a class="capitalize hover:underline inline-block" href={getPermalink(category.slug, 'category')}>
+          {getPrettyCategory(category.title)}
         </a>
       </>
     )
