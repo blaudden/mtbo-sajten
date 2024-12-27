@@ -2,9 +2,9 @@
 
 This repository contains the cource code for the Swedish MTBO site **Mountainbikeorientering** which is located at https://mountainbikeorientering.se. The code is free and open-source, anyone willing to contribute can submit a pull request with new content, styling changes or other improvements to the site.
 
-The site is built using [Astro](https://astro.build/) based on the [Astrowind](https://github.com/onwidget/astrowind) template which is a free and open-source template to make websites using **[Astro 3.0](https://astro.build/) + [Tailwind CSS](https://tailwindcss.com/)**.
+The site is built using [Astro](https://astro.build/) based on the [Astrowind](https://github.com/onwidget/astrowind) template which is a free and open-source template to make websites using **[Astro 5.0](https://astro.build/) + [Tailwind CSS](https://tailwindcss.com/)**.
 
- 
+
 [![License](https://img.shields.io/github/license/blaudden/mtbo-sajten?style=flat-square&color=dddddd&labelColor=000000)](https://github.com/blaudden/mtbo-sajten/blob/main/LICENSE.md)
 [![Maintained](https://img.shields.io/badge/maintained%3F-yes-brightgreen.svg?style=flat-square)](https://github.com/blaudden)
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/blaudden/mtbo-sajten#contributing)
