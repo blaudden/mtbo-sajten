@@ -37,7 +37,7 @@ export default defineConfig({
   site: SITE.site,
   base: SITE.base,
   trailingSlash: SITE.trailingSlash ? 'always' : 'never',
-  output: 'hybrid',
+  output: 'static',
   adapter: netlify(),
   integrations: [
     tailwind({
