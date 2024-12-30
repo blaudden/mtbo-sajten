@@ -52,7 +52,7 @@ export default defineConfig({
           en: 'en',
         },
       },
-      filter: (page) => !sitemap_exclude.includes(page)
+      filter: (page) => !sitemap_exclude.includes(page),
     }),
     mdx(),
     markdoc(),
@@ -86,17 +86,18 @@ export default defineConfig({
     compress({
       CSS: true,
       HTML: {
-        removeAttributeQuotes: false,
+        'html-minifier-terser': {
+          removeAttributeQuotes: false,
+        },
       },
-      Image: true,
+      Image: false,
       JavaScript: true,
-      SVG: true,
+      SVG: false,
       Logger: 1,
     }),
   ],
 
-  markdown: {
-  },
+  markdown: {},
 
   vite: {
     resolve: {
@@ -108,6 +109,6 @@ export default defineConfig({
 
   redirects: {
     '/en/mtbo-': '/en/mtbo-oringen-smalandskusten-2024',
-    '/svenska-': '/svenska-cupen'
-  }
+    '/svenska-': '/svenska-cupen',
+  },
 });
