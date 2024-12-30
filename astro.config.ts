@@ -13,15 +13,14 @@ import react from "@astrojs/react";
 import markdoc from "@astrojs/markdoc";
 import keystatic from '@keystatic/astro';
 import netlify from "@astrojs/netlify";
+import type { AstroIntegration } from 'astro';
+
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const whenExternalScripts = (items = []) =>
-  ANALYTICS.vendors.googleAnalytics.id && ANALYTICS.vendors.googleAnalytics.partytown
-    ? Array.isArray(items)
-      ? items.map((item) => item())
-      : [items()]
-    : [];
+const hasExternalScrits = ANALYTICS.vendors.googleAnalytics.id && ANALYTICS.vendors.googleAnalytics.partytown;
+const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroIntegration)[] = []) =>
+  hasExternalScrits ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
 // Array with pages to eclude from sitemap
 const sitemap_exclude = [
