@@ -28,10 +28,10 @@ const {
 
 const langAlts = langRelated
   .map((slug) => {
-    return { hrefLang: getLangFromSlug(slug), href: String(getCanonical(String(slug))) };
+    return { hreflang: getLangFromSlug(slug), href: String(getCanonical(String(slug))) };
   });
 const xDefault = langRelated[0] ? langRelated[0] : canonical;
-langAlts.push({ hrefLang: 'x-default', href: String(getCanonical(String(xDefault))) });
+langAlts.push({ hreflang: 'x-default', href: String(getCanonical(String(xDefault))) });
 
 const language = getLangFromUrl(Astro.url);
 
@@ -53,8 +53,7 @@ const seoProps: AstroSeoProps = merge(
     twitter: {
       cardType: openGraph?.images?.length ? 'summary_large_image' : 'summary',
     },
-    // Wrong structure of langAlts
-    //languageAlternates: langAlts,
+    languageAlternates: langAlts,
   },
   {
     title: METADATA?.title?.default,
