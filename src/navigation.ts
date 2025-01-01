@@ -9,18 +9,9 @@ export const headerData = {
     {
       text: 'Tävlingar',
       links: [
-        { text: 'Svenska Cupen 2024', href: getPermalink('/svenska-cupen-mtbo-2024') },
-        { text: 'SM Ulricehamn 2024', href: getPermalink('/svenska-maesterskapen-mtbo-2024') },
-        { text: 'Värnamo 2024', href: getPermalink('/svenska-cupen-varnamo-2024') },
-        { text: 'O-Ringen 2024', href: getPermalink('/mtbo-oringen-smalandskusten-2024') },
-        { text: 'Surahammar 2024', href: getPermalink('/svenska-cupen-surahammar-2024') },
-        { text: 'Katrineholm 2024', href: getPermalink('/svenska-cupen-katrineholm-2024') },
+        { text: 'Svenska Cupen', href: getPermalink('/svenska-cupen') },
+        { text: 'O-Ringen 2025', href: getPermalink('/mtbo-oringen-jonkoping-2025') },
         { text: 'Eventor', href: getPermalink('/eventor') },
-
-        { text: 'VeteranCupen 2024', href: getPermalink('/svenska-veterancupen-2024') },
-        { text: 'Veteran-VM 2024', href: getPermalink('/wmmtboc2024') },
-        { text: 'Världscupen 2024', href: getPermalink('/mtbo-worldcup-2024') }
-
       ],
     },
     {
@@ -40,36 +31,25 @@ export const footerData = {
       ],
     },
     {
-      title: 'Tävlingar 2024',
+      title: 'Tävlingar',
       links: [
-        { text: 'Svenska Cupen 2024', href: getPermalink('/svenska-cupen-mtbo-2024') },
-        { text: 'VeteranCupen 2024', href: getPermalink('/svenska-veterancupen-2024') },
-        { text: 'Svenska Mästerskap 2024', href: getPermalink('/svenska-maesterskapen-mtbo-2024') },
-        { text: 'Värnamo 2024', href: getPermalink('/svenska-cupen-varnamo-2024') },
-        { text: 'O-Ringen 2024', href: getPermalink('/mtbo-oringen-smalandskusten-2024') },
-        { text: 'Landslagets tävlingar 2024', href: getPermalink('/mtbo-worldcup-2024') },
-        { text: 'Veteran-VM 2024', href: getPermalink('/wmmtboc2024') },
-        { text: 'Surahammar 2024', href: getPermalink('/svenska-cupen-surahammar-2024') },
-        { text: 'Katrineholm 2024', href: getPermalink('/svenska-cupen-katrineholm-2024') },
+        { text: 'Svenska Cupen', href: getPermalink('/svenska-cupen') },
+        { text: 'O-Ringen 2025', href: getPermalink('/mtbo-oringen-jonkoping-2025') },
       ],
     },
     {
       title: 'Läger',
-      links: [
-        { text: 'MTBO Rikslägret', href: getPermalink('/mtbo-rikslaeger-2024') },
-      ],
+      links: [{ text: 'MTBO Rikslägret', href: getPermalink('/mtbo-rikslaeger-2024') }],
     },
     {
       title: 'På sajten',
       links: [
         { text: 'Blog', href: getBlogPermalink() },
         { text: 'Om', href: getPermalink('about', 'page') },
-      ]
+      ],
     },
   ],
-  secondaryLinks: [
-
-  ],
+  secondaryLinks: [],
   socialLinks: [
     { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://twitter.com/Mtborientering' },
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://instagram.com/mountainbikeorientering' },
@@ -79,7 +59,5 @@ export const footerData = {
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/blaudden/mtbo-sajten' },
   ],
-  footNote: `© <a class="text-primary hover:underline dark:text-muted" href="https://www.mountainbikeorientering.se/">mountainbikeorientering.se</a> 2023-2025`
-
-
+  footNote: `© <a class="text-primary hover:underline dark:text-muted" href="https://www.mountainbikeorientering.se/">mountainbikeorientering.se</a> 2023-2025`,
 };
