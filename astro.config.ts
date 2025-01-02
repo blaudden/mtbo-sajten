@@ -9,8 +9,8 @@ import compress from 'astro-compress';
 import icon from 'astro-icon';
 import tasks from './src/utils/tasks.mjs';
 import { ANALYTICS, SITE } from './src/utils/config.ts';
-import react from "@astrojs/react";
-import markdoc from "@astrojs/markdoc";
+import react from '@astrojs/react';
+import markdoc from '@astrojs/markdoc';
 import keystatic from '@keystatic/astro';
 import netlify from "@astrojs/netlify";
 import type { AstroIntegration } from 'astro';
@@ -37,7 +37,7 @@ export default defineConfig({
   site: SITE.site,
   base: SITE.base,
   trailingSlash: SITE.trailingSlash ? 'always' : 'never',
-  output: 'hybrid',
+  output: 'static',
   adapter: netlify(),
   integrations: [
     tailwind({
