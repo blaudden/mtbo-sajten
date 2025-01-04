@@ -10,7 +10,7 @@ export const headerData = {
       text: 'Tävlingar',
       links: [
         { text: 'Svenska Cupen', href: getPermalink('/svenska-cupen') },
-        { text: 'O-Ringen 2025', href: getPermalink('/mtbo-oringen-jonkoping-2025') },
+        { text: 'O-Ringen 2025', href: getPermalink('/mtbo-oringen') },
         { text: 'Eventor', href: getPermalink('/eventor') },
       ],
     },
@@ -34,7 +34,7 @@ export const footerData = {
       title: 'Tävlingar',
       links: [
         { text: 'Svenska Cupen', href: getPermalink('/svenska-cupen') },
-        { text: 'O-Ringen 2025', href: getPermalink('/mtbo-oringen-jonkoping-2025') },
+        { text: 'O-Ringen 2025', href: getPermalink('/mtbo-oringen') },
       ],
     },
     {
