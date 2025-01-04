@@ -133,7 +133,17 @@ const posts = collection({
             }),
           },
           preview: (props) => {
-            props.fields.videoid.value ? props.fields.videoid.value : 'Please enter a YouTube video ID';
+            const videoid = props.fields.videoid.value;
+            if (!videoid) {
+              return <p>Please provide YouTube video id</p>;
+            }
+            const title = props.fields.title.value;
+            return (
+              <div>
+                <p>Video id: {videoid}</p>
+                <p>Title: {title}</p>
+              </div>
+            );
           },
         }),
       },
