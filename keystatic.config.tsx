@@ -74,6 +74,7 @@ const posts = collection({
         { label: '', value: '' },
         { label: 'Svenska Cupen', value: 'svenska-cupen' },
         { label: 'O-Ringen', value: 'oringen' },
+        { label: 'WMTBOC26', value: 'wmtboc26' },
       ],
       defaultValue: '',
     }),
