@@ -104,10 +104,16 @@ const getNormalizedPost = async (post: CollectionEntry<'posts'>): Promise<Post> 
 const load = async function (): Promise<Array<Post>> {
   const posts = await getCollection('posts');
   const normalizedPosts = posts.map(async (post) => await getNormalizedPost(post));
+  const preview = import.meta.env.CONTEXT != 'production';
 
   const results = (await Promise.all(normalizedPosts))
     .sort((a, b) => b.publishDate.valueOf() - a.publishDate.valueOf())
-    .filter((post) => !post.draft);
+    .filter((post) => !post.draft)
+    .filter(
+      (post) =>
+        // Filter posts which have not been published yet
+        preview || post.publishDate.setUTCHours(0, 0, 0, 0) <= new Date().setUTCHours(0, 0, 0, 0)
+    );
 
   return results;
 };
