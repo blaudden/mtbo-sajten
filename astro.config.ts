@@ -14,6 +14,7 @@ import markdoc from '@astrojs/markdoc';
 import keystatic from '@keystatic/astro';
 import netlify from "@astrojs/netlify";
 import type { AstroIntegration } from 'astro';
+import { imageService } from '@unpic/astro/service';
 
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -39,6 +40,9 @@ export default defineConfig({
   trailingSlash: SITE.trailingSlash ? 'always' : 'never',
   output: 'static',
   adapter: netlify(),
+  image: {
+    service: imageService()
+  },
   integrations: [
     tailwind({
       applyBaseStyles: false,
