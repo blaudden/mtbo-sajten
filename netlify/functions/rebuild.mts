@@ -24,11 +24,20 @@ const rebuildSite = async (triggerTitle: string) => {
 };
 
 export default async (request: Request) => {
+
+  // Skip rebuild if it's not Thursday or Sunday
+  const today = new Date();
+  if (![0, 4].includes(today.getDay())) {
+    return new Response('Not a scheduled day', {
+      status: 200,
+    });
+  }
+
   await rebuildSite('Rebuild to publish sceduled posts');
 };
 
 // Netlify scheduled function cron syntax
-// Run At 04:15 on Thursday and Sunday.
+// Run At 04:15 every day
 export const config: Config = {
-  schedule: '15 4 * * 3,6',
+  schedule: '15 4 * * *',
 };
