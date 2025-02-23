@@ -41,7 +41,7 @@ export default defineConfig({
   output: 'static',
   adapter: netlify(),
   image: {
-    service: imageService()
+    service: imageService(),
   },
   integrations: [
     tailwind({
@@ -119,5 +119,11 @@ export default defineConfig({
     '/svenska-cupen-': '/svenska-cupen',
     '/mtbo-oringen-jonkoping-2025': '/mtbo-oringen',
     '/en/mtbo-oringen-jonkoping-2025': '/en/mtbo-oringen',
+    '/wmtboc26/hemus_moraparken.pdf':
+      'https://drive.google.com/file/d/1qh4T2srZvEt668uz0higNb7ca-WdH0Gs/view?usp=drive_link',
+    '/wmtboc26/lade_eldris.pdf':
+      'https://drive.google.com/file/d/19_J5yD96BYsByrCRl-fIySnX4yoPTCKQ/view?usp=drive_link',
+    '/wmtboc26/selbacksvagen.pdf':
+      'https://drive.google.com/file/d/1bEPyU8SJrr4DWCsR0ItxPf4U4Tuatjr_/view?usp=drive_link',
   },
 });
