@@ -125,5 +125,7 @@ export default defineConfig({
       'https://drive.google.com/file/d/19_J5yD96BYsByrCRl-fIySnX4yoPTCKQ/view?usp=drive_link',
     '/wmtboc26/selbacksvagen.pdf':
       'https://drive.google.com/file/d/1bEPyU8SJrr4DWCsR0ItxPf4U4Tuatjr_/view?usp=drive_link',
+    '/wmtboc2026': '/wmtboc26',
+
   },
 });
