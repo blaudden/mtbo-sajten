@@ -2,6 +2,7 @@
 import merge from 'lodash.merge';
 import type { ImageMetadata } from 'astro';
 import Layout from '~/layouts/PageLayout.astro';
+import WMTBOC26Layout from '~/layouts/WMTBOC26PageLayout.astro';
 import SinglePost from '~/components/blog/SinglePost.astro';
 
 import { getCanonical, getPermalink } from '~/utils/permalinks';
@@ -39,10 +40,22 @@ const metadata = merge(
   },
   { ...(post?.metadata ? { ...post.metadata, canonical: post.metadata?.canonical || String(url) } : {}) }
 );
+
+const useWMTBOC26Layout = post.category?.slug === 'wmtboc26';
 ---
 
-<Layout metadata={metadata}>
-  <SinglePost post={{ ...post, image: image?.src }} url={url}>
-    {post.Content ? <post.Content /> : <Fragment set:html={post.content || ''} />}
-  </SinglePost>
-</Layout>
+{
+  useWMTBOC26Layout ? (
+    <WMTBOC26Layout metadata={metadata}>
+      <SinglePost post={{ ...post, image: image?.src }} url={url}>
+        {post.Content ? <post.Content /> : <Fragment set:html={post.content || ''} />}
+      </SinglePost>
+    </WMTBOC26Layout>
+  ) : (
+    <Layout metadata={metadata}>
+      <SinglePost post={{ ...post, image: image?.src }} url={url}>
+        {post.Content ? <post.Content /> : <Fragment set:html={post.content || ''} />}
+      </SinglePost>
+    </Layout>
+  )
+}
