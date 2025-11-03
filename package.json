@@ -22,7 +22,7 @@
     "fix:prettier": "prettier -w ."
   },
   "dependencies": {
-    "@astrojs/markdoc": "^0.12.4",
+    "@astrojs/markdoc": "^0.15.7",
     "@astrojs/netlify": "^6.0.1",
     "@astrojs/react": "^4.1.4",
     "@astrojs/rss": "^4.0.11",
