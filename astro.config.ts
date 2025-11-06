@@ -117,8 +117,6 @@ export default defineConfig({
     '/orientering.se': '/',
     '/svenska-': '/svenska-cupen',
     '/svenska-cupen-': '/svenska-cupen',
-    '/mtbo-oringen-jonkoping-2025': '/mtbo-oringen',
-    '/en/mtbo-oringen-jonkoping-2025': '/en/mtbo-oringen',
     '/wmtboc26/hemus_moraparken.pdf':
       'https://drive.google.com/file/d/1qh4T2srZvEt668uz0higNb7ca-WdH0Gs/view?usp=drive_link',
     '/wmtboc26/lade_eldris.pdf':
