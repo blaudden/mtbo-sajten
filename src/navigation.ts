@@ -9,12 +9,8 @@ export const headerData = {
     {
       text: 'Tävlingar',
       links: [
-        { text: 'Svenska Cupen 2025', href: getPermalink('/svenska-cupen-mtbo') },
-        { text: 'Svenska Cupen Hässleholm', href: getPermalink('/svenska-cupen-haessleholm-2025') },
-        { text: 'Svenska Cupen Gästrikland', href: getPermalink('/svenska-cupen-gaestrikland-2025') },
-        { text: 'Svenska Cupen MTBO Camp', href: getPermalink('/mtbo-camp-glasriket') },
-        { text: 'Svenska Cupen Örby', href: getPermalink('/svenska-cupen-oerby-2025') },
-        { text: 'O-Ringen 2025', href: getPermalink('/mtbo-oringen') },
+        { text: 'Svenska Cupen 2026', href: getPermalink('/svenska-cupen-mtbo') },
+        { text: 'O-Ringen 2026', href: getPermalink('/mtbo-oringen') },
         { text: 'Eventor', href: getPermalink('/eventor') },
       ],
     },
@@ -38,12 +34,8 @@ export const footerData = {
     {
       title: 'Tävlingar',
       links: [
-        { text: 'Svenska Cupen 2025', href: getPermalink('/svenska-cupen-mtbo') },
-        { text: 'Svenska Cupen Hässleholm', href: getPermalink('/svenska-cupen-haessleholm-2025') },
-        { text: 'Svenska Cupen Gästrikland', href: getPermalink('/svenska-cupen-gaestrikland-2025') },
-        { text: 'Svenska Cupen MTBO Camp', href: getPermalink('/mtbo-camp-glasriket') },
-        { text: 'Svenska Cupen Örby', href: getPermalink('/svenska-cupen-oerby-2025') },
-        { text: 'O-Ringen 2025', href: getPermalink('/mtbo-oringen') },
+        { text: 'Svenska Cupen 2026', href: getPermalink('/svenska-cupen-mtbo') },
+        { text: 'O-Ringen 2026', href: getPermalink('/mtbo-oringen') },
       ],
     },
     {
