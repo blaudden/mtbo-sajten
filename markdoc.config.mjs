@@ -15,6 +15,14 @@ export default defineMarkdocConfig({
         videoid: { type: 'String' },
         title: { type: 'String' },
       },
+    },
+    LeafletMap: {
+      render: component('./src/components/markdoc/LeafletMap.astro'),
+      attributes: {
+        markers: { type: Array },
+        zoom: { type: 'Number' },
+        height: { type: 'String' },
+      },
     }
   },
 });

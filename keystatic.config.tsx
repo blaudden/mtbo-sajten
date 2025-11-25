@@ -147,6 +147,76 @@ const posts = collection({
             );
           },
         }),
+        LeafletMap: component({
+          label: 'Leaflet Map',
+          schema: {
+            markers: fields.array(
+              fields.object({
+                lat: fields.number({
+                  label: 'Latitude',
+                  validation: { isRequired: true, min: -90, max: 90 },
+                }),
+                lng: fields.number({
+                  label: 'Longitude',
+                  validation: { isRequired: true, min: -180, max: 180 },
+                }),
+                title: fields.text({
+                  label: 'Title',
+                  validation: { isRequired: true },
+                }),
+                url: fields.url({
+                  label: 'URL',
+                }),
+                color: fields.select({
+                  label: 'Color',
+                  options: [
+                    { label: 'Blue (default)', value: 'blue' },
+                    { label: 'Red', value: 'red' },
+                    { label: 'Green', value: 'green' },
+                    { label: 'Orange', value: 'orange' },
+                    { label: 'Purple', value: 'purple' },
+                    { label: 'Grey', value: 'grey' },
+                  ],
+                  defaultValue: 'blue',
+                }),
+                icon: fields.select({
+                  label: 'Icon Type',
+                  options: [
+                    { label: 'Default (●)', value: 'default' },
+                    { label: 'Start (▶)', value: 'start' },
+                    { label: 'Finish (■)', value: 'finish' },
+                    { label: 'Parking (P)', value: 'parking' },
+                    { label: 'Info (i)', value: 'info' },
+                  ],
+                  defaultValue: 'default',
+                }),
+              }),
+              {
+                label: 'Markers',
+                itemLabel: (props) => props.fields.title.value || 'New Marker',
+              }
+            ),
+            zoom: fields.integer({
+              label: 'Zoom Level',
+              defaultValue: 13,
+              validation: { min: 1, max: 18 },
+            }),
+            height: fields.text({
+              label: 'Height',
+              defaultValue: '400px',
+              description: 'CSS height value (e.g., 400px)',
+            }),
+          },
+          preview: (props) => {
+            const markerCount = props.fields.markers.elements.length;
+            return (
+              <div>
+                <p>Leaflet Map</p>
+                <p>Markers: {markerCount}</p>
+              </div>
+            );
+          },
+        }),
       },
     }),
     metadata: fields.object({

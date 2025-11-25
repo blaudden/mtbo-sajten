@@ -1,0 +1,25 @@
+---
+import LeafletMapReact from '../react/LeafletMap';
+
+interface Marker {
+  lat: number;
+  lng: number;
+  title: string;
+  url?: string;
+  color?: 'blue' | 'red' | 'green' | 'orange' | 'purple' | 'grey';
+  icon?: 'default' | 'start' | 'finish' | 'parking' | 'info';
+}
+
+interface Props {
+  markers: Marker[] | string;
+  zoom?: number;
+  height?: string;
+}
+
+const { markers, zoom, height } = Astro.props;
+
+// Convert markers array to JSON string if it's an array
+const markersString = typeof markers === 'string' ? markers : JSON.stringify(markers);
+---
+
+<LeafletMapReact client:only="react" markers={markersString} zoom={zoom} height={height} />

@@ -1,6 +1,6 @@
 ---
 title: markdoc-test
-draft: true
+draft: true 
 evergreen: false
 publishDate: 2024-02-25
 excerpt: >-
@@ -12,6 +12,7 @@ tags: []
 author: Magnus Blåudd
 metadata: {}
 ---
+
 ## BlogListBySlug
 
 Visa lista med bloggartiklar
@@ -31,6 +32,22 @@ Visa en YouTube video, använder astro-embed, https://astro-embed.netlify.app/
 - videoid - bara id, inte hela URLen
 - title - videons titel som visas över preview bilden
 
-{% YoutubeVideo videoid="55xp2cryPfE" title="Maydeus the Cyclist - MTBO (Mountain Bike Orienteering)" /%}
+{% YoutubeVideo
+   videoid="55xp2cryPfE"
+   title="Maydeus the Cyclist - MTBO (Mountain Bike Orienteering)" /%}
 
 ---
+
+## Leaflet Map
+
+Visa en karta med markörer.
+
+**Note**: Edit this map via Keystatic admin (/keystatic) for the best experience. Each marker has individual fields for lat, lng, title, URL, color, and icon type.
+
+**Available colors**: blue (default), red, green, orange, purple, grey
+**Available icons**: default (●), start (▶), finish (■), parking (P), info (i)
+
+{% LeafletMap
+   markers=[{lat: 59.163, lng: 18.130241, title: "Event Center", url: "https://eventor.orientering.se/Events/Show/54359", color: "red", icon: "info"}, {lat: 59.165, lng: 18.128, title: "Etapp 1 - Start", url: "https://eventor.orientering.se/Events/Show/54359", color: "green", icon: "start"}, {lat: 59.161, lng: 18.135, title: "Etapp 2", url: "https://eventor.orientering.se/Events/Show/54359", color: "blue", icon: "default"}, {lat: 59.168, lng: 18.132, title: "Etapp 3 - Finish", url: "https://eventor.orientering.se/Events/Show/54359", color: "orange", icon: "finish"}, {lat: 59.16, lng: 18.125, title: "Parking", url: "https://eventor.orientering.se/Events/Show/54359", color: "purple", icon: "parking"}]
+   zoom=12
+   height="400px" /%}
