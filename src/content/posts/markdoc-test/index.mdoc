@@ -51,3 +51,30 @@ Visa en karta med markörer.
    markers=[{lat: 59.163, lng: 18.130241, title: "Event Center", url: "https://eventor.orientering.se/Events/Show/54359", color: "red", icon: "info"}, {lat: 59.165, lng: 18.128, title: "Etapp 1 - Start", url: "https://eventor.orientering.se/Events/Show/54359", color: "green", icon: "start"}, {lat: 59.161, lng: 18.135, title: "Etapp 2", url: "https://eventor.orientering.se/Events/Show/54359", color: "blue", icon: "default"}, {lat: 59.168, lng: 18.132, title: "Etapp 3 - Finish", url: "https://eventor.orientering.se/Events/Show/54359", color: "orange", icon: "finish"}, {lat: 59.16, lng: 18.125, title: "Parking", url: "https://eventor.orientering.se/Events/Show/54359", color: "purple", icon: "parking"}]
    zoom=12
    height="400px" /%}
+
+---
+
+## Test Map (Staggering, Polygons, Polylines)
+
+{% LeafletMap
+   markers=[
+     { lat: 59.3293, lng: 18.0686, title: "Stockholm 1", url: "", color: "blue" },
+     { lat: 59.3293, lng: 18.0686, title: "Stockholm 2 (Staggered)", url: "", color: "red" }
+   ]
+polygons=[
+{
+points: "59.33,18.07; 59.34,18.08; 59.33,18.09",
+color: "green",
+title: "Test Polygon"
+}
+]
+polylines=[
+{
+points: "59.32,18.06; 59.31,18.05",
+color: "orange",
+width: 5,
+title: "Test Polyline"
+}
+]
+height="500px"
+/%}

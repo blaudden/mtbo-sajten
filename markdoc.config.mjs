@@ -20,6 +20,8 @@ export default defineMarkdocConfig({
       render: component('./src/components/markdoc/LeafletMap.astro'),
       attributes: {
         markers: { type: Array },
+        polygons: { type: Array },
+        polylines: { type: Array },
         zoom: { type: 'Number' },
         height: { type: 'String' },
       },

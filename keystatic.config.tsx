@@ -196,6 +196,59 @@ const posts = collection({
                 itemLabel: (props) => props.fields.title.value || 'New Marker',
               }
             ),
+            polygons: fields.array(
+              fields.object({
+                points: fields.text({ 
+                    label: 'Points', 
+                    description: 'Format: lat,lng; lat,lng (e.g. 59.33,18.07; 59.34,18.08)',
+                    multiline: true 
+                }),
+                color: fields.select({
+                  label: 'Color',
+                  options: [
+                    { label: 'Red (default)', value: 'red' },
+                    { label: 'Blue', value: 'blue' },
+                    { label: 'Green', value: 'green' },
+                    { label: 'Orange', value: 'orange' },
+                    { label: 'Purple', value: 'purple' },
+                    { label: 'Grey', value: 'grey' },
+                  ],
+                  defaultValue: 'red',
+                }),
+                title: fields.text({ label: 'Title' }),
+              }),
+              {
+                label: 'Polygons',
+                itemLabel: (props) => props.fields.title.value || 'New Polygon',
+              }
+            ),
+            polylines: fields.array(
+              fields.object({
+                points: fields.text({ 
+                    label: 'Points', 
+                    description: 'Format: lat,lng; lat,lng (e.g. 59.33,18.07; 59.34,18.08)',
+                    multiline: true 
+                }),
+                color: fields.select({
+                  label: 'Color',
+                  options: [
+                    { label: 'Green (default)', value: 'green' },
+                    { label: 'Blue', value: 'blue' },
+                    { label: 'Red', value: 'red' },
+                    { label: 'Orange', value: 'orange' },
+                    { label: 'Purple', value: 'purple' },
+                    { label: 'Grey', value: 'grey' },
+                  ],
+                  defaultValue: 'green',
+                }),
+                width: fields.integer({ label: 'Width', defaultValue: 3 }),
+                title: fields.text({ label: 'Title' }),
+              }),
+              {
+                label: 'Polylines',
+                itemLabel: (props) => props.fields.title.value || 'New Polyline',
+              }
+            ),
             zoom: fields.integer({
               label: 'Zoom Level',
               defaultValue: 13,
@@ -209,10 +262,25 @@ const posts = collection({
           },
           preview: (props) => {
             const markerCount = props.fields.markers.elements.length;
+            const polygonCount = props.fields.polygons.elements.length;
+            const polylineCount = props.fields.polylines.elements.length;
             return (
-              <div>
-                <p>Leaflet Map</p>
-                <p>Markers: {markerCount}</p>
+              <div style={{ padding: '1rem', background: '#f3f4f6', borderRadius: '0.5rem' }}>
+                <h3 style={{ fontWeight: 'bold', marginBottom: '0.5rem' }}>Leaflet Map</h3>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem' }}>
+                    <div>
+                        <span style={{ display: 'block', fontSize: '0.875rem', color: '#6b7280' }}>Markers</span>
+                        <span style={{ display: 'block', fontSize: '1.25rem', fontWeight: 'bold' }}>{markerCount}</span>
+                    </div>
+                    <div>
+                        <span style={{ display: 'block', fontSize: '0.875rem', color: '#6b7280' }}>Polygons</span>
+                        <span style={{ display: 'block', fontSize: '1.25rem', fontWeight: 'bold' }}>{polygonCount}</span>
+                    </div>
+                    <div>
+                        <span style={{ display: 'block', fontSize: '0.875rem', color: '#6b7280' }}>Polylines</span>
+                        <span style={{ display: 'block', fontSize: '1.25rem', fontWeight: 'bold' }}>{polylineCount}</span>
+                    </div>
+                </div>
               </div>
             );
           },

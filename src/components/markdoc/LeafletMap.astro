@@ -10,16 +10,40 @@ interface Marker {
   icon?: 'default' | 'start' | 'finish' | 'parking' | 'info';
 }
 
+interface Polygon {
+  points: { lat: number; lng: number }[] | string;
+  color?: 'blue' | 'red' | 'green' | 'orange' | 'purple' | 'grey';
+  title?: string;
+}
+
+interface Polyline {
+  points: { lat: number; lng: number }[] | string;
+  color?: 'blue' | 'red' | 'green' | 'orange' | 'purple' | 'grey';
+  width?: number;
+  title?: string;
+}
+
 interface Props {
-  markers: Marker[] | string;
+  markers?: Marker[] | string;
+  polygons?: Polygon[] | string;
+  polylines?: Polyline[] | string;
   zoom?: number;
   height?: string;
 }
 
-const { markers, zoom, height } = Astro.props;
+const { markers = [], polygons = [], polylines = [], zoom, height } = Astro.props;
 
-// Convert markers array to JSON string if it's an array
+// Convert to JSON string if array
 const markersString = typeof markers === 'string' ? markers : JSON.stringify(markers);
+const polygonsString = typeof polygons === 'string' ? polygons : JSON.stringify(polygons);
+const polylinesString = typeof polylines === 'string' ? polylines : JSON.stringify(polylines);
 ---
 
-<LeafletMapReact client:only="react" markers={markersString} zoom={zoom} height={height} />
+<LeafletMapReact
+  client:only="react"
+  markers={markersString}
+  polygons={polygonsString}
+  polylines={polylinesString}
+  zoom={zoom}
+  height={height}
+/>
