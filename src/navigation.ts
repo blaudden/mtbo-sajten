@@ -15,7 +15,7 @@ export const headerData = {
       ],
     },
     {
-      text: 'Om',
+      text: 'Om sajten',
       href: getPermalink('about', 'page'),
     },
   ],
@@ -46,8 +46,18 @@ export const footerData = {
       title: 'På sajten',
       links: [
         { text: 'Blog', href: getBlogPermalink() },
-        { text: 'Om', href: getPermalink('about', 'page') },
       ],
+    },
+    {
+      title: 'Om',
+      links: [
+        { text: 'Om sajten', href: getPermalink('about', 'page') },
+        { text: 'Integritetspolicy', href: getPermalink('privacy-policy') },
+      ],
+    },
+    {
+      title: 'Kontakt',
+      links: [{ text: 'Maila oss', href: 'mailto:mountainbikeorientering@gmail.com' }],
     },
   ],
   secondaryLinks: [],
