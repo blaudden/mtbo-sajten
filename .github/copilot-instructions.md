@@ -143,7 +143,8 @@ Located in `src/components/`:
 ## Debugging & Validation
 
 - **Type Errors**: `npm run check:astro` validates Astro components
+- **Linting**: `npm run check:eslint` (fix with `npm run fix:eslint`)
+- **Format**: `npm run check:prettier` (fix with `npm run fix:prettier`)
+- **Vite Cache Issues**: If the dev server shows "not a function" errors on mdoc/md files, use `touch src/content/posts/<post-slug>/index.mdoc` to clear Vite's cache and rebuild
 - **Preview Build**: `npm run preview` after `npm run build` to test production output
-- **Dev Server**: Use `npm run dev` for explicit 127.0.0.1 binding or `npm run start` for localhost (both use port 3000 with HMR enabled)tier`)
-- **Preview Build**: `npm run preview` after `npm run build` to test production output
-- **Dev Server**: Runs on `http://127.0.0.1:3000` with HMR enabled
+- **Dev Server**: Use `npm run dev` for explicit 127.0.0.1 binding or `npm run start` for localhost (both use port 3000 with HMR enabled)
