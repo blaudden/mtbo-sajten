@@ -38,8 +38,8 @@ Posts are stored in `src/content/posts/` with each post in its own directory con
 
 ### Key Commands
 ```bash
-npm run dev              # Start dev server on http://127.0.0.1:3000 (--host flag for explicit IP)
-npm run start            # Alternative: start dev server on http://localhost:3000
+npm run dev              # Start dev server on http://127.0.0.1:4321 (--host flag for explicit IP)
+npm run start            # Alternative: start dev server on http://localhost:4321
 npm run build            # Build static site
 npm run check            # Run type checking, ESLint, and Prettier
 npm run fix              # Auto-fix ESLint and Prettier issues
@@ -52,8 +52,8 @@ npm run check:astro      # TypeScript validation for Astro components
 - **Image Service**: Unpic (`@unpic/astro/service`) for optimized images
 - **Compression**: Enabled via `astro-compress`
 - **Sitemap**: Automatically generated with excluded canonical URLs (see `astro.config.ts`)
-- **Dev Port**: Default Astro port 3000; `npm run dev` explicitly binds to 127.0.0.1
-- **CodeSandbox Config**: `sandbox.config.json` configures CodeSandbox container to use port 3000 and `npm start` script
+- **Dev Port**: Default Astro port 4321; `npm run dev` explicitly binds to 127.0.0.1
+- **CodeSandbox Config**: `sandbox.config.json` configures CodeSandbox container to use port 4321 and `npm start` script
 - **Sitemap**: Automatically generated with excluded canonical URLs (see `astro.config.ts`)
 
 ## Conventions & Patterns
