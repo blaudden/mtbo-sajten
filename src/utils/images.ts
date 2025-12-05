@@ -42,9 +42,13 @@ export const findImage = async (
   const images = await fetchLocalImages();
   const key = imagePath.replace('~/', '/src/');
 
-  return images && typeof images[key] === 'function'
-    ? ((await images[key]()) as { default: ImageMetadata })['default']
-    : null;
+  if (!images || typeof images[key] !== 'function') {
+    console.log(`[findImage] Image not found for key: ${key}`);
+    console.log(`[findImage] Available keys sample:`, Object.keys(images || {}).slice(0, 5));
+    return null;
+  }
+
+  return ((await images[key]()) as { default: ImageMetadata })['default'];
 };
 
 /** */

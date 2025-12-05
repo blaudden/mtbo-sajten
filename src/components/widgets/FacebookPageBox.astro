@@ -1,0 +1,63 @@
+---
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import { Icon } from 'astro-icon/components';
+import Image from '~/components/common/Image.astro';
+import bgImage from '~/assets/images/wmtboc-action.jpg';
+
+interface Props {
+  pageName: string;
+  pageUrl: string;
+  title?: string;
+  classes?: Record<string, string>;
+  id?: string;
+  isDark?: boolean;
+}
+
+const { pageName, pageUrl, title = 'Join the Action on Facebook', id, isDark = false, classes = {} } = Astro.props;
+---
+
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-4xl mx-auto ${classes?.container ?? ''}`}>
+  <div
+    class="relative group overflow-hidden rounded-2xl shadow-xl min-h-[250px] flex items-center justify-center text-center dark:border dark:border-slate-700"
+  >
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0 z-0">
+      <Image src={bgImage} class="w-full h-full object-cover grayscale-[0.2]" alt="Background" />
+      <div
+        class="absolute inset-0 bg-blue-900/80 group-hover:bg-blue-900/75 transition-colors duration-500 ease-in-out mix-blend-multiply"
+      >
+      </div>
+      <div class="absolute inset-0 bg-black/20"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10 p-6 sm:p-8 flex flex-col items-center max-w-2xl mx-auto">
+      <!-- Icon -->
+      <div
+        class="mb-4 bg-white/10 dark:bg-white/5 backdrop-blur-sm p-3 rounded-full shadow-2xl ring-1 ring-white/20 transform group-hover:scale-110 transition-transform duration-300"
+      >
+        <Icon name="tabler:brand-facebook" class="w-8 h-8 text-white" />
+      </div>
+
+      <!-- Headlines -->
+      <h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-2 tracking-tight leading-tight drop-shadow-sm">
+        {title}
+      </h3>
+
+      <p class="text-blue-100 mb-6 text-base leading-relaxed max-w-md mx-auto">
+        Get the latest news and updates as we go along.
+      </p>
+
+      <!-- CTA Button -->
+      <a
+        href={pageUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center px-6 py-3 text-sm font-bold text-blue-900 bg-white rounded-full hover:bg-blue-50 focus:ring-4 focus:ring-blue-300/50 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+      >
+        Follow {pageName}
+        <Icon name="tabler:arrow-right" class="w-4 h-4 ml-2 -mr-1" />
+      </a>
+    </div>
+  </div>
+</WidgetWrapper>

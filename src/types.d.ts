@@ -39,6 +39,9 @@ export interface Post {
   /**  */
   evergreen?: boolean;
 
+  /** When true the post will be excluded from the main blog listing */
+  hideFromMain?: boolean;
+
   /**  */
   Content?: AstroComponentFactory;
   content?: string;
@@ -54,6 +57,7 @@ export interface MetaData {
   ignoreTitleTemplate?: boolean;
 
   canonical?: string;
+  lang?: string;
 
   robots?: MetaDataRobots;
 

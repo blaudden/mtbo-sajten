@@ -1,0 +1,248 @@
+---
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Image from '~/components/common/Image.astro';
+import Button from '~/components/ui/Button.astro';
+import type { Widget } from '~/types';
+
+import type { ImageMetadata } from 'astro';
+
+interface Props extends Widget {
+  title?: string;
+  excerpt?: string;
+  image?: string | ImageMetadata | { src: string | ImageMetadata; alt?: string };
+  link?: string;
+  linkLabel?: string;
+  badgeText?: string;
+  secondaryLink?: string;
+  secondaryLabel?: string;
+  isPrimaryGlowing?: boolean;
+  animatedLogo?: string | ImageMetadata;
+}
+
+const {
+  title = '',
+  excerpt = '',
+  image = '',
+  link = '',
+  linkLabel = '',
+  badgeText = '',
+  secondaryLink = '',
+  secondaryLabel = '',
+  id,
+  isDark = false,
+  classes = {},
+  bg = await Astro.slots.render('bg'),
+  isPrimaryGlowing = false,
+  animatedLogo = '',
+} = Astro.props;
+---
+
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl ${classes?.container ?? ''}`} bg={bg}>
+  <div class="relative group">
+    {
+      badgeText && (
+        <span class="absolute top-4 left-3 z-30 transform -rotate-6 rounded-full px-3 py-1 shadow-md bg-slate-900 text-white dark:bg-black/60 ring-1 ring-yellow-300/40">
+          <span class="inline-block text-sm font-semibold bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">
+            {badgeText} ✨
+          </span>
+        </span>
+      )
+    }
+    {
+      badgeText && (
+        <span class="absolute top-4 left-3 z-30 transform -rotate-6 rounded-full px-3 py-1 shadow-md bg-slate-900 text-white dark:bg-black/60 ring-2 ring-yellow-300/60 animate-glow">
+          <span class="inline-block text-sm font-semibold bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent animate-gradient">
+            {badgeText}
+            <span class="inline-block align-middle ml-1 animate-sparkle">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <circle cx="9" cy="9" r="3" fill="url(#glitter)" />
+                  <path
+                    d="M9 1v3M9 14v3M1 9h3M14 9h3M4.5 4.5l2 2M11.5 11.5l2 2M4.5 13.5l2-2M11.5 6.5l2-2"
+                    stroke="#FFD700"
+                    stroke-width="1"
+                    stroke-linecap="round"
+                  />
+                </g>
+                <defs>
+                  <radialGradient id="glitter" cx="0" cy="0" r="1" gradientTransform="translate(9 9) scale(3)">
+                    <stop stop-color="#FFF700" />
+                    <stop offset="1" stop-color="#FFD700" stop-opacity="0" />
+                  </radialGradient>
+                </defs>
+              </svg>
+            </span>
+          </span>
+        </span>
+      )
+    }
+    <style>
+      @keyframes gradientMove {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      .animate-gradient {
+        background-size: 200% 200%;
+        animation: gradientMove 2s linear infinite;
+      }
+      @keyframes sparkle {
+        0%,
+        100% {
+          opacity: 1;
+          transform: scale(1) rotate(0deg);
+        }
+        50% {
+          opacity: 0.7;
+          transform: scale(1.2) rotate(20deg);
+        }
+      }
+      .animate-sparkle {
+        animation: sparkle 1.2s ease-in-out infinite;
+      }
+      @keyframes glow {
+        0%,
+        100% {
+          box-shadow: 0 0 8px 2px #ffe06666;
+        }
+        50% {
+          box-shadow: 0 0 16px 4px #fff70099;
+        }
+      }
+      .animate-glow {
+        animation: glow 1.5s ease-in-out infinite;
+      }
+      @keyframes glow {
+        0%,
+        100% {
+          box-shadow:
+            0 0 10px #d4af37,
+            0 0 20px #d4af37;
+          border-color: #d4af37;
+        }
+        50% {
+          box-shadow:
+            0 0 20px #ffd700,
+            0 0 40px #ffd700;
+          border-color: #ffd700;
+        }
+      }
+
+      .animate-glow-button {
+        animation: glow 1.5s ease-in-out infinite;
+      }
+    </style>
+    <div class="flex flex-col lg:flex-row lg:items-center lg:gap-8">
+      {/* Image Section */}
+      <div class="w-full lg:w-1/2 mx-auto mb-6 lg:mb-0">
+        <div class="relative bg-gray-400 dark:bg-slate-700 rounded shadow-lg overflow-hidden">
+          {
+            image &&
+              (link ? (
+                <a href={link} class="block relative group">
+                  <div class="relative overflow-hidden rounded shadow-lg bg-gray-400 dark:bg-slate-700 transition-transform duration-500 hover:scale-105">
+                    <Image
+                      src={typeof image === 'object' && 'src' in image ? image.src : image}
+                      class="w-full h-auto"
+                      widths={[400, 900]}
+                      width={900}
+                      sizes="(max-width: 900px) 100vw, 900px"
+                      alt={typeof image === 'object' && 'alt' in image ? (image.alt as string) : title}
+                    />
+                    {animatedLogo && (
+                      <div class="absolute inset-x-0 bottom-0 pointer-events-none z-10 overflow-hidden h-full w-full">
+                        <div
+                          class="animate-horse-ride absolute left-[-100px] w-full bottom-8"
+                          style="mix-blend-mode: multiply;"
+                        >
+                          <Image
+                            src={animatedLogo}
+                            alt="WMTBOC 2026 Logo"
+                            width={80}
+                            height={80}
+                            class="object-contain"
+                          />
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </a>
+              ) : (
+                <div class="relative overflow-hidden rounded shadow-lg bg-gray-400 dark:bg-slate-700 transition-transform duration-500 hover:scale-105">
+                  <Image
+                    src={typeof image === 'object' && 'src' in image ? image.src : image}
+                    class="w-full h-auto"
+                    widths={[400, 900]}
+                    width={900}
+                    sizes="(max-width: 900px) 100vw, 900px"
+                    alt={typeof image === 'object' && 'alt' in image ? (image.alt as string) : title}
+                  />
+                  {animatedLogo && (
+                    <div class="absolute inset-x-0 bottom-0 pointer-events-none z-10 overflow-hidden h-full w-full">
+                      <div class="animate-horse-ride absolute left-[-200px] w-[calc(100%+400px)] bottom-8">
+                        <Image
+                          src={animatedLogo}
+                          alt="WMTBOC 2026 Logo"
+                          width={80}
+                          height={80}
+                          class="object-contain"
+                        />
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))
+          }
+        </div>
+      </div>
+
+      {/* Content Section - Side or Below Image */}
+      <div class="w-full lg:w-1/2 relative z-20 text-left lg:pl-6">
+        <h3
+          class="text-2xl sm:text-3xl font-bold leading-tight mb-3 font-heading dark:text-slate-300 group-hover:text-primary transition ease-in duration-200"
+        >
+          {
+            link ? (
+              <a href={link} class="text-inherit no-underline">
+                {title}
+              </a>
+            ) : (
+              title
+            )
+          }
+        </h3>
+        <p class="text-muted dark:text-slate-400 text-lg max-w-2xl whitespace-pre-line">
+          {excerpt}
+        </p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          {
+            link && (
+              <Button
+                variant="primary"
+                href={link}
+                class={`inline-block ${isPrimaryGlowing ? 'animate-glow-button' : ''}`}
+              >
+                {linkLabel}
+              </Button>
+            )
+          }
+
+          {
+            secondaryLink && secondaryLabel && (
+              <Button variant="secondary" href={secondaryLink} class="inline-block">
+                {secondaryLabel}
+              </Button>
+            )
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</WidgetWrapper>

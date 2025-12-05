@@ -3,14 +3,17 @@ import Image from '~/components/common/Image.astro';
 import PostTags from '~/components/blog/Tags.astro';
 import SinglePostCategory from '~/components/blog/SinglePostCategory.astro';
 import SocialShare from '~/components/common/SocialShare.astro';
+import wmtbocLogo from '~/assets/images/wmtboc26-logo-transparent.png';
 import type { Post } from '~/types';
 
 export interface Props {
   post: Post;
   url: string | URL;
+  /** Enable animation overlay. Pass a string identifier (e.g. 'dalahorse') to select the animation. */
+  overlayAnimation?: string;
 }
 
-const { post, url } = Astro.props;
+const { post, url, overlayAnimation } = Astro.props;
 ---
 
 <section class="py-8 sm:py-16 lg:py-20 mx-auto">
@@ -34,16 +37,28 @@ const { post, url } = Astro.props;
 
       {
         post.image ? (
-          <Image
-            src={post.image}
-            class="max-w-full lg:max-w-[900px] mx-auto mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"
-            widths={[400, 900]}
-            sizes="(max-width: 900px) 400px, 900px"
-            alt={post?.excerpt || ''}
-            width={900}
-            height={506}
-            decoding="async"
-          />
+          <div class="relative overflow-hidden max-w-full lg:max-w-[900px] mx-auto mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700">
+            <Image
+              src={post.image}
+              class="w-full h-full object-cover"
+              widths={[400, 900]}
+              sizes="(max-width: 900px) 400px, 900px"
+              alt={post?.excerpt || ''}
+              width={900}
+              height={506}
+              decoding="async"
+            />
+            {overlayAnimation === 'dalahorse' && (
+              <div class="absolute inset-x-0 bottom-0 pointer-events-none z-10 overflow-hidden h-full w-full">
+                <div
+                  class="animate-horse-ride absolute left-[-100px] w-full bottom-8"
+                  style="mix-blend-mode: multiply;"
+                >
+                  <Image src={wmtbocLogo} alt="" width={80} height={80} class="object-contain" />
+                </div>
+              </div>
+            )}
+          </div>
         ) : (
           <div class="max-w-3xl mx-auto px-4 sm:px-6">
             <div class="border-t dark:border-slate-700" />

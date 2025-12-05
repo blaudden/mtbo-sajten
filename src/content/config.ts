@@ -8,6 +8,7 @@ const postCollection = defineCollection({
     updateDate: z.date().optional(),
     draft: z.boolean().optional(),
     evergreen: z.boolean().optional(),
+    hideFromMain: z.boolean().optional(),
 
     title: z.string(),
     subtitle: z.string().optional(),
@@ -18,7 +19,7 @@ const postCollection = defineCollection({
     tags: z.array(z.string()).optional(),
     author: z.string().optional(),
 
-    metadata: z.object({ canonical: z.string().optional() }).optional(),
+    metadata: z.object({ canonical: z.string().optional(), lang: z.string().optional() }).optional(),
   }),
 });
 

@@ -6,7 +6,7 @@ import Grid from '~/components/blog/Grid.astro';
 import { getBlogPermalink } from '~/utils/permalinks';
 import { findLatestPosts } from '~/utils/blog';
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
-import type { Widget } from '~/types';
+import type { Widget, Post } from '~/types';
 import Button from '../ui/Button.astro';
 
 export interface Props extends Widget {
@@ -30,7 +30,12 @@ const {
   bg = await Astro.slots.render('bg'),
 } = Astro.props;
 
-const posts = APP_BLOG.isEnabled ? await findLatestPosts({ count }) : [];
+let posts: Post[] = [];
+try {
+  posts = APP_BLOG.isEnabled ? await findLatestPosts({ count }) : [];
+} catch (e) {
+  console.error('Error fetching latest posts:', e);
+}
 ---
 
 {

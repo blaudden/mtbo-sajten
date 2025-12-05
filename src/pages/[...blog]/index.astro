@@ -41,13 +41,16 @@ const metadata = merge(
   { ...(post?.metadata ? { ...post.metadata, canonical: post.metadata?.canonical || String(url) } : {}) }
 );
 
+// Inject language context for SmartLink component
+Astro.locals.lang = post.metadata?.lang || language;
+
 const useWMTBOC26Layout = post.category?.slug === 'wmtboc26';
 ---
 
 {
   useWMTBOC26Layout ? (
     <WMTBOC26Layout metadata={metadata}>
-      <SinglePost post={{ ...post, image: image?.src }} url={url}>
+      <SinglePost post={{ ...post, image: image?.src }} url={url} overlayAnimation="dalahorse">
         {post.Content ? <post.Content /> : <Fragment set:html={post.content || ''} />}
       </SinglePost>
     </WMTBOC26Layout>

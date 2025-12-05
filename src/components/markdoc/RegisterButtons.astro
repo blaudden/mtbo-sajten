@@ -1,0 +1,37 @@
+---
+import Button from '~/components/ui/Button.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+
+interface Props {
+  id?: string;
+  isDark?: boolean;
+  bg?: string;
+  buttons?: ButtonData[];
+}
+
+const { id, isDark = false, buttons = [], bg = await Astro.slots.render('bg') } = Astro.props;
+
+interface ButtonData {
+  text: string;
+  href: string;
+  icon?: string;
+  variant?: 'primary' | 'secondary' | 'tertiary' | 'link';
+}
+---
+
+<WidgetWrapper id={id} isDark={isDark} containerClass="max-w-4xl mx-auto py-4 md:py-4 lg:py-4" bg={bg}>
+  <div class="flex flex-col md:flex-row gap-4 justify-center flex-wrap">
+    {
+      buttons.map((btn: ButtonData) => (
+        <Button
+          variant={btn.variant || 'primary'}
+          href={btn.href}
+          icon={btn.icon || 'tabler:chevron-right'}
+          class="w-full md:w-auto"
+        >
+          {btn.text}
+        </Button>
+      ))
+    }
+  </div>
+</WidgetWrapper>

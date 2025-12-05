@@ -55,6 +55,7 @@ const getNormalizedPost = async (post: CollectionEntry<'posts'>): Promise<Post> 
     author,
     draft = false,
     evergreen = false,
+    hideFromMain = false,
     metadata = {},
   } = data;
 
@@ -93,6 +94,7 @@ const getNormalizedPost = async (post: CollectionEntry<'posts'>): Promise<Post> 
     draft: draft,
 
     evergreen: evergreen,
+    hideFromMain: hideFromMain,
 
     metadata,
 
@@ -103,10 +105,19 @@ const getNormalizedPost = async (post: CollectionEntry<'posts'>): Promise<Post> 
 
 const load = async function (): Promise<Array<Post>> {
   const posts = await getCollection('posts');
-  const normalizedPosts = posts.map(async (post) => await getNormalizedPost(post));
+  const normalizedPosts = posts.map(async (post) => {
+    try {
+      return await getNormalizedPost(post);
+    } catch (e) {
+      console.error(`Error loading post ${post.id}:`, e);
+      return null;
+    }
+  });
+
   const preview = import.meta.env.CONTEXT != 'production';
 
   const results = (await Promise.all(normalizedPosts))
+    .filter((post): post is Post => post !== null)
     .sort((a, b) => b.publishDate.valueOf() - a.publishDate.valueOf())
     .filter((post) => !post.draft)
     .filter(
@@ -187,8 +198,8 @@ export const findLangRelatedPosts = async (slug: string): Promise<Array<string>>
 /** */
 export const fetchBlogPosts = async (): Promise<Array<Post>> => {
   const posts = await fetchPosts();
-
-  return posts ? posts.filter((post) => !post.evergreen) : [];
+  // Exclude posts that are marked evergreen or explicitly hidden from the main blog listing
+  return posts ? posts.filter((post) => !post.evergreen && !post.hideFromMain) : [];
 };
 
 /** */

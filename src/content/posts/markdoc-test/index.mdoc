@@ -1,6 +1,6 @@
 ---
 title: markdoc-test
-draft: true 
+draft: false
 evergreen: false
 publishDate: 2024-02-25
 excerpt: >-
@@ -78,3 +78,57 @@ title: "Test Polyline"
 ]
 height="500px"
 /%}
+
+---
+
+### Test Facebook Page Box
+
+{% FacebookPageBox pageName="WMTBOC 2026 & MTBO World Cup" pageUrl="https://www.facebook.com/mtbo2026/" /%}
+
+---
+
+### Test Carousel Image Grid
+
+{% CarouselImageGrid
+  id="test-grid"
+  columns=3
+  images=[
+    "~/assets/images/posts/wmtboc26/wmtboc26-collage-1.jpg",
+    "~/assets/images/posts/wmtboc26/wmtboc26-collage-2.jpg",
+    "~/assets/images/posts/wmtboc26/wmtboc26-collage-3.jpg"
+  ]
+/%}
+
+---
+
+### Test Register Buttons
+
+{% RegisterButtons
+  buttons=[
+    { text: "Test Button Primary", href: "#", variant: "primary", icon: "tabler:star" },
+    { text: "Test Button Secondary", href: "#", variant: "secondary", icon: "tabler:moon" }
+  ]
+/%}
+
+---
+
+## Smart Resource Lists
+
+Automatic styling of lists containing resource links. Even mixed lists are handled!
+
+### Auto Detected
+
+- [Livelox Event (Auto)](https://www.livelox.com/Events/Show/12345)
+- [PDF Document (Auto)](wmtboc26/selbacksvagen.pdf)
+- [Eventor SWE (Auto)](https://eventor.orientering.se/Events/Show/12345)
+- [Eventor IOF (Auto)](https://eventor.orienteering.org/Events/Show/8278)
+- [Eventor NOR (Auto)](https://eventor.orientering.no/Events/Show/456)
+
+### Mixed List
+
+- **O-Ringen's officiella webbplats:** [https://oringen.se/](https://oringen.se/)
+- O-Ringen: [https://oringen.se/](https://oringen.se/)
+- [Livelox Event](https://www.livelox.com/Events/Show/12345)
+- [Just a normal internal link](/about)
+- [External Google Link](https://google.com)
+- Just some plain text

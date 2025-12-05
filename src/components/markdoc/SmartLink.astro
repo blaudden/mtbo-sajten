@@ -1,0 +1,125 @@
+---
+import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import liveloxIcon from '~/assets/images/livelox-icon.png';
+import eventorSweIcon from '~/assets/images/eventor-swe.png';
+import eventorIofIcon from '~/assets/images/eventor-iof.png';
+import eventorNorIcon from '~/assets/images/eventor-nor.png';
+
+interface Props {
+  href: string;
+  title?: string;
+}
+
+const { href, title } = Astro.props; // Markdoc passes text as slot
+
+const getLinkType = (href: string) => {
+  try {
+    let url: URL;
+    let isAbsolute = false;
+
+    try {
+      url = new URL(href);
+      isAbsolute = true;
+    } catch {
+      // Relative URL, use dummy base to parse path
+      url = new URL(href, 'https://example.com');
+    }
+
+    const pathname = url.pathname.toLowerCase();
+    const hostname = url.hostname.toLowerCase();
+
+    if (pathname.endsWith('.pdf')) return 'pdf';
+
+    if (hostname.endsWith('livelox.com')) return 'livelox';
+
+    // Specific Eventor Checks
+    if (hostname === 'eventor.orientering.se') return 'eventor-swe';
+    if (hostname === 'eventor.orienteering.org') return 'eventor-iof';
+    if (hostname === 'eventor.orientering.no') return 'eventor-nor';
+
+    // Catch-all for other external links
+    if (isAbsolute && (url.protocol === 'http:' || url.protocol === 'https:')) return 'external';
+
+    return 'link';
+  } catch (e) {
+    console.warn(`Failed to process link URL: ${href}`, e);
+    return 'link';
+  }
+};
+
+const type = getLinkType(href);
+// Any type that isn't 'link' is considered a resource for styling purposes
+const isResource = type !== 'link';
+const isExternal = href.startsWith('http');
+
+const icons = {
+  pdf: 'tabler:file-type-pdf',
+  external: 'tabler:external-link',
+};
+
+// Map types to images if they use images instead of keys
+const imageMap: Record<string, ImageMetadata> = {
+  livelox: liveloxIcon,
+  'eventor-swe': eventorSweIcon,
+  'eventor-iof': eventorIofIcon,
+  'eventor-nor': eventorNorIcon,
+};
+
+const suffixMap: Record<string, { sv: string; en: string }> = {
+  pdf: { sv: ' (PDF)', en: ' (PDF)' },
+  livelox: { sv: ' (Livelox)', en: ' (Livelox)' },
+  'eventor-swe': { sv: ' (Eventor)', en: ' (SWE Eventor)' },
+  'eventor-iof': { sv: ' (IOF Eventor)', en: ' (IOF Eventor)' },
+  'eventor-nor': { sv: ' (NOR Eventor)', en: ' (NOR Eventor)' },
+  external: { sv: '', en: '' },
+};
+
+const localsLang = Astro.locals.lang;
+const currentPath = Astro.url.pathname;
+const urlLang = currentPath.includes('/en/') ? 'en' : 'sv';
+const lang = localsLang || urlLang; // Prioritize locals (frontmatter/metadata), fallback to URL
+
+const suffix = suffixMap[type]?.[lang] || '';
+
+const target = isResource || isExternal ? '_blank' : undefined;
+const rel = isResource || isExternal ? 'noopener noreferrer' : undefined;
+---
+
+<a
+  href={href}
+  title={title}
+  target={target}
+  rel={rel}
+  data-resource-type={isResource ? type : undefined}
+  class="group smart-link relative transition-colors"
+>
+  {
+    isResource ? (
+      <>
+        <span class="smart-icon hidden mr-3 flex-shrink-0 w-8 h-8 items-center justify-center rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 group-hover:bg-primary-50 dark:group-hover:bg-primary-900/20 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+          {imageMap[type] ? (
+            <Image src={imageMap[type]} alt={type} class="w-5 h-5 object-contain" />
+          ) : (
+            <Icon name={icons[type as keyof typeof icons] || 'tabler:link'} class="w-5 h-5" />
+          )}
+        </span>
+
+        <span class="smart-content border-b border-transparent group-hover:border-current leading-tight">
+          <slot />
+        </span>
+
+        <span class="smart-suffix hidden text-gray-500 font-normal ml-1">{suffix}</span>
+
+        <span class="smart-external-box hidden ml-2 p-0.5 rounded border border-gray-300 dark:border-gray-600 text-gray-400 group-hover:text-primary-600 dark:group-hover:text-primary-400 group-hover:border-primary-300 dark:group-hover:border-primary-700">
+          <Icon name="tabler:arrow-up-right" class="w-3 h-3" />
+        </span>
+      </>
+    ) : (
+      <span class="smart-content border-b border-transparent group-hover:border-current">
+        <slot />
+      </span>
+    )
+  }
+</a>

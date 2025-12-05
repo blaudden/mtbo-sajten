@@ -36,6 +36,11 @@ const posts = collection({
       label: 'Evergreen',
       description: 'Sätt artikel som evergreen, den får då inget datum',
     }),
+    hideFromMain: fields.checkbox({
+      label: 'Hide from main blog',
+      description:
+        'När aktiverad kommer artikeln att döljas från huvudbloggens lista (/blog). Använd för landningssidor eller event-sidor som ska listas separat.',
+    }),
     publishDate: fields.date({
       label: 'Published date',
       validation: { isRequired: true },
@@ -59,7 +64,7 @@ const posts = collection({
     category: fields.select({
       label: 'Category',
       description:
-        'Det ämne som artikeln hamnar om, det här påverkar hur artikeln visas på sajten. Dom flesta artiklar har ingen kategori.',
+        'Det ämne som artikeln hamnar om, det här påverkar hur artikeln visas på sajten. Dom flesta artiklar har ingen kategori. För att inkludera artikeln i MTBO‑VM 2026-sidan, sätt kategorin till WMTBOC26.',
       options: [
         { label: '', value: '' },
         { label: 'Svenska Cupen', value: 'svenska-cupen' },
@@ -71,7 +76,7 @@ const posts = collection({
     tags: fields.array(fields.text({ label: 'Tag' }), {
       label: 'Tag',
       description:
-        'Taggar för artikeln, används för att styra var och hur dom visas på sajten. tex. grupperas alla artiklar om Svenska Cupen 2024 med taggen svenska-cupen-2024 ',
+        'Taggar för artikeln, används för att styra var och hur dom visas på sajten. Exempel: "svenska-cupen-2024". ',
       itemLabel: (props) => props.value,
     }),
     author: fields.text({
@@ -97,6 +102,21 @@ const posts = collection({
             slugs: fields.array(fields.text({ label: 'Slug' }), {
               label: 'Slug',
               itemLabel: (props) => props.value,
+            }),
+          },
+          preview: () => null,
+        }),
+        EventBlogList: component({
+          label: 'Event Blog List',
+          schema: {
+            title: fields.text({ label: 'Title' }),
+            category: fields.text({
+              label: 'Category Slug',
+              description: 'Category slug to filter posts by (e.g. wmtboc26)',
+            }),
+            excludeSlug: fields.text({
+              label: 'Exclude Slug',
+              description: 'Optional: post slug to exclude (e.g. wmtboc26)',
             }),
           },
           preview: () => null,
@@ -137,7 +157,104 @@ const posts = collection({
             );
           },
         }),
-        LeafletMap: component({
+        FacebookPageBox: component({
+          label: 'Facebook Page Box',
+          schema: {
+            pageName: fields.text({ label: 'Page Name' }),
+            pageUrl: fields.text({ label: 'Page URL' }),
+          },
+          preview: (props) => (
+            <div>
+              <p>Facebook Page: {props.fields.pageName.value}</p>
+            </div>
+          ),
+        }),
+        CarouselImageGrid: component({
+          label: 'Carousel Image Grid',
+          schema: {
+            id: fields.text({ label: 'ID' }),
+            columns: fields.integer({ label: 'Columns', defaultValue: 3 }),
+            images: fields.array(fields.text({ label: 'Image Path' }), {
+              label: 'Images',
+              itemLabel: (props) => props.value,
+            }),
+          },
+          preview: (props) => (
+            <div>
+              <p>Carousel Image Grid ({props.fields.images.elements.length} images)</p>
+            </div>
+          ),
+        }),
+        RegisterButtons: component({
+          label: 'Register Buttons',
+          schema: {
+            buttons: fields.array(
+              fields.object({
+                text: fields.text({ label: 'Text' }),
+                href: fields.text({ label: 'Link URL' }),
+                variant: fields.select({
+                  label: 'Variant',
+                  options: [
+                    { label: 'Primary', value: 'primary' },
+                    { label: 'Secondary', value: 'secondary' },
+                  ],
+                  defaultValue: 'primary',
+                }),
+                icon: fields.text({ label: 'Icon (optional)' }),
+              }),
+              {
+                label: 'Buttons',
+                itemLabel: (props) => props.fields.text.value || 'Button',
+              }
+            ),
+          },
+          preview: (props) => (
+            <div>
+              <p>Register Buttons ({props.fields.buttons.elements.length})</p>
+            </div>
+          ),
+        }),
+        FloatedImage: component({
+          label: 'Floated Image',
+          schema: {
+            src: fields.text({ label: 'Image Path (e.g. ~/assets/...)' }),
+            alt: fields.text({ label: 'Alt Text' }),
+            float: fields.select({
+              label: 'Float Direction',
+              options: [
+                { label: 'Right', value: 'right' },
+                { label: 'Left', value: 'left' },
+              ],
+              defaultValue: 'right',
+            }),
+            cropPosition: fields.text({
+              label: 'Crop Position (CSS object-position)',
+              defaultValue: 'center center',
+              description: 'e.g. "center top", "left bottom", "50% 20%"',
+            }),
+            width: fields.text({
+              label: 'Max Width (CSS)',
+              defaultValue: '300px',
+              description: 'e.g. "300px", "50%"',
+            }),
+          },
+          preview: (props) => (
+            <div
+              style={{
+                float: props.fields.float.value as 'left' | 'right',
+                maxWidth: props.fields.width.value,
+                border: '1px solid #ddd',
+                padding: '4px',
+              }}
+            >
+              <p style={{ margin: 0, fontSize: '0.8em' }}>Image: {props.fields.src.value}</p>
+              {/* Safe rendering to avoid crash */}
+              <p style={{ margin: 0, fontSize: '0.8em' }}>Pos: {props.fields.cropPosition.value}</p>
+            </div>
+          ),
+        }),
+        leafLetMap: component({
+          // Fix casing if necessary, or keep consistent
           label: 'Leaflet Map',
           schema: {
             markers: fields.array(
@@ -282,6 +399,16 @@ const posts = collection({
         label: 'Canonical URL',
         description:
           'Fylls i om samma artikel finns publicerad på annat ställe och den artikel som finns på sajten är en kopia, den pekar då på originalet ',
+      }),
+      lang: fields.select({
+        label: 'Language Override',
+        description: 'Sidans språkinställning. Auto = baserat på URL.',
+        options: [
+          { label: 'Auto', value: '' },
+          { label: 'Svenska', value: 'sv' },
+          { label: 'English', value: 'en' },
+        ],
+        defaultValue: '',
       }),
     }),
   },

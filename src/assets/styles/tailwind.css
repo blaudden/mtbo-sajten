@@ -66,6 +66,42 @@
   display: block;
 }
 
+@keyframes horse-ride-across {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+  20% {
+    transform: translateX(20%) translateY(-20px) rotate(0deg);
+  } /* Climbing */
+  40% {
+    transform: translateX(40%) translateY(-45px) rotate(-30deg);
+  } /* Lifting front near top */
+  50% {
+    transform: translateX(50%) translateY(-50px) rotate(-30deg);
+  } /* Apex: Top of wave + Wheelie */
+  60% {
+    transform: translateX(60%) translateY(-45px) rotate(-30deg);
+  } /* Holding over crest */
+  80% {
+    transform: translateX(80%) translateY(-20px) rotate(0deg);
+  } /* Descending */
+  100% {
+    transform: translateX(110%) translateY(0) rotate(0deg);
+  }
+}
+
+.animate-horse-ride {
+  animation: horse-ride-across 4s linear infinite; /* Slightly slower for 'long wave' feel */
+  display: inline-block;
+  will-change: transform;
+  transform-origin: 20% 85%; /* Rear hub pivot */
+}
+
+/* Mirror the horse to face right if the image is facing left by default */
+.mirror-x {
+  transform: scaleX(-1);
+}
+
 [astro-icon].icon-light > * {
   stroke-width: 1.2;
 }
@@ -89,4 +125,36 @@
 
 .dd *:first-child {
   margin-top: 0;
+}
+
+/* Smart Resource Lists */
+
+/* Scoped Visibility: Only show smart elements inside list items marked as pure links via Markdoc transform */
+.prose ul li.smart-list-item a .smart-icon,
+.prose ul li.smart-list-item a .smart-external-box {
+  display: inline-flex;
+}
+
+.prose ul li.smart-list-item a .smart-suffix {
+  display: inline;
+}
+
+/* Card Styling for the List */
+/* Only apply card styling if the list contains at least one PURE resource link */
+.prose ul:has(li.smart-list-item) {
+  @apply flex flex-col my-6 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden divide-y divide-gray-200 dark:divide-gray-700 bg-white dark:bg-slate-900 shadow-sm p-0 list-none;
+}
+
+.prose ul:has(li.smart-list-item) li {
+  @apply m-0 p-0 before:hidden; /* Remove prose list bullets/padding */
+}
+
+/* Apply hover/padding only to PURE resource links */
+.prose ul:has(li.smart-list-item) li.smart-list-item > a {
+  @apply py-2 px-3 hover:bg-gray-50 dark:hover:bg-slate-800 no-underline w-full flex items-center;
+}
+
+/* Fallback for mixed items inside a resource list: ensure they look decent */
+.prose ul:has(li.smart-list-item) li:not(.smart-list-item) {
+  @apply p-3; /* Give them some breathing room as rows */
 }

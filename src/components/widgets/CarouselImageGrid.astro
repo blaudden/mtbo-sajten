@@ -1,0 +1,64 @@
+---
+import Image from '~/components/common/Image.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import type { Widget } from '~/types';
+
+import type { ImageMetadata } from 'astro';
+
+interface Props extends Widget {
+  title?: string;
+  subtitle?: string;
+  tagline?: string;
+  images?: Array<string | ImageMetadata>;
+  columns?: number;
+}
+
+const {
+  title = '',
+  subtitle = '',
+  tagline = '',
+  images = [],
+  columns = 3,
+  id,
+  isDark = false,
+  classes = {},
+  bg = await Astro.slots.render('bg'),
+} = Astro.props;
+---
+
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
+  <div class="flex flex-col gap-8">
+    {
+      (title || subtitle || tagline) && (
+        <div class="md:mx-auto text-center max-w-3xl">
+          {tagline && (
+            <p class="text-base text-primary dark:text-blue-200 font-bold tracking-wide uppercase">{tagline}</p>
+          )}
+          {title && (
+            <h2 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading">{title}</h2>
+          )}
+          {subtitle && (
+            <p class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400">{subtitle}</p>
+          )}
+        </div>
+      )
+    }
+
+    <div class={`grid gap-4 md:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-${columns}`}>
+      {
+        images.map((image, index) => (
+          <div class="relative rounded-lg overflow-hidden shadow-lg group">
+            <Image
+              src={image}
+              class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              widths={[400, 768]}
+              sizes="(max-width: 768px) 100vw, 400px"
+              alt={`Gallery Image ${index + 1}`}
+              aspectRatio="16:9"
+            />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</WidgetWrapper>

@@ -1,0 +1,37 @@
+---
+import Image from '~/components/common/Image.astro';
+
+export interface Props {
+  src: string;
+  alt: string;
+  float?: 'left' | 'right';
+  width?: string;
+  className?: string;
+  cropPosition?: string; // e.g. "center top", "center bottom"
+}
+
+const { src, alt, float = 'right', width = '300px', className = '', cropPosition = 'center center' } = Astro.props;
+
+const floatClass = float === 'left' ? 'float-left mr-6 mb-4' : 'float-right ml-6 mb-4';
+
+const style = {
+  width: '100%',
+  maxWidth: width,
+  height: 'auto',
+};
+---
+
+<div
+  class={`relative rounded-lg overflow-hidden shadow-md my-4 ${floatClass} ${className} w-full sm:w-auto`}
+  style={style}
+>
+  <div class="aspect-[4/5] sm:aspect-square w-full h-full">
+    <Image
+      src={src}
+      alt={alt}
+      width={400}
+      class="w-full h-full object-cover"
+      style={`object-position: ${cropPosition};`}
+    />
+  </div>
+</div>

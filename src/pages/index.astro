@@ -4,6 +4,9 @@ import Content from '~/components/widgets/Content.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FeaturedItem from '~/components/widgets/FeaturedItem.astro';
+import wmtbocLogo from '~/assets/images/wmtboc26-logo-transparent.png';
+import wmtbocImage from '~/assets/images/posts/wmtboc26/image.png';
 ---
 
 <Layout>
@@ -26,6 +29,24 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
       och kompass, eller hur man sätter ut kontroller i skogen - helt enkelt det man behöver veta för att hålla på med mountainbikeorientering.
     </Fragment>
   </Hero>
+
+  <FeaturedItem
+    title="VM i Sverige 2026"
+    excerpt={`Världsmästerskapen och Junior-VM i mountainbikeorientering avgörs i Mora den 24–30 augusti 2026.
+Här på mountainbikeorientering.se samlar vi allt du behöver veta för att heja, följa loppen eller själv delta i publiktävlingarna. Hitta praktisk information, program, banor, anmälningar och boende på ett och samma ställe.
+Observera att all information på VM-sidorna presenteras på engelska.`}
+    image={{
+      src: wmtbocImage,
+      alt: 'WMTBOC 2026 will be organized in Mora, Sweden. Experience high level mtb orieentering, as a spectator or participant.',
+    }}
+    link="/wmtboc26"
+    linkLabel="Till den officiella VM-sajten"
+    isPrimaryGlowing={true}
+    animatedLogo={wmtbocLogo}
+    ><Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-100 dark:bg-transparent"></div>
+    </Fragment>
+  </FeaturedItem>
 
   <BlogLatestPosts
     title="Blog"
@@ -126,10 +147,10 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
       {
         title: 'Förkortning:',
         description: `MTBO är den vedertagna förkortningen av mountainbikeorientering — både i Sverige
-        och internationellt. Tidigare har förkortningarna MtbO och MTB-O använts, men sedan
-        några år tillbaka används MTBO (med stora bokstäver och utan bindestreck). MTBO
-        används framförallt i kommunikation med dem som redan är insatta i sporten; i annat
-        fall kan man skriva MTB-orientering, cykelorientering eller helt enkelt mountainbikeorientering.`,
+      och internationellt. Tidigare har förkortningarna MtbO och MTB-O använts, men sedan
+      några år tillbaka används MTBO (med stora bokstäver och utan bindestreck). MTBO
+      används framförallt i kommunikation med dem som redan är insatta i sporten; i annat
+      fall kan man skriva MTB-orientering, cykelorientering eller helt enkelt mountainbikeorientering.`,
       },
       {
         title: 'Bakgrund:',

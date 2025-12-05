@@ -1,0 +1,171 @@
+---
+import Image from '~/components/common/Image.astro';
+
+interface ImageProps {
+  src: string;
+  alt?: string;
+}
+
+export interface Props {
+  images?: ImageProps[];
+  id?: string;
+}
+
+const { images = [], id = `carousel-${Math.random().toString(36).slice(2, 9)}` } = Astro.props;
+---
+
+<div id={id} class="relative w-full overflow-hidden rounded-lg shadow-xl group">
+  <!-- Carousel Wrapper -->
+  <div class="carousel-track flex transition-transform duration-500 ease-out h-[300px] sm:h-[400px] md:h-[500px]">
+    {
+      images.map((image, index) => (
+        <div class="carousel-item min-w-full h-full relative">
+          <div class="absolute inset-0 bg-gray-200 dark:bg-slate-800 flex items-center justify-center">
+            {/* Placeholder generic if no src, or actual image */}
+            {image.src ? (
+              <Image
+                src={image.src}
+                class="w-full h-full object-cover"
+                widths={[400, 900]}
+                width={900}
+                sizes="(max-width: 900px) 100vw, 900px"
+                alt={image.alt || `Slide ${index + 1}`}
+                aspectRatio="16:9"
+                loading={index === 0 ? 'eager' : 'lazy'}
+              />
+            ) : (
+              <span class="text-gray-400 font-bold text-xl">{image.alt || `Image ${index + 1}`}</span>
+            )}
+          </div>
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+            <p class="text-white text-sm font-medium drop-shadow-md">{image.alt}</p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+
+  <!-- Controls -->
+  <button
+    class="carousel-prev absolute top-1/2 left-4 -translate-y-1/2 z-10 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 focus:opacity-100"
+    aria-label="Previous slide"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+    </svg>
+  </button>
+  <button
+    class="carousel-next absolute top-1/2 right-4 -translate-y-1/2 z-10 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 focus:opacity-100"
+    aria-label="Next slide"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+    </svg>
+  </button>
+
+  <!-- Indicators -->
+  <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+    {
+      images.map((_, index) => (
+        <button
+          class="carousel-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white transition-all"
+          aria-label={`Go to slide ${index + 1}`}
+        />
+      ))
+    }
+  </div>
+</div>
+
+<script is:inline>
+  // Simple Carousel Logic
+  (function () {
+    function setupCarousel(carouselId) {
+      const carousel = document.getElementById(carouselId);
+      if (!carousel) return;
+
+      const track = carousel.querySelector('.carousel-track');
+      const items = carousel.querySelectorAll('.carousel-item');
+      const prevBtn = carousel.querySelector('.carousel-prev');
+      const nextBtn = carousel.querySelector('.carousel-next');
+      const dots = carousel.querySelectorAll('.carousel-dot');
+
+      if (!track || !items.length) return;
+
+      let currentIndex = 0;
+      const totalItems = items.length;
+
+      function updateCarousel() {
+        const translateX = -(currentIndex * 100);
+        track.style.transform = `translateX(${translateX}%)`;
+
+        dots.forEach((dot, idx) => {
+          if (idx === currentIndex) {
+            dot.classList.add('bg-white', 'scale-125');
+            dot.classList.remove('bg-white/50');
+          } else {
+            dot.classList.remove('bg-white', 'scale-125');
+            dot.classList.add('bg-white/50');
+          }
+        });
+      }
+
+      // Auto advance
+      let interval = setInterval(() => {
+        currentIndex = (currentIndex + 1) % totalItems;
+        updateCarousel();
+      }, 5000);
+
+      const resetTimer = () => {
+        clearInterval(interval);
+        interval = setInterval(() => {
+          currentIndex = (currentIndex + 1) % totalItems;
+          updateCarousel();
+        }, 5000);
+      };
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          currentIndex = (currentIndex + 1) % totalItems;
+          updateCarousel();
+          resetTimer();
+        });
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+          updateCarousel();
+          resetTimer();
+        });
+      }
+
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          currentIndex = index;
+          updateCarousel();
+          resetTimer();
+        });
+      });
+
+      // Initialize
+      updateCarousel();
+    }
+
+    function init() {
+      const carousels = document.querySelectorAll('[id^="carousel"]');
+      carousels.forEach((c) => setupCarousel(c.id));
+    }
+
+    // Run on immediate execution
+    init();
+
+    // Run on Astro page swaps
+    document.addEventListener('astro:page-load', init);
+  })();
+</script>

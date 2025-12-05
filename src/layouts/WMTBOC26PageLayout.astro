@@ -2,9 +2,7 @@
 import Layout from '~/layouts/Layout.astro';
 import Header from '~/components/widgets/Header.astro';
 import Footer from '~/components/widgets/Footer.astro';
-import Announcement from '~/components/widgets/Announcement.astro';
-
-import { headerData, footerData } from '~/navigation';
+import Image from '~/components/common/Image.astro';
 
 import type { MetaData } from '~/types';
 
@@ -16,31 +14,196 @@ const { metadata } = Astro.props;
 
 // Custom headerdata for pages using this layout
 const headerData2 = {
-  ...headerData,
-  links: [],
+  links: [
+    { text: 'Home', href: '/wmtboc26' },
+    {
+      text: 'IOF Eventor',
+      links: [
+        { text: 'World Championships', href: 'https://eventor.orienteering.org/Events/Show/8277' },
+        { text: 'Junior World Championships', href: 'https://eventor.orienteering.org/Events/Show/8278' },
+      ],
+    },
+    { text: 'Contact', href: 'mailto:info@mtbo2026.se' },
+  ],
+  actions: [],
 };
 
-// Custom footerData  for pages using this layout
+// Custom footerData - minimalist but with link back to main site
 const footerData2 = {
-  ...footerData,
-  links: [],
-  secondaryLinks: [],
-  // socialLinks: [],
-  // footNote: '',
+  links: [
+    {
+      title: 'WMTBOC 2026',
+      links: [
+        { text: 'Home', href: '/wmtboc26' },
+        { text: 'WMTBOC Eventor', href: 'https://eventor.orienteering.org/Events/Show/8277' },
+        { text: 'JWMTBOC Eventor', href: 'https://eventor.orienteering.org/Events/Show/8278' },
+      ],
+    },
+    {
+      title: 'Open Public Races',
+      links: [
+        { text: 'Long Distance', href: 'https://eventor.orientering.se/Events/Show/56226?culture=en-GB' },
+        { text: 'Middle Distance', href: 'https://eventor.orientering.se/Events/Show/56227?culture=en-GB' },
+        { text: 'Sprint', href: 'https://eventor.orientering.se/Events/Show/56228?culture=en-GB' },
+      ],
+    },
+    {
+      title: 'Main Site',
+      links: [{ text: 'Back to mountainbikeorientering.se', href: '/' }],
+    },
+  ],
+  secondaryLinks: [{ text: 'Privacy Policy', href: '/privacy-policy' }],
+  socialLinks: [
+    { ariaLabel: 'WMTBOC 2026 Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/mtbo2026/' },
+    {
+      ariaLabel: 'Facebook (Main)',
+      icon: 'tabler:brand-facebook',
+      href: 'https://www.facebook.com/mountainbikeorientering',
+    },
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://instagram.com/mountainbikeorientering' },
+  ],
+  footNote: `© 2026 WMTBOC Organisers & <a class="text-primary hover:underline dark:text-muted" href="/">mountainbikeorientering.se</a>`,
 };
+
+const aboutText =
+  'Mountainbikeorientering.se is the premier hub for MTBO in Sweden. We gather news, schedules, and information to grow the sport and support both elite and recreational cyclists.';
 ---
 
 <Layout metadata={metadata}>
-  <slot name="announcement">
-    <Announcement />
-  </slot>
-  <slot name="header">
-    <Header {...headerData2} isSticky position="right" />
-  </slot>
-  <main>
-    <slot />
+  <!-- Sticky Container for Top Bar and Header -->
+  <div class="sticky top-0 z-50 w-full">
+    <!-- Top Bar for Main Site Navigation -->
+    <div class="bg-primary text-white text-xs py-1 px-4 text-center sm:text-right font-medium relative">
+      <a href="/" class="hover:underline opacity-90 hover:opacity-100 transition-opacity">
+        Part of <span class="font-bold">mountainbikeorientering.se</span> — Go to main site &rarr;
+      </a>
+    </div>
+
+    <slot name="header">
+      <Header {...headerData2} isSticky showToggleTheme={true} position="right" homeLink="/wmtboc26">
+        <div slot="logo" class="flex items-center gap-2">
+          <Image
+            src="~/assets/images/wmtboc26-logo-transparent.png"
+            alt="WMTBOC 2026"
+            width={43}
+            height={40}
+            class="object-contain"
+          />
+          <span class="font-bold text-xl text-primary font-heading">WMTBOC 2026</span>
+        </div>
+      </Header>
+    </slot>
+  </div>
+
+  <main class="wmtboc-theme relative">
+    <!-- Sparkling/Gold Theme Decoration -->
+    <!-- Sparkling/Gold Theme Decoration: Curtain Style -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden z-0" aria-hidden="true">
+      <!-- 1cm (approx 40px) static gold top bar -->
+      <div class="absolute top-0 left-0 w-full h-[40px] bg-gradient-to-b from-yellow-500/30 to-yellow-400/10"></div>
+
+      <!-- 3cm (approx 120px) pulsing curtain originating from the top bar -->
+      <div
+        class="absolute top-[40px] left-0 w-full h-[120px] bg-gradient-to-b from-yellow-400/20 to-transparent animate-curtain-pulse"
+      >
+      </div>
+    </div>
+
+    <div class="relative z-10">
+      <slot />
+    </div>
   </main>
+
   <slot name="footer">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 text-xs text-muted dark:text-slate-400">
+      <p>{aboutText}</p>
+    </div>
     <Footer {...footerData2} />
   </slot>
 </Layout>
+
+<style is:global>
+  /* Custom Scrollbar for this page/theme if desired, or specific gold accents */
+  /* Dala Horse Theme */
+  .wmtboc-theme {
+    --aw-color-primary: #e62b1e; /* Dala Red */
+    --aw-color-secondary: #3f6c96; /* Dala Blue */
+    --aw-color-accent: #f4c430; /* Dala Yellow */
+
+    --aw-color-text-heading: #333333;
+    --aw-color-text-default: #444444;
+    --aw-color-text-muted: #666666;
+
+    --aw-color-bg-page: #ffffff;
+
+    background-color: var(--aw-color-bg-page);
+    color: var(--aw-color-text-default);
+  }
+
+  /* Make the header use the theme colors if sticky */
+  :root.dark .wmtboc-theme {
+    --aw-color-bg-page: #1a1a1a;
+    --aw-color-text-default: #e5e5e5;
+    --aw-color-text-heading: #ffffff;
+  }
+
+  .wmtboc-theme a {
+    @apply transition-colors duration-300;
+  }
+  .wmtboc-theme a:hover {
+    color: var(--aw-color-secondary);
+  }
+
+  .wmtboc-theme h1,
+  .wmtboc-theme h2,
+  .wmtboc-theme h3,
+  .wmtboc-theme h4,
+  .wmtboc-theme h5,
+  .wmtboc-theme h6 {
+    clear: both;
+  }
+
+  /* Link colors on subsite */
+  .wmtboc-theme a.text-primary {
+    color: var(--aw-color-primary);
+  }
+  .wmtboc-theme .btn-primary {
+    background-color: var(--aw-color-primary);
+  }
+
+  @keyframes glow {
+    0%,
+    100% {
+      box-shadow:
+        0 0 10px #d4af37,
+        0 0 20px #d4af37;
+      border-color: #d4af37;
+    }
+    50% {
+      box-shadow:
+        0 0 20px #ffd700,
+        0 0 40px #ffd700;
+      border-color: #ffd700;
+    }
+  }
+  .animate-glow-button {
+    animation: glow 1.5s ease-in-out infinite;
+  }
+
+  @keyframes curtainPulse {
+    0%,
+    100% {
+      opacity: 0.3;
+      transform: scaleY(0.9);
+      transform-origin: top;
+    }
+    50% {
+      opacity: 0.8;
+      transform: scaleY(1.1);
+      transform-origin: top;
+    }
+  }
+  .animate-curtain-pulse {
+    animation: curtainPulse 3s ease-in-out infinite;
+  }
+</style>

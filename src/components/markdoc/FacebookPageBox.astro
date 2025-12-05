@@ -1,0 +1,16 @@
+---
+import FacebookPageBoxWidget from '~/components/widgets/FacebookPageBox.astro';
+
+interface Props {
+  pageName: string;
+  pageUrl: string;
+  title?: string;
+  classes?: Record<string, string>;
+  id?: string;
+  isDark?: boolean;
+}
+
+const props = Astro.props as Props;
+---
+
+<FacebookPageBoxWidget {...props} />

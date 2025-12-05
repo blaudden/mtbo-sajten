@@ -30,6 +30,7 @@ export interface Props {
   showToggleTheme?: boolean;
   showRssFeed?: boolean;
   position?: string;
+  homeLink?: string;
 }
 
 const {
@@ -42,6 +43,7 @@ const {
   showToggleTheme = false,
   showRssFeed = false,
   position = 'center',
+  homeLink = getHomePermalink(),
 } = Astro.props;
 
 const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
@@ -71,8 +73,10 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
     ]}
   >
     <div class:list={[{ 'mr-auto rtl:mr-0 rtl:ml-auto': position === 'right' }, 'flex justify-between']}>
-      <a class="flex items-center" href={getHomePermalink()}>
-        <Logo />
+      <a class="flex items-center" href={homeLink}>
+        <slot name="logo">
+          <Logo />
+        </slot>
       </a>
       <div class="flex items-center md:hidden">
         <ToggleMenu />
@@ -154,7 +158,10 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
           actions?.length ? (
             <span class="ml-4 rtl:ml-0 rtl:mr-4">
               {actions.map((btnProps) => (
-                <Button {...btnProps} class="ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm w-auto" />
+                <Button
+                  {...btnProps}
+                  class={`ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm w-auto ${btnProps.class || ''}`}
+                />
               ))}
             </span>
           ) : (

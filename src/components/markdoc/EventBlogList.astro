@@ -1,0 +1,114 @@
+---
+import { APP_BLOG } from '~/utils/config';
+import BlogList from '~/components/blog/List.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Image from '~/components/common/Image.astro';
+import { fetchBlogPosts } from '~/utils/blog';
+import { cleanSlug } from '~/utils/permalinks';
+import type { Widget, Post } from '~/types';
+
+export interface Props extends Widget {
+  title?: string;
+  category?: string;
+  excludeSlug?: string;
+  information?: string;
+  compact?: boolean;
+}
+
+const {
+  title = await Astro.slots.render('title'),
+  category = Astro.props.category || '',
+  excludeSlug = Astro.props.excludeSlug || '',
+  information = await Astro.slots.render('information'),
+  id,
+  isDark = false,
+  compact = false,
+  bg = await Astro.slots.render('bg'),
+} = Astro.props as Props;
+
+let posts: Post[] = [];
+if (APP_BLOG.isEnabled) {
+  try {
+    const all = await fetchBlogPosts();
+    posts = all.filter(
+      (p) => p.category?.slug === category || (Array.isArray(p.tags) && p.tags.some((t) => t.slug === category))
+    );
+    if (excludeSlug) {
+      const excluded = cleanSlug(excludeSlug);
+      posts = posts.filter((p) => p.slug !== excluded);
+    }
+    // Sort by date DESC
+    posts.sort((a, b) => b.publishDate.valueOf() - a.publishDate.valueOf());
+  } catch (e) {
+    console.error('Error fetching posts in EventBlogList:', e);
+    // Fallback? empty posts
+  }
+}
+---
+
+{
+  APP_BLOG.isEnabled ? (
+    <WidgetWrapper
+      id={id}
+      isDark={isDark}
+      containerClass={`bg-blue-50 dark:bg-slate-900 py-4 md:py-6 lg:py-8 ${compact ? 'compact-list' : ''}`}
+      bg={bg}
+    >
+      <div class="flex flex-col lg:justify-between lg:flex-row mb-4">
+        {title && (
+          <div class="md:max-w-sm">
+            <h2
+              class="text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none group font-heading mb-2"
+              set:html={title}
+            />
+          </div>
+        )}
+        {information && <p class="text-muted dark:text-slate-400 lg:text-sm lg:max-w-md" set:html={information} />}
+      </div>
+
+      {compact ? (
+        <div class="flex flex-col gap-4">
+          {posts.map((post) => (
+            <a
+              href={post.permalink}
+              class="group flex flex-col sm:flex-row gap-4 sm:items-center bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-gray-200 dark:border-slate-700 p-4 transition duration-300 hover:shadow-lg hover:border-primary/50"
+            >
+              <div class="sm:w-32 sm:h-24 flex-shrink-0 rounded overflow-hidden relative bg-gray-200">
+                {post.image ? (
+                  <Image
+                    src={post.image}
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    widths={[200]}
+                    width={200}
+                    height={150}
+                    sizes="200px"
+                    alt={post.title}
+                    aspectRatio="16:9"
+                  />
+                ) : (
+                  <div class="w-full h-full flex items-center justify-center text-xs text-gray-500">No Image</div>
+                )}
+              </div>
+              <div class="flex-grow">
+                <h3 class="text-lg font-bold font-heading mb-1 group-hover:text-primary transition-colors">
+                  {post.title}
+                </h3>
+                <div class="text-xs text-muted dark:text-gray-400 mb-2 font-medium">
+                  {post.publishDate?.toLocaleDateString('sv-SE')}
+                </div>
+                <p class="text-sm text-gray-600 dark:text-gray-300 line-clamp-2">
+                  {post.excerpt || post.metadata?.description}
+                </p>
+              </div>
+            </a>
+          ))}
+          {posts.length === 0 && <p class="text-muted">No updates found.</p>}
+        </div>
+      ) : (
+        <BlogList posts={posts} />
+      )}
+    </WidgetWrapper>
+  ) : (
+    <Fragment />
+  )
+}
