@@ -9,17 +9,13 @@ export const headerData = {
     {
       text: 'Tävlingar',
       links: [
-        { text: 'Svenska Cupen 2025', href: getPermalink('/svenska-cupen-mtbo') },
-        { text: 'Svenska Cupen Hässleholm', href: getPermalink('/svenska-cupen-haessleholm-2025') },
-        { text: 'Svenska Cupen Gästrikland', href: getPermalink('/svenska-cupen-gaestrikland-2025') },
-        { text: 'Svenska Cupen MTBO Camp', href: getPermalink('/mtbo-camp-glasriket') },
-        { text: 'Svenska Cupen Örby', href: getPermalink('/svenska-cupen-oerby-2025') },
-        { text: 'O-Ringen 2025', href: getPermalink('/mtbo-oringen') },
+        { text: 'Svenska Cupen 2026', href: getPermalink('/svenska-cupen-mtbo') },
+        { text: 'O-Ringen 2026', href: getPermalink('/mtbo-oringen') },
         { text: 'Eventor', href: getPermalink('/eventor') },
       ],
     },
     {
-      text: 'Om',
+      text: 'Om sajten',
       href: getPermalink('about', 'page'),
     },
   ],
@@ -38,12 +34,8 @@ export const footerData = {
     {
       title: 'Tävlingar',
       links: [
-        { text: 'Svenska Cupen 2025', href: getPermalink('/svenska-cupen-mtbo') },
-        { text: 'Svenska Cupen Hässleholm', href: getPermalink('/svenska-cupen-haessleholm-2025') },
-        { text: 'Svenska Cupen Gästrikland', href: getPermalink('/svenska-cupen-gaestrikland-2025') },
-        { text: 'Svenska Cupen MTBO Camp', href: getPermalink('/mtbo-camp-glasriket') },
-        { text: 'Svenska Cupen Örby', href: getPermalink('/svenska-cupen-oerby-2025') },
-        { text: 'O-Ringen 2025', href: getPermalink('/mtbo-oringen') },
+        { text: 'Svenska Cupen 2026', href: getPermalink('/svenska-cupen-mtbo') },
+        { text: 'O-Ringen 2026', href: getPermalink('/mtbo-oringen') },
       ],
     },
     {
@@ -52,10 +44,18 @@ export const footerData = {
     },
     {
       title: 'På sajten',
+      links: [{ text: 'Blog', href: getBlogPermalink() }],
+    },
+    {
+      title: 'Om',
       links: [
-        { text: 'Blog', href: getBlogPermalink() },
-        { text: 'Om', href: getPermalink('about', 'page') },
+        { text: 'Om sajten', href: getPermalink('about', 'page') },
+        { text: 'Integritetspolicy', href: getPermalink('privacy-policy') },
       ],
+    },
+    {
+      title: 'Kontakt',
+      links: [{ text: 'Maila oss', href: 'mailto:mountainbikeorientering@gmail.com' }],
     },
   ],
   secondaryLinks: [],

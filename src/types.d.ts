@@ -42,7 +42,6 @@ export interface Post {
   /**  */
   Content?: AstroComponentFactory;
   content?: string;
-
 }
 
 export interface Taxonomy {

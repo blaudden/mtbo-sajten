@@ -2,7 +2,7 @@ import type { Config } from '@netlify/functions';
 
 // Stop TypeScript from complaining about
 // the missing process.env.REBUILD_HOOK
-declare var process: {
+declare const process: {
   env: {
     REBUILD_HOOK: string;
   };
@@ -23,8 +23,7 @@ const rebuildSite = async (triggerTitle: string) => {
   });
 };
 
-export default async (request: Request) => {
-
+export default async () => {
   // Skip rebuild if it's not Thursday or Sunday
   const today = new Date();
   if (![0, 4].includes(today.getDay())) {

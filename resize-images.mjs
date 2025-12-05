@@ -8,8 +8,8 @@ functionOptimizeImages({
   objectResizeOptions: {
     width: 1024,
     fit: 'contain',
-    withoutEnlargement: true
-  }
+    withoutEnlargement: true,
+  },
 }).then((results) => {
   console.table(results);
 });

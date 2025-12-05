@@ -23,3 +23,9 @@ package-lock.json
 pnpm-lock.yaml
 
 .astro
+
+# core dumps
+core
+core.*
+# Local Netlify folder
+.netlify

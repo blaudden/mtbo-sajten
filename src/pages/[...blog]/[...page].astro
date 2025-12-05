@@ -11,8 +11,8 @@ import type { GetStaticPaths, InferGetStaticPropsType } from 'astro';
 
 export const prerender = true;
 
-export const getStaticPaths = (async ({paginate}) => {
-  const posts =  await getBlogList();
+export const getStaticPaths = (async ({ paginate }) => {
+  const posts = await getBlogList();
   return paginate(posts, {
     params: { blog: BLOG_BASE || undefined },
     pageSize: blogPostsPerPage,
@@ -41,9 +41,7 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
-    <Headline
-      subtitle="En blog med allt som kan vara bra att veta för dig som gillar mountainbikeorientering."
-    >
+    <Headline subtitle="En blog med allt som kan vara bra att veta för dig som gillar mountainbikeorientering.">
       Blog
     </Headline>
     <BlogList posts={page.data} />

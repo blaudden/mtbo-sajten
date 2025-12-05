@@ -1,12 +1,12 @@
 ---
-import { APP_BLOG } from "~/utils/config";
+import { APP_BLOG } from '~/utils/config';
 
 import BlogList from '~/components/blog/List.astro';
 
-import { getBlogPermalink } from "~/utils/permalinks";
-import { findPostsBySlugs } from "~/utils/blog";
-import WidgetWrapper from "~/components/ui/WidgetWrapper.astro";
-import type { Widget } from "~/types";
+import { getBlogPermalink } from '~/utils/permalinks';
+import { findPostsBySlugs } from '~/utils/blog';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import type { Widget } from '~/types';
 
 export interface Props extends Widget {
   title?: string;
@@ -17,15 +17,15 @@ export interface Props extends Widget {
 }
 
 const {
-  title = await Astro.slots.render("title"),
-  linkText = "",
+  title = await Astro.slots.render('title'),
+  linkText = '',
   linkUrl = getBlogPermalink(),
-  information = await Astro.slots.render("information"),
+  information = await Astro.slots.render('information'),
   slugs = [],
 
   id,
   isDark = false,
-  bg = await Astro.slots.render("bg"),
+  bg = await Astro.slots.render('bg'),
 } = Astro.props;
 
 const posts = APP_BLOG.isEnabled ? await findPostsBySlugs(slugs) : [];
@@ -33,7 +33,7 @@ const posts = APP_BLOG.isEnabled ? await findPostsBySlugs(slugs) : [];
 
 {
   APP_BLOG.isEnabled ? (
-    <WidgetWrapper id={id} isDark={isDark} containerClass={"bg-blue-50 dark:bg-slate-900 py-4 md:py-6 lg:py-6"} bg={bg}>
+    <WidgetWrapper id={id} isDark={isDark} containerClass={'bg-blue-50 dark:bg-slate-900 py-4 md:py-6 lg:py-6'} bg={bg}>
       <div class="flex flex-col lg:justify-between lg:flex-row mb-2">
         {title && (
           <div class="">

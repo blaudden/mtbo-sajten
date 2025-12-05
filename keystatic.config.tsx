@@ -15,9 +15,7 @@ const storage: LocalConfig['storage'] | GitHubConfig['storage'] =
 
 // Location of embedded images in Markdoc differ locally vs. online
 const embeddedImagePubPath: string =
-  process.env.NODE_ENV === 'development'
-    ? 'src/assets/images/posts' :
-      '~/assets/images/posts';;
+  process.env.NODE_ENV === 'development' ? 'src/assets/images/posts' : '~/assets/images/posts';
 
 const posts = collection({
   label: 'Posts',
@@ -143,6 +141,144 @@ const posts = collection({
               <div>
                 <p>Video id: {videoid}</p>
                 <p>Title: {title}</p>
+              </div>
+            );
+          },
+        }),
+        LeafletMap: component({
+          label: 'Leaflet Map',
+          schema: {
+            markers: fields.array(
+              fields.object({
+                lat: fields.number({
+                  label: 'Latitude',
+                  validation: { isRequired: true, min: -90, max: 90 },
+                }),
+                lng: fields.number({
+                  label: 'Longitude',
+                  validation: { isRequired: true, min: -180, max: 180 },
+                }),
+                title: fields.text({
+                  label: 'Title',
+                  validation: { isRequired: true },
+                }),
+                url: fields.url({
+                  label: 'URL',
+                }),
+                color: fields.select({
+                  label: 'Color',
+                  options: [
+                    { label: 'Blue (default)', value: 'blue' },
+                    { label: 'Red', value: 'red' },
+                    { label: 'Green', value: 'green' },
+                    { label: 'Orange', value: 'orange' },
+                    { label: 'Purple', value: 'purple' },
+                    { label: 'Grey', value: 'grey' },
+                  ],
+                  defaultValue: 'blue',
+                }),
+                icon: fields.select({
+                  label: 'Icon Type',
+                  options: [
+                    { label: 'Default (●)', value: 'default' },
+                    { label: 'Start (▶)', value: 'start' },
+                    { label: 'Finish (■)', value: 'finish' },
+                    { label: 'Parking (P)', value: 'parking' },
+                    { label: 'Info (i)', value: 'info' },
+                  ],
+                  defaultValue: 'default',
+                }),
+              }),
+              {
+                label: 'Markers',
+                itemLabel: (props) => props.fields.title.value || 'New Marker',
+              }
+            ),
+            polygons: fields.array(
+              fields.object({
+                points: fields.text({
+                  label: 'Points',
+                  description: 'Format: lat,lng; lat,lng (e.g. 59.33,18.07; 59.34,18.08)',
+                  multiline: true,
+                }),
+                color: fields.select({
+                  label: 'Color',
+                  options: [
+                    { label: 'Red (default)', value: 'red' },
+                    { label: 'Blue', value: 'blue' },
+                    { label: 'Green', value: 'green' },
+                    { label: 'Orange', value: 'orange' },
+                    { label: 'Purple', value: 'purple' },
+                    { label: 'Grey', value: 'grey' },
+                  ],
+                  defaultValue: 'red',
+                }),
+                title: fields.text({ label: 'Title' }),
+              }),
+              {
+                label: 'Polygons',
+                itemLabel: (props) => props.fields.title.value || 'New Polygon',
+              }
+            ),
+            polylines: fields.array(
+              fields.object({
+                points: fields.text({
+                  label: 'Points',
+                  description: 'Format: lat,lng; lat,lng (e.g. 59.33,18.07; 59.34,18.08)',
+                  multiline: true,
+                }),
+                color: fields.select({
+                  label: 'Color',
+                  options: [
+                    { label: 'Green (default)', value: 'green' },
+                    { label: 'Blue', value: 'blue' },
+                    { label: 'Red', value: 'red' },
+                    { label: 'Orange', value: 'orange' },
+                    { label: 'Purple', value: 'purple' },
+                    { label: 'Grey', value: 'grey' },
+                  ],
+                  defaultValue: 'green',
+                }),
+                width: fields.integer({ label: 'Width', defaultValue: 3 }),
+                title: fields.text({ label: 'Title' }),
+              }),
+              {
+                label: 'Polylines',
+                itemLabel: (props) => props.fields.title.value || 'New Polyline',
+              }
+            ),
+            zoom: fields.integer({
+              label: 'Zoom Level',
+              defaultValue: 13,
+              validation: { min: 1, max: 18 },
+            }),
+            height: fields.text({
+              label: 'Height',
+              defaultValue: '400px',
+              description: 'CSS height value (e.g., 400px)',
+            }),
+          },
+          preview: (props) => {
+            const markerCount = props.fields.markers.elements.length;
+            const polygonCount = props.fields.polygons.elements.length;
+            const polylineCount = props.fields.polylines.elements.length;
+            return (
+              <div style={{ padding: '1rem', background: '#f3f4f6', borderRadius: '0.5rem' }}>
+                <h3 style={{ fontWeight: 'bold', marginBottom: '0.5rem' }}>Leaflet Map</h3>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem' }}>
+                  <div>
+                    <span style={{ display: 'block', fontSize: '0.875rem', color: '#6b7280' }}>Markers</span>
+                    <span style={{ display: 'block', fontSize: '1.25rem', fontWeight: 'bold' }}>{markerCount}</span>
+                  </div>
+                  <div>
+                    <span style={{ display: 'block', fontSize: '0.875rem', color: '#6b7280' }}>Polygons</span>
+                    <span style={{ display: 'block', fontSize: '1.25rem', fontWeight: 'bold' }}>{polygonCount}</span>
+                  </div>
+                  <div>
+                    <span style={{ display: 'block', fontSize: '0.875rem', color: '#6b7280' }}>Polylines</span>
+                    <span style={{ display: 'block', fontSize: '1.25rem', fontWeight: 'bold' }}>{polylineCount}</span>
+                  </div>
+                </div>
               </div>
             );
           },

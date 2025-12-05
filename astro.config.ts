@@ -12,10 +12,9 @@ import { ANALYTICS, SITE } from './src/utils/config.ts';
 import react from '@astrojs/react';
 import markdoc from '@astrojs/markdoc';
 import keystatic from '@keystatic/astro';
-import netlify from "@astrojs/netlify";
+import netlify from '@astrojs/netlify';
 import type { AstroIntegration } from 'astro';
 import { imageService } from '@unpic/astro/service';
-
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -30,7 +29,7 @@ const sitemap_exclude = [
   'https://www.mountainbikeorientering.se/mtbo-i-skutskaer-28-29-augusti-2021',
   'https://www.mountainbikeorientering.se/sportident-air-utbildning-i-uppsala',
   'https://www.mountainbikeorientering.se/mtbo-sommar-i-uppsala-2022',
-  'https://www.mountainbikeorientering.se/mtbo-i-osterbybruk-2021'
+  'https://www.mountainbikeorientering.se/mtbo-i-osterbybruk-2021',
 ];
 
 // https://astro.build/config
@@ -117,8 +116,6 @@ export default defineConfig({
     '/orientering.se': '/',
     '/svenska-': '/svenska-cupen',
     '/svenska-cupen-': '/svenska-cupen',
-    '/mtbo-oringen-jonkoping-2025': '/mtbo-oringen',
-    '/en/mtbo-oringen-jonkoping-2025': '/en/mtbo-oringen',
     '/wmtboc26/hemus_moraparken.pdf':
       'https://drive.google.com/file/d/1qh4T2srZvEt668uz0higNb7ca-WdH0Gs/view?usp=drive_link',
     '/wmtboc26/lade_eldris.pdf':
