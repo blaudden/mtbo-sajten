@@ -27,3 +27,5 @@ pnpm-lock.yaml
 # core dumps
 core
 core.*
+# Local Netlify folder
+.netlify
