@@ -16,6 +16,13 @@ export default defineMarkdocConfig({
         title: { type: 'String' },
       },
     },
+    Carousel: {
+        render: component('./src/components/widgets/Carousel.astro'),
+        attributes: {
+            images: { type: Array },
+            id: { type: 'String' },
+        }
+    },
     LeafletMap: {
       render: component('./src/components/markdoc/LeafletMap.astro'),
       attributes: {
@@ -24,6 +31,15 @@ export default defineMarkdocConfig({
         polylines: { type: Array },
         zoom: { type: 'Number' },
         height: { type: 'String' },
+      },
+    },
+    EventBlogList: {
+      render: component('./src/components/markdoc/EventBlogList.astro'),
+      attributes: {
+        title: { type: 'String' },
+        category: { type: 'String' },
+        excludeSlug: { type: 'String' },
+        compact: { type: 'Boolean' },
       },
     },
   },

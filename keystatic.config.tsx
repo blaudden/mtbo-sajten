@@ -44,6 +44,11 @@ const posts = collection({
       label: 'Evergreen',
       description: 'Sätt artikel som evergreen, den får då inget datum',
     }),
+    hideFromMain: fields.checkbox({
+      label: 'Hide from main blog',
+      description:
+        'När aktiverad kommer artikeln att döljas från huvudbloggens lista (/blog). Använd för landningssidor eller event-sidor som ska listas separat.',
+    }),
     publishDate: fields.date({
       label: 'Published date',
       validation: { isRequired: true },
@@ -67,7 +72,7 @@ const posts = collection({
     category: fields.select({
       label: 'Category',
       description:
-        'Det ämne som artikeln hamnar om, det här påverkar hur artikeln visas på sajten. Dom flesta artiklar har ingen kategori.',
+        'Det ämne som artikeln hamnar om, det här påverkar hur artikeln visas på sajten. Dom flesta artiklar har ingen kategori. För att inkludera artikeln i MTBO‑VM 2026-sidan, sätt kategorin till WMTBOC26.',
       options: [
         { label: '', value: '' },
         { label: 'Svenska Cupen', value: 'svenska-cupen' },
@@ -79,7 +84,7 @@ const posts = collection({
     tags: fields.array(fields.text({ label: 'Tag' }), {
       label: 'Tag',
       description:
-        'Taggar för artikeln, används för att styra var och hur dom visas på sajten. tex. grupperas alla artiklar om Svenska Cupen 2024 med taggen svenska-cupen-2024 ',
+        'Taggar för artikeln, används för att styra var och hur dom visas på sajten. Exempel: "svenska-cupen-2024". ',
       itemLabel: (props) => props.value,
     }),
     author: fields.text({
@@ -109,6 +114,15 @@ const posts = collection({
           },
           preview: () => null,
         }),
+          EventBlogList: component({
+            label: 'Event Blog List',
+            schema: {
+              title: fields.text({ label: 'Title' }),
+              category: fields.text({ label: 'Category Slug', description: 'Category slug to filter posts by (e.g. wmtboc26)' }),
+              excludeSlug: fields.text({ label: 'Exclude Slug', description: 'Optional: post slug to exclude (e.g. wmtboc26)' }),
+            },
+            preview: () => null,
+          }),
         YoutubeVideo: component({
           label: 'YouTube Video',
           schema: {

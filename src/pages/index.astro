@@ -4,6 +4,7 @@ import Content from '~/components/widgets/Content.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FeaturedItem from '~/components/widgets/FeaturedItem.astro';
 ---
 
 <Layout>
@@ -27,126 +28,140 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
     </Fragment>
   </Hero>
 
-  <BlogLatestPosts
-    title="Blog"
-    linkText="Se alla artiklar"
-    information={`En blogg med det som är bra att veta för dig som gillar mountainbikeorientering.`}
-    count={12}
+  <FeaturedItem
+    title="VM i Sverige 2026"
+    excerpt="Världsmästerskapen och Junior-VM i mountainbikeorientering avgörs i Mora 2026. Här på mountainbikeorientering.se samlar vi allt du behöver veta för att heja, följa eller delta själv — praktisk information, program, banor, anmälningar, boende och live‑resultat. All information på dessa sidor är på engelska."
+    image="~/assets/images/posts/wmtboc26/image.png"
+    link="/wmtboc26"
+    linkLabel="Läs mer om MTBO VM 2026 här!"
+    badgeText="WMTBOC"
+    secondaryLink="/wmtboc26?lang=en"
+    secondaryLabel="Read more about WMTBOC 2026!"
   />
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Layout>
 
-  <Content
-    tagline="Sporten"
-    title="Om mountainbikeorientering"
-    subtitle=""
-    items={[
-      {
-        title: 'Sporten:',
-        description: `Mountainbikeorientering (MTBO) är en gren inom orientering där
+<BlogLatestPosts
+  title="Blog"
+  linkText="Se alla artiklar"
+  information={`En blogg med det som är bra att veta för dig som gillar mountainbikeorientering.`}
+  count={12}
+/>
+
+<Content
+  tagline="Sporten"
+  title="Om mountainbikeorientering"
+  subtitle=""
+  items={[
+    {
+      title: 'Sporten:',
+      description: `Mountainbikeorientering (MTBO) är en gren inom orientering där
       man använder en cykel, oftast en mountainbike, för att ta sig runt en orienteringsbana.
       Banorna går mest på stigar och andra cykelframkomliga områden.`,
-      },
-      {
-        title: 'Karta:',
-        description: `Kartan framhäver det som är viktigt när man cyklar. Vägar och stigars
+    },
+    {
+      title: 'Karta:',
+      description: `Kartan framhäver det som är viktigt när man cyklar. Vägar och stigars
       framkomlighet framgår av kartan, och ju längre strecken är, desto snabbare går det
       att cykla på stigen. För att kunna läsa kartan medan man cyklar fästs den på ett
       kartställ på styret. Kartstället kan roteras så att kartan alltid är i färdriktningen —
       det kallas att "passa" kartan.`,
-      },
-      {
-        title: 'Full fart:',
-        description: `På cykel färdas man oftast betydligt snabbare än när man springer, och
+    },
+    {
+      title: 'Full fart:',
+      description: `På cykel färdas man oftast betydligt snabbare än när man springer, och
       det är därför extra viktigt att hela tiden hålla reda på var man befinner sig
       för att snabbt kunna välja rätt vägval.`,
-      },
-    ]}
-    image={{
-      src: '~/assets/images/about.jpg',
-      alt: 'På MTB-orientering (MTB-O) cyklar deltagarna i full fart mellan kontroller i skogen och det gäller att hålla reda på var man är och ta snabbaste vägvalet hela tiden.',
-    }}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
+    },
+  ]}
+  image={{
+    src: '~/assets/images/about.jpg',
+    alt: 'På MTB-orientering (MTB-O) cyklar deltagarna i full fart mellan kontroller i skogen och det gäller att hålla reda på var man är och ta snabbaste vägvalet hela tiden.',
+  }}
+>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Content>
 
-  <Features
-    id="utrustning"
-    tagline="Utrustning"
-    title="Det här är utrustningen som behövs för mountainbikeorientering"
-    subtitle="Med en cykel, hjälm och ett kartställ kan du vara med på en tävling. Saknar du kartställ eller tidtagningschip finns det vanligtvis att hyra på tävlingarna."
-    items={[
-      {
-        title: 'Cykel',
-        description:
-          'Cykeln ska vara anpassad så att du kan ta dig fram så snabbt som möjligt mellan kontrollerna. Ibland innebär det en längre omväg på en lättcyklad stig, ibland en kortare men svårcyklad stig. Vilken cykel som passar bäst beror på underlaget och din förmåga. De flesta använder en mountainbike i cross-country-modell eftersom underlaget kan variera mellan asfalt, grus, gräs och olika typer av stigar.',
-        icon: 'tabler:bike',
-      },
-      {
-        title: 'Kartställ',
-        description:
-          'För att kunna läsa kartan i farten medan man cyklar används ett kartställ som fästs på styret. Kartstället kan roteras för att "passa" kartan så att den alltid är i färdriktningen. Det finns olika storlekar och material på kartställ; det vanligaste är 30x30 cm och tillverkat i plast. Större kartställ används för att undvika att vika kartan under tävlingen, vilket kan spara tid. Kartställ med platta av kolfiber används framförallt för att minska vibrationer och göra det enklare att läsa kartan i farten.',
-        icon: 'tabler:map-2',
-      },
-      {
-        title: 'Skydd',
-        description:
-          'Hjälm är obligatoriskt och utan den får man inte starta. För att hålla fartvinden borta och göra det lättare att läsa kartan används glasögon. Det kan också vara lämpligt att använda knä eller armbågsskydd för att skydda utsatta kroppsdelar.',
-        icon: 'tabler:helmet',
-      },
-      {
-        title: 'Klädsel',
-        description:
-          'Vanliga cykelkläder anpassade efter rådande väder brukar fungera bra. Ofta används uttrycket "fri klädsel" som betyder att man inte behöver ha heltäckande klädsel — det är annars ett krav när man springer orientering i skogen.',
-        icon: 'tabler:shirt',
-      },
-      {
-        title: 'Kompass',
-        description:
-          'För att kunna passa kartan mot norr kan en kompass användas, men då man oftast följer tydliga terrängföremål är det vanligt att det fungerar lika bra att passa kartan efter naturen - dvs. utan kompass. Det finns speciella kompasser som fästs runt handleden eftersom en vanlig handhållen kompass är svår att använda samtidigt som man cyklar.',
-        icon: 'tabler:compass',
-      },
-      {
-        title: 'Tidtagning',
-        description:
-          'Varje deltagare har med sig ett tidtagningschip som registrerar kontrollerna. Beroende på system behöver man antingen stanna för att "stämpla" eller så registreras kontrollen automatiskt i farten. Det vanligaste systemet i dagsläget är SportIdent Air+ (SIAC); då registreras kontrollen automatiskt vid passage.',
-        icon: 'tabler:clock-play',
-      },
-    ]}
-  />
+<Features
+  id="utrustning"
+  tagline="Utrustning"
+  title="Det här är utrustningen som behövs för mountainbikeorientering"
+  subtitle="Med en cykel, hjälm och ett kartställ kan du vara med på en tävling. Saknar du kartställ eller tidtagningschip finns det vanligtvis att hyra på tävlingarna."
+  items={[
+    {
+      title: 'Cykel',
+      description:
+        'Cykeln ska vara anpassad så att du kan ta dig fram så snabbt som möjligt mellan kontrollerna. Ibland innebär det en längre omväg på en lättcyklad stig, ibland en kortare men svårcyklad stig. Vilken cykel som passar bäst beror på underlaget och din förmåga. De flesta använder en mountainbike i cross-country-modell eftersom underlaget kan variera mellan asfalt, grus, gräs och olika typer av stigar.',
+      icon: 'tabler:bike',
+    },
+    {
+      title: 'Kartställ',
+      description:
+        'För att kunna läsa kartan i farten medan man cyklar används ett kartställ som fästs på styret. Kartstället kan roteras för att "passa" kartan så att den alltid är i färdriktningen. Det finns olika storlekar och material på kartställ; det vanligaste är 30x30 cm och tillverkat i plast. Större kartställ används för att undvika att vika kartan under tävlingen, vilket kan spara tid. Kartställ med platta av kolfiber används framförallt för att minska vibrationer och göra det enklare att läsa kartan i farten.',
+      icon: 'tabler:map-2',
+    },
+    {
+      title: 'Skydd',
+      description:
+        'Hjälm är obligatoriskt och utan den får man inte starta. För att hålla fartvinden borta och göra det lättare att läsa kartan används glasögon. Det kan också vara lämpligt att använda knä eller armbågsskydd för att skydda utsatta kroppsdelar.',
+      icon: 'tabler:helmet',
+    },
+    {
+      title: 'Klädsel',
+      description:
+        'Vanliga cykelkläder anpassade efter rådande väder brukar fungera bra. Ofta används uttrycket "fri klädsel" som betyder att man inte behöver ha heltäckande klädsel — det är annars ett krav när man springer orientering i skogen.',
+      icon: 'tabler:shirt',
+    },
+    {
+      title: 'Kompass',
+      description:
+        'För att kunna passa kartan mot norr kan en kompass användas, men då man oftast följer tydliga terrängföremål är det vanligt att det fungerar lika bra att passa kartan efter naturen - dvs. utan kompass. Det finns speciella kompasser som fästs runt handleden eftersom en vanlig handhållen kompass är svår att använda samtidigt som man cyklar.',
+      icon: 'tabler:compass',
+    },
+    {
+      title: 'Tidtagning',
+      description:
+        'Varje deltagare har med sig ett tidtagningschip som registrerar kontrollerna. Beroende på system behöver man antingen stanna för att "stämpla" eller så registreras kontrollen automatiskt i farten. Det vanligaste systemet i dagsläget är SportIdent Air+ (SIAC); då registreras kontrollen automatiskt vid passage.',
+      icon: 'tabler:clock-play',
+    },
+  ]}
+/>
 
-  <!-- Här ska det stå om kartan och finnas en bild -->
+<!-- Här ska det stå om kartan och finnas en bild -->
 
-  <Content
-    tagline="Lär dig mer"
-    title="Fakta om sporten"
-    subtitle=""
-    isReversed
-    items={[
-      {
-        title: 'Förkortning:',
-        description: `MTBO är den vedertagna förkortningen av mountainbikeorientering — både i Sverige
-        och internationellt. Tidigare har förkortningarna MtbO och MTB-O använts, men sedan
-        några år tillbaka används MTBO (med stora bokstäver och utan bindestreck). MTBO
-        används framförallt i kommunikation med dem som redan är insatta i sporten; i annat
-        fall kan man skriva MTB-orientering, cykelorientering eller helt enkelt mountainbikeorientering.`,
-      },
-      {
-        title: 'Bakgrund:',
-        description: `Mountainbikeorientering (MTBO) har funnits i mer än 10 år i Sverige och tävlingar där alla är välkomna
+<Content
+  tagline="Lär dig mer"
+  title="Fakta om sporten"
+  subtitle=""
+  isReversed
+  items={[
+    {
+      title: 'Förkortning:',
+      description: `MTBO är den vedertagna förkortningen av mountainbikeorientering — både i Sverige
+      och internationellt. Tidigare har förkortningarna MtbO och MTB-O använts, men sedan
+      några år tillbaka används MTBO (med stora bokstäver och utan bindestreck). MTBO
+      används framförallt i kommunikation med dem som redan är insatta i sporten; i annat
+      fall kan man skriva MTB-orientering, cykelorientering eller helt enkelt mountainbikeorientering.`,
+    },
+    {
+      title: 'Bakgrund:',
+      description: `Mountainbikeorientering (MTBO) har funnits i mer än 10 år i Sverige och tävlingar där alla är välkomna
       arrangeras nu med jämna mellanrum. Sporten är relativt sett större i andra länder, framförallt
       söderöver i Europa där cykling är en stor sport med mycket kunnande om hur man tränar cykling och arrangerar cykeltävlingar.
       I Sverige där det finns många orienterare och konditionsidrottare finns stor potential för att sporten fortsätter växa.
       Troligen har även andra länders avsaknad av allemansrätt medfört att man fått hålla sig till stigar och vägar.`,
-      },
-    ]}
-    image={{
-      src: '~/assets/images/about2.jpg',
-      alt: 'Mountainbikeorienterare närbild med kartställ och nummerlapp',
-    }}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-</Layout>
+    },
+  ]}
+  image={{
+    src: '~/assets/images/about2.jpg',
+    alt: 'Mountainbikeorienterare närbild med kartställ och nummerlapp',
+  }}
+>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Content>

@@ -55,6 +55,7 @@ const getNormalizedPost = async (post: CollectionEntry<'posts'>): Promise<Post> 
     author,
     draft = false,
     evergreen = false,
+    hideFromMain = false,
     metadata = {},
   } = data;
 
@@ -93,6 +94,7 @@ const getNormalizedPost = async (post: CollectionEntry<'posts'>): Promise<Post> 
     draft: draft,
 
     evergreen: evergreen,
+    hideFromMain: hideFromMain,
 
     metadata,
 
@@ -187,8 +189,8 @@ export const findLangRelatedPosts = async (slug: string): Promise<Array<string>>
 /** */
 export const fetchBlogPosts = async (): Promise<Array<Post>> => {
   const posts = await fetchPosts();
-
-  return posts ? posts.filter((post) => !post.evergreen) : [];
+  // Exclude posts that are marked evergreen or explicitly hidden from the main blog listing
+  return posts ? posts.filter((post) => !post.evergreen && !post.hideFromMain) : [];
 };
 
 /** */
