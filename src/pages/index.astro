@@ -34,7 +34,7 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
   <BlogLatestPosts
     title="Blog"
     linkText='Se alla artiklar'
-    information={`En blog med det som är bra att veta för dig som gillar mountainbikeorientering.`}
+    information={`En blogg med det som är bra att veta för dig som gillar mountainbikeorientering.`}
     count = {12}
   >
   </BlogLatestPosts>
@@ -48,26 +48,24 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
       title: 'Sporten:',
       description:
         `Mountainbikeorientering (MTBO) är en gren inom orientering där
-      man använder cykel - oftast en mountainbike - för att ta sig runt en orienteringsbana.
-      Banorna går mest på stigar och andra cykel-framkomliga områden.`,
+      man använder en cykel, oftast en mountainbike, för att ta sig runt en orienteringsbana.
+      Banorna går mest på stigar och andra cykelframkomliga områden.`,
     },
     {
       title: 'Karta:',
       description:
-        `Kartan har ett utseende som framhäver det
-      som är viktigt när man cyklar. Vägar och stigars snabbhet framgår av kartan
-      och ju längre deras streck på kartan är, desto snabbare går stigen att cykla.
-      För att kunna läsa kartan medans man cyklar är den fäst på ett kartställ på
-      styret, kartstället går att vrida så att man alltid har kartan i färdriktningen -
-      det kallas för att "passa" kartan. `,
+        `Kartan framhäver det som är viktigt när man cyklar. Vägar och stigars
+      framkomlighet framgår av kartan, och ju längre strecken är, desto snabbare går det
+      att cykla på stigen. För att kunna läsa kartan medan man cyklar fästs den på ett
+      kartställ på styret. Kartstället kan roteras så att kartan alltid är i färdriktningen —
+      det kallas att "passa" kartan.`,
     },
     {
       title: 'Full fart:',
       description:
-        `På cykel färdas man mer än dubbelt
-      så fort som när man springer och det är därmed viktigare än någonsin att
-      hela tiden hålla reda på var man befinner sig för att kunna ta snabba beslut
-      om vart man ska ta vägen härnäst.`,
+        `På cykel färdas man oftast betydligt snabbare än när man springer, och
+      det är därför extra viktigt att hela tiden hålla reda på var man befinner sig
+      för att snabbt kunna välja rätt vägval.`,
     },
     ]}
     image={{
@@ -90,13 +88,13 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
       {
         title: 'Cykel',
         description:
-          'Cykeln ska vara avpassad för att kunna välja en väg där du så snabbt som möjligt kan ta dig fram mellan kontrollerna. Ibland innebär det en lång väg runt på en lättcyklad stig medans det i andra fall blir en kortare men långsammare och mer svårcyklad stig. Den cykeln du har och din egen förmåga att använda den är vad som är bäst just för dig. Dom flesta använder en mountainbike av cross-country modell då underlaget kan variera allt mellan asfalt, grus och gräs till olika enkel- eller svår-cyklade stigar.',
+          'Cykeln ska vara anpassad så att du kan ta dig fram så snabbt som möjligt mellan kontrollerna. Ibland innebär det en längre omväg på en lättcyklad stig, ibland en kortare men svårcyklad stig. Vilken cykel som passar bäst beror på underlaget och din förmåga. De flesta använder en mountainbike i cross-country-modell eftersom underlaget kan variera mellan asfalt, grus, gräs och olika typer av stigar.',
         icon: 'tabler:bike',
       },
       {
         title: 'Kartställ',
         description:
-          'För att kunna läsa kartan i farten medans man cyklar används ett kartställ som fästs på styret, det kan roteras för att "passa" kartan så att den alltid är i färdriktningen. Det finns olika storlek och material på kartställ, det vanligaste är 30x30cm och gjort i plast. Större kartställ används för att undvika att behöva vika om kartan under tävlingen, det kan spara lite tid. Kartställ med platta gjord av kolfiber används framförallt för att minska vibrationer och därmed göra det enklare att läsa kartan i farten.',
+          'För att kunna läsa kartan i farten medan man cyklar används ett kartställ som fästs på styret. Kartstället kan roteras för att "passa" kartan så att den alltid är i färdriktningen. Det finns olika storlekar och material på kartställ; det vanligaste är 30x30 cm och tillverkat i plast. Större kartställ används för att undvika att vika kartan under tävlingen, vilket kan spara tid. Kartställ med platta av kolfiber används framförallt för att minska vibrationer och göra det enklare att läsa kartan i farten.',
         icon: 'tabler:map-2',
       },
       {
@@ -108,7 +106,7 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
       {
         title: 'Klädsel',
         description:
-          'Vanliga cykelkläder anpassade efter rådande väder brukar fungera bra. Ofta används uttrycket "fri klädsel" som betyder att man inte behöver ha heltäckande klädsel, det är annars är ett krav när man springer orientering i skogen.',
+          'Vanliga cykelkläder anpassade efter rådande väder brukar fungera bra. Ofta används uttrycket "fri klädsel" som betyder att man inte behöver ha heltäckande klädsel — det är annars ett krav när man springer orientering i skogen.',
         icon: 'tabler:shirt',
       },
       {
@@ -120,7 +118,7 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
       {
         title: 'Tidtagning',
         description:
-          'Varje deltagare har med sig ett tidtagningschip som registrerar kontrollerna, beroende på system behöver man antingen stanna för att "stämpla" eller så registreras kontrollen automatisk i farten. Det i dagsläget vanligaste är SportIdent Air+ med SIAC, då registreras kontrollen automatiskt vid passage.',
+          'Varje deltagare har med sig ett tidtagningschip som registrerar kontrollerna. Beroende på system behöver man antingen stanna för att "stämpla" eller så registreras kontrollen automatiskt i farten. Det vanligaste systemet i dagsläget är SportIdent Air+ (SIAC); då registreras kontrollen automatiskt vid passage.',
         icon: 'tabler:clock-play',
       },
     ]}
@@ -139,13 +137,11 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
     {
       title: 'Förkortning:',
       description:
-        `MTBO är den vedertagna förkortningen av mountainbikeorientering - både i Sverie
-        och internationellt. Tidigare har förkortningarna MtbO och MTB-O använts men sedan
-        ett par år tillbaka är det alltså MTBO med stora bokstäver och utan bindestreck som
-        gäller.  Förkortningen MTBO används framförallt när man kommunicerar med dom som
-        redan är  insatta i sporten och i annat fall kan man använda sig av MTB-orientering,
-        cykelorientering eller helt enkelt skriva ut hela ordet mountainbikeorientering.
-        Alla vet vad orientering, cykel och mountainbike är!`,
+        `MTBO är den vedertagna förkortningen av mountainbikeorientering — både i Sverige
+        och internationellt. Tidigare har förkortningarna MtbO och MTB-O använts, men sedan
+        några år tillbaka används MTBO (med stora bokstäver och utan bindestreck). MTBO
+        används framförallt i kommunikation med dem som redan är insatta i sporten; i annat
+        fall kan man skriva MTB-orientering, cykelorientering eller helt enkelt mountainbikeorientering.`,
     },
     {
       title: 'Bakgrund:',
