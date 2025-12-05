@@ -63,7 +63,7 @@ export const getPermalink = (slug = '', type = 'page'): string => {
 
     case 'asset':
       permalink = getAsset(slug);
-      break
+      break;
 
     case 'category':
       permalink = createPath(CATEGORY_BASE, trimSlash(slug));

@@ -13,20 +13,18 @@ export interface Props {
 }
 
 const { category = '', publishDate } = Astro.props;
-
 ---
 
-
-  <Icon name="tabler:clock" class="w-4 h-4 inline-block -mt-0.5 mr-1 dark:text-gray-400" />
-  <time datetime={String(publishDate)} class="inline-block">{getFormattedDate(publishDate)}</time>
-  {
-   category && (
-      <>
-        {' '}
-        ·{' '}
-        <a class="capitalize hover:underline inline-block" href={getPermalink(category.slug, 'category')}>
-          {getPrettyCategory(category.title)}
-        </a>
-      </>
-    )
-  }
+<Icon name="tabler:clock" class="w-4 h-4 inline-block -mt-0.5 mr-1 dark:text-gray-400" />
+<time datetime={String(publishDate)} class="inline-block">{getFormattedDate(publishDate)}</time>
+{
+  category && (
+    <>
+      {' '}
+      ·{' '}
+      <a class="capitalize hover:underline inline-block" href={getPermalink(category.slug, 'category')}>
+        {getPrettyCategory(category.title)}
+      </a>
+    </>
+  )
+}

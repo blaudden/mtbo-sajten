@@ -15,9 +15,7 @@ const storage: LocalConfig['storage'] | GitHubConfig['storage'] =
 
 // Location of embedded images in Markdoc differ locally vs. online
 const embeddedImagePubPath: string =
-  process.env.NODE_ENV === 'development'
-    ? 'src/assets/images/posts' :
-      '~/assets/images/posts';;
+  process.env.NODE_ENV === 'development' ? 'src/assets/images/posts' : '~/assets/images/posts';
 
 const posts = collection({
   label: 'Posts',
@@ -198,10 +196,10 @@ const posts = collection({
             ),
             polygons: fields.array(
               fields.object({
-                points: fields.text({ 
-                    label: 'Points', 
-                    description: 'Format: lat,lng; lat,lng (e.g. 59.33,18.07; 59.34,18.08)',
-                    multiline: true 
+                points: fields.text({
+                  label: 'Points',
+                  description: 'Format: lat,lng; lat,lng (e.g. 59.33,18.07; 59.34,18.08)',
+                  multiline: true,
                 }),
                 color: fields.select({
                   label: 'Color',
@@ -224,10 +222,10 @@ const posts = collection({
             ),
             polylines: fields.array(
               fields.object({
-                points: fields.text({ 
-                    label: 'Points', 
-                    description: 'Format: lat,lng; lat,lng (e.g. 59.33,18.07; 59.34,18.08)',
-                    multiline: true 
+                points: fields.text({
+                  label: 'Points',
+                  description: 'Format: lat,lng; lat,lng (e.g. 59.33,18.07; 59.34,18.08)',
+                  multiline: true,
                 }),
                 color: fields.select({
                   label: 'Color',
@@ -268,18 +266,18 @@ const posts = collection({
               <div style={{ padding: '1rem', background: '#f3f4f6', borderRadius: '0.5rem' }}>
                 <h3 style={{ fontWeight: 'bold', marginBottom: '0.5rem' }}>Leaflet Map</h3>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem' }}>
-                    <div>
-                        <span style={{ display: 'block', fontSize: '0.875rem', color: '#6b7280' }}>Markers</span>
-                        <span style={{ display: 'block', fontSize: '1.25rem', fontWeight: 'bold' }}>{markerCount}</span>
-                    </div>
-                    <div>
-                        <span style={{ display: 'block', fontSize: '0.875rem', color: '#6b7280' }}>Polygons</span>
-                        <span style={{ display: 'block', fontSize: '1.25rem', fontWeight: 'bold' }}>{polygonCount}</span>
-                    </div>
-                    <div>
-                        <span style={{ display: 'block', fontSize: '0.875rem', color: '#6b7280' }}>Polylines</span>
-                        <span style={{ display: 'block', fontSize: '1.25rem', fontWeight: 'bold' }}>{polylineCount}</span>
-                    </div>
+                  <div>
+                    <span style={{ display: 'block', fontSize: '0.875rem', color: '#6b7280' }}>Markers</span>
+                    <span style={{ display: 'block', fontSize: '1.25rem', fontWeight: 'bold' }}>{markerCount}</span>
+                  </div>
+                  <div>
+                    <span style={{ display: 'block', fontSize: '0.875rem', color: '#6b7280' }}>Polygons</span>
+                    <span style={{ display: 'block', fontSize: '1.25rem', fontWeight: 'bold' }}>{polygonCount}</span>
+                  </div>
+                  <div>
+                    <span style={{ display: 'block', fontSize: '0.875rem', color: '#6b7280' }}>Polylines</span>
+                    <span style={{ display: 'block', fontSize: '1.25rem', fontWeight: 'bold' }}>{polylineCount}</span>
+                  </div>
                 </div>
               </div>
             );

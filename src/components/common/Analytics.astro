@@ -5,9 +5,11 @@ import { ANALYTICS } from '~/utils/config';
 
 {
   ANALYTICS?.vendors?.googleAnalytics?.id ? (
-    <GoogleAnalytics id={String(ANALYTICS.vendors.googleAnalytics.id)} partytown={ANALYTICS?.vendors?.googleAnalytics?.partytown} />
+    <GoogleAnalytics
+      id={String(ANALYTICS.vendors.googleAnalytics.id)}
+      partytown={ANALYTICS?.vendors?.googleAnalytics?.partytown}
+    />
   ) : null
-
 }
 
-<img src="https://tracker.metricool.com/c3po.jpg?hash=b810089353f6d4a2d9d3d7347d93e0fd" alt=""/>
+<img src="https://tracker.metricool.com/c3po.jpg?hash=b810089353f6d4a2d9d3d7347d93e0fd" alt="" />
