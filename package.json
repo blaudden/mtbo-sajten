@@ -40,7 +40,7 @@
     "astro-embed": "^0.9.2",
     "astro-icon": "^1.1.5",
     "leaflet": "^1.9.4",
-    "limax": "4.1.0",
+    "limax": "4.2.1",
     "lodash.merge": "^4.6.2",
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
