@@ -4,23 +4,17 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
-import partytown from '@astrojs/partytown';
 import compress from 'astro-compress';
 import icon from 'astro-icon';
 import tasks from './src/utils/tasks.mjs';
-import { ANALYTICS, SITE } from './src/utils/config.ts';
+import { SITE } from './src/utils/config.ts';
 import react from '@astrojs/react';
 import markdoc from '@astrojs/markdoc';
 import keystatic from '@keystatic/astro';
 import netlify from '@astrojs/netlify';
-import type { AstroIntegration } from 'astro';
 import { imageService } from '@unpic/astro/service';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
-const hasExternalScrits = ANALYTICS.vendors.googleAnalytics.id && ANALYTICS.vendors.googleAnalytics.partytown;
-const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroIntegration)[] = []) =>
-  hasExternalScrits ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
 // Array with pages to eclude from sitemap
 const sitemap_exclude = [
@@ -76,12 +70,6 @@ export default defineConfig({
         ],
       },
     }),
-
-    ...whenExternalScripts(() =>
-      partytown({
-        config: { forward: ['dataLayer.push'] },
-      })
-    ),
 
     tasks(),
 

@@ -64,7 +64,6 @@ analytics:
   vendors:
     googleAnalytics:
       id: G-2RTQEGRV0M # or "G-XXXXXXXXXX"
-      partytown: true
 
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
