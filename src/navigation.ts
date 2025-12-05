@@ -44,9 +44,7 @@ export const footerData = {
     },
     {
       title: 'På sajten',
-      links: [
-        { text: 'Blog', href: getBlogPermalink() },
-      ],
+      links: [{ text: 'Blog', href: getBlogPermalink() }],
     },
     {
       title: 'Om',

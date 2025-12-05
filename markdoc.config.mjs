@@ -6,10 +6,10 @@ export default defineMarkdocConfig({
       render: component('./src/components/markdoc/BlogListBySlug.astro'),
       attributes: {
         title: { type: 'String' },
-        slugs: { type: 'Array' }
+        slugs: { type: 'Array' },
       },
     },
-    YoutubeVideo : {
+    YoutubeVideo: {
       render: component('./src/components/markdoc/YoutubeVideo.astro'),
       attributes: {
         videoid: { type: 'String' },
@@ -25,6 +25,6 @@ export default defineMarkdocConfig({
         zoom: { type: 'Number' },
         height: { type: 'String' },
       },
-    }
+    },
   },
 });

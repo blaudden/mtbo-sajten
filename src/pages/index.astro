@@ -4,76 +4,67 @@ import Content from '~/components/widgets/Content.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-
 ---
 
 <Layout>
-  <Hero
-    image={{ src: '~/assets/images/hero.jpg', alt: 'Mountainbikeorienterare som orienterar i full fart' }}
-  >
+  <Hero image={{ src: '~/assets/images/hero.jpg', alt: 'Mountainbikeorienterare som orienterar i full fart' }}>
     <Fragment slot="title">
       <span class="block mb-1 sm:hidden">Välkommen!</span>
-      <span class="hidden sm:inline">Välkommen till
-        <span class="text-primary highlight">mountainbike<span class="text-accent  highlight">orientering.se</span></span>
-
+      <span class="hidden sm:inline"
+        >Välkommen till
+        <span class="text-primary highlight">mountainbike<span class="text-accent highlight">orientering.se</span></span
+        >
       </span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Här <span class="inline sm:hidden">på
-        <span class="text-primary highlight">mountainbike<span class="text-accent  highlight">orientering.se</span></span>
-      </span> hittar du intressanta artiklar om tävlingar,
-      träningstips, utrustning, kartritning, val av cykel, kartställ och
-      kompass, eller hur man sätter ut kontroller i skogen -
-      helt enkelt det man behöver
-      veta för att hålla på med mountainbikeorientering.
+      Här <span class="inline sm:hidden"
+        >på
+        <span class="text-primary highlight">mountainbike<span class="text-accent highlight">orientering.se</span></span
+        >
+      </span> hittar du intressanta artiklar om tävlingar, träningstips, utrustning, kartritning, val av cykel, kartställ
+      och kompass, eller hur man sätter ut kontroller i skogen - helt enkelt det man behöver veta för att hålla på med mountainbikeorientering.
     </Fragment>
   </Hero>
 
-
   <BlogLatestPosts
     title="Blog"
-    linkText='Se alla artiklar'
+    linkText="Se alla artiklar"
     information={`En blogg med det som är bra att veta för dig som gillar mountainbikeorientering.`}
-    count = {12}
-  >
-  </BlogLatestPosts>
+    count={12}
+  />
 
   <Content
     tagline="Sporten"
     title="Om mountainbikeorientering"
     subtitle=""
     items={[
-    {
-      title: 'Sporten:',
-      description:
-        `Mountainbikeorientering (MTBO) är en gren inom orientering där
+      {
+        title: 'Sporten:',
+        description: `Mountainbikeorientering (MTBO) är en gren inom orientering där
       man använder en cykel, oftast en mountainbike, för att ta sig runt en orienteringsbana.
       Banorna går mest på stigar och andra cykelframkomliga områden.`,
-    },
-    {
-      title: 'Karta:',
-      description:
-        `Kartan framhäver det som är viktigt när man cyklar. Vägar och stigars
+      },
+      {
+        title: 'Karta:',
+        description: `Kartan framhäver det som är viktigt när man cyklar. Vägar och stigars
       framkomlighet framgår av kartan, och ju längre strecken är, desto snabbare går det
       att cykla på stigen. För att kunna läsa kartan medan man cyklar fästs den på ett
       kartställ på styret. Kartstället kan roteras så att kartan alltid är i färdriktningen —
       det kallas att "passa" kartan.`,
-    },
-    {
-      title: 'Full fart:',
-      description:
-        `På cykel färdas man oftast betydligt snabbare än när man springer, och
+      },
+      {
+        title: 'Full fart:',
+        description: `På cykel färdas man oftast betydligt snabbare än när man springer, och
       det är därför extra viktigt att hela tiden hålla reda på var man befinner sig
       för att snabbt kunna välja rätt vägval.`,
-    },
+      },
     ]}
     image={{
       src: '~/assets/images/about.jpg',
       alt: 'På MTB-orientering (MTB-O) cyklar deltagarna i full fart mellan kontroller i skogen och det gäller att hålla reda på var man är och ta snabbaste vägvalet hela tiden.',
     }}
   >
-
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
@@ -122,11 +113,9 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
         icon: 'tabler:clock-play',
       },
     ]}
-  >
-  </Features>
+  />
 
   <!-- Här ska det stå om kartan och finnas en bild -->
-
 
   <Content
     tagline="Lär dig mer"
@@ -134,33 +123,30 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
     subtitle=""
     isReversed
     items={[
-    {
-      title: 'Förkortning:',
-      description:
-        `MTBO är den vedertagna förkortningen av mountainbikeorientering — både i Sverige
+      {
+        title: 'Förkortning:',
+        description: `MTBO är den vedertagna förkortningen av mountainbikeorientering — både i Sverige
         och internationellt. Tidigare har förkortningarna MtbO och MTB-O använts, men sedan
         några år tillbaka används MTBO (med stora bokstäver och utan bindestreck). MTBO
         används framförallt i kommunikation med dem som redan är insatta i sporten; i annat
         fall kan man skriva MTB-orientering, cykelorientering eller helt enkelt mountainbikeorientering.`,
-    },
-    {
-      title: 'Bakgrund:',
-      description: `Mountainbikeorientering (MTBO) har funnits i mer än 10 år i Sverige och tävlingar där alla är välkomna
+      },
+      {
+        title: 'Bakgrund:',
+        description: `Mountainbikeorientering (MTBO) har funnits i mer än 10 år i Sverige och tävlingar där alla är välkomna
       arrangeras nu med jämna mellanrum. Sporten är relativt sett större i andra länder, framförallt
       söderöver i Europa där cykling är en stor sport med mycket kunnande om hur man tränar cykling och arrangerar cykeltävlingar.
       I Sverige där det finns många orienterare och konditionsidrottare finns stor potential för att sporten fortsätter växa.
       Troligen har även andra länders avsaknad av allemansrätt medfört att man fått hålla sig till stigar och vägar.`,
-    },
+      },
     ]}
     image={{
       src: '~/assets/images/about2.jpg',
       alt: 'Mountainbikeorienterare närbild med kartställ och nummerlapp',
     }}
   >
-  <Fragment slot="bg">
+    <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-  </Fragment>
-</Content>
-
-
+    </Fragment>
+  </Content>
 </Layout>
