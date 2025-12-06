@@ -16,31 +16,102 @@ const { metadata } = Astro.props;
 
 // Custom headerdata for pages using this layout
 const headerData2 = {
-  ...headerData,
-  links: [],
+  links: [
+    { text: 'Home', href: '/wmtboc26' },
+    {
+      text: 'IOF Eventor',
+      links: [
+        { text: 'World Championships', href: 'https://eventor.orienteering.org/Events/Show/8277' },
+        { text: 'Junior World Championships', href: 'https://eventor.orienteering.org/Events/Show/8278' },
+      ],
+    },
+    { text: 'Contact', href: 'mailto:mountainbikeorientering@gmail.com' },
+  ],
+  actions: [
+    { text: 'Register for Open Races', href: 'https://eventor.orientering.se/Events/Show/56226', variant: 'primary' },
+  ],
 };
 
-// Custom footerData  for pages using this layout
+// Custom footerData - minimalist but with link back to main site
 const footerData2 = {
-  ...footerData,
-  links: [],
-  secondaryLinks: [],
-  // socialLinks: [],
-  // footNote: '',
+  links: [
+    {
+      title: 'WMTBOC 2026',
+      links: [
+        { text: 'Home', href: '/wmtboc26' },
+        { text: 'WMTBOC Eventor', href: 'https://eventor.orienteering.org/Events/Show/8277' },
+        { text: 'JWMTBOC Eventor', href: 'https://eventor.orienteering.org/Events/Show/8278' },
+      ],
+    },
+    {
+      title: 'Open Public Races',
+      links: [
+        { text: 'Long Distance', href: 'https://eventor.orientering.se/Events/Show/56226?culture=en-GB' },
+        { text: 'Middle Distance', href: 'https://eventor.orientering.se/Events/Show/56227?culture=en-GB' },
+        { text: 'Sprint', href: 'https://eventor.orientering.se/Events/Show/56228?culture=en-GB' },
+      ],
+    },
+    {
+      title: 'Main Site',
+      links: [{ text: 'Back to mountainbikeorientering.se', href: '/' }],
+    },
+  ],
+  secondaryLinks: [{ text: 'Privacy Policy', href: '/privacy-policy' }],
+  socialLinks: [
+    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/mountainbikeorientering' },
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://instagram.com/mountainbikeorientering' },
+  ],
+  footNote: `© 2026 WMTBOC Organisers & <a class="text-primary hover:underline dark:text-muted" href="/">mountainbikeorientering.se</a>`,
 };
 ---
 
 <Layout metadata={metadata}>
-  <slot name="announcement">
-    <Announcement />
-  </slot>
+  <!-- No Announcement slot used here to remove it -->
+
   <slot name="header">
     <Header {...headerData2} isSticky position="right" />
   </slot>
-  <main>
-    <slot />
+
+  <main class="wmtboc-theme relative">
+    <!-- Sparkling/Gold Theme Decoration -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+      <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-yellow-500/10 to-transparent"></div>
+      <div class="absolute top-20 right-10 w-64 h-64 bg-yellow-400/5 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 left-10 w-96 h-96 bg-yellow-600/5 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="relative z-10">
+      <slot />
+    </div>
   </main>
+
   <slot name="footer">
     <Footer {...footerData2} />
   </slot>
 </Layout>
+
+<style is:global>
+  /* Custom Scrollbar for this page/theme if desired, or specific gold accents */
+  .wmtboc-theme {
+    --aw-color-primary: #d4af37; /* Goldish text highlight override */
+  }
+
+  /* Make the header slightly golden or premium if possible */
+  :root[data-theme='dark'] header {
+    border-bottom: 1px solid rgba(212, 175, 55, 0.4);
+    background: linear-gradient(to right, rgba(20, 20, 20, 0.9), rgba(50, 40, 0, 0.3));
+  }
+
+  /* Improve link visibility in the gold theme */
+  .wmtboc-theme a {
+    @apply transition-colors duration-300;
+  }
+  .wmtboc-theme a:hover {
+    color: #d4af37; /* Gold on hover */
+  }
+
+  /* Make the background sparkle effects more visible */
+  .wmtboc-theme .bg-gradient-to-b {
+    @apply from-yellow-500/20; /* More opacity */
+  }
+</style>

@@ -8,6 +8,7 @@ const postCollection = defineCollection({
     updateDate: z.date().optional(),
     draft: z.boolean().optional(),
     evergreen: z.boolean().optional(),
+    hideFromMain: z.boolean().optional(),
 
     title: z.string(),
     subtitle: z.string().optional(),

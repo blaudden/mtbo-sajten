@@ -1,0 +1,103 @@
+---
+import { APP_BLOG } from '~/utils/config';
+import BlogList from '~/components/blog/List.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Image from '~/components/common/Image.astro';
+import { fetchPosts } from '~/utils/blog';
+import type { Post } from '~/types';
+
+export interface Props {
+  title?: string;
+  category?: string;
+  excludeSlug?: string;
+  information?: string;
+  compact?: boolean;
+}
+
+const {
+  title = await Astro.slots.render('title'),
+  category = Astro.props.category || '',
+  excludeSlug = Astro.props.excludeSlug || '',
+  information = await Astro.slots.render('information'),
+  id,
+  isDark = false,
+  compact = false,
+  bg = await Astro.slots.render('bg'),
+} = Astro.props as Props & any;
+
+let posts: Post[] = [];
+if (APP_BLOG.isEnabled) {
+  const all = await fetchPosts();
+  posts = all.filter(
+    (p) => p.category?.slug === category || (Array.isArray(p.tags) && p.tags.some((t) => t.slug === category))
+  );
+  if (excludeSlug) posts = posts.filter((p) => p.slug !== excludeSlug);
+  // Sort by date DESC
+  posts.sort((a, b) => b.publishDate.valueOf() - a.publishDate.valueOf());
+}
+---
+
+{
+  APP_BLOG.isEnabled ? (
+    <WidgetWrapper
+      id={id}
+      isDark={isDark}
+      containerClass={`bg-blue-50 dark:bg-slate-900 py-4 md:py-6 lg:py-8 ${compact ? 'compact-list' : ''}`}
+      bg={bg}
+    >
+      <div class="flex flex-col lg:justify-between lg:flex-row mb-4">
+        {title && (
+          <div class="md:max-w-sm">
+            <h2
+              class="text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none group font-heading mb-2"
+              set:html={title}
+            />
+          </div>
+        )}
+        {information && <p class="text-muted dark:text-slate-400 lg:text-sm lg:max-w-md" set:html={information} />}
+      </div>
+
+      {compact ? (
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {posts.map((post) => (
+            <a
+              href={post.permalink}
+              class="group flex gap-4 p-4 rounded-lg hover:bg-white dark:hover:bg-slate-800 transition-colors border border-transparent hover:border-yellow-500/30"
+            >
+              <div class="flex-shrink-0 w-24 h-24 overflow-hidden rounded bg-gray-200 dark:bg-slate-700 relative">
+                {post.image ? (
+                  <Image
+                    src={post.image}
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    widths={[200]}
+                    width={200}
+                    sizes="100px"
+                    alt={post.title}
+                    aspectRatio="1:1"
+                  />
+                ) : (
+                  <div class="w-full h-full flex items-center justify-center text-xs text-gray-500">No Image</div>
+                )}
+              </div>
+              <div class="flex flex-col justify-between">
+                <div>
+                  <span class="text-xs text-muted dark:text-slate-400 block mb-1">
+                    {post.publishDate.toLocaleDateString('sv-SE')}
+                  </span>
+                  <h3 class="text-lg font-bold leading-tight mb-2 font-heading group-hover:text-primary dark:group-hover:text-yellow-400 transition-colors">
+                    {post.title}
+                  </h3>
+                </div>
+              </div>
+            </a>
+          ))}
+          {posts.length === 0 && <p class="text-muted">No updates found.</p>}
+        </div>
+      ) : (
+        <BlogList posts={posts} />
+      )}
+    </WidgetWrapper>
+  ) : (
+    <Fragment />
+  )
+}
