@@ -1,17 +1,9 @@
 import { config, fields, collection, component } from '@keystatic/core';
-import type { LocalConfig, GitHubConfig } from '@keystatic/core';
+import type { LocalConfig } from '@keystatic/core';
 
 // Storage strategy
-const storage: LocalConfig['storage'] | GitHubConfig['storage'] =
-  process.env.NODE_ENV === 'development'
-    ? { kind: 'local' }
-    : {
-        kind: 'github',
-        repo: {
-          owner: process.env.GIT_REPO_OWNER!,
-          name: process.env.GIT_REPO_SLUG!,
-        },
-      };
+// Storage strategy
+const storage: LocalConfig['storage'] = { kind: 'local' };
 
 // Location of embedded images in Markdoc differ locally vs. online
 const embeddedImagePubPath: string =

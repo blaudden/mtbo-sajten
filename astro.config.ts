@@ -56,7 +56,7 @@ export default defineConfig({
     mdx(),
     markdoc(),
     react(),
-    keystatic(),
+    ...(process.env.NODE_ENV === 'development' ? [keystatic()] : []),
     icon({
       include: {
         tabler: ['*'],
