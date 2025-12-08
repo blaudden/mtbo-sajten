@@ -12,7 +12,6 @@ import react from '@astrojs/react';
 import markdoc from '@astrojs/markdoc';
 import keystatic from '@keystatic/astro';
 import netlify from '@astrojs/netlify';
-import { imageService } from '@unpic/astro/service';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -26,16 +25,20 @@ const sitemap_exclude = [
   'https://www.mountainbikeorientering.se/mtbo-i-osterbybruk-2021',
 ];
 
+const getSite = () => {
+  if (process.env.CONTEXT === 'deploy-preview' || process.env.CONTEXT === 'branch-deploy') {
+    return process.env.DEPLOY_PRIME_URL || SITE.site;
+  }
+  return SITE.site;
+};
+
 // https://astro.build/config
 export default defineConfig({
-  site: SITE.site,
+  site: getSite(),
   base: SITE.base,
   trailingSlash: SITE.trailingSlash ? 'always' : 'never',
   output: 'static',
   adapter: netlify(),
-  image: {
-    service: imageService(),
-  },
   integrations: [
     tailwind({
       applyBaseStyles: false,

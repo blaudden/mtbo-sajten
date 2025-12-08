@@ -1,6 +1,4 @@
 import { getImage } from 'astro:assets';
-import { transformUrl, parseUrl } from 'unpic';
-
 import type { ImageMetadata } from 'astro';
 import type { HTMLAttributes } from 'astro/types';
 
@@ -130,12 +128,10 @@ const getStyle = ({
   ];
 
   // If background is a URL, set it to cover the image and not repeat
-  if (background?.startsWith('https:') || background?.startsWith('http:') || background?.startsWith('data:')) {
+  if (background) {
     styleEntries.push(['background-image', `url(${background})`]);
     styleEntries.push(['background-size', 'cover']);
     styleEntries.push(['background-repeat', 'no-repeat']);
-  } else {
-    styleEntries.push(['background', background]);
   }
   if (layout === 'fixed') {
     styleEntries.push(['width', pixelate(width)]);
@@ -209,7 +205,7 @@ const getBreakpoints = ({
 };
 
 /* ** */
-export const astroAsseetsOptimizer: ImagesOptimizer = async (image, breakpoints, _width, _height) => {
+const optimizeImageAssets: ImagesOptimizer = async (image, breakpoints, _width, _height) => {
   if (!image) {
     return [];
   }
@@ -225,40 +221,14 @@ export const astroAsseetsOptimizer: ImagesOptimizer = async (image, breakpoints,
   );
 };
 
-export const isUnpicCompatible = (image: string) => {
-  return typeof parseUrl(image) !== 'undefined';
-};
 
-/* ** */
-export const unpicOptimizer: ImagesOptimizer = async (image, breakpoints, width, height) => {
-  if (!image || typeof image !== 'string') {
-    return [];
-  }
 
-  const urlParsed = parseUrl(image);
-  if (!urlParsed) {
-    return [];
-  }
-
-  return Promise.all(
-    breakpoints.map(async (w: number) => {
-      const url =
-        transformUrl({
-          url: image,
-          width: w,
-          height: width && height ? computeHeight(w, width / height) : height,
-          cdn: urlParsed.cdn,
-        }) || image;
-      return {
-        src: String(url),
-        width: w,
-      };
-    })
-  );
-};
-
-/* ** */
-export async function getImagesOptimized(
+/**
+ * Generates responsive image attributes (srcset, sizes, styles) based on the specified layout strategy.
+ * This simplifies the process of creating responsive images with different constraints (fixed, fullWidth, etc.)
+ * by automatically calculating the appropriate breakpoints and CSS styles.
+ */
+export async function getImageAttributes(
   image: ImageMetadata | string,
   {
     src: _,
@@ -271,8 +241,7 @@ export async function getImagesOptimized(
     layout = 'constrained',
     style = '',
     ...rest
-  }: ImageProps,
-  transform: ImagesOptimizer = () => Promise.resolve([])
+  }: ImageProps
 ): Promise<{ src: string; attributes: HTMLAttributes<'img'> }> {
   if (typeof image !== 'string') {
     width ||= Number(image.width) || undefined;
@@ -312,7 +281,7 @@ export async function getImagesOptimized(
   let breakpoints = getBreakpoints({ width: width, breakpoints: widths, layout: layout });
   breakpoints = [...new Set(breakpoints)].sort((a, b) => a - b);
 
-  const srcset = (await transform(image, breakpoints, Number(width) || undefined, Number(height) || undefined))
+  const srcset = (await optimizeImageAssets(image, breakpoints, Number(width) || undefined, Number(height) || undefined))
     .map(({ src, width }) => `${src} ${width}w`)
     .join(', ');
 
