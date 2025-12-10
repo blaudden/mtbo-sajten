@@ -1,4 +1,3 @@
-import { getImage } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
 import type { OpenGraph } from '@astrolib/seo';
 
@@ -58,8 +57,8 @@ export const adaptOpenGraphImages = async (
   }
 
   const images = openGraph.images;
-  const defaultWidth = 1200;
-  const defaultHeight = 626;
+  /* const defaultWidth = 1200;
+  const defaultHeight = 626; */
 
   const adaptedImages = await Promise.all(
     images.map(async (image) => {
@@ -71,18 +70,19 @@ export const adaptOpenGraphImages = async (
           };
         }
 
-        const _image = await getImage({
-          src: resolvedImage,
-          alt: 'Placeholder alt',
-          width: image?.width || defaultWidth,
-          height: image?.height || defaultHeight,
-        });
+          
+        const _image = resolvedImage;
 
         if (typeof _image === 'object') {
+          // Use rewrites for generic, clean keys
+          // The rewrite /_og-image/* -> /.netlify/images?url=/:splat&w=1200...
+          // resolvedImage.src is like /_astro/image.hash.ext
+          const cleanPath = '/_og-image' + resolvedImage.src;
+          
           return {
-            url: typeof _image.src === 'string' ? String(new URL(_image.src, astroSite)) : 'pepe',
-            width: typeof _image.options.width === 'number' ? _image.options.width : undefined,
-            height: typeof _image.options.height === 'number' ? _image.options.height : undefined,
+            url: String(new URL(cleanPath, astroSite)),
+            width: 1200,
+            height: 630,
           };
         }
         return {
