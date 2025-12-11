@@ -17,6 +17,7 @@ export default {
         serif: ['var(--aw-font-serif)', ...defaultTheme.fontFamily.serif],
         heading: ['var(--aw-font-heading)', ...defaultTheme.fontFamily.sans],
       },
+
     },
   },
   plugins: [typographyPlugin],

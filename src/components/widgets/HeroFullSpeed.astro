@@ -1,0 +1,153 @@
+---
+import Image from '~/components/common/Image.astro';
+import Button from '~/components/ui/Button.astro';
+import type { CallToAction } from '~/types';
+
+export interface Props {
+  id?: string;
+  subtitle?: string;
+  tagline?: string;
+  content?: string;
+  actions?: string | CallToAction[];
+  image?: string | unknown;
+}
+
+const {
+  id,
+  subtitle = await Astro.slots.render('subtitle'),
+  tagline,
+  content = await Astro.slots.render('content'),
+  actions = await Astro.slots.render('actions'),
+  image = await Astro.slots.render('image'),
+} = Astro.props;
+---
+
+<section
+  class="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden not-prose"
+  {...id ? { id } : {}}
+>
+  {/* Background Image & Overlay */}
+  <div class="absolute inset-0 z-0">
+    {
+      image && (
+        <>
+          {typeof image === 'string' ? (
+            <Fragment set:html={image} />
+          ) : (
+            <Image
+              class="w-full h-full object-cover"
+              widths={[400, 768, 1024, 2040]}
+              sizes="100vw"
+              loading="eager"
+              width={2040}
+              height={1148}
+              {...image}
+            />
+          )}
+        </>
+      )
+    }
+    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30"></div>
+  </div>
+
+  <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 text-center">
+    <div class="max-w-4xl mx-auto">
+      {tagline && <p class="text-base text-gray-200 font-bold tracking-wide uppercase mb-4" set:html={tagline} />}
+
+      {/* Animated Title Section */}
+      <h1
+        class="text-3xl sm:text-4xl md:text-6xl font-bold leading-tighter tracking-tighter mb-6 font-heading text-white break-words max-w-full"
+        aria-label="MTBO – Orientering i full fart (Orienteering at full speed)"
+      >
+        <div class="grid grid-cols-1 grid-rows-1 place-items-center max-w-full" aria-hidden="true">
+          {/* Swedish Text - State A */}
+          <span
+            class="col-start-1 row-start-1 w-full animate-bike-text-sv motion-reduce:animate-none will-change-transform will-change-opacity"
+          >
+            MTBO – Orientering i <span class="text-accent highlight">full fart</span>
+          </span>
+          {/* English Text - State B */}
+          <span
+            class="col-start-1 row-start-1 w-full animate-bike-text-en motion-reduce:hidden will-change-transform will-change-opacity"
+          >
+            MTBO – Orienteering at <span class="text-accent highlight">full speed</span>
+          </span>
+        </div>
+      </h1>
+
+      <div class="max-w-3xl mx-auto">
+        {subtitle && <div class="text-lg md:text-xl text-gray-100 mb-8 leading-relaxed" set:html={subtitle} />}
+        {content && <Fragment set:html={content} />}
+
+        {
+          actions && (
+            <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
+              {Array.isArray(actions) ? (
+                actions.map((action) => (
+                  <div class="flex w-full sm:w-auto">
+                    <Button {...(action || {})} class="w-full sm:mb-0" />
+                  </div>
+                ))
+              ) : (
+                <Fragment set:html={actions} />
+              )}
+            </div>
+          )
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* 
+    Animation Logic (8s Loop)
+    State A (Swedish): Dwell 0-45% -> Exit Up -> Reset
+  */
+  @keyframes bike-text-sv {
+    0%,
+    45% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    50%,
+    95% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* 
+    State B (English): Wait 0-45% -> Enter Up -> Dwell -> Exit Up
+  */
+  @keyframes bike-text-en {
+    0%,
+    45% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    50%,
+    95% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
+
+  .animate-bike-text-sv {
+    animation: bike-text-sv 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    will-change: transform, opacity;
+  }
+
+  .animate-bike-text-en {
+    animation: bike-text-en 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    will-change: transform, opacity;
+  }
+</style>
