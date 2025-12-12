@@ -58,8 +58,8 @@ function verifyOgImages() {
         } else if (parsedUrl.protocol !== 'http:' && parsedUrl.protocol !== 'https:') {
            console.error(`❌ [FAIL] ${file}: og:image has invalid protocol: ${ogImage}`);
            failed = true;
-        } else if (!parsedUrl.pathname.startsWith('/_og-image/')) {
-           console.error(`❌ [FAIL] ${file}: og:image does not use the required clean URL format ('/_og-image/...'): ${ogImage}`);
+        } else if (!parsedUrl.pathname.startsWith('/og-images/')) {
+           console.error(`❌ [FAIL] ${file}: og:image does not use the required clean URL format ('/og-images/...'): ${ogImage}`);
            failed = true;
         } else {
            // Valid case

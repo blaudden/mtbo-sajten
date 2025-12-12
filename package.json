@@ -44,7 +44,8 @@
     "lodash.merge": "^4.6.2",
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
-    "react-leaflet": "^5.0.0"
+    "react-leaflet": "^5.0.0",
+    "sharp": "^0.34.5"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.6",

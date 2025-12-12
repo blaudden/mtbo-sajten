@@ -1,3 +1,6 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import sharp from 'sharp';
 import type { ImageMetadata } from 'astro';
 import type { OpenGraph } from '@astrolib/seo';
 
@@ -54,49 +57,75 @@ export const findImage = async (
 /** */
 export const adaptOpenGraphImages = async (
   openGraph: OpenGraph = {},
-  astroSite: URL | undefined = new URL('')
+  astroSite: URL | undefined = new URL(''),
+  pathname: string = '/'
 ): Promise<OpenGraph> => {
   if (!openGraph?.images?.length) {
     return openGraph;
   }
 
   const images = openGraph.images;
-  /* const defaultWidth = 1200;
-  const defaultHeight = 626; */
 
   const adaptedImages = await Promise.all(
     images.map(async (image) => {
       if (image?.url) {
-        const resolvedImage = (await findImage(image.url)) as ImageMetadata | undefined;
-        if (!resolvedImage) {
-          return {
-            url: '',
-          };
+        // Find the image metadata (to ensure it exists)
+        const resolvedImageMetadata = (await findImage(image.url)) as ImageMetadata | undefined;
+        if (!resolvedImageMetadata) {
+          return { url: '' };
         }
 
-          
-        const _image = resolvedImage;
+        // Logic to resolve the PHYSICAL file path for Sharp
+        // calculate key same way as findImage
+        const imagePath = image.url;
+        if (typeof imagePath === 'string' && imagePath.startsWith('~/assets/images')) {
+             const key = imagePath.replace('~/', '/src/');
+             const inputPath = path.join(process.cwd(), key);
 
-        if (typeof _image === 'object') {
-          // Use rewrites for generic, clean keys
-          // The rewrite /_og-image/* -> /.netlify/images?url=/:splat&w=1200...
-          // resolvedImage.src is like /_astro/image.hash.ext
-          const cleanPath = '/_og-image' + resolvedImage.src;
-          
-          return {
-            url: String(new URL(cleanPath, astroSite)),
-            width: 1200,
-            height: 630,
-          };
+             if (fs.existsSync(inputPath)) {
+                try {
+                  // Determine output filename from slug
+                  // e.g. / -> home.jpg
+                  // /mtbo-oringen -> mtbo-oringen.jpg
+                  // /blog/my-post -> blog-my-post.jpg (flattened)
+                  let slug = pathname.replace(/^\/|\/$/g, '').replace(/\//g, '-');
+                  if (!slug) slug = 'home';
+                  const filename = `${slug}.jpg`;
+
+                  // Ensure directory exists
+                  const distDir = path.join(process.cwd(), 'dist', 'og-images');
+                  if (!fs.existsSync(distDir)) {
+                    fs.mkdirSync(distDir, { recursive: true });
+                  }
+
+                  const outputPath = path.join(distDir, filename);
+
+                  // Process with Sharp (resize to 1200x630, cover, jpeg)
+                  await sharp(inputPath)
+                    .resize(1200, 630, { fit: 'cover' })
+                    .toFormat('jpeg', { quality: 90 })
+                    .toFile(outputPath);
+
+                  return {
+                    url: String(new URL(`/og-images/${filename}`, astroSite)),
+                    width: 1200,
+                    height: 630,
+                  };
+                } catch (e) {
+                   console.error('Sharp OG generation failed:', e);
+                   // Fallback or error?
+                }
+             } else {
+                 console.warn('Source image file not found on disk:', inputPath);
+             }
         }
-        return {
-          url: '',
-        };
+        
+        // Fallback if not a local asset or processing failed (return original or empty?)
+        // If we can't optimize, we might just return empty to avoid broken links
+        return { url: '' };
       }
 
-      return {
-        url: '',
-      };
+      return { url: '' };
     })
   );
 

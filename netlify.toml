@@ -8,7 +8,4 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-[[redirects]]
-  from = "/_og-image/*"
-  to = "/.netlify/images?url=/:splat&w=1200&h=630&fit=cover&q=90"
-  status = 200
+
