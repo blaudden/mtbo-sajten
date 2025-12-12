@@ -1,7 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import Content from '~/components/widgets/Content.astro';
-import Hero from '~/components/widgets/Hero.astro';
+import HeroFullSpeed from '~/components/widgets/HeroFullSpeed.astro';
 import Features from '~/components/widgets/Features.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FeaturedItem from '~/components/widgets/FeaturedItem.astro';
@@ -10,25 +10,38 @@ import wmtbocImage from '~/assets/images/posts/wmtboc26/image.png';
 ---
 
 <Layout>
-  <Hero image={{ src: '~/assets/images/hero.jpg', alt: 'Mountainbikeorienterare som orienterar i full fart' }}>
-    <Fragment slot="title">
-      <span class="block mb-1 sm:hidden">Välkommen!</span>
-      <span class="hidden sm:inline"
-        >Välkommen till
-        <span class="text-primary highlight">mountainbike<span class="text-accent highlight">orientering.se</span></span
-        >
+  <HeroFullSpeed
+    image={{
+      src: '~/assets/images/hero.jpg',
+      alt: 'Cyklist med kartställ på styret under intensiv skogscykling (Cyclist with map holder on handlebars during intense cross-country cycling)',
+    }}
+  >
+    <Fragment slot="subtitle">
+      <span class="block mt-4 text-gray-200">
+        Mountainbikeorientering är mer än bara cykling – det är navigering i hög hastighet. Oavsett om du jagar sekunder
+        i elitklassen eller söker den perfekta naturupplevelsen som motionär, så börjar äventyret här. Utmana din fysik,
+        skärp ditt lokalsinne och hitta gemenskapen i skogen. En karta. Tusen vägval. Hitta ditt flyt!
+      </span>
+
+      <span class="block mt-4 text-sm italic text-gray-300">
+        Experience the thrill of high-speed navigation in the Swedish forests.
       </span>
     </Fragment>
+  </HeroFullSpeed>
 
-    <Fragment slot="subtitle">
-      Här <span class="inline sm:hidden"
-        >på
-        <span class="text-primary highlight">mountainbike<span class="text-accent highlight">orientering.se</span></span
-        >
-      </span> hittar du intressanta artiklar om tävlingar, träningstips, utrustning, kartritning, val av cykel, kartställ
-      och kompass, eller hur man sätter ut kontroller i skogen - helt enkelt det man behöver veta för att hålla på med mountainbikeorientering.
-    </Fragment>
-  </Hero>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Mountainbikeorientering.se",
+      "url": "https://mountainbikeorientering.se",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Swedish MTBO Community"
+      },
+      "description": "Det officiella communityt för mountainbikeorientering i Sverige."
+    }
+  </script>
 
   <FeaturedItem
     title="VM i Sverige 2026"
