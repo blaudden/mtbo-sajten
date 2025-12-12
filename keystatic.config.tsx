@@ -52,7 +52,7 @@ const posts = collection({
       multiline: true,
       validation: { length: { min: 60, max: 250 } },
       description:
-        'Artikelns beskrvning. Texten visas högst upp i artikeln, på alla ställen där artiklen länkas och när den delas. Minst 60 tecken och högst 250.',
+        'Artikelns beskrivning. Visas i sin helhet på bloggsidan, men trunkeras till ca 160 tecken för Google/Facebook och 120 tecken på startsidan. Skriv det viktigaste först!',
     }),
     image: fields.image({
       label: 'Image',

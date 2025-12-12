@@ -86,6 +86,7 @@ export interface MetaDataOpenGraph {
   images?: Array<MetaDataImage>;
   locale?: string;
   type?: string;
+  description?: string;
 }
 
 export interface MetaDataTwitter {

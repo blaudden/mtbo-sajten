@@ -221,8 +221,6 @@ const optimizeImageAssets: ImagesOptimizer = async (image, breakpoints, _width, 
   );
 };
 
-
-
 /**
  * Generates responsive image attributes (srcset, sizes, styles) based on the specified layout strategy.
  * This simplifies the process of creating responsive images with different constraints (fixed, fullWidth, etc.)
@@ -281,7 +279,9 @@ export async function getImageAttributes(
   let breakpoints = getBreakpoints({ width: width, breakpoints: widths, layout: layout });
   breakpoints = [...new Set(breakpoints)].sort((a, b) => a - b);
 
-  const srcset = (await optimizeImageAssets(image, breakpoints, Number(width) || undefined, Number(height) || undefined))
+  const srcset = (
+    await optimizeImageAssets(image, breakpoints, Number(width) || undefined, Number(height) || undefined)
+  )
     .map(({ src, width }) => `${src} ${width}w`)
     .join(', ');
 

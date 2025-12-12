@@ -10,6 +10,7 @@ import { getCanonical } from '~/utils/permalinks';
 
 import { adaptOpenGraphImages } from '~/utils/images';
 import { getLangFromSlug, getLangFromUrl } from '~/utils/i18n';
+import { truncateText } from '~/utils/utils';
 
 export interface Props extends MetaData {
   dontUseTitleTemplate?: boolean;
@@ -59,8 +60,13 @@ const seoProps: AstroSeoProps = merge(
     titleTemplate: METADATA?.title?.template,
     noindex: typeof METADATA?.robots?.index !== 'undefined' ? !METADATA.robots.index : undefined,
     nofollow: typeof METADATA?.robots?.follow !== 'undefined' ? !METADATA.robots.follow : undefined,
-    description: METADATA?.description,
-    openGraph: METADATA?.openGraph,
+    description: METADATA?.description ? truncateText(METADATA.description, 160) : undefined,
+    openGraph: METADATA?.openGraph
+      ? {
+          ...METADATA.openGraph,
+          description: METADATA.openGraph.description ? truncateText(METADATA.openGraph.description, 160) : undefined,
+        }
+      : undefined,
     twitter: METADATA?.twitter,
   },
   {
@@ -69,8 +75,16 @@ const seoProps: AstroSeoProps = merge(
     canonical: canonical,
     noindex: typeof robots?.index !== 'undefined' ? !robots.index : undefined,
     nofollow: typeof robots?.follow !== 'undefined' ? !robots.follow : undefined,
-    description: description,
-    openGraph: { url: canonical, ...openGraph },
+    description: description ? truncateText(description, 160) : undefined,
+    openGraph: {
+      url: canonical,
+      ...openGraph,
+      description: openGraph?.description
+        ? truncateText(openGraph.description, 160)
+        : description
+          ? truncateText(description, 160)
+          : undefined,
+    },
     twitter: twitter,
   }
 );

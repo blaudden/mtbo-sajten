@@ -103,9 +103,8 @@ export default defineMarkdocConfig({
           return typeof child !== 'string' || child.trim().length > 0;
         });
 
-        const isPureLink =
-          validChildren.length === 1 && validChildren[0].type === 'link';
-        
+        const isPureLink = validChildren.length === 1 && validChildren[0].type === 'link';
+
         // Debug Log
         // if (validChildren.length > 0) {
         //      const childTypes = validChildren.map(c => typeof c === 'string' ? `"${c.trim()}"` : c.type);

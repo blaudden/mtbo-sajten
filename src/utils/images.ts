@@ -79,47 +79,47 @@ export const adaptOpenGraphImages = async (
         // calculate key same way as findImage
         const imagePath = image.url;
         if (typeof imagePath === 'string' && imagePath.startsWith('~/assets/images')) {
-             const key = imagePath.replace('~/', '/src/');
-             const inputPath = path.join(process.cwd(), key);
+          const key = imagePath.replace('~/', '/src/');
+          const inputPath = path.join(process.cwd(), key);
 
-             if (fs.existsSync(inputPath)) {
-                try {
-                  // Determine output filename from slug
-                  // e.g. / -> home.jpg
-                  // /mtbo-oringen -> mtbo-oringen.jpg
-                  // /blog/my-post -> blog-my-post.jpg (flattened)
-                  let slug = pathname.replace(/^\/|\/$/g, '').replace(/\//g, '-');
-                  if (!slug) slug = 'home';
-                  const filename = `${slug}.jpg`;
+          if (fs.existsSync(inputPath)) {
+            try {
+              // Determine output filename from slug
+              // e.g. / -> home.jpg
+              // /mtbo-oringen -> mtbo-oringen.jpg
+              // /blog/my-post -> blog-my-post.jpg (flattened)
+              let slug = pathname.replace(/^\/|\/$/g, '').replace(/\//g, '-');
+              if (!slug) slug = 'home';
+              const filename = `${slug}.jpg`;
 
-                  // Ensure directory exists
-                  const distDir = path.join(process.cwd(), 'dist', 'og-images');
-                  if (!fs.existsSync(distDir)) {
-                    fs.mkdirSync(distDir, { recursive: true });
-                  }
+              // Ensure directory exists
+              const distDir = path.join(process.cwd(), 'dist', 'og-images');
+              if (!fs.existsSync(distDir)) {
+                fs.mkdirSync(distDir, { recursive: true });
+              }
 
-                  const outputPath = path.join(distDir, filename);
+              const outputPath = path.join(distDir, filename);
 
-                  // Process with Sharp (resize to 1200x630, cover, jpeg)
-                  await sharp(inputPath)
-                    .resize(1200, 630, { fit: 'cover' })
-                    .toFormat('jpeg', { quality: 90 })
-                    .toFile(outputPath);
+              // Process with Sharp (resize to 1200x630, cover, jpeg)
+              await sharp(inputPath)
+                .resize(1200, 630, { fit: 'cover' })
+                .toFormat('jpeg', { quality: 90 })
+                .toFile(outputPath);
 
-                  return {
-                    url: String(new URL(`/og-images/${filename}`, astroSite)),
-                    width: 1200,
-                    height: 630,
-                  };
-                } catch (e) {
-                   console.error('Sharp OG generation failed:', e);
-                   // Fallback or error?
-                }
-             } else {
-                 console.warn('Source image file not found on disk:', inputPath);
-             }
+              return {
+                url: String(new URL(`/og-images/${filename}`, astroSite)),
+                width: 1200,
+                height: 630,
+              };
+            } catch (e) {
+              console.error('Sharp OG generation failed:', e);
+              // Fallback or error?
+            }
+          } else {
+            console.warn('Source image file not found on disk:', inputPath);
+          }
         }
-        
+
         // Fallback if not a local asset or processing failed (return original or empty?)
         // If we can't optimize, we might just return empty to avoid broken links
         return { url: '' };

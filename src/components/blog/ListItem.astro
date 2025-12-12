@@ -96,6 +96,7 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
       </h2>
     </header>
 
+    {/* Show full excerpt in list view for better context */}
     {post.excerpt && <p class="flex-grow text-muted dark:text-slate-400 text-lg">{post.excerpt}</p>}
     {
       post.tags && Array.isArray(post.tags) ? (
