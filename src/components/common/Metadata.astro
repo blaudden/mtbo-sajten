@@ -27,13 +27,28 @@ const {
   langRelated = [],
 } = Astro.props;
 
+const language = getLangFromUrl(Astro.url);
+
 const langAlts = langRelated.map((slug) => {
   return { hreflang: getLangFromSlug(slug), href: String(getCanonical(String(slug))) };
 });
-const xDefault = langRelated[0] ? langRelated[0] : canonical;
-langAlts.push({ hreflang: 'x-default', href: String(getCanonical(String(xDefault))) });
 
-const language = getLangFromUrl(Astro.url);
+// Add self-reference to language alternates if not already present
+// This is required for valid hreflang reciprocity (e.g. Ahrefs "no return tag" error).
+// Every page must list itself in the hreflang group.
+const hasCurrent = langAlts.some((alt) => alt.hreflang === language);
+if (!hasCurrent) {
+  const currentLangAlt = { hreflang: language, href: canonical };
+  langAlts.push(currentLangAlt);
+}
+
+// Stable x-default logic: Prioritize English ('en') as the international fallback.
+// If English is not available, fallback to the current page or the first related post.
+// This ensures a consistent x-default URL across all language versions of the same content.
+const allAlts = [...langAlts];
+const defaultAlt = allAlts.find((alt) => alt.hreflang === 'en') || allAlts[0];
+
+langAlts.push({ hreflang: 'x-default', href: defaultAlt.href });
 
 const seoProps: AstroSeoProps = merge(
   {
