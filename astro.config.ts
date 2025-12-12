@@ -38,7 +38,14 @@ export default defineConfig({
   base: SITE.base,
   trailingSlash: SITE.trailingSlash ? 'always' : 'never',
   output: 'static',
-  adapter: netlify(),
+  adapter: netlify({
+    imageCDN: false,
+  }),
+  image: {
+    service: {
+      entrypoint: 'astro/assets/services/sharp',
+    },
+  },
   integrations: [
     tailwind({
       applyBaseStyles: false,
