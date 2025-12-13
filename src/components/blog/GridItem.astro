@@ -27,28 +27,30 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
             <Image
               src={image}
               class="w-full md:h-full rounded shadow-lg bg-gray-400 dark:bg-slate-700"
-              widths={[400, 900]}
+              widths={[400, 600, 900]}
               width={400}
-              sizes="(max-width: 900px) 400px, 900px"
+              sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 400px"
               alt={post.title}
               aspectRatio="16:9"
               layout="cover"
               loading="lazy"
               decoding="async"
+              quality={80}
             />
           </a>
         ) : (
           <Image
             src={image}
             class="w-full md:h-full rounded shadow-lg bg-gray-400 dark:bg-slate-700"
-            widths={[400, 900]}
+            widths={[400, 600, 900]}
             width={400}
-            sizes="(max-width: 900px) 400px, 900px"
+            sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 400px"
             alt={post.title}
             aspectRatio="16:9"
             layout="cover"
             loading="lazy"
             decoding="async"
+            quality={80}
           />
         ))
     }

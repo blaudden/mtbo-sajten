@@ -20,13 +20,15 @@ export interface ImageProps extends Omit<HTMLAttributes<'img'>, 'src'> {
   widths?: number[] | null;
   aspectRatio?: string | number | null;
   objectPosition?: string;
+  quality?: number | null;
 }
 
 export type ImagesOptimizer = (
   image: ImageMetadata | string,
   breakpoints: number[],
   width?: number,
-  height?: number
+  height?: number,
+  quality?: number | null
 ) => Promise<Array<{ src: string; width: number }>>;
 
 /* ******* */
@@ -205,14 +207,14 @@ const getBreakpoints = ({
 };
 
 /* ** */
-const optimizeImageAssets: ImagesOptimizer = async (image, breakpoints, _width, _height) => {
+const optimizeImageAssets: ImagesOptimizer = async (image, breakpoints, _width, _height, quality) => {
   if (!image) {
     return [];
   }
 
   return Promise.all(
     breakpoints.map(async (w: number) => {
-      const url = (await getImage({ src: image, width: w, inferSize: true })).src;
+      const url = (await getImage({ src: image, width: w, inferSize: true, quality: quality || 80 })).src;
       return {
         src: url,
         width: w,
@@ -238,6 +240,7 @@ export async function getImageAttributes(
     widths,
     layout = 'constrained',
     style = '',
+    quality,
     ...rest
   }: ImageProps
 ): Promise<{ src: string; attributes: HTMLAttributes<'img'> }> {
@@ -280,7 +283,13 @@ export async function getImageAttributes(
   breakpoints = [...new Set(breakpoints)].sort((a, b) => a - b);
 
   const srcset = (
-    await optimizeImageAssets(image, breakpoints, Number(width) || undefined, Number(height) || undefined)
+    await optimizeImageAssets(
+      image,
+      breakpoints,
+      Number(width) || undefined,
+      Number(height) || undefined,
+      quality
+    )
   )
     .map(({ src, width }) => `${src} ${width}w`)
     .join(', ');

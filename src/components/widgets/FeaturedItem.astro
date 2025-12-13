@@ -150,10 +150,11 @@ const {
                     <Image
                       src={typeof image === 'object' && 'src' in image ? image.src : image}
                       class="w-full h-auto"
-                      widths={[400, 900]}
+                      widths={[400, 600, 900]}
                       width={900}
                       sizes="(max-width: 900px) 100vw, 900px"
                       alt={typeof image === 'object' && 'alt' in image ? (image.alt as string) : title}
+                      quality={80}
                     />
                     {animatedLogo && (
                       <div class="absolute inset-x-0 bottom-0 pointer-events-none z-10 overflow-hidden h-full w-full">
@@ -167,6 +168,7 @@ const {
                             width={80}
                             height={80}
                             class="object-contain"
+                            quality={80}
                           />
                         </div>
                       </div>
@@ -178,10 +180,11 @@ const {
                   <Image
                     src={typeof image === 'object' && 'src' in image ? image.src : image}
                     class="w-full h-auto"
-                    widths={[400, 900]}
+                    widths={[400, 600, 900]}
                     width={900}
                     sizes="(max-width: 900px) 100vw, 900px"
                     alt={typeof image === 'object' && 'alt' in image ? (image.alt as string) : title}
+                    quality={80}
                   />
                   {animatedLogo && (
                     <div class="absolute inset-x-0 bottom-0 pointer-events-none z-10 overflow-hidden h-full w-full">
@@ -192,6 +195,7 @@ const {
                           width={80}
                           height={80}
                           class="object-contain"
+                          quality={80}
                         />
                       </div>
                     </div>
