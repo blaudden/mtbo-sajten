@@ -19,20 +19,19 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
 ---
 
 <article class="mb-6 transition">
-  <div class="relative md:h-64 bg-gray-400 dark:bg-slate-700 rounded shadow-lg mb-6">
+  <div class="relative bg-gray-400 dark:bg-slate-700 rounded shadow-lg mb-6">
     {
       image &&
         (link ? (
-          <a href={link}>
+          <a href={link} class="block w-full h-auto">
             <Image
               src={image}
-              class="w-full md:h-full rounded shadow-lg bg-gray-400 dark:bg-slate-700"
+              class="w-full h-auto rounded shadow-lg bg-gray-400 dark:bg-slate-700"
               widths={[400, 600, 900]}
               width={400}
               sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 400px"
               alt={post.title}
-              aspectRatio="16:9"
-              layout="cover"
+              layout="responsive"
               loading="lazy"
               decoding="async"
               quality={80}
@@ -41,13 +40,12 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
         ) : (
           <Image
             src={image}
-            class="w-full md:h-full rounded shadow-lg bg-gray-400 dark:bg-slate-700"
+            class="w-full h-auto rounded shadow-lg bg-gray-400 dark:bg-slate-700"
             widths={[400, 600, 900]}
             width={400}
             sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 400px"
             alt={post.title}
-            aspectRatio="16:9"
-            layout="cover"
+            layout="responsive"
             loading="lazy"
             decoding="async"
             quality={80}
