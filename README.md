@@ -11,6 +11,22 @@ The site is built using [Astro](https://astro.build/) based on the [Astrowind](h
 [![Stars](https://img.shields.io/github/stars/blaudden/mtbo-sajten.svg?style=social&label=stars&maxAge=86400&color=ff69b4)](https://github.com/blaudden/mtbo-sajten)
 [![Forks](https://img.shields.io/github/forks/blaudden/mtbo-sajten.svg?style=social&label=forks&maxAge=86400&color=ff69b4)](https://github.com/blaudden/mtbo-sajten)
 
+## Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command                   | Action                                                            |
+| :------------------------ | :---------------------------------------------------------------- |
+| `npm install`             | Installs dependencies                                             |
+| `npm run dev`             | Starts local dev server at `localhost:4321`                       |
+| `npm run build`           | Build your production site to `./dist/`                           |
+| `npm run preview`         | Preview your build locally, before deploying                      |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check`                  |
+| `npm run astro -- --help` | Get help using the Astro CLI                                      |
+| `npm run check`           | Run code quality checks (Astro, ESLint, Prettier)                 |
+| `npm run test`            | Run all verification tests (OG, Meta, Hreflang, Links)            |
+| `npm run optimize-images` | Optimize large source images (>2MB) to prevent performance issues |
+
 ## Contributing
 
 If you have any idea, suggestions or find any bugs, feel free to open a discussion, an issue or create a pull request.

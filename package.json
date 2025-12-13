@@ -24,7 +24,8 @@
     "test:og": "node tests/verify-og-images.mjs",
     "test:meta": "node tests/verify-meta-descriptions.mjs",
     "test:hreflang": "node tests/verify-hreflang.mjs",
-    "test:links": "node tests/check-links.mjs"
+    "test:links": "node tests/check-links.mjs",
+    "optimize-images": "node scripts/optimize-images.mjs"
   },
   "dependencies": {
     "@astrojs/markdoc": "^0.15.9",
