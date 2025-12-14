@@ -1,25 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { MapContainer, TileLayer, Marker, Popup, Polygon, Polyline } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
-import L from 'leaflet';
 
-// Fix for default marker icon missing in Leaflet with Webpack/Vite
-import icon from 'leaflet/dist/images/marker-icon.png';
-import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 
-const DEFAULT_MAP_CENTER: [number, number] = [59.3293, 18.0686];
-
-const DefaultIcon = L.icon({
-  iconUrl:
-    typeof icon === 'object' && icon !== null && 'src' in icon ? (icon as { src: string }).src : (icon as string),
-  shadowUrl:
-    typeof iconShadow === 'object' && iconShadow !== null && 'src' in iconShadow
-      ? (iconShadow as { src: string }).src
-      : (iconShadow as string),
-  iconAnchor: [12, 41],
-});
-
-L.Marker.prototype.options.icon = DefaultIcon;
 
 type MarkerColor = 'blue' | 'red' | 'green' | 'orange' | 'purple' | 'grey';
 type MarkerIconType = 'default' | 'start' | 'finish' | 'parking' | 'info';
@@ -56,10 +37,13 @@ interface LeafletMapProps {
   height?: string;
 }
 
-import { useMap } from 'react-leaflet';
-
 // Function to create custom colored marker icons
-const createColoredIcon = (color: MarkerColor = 'blue', iconType: MarkerIconType = 'default'): L.Icon => {
+const createColoredIcon = (
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  LModule: any,
+  color: MarkerColor = 'blue',
+  iconType: MarkerIconType = 'default'
+) => {
   const colorMap: Record<MarkerColor, string> = {
     blue: '#3b82f6',
     red: '#ef4444',
@@ -89,51 +73,14 @@ const createColoredIcon = (color: MarkerColor = 'blue', iconType: MarkerIconType
     </svg>
   `;
 
-  return L.icon({
+  return LModule.icon({
     iconUrl: 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgIcon),
     iconSize: [25, 41],
     iconAnchor: [12, 41],
     popupAnchor: [1, -34],
-    shadowUrl:
-      typeof iconShadow === 'object' && iconShadow !== null && 'src' in iconShadow
-        ? (iconShadow as { src: string }).src
-        : (iconShadow as string),
+    shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
     shadowSize: [41, 41],
   });
-};
-
-const MapController: React.FC<{
-  markers: MarkerData[];
-  polygons: PolygonData[];
-  polylines: PolylineData[];
-  center?: [number, number] | null;
-}> = ({ markers, polygons, polylines, center }) => {
-  const map = useMap();
-
-  useEffect(() => {
-    if (!center) {
-      const allPoints: [number, number][] = [];
-
-      markers.forEach((m) => allPoints.push([m.lat, m.lng]));
-
-      polygons.forEach((p) => {
-        const points = parsePoints(p.points);
-        points.forEach((pt) => allPoints.push([pt.lat, pt.lng]));
-      });
-
-      polylines.forEach((l) => {
-        const points = parsePoints(l.points);
-        points.forEach((pt) => allPoints.push([pt.lat, pt.lng]));
-      });
-
-      if (allPoints.length > 0) {
-        const bounds = L.latLngBounds(allPoints);
-        map.fitBounds(bounds, { padding: [50, 50] });
-      }
-    }
-  }, [markers, polygons, polylines, center, map]);
-
-  return null;
 };
 
 const LeafletMap: React.FC<LeafletMapProps> = ({
@@ -149,7 +96,43 @@ const LeafletMap: React.FC<LeafletMapProps> = ({
   const [parsedPolylines, setParsedPolylines] = useState<PolylineData[]>([]);
   const [mapCenter, setMapCenter] = useState<[number, number] | null>(null);
 
+  // Dynamic module state
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [LeafletModules, setLeafletModules] = useState<any>(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [LInstance, setLInstance] = useState<any>(null);
+
   useEffect(() => {
+    // Dynamically import Leaflet and React-Leaflet only on client
+    const loadModules = async () => {
+      try {
+        const leaflet = await import('leaflet');
+        const reactLeaflet = await import('react-leaflet');
+        await import('leaflet/dist/leaflet.css');
+
+        // Fix default icon
+        // @ts-expect-error - Fix for missing type definition for prototype
+        delete leaflet.default.Icon.Default.prototype._getIconUrl;
+        leaflet.default.Icon.Default.mergeOptions({
+          iconRetinaUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png',
+          iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
+          shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
+        });
+
+        setLInstance(leaflet.default);
+        setLeafletModules(reactLeaflet);
+      } catch (error) {
+        console.error('Failed to load map modules', error);
+      }
+    };
+
+    if (typeof window !== 'undefined') {
+      loadModules();
+    }
+  }, []);
+
+  useEffect(() => {
+    // Process markers, polygons, polylines regardless of map modules loaded yet
     console.log('LeafletMap received markers:', markers);
     let markerData: MarkerData[] = [];
     if (typeof markers === 'string') {
@@ -167,6 +150,8 @@ const LeafletMap: React.FC<LeafletMapProps> = ({
     const sameLocationGroups: { [key: string]: number[] } = {};
 
     staggeredMarkers.forEach((m, index) => {
+      // guard lat/lng existence
+      if (!m.lat || !m.lng) return;
       const key = `${m.lat.toFixed(5)},${m.lng.toFixed(5)}`;
       if (!sameLocationGroups[key]) {
         sameLocationGroups[key] = [];
@@ -231,7 +216,7 @@ const LeafletMap: React.FC<LeafletMapProps> = ({
     } else {
       // If no center provided, we'll use fitBounds via MapController
       // But MapContainer needs an initial center.
-      if (markerData.length > 0) {
+      if (markerData.length > 0 && markerData[0].lat && markerData[0].lng) {
         setMapCenter([markerData[0].lat, markerData[0].lng]);
       } else if (polygonData.length > 0) {
         const points = parsePoints(polygonData[0].points);
@@ -253,9 +238,48 @@ const LeafletMap: React.FC<LeafletMapProps> = ({
     }
   }, [markers, polygons, polylines, center]);
 
-  if (!mapCenter) {
-    return <div>Loading map...</div>;
+  if (!LeafletModules || !mapCenter || !LInstance) {
+    return <div style={{ height, width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#f3f4f6' }}>Loading map...</div>;
   }
+
+  const { MapContainer, TileLayer, Marker, Popup, Polygon, Polyline, useMap } = LeafletModules;
+
+  // Controller component that uses useMap hook
+  const MapController: React.FC<{
+    markers: MarkerData[];
+    polygons: PolygonData[];
+    polylines: PolylineData[];
+    center?: [number, number] | null;
+  }> = ({ markers, polygons, polylines, center }) => {
+    const map = useMap();
+
+    useEffect(() => {
+      if (!center) {
+        const allPoints: [number, number][] = [];
+
+        markers.forEach((m) => {
+            if(m.lat && m.lng) allPoints.push([m.lat, m.lng]);
+        });
+
+        polygons.forEach((p) => {
+          const points = parsePoints(p.points);
+          points.forEach((pt) => allPoints.push([pt.lat, pt.lng]));
+        });
+
+        polylines.forEach((l) => {
+          const points = parsePoints(l.points);
+          points.forEach((pt) => allPoints.push([pt.lat, pt.lng]));
+        });
+
+        if (allPoints.length > 0) {
+          const bounds = LInstance.latLngBounds(allPoints);
+          map.fitBounds(bounds, { padding: [50, 50] });
+        }
+      }
+    }, [markers, polygons, polylines, center, map]);
+
+    return null;
+  };
 
   return (
     <div style={{ height, width: '100%' }}>
@@ -279,7 +303,7 @@ const LeafletMap: React.FC<LeafletMapProps> = ({
           <Marker
             key={idx}
             position={[marker.lat, marker.lng]}
-            icon={createColoredIcon(marker.color, marker.icon)}
+            icon={createColoredIcon(LInstance, marker.color, marker.icon)}
             zIndexOffset={marker.zIndexOffset}
           >
             <Popup>

@@ -1,0 +1,33 @@
+---
+import { findImage } from '~/utils/images';
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+export interface Props {
+  src: string;
+  alt: string;
+  title?: string;
+  class?: string;
+}
+
+const { src, alt, title, class: className = '' } = Astro.props;
+
+const imageMetadata = await findImage(src);
+---
+
+{
+  imageMetadata ? (
+    <Image
+      src={imageMetadata as ImageMetadata}
+      alt={alt}
+      title={title}
+      class={className}
+      widths={[400, 768, 1024, 2040]}
+      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 750px"
+      loading="lazy"
+      decoding="async"
+    />
+  ) : (
+    <img src={src} alt={alt} title={title} class={className} loading="lazy" decoding="async" />
+  )
+}

@@ -37,13 +37,30 @@ export const findImage = async (
     return imagePath;
   }
 
-  // Relative paths or not "~/assets/"
-  if (!imagePath.startsWith('~/assets/images')) {
+  // Relative paths or not "~/assets/" or "src/assets/"
+  if (!imagePath.startsWith('~/assets/images') && !imagePath.startsWith('src/assets/images')) {
     return imagePath;
   }
 
   const images = await fetchLocalImages();
-  const key = imagePath.replace('~/', '/src/');
+  // Normalize key to match what regular imports look like if needed, 
+  // but importantly convert to the key format used in _images
+  // referencing the glob: import.meta.glob('~/assets/images/...')
+  
+  // If path starts with src/, replace it with ~/. 
+  // The glob keys in Vite might actually use /src/ if imported differently, 
+  // but here the glob pattern is `~/assets/images/...`.
+  // Vite usually normalizes import.meta.glob keys to be relative to project root or match the pattern specific structure.
+  // Let's check how `images` keys look.
+  // The existing code does: const key = imagePath.replace('~/', '/src/');
+  // This suggests the keys in `images` map are like `/src/assets/images/...`
+  
+  let key = imagePath;
+  if (imagePath.startsWith('~/')) {
+    key = imagePath.replace('~/', '/src/');
+  } else if (imagePath.startsWith('src/')) {
+    key = '/' + imagePath;
+  }
 
   if (!images || typeof images[key] !== 'function') {
     console.log(`[findImage] Image not found for key: ${key}`);

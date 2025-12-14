@@ -18,6 +18,7 @@ export default defineMarkdocConfig({
         title: { type: 'String' },
       },
     },
+
     Carousel: {
       render: component('./src/components/widgets/Carousel.astro'),
       attributes: {
@@ -81,6 +82,14 @@ export default defineMarkdocConfig({
       render: component('./src/components/markdoc/SmartLink.astro'),
       attributes: {
         href: { type: 'String' },
+        title: { type: 'String' },
+      },
+    },
+    image: {
+      render: component('./src/components/markdoc/Image.astro'),
+      attributes: {
+        src: { type: 'String' },
+        alt: { type: 'String' },
         title: { type: 'String' },
       },
     },
