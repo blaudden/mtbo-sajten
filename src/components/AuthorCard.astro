@@ -1,0 +1,26 @@
+---
+import { render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import Image from '~/components/common/Image.astro';
+
+export interface Props {
+  author: CollectionEntry<'authors'>;
+}
+
+const { author } = Astro.props;
+const { name, avatar, role } = author.data;
+const { Content } = await render(author);
+---
+
+<div class="bg-gray-50 dark:bg-slate-800 rounded-lg p-6 border border-gray-200 dark:border-slate-700 text-center sm:text-left sm:flex sm:items-start lg:block lg:text-center">
+  <div class="flex-shrink-0 mx-auto sm:mx-0 lg:mx-auto mb-4 sm:mb-0 lg:mb-4 sm:mr-6 lg:mr-0 w-24 h-24 sm:w-20 sm:h-20 lg:w-32 lg:h-32 rounded-full overflow-hidden border-4 border-white dark:border-slate-700 shadow-md">
+    <Image src={avatar} alt={name} class="w-full h-full object-cover" width={128} height={128} />
+  </div>
+  <div class="flex-grow">
+    <h3 class="text-lg font-bold font-heading leading-tight mb-1">{name}</h3>
+    {role && <p class="text-xs font-medium text-muted uppercase tracking-wider mb-2">{role}</p>}
+    <div class="prose prose-sm dark:prose-invert text-muted">
+      <Content />
+    </div>
+  </div>
+</div>

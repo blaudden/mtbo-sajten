@@ -1,4 +1,4 @@
-import { z, defineCollection } from 'astro:content';
+import { z, defineCollection, reference } from 'astro:content';
 import { glob } from 'astro/loaders';
 
 const postCollection = defineCollection({
@@ -17,12 +17,22 @@ const postCollection = defineCollection({
 
     category: z.string().optional(),
     tags: z.array(z.string()).optional(),
-    author: z.string().optional(),
+    author: reference('authors').optional(),
 
     metadata: z.object({ canonical: z.string().optional(), lang: z.string().optional() }).optional(),
   }),
 });
 
+const authorsCollection = defineCollection({
+  loader: glob({ base: 'src/content/authors/', pattern: ['**/*.md', '**/*.mdoc'] }),
+  schema: z.object({
+    name: z.string(),
+    role: z.string().optional(),
+    avatar: z.string(),
+  }),
+});
+
 export const collections = {
   posts: postCollection,
+  authors: authorsCollection,
 };

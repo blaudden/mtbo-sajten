@@ -1,5 +1,5 @@
 import type { PaginateFunction } from 'astro';
-import { getCollection, render } from 'astro:content';
+import { getCollection, render, getEntry } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import type { Post } from '~/types';
 import { APP_BLOG } from '~/utils/config';
@@ -89,7 +89,7 @@ const getNormalizedPost = async (post: CollectionEntry<'posts'>): Promise<Post> 
 
     category: category,
     tags: tags,
-    author: author,
+    author: typeof author === 'object' ? await getEntry(author) : author,
 
     draft: draft,
 

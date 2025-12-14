@@ -1,5 +1,4 @@
-import type { AstroComponentFactory } from 'astro/runtime/server/index.js';
-import type { HTMLAttributes } from 'astro/types';
+import type { CollectionEntry } from 'astro:content';
 
 export interface Post {
   /** A unique ID number that identifies a post. */
@@ -28,7 +27,7 @@ export interface Post {
   /**  */
   tags?: Taxonomy[];
   /**  */
-  author?: string;
+  author?: string | CollectionEntry<'authors'>;
 
   /**  */
   metadata?: MetaData;

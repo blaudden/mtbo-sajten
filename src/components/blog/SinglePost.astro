@@ -3,6 +3,7 @@ import Image from '~/components/common/Image.astro';
 import PostTags from '~/components/blog/Tags.astro';
 import SinglePostCategory from '~/components/blog/SinglePostCategory.astro';
 import SocialShare from '~/components/common/SocialShare.astro';
+import AuthorCard from '~/components/AuthorCard.astro';
 import wmtbocLogo from '~/assets/images/wmtboc26-logo-transparent.png';
 import type { Post } from '~/types';
 
@@ -68,14 +69,31 @@ const { post, url, overlayAnimation } = Astro.props;
         )
       }
     </header>
-    <div
-      class="mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8 prose-headings:scroll-mt-[80px] prose-li:my-0"
-    >
-      <slot />
-    </div>
-    <div class="mx-auto px-6 sm:px-6 max-w-3xl mt-8 flex justify-between flex-col sm:flex-row">
-      <PostTags tags={post.tags} class="mr-5 rtl:mr-0 rtl:ml-5" />
-      <SocialShare url={url} text={post.title} class="mt-5 sm:mt-1 align-middle text-gray-500 dark:text-slate-600" />
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 mt-8 lg:flex lg:gap-12">
+      <div class="lg:w-2/3 order-1">
+        <div
+          class="mx-auto max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg prose-headings:scroll-mt-[80px] prose-li:my-0"
+        >
+          <slot />
+        </div>
+        <div class="mx-auto max-w-3xl mt-8 flex justify-between flex-col sm:flex-row">
+          <PostTags tags={post.tags} class="mr-5 rtl:mr-0 rtl:ml-5" />
+          <SocialShare
+            url={url}
+            text={post.title}
+            class="mt-5 sm:mt-1 align-middle text-gray-500 dark:text-slate-600"
+          />
+        </div>
+      </div>
+      <aside class="lg:w-1/3 lg:max-w-sm mt-8 lg:mt-0 order-2">
+        {
+          post.author && typeof post.author === 'object' && (
+            <div class="sticky top-24">
+              <AuthorCard author={post.author} />
+            </div>
+          )
+        }
+      </aside>
     </div>
   </article>
 </section>

@@ -79,9 +79,10 @@ const posts = collection({
         'Taggar för artikeln, används för att styra var och hur dom visas på sajten. Exempel: "svenska-cupen-2024". ',
       itemLabel: (props) => props.value,
     }),
-    author: fields.text({
+    author: fields.relationship({
       label: 'Author',
-      description: 'Artikelns författare, visas ännu inte någonstans på sajten men kan vara bra att ha. ',
+      collection: 'authors',
+      description: 'Artikelns författare.',
     }),
     content: fields.document({
       label: 'Content',
@@ -414,10 +415,32 @@ const posts = collection({
   },
 });
 
+const authors = collection({
+  label: 'Authors',
+  slugField: 'name',
+  path: 'src/content/authors/*',
+  format: { contentField: 'bio' },
+  schema: {
+    name: fields.slug({ name: { label: 'Name' } }),
+    role: fields.text({ label: 'Role' }),
+    avatar: fields.image({
+      label: 'Avatar',
+      directory: 'src/assets/images/authors',
+      publicPath: '~/assets/images/authors',
+    }),
+    bio: fields.document({
+      label: 'Bio',
+      formatting: true,
+      links: true,
+    }),
+  },
+});
+
 export default config({
   storage,
   collections: {
     posts,
+    authors,
   },
   singletons: {},
 });
