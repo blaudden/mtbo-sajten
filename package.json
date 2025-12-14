@@ -26,7 +26,8 @@
     "test:hreflang": "node tests/verify-hreflang.mjs",
     "test:links": "node tests/check-links.mjs",
     "optimize-images": "node scripts/optimize-images.mjs",
-    "validate:images": "node scripts/validate-images.mjs"
+    "validate:images": "node scripts/validate-images.mjs",
+    "submit:indexnow": "node scripts/submit-indexnow.js"
   },
   "dependencies": {
     "@astrojs/markdoc": "^0.15.9",

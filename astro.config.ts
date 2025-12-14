@@ -1,4 +1,6 @@
 import path from 'path';
+import fs from 'fs';
+import yaml from 'js-yaml';
 import { fileURLToPath } from 'url';
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
@@ -7,7 +9,7 @@ import mdx from '@astrojs/mdx';
 import compress from 'astro-compress';
 import icon from 'astro-icon';
 import tasks from './src/utils/tasks.mjs';
-import { SITE } from './src/utils/config.ts';
+import { SITE, APP_BLOG } from './src/utils/config.ts';
 import react from '@astrojs/react';
 import markdoc from '@astrojs/markdoc';
 import keystatic from '@keystatic/astro';
@@ -15,15 +17,77 @@ import netlify from '@astrojs/netlify';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-// Array with pages to eclude from sitemap
-const sitemap_exclude = [
-  // Remove canonical pages
-  'https://www.mountainbikeorientering.se/mountainbikeorientering-i-uppland-hosten-2023',
-  'https://www.mountainbikeorientering.se/mtbo-i-skutskaer-28-29-augusti-2021',
-  'https://www.mountainbikeorientering.se/sportident-air-utbildning-i-uppsala',
-  'https://www.mountainbikeorientering.se/mtbo-sommar-i-uppsala-2022',
-  'https://www.mountainbikeorientering.se/mtbo-i-osterbybruk-2021',
-];
+// Helper to identify pages that should be excluded from the sitemap based on their content frontmatter
+const getExcludedSlugs = () => {
+  const excluded = new Set();
+  const postsDir = './src/content/posts';
+  if (!fs.existsSync(postsDir)) return excluded;
+
+  // Recursive function to walk through the content directory
+  const walkSync = (dir, filelist = []) => {
+    fs.readdirSync(dir).forEach((file) => {
+      const dirFile = path.join(dir, file);
+      try {
+        if (fs.statSync(dirFile).isDirectory()) {
+          filelist = walkSync(dirFile, filelist);
+        } else {
+          filelist.push(dirFile);
+        }
+      } catch {
+        // ignore
+      }
+    });
+    return filelist;
+  };
+
+  const allFiles = walkSync(postsDir);
+
+  // Process each file to check for "noindex" or external canonical links
+  allFiles.forEach((filePath) => {
+    if (!filePath.match(/\.(md|mdx|mdoc)$/)) return;
+    const content = fs.readFileSync(filePath, 'utf8');
+    
+    // Extract frontmatter
+    const match = content.match(/^---\n([\s\S]+?)\n---/);
+    if (match) {
+      try {
+        const frontmatter = yaml.load(match[1]);
+        
+        // Check for explicit noindex in robots or metadata
+        const isNoIndex =
+          frontmatter?.robots?.index === false || frontmatter?.metadata?.robots?.index === false;
+        
+        let hasExternalCanonical = false;
+        const canonical = frontmatter?.metadata?.canonical || frontmatter?.canonical;
+        
+        // Check if canonical URL points to an external site
+        if (canonical && typeof canonical === 'string') {
+          const url = canonical.trim();
+          if (url.startsWith('http') && !url.includes('mountainbikeorientering.se')) {
+            hasExternalCanonical = true;
+          }
+        }
+
+        // If the page should be excluded, add its slug to the set
+        if (isNoIndex || hasExternalCanonical) {
+          const filename = path.basename(filePath);
+          let slug = filename.replace(/\.(md|mdx|mdoc)$/, '');
+          // Handle index files (e.g. /some-post/index.md -> slug: some-post)
+          if (slug === 'index') {
+            slug = path.basename(path.dirname(filePath));
+          }
+          excluded.add(slug);
+        }
+      } catch {
+        // ignore yaml error
+      }
+    }
+  });
+
+  return excluded;
+};
+
+const excludedSlugs = getExcludedSlugs();
 
 const getSite = () => {
   if (process.env.CONTEXT === 'deploy-preview' || process.env.CONTEXT === 'branch-deploy') {
@@ -58,7 +122,26 @@ export default defineConfig({
           en: 'en',
         },
       },
-      filter: (page) => !sitemap_exclude.includes(page),
+      // Filter function to exclude pages based on config (globally disabled sections) or specific content logic
+      filter: (page) => {
+        // Check config-based excludes
+        if (APP_BLOG?.tag?.robots?.index === false && page.includes('/tag/')) return false;
+        if (APP_BLOG?.category?.robots?.index === false && page.includes('/category/')) return false;
+        if (
+          APP_BLOG?.list?.robots?.index === false &&
+          (page.includes('/blog/') || page.endsWith('/blog'))
+        )
+          return false;
+
+        // Check content excludes
+        const matchesSlug = [...excludedSlugs].some((slug) => {
+          return page.endsWith(`/${slug}/`) || page.endsWith(`/${slug}`);
+        });
+
+        if (matchesSlug) return false;
+
+        return true;
+      },
     }),
     mdx(),
     markdoc(),

@@ -26,6 +26,7 @@ All commands are run from the root of the project, from a terminal:
 | `npm run check`           | Run code quality checks (Astro, ESLint, Prettier)                 |
 | `npm run test`            | Run all verification tests (OG, Meta, Hreflang, Links)            |
 | `npm run optimize-images` | Optimize large source images (>2MB) to prevent performance issues |
+| `npm run submit:indexnow` | Submit updated URLs to IndexNow (requires build first)            |
 
 ## Contributing
 
