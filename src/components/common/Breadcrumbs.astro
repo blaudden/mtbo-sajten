@@ -1,0 +1,104 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+  class?: string;
+  rootPath?: string;
+  rootTitle?: string;
+  hideHomeIcon?: boolean;
+}
+
+const {
+  class: className = '',
+  rootPath = '/',
+  rootTitle = 'Home',
+  hideHomeIcon = false,
+  nonLinkableSegments = ['category', 'tag', 'en'],
+} = Astro.props;
+
+interface Props {
+  class?: string;
+  rootPath?: string;
+  rootTitle?: string;
+  hideHomeIcon?: boolean;
+  nonLinkableSegments?: string[];
+}
+
+const currentPath = Astro.url.pathname;
+const cleanCurrentPath = currentPath.endsWith('/') && currentPath.length > 1 ? currentPath.slice(0, -1) : currentPath;
+const cleanRootPath = rootPath.endsWith('/') && rootPath.length > 1 ? rootPath.slice(0, -1) : rootPath;
+
+// Determine path segments relative to root
+let relativePath = cleanCurrentPath;
+if (cleanCurrentPath.startsWith(cleanRootPath)) {
+  relativePath = cleanCurrentPath.slice(cleanRootPath.length);
+}
+
+const pathSegments = relativePath.split('/').filter((segment) => segment);
+
+// Don't show if we are on the root page
+if (cleanCurrentPath === cleanRootPath) {
+  return null;
+}
+
+// Generate breadcrumb items
+const breadcrumbs = [
+  {
+    name: rootTitle,
+    href: rootPath,
+    isCurrent: false,
+    isLinkable: true,
+  },
+  ...pathSegments.map((segment, index) => {
+    // Determine title
+    let title = segment.replace(/-/g, ' ');
+    title = title.charAt(0).toUpperCase() + title.slice(1);
+
+    const segmentsSoFar = pathSegments.slice(0, index + 1).join('/');
+    const fullPath = cleanRootPath === '/' ? `/${segmentsSoFar}` : `${cleanRootPath}/${segmentsSoFar}`;
+    const isCurrent = index === pathSegments.length - 1;
+
+    return {
+      name: title,
+      href: fullPath,
+      isCurrent,
+      isLinkable: !isCurrent && !nonLinkableSegments.includes(segment),
+    };
+  }),
+];
+---
+
+<nav
+  class={`flex items-center text-xs text-gray-500/80 dark:text-gray-400/80 py-2 opacity-80 hover:opacity-100 transition-opacity ${className}`}
+  aria-label="Breadcrumb"
+>
+  <ol class="inline-flex items-center space-x-1 md:space-x-2">
+    {
+      breadcrumbs.map((item, index) => (
+        <li class="inline-flex items-center">
+          {index > 0 && <Icon name="tabler:chevron-right" class="w-4 h-4 text-gray-400/70 mx-1" />}
+
+          {item.isLinkable ? (
+            <a
+              href={item.href}
+              class="inline-flex items-center hover:text-primary dark:hover:text-primary-400 transition-colors"
+            >
+              {index === 0 && !hideHomeIcon && <Icon name="tabler:home" class="w-3.5 h-3.5 mr-1.5" />}
+              {item.name}
+            </a>
+          ) : (
+            <span
+              class={`ml-1 font-medium ${item.isCurrent ? 'text-gray-600 dark:text-gray-300' : 'text-gray-400 dark:text-gray-500'} md:ml-1 truncate max-w-[200px] sm:max-w-none`}
+              aria-current={item.isCurrent ? 'page' : undefined}
+            >
+              {index === 0 && !hideHomeIcon && !item.isCurrent && (
+                <Icon name="tabler:home" class="w-3.5 h-3.5 mr-1.5 inline-block" />
+              )}
+              {item.name}
+            </span>
+          )}
+        </li>
+      ))
+    }
+  </ol>
+</nav>
