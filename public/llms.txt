@@ -1,0 +1,36 @@
+# Mountainbikeorientering
+
+> A comprehensive resource for Mountain Bike Orienteering (MTBO). Find information on competitions, detailed guides on equipment and map reading, recent news, and facts about the sport.
+>
+> En heltäckande resurs för mountainbikeorientering (MTBO). Hitta information om tävlingar, detaljerade guider om utrustning och kartläsning, senaste nyheterna och fakta om sporten.
+
+## Sections / Sektioner
+
+- [Home / Hem](https://www.mountainbikeorientering.se/): Main page with introduction to the sport, equipment guides, and facts / Huvudsida med introduktion till sporten, utrustningsguider och fakta
+- [Blog](https://www.mountainbikeorientering.se/blog): Latest news and articles / Senaste nyheterna och artiklar
+- [About / Om sajten](https://www.mountainbikeorientering.se/about): Information about the website and contact details / Information om webbplatsen och kontaktuppgifter
+
+## Guides & Information / Guider & Information
+
+- [Equipment / Utrustning](https://www.mountainbikeorientering.se/#utrustning): Guide to essential gear: bike, map holder, helmet, and more / Guide till nödvändig utrustning: cykel, kartställ, hjälm med mera
+- [About Sport / Om Sporten](https://www.mountainbikeorientering.se/#sporten): Facts about MTBO, map reading, and competition formats / Fakta om MTBO, kartläsning och tävlingsformer
+
+## Competitions / Tävlingar
+
+- [WMTBOC 2026](https://www.mountainbikeorientering.se/wmtboc26): Official site for World Mountain Bike Orienteering Championships 2026 in Sweden / Officiell sida för World Mountain Bike Orienteering Championships 2026 i Sverige
+- [Svenska Cupen 2026](https://www.mountainbikeorientering.se/svenska-cupen-mtbo): Information and standings for the Swedish Cup in MTBO / Information och ställning för Svenska Cupen i MTBO
+- [O-Ringen 2026](https://www.mountainbikeorientering.se/mtbo-oringen): Information about MTBO competitions during O-Ringen / Information om MTBO-tävlingarna under O-Ringen
+
+## Blog Topics / Bloggämnen
+
+- [WMTBOC 2026 News](https://www.mountainbikeorientering.se/category/wmtboc26): News related to the World Championships / Nyheter relaterade till världsmästerskapen
+- [Svenska Cupen](https://www.mountainbikeorientering.se/category/svenska-cupen): Updates and reports from the Swedish Cup / Uppdateringar och rapporter från Svenska Cupen
+- [O-Ringen](https://www.mountainbikeorientering.se/category/oringen): News about O-Ringen MTBO / Nyheter om O-Ringen MTBO
+
+## Optional
+
+- [Facebook](https://www.facebook.com/mountainbikeorientering)
+- [Instagram](https://instagram.com/mountainbikeorientering)
+- [YouTube](https://www.youtube.com/@mountainbikeorientering)
+- [Github](https://github.com/blaudden/mtbo-sajten)
+- [RSS](https://www.mountainbikeorientering.se/rss.xml)
