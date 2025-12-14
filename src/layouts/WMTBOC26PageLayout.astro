@@ -67,9 +67,40 @@ const footerData2 = {
 
 const aboutText =
   'Mountainbikeorientering.se is the premier hub for MTBO in Sweden. We gather news, schedules, and information to grow the sport and support both elite and recreational cyclists.';
+
+// WMTBOC 2026 Schema
+const wmtbocSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'WMTBOC 2026 - World MTBO Championships',
+  url: new URL('/wmtboc26', Astro.site).toString(),
+  description: 'The official website for WMTBOC 2026 (World MTBO Championships).',
+  publisher: {
+    '@type': 'Organization',
+    name: 'WMTBOC 2026 Organisers',
+  },
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'Mountainbikeorientering.se',
+    url: new URL('/', Astro.site).toString(),
+  },
+};
+
+// Inject WMTBOC schema if on the homepage or if no external schema is already present
+// For now, we specifically target the homepage /wmtboc26 to be the "WebSite"
+const currentPath = Astro.url.pathname;
+const isWmtbocHome = currentPath === '/wmtboc26' || currentPath === '/wmtboc26/';
+
+const finalMetadata = { ...metadata };
+if (isWmtbocHome) {
+  finalMetadata.schema = {
+    ...finalMetadata.schema,
+    website: wmtbocSchema,
+  };
+}
 ---
 
-<Layout metadata={metadata}>
+<Layout metadata={finalMetadata}>
   <!-- Sticky Container for Top Bar and Header -->
   <div class="sticky top-0 z-50 w-full">
     <!-- Top Bar for Main Site Navigation -->

@@ -11,6 +11,7 @@ import Metadata from '~/components/common/Metadata.astro';
 import SiteVerification from '~/components/common/SiteVerification.astro';
 import Analytics from '~/components/common/Analytics.astro';
 import BasicScripts from '~/components/common/BasicScripts.astro';
+import Schema from '~/components/common/Schema.astro';
 
 // Comment the line below to disable View Transitions
 import { ClientRouter } from 'astro:transitions';
@@ -36,6 +37,7 @@ const language = metadata.openGraph ? metadata.openGraph.locale : 'sv';
     <Metadata {...metadata} />
     <SiteVerification />
     <Analytics />
+    <Schema metadata={metadata} />
 
     <!-- Comment the line below to disable View Transitions -->
     <ClientRouter fallback="swap" />

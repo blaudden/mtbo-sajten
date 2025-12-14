@@ -1,0 +1,89 @@
+---
+import { SITE } from '~/utils/config';
+import type { MetaData } from '~/types';
+
+export interface Props {
+  metadata?: MetaData;
+}
+
+const { metadata } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const currentPath = Astro.url.pathname;
+const isHome = currentPath === '/';
+const isPost =
+  currentPath.startsWith('/blog/') ||
+  (currentPath !== '/' && !currentPath.includes('/page/') && !currentPath.startsWith('/wmtboc26')); // Simplified post detection
+
+// Breadcrumb Schema
+const pathSegments = currentPath.split('/').filter((segment) => segment);
+const breadcrumbList = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: new URL('/', Astro.site).toString(),
+    },
+    ...pathSegments.map((segment, index) => ({
+      '@type': 'ListItem',
+      position: index + 2,
+      name: segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),
+      item: new URL(`/${pathSegments.slice(0, index + 1).join('/')}`, Astro.site).toString(),
+    })),
+  ],
+};
+
+// WebSite Schema
+let websiteSchema: Record<string, unknown> | null = null;
+if (metadata?.schema?.website) {
+  websiteSchema = metadata.schema.website;
+} else if (isHome) {
+  websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: SITE.name,
+    url: Astro.site?.toString(),
+    publisher: {
+      '@type': 'Organization',
+      name: 'Swedish MTBO Community',
+    },
+    description: 'Det officiella communityt för mountainbikeorientering i Sverige.',
+    sameAs: [
+      'https://www.facebook.com/mountainbikeorientering',
+      'https://instagram.com/mountainbikeorientering',
+      'https://www.youtube.com/@mountainbikeorientering',
+    ],
+  };
+}
+
+// BlogPosting Schema
+let blogPostingSchema = null;
+if (metadata?.openGraph?.type === 'article') {
+  blogPostingSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: metadata.title,
+    image: metadata.openGraph?.images?.[0]?.url,
+    datePublished: metadata.openGraph?.article?.publishedTime, // Check if this exists in your MetaData type, might need adjustment
+    dateModified: metadata.openGraph?.article?.modifiedTime,
+    author: {
+      '@type': 'Person', // Or Organization based on your needs
+      name: 'Magnus Blåudd', // Determine author from props if available
+    },
+    description: metadata.description,
+  };
+}
+---
+
+<!-- Breadcrumb Schema -->
+<script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbList)} />
+
+<!-- WebSite Schema -->{
+  websiteSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+}
+
+<!-- BlogPosting Schema -- Note: Implementation depends on passing correct metadata -->
+<!-- If strict MetaData type doesn't support article props directly, we might need to rely on what's available -->

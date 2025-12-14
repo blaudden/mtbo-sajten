@@ -66,6 +66,10 @@ export interface MetaData {
   openGraph?: MetaDataOpenGraph;
   twitter?: MetaDataTwitter;
 
+  schema?: {
+    website?: Record<string, unknown>;
+  };
+
   langRelated?: Array<string>;
 }
 
