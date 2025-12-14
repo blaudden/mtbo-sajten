@@ -46,6 +46,8 @@ const { post, url, overlayAnimation } = Astro.props;
               alt={post?.excerpt || ''}
               width={900}
               height={506}
+              loading="eager"
+              fetchpriority="high"
               decoding="async"
             />
             {overlayAnimation === 'dalahorse' && (

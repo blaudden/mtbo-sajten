@@ -14,6 +14,8 @@ const { src, alt, float = 'right', width = '300px', className = '', cropPosition
 
 const floatClass = float === 'left' ? 'float-left mr-6 mb-4' : 'float-right ml-6 mb-4';
 
+const widthNum = parseInt(width);
+
 const style = {
   width: '100%',
   maxWidth: width,
@@ -29,7 +31,9 @@ const style = {
     <Image
       src={src}
       alt={alt}
-      width={400}
+      width={widthNum}
+      widths={[400, widthNum]}
+      sizes={`(max-width: 640px) 100vw, ${widthNum}px`}
       class="w-full h-full object-cover"
       style={`object-position: ${cropPosition};`}
     />
