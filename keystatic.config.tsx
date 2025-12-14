@@ -59,7 +59,7 @@ const posts = collection({
       validation: { isRequired: true },
       directory: 'src/assets/images/posts',
       publicPath: '~/assets/images/posts',
-      description: 'Bild som visas högst upp på sidan, på alla ställen där artikeln länkas och när den delas',
+      description: 'Bild som visas högst upp på sidan. Rekommenderad storlek: 1280x720 pixlar (16:9). Denna bild används även vid delning.',
     }),
     category: fields.select({
       label: 'Category',
