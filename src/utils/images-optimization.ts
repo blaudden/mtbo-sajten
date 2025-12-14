@@ -207,20 +207,53 @@ const getBreakpoints = ({
 };
 
 /* ** */
+// Global promise to track if the image service has been initialized (only used in DEV)
+let initializationPromise: Promise<any> | null = null;
+
 const optimizeImageAssets: ImagesOptimizer = async (image, breakpoints, _width, _height, quality) => {
   if (!image) {
     return [];
   }
 
-  return Promise.all(
-    breakpoints.map(async (w: number) => {
-      const url = (await getImage({ src: image, width: w, inferSize: true, quality: quality || 80 })).src;
-      return {
-        src: url,
-        width: w,
-      };
-    })
-  );
+  const getImageForWidth = async (w: number) => {
+    const url = (await getImage({ src: image, width: w, inferSize: true, quality: quality || 80 })).src;
+    return {
+      src: url,
+      width: w,
+    };
+  };
+
+  if (import.meta.env.DEV && breakpoints.length > 0) {
+    // If the service hasn't been initialized yet, we must serialize the first call.
+    if (!initializationPromise) {
+      const [firstW, ...restW] = breakpoints;
+      // Start the first image optimization and store the promise globally.
+      // This locks other components from proceeding until this one finishes.
+      initializationPromise = getImageForWidth(firstW);
+
+      try {
+        const firstResult = await initializationPromise;
+        // Once init is done, run the rest of our breakpoints in parallel
+        const restResults = await Promise.all(restW.map(getImageForWidth));
+        return [firstResult, ...restResults];
+      } catch (e) {
+        // If initialization fails, reset the promise so it can be retried (or just let it fail)
+        initializationPromise = null;
+        throw e;
+      }
+    } else {
+      // Service is already initializing or initialized. Wait for it to complete.
+      try {
+        await initializationPromise;
+      } catch {
+        // If the initialization failed, we proceed anyway (might fail again, or succeed if it was transient)
+      }
+      // Now safe to run all our breakpoints in parallel
+      return Promise.all(breakpoints.map(getImageForWidth));
+    }
+  }
+
+  return Promise.all(breakpoints.map(getImageForWidth));
 };
 
 /**
