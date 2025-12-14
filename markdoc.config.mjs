@@ -127,5 +127,21 @@ export default defineMarkdocConfig({
         return new Tag('li', attributes, children);
       },
     },
+    paragraph: {
+      transform(node, config) {
+        const attributes = node.transformAttributes(config);
+        const children = node.transformChildren(config);
+
+        if (children.length > 0 && typeof children[0] === 'string') {
+          const content = children[0].trim();
+          // Detect quotes: " or “ (U+201C)
+          if (content.startsWith('"') || content.startsWith('“') || content.startsWith('”')) {
+            attributes['class'] = attributes['class'] ? `${attributes['class']} auto-quote` : 'auto-quote';
+          }
+        }
+
+        return new Tag('p', attributes, children);
+      },
+    },
   },
 });

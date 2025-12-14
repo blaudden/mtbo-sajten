@@ -158,3 +158,8 @@
 .prose ul:has(li.smart-list-item) li:not(.smart-list-item) {
   @apply p-3; /* Give them some breathing room as rows */
 }
+
+/* Auto-detected quotes styling */
+.prose p.auto-quote {
+  @apply italic text-gray-800 dark:text-gray-200 pl-4 my-4;
+}
