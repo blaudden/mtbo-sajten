@@ -50,13 +50,13 @@ const useWMTBOC26Layout = post.category?.slug === 'wmtboc26';
 {
   useWMTBOC26Layout ? (
     <WMTBOC26Layout metadata={metadata}>
-      <SinglePost post={{ ...post, image: image?.src }} url={url} overlayAnimation="dalahorse">
+      <SinglePost post={{ ...post, image: image }} url={url} overlayAnimation="dalahorse">
         {post.Content ? <post.Content /> : <Fragment set:html={post.content || ''} />}
       </SinglePost>
     </WMTBOC26Layout>
   ) : (
     <Layout metadata={metadata}>
-      <SinglePost post={{ ...post, image: image?.src }} url={url}>
+      <SinglePost post={{ ...post, image: image }} url={url}>
         {post.Content ? <post.Content /> : <Fragment set:html={post.content || ''} />}
       </SinglePost>
     </Layout>

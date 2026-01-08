@@ -21,6 +21,7 @@ export interface ImageProps extends Omit<HTMLAttributes<'img'>, 'src'> {
   aspectRatio?: string | number | null;
   objectPosition?: string;
   quality?: number | null;
+  format?: string | null;
 }
 
 export type ImagesOptimizer = (
@@ -28,7 +29,8 @@ export type ImagesOptimizer = (
   breakpoints: number[],
   width?: number,
   height?: number,
-  quality?: number | null
+  quality?: number | null,
+  format?: string | null
 ) => Promise<Array<{ src: string; width: number }>>;
 
 /* ******* */
@@ -210,13 +212,35 @@ const getBreakpoints = ({
 // Global promise to track if the image service has been initialized (only used in DEV)
 let initializationPromise: Promise<any> | null = null;
 
-const optimizeImageAssets: ImagesOptimizer = async (image, breakpoints, _width, _height, quality) => {
+const optimizeImageAssets: ImagesOptimizer = async (image, breakpoints, _width, _height, quality, format) => {
   if (!image) {
     return [];
   }
 
   const getImageForWidth = async (w: number) => {
-    const url = (await getImage({ src: image, width: w, inferSize: true, quality: quality || 80 })).src;
+    // Basic detection for images that shouldn't be converted to WebP (SVGs, GIFs)
+    let outputFormat: string | undefined = (format as any) || 'webp';
+    if (typeof image === 'string') {
+      const lowerSrc = image.toLowerCase();
+      if (lowerSrc.endsWith('.svg') || lowerSrc.endsWith('.gif')) {
+        outputFormat = undefined;
+      }
+    } else if (image && (image as ImageMetadata).format) {
+      const imgFormat = (image as ImageMetadata).format.toLowerCase();
+      if (imgFormat === 'svg' || imgFormat === 'gif') {
+        outputFormat = undefined;
+      }
+    }
+
+    const url = (
+      await getImage({
+        src: image,
+        width: w,
+        inferSize: true,
+        quality: quality || 80,
+        format: outputFormat as any,
+      })
+    ).src;
     return {
       src: url,
       width: w,
@@ -274,6 +298,7 @@ export async function getImageAttributes(
     layout = 'constrained',
     style = '',
     quality,
+    format,
     ...rest
   }: ImageProps
 ): Promise<{ src: string; attributes: HTMLAttributes<'img'> }> {
@@ -321,7 +346,8 @@ export async function getImageAttributes(
       breakpoints,
       Number(width) || undefined,
       Number(height) || undefined,
-      quality
+      quality,
+      format
     )
   )
     .map(({ src, width }) => `${src} ${width}w`)

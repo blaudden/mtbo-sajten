@@ -21,7 +21,7 @@ export interface Post {
   /** Optional summary of post content. */
   excerpt?: string;
   /**  */
-  image?: string;
+  image?: string | import('astro').ImageMetadata;
 
   /**  */
   category?: Taxonomy;
