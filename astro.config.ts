@@ -140,6 +140,9 @@ export default defineConfig({
 
         if (matchesSlug) return false;
 
+        // Exclude paginated blog pages (e.g., /blog/2, /blog/3) which are set to noindex in the template
+        if (page.match(/(^|\/)blog\/\d+\/?$/)) return false;
+
         return true;
       },
     }),
