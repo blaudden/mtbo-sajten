@@ -187,7 +187,8 @@ export const findLangRelatedPosts = async (slug: string): Promise<Array<string>>
   if (slug.length == 0) return [];
 
   const last = slug.split('/').pop();
-  const posts = await fetchBlogPosts();
+  // Use fetchPosts instead of fetchBlogPosts to include evergreen and hidden posts
+  const posts = await fetchPosts();
 
   return posts
     .map((post) => post.slug)
