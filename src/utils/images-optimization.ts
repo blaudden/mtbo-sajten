@@ -51,9 +51,6 @@ const config = {
     2560, // WQXGA
     3200, // QHD+
     3840, // 4K
-    4480, // 4.5K
-    5120, // 5K
-    6016, // 6K
   ],
 
   formats: ['image/webp'],

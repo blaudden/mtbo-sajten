@@ -106,9 +106,6 @@ export default defineConfig({
     imageCDN: true,
   }),
   image: {
-    service: {
-      entrypoint: 'astro/assets/services/sharp',
-    },
   },
   integrations: [
     tailwind({
