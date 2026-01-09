@@ -27,7 +27,7 @@ const imageMetadata = await findImage(src);
       loading="lazy"
       decoding="async"
       formats={['avif', 'webp']}
-      fallbackFormat={(imageMetadata as ImageMetadata).format === 'png' ? 'png' : 'jpg'}
+      fallbackFormat="webp"
     />
   ) : (
     <img src={src} alt={alt} title={title} class={className} loading="lazy" decoding="async" />

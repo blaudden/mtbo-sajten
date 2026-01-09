@@ -1,14 +1,13 @@
 
 import fs from 'fs/promises';
-import path from 'path';
 import sharp from 'sharp';
 import { glob } from 'glob';
 
-const MAX_SIZE_MB = 2; // Threshold in MB
-const MAX_WIDTH = 2500; // Max width in pixels
-const JPEG_QUALITY = 85;
-const PNG_QUALITY = 85;
-const WEBP_QUALITY = 85;
+const MAX_SIZE_MB = 0.8; // Threshold in MB
+const MAX_WIDTH = 1920; // Max width in pixels (Full HD)
+const JPEG_QUALITY = 80;
+const PNG_QUALITY = 80;
+const WEBP_QUALITY = 80;
 
 const TARGET_DIRS = ['src/**/*.{jpg,jpeg,png,webp}', 'public/**/*.{jpg,jpeg,png,webp}'];
 
