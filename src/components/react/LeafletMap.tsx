@@ -28,6 +28,8 @@ interface PolylineData {
   title?: string;
 }
 
+const DEFAULT_MAP_CENTER: [number, number] = [62.0, 15.0];
+
 interface LeafletMapProps {
   markers?: string | MarkerData[];
   polygons?: string | PolygonData[];

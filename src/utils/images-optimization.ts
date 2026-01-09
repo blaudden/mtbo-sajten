@@ -207,7 +207,7 @@ const getBreakpoints = ({
 
 /* ** */
 // Global promise to track if the image service has been initialized (only used in DEV)
-let initializationPromise: Promise<any> | null = null;
+let initializationPromise: Promise<{ src: string; width: number }> | null = null;
 
 const optimizeImageAssets: ImagesOptimizer = async (image, breakpoints, _width, _height, quality, format) => {
   if (!image) {
@@ -216,7 +216,8 @@ const optimizeImageAssets: ImagesOptimizer = async (image, breakpoints, _width, 
 
   const getImageForWidth = async (w: number) => {
     // Basic detection for images that shouldn't be converted to WebP (SVGs, GIFs)
-    let outputFormat: string | undefined = (format as any) || 'webp';
+    // Basic detection for images that shouldn't be converted to WebP (SVGs, GIFs)
+    let outputFormat: string | undefined = (format as string) || 'webp';
     if (typeof image === 'string') {
       const lowerSrc = image.toLowerCase();
       if (lowerSrc.endsWith('.svg') || lowerSrc.endsWith('.gif')) {
@@ -235,7 +236,7 @@ const optimizeImageAssets: ImagesOptimizer = async (image, breakpoints, _width, 
         width: w,
         inferSize: true,
         quality: quality || 80,
-        format: outputFormat as any,
+        format: outputFormat as 'webp' | undefined,
       })
     ).src;
     return {
@@ -253,7 +254,7 @@ const optimizeImageAssets: ImagesOptimizer = async (image, breakpoints, _width, 
       initializationPromise = getImageForWidth(firstW);
 
       try {
-        const firstResult = await initializationPromise;
+        const firstResult = (await initializationPromise) as { src: string; width: number };
         // Once init is done, run the rest of our breakpoints in parallel
         const restResults = await Promise.all(restW.map(getImageForWidth));
         return [firstResult, ...restResults];

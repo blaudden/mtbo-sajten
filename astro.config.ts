@@ -24,7 +24,7 @@ const getExcludedSlugs = () => {
   if (!fs.existsSync(postsDir)) return excluded;
 
   // Recursive function to walk through the content directory
-  const walkSync = (dir, filelist = []) => {
+  const walkSync = (dir: string, filelist: string[] = []) => {
     fs.readdirSync(dir).forEach((file) => {
       const dirFile = path.join(dir, file);
       try {
@@ -51,12 +51,17 @@ const getExcludedSlugs = () => {
     const match = content.match(/^---\n([\s\S]+?)\n---/);
     if (match) {
       try {
-        const frontmatter = yaml.load(match[1]);
-        
+        interface LocalFrontmatter {
+          robots?: { index?: boolean };
+          metadata?: { robots?: { index?: boolean }; canonical?: string };
+          canonical?: string;
+        }
+        const frontmatter = yaml.load(match[1]) as LocalFrontmatter;
+
         // Check for explicit noindex in robots or metadata
         const isNoIndex =
           frontmatter?.robots?.index === false || frontmatter?.metadata?.robots?.index === false;
-        
+
         let hasExternalCanonical = false;
         const canonical = frontmatter?.metadata?.canonical || frontmatter?.canonical;
         

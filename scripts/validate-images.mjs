@@ -1,6 +1,5 @@
 
 import sharp from 'sharp';
-import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 import { execSync } from 'child_process';
@@ -51,7 +50,7 @@ async function validateImages() {
               isOld = true;
             }
           }
-        } catch (e) {
+        } catch {
             // If git check fails (e.g. file untracked), assume it's new
             // console.warn('Git check failed for', imgPath); 
         }

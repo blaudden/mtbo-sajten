@@ -8,12 +8,8 @@ export interface Props {
 
 const { metadata } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const currentPath = Astro.url.pathname;
 const isHome = currentPath === '/';
-const isPost =
-  currentPath.startsWith('/blog/') ||
-  (currentPath !== '/' && !currentPath.includes('/page/') && !currentPath.startsWith('/wmtboc26')); // Simplified post detection
 
 // Breadcrumb Schema
 const pathSegments = currentPath.split('/').filter((segment) => segment);
@@ -60,18 +56,18 @@ if (metadata?.schema?.website) {
 }
 
 // BlogPosting Schema
-let blogPostingSchema = null;
+let blogPostingSchema: Record<string, unknown> | null = null;
 if (metadata?.openGraph?.type === 'article') {
   blogPostingSchema = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: metadata.title,
     image: metadata.openGraph?.images?.[0]?.url,
-    datePublished: metadata.openGraph?.article?.publishedTime, // Check if this exists in your MetaData type, might need adjustment
+    datePublished: metadata.openGraph?.article?.publishedTime,
     dateModified: metadata.openGraph?.article?.modifiedTime,
     author: {
-      '@type': 'Person', // Or Organization based on your needs
-      name: 'Magnus Blåudd', // Determine author from props if available
+      '@type': 'Person',
+      name: 'Magnus Blåudd',
     },
     description: metadata.description,
   };
@@ -85,5 +81,5 @@ if (metadata?.openGraph?.type === 'article') {
   websiteSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
 }
 
-<!-- BlogPosting Schema -- Note: Implementation depends on passing correct metadata -->
-<!-- If strict MetaData type doesn't support article props directly, we might need to rely on what's available -->
+<!-- BlogPosting Schema -->
+{blogPostingSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(blogPostingSchema)} />}

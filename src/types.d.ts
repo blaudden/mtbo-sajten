@@ -91,6 +91,13 @@ export interface MetaDataOpenGraph {
   locale?: string;
   type?: string;
   description?: string;
+  article?: {
+    publishedTime?: string;
+    modifiedTime?: string;
+    author?: string;
+    section?: string;
+    tags?: string[];
+  };
 }
 
 export interface MetaDataTwitter {

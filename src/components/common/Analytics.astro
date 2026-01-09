@@ -3,36 +3,37 @@ import { ANALYTICS } from '~/utils/config';
 ---
 
 {
-  ANALYTICS?.vendors?.googleAnalytics?.id ? (
+  ANALYTICS?.vendors?.googleAnalytics?.id && (
     <script
       is:inline
-      define:vars={{ gtmId: String(ANALYTICS.vendors.googleAnalytics.id) }}
-    >
-      (function() {
-        var id = gtmId;
-        var scriptLoaded = false;
+      data-gtm-id={String(ANALYTICS.vendors.googleAnalytics.id)}
+      set:html={`
+(function() {
+  const id = document.currentScript.getAttribute('data-gtm-id');
+  let scriptLoaded = false;
 
-        function loadGTM() {
-          if (scriptLoaded) return;
-          scriptLoaded = true;
+  function loadGTM() {
+    if (scriptLoaded) return;
+    scriptLoaded = true;
 
-          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer',id);
-        }
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});const f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer',id);
+  }
 
-        // Load on interaction
-        ['mouseover', 'keydown', 'touchmove', 'touchstart'].forEach(function(event) {
-          window.addEventListener(event, loadGTM, { once: true, passive: true });
-        });
+  // Load on interaction
+  ['mouseover', 'keydown', 'touchmove', 'touchstart'].forEach(function(event) {
+    window.addEventListener(event, loadGTM, { once: true, passive: true });
+  });
 
-        // Fallback: Load after 4 seconds if no interaction
-        setTimeout(loadGTM, 4000);
-      })();
-    </script>
-  ) : null
+  // Fallback: Load after 4 seconds if no interaction
+  setTimeout(loadGTM, 4000);
+})();
+      `}
+    />
+  )
 }
 
 <img

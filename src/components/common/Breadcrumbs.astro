@@ -6,6 +6,7 @@ interface Props {
   rootPath?: string;
   rootTitle?: string;
   hideHomeIcon?: boolean;
+  nonLinkableSegments?: string[];
 }
 
 const {
@@ -15,14 +16,6 @@ const {
   hideHomeIcon = false,
   nonLinkableSegments = ['category', 'tag', 'en'],
 } = Astro.props;
-
-interface Props {
-  class?: string;
-  rootPath?: string;
-  rootTitle?: string;
-  hideHomeIcon?: boolean;
-  nonLinkableSegments?: string[];
-}
 
 const currentPath = Astro.url.pathname;
 const cleanCurrentPath = currentPath.endsWith('/') && currentPath.length > 1 ? currentPath.slice(0, -1) : currentPath;
