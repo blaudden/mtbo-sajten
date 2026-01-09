@@ -212,4 +212,7 @@ export default defineConfig({
     '/wmtboc26/accomodation_booking_wmtboc26.xlsx':
       'https://docs.google.com/spreadsheets/d/1QotjDvD0y30I8_rSoVWtD_aypV8aoEL6/export?format=xlsx',
   },
+  experimental: {
+    svgo: true,
+  },
 });
