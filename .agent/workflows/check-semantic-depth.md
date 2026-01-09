@@ -21,6 +21,7 @@ grep -r "application/ld+json" src/components src/layouts
 ## 2. Identify Pillar Content
 
 Check if we have "Pillar Pages" for our core topics:
+
 - Svenska Cupen
 - O-Ringen
 - WMTBOC 2026
@@ -61,6 +62,7 @@ grep -r "Breadcrumb" src/components src/layouts src/pages
 ## 5. Content Completeness (Manual Review)
 
 Pick a core topic (e.g., "MTBO") and ask:
+
 - Do we have a definition? ("What is MTBO?")
 - Do we have a guide for beginners?
 - Do we have advanced tips?

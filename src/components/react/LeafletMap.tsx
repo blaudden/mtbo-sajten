@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-
-
 type MarkerColor = 'blue' | 'red' | 'green' | 'orange' | 'purple' | 'grey';
 type MarkerIconType = 'default' | 'start' | 'finish' | 'parking' | 'info';
 
@@ -241,7 +239,20 @@ const LeafletMap: React.FC<LeafletMapProps> = ({
   }, [markers, polygons, polylines, center]);
 
   if (!LeafletModules || !mapCenter || !LInstance) {
-    return <div style={{ height, width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#f3f4f6' }}>Loading map...</div>;
+    return (
+      <div
+        style={{
+          height,
+          width: '100%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: '#f3f4f6',
+        }}
+      >
+        Loading map...
+      </div>
+    );
   }
 
   const { MapContainer, TileLayer, Marker, Popup, Polygon, Polyline, useMap } = LeafletModules;
@@ -260,7 +271,7 @@ const LeafletMap: React.FC<LeafletMapProps> = ({
         const allPoints: [number, number][] = [];
 
         markers.forEach((m) => {
-            if(m.lat && m.lng) allPoints.push([m.lat, m.lng]);
+          if (m.lat && m.lng) allPoints.push([m.lat, m.lng]);
         });
 
         polygons.forEach((p) => {

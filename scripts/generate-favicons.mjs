@@ -1,4 +1,3 @@
-
 import sharp from 'sharp';
 import fs from 'fs/promises';
 import path from 'path';
@@ -24,25 +23,21 @@ async function generateFavicons() {
 
     // Generate PNGs
     for (const conf of CONFIG) {
-      await sharp(svgBuffer)
-        .resize(conf.width, conf.height)
-        .toFormat('png')
-        .toFile(path.join(PUBLIC_DIR, conf.name));
+      await sharp(svgBuffer).resize(conf.width, conf.height).toFormat('png').toFile(path.join(PUBLIC_DIR, conf.name));
       console.log(`Created ${conf.name}`);
     }
 
     // Generate favicon.ico with multiple sizes for best compatibility
     console.log('Generating multi-size favicon.ico...');
-    
+
     // Create temporary buffers for the ICO sizes
     const size16 = await sharp(svgBuffer).resize(16, 16).png().toBuffer();
     const size32 = await sharp(svgBuffer).resize(32, 32).png().toBuffer();
     const size48 = await sharp(svgBuffer).resize(48, 48).png().toBuffer(); // Common icon size
-    
+
     const icoBuffer = await pngToIco([size16, size32, size48]);
     await fs.writeFile(path.join(PUBLIC_DIR, 'favicon.ico'), icoBuffer);
     console.log('Created valid favicon.ico with 16, 32, and 48px sizes');
-
   } catch (error) {
     console.error('Error generating favicons:', error);
     process.exit(1);

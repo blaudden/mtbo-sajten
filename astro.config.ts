@@ -46,7 +46,7 @@ const getExcludedSlugs = () => {
   allFiles.forEach((filePath) => {
     if (!filePath.match(/\.(md|mdx|mdoc)$/)) return;
     const content = fs.readFileSync(filePath, 'utf8');
-    
+
     // Extract frontmatter
     const match = content.match(/^---\n([\s\S]+?)\n---/);
     if (match) {
@@ -59,12 +59,11 @@ const getExcludedSlugs = () => {
         const frontmatter = yaml.load(match[1]) as LocalFrontmatter;
 
         // Check for explicit noindex in robots or metadata
-        const isNoIndex =
-          frontmatter?.robots?.index === false || frontmatter?.metadata?.robots?.index === false;
+        const isNoIndex = frontmatter?.robots?.index === false || frontmatter?.metadata?.robots?.index === false;
 
         let hasExternalCanonical = false;
         const canonical = frontmatter?.metadata?.canonical || frontmatter?.canonical;
-        
+
         // Check if canonical URL points to an external site
         if (canonical && typeof canonical === 'string') {
           const url = canonical.trim();
@@ -110,8 +109,7 @@ export default defineConfig({
   adapter: netlify({
     imageCDN: true,
   }),
-  image: {
-  },
+  image: {},
   integrations: [
     tailwind({
       applyBaseStyles: false,
@@ -129,10 +127,7 @@ export default defineConfig({
         // Check config-based excludes
         if (APP_BLOG?.tag?.robots?.index === false && page.includes('/tag/')) return false;
         if (APP_BLOG?.category?.robots?.index === false && page.includes('/category/')) return false;
-        if (
-          APP_BLOG?.list?.robots?.index === false &&
-          (page.includes('/blog/') || page.endsWith('/blog'))
-        )
+        if (APP_BLOG?.list?.robots?.index === false && (page.includes('/blog/') || page.endsWith('/blog')))
           return false;
 
         // Check content excludes

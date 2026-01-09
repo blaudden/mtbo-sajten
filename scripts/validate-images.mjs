@@ -1,4 +1,3 @@
-
 import sharp from 'sharp';
 import path from 'path';
 import { glob } from 'glob';
@@ -10,10 +9,10 @@ const MAX_AGE_MONTHS = 6;
 
 async function validateImages() {
   console.log('Validating blog post hero images...');
-  
+
   // Find all image.{png,jpg,webp,jpeg} files in the posts directory
   const images = await glob('src/assets/images/posts/**/image.{png,jpg,jpeg,webp}');
-  
+
   if (images.length === 0) {
     console.log('No images found to validate.');
     return;
@@ -26,7 +25,7 @@ async function validateImages() {
     try {
       const fullPath = path.resolve(process.cwd(), imgPath);
       const metadata = await sharp(fullPath).metadata();
-      
+
       const { width, height } = metadata;
       if (!width || !height) {
         console.warn(`Could not read dimensions for ${imgPath}`);
@@ -45,14 +44,15 @@ async function validateImages() {
           const stdout = execSync(`git log -1 --format=%cd --date=iso "${imgPath}"`, { encoding: 'utf8' }).trim();
           if (stdout) {
             const commitDate = new Date(stdout);
-            const monthsDiff = (now.getFullYear() - commitDate.getFullYear()) * 12 + (now.getMonth() - commitDate.getMonth());
+            const monthsDiff =
+              (now.getFullYear() - commitDate.getFullYear()) * 12 + (now.getMonth() - commitDate.getMonth());
             if (monthsDiff > MAX_AGE_MONTHS) {
               isOld = true;
             }
           }
         } catch {
-            // If git check fails (e.g. file untracked), assume it's new
-            // console.warn('Git check failed for', imgPath); 
+          // If git check fails (e.g. file untracked), assume it's new
+          // console.warn('Git check failed for', imgPath);
         }
 
         if (isOld) {
@@ -73,8 +73,10 @@ async function validateImages() {
   }
 
   if (warningsCount > 0) {
-    console.log(`\n❌ Found ${warningsCount} new images that deviate significantly from the recommended aspect ratio (16:9).`);
-    // process.exit(1); 
+    console.log(
+      `\n❌ Found ${warningsCount} new images that deviate significantly from the recommended aspect ratio (16:9).`
+    );
+    // process.exit(1);
   } else {
     console.log(`\n✅ Checked ${images.length} images. All look good!`);
   }

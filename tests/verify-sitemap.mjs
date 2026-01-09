@@ -16,7 +16,7 @@ if (!existsSync(SITEMAP_FILE)) {
 
 function verifySitemap() {
   const sitemapContent = readFileSync(SITEMAP_FILE, 'utf-8');
-  const urls = sitemapContent.match(/<loc>(.*?)<\/loc>/g)?.map(match => match.replace(/<\/?loc>/g, '')) || [];
+  const urls = sitemapContent.match(/<loc>(.*?)<\/loc>/g)?.map((match) => match.replace(/<\/?loc>/g, '')) || [];
 
   console.log(`Checking ${urls.length} URLs from sitemap for noindex tags...`);
 
@@ -27,10 +27,13 @@ function verifySitemap() {
     try {
       const parsedUrl = new URL(url);
       let filePath = join(DIST_DIR, parsedUrl.pathname, 'index.html');
-      
+
       // Handle URLs that end in / or not
       if (!existsSync(filePath)) {
-        filePath = join(DIST_DIR, parsedUrl.pathname.endsWith('.html') ? parsedUrl.pathname : `${parsedUrl.pathname}.html`);
+        filePath = join(
+          DIST_DIR,
+          parsedUrl.pathname.endsWith('.html') ? parsedUrl.pathname : `${parsedUrl.pathname}.html`
+        );
       }
 
       if (existsSync(filePath)) {

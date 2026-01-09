@@ -10,19 +10,18 @@ const TIMEOUT = 10000;
 const HEAD_TIMEOUT = 5000; // Compromise: 5s is usually enough for a healthy HEAD
 
 // Browser Simulation Headers
-const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
+const USER_AGENT =
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
 const HEADERS = {
   'User-Agent': USER_AGENT,
-  'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+  Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
   'Accept-Language': 'en-US,en;q=0.9',
-  'Cache-Control': 'no-cache'
+  'Cache-Control': 'no-cache',
 };
 
 // Domains to skip network checks for (Bot Protection / Scraper Blocking)
 // We assume they are valid if the URL looks sane.
-const SKIPPED_HOSTS = [
-  'facebook.com', 'instagram.com', 'pixieset.com', 'fb.me', 'linkedin.com', 'sharepoint.com'
-];
+const SKIPPED_HOSTS = ['facebook.com', 'instagram.com', 'pixieset.com', 'fb.me', 'linkedin.com', 'sharepoint.com'];
 
 const RESET = '\x1b[0m';
 const RED = '\x1b[31m';
@@ -40,7 +39,7 @@ if (!statSync(DIST_DIR, { throwIfNoEntry: false })) {
 
 function getAllHtmlFiles(dir, fileList = []) {
   const files = readdirSync(dir);
-  files.forEach(file => {
+  files.forEach((file) => {
     const filePath = join(dir, file);
     const stat = statSync(filePath);
     if (stat.isDirectory()) {
@@ -61,14 +60,17 @@ function extractLinks(filePath) {
   // Regex to capture href and the link content (text)
   // Note: This is a simple regex and might fail on nested tags, but good for diagnostics.
   const regex = /<a\s+(?:[^>]*?\s+)?href=(["'])(.*?)\1[^>]*>(.*?)<\/a>/gis;
-  
+
   let match;
   while ((match = regex.exec(content)) !== null) {
     const rawUrl = match[2];
-    const linkText = match[3].replace(/<[^>]*>/g, '').trim().substring(0, 50); // Strip HTML tags from text
-    
+    const linkText = match[3]
+      .replace(/<[^>]*>/g, '')
+      .trim()
+      .substring(0, 50); // Strip HTML tags from text
+
     if (rawUrl.startsWith('#') || rawUrl.startsWith('mailto:') || rawUrl.startsWith('tel:')) continue;
-    
+
     try {
       let url;
       if (rawUrl.startsWith('http://') || rawUrl.startsWith('https://')) {
@@ -77,10 +79,10 @@ function extractLinks(filePath) {
         // Skip internal relative links for now
         continue;
       }
-      
+
       // Calculate line number
       const linesBefore = content.substring(0, match.index).split('\n').length;
-      
+
       links.push({ url, source: filePath, line: linesBefore, text: linkText });
     } catch {
       // Invalid URL
@@ -94,12 +96,12 @@ function getUrlPattern(urlStr) {
   try {
     const url = new URL(urlStr);
     let path = url.pathname;
-    
+
     // Replace digits with {{N}}
     path = path.replace(/\d+/g, '{{N}}');
     // Replace UUIDs (approximate)
     path = path.replace(/[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}/gi, '{{UUID}}');
-    
+
     return `${url.origin}${path}`;
   } catch {
     return urlStr;
@@ -107,7 +109,7 @@ function getUrlPattern(urlStr) {
 }
 
 async function verifyUrlStatus(url) {
-  if (SKIPPED_HOSTS.some(host => url.includes(host))) {
+  if (SKIPPED_HOSTS.some((host) => url.includes(host))) {
     return { ok: true, status: 200, skipped: true };
   }
 
@@ -132,28 +134,28 @@ function fetchWithRetry(url, method, redirectCount = 0, chain = []) {
     try {
       parsedUrl = new URL(url);
     } catch {
-       finish({ ok: false, error: 'Invalid URL', chain });
-       return;
+      finish({ ok: false, error: 'Invalid URL', chain });
+      return;
     }
 
     const isHttps = parsedUrl.protocol === 'https:';
     const lib = isHttps ? https : http;
-    
+
     const options = {
       method,
       headers: HEADERS,
-      timeout: method === 'HEAD' ? HEAD_TIMEOUT : TIMEOUT
+      timeout: method === 'HEAD' ? HEAD_TIMEOUT : TIMEOUT,
     };
 
     const req = lib.request(parsedUrl, options, (res) => {
       res.resume(); // Consume body
-      
+
       const status = res.statusCode;
       if (status >= 200 && status < 300) {
         finish({ ok: true, status, chain });
         return;
-      } 
-      
+      }
+
       if (status >= 300 && status < 400 && res.headers.location) {
         const dest = new URL(res.headers.location, url).toString();
         const newChain = [...chain, { url, status, dest }];
@@ -173,18 +175,18 @@ function fetchWithRetry(url, method, redirectCount = 0, chain = []) {
 
     req.on('error', (err) => {
       if (method === 'HEAD') {
-         fetchWithRetry(url, 'GET', redirectCount, chain).then(finish);
+        fetchWithRetry(url, 'GET', redirectCount, chain).then(finish);
       } else {
-         finish({ ok: false, error: err.message, chain });
+        finish({ ok: false, error: err.message, chain });
       }
     });
 
     req.on('timeout', () => {
       req.destroy();
       if (method === 'HEAD') {
-         fetchWithRetry(url, 'GET', redirectCount, chain).then(finish);
+        fetchWithRetry(url, 'GET', redirectCount, chain).then(finish);
       } else {
-         finish({ ok: false, error: 'Timeout', chain });
+        finish({ ok: false, error: 'Timeout', chain });
       }
     });
 
@@ -195,12 +197,12 @@ function fetchWithRetry(url, method, redirectCount = 0, chain = []) {
 async function run() {
   console.log(`${BLUE}🔍 Scanning for links in ${DIST_DIR}...${RESET}`);
   const files = getAllHtmlFiles(DIST_DIR);
-  
+
   let allLinks = [];
   for (const file of files) {
     allLinks = allLinks.concat(extractLinks(file));
   }
-  
+
   const urlToSources = new Map();
   allLinks.forEach(({ url, source, line, text }) => {
     if (!urlToSources.has(url)) {
@@ -208,28 +210,28 @@ async function run() {
     }
     urlToSources.get(url).push({ source, line, text });
   });
-  
+
   const uniqueUrls = Array.from(urlToSources.keys());
   console.log(`Found ${allLinks.length} total links, ${uniqueUrls.length} unique URLs.`);
 
   // Cluster by pattern
   const clusters = new Map();
-  uniqueUrls.forEach(url => {
+  uniqueUrls.forEach((url) => {
     const pattern = getUrlPattern(url);
     if (!clusters.has(pattern)) {
       clusters.set(pattern, []);
     }
     clusters.get(pattern).push(url);
   });
-  
+
   console.log(`Clustered into ${clusters.size} patterns.`);
 
   const urlsToCheck = new Set();
   let skippedCount = 0;
-  
+
   clusters.forEach((group) => {
     if (group.length <= 5) {
-      group.forEach(u => urlsToCheck.add(u));
+      group.forEach((u) => urlsToCheck.add(u));
     } else {
       group.sort();
       const toAdd = [group[0], group[group.length - 1]];
@@ -239,12 +241,12 @@ async function run() {
         toAdd.push(middle[idx]);
         middle.splice(idx, 1);
       }
-      
-      toAdd.forEach(u => urlsToCheck.add(u));
-      skippedCount += (group.length - toAdd.length);
+
+      toAdd.forEach((u) => urlsToCheck.add(u));
+      skippedCount += group.length - toAdd.length;
     }
   });
-  
+
   const checkList = Array.from(urlsToCheck);
   // Randomize check order to avoid hammering single domains
   for (let i = checkList.length - 1; i > 0; i--) {
@@ -253,16 +255,16 @@ async function run() {
   }
 
   console.log(`Checking ${checkList.length} URLs (Skipped ${skippedCount} items).`);
-  
+
   let checked = 0;
   const broken = [];
-  
+
   for (let i = 0; i < checkList.length; i += CONCURRENCY) {
     const chunk = checkList.slice(i, i + CONCURRENCY);
-    const promises = chunk.map(url => verifyUrlStatus(url).then(res => ({ url, res })));
-    
+    const promises = chunk.map((url) => verifyUrlStatus(url).then((res) => ({ url, res })));
+
     process.stdout.write(`\rProgress: ${checked}/${checkList.length}`);
-    
+
     const results = await Promise.all(promises);
     results.forEach(({ url, res }) => {
       checked++;
@@ -272,7 +274,7 @@ async function run() {
       }
     });
   }
-  
+
   console.log(`\n\n${BLUE}--- REPORT ---${RESET}`);
   if (broken.length === 0) {
     console.log(`${GREEN}✅ All checked links are valid!${RESET}`);
@@ -283,19 +285,19 @@ async function run() {
       console.log(`  Status: ${res.status || res.error}`);
       if (res.chain && res.chain.length > 0) {
         console.log(`  Chain:`);
-        res.chain.forEach(step => {
-             console.log(`    ${GRAY}↳ ${step.status} -> ${step.dest}${RESET}`);
+        res.chain.forEach((step) => {
+          console.log(`    ${GRAY}↳ ${step.status} -> ${step.dest}${RESET}`);
         });
       }
       console.log(`  Found in:`);
       const sources = urlToSources.get(url);
-      sources.slice(0, 5).forEach(s => {
+      sources.slice(0, 5).forEach((s) => {
         // Pretty print source with line and text
         console.log(`    - ${GRAY}${s.source}:${s.line}${RESET} [${MAGENTA}"${s.text}"${RESET}]`);
       });
       if (sources.length > 5) console.log(`    ... and ${sources.length - 5} more`);
     });
-    
+
     console.log(`\n${GRAY}See tests/LINK_CHECKING_GUIDE.md for fixing instructions.${RESET}`);
     process.exit(1);
   }

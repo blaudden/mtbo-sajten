@@ -6,7 +6,7 @@ const DIST_DIR = './dist';
 
 function getAllHtmlFiles(dir, fileList = []) {
   const files = readdirSync(dir);
-  files.forEach(file => {
+  files.forEach((file) => {
     const filePath = join(dir, file);
     const stat = statSync(filePath);
     if (stat.isDirectory()) {
@@ -27,9 +27,9 @@ function verifyHreflang() {
 
   console.log(`Scanning ${htmlFiles.length} HTML files for hreflang tags...`);
 
-  htmlFiles.forEach(file => {
+  htmlFiles.forEach((file) => {
     const content = readFileSync(file, 'utf-8');
-    
+
     // Find all hreflang tags
     // <link rel="alternate" hreflang="sv" href="..." />
     // Regex to match "alternate" links, then check attributes independently
@@ -42,15 +42,15 @@ function verifyHreflang() {
       const hrefMatch = tag.match(/href=["']([^"']+)["']/);
 
       if (hreflangMatch && hrefMatch) {
-         matches.push({ lang: hreflangMatch[1], url: hrefMatch[1] });
+        matches.push({ lang: hreflangMatch[1], url: hrefMatch[1] });
       }
     }
 
     if (matches.length > 0) {
       checked++;
-      
+
       // 1. Check for x-default
-      const hasXDefault = matches.some(m => m.lang === 'x-default');
+      const hasXDefault = matches.some((m) => m.lang === 'x-default');
       if (!hasXDefault) {
         console.error(`❌ [FAIL] ${file}: Missing x-default hreflang tag.`);
         failed = true;
@@ -60,12 +60,12 @@ function verifyHreflang() {
       // A proper multi-lingual setup should have at least 2 tags: self + alternate.
       // If we only have 1 (e.g. just x-default, or just the alternate but not self), it triggers "no return tag".
       if (matches.length < 2) {
-         console.error(`❌ [FAIL] ${file}: Only ${matches.length} hreflang tag found. Missing self-reference?`);
-         failed = true;
+        console.error(`❌ [FAIL] ${file}: Only ${matches.length} hreflang tag found. Missing self-reference?`);
+        failed = true;
       }
 
       // 3. Check for duplicates
-      const langs = matches.map(m => m.lang);
+      const langs = matches.map((m) => m.lang);
       const uniqueLangs = new Set(langs);
       if (langs.length !== uniqueLangs.size) {
         console.error(`❌ [FAIL] ${file}: Duplicate hreflang tags found: ${langs.join(', ')}`);

@@ -1,4 +1,3 @@
-
 import fs from 'fs/promises';
 import sharp from 'sharp';
 import { glob } from 'glob';
@@ -50,7 +49,6 @@ async function optimizeImage(filePath) {
     const newSizeMB = await getFileSizeInMB(filePath);
     console.log(`Optimized: ${filePath} -> ${newSizeMB.toFixed(2)} MB`);
     return true;
-
   } catch (error) {
     console.error(`Error optimizing ${filePath}:`, error);
     return false;

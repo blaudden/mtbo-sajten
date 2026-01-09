@@ -54,7 +54,7 @@ async function submitToIndexNow(urls) {
   return new Promise((resolve, reject) => {
     const req = https.request(options, (res) => {
       let body = '';
-      res.on('data', (chunk) => body += chunk);
+      res.on('data', (chunk) => (body += chunk));
       res.on('end', () => {
         if (res.statusCode >= 200 && res.statusCode < 300) {
           console.log(`Success! Status: ${res.statusCode} ${res.statusMessage}`);
@@ -87,13 +87,13 @@ function main() {
     const content = fs.readFileSync(SITEMAP_PATH, 'utf8');
     const urls = extractUrls(content);
     console.log(`Found ${urls.length} URLs in sitemap.`);
-    
+
     // Limit to 10,000 per request
     if (urls.length > 10000) {
-        console.warn('Warning: More than 10,000 URLs found. Only submitting the first 10,000.');
-        submitToIndexNow(urls.slice(0, 10000));
+      console.warn('Warning: More than 10,000 URLs found. Only submitting the first 10,000.');
+      submitToIndexNow(urls.slice(0, 10000));
     } else {
-        submitToIndexNow(urls);
+      submitToIndexNow(urls);
     }
   } catch (e) {
     console.error('Error processing sitemap:', e);
