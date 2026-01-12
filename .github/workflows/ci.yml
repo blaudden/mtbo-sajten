@@ -2,9 +2,7 @@ name: Project Health Check
 
 on:
   push:
-    branches: [ main ]
   pull_request:
-    branches: [ main ]
 
 jobs:
   check:
@@ -22,8 +20,8 @@ jobs:
       - name: Check types & lint
         run: npm run check
       
-      - name: Run tests
-        run: npm run test
-      
       - name: Build project
         run: npm run build
+
+      - name: Run tests
+        run: npm run test
