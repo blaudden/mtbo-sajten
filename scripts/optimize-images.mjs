@@ -10,14 +10,11 @@ const WEBP_QUALITY = 80;
 
 const TARGET_DIRS = ['src/**/*.{jpg,jpeg,png,webp}', 'public/**/*.{jpg,jpeg,png,webp}'];
 
-async function getFileSizeInMB(filePath) {
-  const stats = await fs.stat(filePath);
-  return stats.size / (1024 * 1024);
-}
-
 async function optimizeImage(filePath) {
   try {
-    const sizeMB = await getFileSizeInMB(filePath);
+    const stats = await fs.stat(filePath);
+    const sizeMB = stats.size / (1024 * 1024);
+
     if (sizeMB < MAX_SIZE_MB) {
       return false; // Skip if small enough
     }
@@ -44,11 +41,18 @@ async function optimizeImage(filePath) {
     }
 
     const buffer = await pipeline.toBuffer();
-    await fs.writeFile(filePath, buffer);
 
-    const newSizeMB = await getFileSizeInMB(filePath);
-    console.log(`Optimized: ${filePath} -> ${newSizeMB.toFixed(2)} MB`);
-    return true;
+    // Only overwrite if the new file is actually smaller
+    if (buffer.length < stats.size) {
+      await fs.writeFile(filePath, buffer);
+      console.log(
+        `Optimized: ${filePath} -> ${(buffer.length / (1024 * 1024)).toFixed(2)} MB (Reduced from ${sizeMB.toFixed(2)} MB)`
+      );
+      return true;
+    } else {
+      console.log(`Skipped (no size reduction possible): ${filePath}`);
+      return false;
+    }
   } catch (error) {
     console.error(`Error optimizing ${filePath}:`, error);
     return false;
@@ -56,14 +60,24 @@ async function optimizeImage(filePath) {
 }
 
 async function main() {
+  const args = process.argv.slice(2);
   console.log('Starting image optimization check...');
   let processedCount = 0;
 
-  for (const pattern of TARGET_DIRS) {
-    const files = await glob(pattern);
-    for (const file of files) {
+  if (args.length > 0) {
+    // Process specific files passed as arguments
+    for (const file of args) {
       const changed = await optimizeImage(file);
       if (changed) processedCount++;
+    }
+  } else {
+    // Process all files in target directories
+    for (const pattern of TARGET_DIRS) {
+      const files = await glob(pattern);
+      for (const file of files) {
+        const changed = await optimizeImage(file);
+        if (changed) processedCount++;
+      }
     }
   }
 

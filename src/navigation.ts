@@ -9,7 +9,10 @@ export const headerData = {
     {
       text: 'Tävlingar',
       links: [
+        { text: 'Tävlingsprogram 2026', href: getPermalink('/mtbo-program') },
         { text: 'VM i Sverige 2026', href: getPermalink('/wmtboc26') },
+        { text: 'SM i Uppsala 2026', href: getPermalink('/svenska-maesterskapen-mtbo') },
+        { text: 'Haninge 2026', href: getPermalink('/svenska-cupen-haninge-2026') },
         { text: 'Svenska Cupen 2026', href: getPermalink('/svenska-cupen-mtbo') },
         { text: 'O-Ringen 2026', href: getPermalink('/mtbo-oringen') },
         { text: 'Eventor', href: getPermalink('/eventor') },
@@ -35,7 +38,10 @@ export const footerData = {
     {
       title: 'Tävlingar',
       links: [
+        { text: 'Tävlingsprogram 2026', href: getPermalink('/mtbo-program') },
         { text: 'WMTBOC 2026', href: getPermalink('/wmtboc26') },
+        { text: 'SM i Uppsala 2026', href: getPermalink('/svenska-maesterskapen-mtbo') },
+        { text: 'Haninge 2026', href: getPermalink('/svenska-cupen-haninge-2026') },
         { text: 'Svenska Cupen 2026', href: getPermalink('/svenska-cupen-mtbo') },
         { text: 'O-Ringen 2026', href: getPermalink('/mtbo-oringen') },
       ],
