@@ -35,6 +35,8 @@ For standard articles, we use screenshots to tell the story. For YouTube, you ca
 **For YouTube:**
 
 - Get the Video ID (e.g., `55xp2cryPfE`).
+- **Screenshotting:** You still need a Hero Image. Use the `browser` tool or manual screenshots carefully.
+- **CRITICAL:** When screenshotting, click away from elements to ensure no blue focus borders appear around the video player or selected elements.
 
 ## 3. Generate Styled Hero Image
 
@@ -74,11 +76,16 @@ Create `src/content/posts/[slug]/index.mdoc`.
 **Guidelines:**
 
 - **Title:** Compelling, independent title.
-- **Tone & Voice:** Adopt a descriptive, reporting tone.
-- **Categories:** Use relevant existing categories.
+- **Tone & Voice:** Adopt a descriptive, reporting tone. Use "he/she/they" to describe the video content. **NEVER use "we"** unless the content is produced by MTBO-Sajten/Förbundet.
+- **Categories:** ONLY use existing categories. If unsure, do not assign a category. **NEVER create new categories.**
+- **Tags:** Avoid random tags. Only use established tags or leave empty.
+- **Creator Attribution:** ALWAYS describe who created the video. Add a section "Om skaparen" (About the creator) with a bio, their role in the community, and achievements.
 
 **YouTube Note:**
 If the source is YouTube, use the `YoutubeVideo` tag instead of manually inserting illustrative screenshots in the body.
+
+- **Placement:** Place the video embed high up, usually after the first intro paragraph.
+- **Title:** The `title` attribute in the embed MUST match the actual YouTube video title.
 
 ```markdown
 ---
@@ -87,8 +94,6 @@ draft: false
 publishDate: [YYYY-MM-DD]
 excerpt: [Summary]
 image: ~/assets/images/posts/[slug]/image.png
-category: '[relevant-category]'
-tags: []
 author: [Your Name]
 ---
 
@@ -96,9 +101,15 @@ author: [Your Name]
 
 {% YoutubeVideo
    videoid="[VIDEO_ID]"
-   title="[Video Title]" /%}
+   title="[Exact YouTube Title]" /%}
 
-[Body text references...]
+[Descriptive text: "In this video, [Creator] shows..."]
+
+[Extracted tips/quotes...]
+
+### Om skaparen
+
+[Bio about the creator, achievements, role in MTBO community]
 
 Se hela kanalen här: [Länktext](URL)
 ```
