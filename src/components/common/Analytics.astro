@@ -36,11 +36,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   )
 }
 
-<img
-  src="https://tracker.metricool.com/c3po.jpg?hash=b810089353f6d4a2d9d3d7347d93e0fd"
-  alt=""
-  width="1"
-  height="1"
-  style="position:absolute; left:-9999px;"
-  aria-hidden="true"
-/>
+{/* Metricool tracker - supports SPA/ViewTransitions */}
+<script is:inline>
+  document.addEventListener('astro:page-load', () => {
+    const img = new Image();
+    img.src = 'https://tracker.metricool.com/c3po.jpg?hash=b810089353f6d4a2d9d3d7347d93e0fd';
+    img.width = 1;
+    img.height = 1;
+    img.style.position = 'absolute';
+    img.style.left = '-9999px';
+    img.alt = '';
+    img.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(img);
+  });
+</script>
