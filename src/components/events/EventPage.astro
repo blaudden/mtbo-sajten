@@ -1,0 +1,155 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import EventTable from './EventTable.astro';
+import eventsMetadata from '../../content/events/events-metadata.json';
+import countries from 'i18n-iso-countries';
+import en from 'i18n-iso-countries/langs/en.json';
+import sv from 'i18n-iso-countries/langs/sv.json';
+
+// Initialize the library with English and Swedish names
+countries.registerLocale(en);
+countries.registerLocale(sv);
+
+interface Props {
+  year: string;
+  yearEvents: any[];
+  allYears: string[];
+}
+
+const { year, yearEvents, allYears } = Astro.props;
+
+// Sort by start_date
+yearEvents.sort((a, b) => a.start_date.localeCompare(b.start_date));
+
+const title = `Tävlingskalender ${year}`;
+const description = `MTBO tävlingskalender och aktiviteter för år ${year}.`;
+const lastUpdated = new Date(eventsMetadata.lastUpdated).toLocaleString('sv-SE', {
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+  hour: '2-digit',
+  minute: '2-digit',
+});
+
+// Extract unique countries and map to localized names
+const uniqueCountries = [...new Set(yearEvents.map((e) => e.country).filter(Boolean))]
+  .map((code) => {
+    const iso2 =
+      code.length === 2
+        ? code.toUpperCase()
+        : code.length === 3
+          ? countries.alpha3ToAlpha2(code.toUpperCase())
+          : countries.getAlpha2Code(code, 'sv') || countries.getAlpha2Code(code, 'en');
+
+    const name = iso2 ? countries.getName(iso2, 'sv') : code;
+    return { code, name };
+  })
+  .sort((a, b) => a.name.localeCompare(b.name, 'sv'));
+
+// Check if we are on the main /events page (not a specific year subpage)
+const isMainEventsPage = Astro.url.pathname.endsWith('/events') || Astro.url.pathname.endsWith('/events/');
+const breadcrumbs = isMainEventsPage ? [{ name: year, isCurrent: true }] : [];
+---
+
+<PageLayout metadata={{ title, description, breadcrumbs }}>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+      <div>
+        <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">{title}</h1>
+
+        <div class="flex flex-wrap gap-2">
+          {
+            allYears.map((y) => (
+              <a
+                href={`/events/${y}`}
+                aria-current={year === y ? 'page' : undefined}
+                class={`year-link px-3 py-1 rounded-md text-sm font-medium transition-colors ${
+                  year === y
+                    ? 'bg-blue-600 text-white shadow-sm'
+                    : 'bg-white border border-gray-300 text-gray-700 hover:bg-gray-50'
+                }`}
+              >
+                {y}
+              </a>
+            ))
+          }
+        </div>
+      </div>
+
+      <div class="w-full md:w-auto">
+        <label for="country-filter" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          Filtrera på land
+        </label>
+        <select
+          id="country-filter"
+          aria-label="Filtrera tävlingar efter land"
+          class="block w-full md:w-48 pl-3 pr-10 py-2 text-base border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-800 text-gray-900 dark:text-white focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md"
+        >
+          <option value="all">Alla länder ({yearEvents.length} tävlingar)</option>
+          {
+            uniqueCountries.map(({ code, name }) => (
+              <option value={code}>
+                {name} ({yearEvents.filter((e) => e.country === code).length})
+              </option>
+            ))
+          }
+        </select>
+      </div>
+    </div>
+
+    <div class="bg-white shadow rounded-lg overflow-hidden border border-gray-300">
+      <EventTable events={yearEvents} />
+      <div id="no-events-msg" class="hidden p-8 text-center text-gray-500">Inga tävlingar matchar filtret.</div>
+
+      <div
+        class="bg-gray-50 dark:bg-slate-800 px-4 py-3 border-t border-gray-300 dark:border-gray-700 text-sm text-gray-500 dark:text-gray-400 flex justify-between items-center bg-gray-50 text-xs text-gray-500"
+      >
+        <span id="event-count">Antal tävlingar: {yearEvents.length}</span>
+        <span>Uppdaterad: {lastUpdated}</span>
+      </div>
+    </div>
+
+    <div class="mt-8 text-center">
+      <p class="text-gray-500 text-sm">
+        Listan uppdateras automatiskt med hjälp av <a
+          href="https://github.com/blaudden/mtbo-scraper"
+          class="text-blue-600 hover:underline"
+          target="_blank">MTBO Scraper</a
+        >.
+      </p>
+    </div>
+  </div>
+</PageLayout>
+
+<script>
+  const filterSelect = document.getElementById('country-filter') as HTMLSelectElement;
+  const tableRows = document.querySelectorAll('tbody tr[data-country]');
+  const noEventsMsg = document.getElementById('no-events-msg');
+  const eventCountSpan = document.getElementById('event-count');
+
+  if (filterSelect) {
+    filterSelect.addEventListener('change', (e) => {
+      const selectedCountry = (e.target as HTMLSelectElement).value;
+      let visibleCount = 0;
+
+      tableRows.forEach((row) => {
+        const rowCountry = row.getAttribute('data-country');
+        // Simple match or "all"
+        if (selectedCountry === 'all' || rowCountry === selectedCountry) {
+          (row as HTMLElement).style.display = '';
+          visibleCount++;
+        } else {
+          (row as HTMLElement).style.display = 'none';
+        }
+      });
+
+      if (noEventsMsg) {
+        noEventsMsg.classList.toggle('hidden', visibleCount > 0);
+      }
+
+      if (eventCountSpan) {
+        eventCountSpan.textContent = `Antal tävlingar: ${visibleCount}`;
+      }
+    });
+  }
+</script>

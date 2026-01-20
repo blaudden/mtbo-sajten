@@ -14,7 +14,7 @@ npm run build
 npm run test:links
 ```
 
-Or run the **full test suite** (OG images, Meta, Hreflang + Links):
+Or run the **full test suite** (Unit, OG images, Meta, Hreflang, E2E):
 
 ```bash
 npm run test

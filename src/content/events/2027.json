@@ -1,0 +1,88 @@
+[
+  {
+    "id": "SWE-57010",
+    "name": "MTBO, Karlskrona SOK, lång",
+    "start_date": "2027-05-14",
+    "end_date": "2027-05-14",
+    "organizers": ["Karlskrona SOK"],
+    "country": "SWE",
+    "url": "/Events/Show/57010",
+    "region": "Blekinge",
+    "classification": "National event",
+    "distance": "Long",
+    "isCancelled": false,
+    "attributes": {
+      "Region": "Blekinge",
+      "Status": "approved",
+      "Event form": "individual",
+      "Event classification": "National event",
+      "Race distance": "Long",
+      "Time of event": "day",
+      "Discipline": "MTBO",
+      "Event attributes": ["Orientering Terräng", "Instruktör på plats"],
+      "Punching system": "Sportident"
+    }
+  },
+  {
+    "id": "SWE-57011",
+    "name": "MTBO, Karlskrona SOK, sprint",
+    "start_date": "2027-05-15",
+    "end_date": "2027-05-15",
+    "organizers": ["Karlskrona SOK"],
+    "country": "SWE",
+    "url": "/Events/Show/57011",
+    "region": "Blekinge",
+    "classification": "National event",
+    "distance": "Sprint",
+    "isCancelled": false,
+    "attributes": {
+      "Region": "Blekinge",
+      "Status": "approved",
+      "Event form": "individual",
+      "Event classification": "National event",
+      "Race distance": "Sprint",
+      "Time of event": "day",
+      "Discipline": "MTBO",
+      "Event attributes": ["Orientering Terräng", "Instruktör på plats"],
+      "Punching system": "Sportident"
+    }
+  },
+  {
+    "id": "IOF-8559",
+    "name": "CX80 World MTB Orienteering Championships 2027",
+    "start_date": "2027-06-09",
+    "end_date": "2027-06-09",
+    "organizers": ["Latvia"],
+    "country": "Latvia",
+    "url": "/Events/Show/8559",
+    "region": "",
+    "classification": "World Championships",
+    "distance": "",
+    "isCancelled": false,
+    "attributes": {
+      "Organising federation": "Latvia",
+      "Status": "approved",
+      "Discipline": "MTBO",
+      "Event type": "World Championships"
+    }
+  },
+  {
+    "id": "IOF-8560",
+    "name": "Junior World MTB Orienteering Championships 2027",
+    "start_date": "2027-06-09",
+    "end_date": "2027-06-09",
+    "organizers": ["Latvia"],
+    "country": "Latvia",
+    "url": "/Events/Show/8560",
+    "region": "",
+    "classification": "Junior World Championships",
+    "distance": "",
+    "isCancelled": false,
+    "attributes": {
+      "Organising federation": "Latvia",
+      "Status": "approved",
+      "Discipline": "MTBO",
+      "Event type": "Junior World Championships"
+    }
+  }
+]

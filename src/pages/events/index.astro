@@ -1,0 +1,14 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import EventPage from '../../components/events/EventPage.astro';
+
+const allCollectionEvents = await getCollection('events');
+// Sort years for consistency
+const allYears = allCollectionEvents.map((entry) => entry.id).sort();
+
+const year = '2026';
+const entry = await getEntry('events', year);
+const yearEvents = entry?.data || [];
+---
+
+<EventPage year={year} yearEvents={yearEvents} allYears={allYears} />

@@ -1,0 +1,60 @@
+---
+import countries from 'i18n-iso-countries';
+import en from 'i18n-iso-countries/langs/en.json';
+import sv from 'i18n-iso-countries/langs/sv.json';
+
+// Initialize the library with English and Swedish names
+countries.registerLocale(en);
+countries.registerLocale(sv);
+
+interface Props {
+  country: string | undefined;
+  className?: string;
+}
+
+const { country, className = 'w-[15px] h-auto shadow-sm' } = Astro.props;
+
+let code: string | undefined;
+let countryName = country;
+
+if (country) {
+  const input = country.trim();
+  
+  // 1. Check if it's already a 2-letter code
+  if (input.length === 2) {
+    code = input.toLowerCase();
+  } 
+  // 2. Try converting from 3-letter code
+  else if (input.length === 3) {
+    code = countries.alpha3ToAlpha2(input.toUpperCase())?.toLowerCase();
+  } 
+  // 3. Try converting from name (try Swedish first, then English)
+  else {
+    code = (countries.getAlpha2Code(input, 'sv') || countries.getAlpha2Code(input, 'en'))?.toLowerCase();
+  }
+
+  // Get localized name if we have a code
+  if (code) {
+    countryName = countries.getName(code.toUpperCase(), 'sv') || country;
+  }
+}
+
+const flagUrl = code ? `https://flagcdn.com/${code}.svg` : null;
+const altText = countryName ? `Flagga för ${countryName}` : 'Okänt land';
+---
+
+{
+  flagUrl ? (
+    <img 
+      src={flagUrl} 
+      class={className} 
+      alt={altText} 
+      title={countryName} 
+      aria-label={altText}
+    />
+  ) : (
+    <span class="text-sm grayscale opacity-50" title={country || 'Okänt land'} aria-hidden="true">
+      🏳️
+    </span>
+  )
+}
