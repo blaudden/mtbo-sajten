@@ -7,6 +7,7 @@ interface Props {
   rootTitle?: string;
   hideHomeIcon?: boolean;
   nonLinkableSegments?: string[];
+  extraItems?: Array<{ name: string; href?: string; isCurrent?: boolean }>;
 }
 
 const {
@@ -15,6 +16,7 @@ const {
   rootTitle = 'Home',
   hideHomeIcon = false,
   nonLinkableSegments = ['category', 'tag', 'en'],
+  extraItems = [],
 } = Astro.props;
 
 const currentPath = Astro.url.pathname;
@@ -58,6 +60,12 @@ const breadcrumbs = [
       isLinkable: !isCurrent && !nonLinkableSegments.includes(segment),
     };
   }),
+  ...extraItems.map((item) => ({
+    name: item.name,
+    href: item.href || '',
+    isCurrent: item.isCurrent || false,
+    isLinkable: !item.isCurrent && !!item.href,
+  })),
 ];
 ---
 

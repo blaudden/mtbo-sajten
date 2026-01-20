@@ -1,0 +1,23 @@
+---
+import { getCollection } from 'astro:content';
+import EventPage from '../../components/events/EventPage.astro';
+
+export async function getStaticPaths() {
+  const allCollectionEvents = await getCollection('events');
+  // Sort years for consistency
+  const allYears = allCollectionEvents.map((entry) => entry.id).sort();
+
+  return allCollectionEvents.map((entry) => ({
+    params: { year: entry.id },
+    props: {
+      yearEvents: entry.data,
+      allYears,
+    },
+  }));
+}
+
+const { year } = Astro.params;
+const { yearEvents, allYears } = Astro.props;
+---
+
+<EventPage year={year!} yearEvents={yearEvents} allYears={allYears} />

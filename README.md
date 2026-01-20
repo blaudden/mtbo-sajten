@@ -24,7 +24,8 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check`                  |
 | `npm run astro -- --help` | Get help using the Astro CLI                                      |
 | `npm run check`           | Run code quality checks (Astro, ESLint, Prettier)                 |
-| `npm run test`            | Run all verification tests (OG, Meta, Hreflang, Links)            |
+| `npm run test`            | Run all verification tests (Unit, OG, Meta, Hreflang, E2E)         |
+| `npm run test:e2e:ui`    | Open Playwright UI to run and debug E2E tests interactively       |
 | `npm run optimize-images` | Optimize large source images (>2MB) to prevent performance issues |
 | `npm run submit:indexnow` | Submit updated URLs to IndexNow (requires build first)            |
 

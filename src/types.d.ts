@@ -71,6 +71,7 @@ export interface MetaData {
   };
 
   langRelated?: Array<string>;
+  breadcrumbs?: Array<{ name: string; href?: string }>;
 }
 
 export interface MetaDataRobots {
