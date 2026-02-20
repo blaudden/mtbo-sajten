@@ -35,6 +35,10 @@ async function extractFrame(videoUrl: string, timestamp: string, outputPath: str
   });
 }
 
+function escapeForDoubleQuotedString(input: string): string {
+  return input.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
+}
+
 async function main() {
   const url = process.argv[2];
   if (!url) {
@@ -105,7 +109,7 @@ async function main() {
 
     // Create index.mdoc
     const mdocContent = `---
-title: "${title.replace(/"/g, '\\"')}"
+title: "${escapeForDoubleQuotedString(title)}"
 draft: true
 publishDate: ${publishDate || new Date().toISOString().split('T')[0]}
 excerpt: "REPLACE_WITH_SUMMARY"
@@ -115,7 +119,7 @@ author: "Magnus Blåudd"
 
 REPLACE_WITH_INTRO_TEXT
 
-{% YoutubeVideo videoid="${videoId}" title="${title.replace(/"/g, '\\"')}" /%}
+{% YoutubeVideo videoid="${videoId}" title="${escapeForDoubleQuotedString(title)}" /%}
 
 REPLACE_WITH_DESCRIPTION
 ${description ? `<!-- \nDescription from YouTube:\n${description}\n-->` : ''}
