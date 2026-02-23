@@ -62,14 +62,14 @@
     "@distube/ytdl-core": "^4.16.12",
     "@eslint/js": "^9.39.2",
     "@iconify-json/flat-color-icons": "^1.2.1",
-    "@iconify-json/tabler": "^1.2.26",
+    "@iconify-json/tabler": "^1.2.27",
     "@tailwindcss/typography": "^0.5.16",
     "@types/fluent-ffmpeg": "^2.1.28",
     "@types/js-yaml": "^4.0.9",
     "@types/lodash.merge": "^4.6.9",
     "@types/mdx": "^2.0.13",
-    "@typescript-eslint/eslint-plugin": "^8.55.0",
-    "@typescript-eslint/parser": "^8.55.0",
+    "@typescript-eslint/eslint-plugin": "^8.56.0",
+    "@typescript-eslint/parser": "^8.56.0",
     "astro-compress": "2.3.9",
     "astro-eslint-parser": "^1.3.0",
     "eslint": "^9.39.2",
@@ -83,11 +83,11 @@
     "prettier": "^3.8.1",
     "prettier-plugin-astro": "^0.14.1",
     "slugify": "^1.6.6",
-    "tailwind-merge": "^3.4.1",
+    "tailwind-merge": "^3.5.0",
     "tailwindcss": "^3.4.19",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.55.0"
+    "typescript-eslint": "^8.56.0"
   },
   "lint-staged": {
     "*.{js,mjs,ts,tsx,astro}": [
