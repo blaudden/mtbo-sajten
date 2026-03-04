@@ -39,8 +39,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 {/* Metricool tracker - supports SPA/ViewTransitions */}
 <script is:inline>
   document.addEventListener('astro:page-load', () => {
+    // Remove old metricool pixels to prevent DOM bloat and ensure fresh load
+    document.querySelectorAll('img[src*="tracker.metricool.com"]').forEach((el) => el.remove());
+
     const img = new Image();
-    img.src = 'https://tracker.metricool.com/c3po.jpg?hash=b810089353f6d4a2d9d3d7347d93e0fd';
+    // Add cache buster to ensure the pixel is actually requested on every page load
+    const cacheBuster = Date.now();
+    img.src = `https://tracker.metricool.com/c3po.jpg?hash=b810089353f6d4a2d9d3d7347d93e0fd&cb=${cacheBuster}`;
     img.width = 1;
     img.height = 1;
     img.style.position = 'absolute';
