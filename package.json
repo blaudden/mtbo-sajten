@@ -62,7 +62,7 @@
     "@distube/ytdl-core": "^4.16.12",
     "@eslint/js": "^10.0.1",
     "@iconify-json/flat-color-icons": "^1.2.1",
-    "@iconify-json/tabler": "^1.2.28",
+    "@iconify-json/tabler": "^1.2.30",
     "@tailwindcss/typography": "^0.5.16",
     "@types/fluent-ffmpeg": "^2.1.28",
     "@types/js-yaml": "^4.0.9",
