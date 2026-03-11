@@ -1,0 +1,93 @@
+---
+/**
+ * Single race row for the event listing table.
+ * Shows: date | flag | race name (linked) | organiser | discipline | external link
+ */
+import type { RaceWithEvent } from '~/types/events';
+import { formatRaceDate, getRaceDisplayName, getRaceTimeStatus } from '~/utils/events';
+import CountryFlag from './CountryFlag.astro';
+import DisciplineBadge from './DisciplineBadge.astro';
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+  race: RaceWithEvent;
+  isYearPage?: boolean;
+}
+
+const { race, isYearPage = false } = Astro.props;
+const { race: r, event, slug, countryCode, organiser, externalUrl } = race;
+const dateStr = formatRaceDate(r.datetimez, { includeTime: false });
+const raceName = getRaceDisplayName(r, event);
+const detailUrl = `/events/${slug}`;
+const isCanceled = event.status === 'Canceled';
+const timeStatus = getRaceTimeStatus(r.datetimez);
+
+let rowStyles = 'border-b border-gray-100 dark:border-gray-700/50 transition-colors';
+let titleStyles = 'text-sm transition-colors';
+let dateCellStyles = 'py-2 px-2 md:px-3 text-sm text-muted dark:text-slate-400 whitespace-nowrap';
+
+if (isCanceled) {
+  rowStyles += ' opacity-50 bg-gray-50/50 dark:bg-gray-800/20';
+  titleStyles += ' line-through text-muted dark:text-slate-500 hover:text-primary';
+} else if (timeStatus === 'past' && !isYearPage) {
+  rowStyles += ' opacity-70 hover:opacity-100 hover:bg-gray-50/50 dark:hover:bg-gray-800/30';
+  titleStyles += ' text-gray-600 dark:text-slate-400 font-medium hover:text-primary';
+} else if (timeStatus === 'current-week') {
+  rowStyles +=
+    ' bg-blue-50/80 dark:bg-blue-900/40 hover:bg-blue-100/50 dark:hover:bg-blue-800/60 relative group shadow-sm';
+  titleStyles += ' text-gray-900 dark:text-white font-medium hover:text-primary';
+  dateCellStyles += ' border-l-4 border-primary';
+} else {
+  rowStyles += ' hover:bg-gray-50/50 dark:hover:bg-gray-800/30';
+  titleStyles += ' text-gray-900 dark:text-white font-medium hover:text-primary';
+}
+---
+
+<tr class={rowStyles} data-country={countryCode} data-featured={race.isFeatured ? 'true' : 'false'}>
+  {/* Date */}
+  <td class={dateCellStyles}>
+    {dateStr}
+  </td>
+
+  {/* Country flag */}
+  <td class="py-2 px-1 md:px-2 text-center">
+    <CountryFlag countryCode={countryCode} />
+  </td>
+
+  {/* Race name (linked to detail) */}
+  <td class="py-2 px-2 md:px-3">
+    <div class="flex items-center gap-2">
+      <a href={detailUrl} class={titleStyles}>
+        {raceName}
+      </a>
+      {isCanceled && <span class="ml-2 text-xs text-red-500 font-medium uppercase">Inställd</span>}
+    </div>
+  </td>
+
+  {/* Organiser */}
+  <td class="py-2 px-2 md:px-3 text-sm text-muted dark:text-slate-400 hidden md:table-cell">
+    {organiser}
+  </td>
+
+  {/* Discipline */}
+  <td class="py-2 px-2 md:px-3 text-center">
+    <DisciplineBadge discipline={r.discipline} />
+  </td>
+
+  {/* External link */}
+  <td class="py-2 px-1 md:px-2 text-center">
+    {
+      externalUrl && (
+        <a
+          href={externalUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-gray-300 hover:text-gray-500 dark:text-gray-600 dark:hover:text-gray-400 transition-colors"
+          title="Visa på Eventor"
+        >
+          <Icon name="tabler:external-link" class="w-4 h-4 inline-block" />
+        </a>
+      )
+    }
+  </td>
+</tr>

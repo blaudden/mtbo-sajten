@@ -1,0 +1,49 @@
+name: Import MTBO Events
+
+on:
+  repository_dispatch:
+    types: [scraper-update]
+  workflow_dispatch:
+
+jobs:
+  import-events:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout mtbo-sajten
+        uses: actions/checkout@v4
+
+      - name: Checkout mtbo-scraper
+        uses: actions/checkout@v4
+        with:
+          repository: blaudden/mtbo-scraper
+          path: _scraper
+          sparse-checkout: data/events
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Import event data
+        run: node scripts/import-events.mjs --scraper-path _scraper
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet src/data/events/; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/events/
+          git commit -m "chore: update MTBO event data from scraper"
+          git push
