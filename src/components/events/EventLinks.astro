@@ -1,0 +1,66 @@
+---
+/**
+ * Links section for event detail page.
+ */
+import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import { resolveRelativeUrl } from '~/utils/events';
+import type { ScraperEvent } from '~/types/events';
+
+import liveloxIcon from '~/assets/images/livelox-icon.png';
+import eventorSweIcon from '~/assets/images/eventor-swe.png';
+import eventorIofIcon from '~/assets/images/eventor-iof.png';
+import eventorNorIcon from '~/assets/images/eventor-nor.png';
+
+import { getSmartIconInfo } from '~/utils/events';
+
+interface Props {
+  event: ScraperEvent;
+}
+
+const { event } = Astro.props;
+
+// URLs that are not Path type (those are used for external link)
+const relatedUrls = (event.urls || []).filter((u) => u.type !== 'Path');
+---
+
+{
+  relatedUrls.length > 0 && (
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-4 dark:text-white">Länkar</h2>
+      <ul class="space-y-2">
+        {relatedUrls.map((url) => {
+          const resolvedUrl = resolveRelativeUrl(url.url, event);
+          const iconInfo = getSmartIconInfo(resolvedUrl, url.title || url.type, url.type);
+
+          let iconImage: ImageMetadata | undefined;
+          if (iconInfo.type === 'image') {
+            if (iconInfo.source === 'livelox') iconImage = liveloxIcon;
+            else if (iconInfo.source === 'eventor-swe') iconImage = eventorSweIcon;
+            else if (iconInfo.source === 'eventor-iof') iconImage = eventorIofIcon;
+            else if (iconInfo.source === 'eventor-nor') iconImage = eventorNorIcon;
+          }
+
+          return (
+            <li>
+              <a
+                href={resolvedUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 text-sm text-primary hover:underline"
+              >
+                {iconInfo.type === 'image' && iconImage ? (
+                  <Image src={iconImage as ImageMetadata} alt="" class="w-4 h-4 object-contain" />
+                ) : (
+                  <Icon name={iconInfo.name || 'tabler:link'} class="w-4 h-4" />
+                )}
+                {url.title || url.type}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  )
+}

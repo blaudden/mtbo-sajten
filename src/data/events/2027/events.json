@@ -1,0 +1,775 @@
+{
+  "schema_version": "2.0",
+  "meta": {
+    "sources": [
+      {
+        "country_code": "SWE",
+        "name": "Swedish Eventor",
+        "url": "https://eventor.orientering.se"
+      },
+      {
+        "country_code": "IOF",
+        "name": "IOF Eventor",
+        "url": "https://eventor.orienteering.org"
+      },
+      {
+        "country_code": "NOR",
+        "name": "Norwegian Eventor",
+        "url": "https://eventor.orientering.no"
+      },
+      {
+        "country_code": "MAN",
+        "name": "Manual Events",
+        "url": ""
+      }
+    ]
+  },
+  "events": [
+    {
+      "id": "IOF_8559",
+      "name": "CX80 World MTB Orienteering Championships 2027",
+      "start_time": "2027-06-09",
+      "end_time": "2027-06-09",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "World Championships"
+      ],
+      "tags": [],
+      "form": null,
+      "organisers": [
+        {
+          "name": "Latvia",
+          "country_code": "LVA"
+        }
+      ],
+      "officials": [],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/8559",
+          "title": null,
+          "last_updated_at": "2026-02-07T19:49:12.021127+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": null,
+      "punching_system": null,
+      "races": [
+        {
+          "race_number": 1,
+          "name": "CX80 World MTB Orienteering Championships 2027",
+          "datetimez": "2027-06-09T21:00:00+00:00",
+          "discipline": "Other",
+          "night_or_day": null,
+          "position": {
+            "lat": 56.8463782183206,
+            "lng": 26.2146425045767
+          },
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "IOF_8560",
+      "name": "Junior World MTB Orienteering Championships 2027",
+      "start_time": "2027-06-09",
+      "end_time": "2027-06-09",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Junior World Championships"
+      ],
+      "tags": [],
+      "form": null,
+      "organisers": [
+        {
+          "name": "Latvia",
+          "country_code": "LVA"
+        }
+      ],
+      "officials": [],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/8560",
+          "title": null,
+          "last_updated_at": "2026-02-07T19:49:12.021116+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": null,
+      "punching_system": null,
+      "races": [
+        {
+          "race_number": 1,
+          "name": "Junior World MTB Orienteering Championships 2027",
+          "datetimez": "2027-06-09T22:00:00+00:00",
+          "discipline": "Other",
+          "night_or_day": null,
+          "position": {
+            "lat": 56.8485623018012,
+            "lng": 26.2249666205231
+          },
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "IOF_8961",
+      "name": "(Preliminary Dates) - European MTB Orienteering Championships 2027",
+      "start_time": "2027-05-06",
+      "end_time": "2027-05-09",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Regional Championships",
+        "World Cup",
+        "World Ranking Event"
+      ],
+      "tags": [],
+      "form": null,
+      "organisers": [
+        {
+          "name": "Czechia",
+          "country_code": "CZE"
+        },
+        {
+          "name": "MTBO Hradec Kralove",
+          "country_code": "CZE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact email",
+          "name": "enc:BBoEAG0WDgYDHwZAXUZVQU4J"
+        },
+        {
+          "role": "Event director",
+          "name": "Lukas Chmelar"
+        },
+        {
+          "role": "Event controller",
+          "name": "Milan Meier"
+        },
+        {
+          "role": "Course controller",
+          "name": "Jiri Putik"
+        }
+      ],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/8961",
+          "title": null,
+          "last_updated_at": "2026-02-07T19:49:12.021094+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "type": "EmbargoMap",
+          "title": "Embargoed areas",
+          "url": "https://www.google.com/maps/d/viewer?mid=1onFzsYE2YyYt0eIyf3M2yXPX80M_HKI&usp=sharing",
+          "published_time": null
+        }
+      ],
+      "information": null,
+      "region": null,
+      "punching_system": null,
+      "races": [
+        {
+          "race_number": 1,
+          "name": "Sprint",
+          "datetimez": "2027-05-06T10:00:00+02:00",
+          "discipline": "Sprint",
+          "night_or_day": null,
+          "position": {
+            "lat": 50.2031462924644,
+            "lng": 15.8950961485978
+          },
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        },
+        {
+          "race_number": 2,
+          "name": "Middle",
+          "datetimez": "2027-05-07T10:00:00+02:00",
+          "discipline": "Middle",
+          "night_or_day": null,
+          "position": null,
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        },
+        {
+          "race_number": 3,
+          "name": "Long",
+          "datetimez": "2027-05-08T10:00:00+02:00",
+          "discipline": "Long",
+          "night_or_day": null,
+          "position": null,
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        },
+        {
+          "race_number": 4,
+          "name": "Relay",
+          "datetimez": "2027-05-09T10:00:00+02:00",
+          "discipline": "Relay",
+          "night_or_day": null,
+          "position": null,
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "IOF_8962",
+      "name": "(Preliminary Dates) - European Junior and Youth MTB Orienteering Championships 2027",
+      "start_time": "2027-05-03",
+      "end_time": "2027-05-03",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Regional Championships"
+      ],
+      "tags": [],
+      "form": null,
+      "organisers": [
+        {
+          "name": "Czechia",
+          "country_code": "CZE"
+        },
+        {
+          "name": "MTBO Hradec Kralove",
+          "country_code": "CZE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Lukas Chmelar"
+        },
+        {
+          "role": "Event director",
+          "name": "Lukas Chmelar"
+        },
+        {
+          "role": "Event controller",
+          "name": "Milan Meier"
+        },
+        {
+          "role": "Course controller",
+          "name": "Jiri Putik"
+        }
+      ],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/8962",
+          "title": null,
+          "last_updated_at": "2026-02-07T19:49:12.021105+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "type": "EmbargoMap",
+          "title": "Embargoed areas",
+          "url": "https://www.google.com/maps/d/viewer?mid=1onFzsYE2YyYt0eIyf3M2yXPX80M_HKI&usp=sharing",
+          "published_time": null
+        }
+      ],
+      "information": null,
+      "region": null,
+      "punching_system": null,
+      "races": [
+        {
+          "race_number": 1,
+          "name": "(Preliminary Dates) - European Junior and Youth MTB Orienteering Championships 2027",
+          "datetimez": "2027-05-03T22:00:00+00:00",
+          "discipline": "Other",
+          "night_or_day": null,
+          "position": {
+            "lat": 50.2031705356206,
+            "lng": 15.8952634107946
+          },
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "IOF_8963",
+      "name": "MTB Orienteering World Cup round 3 and U23 World MTB Orienteering Championships 2027",
+      "start_time": "2027-09-23",
+      "end_time": "2027-09-25",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "World Cup",
+        "World Ranking Event"
+      ],
+      "tags": [],
+      "form": null,
+      "organisers": [
+        {
+          "name": "Portugal",
+          "country_code": "PRT"
+        }
+      ],
+      "officials": [],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/8963",
+          "title": null,
+          "last_updated_at": "2026-02-07T19:49:12.021083+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": null,
+      "punching_system": null,
+      "races": [
+        {
+          "race_number": 1,
+          "name": "Middle",
+          "datetimez": "2027-09-23T09:00:00+01:00",
+          "discipline": "Middle",
+          "night_or_day": null,
+          "position": {
+            "lat": 38.0147445418679,
+            "lng": -8.69490295144451
+          },
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        },
+        {
+          "race_number": 2,
+          "name": "Mass start",
+          "datetimez": "2027-09-24T09:00:00+01:00",
+          "discipline": "Mass start",
+          "night_or_day": null,
+          "position": null,
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        },
+        {
+          "race_number": 3,
+          "name": "Sprint",
+          "datetimez": "2027-09-25T09:00:00+01:00",
+          "discipline": "Sprint",
+          "night_or_day": null,
+          "position": null,
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "IOF_8972",
+      "name": "World Masters MTB Orienteering Championships 2027",
+      "start_time": "2027-09-22",
+      "end_time": "2027-09-25",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "World Masters"
+      ],
+      "tags": [],
+      "form": null,
+      "organisers": [
+        {
+          "name": "Portugal",
+          "country_code": "PRT"
+        }
+      ],
+      "officials": [],
+      "classes": [
+        "M35",
+        "M40",
+        "M45",
+        "M50",
+        "M55",
+        "M60",
+        "M65",
+        "M70",
+        "M75",
+        "M80",
+        "M85",
+        "W35",
+        "W40",
+        "W45",
+        "W50",
+        "W55",
+        "W60",
+        "W65",
+        "W70",
+        "W75",
+        "W80",
+        "W85"
+      ],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/8972",
+          "title": null,
+          "last_updated_at": "2026-02-11T17:44:13.739229+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": null,
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "Mass start",
+          "datetimez": "2027-09-22T10:00:00+01:00",
+          "discipline": "Mass start",
+          "night_or_day": "day",
+          "position": null,
+          "areas": [],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Entry?eventId=8972",
+              "title": "Enter",
+              "last_updated_at": "2026-02-11T17:44:13.739235+00:00"
+            }
+          ],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        },
+        {
+          "race_number": 2,
+          "name": "Middle",
+          "datetimez": "2027-09-23T10:00:00+01:00",
+          "discipline": "Middle",
+          "night_or_day": "day",
+          "position": null,
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        },
+        {
+          "race_number": 3,
+          "name": "Long",
+          "datetimez": "2027-09-24T10:00:00+01:00",
+          "discipline": "Long",
+          "night_or_day": "day",
+          "position": null,
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        },
+        {
+          "race_number": 4,
+          "name": "Sprint",
+          "datetimez": "2027-09-25T10:00:00+01:00",
+          "discipline": "Sprint",
+          "night_or_day": "day",
+          "position": null,
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_57010",
+      "name": "MTBO, Karlskrona SOK, lång",
+      "start_time": "2027-05-15",
+      "end_time": "2027-05-15",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "National"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "Karlskrona SOK",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Linda Allwood"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:AR0MC0wsAh4NBwodCTQKAFkeAhsNXgYdAA=="
+        },
+        {
+          "role": "Event controller",
+          "name": "Cecilia Lingerud"
+        }
+      ],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/57010",
+          "title": null,
+          "last_updated_at": "2026-02-07T19:49:12.021065+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": "Blekinge",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "MTBO, Karlskrona SOK, lång",
+          "datetimez": "2027-05-15T00:00:00+02:00",
+          "discipline": "Long",
+          "night_or_day": "day",
+          "position": {
+            "lat": 56.2657169826291,
+            "lng": 15.6149426491327
+          },
+          "areas": [
+            {
+              "lat": 56.2657169826291,
+              "lng": 15.6149426491327,
+              "polygon": [
+                [
+                  56.271855791954096,
+                  15.620092490441294
+                ],
+                [
+                  56.2649988160731,
+                  15.616109944400504
+                ],
+                [
+                  56.26339719630673,
+                  15.603201009377495
+                ],
+                [
+                  56.27338716451746,
+                  15.58850679446257
+                ],
+                [
+                  56.28909130453431,
+                  15.582464313208007
+                ],
+                [
+                  56.29175884242372,
+                  15.600179770714714
+                ],
+                [
+                  56.28505153384654,
+                  15.61013612795865
+                ],
+                [
+                  56.271855791954096,
+                  15.620092490441294
+                ]
+              ]
+            }
+          ],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_57011",
+      "name": "MTBO, Karlskrona SOK, sprint",
+      "start_time": "2027-05-16",
+      "end_time": "2027-05-16",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "National"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "Karlskrona SOK",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Linda Allwood"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:AR0MC0wsAh4NBwodCTQKAFkeAhsNXgYdAA=="
+        },
+        {
+          "role": "Event controller",
+          "name": "Cecilia Lingerud"
+        }
+      ],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/57011",
+          "title": null,
+          "last_updated_at": "2026-02-07T19:49:12.021039+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": "Blekinge",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "MTBO, Karlskrona SOK, sprint",
+          "datetimez": "2027-05-16T00:00:00+02:00",
+          "discipline": "Sprint",
+          "night_or_day": "day",
+          "position": {
+            "lat": 56.2674170056621,
+            "lng": 15.6154543524564
+          },
+          "areas": [
+            {
+              "lat": 56.2674170056621,
+              "lng": 15.6154543524564,
+              "polygon": [
+                [
+                  56.270181375627345,
+                  15.612467445545175
+                ],
+                [
+                  56.273650854449215,
+                  15.621496833710973
+                ],
+                [
+                  56.270333887014885,
+                  15.625239052252418
+                ],
+                [
+                  56.25670079985417,
+                  15.635264075618759
+                ],
+                [
+                  56.25073122021064,
+                  15.62338510885747
+                ],
+                [
+                  56.25361122909612,
+                  15.615076696641331
+                ],
+                [
+                  56.26017150085303,
+                  15.60779825399658
+                ],
+                [
+                  56.26968571114594,
+                  15.602682745094333
+                ],
+                [
+                  56.270181375627345,
+                  15.612467445545175
+                ]
+              ]
+            }
+          ],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    }
+  ]
+}

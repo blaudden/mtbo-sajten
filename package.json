@@ -28,6 +28,7 @@
     "optimize-images": "node scripts/optimize-images.mjs",
     "validate:images": "node scripts/validate-images.mjs",
     "submit:indexnow": "node scripts/submit-indexnow.js",
+    "import:events": "node scripts/import-events.mjs",
     "fetch-youtube": "tsx scripts/fetch-youtube.ts",
     "prepare": "husky"
   },
