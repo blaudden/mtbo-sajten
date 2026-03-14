@@ -1,0 +1,155 @@
+---
+/**
+ * Full race listing with responsive table (desktop) and card layout (mobile).
+ * Optionally shows country filter buttons.
+ */
+import type { RaceWithEvent } from '~/types/events';
+import { getCountriesFromRaces, formatRaceDate, getRaceDisplayName, getRaceTimeStatus } from '~/utils/events';
+import EventRaceRow from './EventRaceRow.astro';
+import EventCountryFilter from './EventCountryFilter.astro';
+import CountryFlag from './CountryFlag.astro';
+import DisciplineBadge from './DisciplineBadge.astro';
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+  races: RaceWithEvent[];
+  showCountryFilter?: boolean;
+  title?: string;
+  subtitle?: string;
+  isYearPage?: boolean;
+}
+
+const { races, showCountryFilter = false, title, subtitle, isYearPage = false } = Astro.props;
+const countries = showCountryFilter ? getCountriesFromRaces(races) : [];
+const hasFeatured = races.some((r) => r.isFeatured);
+---
+
+<div class="event-race-listing">
+  {
+    title && (
+      <div class="mb-4">
+        <h2 class="text-2xl md:text-3xl font-bold tracking-tight dark:text-white">{title}</h2>
+      </div>
+    )
+  }
+
+  {/* Race count and date range */}
+  <p class="text-sm text-muted dark:text-slate-400 mb-4">
+    <span class="event-count">{races.length} tävling{races.length === 1 ? '' : 'ar'}</span>
+    {subtitle && <span class="ml-1"> • {subtitle}</span>}
+  </p>
+
+  {/* Country filter */}
+  {showCountryFilter && countries.length > 1 && <EventCountryFilter countries={countries} hasFeatured={hasFeatured} />}
+
+  {
+    races.length === 0 ? (
+      <div class="text-center py-12 text-muted dark:text-slate-400">
+        <Icon name="tabler:calendar-off" class="w-12 h-12 mx-auto mb-3 opacity-40" />
+        <p class="text-lg">Inga tävlingar hittades</p>
+      </div>
+    ) : (
+      <>
+        {/* Desktop table */}
+        <div class="hidden md:block overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="border-b-2 border-gray-200 dark:border-gray-600">
+                <th class="w-28 py-2 px-3 text-xs font-semibold uppercase tracking-wider text-muted dark:text-slate-400">
+                  Datum
+                </th>
+                <th class="w-10 py-2 px-2 text-xs font-semibold uppercase tracking-wider text-muted dark:text-slate-400 text-center">
+                  &nbsp;
+                </th>
+                <th class="py-2 px-3 text-xs font-semibold uppercase tracking-wider text-muted dark:text-slate-400">
+                  Tävling
+                </th>
+                <th class="hidden md:table-cell w-1/4 py-2 px-3 text-xs font-semibold uppercase tracking-wider text-muted dark:text-slate-400">
+                  Arrangör
+                </th>
+                <th class="w-16 py-2 px-3 text-xs font-semibold uppercase tracking-wider text-muted dark:text-slate-400 text-center">
+                  Dist.
+                </th>
+                <th class="w-10 py-2 px-2 text-xs font-semibold uppercase tracking-wider text-muted dark:text-slate-400 text-center">
+                  &nbsp;
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {races.map((race) => (
+                <EventRaceRow race={race} isYearPage={isYearPage} />
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {/* Mobile card layout */}
+        <div class="md:hidden space-y-3">
+          {races.map((race) => {
+            const { race: r, event, slug, countryCode, organiser, externalUrl } = race;
+            const dateStr = formatRaceDate(r.datetimez, { includeTime: false });
+            const raceName = getRaceDisplayName(r, event);
+            const detailUrl = `/events/${slug}`;
+            const isCanceled = event.status === 'Canceled';
+            const timeStatus = getRaceTimeStatus(r.datetimez);
+
+            let cardStyles = '';
+            let titleStyles: string;
+
+            if (isCanceled) {
+              cardStyles = 'opacity-50 grayscale';
+              titleStyles = 'line-through text-muted';
+            } else if (timeStatus === 'current-week') {
+              cardStyles = 'bg-blue-50/80 dark:bg-blue-900/20 border-l-4 border-l-primary shadow-sm';
+              titleStyles = 'text-gray-900 dark:text-white font-medium';
+            } else if (timeStatus === 'past' && !isYearPage) {
+              cardStyles = 'opacity-70 hover:opacity-100';
+              titleStyles = 'text-gray-600 dark:text-slate-400';
+            } else {
+              titleStyles = 'text-gray-900 dark:text-white font-medium';
+            }
+
+            return (
+              <div
+                class={`event-race-card border border-gray-100 dark:border-gray-700/50 rounded-lg p-4 hover:shadow-md transition-shadow ${cardStyles}`}
+                data-country={countryCode}
+                data-featured={race.isFeatured ? 'true' : 'false'}
+              >
+                <div class="flex items-start justify-between gap-2">
+                  <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-2 mb-1">
+                      <CountryFlag countryCode={countryCode} />
+                      <DisciplineBadge discipline={r.discipline} />
+                      {isCanceled && <span class="text-xs text-red-500 font-medium uppercase">Inställd</span>}
+                    </div>
+                    <a
+                      href={detailUrl}
+                      class={`block text-sm font-medium hover:text-primary transition-colors truncate ${titleStyles}`}
+                    >
+                      {raceName}
+                    </a>
+                    <div class="text-xs text-muted dark:text-slate-400 mt-1">
+                      {dateStr}
+                      {organiser && <span class="ml-2">· {organiser}</span>}
+                    </div>
+                  </div>
+                  {externalUrl && (
+                    <a
+                      href={externalUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-gray-300 hover:text-gray-500 dark:text-gray-600 dark:hover:text-gray-400 flex-shrink-0 mt-1"
+                      title="Visa på Eventor"
+                    >
+                      <Icon name="tabler:external-link" class="w-4 h-4" />
+                    </a>
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </>
+    )
+  }
+</div>

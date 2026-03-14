@@ -1,0 +1,79 @@
+---
+/**
+ * Race table for the event detail page.
+ */
+import type { ScraperEvent } from '~/types/events';
+import { formatRaceDate } from '~/utils/events';
+import DisciplineBadge from './DisciplineBadge.astro';
+import { getEventSource } from '~/utils/events';
+
+interface Props {
+  event: ScraperEvent;
+}
+
+const { event } = Astro.props;
+const isIOF = getEventSource(event) === 'IOF';
+const raceCount = event.races.length;
+const raceTypePlural = isIOF ? 'Tävlingar' : 'Etapper';
+const raceTypeSingular = isIOF ? 'Tävling' : 'Etapp';
+const raceHeadingText = raceCount === 1 ? raceTypeSingular : `${raceTypePlural} (${raceCount})`;
+---
+
+{
+  raceCount > 1 && (
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-4 dark:text-white">{raceHeadingText}</h2>
+
+      {/* Desktop table */}
+      <div class="hidden md:block overflow-x-auto">
+        <table class="w-full text-left">
+          <thead>
+            <tr class="border-b-2 border-gray-200 dark:border-gray-600">
+              <th class="py-2 px-3 text-xs font-semibold uppercase tracking-wider text-muted dark:text-slate-400">#</th>
+              <th class="py-2 px-3 text-xs font-semibold uppercase tracking-wider text-muted dark:text-slate-400">
+                Datum
+              </th>
+              <th class="py-2 px-3 text-xs font-semibold uppercase tracking-wider text-muted dark:text-slate-400">
+                {raceTypeSingular}
+              </th>
+              <th class="py-2 px-3 text-xs font-semibold uppercase tracking-wider text-muted dark:text-slate-400 text-center">
+                Distans
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {event.races.map((race) => (
+              <tr class="border-b border-gray-100 dark:border-gray-700/50">
+                <td class="py-2 px-3 text-sm text-muted dark:text-slate-400">{race.race_number}</td>
+                <td class="py-2 px-3 text-sm text-muted dark:text-slate-400 whitespace-nowrap">
+                  {formatRaceDate(race.datetimez, { includeYear: false })}
+                </td>
+                <td class="py-2 px-3 text-sm text-gray-900 dark:text-white font-medium">{race.name || event.name}</td>
+                <td class="py-2 px-3 text-center">
+                  <DisciplineBadge discipline={race.discipline} />
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      {/* Mobile race cards */}
+      <div class="md:hidden space-y-2">
+        {event.races.map((race) => (
+          <div class="border border-gray-100 dark:border-gray-700/50 rounded-lg p-3">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-sm font-medium dark:text-white">{race.name || event.name}</p>
+                <p class="text-xs text-muted dark:text-slate-400 mt-0.5">
+                  {formatRaceDate(race.datetimez, { includeYear: false })}
+                </p>
+              </div>
+              <DisciplineBadge discipline={race.discipline} />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}

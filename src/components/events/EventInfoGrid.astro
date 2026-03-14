@@ -1,0 +1,57 @@
+---
+/**
+ * Information grid for event metadata.
+ * Shows date range, organiser, region, and punching system.
+ */
+import { Icon } from 'astro-icon/components';
+import { translateDiscipline } from '~/utils/events';
+
+interface Props {
+  dateRange: string;
+  organiserName?: string;
+  region?: string;
+  punchingSystem?: string;
+  discipline?: string;
+}
+
+const { dateRange, organiserName, region, punchingSystem, discipline } = Astro.props;
+---
+
+<div class="flex flex-col md:flex-row md:items-center gap-x-4 gap-y-2 text-sm text-muted dark:text-slate-400">
+  <span class="flex items-center gap-1.5">
+    <Icon name="tabler:calendar" class="w-4 h-4" />
+    {dateRange}
+  </span>
+  {
+    organiserName && (
+      <span class="flex items-center gap-1.5">
+        <Icon name="tabler:users" class="w-4 h-4" />
+        {organiserName}
+      </span>
+    )
+  }
+  {
+    region && (
+      <span class="flex items-center gap-1.5">
+        <Icon name="tabler:map-pin" class="w-4 h-4" />
+        {region.replace(/\\n/g, ', ')}
+      </span>
+    )
+  }
+  {
+    punchingSystem && (
+      <span class="flex items-center gap-1.5">
+        <Icon name="tabler:device-watch" class="w-4 h-4" />
+        {punchingSystem}
+      </span>
+    )
+  }
+  {
+    discipline && (
+      <span class="flex items-center gap-1.5 font-medium">
+        <Icon name="tabler:bike" class="w-4 h-4" />
+        {translateDiscipline(discipline)}
+      </span>
+    )
+  }
+</div>
