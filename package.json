@@ -45,7 +45,7 @@
     "@types/leaflet": "^1.9.21",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "astro": "^5.18.1",
+    "astro": "^6.0.0",
     "astro-embed": "^0.12.0",
     "astro-icon": "^1.1.5",
     "leaflet": "^1.9.4",
