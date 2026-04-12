@@ -8,22 +8,25 @@ updates:
       day: "monday"
       time: "09:00"
       timezone: "Europe/Stockholm"
-    # Reduce noise by limiting open PRs
-    open-pull-requests-limit: 5
-    # Group updates by type
+    # Limit open PRs to 2 (one for minor/patch group, one for major group)
+    open-pull-requests-limit: 2
+
+    # Group updates intelligently by severity
     groups:
-      # Group all non-major development dependencies together
-      development-dependencies:
-        dependency-type: "development"
+      # Group 1: All safe minor and patch operations into one single PR
+      all-npm-minor-patch:
+        patterns:
+          - "*"
         update-types:
           - "minor"
           - "patch"
-      # Group all non-major production dependencies together
-      production-dependencies:
-        dependency-type: "production"
+          
+      # Group 2: All major upgrades into a single separate PR (acts as a warning radar)
+      all-npm-major:
+        patterns:
+          - "*"
         update-types:
-          - "minor"
-          - "patch"
+          - "major"
     # Add labels for easy filtering
     labels:
       - "dependencies"
@@ -47,7 +50,11 @@ updates:
       day: "monday"
       time: "09:00"
       timezone: "Europe/Stockholm"
-    open-pull-requests-limit: 3
+    open-pull-requests-limit: 1
+    groups:
+      all-actions:
+        patterns:
+          - "*"
     labels:
       - "dependencies"
       - "github-actions"
