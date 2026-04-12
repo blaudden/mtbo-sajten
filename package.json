@@ -70,7 +70,7 @@
     "@types/mdx": "^2.0.13",
     "@typescript-eslint/eslint-plugin": "^8.56.1",
     "@typescript-eslint/parser": "^8.56.1",
-    "astro-compress": "2.3.9",
+    "astro-compress": "^2.4.1",
     "astro-eslint-parser": "^1.4.0",
     "eslint": "^9.39.4",
     "eslint-plugin-astro": "^1.7.0",
