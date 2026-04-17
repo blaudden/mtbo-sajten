@@ -1,0 +1,128 @@
+---
+/**
+ * Country filter buttons for client-side race filtering.
+ * Uses vanilla JS to toggle visibility of race rows by data-country attribute.
+ */
+import { countryCodeToFlag } from '~/utils/events';
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+  countries: string[];
+  hasFeatured?: boolean;
+}
+
+const { countries, hasFeatured = false } = Astro.props;
+const hasSweden = countries.includes('SWE');
+---
+
+<div
+  class="event-country-filter flex items-center gap-1 mb-6 bg-gray-100/50 dark:bg-gray-800/50 p-1 rounded-lg w-fit"
+  role="group"
+  aria-label="Filtrera tävlingar"
+>
+  {
+    hasFeatured && (
+      <button
+        class="filter-btn active px-4 py-1.5 text-sm font-medium rounded-md transition-all flex items-center"
+        data-filter-type="featured"
+        type="button"
+      >
+        <Icon name="tabler:star-filled" class="w-4 h-4 text-orange-400 mr-1.5" />
+        <span>Rekommenderade</span>
+      </button>
+    )
+  }
+  <button
+    class={`filter-btn ${!hasFeatured ? 'active' : ''} px-4 py-1.5 text-sm font-medium rounded-md transition-all flex items-center`}
+    data-filter-type="all"
+    type="button"
+  >
+    <span>Alla</span>
+  </button>
+  {
+    hasSweden && (
+      <button
+        class="filter-btn px-4 py-1.5 text-sm font-medium rounded-md transition-all flex items-center"
+        data-filter-type="country"
+        data-filter-value="SWE"
+        type="button"
+      >
+        <span aria-hidden="true">{countryCodeToFlag('SWE')}</span>
+        <span class="ml-1.5">Sverige</span>
+      </button>
+    )
+  }
+</div>
+
+<style>
+  .filter-btn {
+    @apply text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white;
+  }
+  .filter-btn.active {
+    @apply bg-white dark:bg-gray-700 text-primary dark:text-white shadow-sm;
+  }
+</style>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const filterContainer = document.querySelector('.event-country-filter');
+    if (!filterContainer) return;
+
+    const buttons = filterContainer.querySelectorAll<HTMLButtonElement>('.filter-btn');
+    const rows = document.querySelectorAll<HTMLTableRowElement>('tr[data-country]');
+    const cards = document.querySelectorAll<HTMLElement>('.event-race-card[data-country]');
+
+    // Run initial filter to set correct counter for 'featured'
+    const applyFilter = (btn: HTMLButtonElement) => {
+      const filterType = btn.dataset.filterType;
+      const filterValue = btn.dataset.filterValue;
+
+      // Update button styles
+      buttons.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Filter items
+      const filterItem = (item: HTMLElement) => {
+        let shouldShow = false;
+
+        if (filterType === 'all') {
+          shouldShow = true;
+        } else if (filterType === 'featured') {
+          shouldShow = item.dataset.featured === 'true';
+        } else if (filterType === 'country') {
+          shouldShow = item.dataset.country === filterValue;
+        }
+
+        if (shouldShow) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      };
+
+      rows.forEach(filterItem);
+      cards.forEach(filterItem);
+
+      // Update counter
+      const counter = document.querySelector('.event-count');
+      if (counter) {
+        const visibleRows = document.querySelectorAll('tr[data-country]:not(.hidden)');
+        const visibleCards = document.querySelectorAll('.event-race-card[data-country]:not(.hidden)');
+        // Count either rows or cards depending on what's currently rendered/visible
+        // Since one is hidden on mobile and the other on desktop, we take Math.max
+        const count = Math.max(visibleRows.length, visibleCards.length);
+        counter.textContent = `${count} tävling${count === 1 ? '' : 'ar'}`;
+      }
+    };
+
+    // Apply initial filter (which is active by default in HTML)
+    const initialActive = Array.from(buttons).find((b) => b.classList.contains('active'));
+    if (initialActive) {
+      applyFilter(initialActive);
+    }
+
+    buttons.forEach((btn) => {
+      btn.addEventListener('click', () => applyFilter(btn));
+    });
+  });
+</script>

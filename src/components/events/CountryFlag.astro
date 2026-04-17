@@ -1,0 +1,22 @@
+---
+/**
+ * Renders a country flag emoji from a 3-letter ISO country code.
+ */
+import { countryCodeToFlag, countryCodeToName } from '~/utils/events';
+
+interface Props {
+  countryCode: string;
+  size?: 'sm' | 'md';
+  showName?: boolean;
+}
+
+const { countryCode, size = 'sm', showName = false } = Astro.props;
+const flag = countryCodeToFlag(countryCode);
+const name = countryCodeToName(countryCode);
+const sizeClass = size === 'md' ? 'text-xl' : 'text-base';
+---
+
+<span class={`inline-flex items-center gap-1 ${sizeClass}`} title={name}>
+  <span aria-hidden="true">{flag}</span>
+  {showName && <span class="text-sm text-muted dark:text-slate-400">{name}</span>}
+</span>
