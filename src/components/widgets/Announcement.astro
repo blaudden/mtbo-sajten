@@ -22,7 +22,7 @@
       <span class="sr-only">Click to open the dedicated World Championships 2026 site</span>
       <span class="inline-block">
         <span
-          class="bg-gradient-to-r from-yellow-300 via-yellow-500 to-yellow-300 bg-clip-text text-transparent font-bold animate-gradient bg-[length:200%_auto] animate-gold-pulse"
+          class="bg-linear-to-r from-yellow-300 via-yellow-500 to-yellow-300 bg-clip-text text-transparent font-bold animate-gradient bg-size-[200%_auto] animate-gold-pulse"
         >
           ✨ Click here to open our dedicated World Championships site ✨
         </span>
@@ -35,29 +35,35 @@
       0% {
         background-position: 0% 50%;
       }
+
       50% {
         background-position: 100% 50%;
       }
+
       100% {
         background-position: 0% 50%;
       }
     }
+
     @keyframes goldPulse {
       0%,
       100% {
-        text-shadow: 0 0 5px rgba(234, 179, 8, 0.5);
+        text-shadow: 0 0 5px rgb(234 179 8 / 50%);
         filter: brightness(1);
       }
+
       50% {
         text-shadow:
-          0 0 15px rgba(234, 179, 8, 0.8),
-          0 0 5px rgba(253, 224, 71, 0.8);
+          0 0 15px rgb(234 179 8 / 80%),
+          0 0 5px rgb(253 224 71 / 80%);
         filter: brightness(1.2);
       }
     }
+
     .animate-gradient {
       animation: gradientMove 3s linear infinite;
     }
+
     .animate-gold-pulse {
       animation: goldPulse 2s ease-in-out infinite;
     }

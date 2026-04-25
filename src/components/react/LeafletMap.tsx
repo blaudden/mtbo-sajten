@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState, Component, type ErrorInfo, type ReactNode, type FC } from 'react';
 
 type MarkerColor = 'blue' | 'red' | 'green' | 'orange' | 'purple' | 'grey';
 type MarkerIconType = 'default' | 'start' | 'finish' | 'parking' | 'info';
@@ -83,7 +83,7 @@ const createColoredIcon = (
   });
 };
 
-const LeafletMap: React.FC<LeafletMapProps> = ({
+const LeafletMap: FC<LeafletMapProps> = ({
   markers = [],
   polygons = [],
   polylines = [],
@@ -110,16 +110,19 @@ const LeafletMap: React.FC<LeafletMapProps> = ({
         const reactLeaflet = await import('react-leaflet');
         await import('leaflet/dist/leaflet.css');
 
+        const L = leaflet.default || leaflet;
         // Fix default icon
-        // @ts-expect-error - Fix for missing type definition for prototype
-        delete leaflet.default.Icon.Default.prototype._getIconUrl;
-        leaflet.default.Icon.Default.mergeOptions({
-          iconRetinaUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png',
-          iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
-          shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
-        });
+        if (L.Icon?.Default?.prototype) {
+          // @ts-expect-error - Fix for missing type definition for prototype
+          delete L.Icon.Default.prototype._getIconUrl;
+          L.Icon.Default.mergeOptions({
+            iconRetinaUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png',
+            iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
+            shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
+          });
+        }
 
-        setLInstance(leaflet.default);
+        setLInstance(L);
         setLeafletModules(reactLeaflet);
       } catch (error) {
         console.error('Failed to load map modules', error);
@@ -258,7 +261,7 @@ const LeafletMap: React.FC<LeafletMapProps> = ({
   const { MapContainer, TileLayer, Marker, Popup, Polygon, Polyline, useMap } = LeafletModules;
 
   // Controller component that uses useMap hook
-  const MapController: React.FC<{
+  const MapController: FC<{
     markers: MarkerData[];
     polygons: PolygonData[];
     polylines: PolylineData[];
@@ -295,7 +298,7 @@ const LeafletMap: React.FC<LeafletMapProps> = ({
   };
 
   return (
-    <div style={{ height, width: '100%' }}>
+    <div style={{ height, width: '100%' }} className="relative z-0 isolate">
       <MapContainer
         center={mapCenter}
         zoom={zoom}
@@ -367,6 +370,35 @@ const LeafletMap: React.FC<LeafletMapProps> = ({
   );
 };
 
+class LeafletMapErrorBoundary extends Component<{ children: ReactNode }, { hasError: boolean; error: Error | null }> {
+  constructor(props: { children: ReactNode }) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true, error };
+  }
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('LeafletMap Error:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="text-red-500 bg-red-100 p-4 rounded text-sm overflow-auto h-full w-full">
+          <strong>Map Error:</strong> {this.state.error?.message}
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
+const LeafletMapWrapper: FC<LeafletMapProps> = (props) => (
+  <LeafletMapErrorBoundary>
+    <LeafletMap {...props} />
+  </LeafletMapErrorBoundary>
+);
+
 // Helper to get color hex code
 const getColorHex = (color?: MarkerColor) => {
   const colorMap: Record<MarkerColor, string> = {
@@ -410,4 +442,4 @@ const parsePoints = (points: { lat: number; lng: number }[] | string): { lat: nu
   return [];
 };
 
-export default LeafletMap;
+export default LeafletMapWrapper;

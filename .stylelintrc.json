@@ -1,0 +1,45 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-html"],
+  "rules": {
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "tailwindcss",
+          "tailwind",
+          "apply",
+          "variants",
+          "responsive",
+          "screen",
+          "theme",
+          "utility",
+          "custom-variant",
+          "plugin",
+          "layer"
+        ]
+      }
+    ],
+    "function-no-unknown": [
+      true,
+      {
+        "ignoreFunctions": ["theme"]
+      }
+    ],
+    "import-notation": "string",
+    "no-descending-specificity": null,
+    "value-keyword-case": [
+      "lower",
+      {
+        "ignoreKeywords": ["/font-.*/"]
+      }
+    ],
+    "selector-class-pattern": null,
+    "custom-property-pattern": null,
+    "keyframes-name-pattern": null,
+    "alpha-value-notation": null,
+    "color-function-notation": null,
+    "declaration-block-single-line-max-declarations": null,
+    "number-max-precision": null,
+    "declaration-block-no-duplicate-properties": null
+  }
+}

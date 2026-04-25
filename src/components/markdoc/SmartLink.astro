@@ -98,7 +98,7 @@ const rel = isResource || isExternal ? 'noopener noreferrer' : undefined;
   {
     isResource ? (
       <>
-        <span class="smart-icon hidden mr-3 flex-shrink-0 w-8 h-8 items-center justify-center rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 group-hover:bg-primary-50 dark:group-hover:bg-primary-900/20 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+        <span class="smart-icon hidden mr-3 shrink-0 w-8 h-8 items-center justify-center rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 group-hover:bg-primary-50 dark:group-hover:bg-primary-900/20 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
           {imageMap[type] ? (
             <Image src={imageMap[type]} alt={type} class="w-5 h-5 object-contain" />
           ) : (

@@ -132,11 +132,11 @@ if (isWmtbocHome) {
     <!-- Sparkling/Gold Theme Decoration: Curtain Style -->
     <div class="absolute inset-0 pointer-events-none overflow-hidden z-0" aria-hidden="true">
       <!-- 1cm (approx 40px) static gold top bar -->
-      <div class="absolute top-0 left-0 w-full h-[40px] bg-gradient-to-b from-yellow-500/30 to-yellow-400/10"></div>
+      <div class="absolute top-0 left-0 w-full h-[40px] bg-linear-to-b from-yellow-500/30 to-yellow-400/10"></div>
 
       <!-- 3cm (approx 120px) pulsing curtain originating from the top bar -->
       <div
-        class="absolute top-[40px] left-0 w-full h-[120px] bg-gradient-to-b from-yellow-400/20 to-transparent animate-curtain-pulse"
+        class="absolute top-[40px] left-0 w-full h-[120px] bg-linear-to-b from-yellow-400/20 to-transparent animate-curtain-pulse"
       >
       </div>
     </div>
@@ -159,17 +159,16 @@ if (isWmtbocHome) {
 
 <style is:global>
   /* Custom Scrollbar for this page/theme if desired, or specific gold accents */
+
   /* Dala Horse Theme */
   .wmtboc-theme {
     --aw-color-primary: #e62b1e; /* Dala Red */
     --aw-color-secondary: #3f6c96; /* Dala Blue */
     --aw-color-accent: #f4c430; /* Dala Yellow */
-
-    --aw-color-text-heading: #333333;
-    --aw-color-text-default: #444444;
-    --aw-color-text-muted: #666666;
-
-    --aw-color-bg-page: #ffffff;
+    --aw-color-text-heading: #333;
+    --aw-color-text-default: #444;
+    --aw-color-text-muted: #666;
+    --aw-color-bg-page: #fff;
 
     background-color: var(--aw-color-bg-page);
     color: var(--aw-color-text-default);
@@ -179,12 +178,13 @@ if (isWmtbocHome) {
   :root.dark .wmtboc-theme {
     --aw-color-bg-page: #1a1a1a;
     --aw-color-text-default: #e5e5e5;
-    --aw-color-text-heading: #ffffff;
+    --aw-color-text-heading: #fff;
   }
 
   .wmtboc-theme a {
     @apply transition-colors duration-300;
   }
+
   .wmtboc-theme a:hover {
     color: var(--aw-color-secondary);
   }
@@ -202,6 +202,7 @@ if (isWmtbocHome) {
   .wmtboc-theme a.text-primary {
     color: var(--aw-color-primary);
   }
+
   .wmtboc-theme .btn-primary {
     background-color: var(--aw-color-primary);
   }
@@ -214,6 +215,7 @@ if (isWmtbocHome) {
         0 0 20px #d4af37;
       border-color: #d4af37;
     }
+
     50% {
       box-shadow:
         0 0 20px #ffd700,
@@ -221,6 +223,7 @@ if (isWmtbocHome) {
       border-color: #ffd700;
     }
   }
+
   .animate-glow-button {
     animation: glow 1.5s ease-in-out infinite;
   }
@@ -232,12 +235,14 @@ if (isWmtbocHome) {
       transform: scaleY(0.9);
       transform-origin: top;
     }
+
     50% {
       opacity: 0.8;
       transform: scaleY(1.1);
       transform-origin: top;
     }
   }
+
   .animate-curtain-pulse {
     animation: curtainPulse 3s ease-in-out infinite;
   }
