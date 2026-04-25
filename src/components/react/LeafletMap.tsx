@@ -1,4 +1,7 @@
-import { useEffect, useState, Component, type ErrorInfo, type ReactNode, type FC } from 'react';
+import React, { useEffect, useState, Component, type ErrorInfo, type ReactNode, type FC } from 'react';
+import L from 'leaflet';
+import { MapContainer, TileLayer, Marker, Popup, Polygon, Polyline, useMap } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
 
 type MarkerColor = 'blue' | 'red' | 'green' | 'orange' | 'purple' | 'grey';
 type MarkerIconType = 'default' | 'start' | 'finish' | 'parking' | 'info';
@@ -38,12 +41,7 @@ interface LeafletMapProps {
 }
 
 // Function to create custom colored marker icons
-const createColoredIcon = (
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  LModule: any,
-  color: MarkerColor = 'blue',
-  iconType: MarkerIconType = 'default'
-) => {
+const createColoredIcon = (color: MarkerColor = 'blue', iconType: MarkerIconType = 'default') => {
   const colorMap: Record<MarkerColor, string> = {
     blue: '#3b82f6',
     red: '#ef4444',
@@ -73,7 +71,7 @@ const createColoredIcon = (
     </svg>
   `;
 
-  return LModule.icon({
+  return L.icon({
     iconUrl: 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgIcon),
     iconSize: [25, 41],
     iconAnchor: [12, 41],
@@ -96,41 +94,19 @@ const LeafletMap: FC<LeafletMapProps> = ({
   const [parsedPolylines, setParsedPolylines] = useState<PolylineData[]>([]);
   const [mapCenter, setMapCenter] = useState<[number, number] | null>(null);
 
-  // Dynamic module state
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const [LeafletModules, setLeafletModules] = useState<any>(null);
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const [LInstance, setLInstance] = useState<any>(null);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    // Dynamically import Leaflet and React-Leaflet only on client
-    const loadModules = async () => {
-      try {
-        const leaflet = await import('leaflet');
-        const reactLeaflet = await import('react-leaflet');
-        await import('leaflet/dist/leaflet.css');
-
-        const L = leaflet.default || leaflet;
-        // Fix default icon
-        if (L.Icon?.Default?.prototype) {
-          // @ts-expect-error - Fix for missing type definition for prototype
-          delete L.Icon.Default.prototype._getIconUrl;
-          L.Icon.Default.mergeOptions({
-            iconRetinaUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png',
-            iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
-            shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
-          });
-        }
-
-        setLInstance(L);
-        setLeafletModules(reactLeaflet);
-      } catch (error) {
-        console.error('Failed to load map modules', error);
-      }
-    };
-
-    if (typeof window !== 'undefined') {
-      loadModules();
+    setIsMounted(true);
+    // Fix default icon
+    if (L.Icon?.Default?.prototype) {
+      // @ts-expect-error - Fix for missing type definition for prototype
+      delete L.Icon.Default.prototype._getIconUrl;
+      L.Icon.Default.mergeOptions({
+        iconRetinaUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png',
+        iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
+        shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
+      });
     }
   }, []);
 
@@ -241,7 +217,7 @@ const LeafletMap: FC<LeafletMapProps> = ({
     }
   }, [markers, polygons, polylines, center]);
 
-  if (!LeafletModules || !mapCenter || !LInstance) {
+  if (!isMounted || !mapCenter) {
     return (
       <div
         style={{
@@ -257,8 +233,6 @@ const LeafletMap: FC<LeafletMapProps> = ({
       </div>
     );
   }
-
-  const { MapContainer, TileLayer, Marker, Popup, Polygon, Polyline, useMap } = LeafletModules;
 
   // Controller component that uses useMap hook
   const MapController: FC<{
@@ -288,7 +262,7 @@ const LeafletMap: FC<LeafletMapProps> = ({
         });
 
         if (allPoints.length > 0) {
-          const bounds = LInstance.latLngBounds(allPoints);
+          const bounds = L.latLngBounds(allPoints);
           map.fitBounds(bounds, { padding: [50, 50] });
         }
       }
@@ -319,7 +293,7 @@ const LeafletMap: FC<LeafletMapProps> = ({
           <Marker
             key={idx}
             position={[marker.lat, marker.lng]}
-            icon={createColoredIcon(LInstance, marker.color, marker.icon)}
+            icon={createColoredIcon(marker.color, marker.icon)}
             zIndexOffset={marker.zIndexOffset}
           >
             <Popup>
