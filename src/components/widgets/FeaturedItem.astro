@@ -42,7 +42,7 @@ const {
     {
       badgeText && (
         <span class="absolute top-4 left-3 z-30 transform -rotate-6 rounded-full px-3 py-1 shadow-md bg-slate-900 text-white dark:bg-black/60 ring-1 ring-yellow-300/40">
-          <span class="inline-block text-sm font-semibold bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">
+          <span class="inline-block text-sm font-semibold bg-linear-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">
             {badgeText} ✨
           </span>
         </span>
@@ -51,7 +51,7 @@ const {
     {
       badgeText && (
         <span class="absolute top-4 left-3 z-30 transform -rotate-6 rounded-full px-3 py-1 shadow-md bg-slate-900 text-white dark:bg-black/60 ring-2 ring-yellow-300/60 animate-glow">
-          <span class="inline-block text-sm font-semibold bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent animate-gradient">
+          <span class="inline-block text-sm font-semibold bg-linear-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent animate-gradient">
             {badgeText}
             <span class="inline-block align-middle ml-1 animate-sparkle">
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -81,43 +81,53 @@ const {
         0% {
           background-position: 0% 50%;
         }
+
         50% {
           background-position: 100% 50%;
         }
+
         100% {
           background-position: 0% 50%;
         }
       }
+
       .animate-gradient {
         background-size: 200% 200%;
         animation: gradientMove 2s linear infinite;
       }
+
       @keyframes sparkle {
         0%,
         100% {
           opacity: 1;
           transform: scale(1) rotate(0deg);
         }
+
         50% {
           opacity: 0.7;
           transform: scale(1.2) rotate(20deg);
         }
       }
+
       .animate-sparkle {
         animation: sparkle 1.2s ease-in-out infinite;
       }
+
       @keyframes glow {
         0%,
         100% {
           box-shadow: 0 0 8px 2px #ffe06666;
         }
+
         50% {
           box-shadow: 0 0 16px 4px #fff70099;
         }
       }
+
       .animate-glow {
         animation: glow 1.5s ease-in-out infinite;
       }
+
       @keyframes glow {
         0%,
         100% {
@@ -126,6 +136,7 @@ const {
             0 0 20px #d4af37;
           border-color: #d4af37;
         }
+
         50% {
           box-shadow:
             0 0 20px #ffd700,

@@ -94,7 +94,7 @@ const {
         }
       </div>
 
-      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+      <div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
     </div>
 
     <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 text-center pt-12 md:pt-20">
@@ -103,7 +103,7 @@ const {
 
         {/* Animated Title Section */}
         <h1
-          class="text-3xl sm:text-4xl md:text-6xl font-bold leading-tighter tracking-tighter mb-6 font-heading text-white break-words max-w-full"
+          class="text-3xl sm:text-4xl md:text-6xl font-bold leading-tighter tracking-tighter mb-6 font-heading text-white wrap-break-word max-w-full"
           aria-label="MTBO – Orientering i full fart (Orienteering at full speed)"
         >
           <div class="grid grid-cols-1 grid-rows-1 place-items-center max-w-full" aria-hidden="true">
@@ -157,18 +157,22 @@ const {
         opacity: 1;
         transform: translateY(0);
       }
+
       50% {
         opacity: 0;
         transform: translateY(-20px);
       }
+
       50.1% {
         opacity: 0;
         transform: translateY(20px);
       }
+
       95% {
         opacity: 0;
         transform: translateY(20px);
       }
+
       100% {
         opacity: 1;
         transform: translateY(0);
@@ -184,11 +188,13 @@ const {
         opacity: 0;
         transform: translateY(20px);
       }
+
       50%,
       95% {
         opacity: 1;
         transform: translateY(0);
       }
+
       100% {
         opacity: 0;
         transform: translateY(-20px);
@@ -211,6 +217,7 @@ const {
         opacity: 1 !important;
         transform: none !important;
       }
+
       .animate-bike-text-en {
         display: none !important;
       }

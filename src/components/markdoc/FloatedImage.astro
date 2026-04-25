@@ -31,7 +31,7 @@ const imageMetadata = await findImage(src);
   class={`relative rounded-lg overflow-hidden shadow-md my-4 ${floatClass} ${className} w-full sm:w-auto`}
   style={style}
 >
-  <div class="aspect-[4/5] sm:aspect-square w-full h-full">
+  <div class="aspect-4/5 sm:aspect-square w-full h-full">
     {
       imageMetadata ? (
         <Picture

@@ -4,7 +4,7 @@ import yaml from 'js-yaml';
 import { fileURLToPath } from 'url';
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import tailwind from '@astrojs/tailwind';
+import tailwindcss from '@tailwindcss/vite';
 import mdx from '@astrojs/mdx';
 import compress from 'astro-compress';
 import icon from 'astro-icon';
@@ -111,9 +111,6 @@ export default defineConfig({
   }),
   image: {},
   integrations: [
-    tailwind({
-      applyBaseStyles: false,
-    }),
     sitemap({
       i18n: {
         defaultLocale: 'sv', // All urls that don't contain `sv` will be treated as default locale, i.e. `sv`
@@ -183,9 +180,24 @@ export default defineConfig({
   markdown: {},
 
   vite: {
+    plugins: [tailwindcss()],
     resolve: {
       alias: {
         '~': path.resolve(__dirname, './src'),
+      },
+    },
+    build: {
+      rollupOptions: {
+        onwarn(warning, warn) {
+          if (
+            warning.message &&
+            warning.message.includes('dynamic import will not move module into another chunk') &&
+            (warning.loc?.file?.includes('leaflet') || warning.plugin === 'vite:reporter')
+          ) {
+            return;
+          }
+          warn(warning);
+        },
       },
     },
   },

@@ -1,4 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Component, type ErrorInfo, type ReactNode, type FC } from 'react';
+import L from 'leaflet';
+import { MapContainer, TileLayer, Marker, Popup, Polygon, Polyline, useMap } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
 
 type MarkerColor = 'blue' | 'red' | 'green' | 'orange' | 'purple' | 'grey';
 type MarkerIconType = 'default' | 'start' | 'finish' | 'parking' | 'info';
@@ -38,12 +41,7 @@ interface LeafletMapProps {
 }
 
 // Function to create custom colored marker icons
-const createColoredIcon = (
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  LModule: any,
-  color: MarkerColor = 'blue',
-  iconType: MarkerIconType = 'default'
-) => {
+const createColoredIcon = (color: MarkerColor = 'blue', iconType: MarkerIconType = 'default') => {
   const colorMap: Record<MarkerColor, string> = {
     blue: '#3b82f6',
     red: '#ef4444',
@@ -73,7 +71,7 @@ const createColoredIcon = (
     </svg>
   `;
 
-  return LModule.icon({
+  return L.icon({
     iconUrl: 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgIcon),
     iconSize: [25, 41],
     iconAnchor: [12, 41],
@@ -83,7 +81,7 @@ const createColoredIcon = (
   });
 };
 
-const LeafletMap: React.FC<LeafletMapProps> = ({
+const LeafletMap: FC<LeafletMapProps> = ({
   markers = [],
   polygons = [],
   polylines = [],
@@ -96,38 +94,22 @@ const LeafletMap: React.FC<LeafletMapProps> = ({
   const [parsedPolylines, setParsedPolylines] = useState<PolylineData[]>([]);
   const [mapCenter, setMapCenter] = useState<[number, number] | null>(null);
 
-  // Dynamic module state
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const [LeafletModules, setLeafletModules] = useState<any>(null);
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const [LInstance, setLInstance] = useState<any>(null);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    // Dynamically import Leaflet and React-Leaflet only on client
-    const loadModules = async () => {
-      try {
-        const leaflet = await import('leaflet');
-        const reactLeaflet = await import('react-leaflet');
-        await import('leaflet/dist/leaflet.css');
-
-        // Fix default icon
-        // @ts-expect-error - Fix for missing type definition for prototype
-        delete leaflet.default.Icon.Default.prototype._getIconUrl;
-        leaflet.default.Icon.Default.mergeOptions({
-          iconRetinaUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png',
-          iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
-          shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
-        });
-
-        setLInstance(leaflet.default);
-        setLeafletModules(reactLeaflet);
-      } catch (error) {
-        console.error('Failed to load map modules', error);
-      }
+    setIsMounted(true);
+    // Fix default icon
+    const DefaultIcon = L.Icon.Default as unknown as {
+      prototype?: { _getIconUrl?: unknown };
+      mergeOptions: (opts: Record<string, unknown>) => void;
     };
-
-    if (typeof window !== 'undefined') {
-      loadModules();
+    if (DefaultIcon.prototype) {
+      delete DefaultIcon.prototype._getIconUrl;
+      DefaultIcon.mergeOptions({
+        iconRetinaUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png',
+        iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
+        shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
+      });
     }
   }, []);
 
@@ -238,7 +220,7 @@ const LeafletMap: React.FC<LeafletMapProps> = ({
     }
   }, [markers, polygons, polylines, center]);
 
-  if (!LeafletModules || !mapCenter || !LInstance) {
+  if (!isMounted || !mapCenter) {
     return (
       <div
         style={{
@@ -255,10 +237,8 @@ const LeafletMap: React.FC<LeafletMapProps> = ({
     );
   }
 
-  const { MapContainer, TileLayer, Marker, Popup, Polygon, Polyline, useMap } = LeafletModules;
-
   // Controller component that uses useMap hook
-  const MapController: React.FC<{
+  const MapController: FC<{
     markers: MarkerData[];
     polygons: PolygonData[];
     polylines: PolylineData[];
@@ -285,7 +265,7 @@ const LeafletMap: React.FC<LeafletMapProps> = ({
         });
 
         if (allPoints.length > 0) {
-          const bounds = LInstance.latLngBounds(allPoints);
+          const bounds = L.latLngBounds(allPoints);
           map.fitBounds(bounds, { padding: [50, 50] });
         }
       }
@@ -295,7 +275,7 @@ const LeafletMap: React.FC<LeafletMapProps> = ({
   };
 
   return (
-    <div style={{ height, width: '100%' }}>
+    <div style={{ height, width: '100%' }} className="relative z-0 isolate">
       <MapContainer
         center={mapCenter}
         zoom={zoom}
@@ -316,7 +296,7 @@ const LeafletMap: React.FC<LeafletMapProps> = ({
           <Marker
             key={idx}
             position={[marker.lat, marker.lng]}
-            icon={createColoredIcon(LInstance, marker.color, marker.icon)}
+            icon={createColoredIcon(marker.color, marker.icon)}
             zIndexOffset={marker.zIndexOffset}
           >
             <Popup>
@@ -367,6 +347,39 @@ const LeafletMap: React.FC<LeafletMapProps> = ({
   );
 };
 
+class LeafletMapErrorBoundary extends Component<{ children: ReactNode }, { hasError: boolean; error: Error | null }> {
+  constructor(props: { children: ReactNode }) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true, error };
+  }
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('LeafletMap Error:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      const isDev = typeof process !== 'undefined' && process.env?.NODE_ENV === 'development';
+      return (
+        <div className="text-red-500 bg-red-100 p-4 rounded text-sm overflow-auto h-full w-full flex flex-col gap-2">
+          <div>
+            <strong>Map Error:</strong> An error occurred while loading the map.
+          </div>
+          {isDev && <div className="text-xs opacity-80">{this.state.error?.message}</div>}
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
+const LeafletMapWrapper: FC<LeafletMapProps> = (props) => (
+  <LeafletMapErrorBoundary>
+    <LeafletMap {...props} />
+  </LeafletMapErrorBoundary>
+);
+
 // Helper to get color hex code
 const getColorHex = (color?: MarkerColor) => {
   const colorMap: Record<MarkerColor, string> = {
@@ -410,4 +423,4 @@ const parsePoints = (points: { lat: number; lng: number }[] | string): { lat: nu
   return [];
 };
 
-export default LeafletMap;
+export default LeafletMapWrapper;

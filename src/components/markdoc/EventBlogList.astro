@@ -73,7 +73,7 @@ if (APP_BLOG.isEnabled) {
               href={post.permalink}
               class="group flex flex-col sm:flex-row gap-4 sm:items-center bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-gray-200 dark:border-slate-700 p-4 transition duration-300 hover:shadow-lg hover:border-primary/50"
             >
-              <div class="sm:w-32 sm:h-24 flex-shrink-0 rounded overflow-hidden relative bg-gray-200">
+              <div class="sm:w-32 sm:h-24 shrink-0 rounded overflow-hidden relative bg-gray-200">
                 {post.image ? (
                   <Image
                     src={post.image}
@@ -89,7 +89,7 @@ if (APP_BLOG.isEnabled) {
                   <div class="w-full h-full flex items-center justify-center text-xs text-gray-500">No Image</div>
                 )}
               </div>
-              <div class="flex-grow">
+              <div class="grow">
                 <h3 class="text-lg font-bold font-heading mb-1 group-hover:text-primary transition-colors">
                   {post.title}
                 </h3>
