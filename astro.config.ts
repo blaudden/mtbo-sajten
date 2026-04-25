@@ -189,7 +189,11 @@ export default defineConfig({
     build: {
       rollupOptions: {
         onwarn(warning, warn) {
-          if (warning.message && warning.message.includes('dynamic import will not move module into another chunk')) {
+          if (
+            warning.message &&
+            warning.message.includes('dynamic import will not move module into another chunk') &&
+            (warning.loc?.file?.includes('leaflet') || warning.plugin === 'vite:reporter')
+          ) {
             return;
           }
           warn(warning);

@@ -114,7 +114,7 @@ const load = async function (): Promise<Array<Post>> {
     }
   });
 
-  const preview = import.meta.env.CONTEXT != 'production';
+  const preview = import.meta.env.DEV || import.meta.env.IMPORT_PREVIEW === 'true';
 
   const results = (await Promise.all(normalizedPosts))
     .filter((post): post is Post => post !== null)

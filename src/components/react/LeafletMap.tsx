@@ -99,10 +99,13 @@ const LeafletMap: FC<LeafletMapProps> = ({
   useEffect(() => {
     setIsMounted(true);
     // Fix default icon
-    if (L.Icon?.Default?.prototype) {
-      // @ts-expect-error - Fix for missing type definition for prototype
-      delete L.Icon.Default.prototype._getIconUrl;
-      L.Icon.Default.mergeOptions({
+    const DefaultIcon = L.Icon.Default as unknown as {
+      prototype?: { _getIconUrl?: unknown };
+      mergeOptions: (opts: Record<string, unknown>) => void;
+    };
+    if (DefaultIcon.prototype) {
+      delete DefaultIcon.prototype._getIconUrl;
+      DefaultIcon.mergeOptions({
         iconRetinaUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png',
         iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
         shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
@@ -357,9 +360,13 @@ class LeafletMapErrorBoundary extends Component<{ children: ReactNode }, { hasEr
   }
   render() {
     if (this.state.hasError) {
+      const isDev = typeof process !== 'undefined' && process.env?.NODE_ENV === 'development';
       return (
-        <div className="text-red-500 bg-red-100 p-4 rounded text-sm overflow-auto h-full w-full">
-          <strong>Map Error:</strong> {this.state.error?.message}
+        <div className="text-red-500 bg-red-100 p-4 rounded text-sm overflow-auto h-full w-full flex flex-col gap-2">
+          <div>
+            <strong>Map Error:</strong> An error occurred while loading the map.
+          </div>
+          {isDev && <div className="text-xs opacity-80">{this.state.error?.message}</div>}
         </div>
       );
     }
