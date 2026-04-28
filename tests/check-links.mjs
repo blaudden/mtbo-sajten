@@ -65,10 +65,9 @@ function extractLinks(filePath) {
   while ((match = regex.exec(content)) !== null) {
     const rawUrl = match[2];
     const linkText = match[3]
-      .replace(/<[^>]*>/g, '')
       .replace(/[<>]/g, '')
       .trim()
-      .substring(0, 50); // Strip HTML tags and angle brackets from text
+      .substring(0, 50); // Strip angle brackets from text to avoid tag injection patterns
 
     if (rawUrl.startsWith('#') || rawUrl.startsWith('mailto:') || rawUrl.startsWith('tel:')) continue;
 
