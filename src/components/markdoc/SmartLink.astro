@@ -79,7 +79,7 @@ const suffixMap: Record<string, { sv: string; en: string }> = {
 const localsLang = Astro.locals.lang;
 const currentPath = Astro.url.pathname;
 const urlLang = currentPath.includes('/en/') ? 'en' : 'sv';
-const lang = localsLang || urlLang; // Prioritize locals (frontmatter/metadata), fallback to URL
+const lang = (localsLang || urlLang) as 'sv' | 'en'; // Prioritize locals (frontmatter/metadata), fallback to URL
 
 const suffix = suffixMap[type]?.[lang] || '';
 
