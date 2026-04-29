@@ -16,10 +16,9 @@ interface Props {
   showCountryFilter?: boolean;
   title?: string;
   subtitle?: string;
-  isYearPage?: boolean;
 }
 
-const { races, showCountryFilter = false, title, subtitle, isYearPage = false } = Astro.props;
+const { races, showCountryFilter = false, title, subtitle } = Astro.props;
 const countries = showCountryFilter ? getCountriesFromRaces(races) : [];
 const hasFeatured = races.some((r) => r.isFeatured);
 ---
@@ -77,7 +76,7 @@ const hasFeatured = races.some((r) => r.isFeatured);
             </thead>
             <tbody>
               {races.map((race) => (
-                <EventRaceRow race={race} isYearPage={isYearPage} />
+                <EventRaceRow race={race} />
               ))}
             </tbody>
           </table>
@@ -102,7 +101,7 @@ const hasFeatured = races.some((r) => r.isFeatured);
             } else if (timeStatus === 'current-week') {
               cardStyles = 'bg-blue-50/80 dark:bg-blue-900/20 border-l-4 border-l-primary shadow-sm';
               titleStyles = 'text-gray-900 dark:text-white font-medium';
-            } else if (timeStatus === 'past' && !isYearPage) {
+            } else if (timeStatus === 'past') {
               cardStyles = 'opacity-70 hover:opacity-100';
               titleStyles = 'text-gray-600 dark:text-slate-400';
             } else {

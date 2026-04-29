@@ -20,10 +20,13 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import os from 'os';
+import sharp from 'sharp';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = path.resolve(__dirname, '..');
 const DEST_DIR = path.join(PROJECT_ROOT, 'src', 'data', 'events');
+const OG_DEST_DIR = path.join(PROJECT_ROOT, 'public', 'images', 'events', 'og');
+const TEMPLATE_PATH = path.join(PROJECT_ROOT, 'src', 'assets', 'images', 'event_og_template.png');
 const SCRAPER_REPO = 'https://github.com/blaudden/mtbo-scraper.git';
 const MIN_YEAR = 2022;
 
@@ -49,7 +52,7 @@ function cloneScraper() {
   return tmpDir;
 }
 
-function importData(scraperRoot) {
+async function importData(scraperRoot) {
   const srcEventsDir = path.join(scraperRoot, 'data', 'events');
 
   // Validate source exists
@@ -102,10 +105,89 @@ function importData(scraperRoot) {
 
     const destYearDir = path.join(DEST_DIR, String(year));
     fs.mkdirSync(destYearDir, { recursive: true });
+    fs.mkdirSync(OG_DEST_DIR, { recursive: true });
 
     const destFile = path.join(destYearDir, 'events.json');
     fs.copyFileSync(srcFile, destFile);
     totalEvents += data.events.length;
+
+    // Generate OG images
+    for (const event of data.events) {
+      const slug = event.id.toLowerCase().replace(/_/g, '-');
+      const ogPath = path.join(OG_DEST_DIR, `${slug}.png`);
+
+      if (!fs.existsSync(ogPath)) {
+        try {
+          const organiser = event.organisers && event.organisers.length > 0 ? event.organisers[0].name : '';
+
+          // Escape HTML characters for SVG
+          const escapeHtml = (unsafe) =>
+            (unsafe || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+          // Intelligent word wrap: looks back for a comma if line exceeds maxChars
+          const wrapText = (text, maxChars) => {
+            const words = text.split(' ');
+            const lines = [];
+            let currentLine = '';
+
+            words.forEach((word) => {
+              if ((currentLine + word).length > maxChars) {
+                const lastCommaIndex = currentLine.lastIndexOf(',');
+                // If there's a comma to break at, and it's not the very end of the line
+                if (lastCommaIndex !== -1 && lastCommaIndex !== currentLine.length - 1) {
+                  const breakPoint = lastCommaIndex + 1;
+                  const lineToKeep = currentLine.slice(0, breakPoint).trim();
+                  const leftover = currentLine.slice(breakPoint).trim();
+
+                  lines.push(lineToKeep);
+                  currentLine = leftover ? leftover + ' ' + word + ' ' : word + ' ';
+                } else {
+                  if (currentLine) lines.push(currentLine.trim());
+                  currentLine = word + ' ';
+                }
+              } else {
+                currentLine += word + ' ';
+              }
+            });
+            if (currentLine) lines.push(currentLine.trim());
+            return lines;
+          };
+
+          const nameLines = wrapText(event.name, 32);
+          const subtitleStr = `${event.start_time}${organiser ? ' - ' + organiser : ''}`;
+          const subtitleLines = wrapText(subtitleStr, 50);
+
+          // 1/3 of 720 is 240. Font baseline is ~50px below the top of the text.
+          const startY = 240 + 50;
+
+          const titleTspans = nameLines
+            .map((line, i) => `<tspan x="80" dy="${i === 0 ? 0 : 75}">${escapeHtml(line)}</tspan>`)
+            .join('');
+
+          const subTspans = subtitleLines
+            .map((line, i) => `<tspan x="80" dy="${i === 0 ? 80 : 50}">${escapeHtml(line)}</tspan>`)
+            .join('');
+
+          const svgText = `
+            <svg width="1280" height="720">
+              <style>
+                .title { fill: #ffffff; font-size: 64px; font-family: sans-serif; font-weight: bold; text-anchor: start; }
+                .subtitle { fill: #e2e8f0; font-size: 40px; font-family: sans-serif; text-anchor: start; }
+              </style>
+              <text x="80" y="${startY}" class="title">${titleTspans}</text>
+              <text x="80" y="${startY + (nameLines.length - 1) * 75}" class="subtitle">${subTspans}</text>
+            </svg>
+          `;
+
+          await sharp(TEMPLATE_PATH)
+            .composite([{ input: Buffer.from(svgText) }])
+            .toFile(ogPath);
+        } catch (err) {
+          console.error(`  ⚠ Failed to create OG image for ${slug}:`, err.message);
+        }
+      }
+    }
+
     console.log(`✓ Copied ${year}/events.json (${data.events.length} events)`);
   }
 
@@ -127,7 +209,7 @@ if (scraperPath) {
 }
 
 try {
-  importData(scraperRoot);
+  await importData(scraperRoot);
 
   if (shouldCommit) {
     console.log('\nCommitting changes...');

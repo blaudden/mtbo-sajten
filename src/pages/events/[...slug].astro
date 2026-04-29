@@ -122,7 +122,10 @@ if (pageType === 'landing') {
     metadata = {
       title: `${event.name} | MTBO Tävlingskalender`,
       description: `${event.name} — ${dateRange}. ${organiser ? 'Arrangör: ' + organiser + '.' : ''} Mountainbikeorientering i ${countryName}.`,
-      openGraph: { type: 'website' },
+      openGraph: {
+        type: 'website',
+        images: [{ url: new URL(`/images/events/og/${event.slug}.png`, Astro.site).toString() }],
+      },
     };
 
     jsonLd = generateEventJsonLd(event);
@@ -200,7 +203,6 @@ const yearTabs = [...availableYears].reverse();
           showCountryFilter={true}
           title={`MTBO Tävlingskalender ${year}`}
           subtitle={subtitle}
-          isYearPage={true}
         />
       )
     }

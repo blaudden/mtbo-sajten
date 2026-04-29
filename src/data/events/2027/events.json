@@ -43,8 +43,25 @@
           "country_code": "LVA"
         }
       ],
-      "officials": [],
-      "classes": [],
+      "officials": [
+        {
+          "role": "Event directors",
+          "name": "Gunars Ikaunieks"
+        },
+        {
+          "role": "Event directors",
+          "name": "Ildze Straume"
+        },
+        {
+          "role": "Course setter",
+          "name": "Martins Lasmanis"
+        }
+      ],
+      "classes": [
+        "Men",
+        "Team Officials",
+        "Women"
+      ],
       "urls": [
         {
           "type": "Path",
@@ -135,9 +152,9 @@
     },
     {
       "id": "IOF_8961",
-      "name": "(Preliminary Dates) - European MTB Orienteering Championships 2027",
-      "start_time": "2027-05-06",
-      "end_time": "2027-05-09",
+      "name": "European MTB Orienteering Championships 2027",
+      "start_time": "2027-05-04",
+      "end_time": "2027-05-08",
       "status": "Sanctioned",
       "original_status": "Active",
       "types": [
@@ -190,6 +207,12 @@
           "title": "Embargoed areas",
           "url": "https://www.google.com/maps/d/viewer?mid=1onFzsYE2YyYt0eIyf3M2yXPX80M_HKI&usp=sharing",
           "published_time": null
+        },
+        {
+          "type": "Bulletin",
+          "title": "Bulletin 1",
+          "url": "/Documents/Event/10342/Bulletin-1",
+          "published_time": "2026-04-09"
         }
       ],
       "information": null,
@@ -199,7 +222,7 @@
         {
           "race_number": 1,
           "name": "Sprint",
-          "datetimez": "2027-05-06T10:00:00+02:00",
+          "datetimez": "2027-05-05T10:00:00+02:00",
           "discipline": "Sprint",
           "night_or_day": null,
           "position": {
@@ -216,6 +239,21 @@
         },
         {
           "race_number": 2,
+          "name": "Long",
+          "datetimez": "2027-05-06T10:00:00+02:00",
+          "discipline": "Long",
+          "night_or_day": null,
+          "position": null,
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        },
+        {
+          "race_number": 3,
           "name": "Middle",
           "datetimez": "2027-05-07T10:00:00+02:00",
           "discipline": "Middle",
@@ -230,24 +268,9 @@
           "fingerprints": []
         },
         {
-          "race_number": 3,
-          "name": "Long",
-          "datetimez": "2027-05-08T10:00:00+02:00",
-          "discipline": "Long",
-          "night_or_day": null,
-          "position": null,
-          "areas": [],
-          "urls": [],
-          "documents": [],
-          "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
-        },
-        {
           "race_number": 4,
           "name": "Relay",
-          "datetimez": "2027-05-09T10:00:00+02:00",
+          "datetimez": "2027-05-08T10:00:00+02:00",
           "discipline": "Relay",
           "night_or_day": null,
           "position": null,
@@ -264,9 +287,9 @@
     },
     {
       "id": "IOF_8962",
-      "name": "(Preliminary Dates) - European Junior and Youth MTB Orienteering Championships 2027",
-      "start_time": "2027-05-03",
-      "end_time": "2027-05-03",
+      "name": "European Junior and Youth MTB Orienteering Championships 2027",
+      "start_time": "2027-05-04",
+      "end_time": "2027-05-08",
       "status": "Sanctioned",
       "original_status": "Active",
       "types": [
@@ -317,6 +340,12 @@
           "title": "Embargoed areas",
           "url": "https://www.google.com/maps/d/viewer?mid=1onFzsYE2YyYt0eIyf3M2yXPX80M_HKI&usp=sharing",
           "published_time": null
+        },
+        {
+          "type": "Bulletin",
+          "title": "Bulletin 1",
+          "url": "/Documents/Event/10341/Bulletin-1",
+          "published_time": "2026-04-09"
         }
       ],
       "information": null,
@@ -325,14 +354,59 @@
       "races": [
         {
           "race_number": 1,
-          "name": "(Preliminary Dates) - European Junior and Youth MTB Orienteering Championships 2027",
-          "datetimez": "2027-05-03T22:00:00+00:00",
-          "discipline": "Other",
+          "name": "Sprint",
+          "datetimez": "2027-05-05T10:00:00+02:00",
+          "discipline": "Sprint",
           "night_or_day": null,
           "position": {
             "lat": 50.2031705356206,
             "lng": 15.8952634107946
           },
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        },
+        {
+          "race_number": 2,
+          "name": "Long",
+          "datetimez": "2027-05-06T10:00:00+02:00",
+          "discipline": "Long",
+          "night_or_day": null,
+          "position": null,
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        },
+        {
+          "race_number": 3,
+          "name": "Middle",
+          "datetimez": "2027-05-07T10:00:00+02:00",
+          "discipline": "Middle",
+          "night_or_day": null,
+          "position": null,
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        },
+        {
+          "race_number": 4,
+          "name": "Relay",
+          "datetimez": "2027-05-08T10:00:00+02:00",
+          "discipline": "Relay",
+          "night_or_day": null,
+          "position": null,
           "areas": [],
           "urls": [],
           "documents": [],
@@ -583,6 +657,14 @@
           "name": "enc:AR0MC0wsAh4NBwodCTQKAFkeAhsNXgYdAA=="
         },
         {
+          "role": "Event director",
+          "name": "Linda Allwood"
+        },
+        {
+          "role": "Course setter",
+          "name": "Peter Wilhelmsson"
+        },
+        {
           "role": "Event controller",
           "name": "Cecilia Lingerud"
         }
@@ -689,6 +771,14 @@
           "name": "enc:AR0MC0wsAh4NBwodCTQKAFkeAhsNXgYdAA=="
         },
         {
+          "role": "Event director",
+          "name": "Linda Allwood"
+        },
+        {
+          "role": "Course setter",
+          "name": "Peter Wilhelmsson"
+        },
+        {
           "role": "Event controller",
           "name": "Cecilia Lingerud"
         }
@@ -761,6 +851,541 @@
               ]
             }
           ],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_57942",
+      "name": "MTBO, Traneträffen, sprint",
+      "start_time": "2027-08-21",
+      "end_time": "2027-08-21",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "National"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "OK Tranan",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Kenneth Johansson"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:GRUUA0QdBFwOGxEADBoDAW0UDhMIHEsRAhk="
+        },
+        {
+          "role": "Event director",
+          "name": "Kenneth Johansson"
+        },
+        {
+          "role": "Event controller",
+          "name": "Kjell Einarsson"
+        }
+      ],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/57942",
+          "title": null,
+          "last_updated_at": "2026-03-17T17:37:47.268435+00:00"
+        },
+        {
+          "type": "Website",
+          "url": "http://oktranan.se",
+          "title": null,
+          "last_updated_at": "2026-03-17T17:37:47.268435+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": "Västergötland",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "MTBO, Traneträffen, sprint",
+          "datetimez": "2027-08-21T00:00:00+02:00",
+          "discipline": "Sprint",
+          "night_or_day": "day",
+          "position": null,
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_57943",
+      "name": "MTBO, Traneträffen, medel",
+      "start_time": "2027-08-22",
+      "end_time": "2027-08-22",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "National"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "OK Tranan",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Kenneth Johansson"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:GRUUA0QdBFwOGxEADBoDAW0UDhMIHEsRAhk="
+        },
+        {
+          "role": "Event director",
+          "name": "Kenneth Johansson"
+        },
+        {
+          "role": "Event controller",
+          "name": "Kjell Einarsson"
+        }
+      ],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/57943",
+          "title": null,
+          "last_updated_at": "2026-03-17T17:37:47.268420+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": "Västergötland",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "MTBO, Traneträffen, medel",
+          "datetimez": "2027-08-22T00:00:00+02:00",
+          "discipline": "Long",
+          "night_or_day": "day",
+          "position": null,
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_58263",
+      "name": "MTBO, DM, sprint, Småland+Blekinge+Skåne",
+      "start_time": "2027-05-22",
+      "end_time": "2027-05-22",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Regional"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "OK Bävern",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Olliver Persson"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:AhgOBlsWEVwRFRcBHhsML10BDAYOHggTBBhMDEIe"
+        },
+        {
+          "role": "Event director",
+          "name": "Olliver Persson"
+        },
+        {
+          "role": "Course setter",
+          "name": "Sara Larsson"
+        }
+      ],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/58263",
+          "title": null,
+          "last_updated_at": "2026-04-12T19:44:11.052771+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": "Småland",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "MTBO, DM, sprint, Småland+Blekinge+Skåne",
+          "datetimez": "2027-05-22T00:00:00+02:00",
+          "discipline": "Sprint",
+          "night_or_day": "day",
+          "position": {
+            "lat": 57.4957430732791,
+            "lng": 15.0214412840075
+          },
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_58264",
+      "name": "MTBO, DM, medel, Småland+Blekinge+Skåne",
+      "start_time": "2027-05-23",
+      "end_time": "2027-05-23",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Regional"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "OK Bävern",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Olliver Persson"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:AhgOBlsWEVwRFRcBHhsML10BDAYOHggTBBhMDEIe"
+        },
+        {
+          "role": "Event director",
+          "name": "Olliver Persson"
+        },
+        {
+          "role": "Course setter",
+          "name": "Sara Larsson"
+        }
+      ],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/58264",
+          "title": null,
+          "last_updated_at": "2026-04-12T19:44:11.052752+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": "Småland",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "MTBO, DM, medel, Småland+Blekinge+Skåne",
+          "datetimez": "2027-05-23T00:00:00+02:00",
+          "discipline": "Middle",
+          "night_or_day": "day",
+          "position": null,
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_58284",
+      "name": "MTBO, närtävling",
+      "start_time": "2027-09-25",
+      "end_time": "2027-09-25",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Local"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "Karlskrona SOK",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Karolina Tuvesson"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:GQEUCl4ADBwRFRcBHhsML0IGFx4OHw5cDhsP"
+        },
+        {
+          "role": "Event director",
+          "name": "Karolina Tuvesson"
+        }
+      ],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/58284",
+          "title": null,
+          "last_updated_at": "2026-04-12T19:44:11.052797+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": "Blekinge",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "MTBO, närtävling",
+          "datetimez": "2027-09-25T00:00:00+02:00",
+          "discipline": "Middle",
+          "night_or_day": "day",
+          "position": null,
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_58952",
+      "name": "Stockholm Rogaining",
+      "start_time": "2027-11-27",
+      "end_time": "2027-11-27",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Local"
+      ],
+      "tags": [
+        "FootO"
+      ],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "OK Ravinen",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Per Wollbrand"
+        }
+      ],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/58952",
+          "title": null,
+          "last_updated_at": "2026-04-25T22:14:58.158161+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": "Stockholm",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "Stockholm Rogaining",
+          "datetimez": "2027-11-27T00:00:00+01:00",
+          "discipline": "Long",
+          "night_or_day": "day",
+          "position": null,
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_58993",
+      "name": "Sätervurpan sprint",
+      "start_time": "2027-08-14",
+      "end_time": "2027-08-14",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Local"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "Säterbygdens OK",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Per Sandberg"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:DhUQBkMSExcTQV0yChkDBkFdAB0M"
+        }
+      ],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/58993",
+          "title": null,
+          "last_updated_at": "2026-04-28T19:36:13.777242+00:00"
+        },
+        {
+          "type": "Website",
+          "url": "http://www.saterbygden.se",
+          "title": null,
+          "last_updated_at": "2026-04-28T19:36:13.777242+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": "Dalarna",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "Sätervurpan sprint",
+          "datetimez": "2027-08-14T00:00:00+02:00",
+          "discipline": "Sprint",
+          "night_or_day": "day",
+          "position": null,
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_58994",
+      "name": "Sätervurpan medel",
+      "start_time": "2027-08-15",
+      "end_time": "2027-08-15",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Local"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "Säterbygdens OK",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Robert Östlund"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:DhUQBkMSExcTQV0yChkDBkFdAB0M"
+        }
+      ],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/58994",
+          "title": null,
+          "last_updated_at": "2026-04-28T19:36:13.777226+00:00"
+        },
+        {
+          "type": "Website",
+          "url": "http://www.saterbygden.se",
+          "title": null,
+          "last_updated_at": "2026-04-28T19:36:13.777226+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": "Dalarna",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "Sätervurpan medel",
+          "datetimez": "2027-08-15T00:00:00+02:00",
+          "discipline": "Middle",
+          "night_or_day": "day",
+          "position": null,
+          "areas": [],
           "urls": [],
           "documents": [],
           "entry_counts": null,

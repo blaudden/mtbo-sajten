@@ -33,7 +33,7 @@ jobs:
       - name: Check for changes
         id: changes
         run: |
-          if git diff --quiet src/data/events/; then
+          if git diff --quiet src/data/events/ public/images/events/og/; then
             echo "changed=false" >> $GITHUB_OUTPUT
           else
             echo "changed=true" >> $GITHUB_OUTPUT
@@ -44,6 +44,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/data/events/
+          git add src/data/events/ public/images/events/og/
           git commit -m "chore: update MTBO event data from scraper"
           git push

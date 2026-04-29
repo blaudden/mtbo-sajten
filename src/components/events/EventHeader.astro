@@ -20,7 +20,7 @@ const isCanceled = event.status === 'Canceled';
 <div class="mb-8">
   <div class="flex items-center gap-3 mb-3">
     <CountryFlag countryCode={countryCode} size="md" />
-    <span class={`px-2.5 py-0.5 rounded-full text-xs font-medium ${statusColor}`}>
+    <span class={`px-2.5 py-0.5 rounded-full text-xs font-medium ${statusColor}`} title={`Status: ${event.status}`}>
       {statusLabel}
     </span>
   </div>
