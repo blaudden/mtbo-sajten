@@ -15,7 +15,7 @@
  * Only years >= MIN_YEAR are imported.
  */
 
-import { execSync } from 'child_process';
+import { execSync, execFileSync } from 'child_process';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -214,7 +214,7 @@ try {
   if (shouldCommit) {
     console.log('\nCommitting changes...');
     try {
-      execSync(`git add ${DEST_DIR}`, { stdio: 'inherit' });
+      execFileSync('git', ['add', DEST_DIR], { stdio: 'inherit' });
       execSync('git commit -m "chore: import events from scraper"', { stdio: 'inherit' });
       console.log('✓ Committed changes');
     } catch {

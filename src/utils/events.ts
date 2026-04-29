@@ -579,11 +579,13 @@ export function getSmartIconInfo(urlStr: string, title?: string, docType?: strin
     const url = new URL(urlStr, 'https://dummy.com'); // handle relative paths safely
     const hostname = url.hostname.toLowerCase();
 
-    if (hostname.endsWith('livelox.com')) return { type: 'image', source: 'livelox' };
-    if (hostname.endsWith('eventor.orientering.se')) return { type: 'image', source: 'eventor-swe' };
-    if (hostname.endsWith('eventor.orienteering.org')) return { type: 'image', source: 'eventor-iof' };
-    if (hostname.endsWith('eventor.orientering.no')) return { type: 'image', source: 'eventor-nor' };
-    if (hostname.endsWith('winsplits.se') || hostname.endsWith('obasen.orientering.se'))
+    const matchesHost = (host: string, domain: string) => host === domain || host.endsWith('.' + domain);
+
+    if (matchesHost(hostname, 'livelox.com')) return { type: 'image', source: 'livelox' };
+    if (matchesHost(hostname, 'eventor.orientering.se')) return { type: 'image', source: 'eventor-swe' };
+    if (matchesHost(hostname, 'eventor.orienteering.org')) return { type: 'image', source: 'eventor-iof' };
+    if (matchesHost(hostname, 'eventor.orientering.no')) return { type: 'image', source: 'eventor-nor' };
+    if (matchesHost(hostname, 'winsplits.se') || matchesHost(hostname, 'obasen.orientering.se'))
       return { type: 'icon', name: 'tabler:clock' };
   } catch {
     // ignore
