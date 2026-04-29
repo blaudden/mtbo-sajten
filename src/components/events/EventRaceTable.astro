@@ -21,35 +21,29 @@ const raceHeadingText = raceCount === 1 ? raceTypeSingular : `${raceTypePlural} 
 
 {
   raceCount > 1 && (
-    <div class="mb-8">
-      <h2 class="text-xl font-semibold mb-4 dark:text-white">{raceHeadingText}</h2>
+    <div class="mb-10">
+      <h2 class="text-2xl font-bold mb-6 font-heading text-default">{raceHeadingText}</h2>
 
       {/* Desktop table */}
       <div class="hidden md:block overflow-x-auto">
         <table class="w-full text-left">
           <thead>
-            <tr class="border-b-2 border-gray-200 dark:border-gray-600">
-              <th class="py-2 px-3 text-xs font-semibold uppercase tracking-wider text-muted dark:text-slate-400">#</th>
-              <th class="py-2 px-3 text-xs font-semibold uppercase tracking-wider text-muted dark:text-slate-400">
-                Datum
-              </th>
-              <th class="py-2 px-3 text-xs font-semibold uppercase tracking-wider text-muted dark:text-slate-400">
-                {raceTypeSingular}
-              </th>
-              <th class="py-2 px-3 text-xs font-semibold uppercase tracking-wider text-muted dark:text-slate-400 text-center">
-                Distans
-              </th>
+            <tr class="border-b-2 border-gray-200 dark:border-gray-700">
+              <th class="py-3 px-4 text-xs font-bold uppercase tracking-widest text-muted">#</th>
+              <th class="py-3 px-4 text-xs font-bold uppercase tracking-widest text-muted">Datum</th>
+              <th class="py-3 px-4 text-xs font-bold uppercase tracking-widest text-muted">{raceTypeSingular}</th>
+              <th class="py-3 px-4 text-xs font-bold uppercase tracking-widest text-muted text-center">Distans</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody class="divide-y divide-gray-100 dark:divide-gray-800">
             {event.races.map((race) => (
-              <tr class="border-b border-gray-100 dark:border-gray-700/50">
-                <td class="py-2 px-3 text-sm text-muted dark:text-slate-400">{race.race_number}</td>
-                <td class="py-2 px-3 text-sm text-muted dark:text-slate-400 whitespace-nowrap">
+              <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-800/30 transition-colors">
+                <td class="py-3 px-4 text-sm text-muted">{race.race_number}</td>
+                <td class="py-3 px-4 text-sm text-muted whitespace-nowrap">
                   {formatRaceDate(race.datetimez, { includeYear: false })}
                 </td>
-                <td class="py-2 px-3 text-sm text-gray-900 dark:text-white font-medium">{race.name || event.name}</td>
-                <td class="py-2 px-3 text-center">
+                <td class="py-3 px-4 text-sm text-default font-semibold">{race.name || event.name}</td>
+                <td class="py-3 px-4 text-center">
                   <DisciplineBadge discipline={race.discipline} />
                 </td>
               </tr>
@@ -59,15 +53,13 @@ const raceHeadingText = raceCount === 1 ? raceTypeSingular : `${raceTypePlural} 
       </div>
 
       {/* Mobile race cards */}
-      <div class="md:hidden space-y-2">
+      <div class="md:hidden space-y-3">
         {event.races.map((race) => (
-          <div class="border border-gray-100 dark:border-gray-700/50 rounded-lg p-3">
-            <div class="flex items-center justify-between">
+          <div class="border border-gray-200 dark:border-gray-700 rounded-xl p-4 bg-white dark:bg-slate-900 shadow-sm">
+            <div class="flex items-start justify-between gap-2">
               <div>
-                <p class="text-sm font-medium dark:text-white">{race.name || event.name}</p>
-                <p class="text-xs text-muted dark:text-slate-400 mt-0.5">
-                  {formatRaceDate(race.datetimez, { includeYear: false })}
-                </p>
+                <p class="text-sm font-bold text-default">{race.name || event.name}</p>
+                <p class="text-xs text-muted mt-1">{formatRaceDate(race.datetimez, { includeYear: false })}</p>
               </div>
               <DisciplineBadge discipline={race.discipline} />
             </div>

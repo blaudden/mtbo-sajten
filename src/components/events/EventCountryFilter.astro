@@ -58,11 +58,11 @@ const hasSweden = countries.includes('SWE');
   @reference "../../assets/styles/tailwind.css";
 
   .filter-btn {
-    @apply text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white;
+    @apply text-muted hover:text-default hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200;
   }
 
   .filter-btn.active {
-    @apply bg-white dark:bg-gray-700 text-primary dark:text-white shadow-sm;
+    @apply bg-primary text-white shadow-sm hover:bg-primary/90 hover:text-white;
   }
 </style>
 

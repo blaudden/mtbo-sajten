@@ -150,8 +150,8 @@ const yearTabs = [...availableYears].reverse();
               href="/events"
               class={`px-3 py-1.5 text-sm font-medium rounded-lg transition-colors ${
                 pageType === 'landing'
-                  ? 'bg-primary text-white'
-                  : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800'
+                  ? 'bg-primary text-white shadow-sm'
+                  : 'text-muted hover:text-default hover:bg-gray-100 dark:hover:bg-gray-800'
               }`}
             >
               <Icon name="tabler:calendar" class="w-4 h-4 inline-block mr-1 -mt-0.5" />
@@ -162,8 +162,8 @@ const yearTabs = [...availableYears].reverse();
                 href={`/events/${y}`}
                 class={`px-3 py-1.5 text-sm font-medium rounded-lg transition-colors ${
                   pageType === 'year' && year === y
-                    ? 'bg-primary text-white'
-                    : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800'
+                    ? 'bg-primary text-white shadow-sm'
+                    : 'text-muted hover:text-default hover:bg-gray-100 dark:hover:bg-gray-800'
                 }`}
               >
                 {y}
