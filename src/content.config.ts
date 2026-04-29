@@ -4,7 +4,7 @@ import { glob } from 'astro/loaders';
 import fs from 'node:fs';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
-import type { ScraperEvent } from '../types/events';
+import type { ScraperEvent } from './types/events';
 
 const postCollection = defineCollection({
   loader: glob({ base: 'src/content/posts/', pattern: ['**/*.md', '**/*.mdx', '**/*.mdoc'] }),
