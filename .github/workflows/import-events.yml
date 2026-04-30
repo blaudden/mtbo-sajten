@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: "import-events-${{ github.ref || github.event.workflow_dispatch?.actor || github.event.client_payload?.id }}"
+  group: "import-events-${{ github.ref || (github.event.workflow_dispatch && github.event.workflow_dispatch.actor) || (github.event.client_payload && github.event.client_payload.id) }}"
   cancel-in-progress: true
 
 jobs:
