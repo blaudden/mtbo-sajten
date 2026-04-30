@@ -5,6 +5,10 @@ on:
     types: [scraper-update]
   workflow_dispatch:
 
+concurrency:
+  group: "import-events-${{ github.ref || github.event.workflow_dispatch?.actor || github.event.client_payload?.id }}"
+  cancel-in-progress: true
+
 jobs:
   import-events:
     runs-on: ubuntu-latest

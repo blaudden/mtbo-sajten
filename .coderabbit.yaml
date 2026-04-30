@@ -1,10 +1,10 @@
 # yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
 language: "en-US"
 tone_instructions: |
-  Be professional and concise. 
-  Group related suggestions for the same file into a single coherent comment. 
-  Focus on logic, security, and performance. 
-  Do not comment on formatting or style issues that are handled by Prettier/Stylelint.
+  Be professional and concise.
+  Group related suggestions for the same file into a single coherent comment.
+  Focus on logic, security, and performance.
+  Do not comment on formatting or style issues handled by Prettier/Stylelint.
 
 reviews:
   profile: "chill"
@@ -16,4 +16,4 @@ reviews:
     - path: "scripts/**"
       instructions: "These are build-time scripts. Focus on stability and data integrity."
     - path: "src/components/**"
-      instructions: "Ensure styling consistency and proper use of Astro components."
+      instructions: "Ensure functional consistency and proper use of Astro components. Do not comment on formatting or CSS style issues handled by Prettier/Stylelint."
