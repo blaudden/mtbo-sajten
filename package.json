@@ -30,6 +30,7 @@
     "optimize-images": "node scripts/optimize-images.mjs",
     "validate:images": "node scripts/validate-images.mjs",
     "submit:indexnow": "node scripts/submit-indexnow.js",
+    "import:events": "node scripts/import-events.mjs",
     "fetch-youtube": "tsx scripts/fetch-youtube.ts",
     "prepare": "husky"
   },
@@ -93,7 +94,8 @@
     "tailwindcss": "^4.2.4",
     "tsx": "^4.21.0",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.59.0"
+    "typescript-eslint": "^8.59.0",
+    "sharp": "^0.34.5"
   },
   "lint-staged": {
     "*.{js,mjs,ts,tsx,astro}": [

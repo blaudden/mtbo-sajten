@@ -1,0 +1,53 @@
+---
+/**
+ * Documents section for event detail page.
+ */
+import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
+import { resolveRelativeUrl, getSmartIconInfo } from '~/utils/events';
+import type { ScraperEvent } from '~/types/events';
+import liveloxIcon from '~/assets/images/livelox-icon.png';
+
+interface Props {
+  event: ScraperEvent;
+}
+
+const { event } = Astro.props;
+
+// Filter documents that are useful to show
+const documents = (event.documents || []).filter((d) => d.type !== 'EmbargoMap' || d.url.startsWith('http'));
+---
+
+{
+  documents.length > 0 && (
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-4 dark:text-white">Dokument</h2>
+      <ul class="space-y-2">
+        {documents.map((doc) => {
+          const resolvedUrl = resolveRelativeUrl(doc.url, event);
+          const iconInfo = getSmartIconInfo(resolvedUrl, doc.title, doc.type);
+          const isLivelox = iconInfo.type === 'image' && iconInfo.source === 'livelox';
+
+          return (
+            <li>
+              <a
+                href={resolvedUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 text-sm text-primary hover:underline"
+              >
+                {isLivelox ? (
+                  <Image src={liveloxIcon} alt="Livelox" class="w-4 h-4 object-contain" />
+                ) : (
+                  <Icon name="tabler:file-text" class="w-4 h-4" />
+                )}
+                {doc.title}
+                {doc.type === 'Bulletin' && <span class="text-xs text-muted dark:text-slate-500">({doc.type})</span>}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  )
+}

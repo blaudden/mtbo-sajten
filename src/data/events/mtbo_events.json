@@ -1,0 +1,127 @@
+{
+  "schema_version": "2.0",
+  "last_scraped_at": "2026-04-28T19:36:13.777136+00:00",
+  "data_root": "data/events",
+  "partitions": {
+    "2010": {
+      "path": "data/events/2010/events.json",
+      "count": 39,
+      "last_updated_at": "2026-03-14T06:47:47.382746+00:00"
+    },
+    "2011": {
+      "path": "data/events/2011/events.json",
+      "count": 69,
+      "last_updated_at": "2026-03-14T06:47:47.382746+00:00"
+    },
+    "2025": {
+      "path": "data/events/2025/events.json",
+      "count": 139,
+      "last_updated_at": "2026-03-14T06:47:47.382746+00:00"
+    },
+    "2026": {
+      "path": "data/events/2026/events.json",
+      "count": 80,
+      "last_updated_at": "2026-04-28T19:35:11.079289+00:00"
+    },
+    "2027": {
+      "path": "data/events/2027/events.json",
+      "count": 16,
+      "last_updated_at": "2026-04-28T19:36:13.777136+00:00"
+    },
+    "2012": {
+      "path": "data/events/2012/events.json",
+      "count": 70,
+      "last_updated_at": "2026-03-14T06:47:47.382746+00:00"
+    },
+    "2013": {
+      "path": "data/events/2013/events.json",
+      "count": 75,
+      "last_updated_at": "2026-03-14T06:47:47.382746+00:00"
+    },
+    "2014": {
+      "path": "data/events/2014/events.json",
+      "count": 85,
+      "last_updated_at": "2026-03-14T06:47:47.382746+00:00"
+    },
+    "2015": {
+      "path": "data/events/2015/events.json",
+      "count": 84,
+      "last_updated_at": "2026-03-14T06:47:47.382746+00:00"
+    },
+    "2016": {
+      "path": "data/events/2016/events.json",
+      "count": 103,
+      "last_updated_at": "2026-03-14T06:47:47.382746+00:00"
+    },
+    "2017": {
+      "path": "data/events/2017/events.json",
+      "count": 123,
+      "last_updated_at": "2026-03-14T06:47:47.382746+00:00"
+    },
+    "2018": {
+      "path": "data/events/2018/events.json",
+      "count": 131,
+      "last_updated_at": "2026-03-14T06:47:47.382746+00:00"
+    },
+    "2019": {
+      "path": "data/events/2019/events.json",
+      "count": 122,
+      "last_updated_at": "2026-03-14T06:47:47.382746+00:00"
+    },
+    "2020": {
+      "path": "data/events/2020/events.json",
+      "count": 145,
+      "last_updated_at": "2026-03-14T06:47:47.382746+00:00"
+    },
+    "2021": {
+      "path": "data/events/2021/events.json",
+      "count": 113,
+      "last_updated_at": "2026-03-14T06:47:47.382746+00:00"
+    },
+    "2022": {
+      "path": "data/events/2022/events.json",
+      "count": 123,
+      "last_updated_at": "2026-03-14T06:47:47.382746+00:00"
+    },
+    "2023": {
+      "path": "data/events/2023/events.json",
+      "count": 110,
+      "last_updated_at": "2026-03-14T06:47:47.382746+00:00"
+    },
+    "2024": {
+      "path": "data/events/2024/events.json",
+      "count": 98,
+      "last_updated_at": "2026-03-14T06:47:47.382746+00:00"
+    }
+  },
+  "sources": {
+    "IOF": {
+      "country_code": "IOF",
+      "name": "IOF Eventor",
+      "url": "https://eventor.orienteering.org",
+      "count": 421,
+      "last_updated_at": "2026-04-25T22:13:52.238224+00:00"
+    },
+    "MAN": {
+      "country_code": "MAN",
+      "name": "Manual Events",
+      "url": "",
+      "count": 2,
+      "last_updated_at": "2026-02-07T22:31:55.164775+00:00"
+    },
+    "SWE": {
+      "country_code": "SWE",
+      "name": "Swedish Eventor",
+      "url": "https://eventor.orientering.se",
+      "count": 1223,
+      "last_updated_at": "2026-04-28T19:36:13.777136+00:00"
+    },
+    "NOR": {
+      "country_code": "NOR",
+      "name": "Norwegian Eventor",
+      "url": "https://eventor.orientering.no",
+      "count": 79,
+      "last_updated_at": "2026-04-12T19:43:08.816284+00:00"
+    }
+  }
+}

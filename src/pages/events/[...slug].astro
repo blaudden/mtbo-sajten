@@ -1,0 +1,225 @@
+---
+/**
+ * Catch-all route handler for /events/
+ *
+ * Routes:
+ *   /events/           → Landing page (current window: -1mo to +12mo)
+ *   /events/2026/      → Year listing
+ *   /events/swe-54359/ → Event detail
+ */
+import Layout from '~/layouts/PageLayout.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import EventRaceListing from '~/components/events/EventRaceListing.astro';
+import EventDetail from '~/components/events/EventDetail.astro';
+import { Icon } from 'astro-icon/components';
+
+import type { ScraperEvent, RaceWithEvent, EventPageType } from '~/types/events';
+import type { MetaData } from '~/types';
+import {
+  getAvailableYears,
+  loadAllEvents,
+  getRacesForYear,
+  getRacesForLanding,
+  getEventBySlug,
+  resolveCountryCode,
+  getOrganiserName,
+  formatEventDateRange,
+  countryCodeToName,
+} from '~/utils/events';
+import { generateEventJsonLd } from '~/utils/jsonLd';
+
+interface EventPath {
+  params: { slug: string | undefined };
+  props: {
+    pageType: EventPageType;
+    year?: number;
+    eventSlug?: string;
+  };
+}
+
+export async function getStaticPaths() {
+  const availableYears = getAvailableYears();
+  const allEvents = await loadAllEvents();
+
+  const paths: EventPath[] = [];
+
+  // Landing page: /events/
+  paths.push({
+    params: { slug: undefined },
+    props: { pageType: 'landing' },
+  });
+
+  // Year pages: /events/2026/
+  for (const year of availableYears) {
+    paths.push({
+      params: { slug: String(year) },
+      props: {
+        pageType: 'year',
+        year,
+      },
+    });
+  }
+
+  // Event detail pages: /events/swe-54359/
+  for (const event of allEvents) {
+    const slug = event.slug;
+    paths.push({
+      params: { slug },
+      props: {
+        pageType: 'detail',
+        eventSlug: slug,
+      },
+    });
+  }
+
+  return paths;
+}
+
+const { pageType, year, eventSlug } = Astro.props;
+const availableYears = getAvailableYears();
+
+// --- Resolve page data ---
+let event: ScraperEvent | undefined;
+let races: RaceWithEvent[] = [];
+let metadata: MetaData = {};
+let jsonLd: Record<string, unknown> | null = null;
+let subtitle: string | undefined;
+
+if (pageType === 'landing') {
+  const landingData = await getRacesForLanding();
+  races = landingData.races;
+
+  subtitle = formatEventDateRange(
+    landingData.from.toISOString().split('T')[0],
+    landingData.to.toISOString().split('T')[0]
+  );
+
+  metadata = {
+    title: 'MTBO Tävlingskalender',
+    description: 'Kommande och nyligen genomförda MTBO-tävlingar i Sverige och internationellt.',
+    openGraph: { type: 'website' },
+  };
+} else if (pageType === 'year' && year) {
+  races = await getRacesForYear(year);
+
+  // Create a subtitle for the year range (Jan 1 to Dec 31)
+  subtitle = formatEventDateRange(`${year}-01-01`, `${year}-12-31`);
+
+  metadata = {
+    title: `MTBO Tävlingskalender ${year}`,
+    description: `Alla mountainbikeorienteringstävlingar ${year}. Se datum, arrangörer och anmälningslänkar.`,
+    openGraph: { type: 'website' },
+  };
+} else if (pageType === 'detail' && eventSlug) {
+  event = await getEventBySlug(eventSlug);
+
+  if (event) {
+    const country = resolveCountryCode(event);
+    const countryName = countryCodeToName(country);
+    const organiser = getOrganiserName(event);
+    const dateRange = formatEventDateRange(event.start_time, event.end_time);
+
+    metadata = {
+      title: `${event.name} | MTBO Tävlingskalender`,
+      description: `${event.name} — ${dateRange}. ${organiser ? 'Arrangör: ' + organiser + '.' : ''} Mountainbikeorientering i ${countryName}.`,
+      openGraph: {
+        type: 'website',
+        images: [{ url: new URL(`/og-images/events/${event.slug}.png`, Astro.site).toString() }],
+      },
+    };
+
+    jsonLd = generateEventJsonLd(event);
+  }
+}
+
+// Years for tab navigation, reversed (newest first)
+const yearTabs = [...availableYears].reverse();
+---
+
+<Layout metadata={metadata}>
+  {/* JSON-LD for event detail pages */}
+  {jsonLd && <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+
+  <WidgetWrapper containerClass="max-w-7xl mx-auto pt-4 md:pt-6 lg:pt-8">
+    {/* Navigation: year tabs */}
+    {
+      (pageType === 'landing' || pageType === 'year') && (
+        <nav class="mb-6" aria-label="Välj år">
+          <div class="flex flex-wrap items-center gap-2">
+            <a
+              href="/events"
+              class={`px-3 py-1.5 text-sm font-medium rounded-lg transition-colors ${
+                pageType === 'landing'
+                  ? 'bg-primary text-white shadow-sm'
+                  : 'text-muted hover:text-default hover:bg-gray-100 dark:hover:bg-gray-800'
+              }`}
+            >
+              <Icon name="tabler:calendar" class="w-4 h-4 inline-block mr-1 -mt-0.5" />
+              Aktuella
+            </a>
+            {yearTabs.map((y) => (
+              <a
+                href={`/events/${y}`}
+                class={`px-3 py-1.5 text-sm font-medium rounded-lg transition-colors ${
+                  pageType === 'year' && year === y
+                    ? 'bg-primary text-white shadow-sm'
+                    : 'text-muted hover:text-default hover:bg-gray-100 dark:hover:bg-gray-800'
+                }`}
+              >
+                {y}
+              </a>
+            ))}
+          </div>
+        </nav>
+      )
+    }
+
+    {/* Back link for detail pages */}
+    {
+      pageType === 'detail' && (
+        <nav class="mb-6">
+          <a
+            href="/events"
+            class="inline-flex items-center gap-1.5 text-sm text-muted dark:text-slate-400 hover:text-primary transition-colors"
+          >
+            <Icon name="tabler:arrow-left" class="w-4 h-4" />
+            Tillbaka till tävlingskalendern
+          </a>
+        </nav>
+      )
+    }
+
+    {/* Page content */}
+    {
+      pageType === 'landing' && (
+        <EventRaceListing races={races} showCountryFilter={true} title="MTBO Tävlingskalender" subtitle={subtitle} />
+      )
+    }
+
+    {
+      pageType === 'year' && (
+        <EventRaceListing
+          races={races}
+          showCountryFilter={true}
+          title={`MTBO Tävlingskalender ${year}`}
+          subtitle={subtitle}
+        />
+      )
+    }
+
+    {pageType === 'detail' && event && <EventDetail event={event} />}
+
+    {
+      pageType === 'detail' && !event && (
+        <div class="text-center py-12">
+          <Icon name="tabler:alert-circle" class="w-12 h-12 mx-auto mb-3 text-gray-300" />
+          <h1 class="text-2xl font-bold mb-2 dark:text-white">Tävlingen hittades inte</h1>
+          <p class="text-muted dark:text-slate-400 mb-4">Kontrollera adressen och försök igen.</p>
+          <a href="/events" class="text-primary hover:underline">
+            Tillbaka till tävlingskalendern
+          </a>
+        </div>
+      )
+    }
+  </WidgetWrapper>
+</Layout>

@@ -1,0 +1,32 @@
+---
+/**
+ * Renders a discipline abbreviation badge (S, M, L, UL).
+ */
+import { disciplineAbbrev } from '~/utils/events';
+
+interface Props {
+  discipline: string;
+}
+
+const { discipline } = Astro.props;
+const abbrev = disciplineAbbrev(discipline);
+
+const colorClass: Record<string, string> = {
+  S: 'bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300',
+  M: 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300',
+  L: 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300',
+  UL: 'bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300',
+  MS: 'bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300',
+  R: 'bg-sky-100 text-sky-800 dark:bg-sky-900/30 dark:text-sky-300',
+  T: 'bg-gray-100 text-gray-600 dark:bg-gray-800/30 dark:text-gray-400',
+};
+
+const classes = colorClass[abbrev] || 'bg-gray-100 text-gray-600 dark:bg-gray-800/30 dark:text-gray-400';
+---
+
+<span
+  class={`inline-flex items-center justify-center w-8 h-6 rounded text-xs font-semibold tracking-wide ${classes}`}
+  title={discipline}
+>
+  {abbrev}
+</span>

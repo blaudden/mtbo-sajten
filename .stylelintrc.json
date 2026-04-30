@@ -15,7 +15,8 @@
           "utility",
           "custom-variant",
           "plugin",
-          "layer"
+          "layer",
+          "reference"
         ]
       }
     ],

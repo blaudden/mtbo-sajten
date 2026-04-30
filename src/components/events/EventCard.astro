@@ -1,0 +1,50 @@
+---
+/**
+ * Compact event card for embedding on other pages.
+ */
+import type { ScraperEvent } from '~/types/events';
+import { eventToSlug, resolveCountryCode, getOrganiserName, formatEventDateRange } from '~/utils/events';
+import DisciplineBadge from './DisciplineBadge.astro';
+import CountryFlag from './CountryFlag.astro';
+
+interface Props {
+  event: ScraperEvent;
+}
+
+const { event } = Astro.props;
+const slug = eventToSlug(event);
+const countryCode = resolveCountryCode(event);
+const organiser = getOrganiserName(event);
+const dateRange = formatEventDateRange(event.start_time, event.end_time);
+const detailUrl = `/events/${slug}`;
+const isCanceled = event.status === 'Canceled';
+const disciplines = [...new Set(event.races.map((r) => r.discipline))];
+---
+
+<a
+  href={detailUrl}
+  class={`group block border border-gray-100 dark:border-gray-700/50 rounded-xl p-5 hover:shadow-lg hover:border-primary/30 dark:hover:border-primary/30 transition-all duration-200 ${isCanceled ? 'opacity-60' : ''}`}
+>
+  <div class="flex items-start gap-3">
+    <div class="text-2xl mt-0.5">
+      <CountryFlag countryCode={countryCode} size="md" />
+    </div>
+    <div class="flex-1 min-w-0">
+      <h3
+        class={`text-sm font-semibold group-hover:text-primary transition-colors truncate ${isCanceled ? 'line-through text-muted' : 'text-gray-900 dark:text-white'}`}
+      >
+        {event.name}
+      </h3>
+      {isCanceled && <span class="text-xs text-red-500 font-medium uppercase">Inställd</span>}
+      <p class="text-xs text-muted dark:text-slate-400 mt-1">{dateRange}</p>
+      {organiser && <p class="text-xs text-muted dark:text-slate-500 mt-0.5 truncate">{organiser}</p>}
+      <div class="flex items-center gap-1.5 mt-2">
+        {disciplines.map((d) => <DisciplineBadge discipline={d} />)}
+        <span class="text-xs text-muted dark:text-slate-500 ml-1">
+          {event.races.length}
+          {event.races.length === 1 ? 'lopp' : 'lopp'}
+        </span>
+      </div>
+    </div>
+  </div>
+</a>

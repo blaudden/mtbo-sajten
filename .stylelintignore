@@ -3,3 +3,4 @@ node_modules/
 .astro/
 .cache/
 public/
+src/data/
