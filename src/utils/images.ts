@@ -1,6 +1,5 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import sharp from 'sharp';
 import type { ImageMetadata } from 'astro';
 import type { OpenGraph } from '@astrolib/seo';
 
@@ -81,6 +80,7 @@ export const adaptOpenGraphImages = async (
     return openGraph;
   }
 
+  const sharp = (await import('sharp')).default;
   const images = openGraph.images;
 
   const adaptedImages = await Promise.all(
