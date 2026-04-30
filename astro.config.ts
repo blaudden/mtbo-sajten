@@ -108,6 +108,16 @@ export default defineConfig({
   output: 'static',
   adapter: netlify({
     imageCDN: true,
+    excludeFiles: [
+      // Static OG images are served from CDN, not bundled into the SSR function
+      './dist/og-images/**/*',
+      // Sharp and its native Linux binaries are build-time only
+      './node_modules/sharp/**/*',
+      './node_modules/@img/sharp-linux-x64/**/*',
+      './node_modules/@img/sharp-linuxmusl-x64/**/*',
+      './node_modules/@img/sharp-libvips-linux-x64/**/*',
+      './node_modules/@img/sharp-libvips-linuxmusl-x64/**/*',
+    ],
   }),
   image: {},
   integrations: [
