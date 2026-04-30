@@ -25,7 +25,7 @@ import sharp from 'sharp';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = path.resolve(__dirname, '..');
 const DEST_DIR = path.join(PROJECT_ROOT, 'src', 'data', 'events');
-const OG_DEST_DIR = path.join(PROJECT_ROOT, 'public', 'images', 'events', 'og');
+const OG_DEST_DIR = path.join(PROJECT_ROOT, 'public', 'og-images', 'events');
 const TEMPLATE_PATH = path.join(PROJECT_ROOT, 'src', 'assets', 'images', 'event_og_template.png');
 const SCRAPER_REPO = 'https://github.com/blaudden/mtbo-scraper.git';
 const MIN_YEAR = 2022;
