@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Component, type ErrorInfo, type ReactNode, type FC } from 'react';
+import { useEffect, useState, Component, type ErrorInfo, type ReactNode, type FC } from 'react';
 import L from 'leaflet';
 import { MapContainer, TileLayer, Marker, Popup, Polygon, Polyline, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
