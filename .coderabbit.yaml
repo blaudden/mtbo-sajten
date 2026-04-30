@@ -1,5 +1,5 @@
 # yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
-language: "en-US"
+language: 'en-US'
 tone_instructions: |
   Be professional and concise.
   Group related suggestions for the same file into a single coherent comment.
@@ -7,13 +7,13 @@ tone_instructions: |
   Do not comment on formatting or style issues handled by Prettier/Stylelint.
 
 reviews:
-  profile: "chill"
+  profile: 'chill'
   path_filters:
-    - "!public/**"            # Ignore all assets, images, and static files
-    - "!src/data/**"           # Ignore all data/JSON files (including events)
-    - "!**/*.lock"             # Ignore lock files
+    - '!public/**' # Ignore all assets, images, and static files
+    - '!src/data/**' # Ignore all data/JSON files (including events)
+    - '!**/*.lock' # Ignore lock files
   path_instructions:
-    - path: "scripts/**"
-      instructions: "These are build-time scripts. Focus on stability and data integrity."
-    - path: "src/components/**"
-      instructions: "Ensure functional consistency and proper use of Astro components. Do not comment on formatting or CSS style issues handled by Prettier/Stylelint."
+    - path: 'scripts/**'
+      instructions: 'These are build-time scripts. Focus on stability and data integrity.'
+    - path: 'src/components/**'
+      instructions: 'Ensure functional consistency and proper use of Astro components. Do not comment on formatting or CSS style issues handled by Prettier/Stylelint.'

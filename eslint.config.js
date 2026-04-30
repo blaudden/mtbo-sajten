@@ -53,6 +53,6 @@ export default [
     },
   },
   {
-    ignores: ['dist', 'node_modules', '.github', 'types.generated.d.ts', '.astro', '.netlify'],
+    ignores: ['dist', 'node_modules', '.github', 'types.generated.d.ts', '.astro', '.netlify', 'public', 'src/data'],
   },
 ];

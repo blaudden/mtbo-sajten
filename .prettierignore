@@ -2,4 +2,7 @@ dist
 node_modules
 .github
 .changeset
-src/data/events
+.astro
+.cache
+public/
+src/data/
