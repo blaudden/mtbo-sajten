@@ -130,16 +130,15 @@ export const adaptOpenGraphImages = async (
               };
             } catch (e) {
               console.error('Sharp OG generation failed:', e);
-              // Fallback or error?
+              // Fallback to original
             }
           } else {
             console.warn('Source image file not found on disk:', inputPath);
           }
         }
 
-        // Fallback if not a local asset or processing failed (return original or empty?)
-        // If we can't optimize, we might just return empty to avoid broken links
-        return { url: '' };
+        // Return original image if it's not a local asset or processing failed
+        return image;
       }
 
       return { url: '' };
