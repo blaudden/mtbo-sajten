@@ -114,7 +114,7 @@ async function importData(scraperRoot) {
     // Generate OG images
     for (const event of data.events) {
       const slug = event.id.toLowerCase().replace(/_/g, '-');
-      const ogPath = path.join(OG_DEST_DIR, `${slug}.png`);
+      const ogPath = path.join(OG_DEST_DIR, `${slug}.jpg`);
 
       if (!fs.existsSync(ogPath)) {
         try {
@@ -181,6 +181,7 @@ async function importData(scraperRoot) {
 
           await sharp(TEMPLATE_PATH)
             .composite([{ input: Buffer.from(svgText) }])
+            .jpeg({ quality: 80 })
             .toFile(ogPath);
         } catch (err) {
           console.error(`  ⚠ Failed to create OG image for ${slug}:`, err.message);

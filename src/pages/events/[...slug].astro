@@ -124,7 +124,7 @@ if (pageType === 'landing') {
       description: `${event.name} — ${dateRange}. ${organiser ? 'Arrangör: ' + organiser + '.' : ''} Mountainbikeorientering i ${countryName}.`,
       openGraph: {
         type: 'website',
-        images: [{ url: new URL(`/og-images/events/${event.slug}.png`, Astro.site).toString() }],
+        images: [{ url: new URL(`/og-images/events/${event.slug}.jpg`, Astro.site).toString() }],
       },
     };
 
