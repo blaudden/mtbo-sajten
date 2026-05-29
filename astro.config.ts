@@ -2,7 +2,7 @@ import path from 'path';
 import fs from 'fs';
 import yaml from 'js-yaml';
 import { fileURLToPath } from 'url';
-import { defineConfig } from 'astro/config';
+import { defineConfig, svgoOptimizer } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 import mdx from '@astrojs/mdx';
@@ -227,6 +227,6 @@ export default defineConfig({
       'https://docs.google.com/spreadsheets/d/1QotjDvD0y30I8_rSoVWtD_aypV8aoEL6/export?format=xlsx',
   },
   experimental: {
-    svgo: true,
+    svgOptimizer: svgoOptimizer(),
   },
 });
