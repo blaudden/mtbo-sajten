@@ -185,3 +185,31 @@
 .prose p.auto-quote {
   @apply italic text-gray-800 dark:text-gray-200 pl-4 my-4;
 }
+
+/* Leaflet Map Dark Mode Styles */
+.dark .leaflet-tile {
+  filter: brightness(0.55) saturate(0.8);
+  opacity: 0.8;
+}
+
+.dark .leaflet-container {
+  background: rgb(3 6 32) !important;
+}
+
+.dark .leaflet-bar a,
+.dark .leaflet-bar a:hover {
+  background-color: #1e293b !important;
+  color: #f1f5f9 !important;
+  border-bottom: 1px solid #334155 !important;
+}
+
+.dark .leaflet-control-zoom {
+  border: 1px solid #334155 !important;
+}
+
+.dark .leaflet-popup-content-wrapper,
+.dark .leaflet-popup-tip {
+  background: #1e293b !important;
+  color: #f1f5f9 !important;
+  box-shadow: 0 3px 14px rgb(0, 0, 0, 0.4) !important;
+}
