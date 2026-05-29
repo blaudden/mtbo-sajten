@@ -198,7 +198,7 @@ async function importData(scraperRoot) {
           const templatePath = getTemplateForEvent();
           await sharp(templatePath)
             .composite([{ input: Buffer.from(svgText) }])
-            .jpeg({ quality: 80 })
+            .jpeg({ quality: 90, mozjpeg: true })
             .toFile(ogPath);
         } catch (err) {
           console.error(`  ⚠ Failed to create OG image for ${slug}:`, err.message);
