@@ -1319,6 +1319,42 @@
           "published_time": "2026-03-08"
         },
         {
+          "type": "StartList",
+          "title": "Start Groups",
+          "url": "https://tictactiming.pt/eventos/2026/0523_EMTBOC/emtboc_elite_ranking_men_women.html",
+          "published_time": null
+        },
+        {
+          "type": "Other",
+          "title": "Team Leaders Meeting 24/05/2026",
+          "url": "/Documents/Event/10523/Team-Leaders-Meeting-24-05-2026",
+          "published_time": "2026-05-24"
+        },
+        {
+          "type": "StartList",
+          "title": "Starts Sprint",
+          "url": "https://www.tictactiming.pt/eventos/2026/0523_EMTBOC/Starts_e1.html",
+          "published_time": null
+        },
+        {
+          "type": "Other",
+          "title": "Team Leaders Meeting 25/05/2026",
+          "url": "/Documents/Event/10530/Team-Leaders-Meeting-25-05-2026",
+          "published_time": "2026-05-25"
+        },
+        {
+          "type": "Other",
+          "title": "Team Leaders Meeting 26/05/2026",
+          "url": "/Documents/Event/10541/Team-Leaders-Meeting-26-05-2026",
+          "published_time": "2026-05-26"
+        },
+        {
+          "type": "Other",
+          "title": "Team Leaders Meeting 27/05/2026",
+          "url": "/Documents/Event/10558/Team-Leaders-Meeting-27-05-2026",
+          "published_time": "2026-05-27"
+        },
+        {
           "type": "Bulletin",
           "title": "Bulletin 2",
           "url": "/Documents/Event/9014/Bulletin-2",
@@ -1352,7 +1388,32 @@
             "lng": -6.90612386689331
           },
           "areas": [],
-          "urls": [],
+          "urls": [
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=8931&groupBy=EventClass",
+              "title": "StartList",
+              "last_updated_at": "2026-05-29T21:27:51.899750+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/Show/8931",
+              "title": "ResultList",
+              "last_updated_at": "2026-05-29T21:27:51.899750+00:00"
+            },
+            {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/190834",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-05-29T21:27:51.899750+00:00"
+            },
+            {
+              "type": "LocalStartList",
+              "url": "data/events/2026/IOF_8557_startlist_1.yaml",
+              "title": null,
+              "last_updated_at": "2026-05-29T21:26:36.155669+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
@@ -1367,7 +1428,26 @@
           "night_or_day": null,
           "position": null,
           "areas": [],
-          "urls": [],
+          "urls": [
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=8932&groupBy=EventClass",
+              "title": "StartList",
+              "last_updated_at": "2026-05-29T21:27:51.899753+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/Show/8932",
+              "title": "ResultList",
+              "last_updated_at": "2026-05-29T21:27:51.899753+00:00"
+            },
+            {
+              "type": "LocalStartList",
+              "url": "data/events/2026/IOF_8557_startlist_2.yaml",
+              "title": null,
+              "last_updated_at": "2026-05-29T21:26:38.696653+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
@@ -1382,7 +1462,26 @@
           "night_or_day": null,
           "position": null,
           "areas": [],
-          "urls": [],
+          "urls": [
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=8933&groupBy=EventClass",
+              "title": "StartList",
+              "last_updated_at": "2026-05-29T21:27:51.899755+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/Show/8933",
+              "title": "ResultList",
+              "last_updated_at": "2026-05-29T21:27:51.899755+00:00"
+            },
+            {
+              "type": "LocalStartList",
+              "url": "data/events/2026/IOF_8557_startlist_3.yaml",
+              "title": null,
+              "last_updated_at": "2026-05-29T21:26:40.871517+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
@@ -1397,7 +1496,20 @@
           "night_or_day": null,
           "position": null,
           "areas": [],
-          "urls": [],
+          "urls": [
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=8934&groupBy=EventClass",
+              "title": "StartList",
+              "last_updated_at": "2026-05-29T21:27:51.899757+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/Show/8934",
+              "title": "ResultList",
+              "last_updated_at": "2026-05-29T21:27:51.899757+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
@@ -1488,6 +1600,30 @@
           "published_time": "2026-03-08"
         },
         {
+          "type": "Other",
+          "title": "Team Leaders Meeting 24/05/2026",
+          "url": "/Documents/Event/10524/Team-Leaders-Meeting-24-05-2026",
+          "published_time": "2026-05-24"
+        },
+        {
+          "type": "Other",
+          "title": "Team Leaders Meeting 25/05/2026",
+          "url": "/Documents/Event/10531/Team-Leaders-Meeting-25-05-2026",
+          "published_time": "2026-05-25"
+        },
+        {
+          "type": "Other",
+          "title": "Team Leaders Meeting 26/05/2026",
+          "url": "/Documents/Event/10542/Team-Leaders-Meeting-26-05-2026",
+          "published_time": "2026-05-26"
+        },
+        {
+          "type": "Other",
+          "title": "Team Leaders Meeting 27/05/2026",
+          "url": "/Documents/Event/10559/Team-Leaders-Meeting-27-05-2026",
+          "published_time": "2026-05-27"
+        },
+        {
           "type": "Bulletin",
           "title": "Bulletin 2",
           "url": "/Documents/Event/9016/Bulletin-2",
@@ -1521,11 +1657,34 @@
             "lng": -6.90612386689331
           },
           "areas": [],
-          "urls": [],
+          "urls": [
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=8927&groupBy=EventClass",
+              "title": "StartList",
+              "last_updated_at": "2026-05-29T21:27:51.899718+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=8927&groupBy=EventClass",
+              "title": "ResultList",
+              "last_updated_at": "2026-05-29T21:27:51.899718+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
+          "start_counts": {
+            "Men 20": 39,
+            "Women 20": 26,
+            "Men 17": 33,
+            "Women 17": 23
+          },
+          "result_counts": {
+            "Men 20": 39,
+            "Women 20": 26,
+            "Men 17": 33,
+            "Women 17": 23
+          },
           "fingerprints": []
         },
         {
@@ -1536,11 +1695,34 @@
           "night_or_day": null,
           "position": null,
           "areas": [],
-          "urls": [],
+          "urls": [
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=8928&groupBy=EventClass",
+              "title": "StartList",
+              "last_updated_at": "2026-05-29T21:27:51.899720+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=8928&groupBy=EventClass",
+              "title": "ResultList",
+              "last_updated_at": "2026-05-29T21:27:51.899720+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
+          "start_counts": {
+            "Men 20": 39,
+            "Women 20": 27,
+            "Men 17": 33,
+            "Women 17": 24
+          },
+          "result_counts": {
+            "Men 20": 39,
+            "Women 20": 27,
+            "Men 17": 33,
+            "Women 17": 24
+          },
           "fingerprints": []
         },
         {
@@ -1551,11 +1733,34 @@
           "night_or_day": null,
           "position": null,
           "areas": [],
-          "urls": [],
+          "urls": [
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=8929&groupBy=EventClass",
+              "title": "StartList",
+              "last_updated_at": "2026-05-29T21:27:51.899722+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=8929&groupBy=EventClass",
+              "title": "ResultList",
+              "last_updated_at": "2026-05-29T21:27:51.899722+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
+          "start_counts": {
+            "Men 20": 39,
+            "Women 20": 27,
+            "Men 17": 33,
+            "Women 17": 24
+          },
+          "result_counts": {
+            "Men 20": 39,
+            "Women 20": 27,
+            "Men 17": 33,
+            "Women 17": 24
+          },
           "fingerprints": []
         },
         {
@@ -1566,7 +1771,20 @@
           "night_or_day": null,
           "position": null,
           "areas": [],
-          "urls": [],
+          "urls": [
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=8930&groupBy=EventClass",
+              "title": "StartList",
+              "last_updated_at": "2026-05-29T21:27:51.899723+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=8930&groupBy=EventClass",
+              "title": "ResultList",
+              "last_updated_at": "2026-05-29T21:27:51.899723+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
@@ -4156,7 +4374,49 @@
           "name": "enc:BBoEAG0cERsPFwAcQwcH"
         }
       ],
-      "classes": [],
+      "classes": [
+        "D10",
+        "D12",
+        "D14",
+        "D16",
+        "D20",
+        "D21",
+        "D21 Kort",
+        "D40",
+        "D45",
+        "D50",
+        "D55",
+        "D60",
+        "D65",
+        "D70",
+        "D75",
+        "D80",
+        "Etappstart Lätt lång",
+        "Etappstart Lätt mellan",
+        "Etappstart Mycket lätt kort",
+        "Etappstart Svår kort",
+        "Etappstart Svår lång",
+        "Etappstart Svår mellan",
+        "H10",
+        "H12",
+        "H14",
+        "H16",
+        "H20",
+        "H21",
+        "H21 Kort",
+        "H40",
+        "H45",
+        "H50",
+        "H55",
+        "H60",
+        "H65",
+        "H70",
+        "H75",
+        "H80",
+        "Lätt lång",
+        "Lätt mellan",
+        "Svår mellan"
+      ],
       "urls": [
         {
           "type": "Path",
@@ -5105,37 +5365,37 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/120772/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54359/70fd9f17-c319-4471-b057-66380ad39a74/Inbjudan.pdf",
           "published_time": "2026-04-03"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/122244/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54359/d858aae8-3c34-4ccb-af4f-dd8ab93353f3/PM.pdf",
           "published_time": "2026-05-08"
         },
         {
           "type": "Invitation",
           "title": "Invitation",
-          "url": "/Documents/Event/120794/Invitation",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54359/93f21f1a-62b2-4b3c-84ec-936fbdad21a2/Invitation.pdf",
           "published_time": "2026-04-04"
         },
         {
           "type": "Other",
           "title": "Arenakarta",
-          "url": "/Documents/Event/122261/Arenakarta",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54359/3e1fc85b-b472-4aad-a295-ff3665169fdc/Arenakarta.pdf",
           "published_time": "2026-05-08"
         },
         {
           "type": "Bulletin",
           "title": "Kart PM",
-          "url": "/Documents/Event/122290/Kart-PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54359/2af15945-79ae-409c-ac8d-4e0c706af104/Kart-PM.pdf",
           "published_time": "2026-05-08"
         },
         {
           "type": "Bulletin",
           "title": "Map PM",
-          "url": "/Documents/Event/122291/Map-PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54359/3b93d3f7-4a93-4d3b-8bf5-1b3698cd1087/Map-PM.pdf",
           "published_time": "2026-05-08"
         }
       ],
@@ -5590,25 +5850,25 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/120773/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54361/279fef86-4128-4f0c-a634-130ef17a0299/Inbjudan.pdf",
           "published_time": "2026-04-03"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/122245/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54361/0cfbe876-845c-4e8a-8a50-ac44f85264c3/PM.pdf",
           "published_time": "2026-05-08"
         },
         {
           "type": "Invitation",
           "title": "Invitation",
-          "url": "/Documents/Event/120795/Invitation",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54361/de85965b-fde4-4a23-9c72-9f3d99e1d353/Invitation.pdf",
           "published_time": "2026-04-04"
         },
         {
           "type": "Other",
           "title": "Arenakarta",
-          "url": "/Documents/Event/122262/Arenakarta",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54361/49f7c352-5512-4a39-a0a9-91b651a33f46/Arenakarta.pdf",
           "published_time": "2026-05-08"
         }
       ],
@@ -6304,17 +6564,23 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/121846/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57105/09dc0d3b-ef74-4d18-a327-6f64da17a544/Inbjudan.pdf",
           "published_time": "2026-04-28"
         },
         {
           "type": "Invitation",
           "title": "Invitation",
-          "url": "/Documents/Event/121853/Invitation",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57105/4ebcfc65-709d-4068-817d-3f28496b70bd/Invitation.pdf",
           "published_time": "2026-04-28"
+        },
+        {
+          "type": "Bulletin",
+          "title": "PM Boende",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57105/b3a24927-1407-453c-968b-e9f625506c4a/PM-Boende.pdf",
+          "published_time": "2026-05-24"
         }
       ],
-      "information": "2026-05-28: Inbjudan publicerad\n2026-03-25: Deltagande i Uppsala möte den 25–26 april är tillåtet, under förutsättning att inget försök till rekognosering av MTBO-terrängen görs.\n2026-05-12 Avlyst område utökat. Norbyvägen tillåten.",
+      "information": "2026-05-24: Boende PM publicerad\n2026-05-12: Avlyst område utökat. Norbyvägen tillåten.\n2026-04-28: Inbjudan publicerad\n2026-03-25: Deltagande i Uppsala möte den 25–26 april är tillåtet, under förutsättning att inget försök till rekognosering av MTBO-terrängen görs.",
       "region": "Uppland",
       "punching_system": "Sportident",
       "races": [
@@ -7035,6 +7301,10 @@
           "name": "Lars Pontén"
         },
         {
+          "role": "Course setter",
+          "name": "Lars Pontén"
+        },
+        {
           "role": "Event controller",
           "name": "Patrik Svedberg"
         }
@@ -7098,17 +7368,23 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/121848/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57107/9831994a-a904-40d0-a15a-46965ba92231/Inbjudan.pdf",
           "published_time": "2026-04-28"
         },
         {
           "type": "Invitation",
           "title": "Invitation",
-          "url": "/Documents/Event/121851/Invitation",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57107/9ed84974-f345-4f6d-9b32-b42f3bf4103d/Invitation.pdf",
           "published_time": "2026-04-28"
+        },
+        {
+          "type": "Bulletin",
+          "title": "Boende PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57107/6dedb455-d6a2-4acf-a86a-6fe94cbfeae8/Boende-PM.pdf",
+          "published_time": "2026-05-24"
         }
       ],
-      "information": "2026-05-28: Inbjudan publicerad\n2026-03-25: Deltagande i Uppsala möte den 25–26 april är tillåtet, under förutsättning att inget försök till rekognosering av MTBO-terrängen görs.",
+      "information": "2026-05-24: Boende PM publicerad\n2026-04-28: Inbjudan publicerad\n2026-03-25: Deltagande i Uppsala möte den 25–26 april är tillåtet, under förutsättning att inget försök till rekognosering av MTBO-terrängen görs.",
       "region": "Uppland",
       "punching_system": "Sportident",
       "races": [
@@ -7627,7 +7903,7 @@
         {
           "type": "Other",
           "title": "ÖVIKSSERIEN 2026",
-          "url": "/Documents/Event/120625/-VIKSSERIEN-2026",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57478/1c15625c-6a3c-4eb7-bfd6-61836d3e6eb9/-VIKSSERIEN-2026.pdf",
           "published_time": "2026-03-31"
         }
       ],
@@ -7705,25 +7981,25 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/121365/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57925/23b8d777-50b7-4bbb-989c-96ec635b39ca/Inbjudan.pdf",
           "published_time": "2026-04-17"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/122153/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57925/44eeabb5-6cc5-4438-919f-b9625c3c5ba2/PM.pdf",
           "published_time": "2026-05-06"
         },
         {
           "type": "Other",
           "title": "Kartnorm MTBO",
-          "url": "/Documents/Event/120011/Kartnorm-MTBO",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57925/d3ade4a9-a10a-4cc4-ab52-5bc5fe1409c2/Kartnorm-MTBO.pdf",
           "published_time": "2026-03-09"
         },
         {
           "type": "Invitation",
           "title": "Inbjudan hela Närkeserien i MTBO",
-          "url": "/Documents/Event/120012/Inbjudan-hela-N-rkeserien-i-MTBO",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57925/bbe4e5d9-c858-48f1-a338-f28d16819515/Inbjudan-hela-N-rkeserien-i-MTBO.pdf",
           "published_time": "2026-03-09"
         },
         {
@@ -7874,19 +8150,19 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/121366/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57926/40be591b-b3ba-4d3e-b8b8-e1001e08a08f/Inbjudan.pdf",
           "published_time": "2026-04-17"
         },
         {
           "type": "Other",
           "title": "Kartnorm MTBO",
-          "url": "/Documents/Event/120014/Kartnorm-MTBO",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57926/5bec0ad9-fdf1-4abb-9847-bf53d4a0e2b0/Kartnorm-MTBO.pdf",
           "published_time": "2026-03-09"
         },
         {
           "type": "Invitation",
           "title": "Inbjudan hela Närkeserien i MTBO",
-          "url": "/Documents/Event/120015/Inbjudan-hela-N-rkeserien-i-MTBO",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57926/8319fcd3-eca0-4f06-9657-abc684eac885/Inbjudan-hela-N-rkeserien-i-MTBO.pdf",
           "published_time": "2026-03-09"
         }
       ],
@@ -7984,19 +8260,19 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/122556/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57927/f65f9871-cf04-4a61-a3c8-26a072a76112/Inbjudan.pdf",
           "published_time": "2026-05-13"
         },
         {
           "type": "Other",
           "title": "Kartnorm MTBO",
-          "url": "/Documents/Event/120016/Kartnorm-MTBO",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57927/eca8649a-7576-4c4f-a3c2-bc6d443a0fac/Kartnorm-MTBO.pdf",
           "published_time": "2026-03-09"
         },
         {
           "type": "Invitation",
           "title": "Inbjudan hela Närkeserien i MTBO",
-          "url": "/Documents/Event/120017/Inbjudan-hela-N-rkeserien-i-MTBO",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57927/63d7faf6-ffb8-4a52-877b-1a28b83d1332/Inbjudan-hela-N-rkeserien-i-MTBO.pdf",
           "published_time": "2026-03-09"
         }
       ],
@@ -8084,13 +8360,13 @@
         {
           "type": "Other",
           "title": "Kartnorm MTBO",
-          "url": "/Documents/Event/120019/Kartnorm-MTBO",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57928/7f30a3b3-bd67-41a5-b63c-98fae0028fe6/Kartnorm-MTBO.pdf",
           "published_time": "2026-03-09"
         },
         {
           "type": "Invitation",
           "title": "Inbjudan hela Närkeserien i MTBO",
-          "url": "/Documents/Event/120020/Inbjudan-hela-N-rkeserien-i-MTBO",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57928/3c560a3a-14b5-497e-8c0b-71995d435ec7/Inbjudan-hela-N-rkeserien-i-MTBO.pdf",
           "published_time": "2026-03-09"
         }
       ],
@@ -8175,13 +8451,13 @@
         {
           "type": "Other",
           "title": "Kartnorm MTBO",
-          "url": "/Documents/Event/120021/Kartnorm-MTBO",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57929/5c0ce3e2-656d-4a2d-b339-51ef8782e45a/Kartnorm-MTBO.pdf",
           "published_time": "2026-03-09"
         },
         {
           "type": "Invitation",
           "title": "Inbjudan hela Närkeserien i MTBO",
-          "url": "/Documents/Event/120022/Inbjudan-hela-N-rkeserien-i-MTBO",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57929/6b984a3a-400a-4f31-b477-1322e1d2aeea/Inbjudan-hela-N-rkeserien-i-MTBO.pdf",
           "published_time": "2026-03-09"
         }
       ],
@@ -8387,7 +8663,7 @@
         {
           "type": "Invitation",
           "title": "Huvudinbjudan MTBO Smålandskusten",
-          "url": "/Documents/Event/120204/Huvudinbjudan-MTBO-Sm-landskusten",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58115/a6f10714-5831-409a-888b-24920356889e/Huvudinbjudan-MTBO-Sm-landskusten.pdf",
           "published_time": "2026-03-16"
         }
       ],
@@ -8445,6 +8721,70 @@
               ]
             }
           ],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_58116",
+      "name": "MTBO Gotland 4",
+      "start_time": "2026-08-19",
+      "end_time": "2026-08-19",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Local"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "Visborgs OK",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Stefan Hellström"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:HgAHCUwdTUBWR11CVTQWCkEaAlwCHwg="
+        }
+      ],
+      "classes": [
+        "Kort",
+        "Lång",
+        "Mellan"
+      ],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/58116",
+          "title": null,
+          "last_updated_at": "2026-05-29T21:27:51.898931+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": "Gotland",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "MTBO Gotland 4",
+          "datetimez": "2026-08-19T17:00:00+02:00",
+          "discipline": "Long",
+          "night_or_day": "day",
+          "position": null,
+          "areas": [],
           "urls": [],
           "documents": [],
           "entry_counts": null,
@@ -9092,7 +9432,7 @@
         }
       ],
       "documents": [],
-      "information": "MTBO-träning i och runt Falun. Finns 3 alternativ - Nybörjare, Kort och Lång. Anmäl dig senast på måndagen för att vara säker på att få en karta. Cyklister som inte är med i OK Kåre betalar 40 kr, swish till OK Kåres nr: 1233999018.\nAlla är välkomna!\nSamlingsplats: p-platsen för Åsbobacken",
+      "information": "Träningen är inställd. Intresserade rekommenderas att delta på Kvarnsvedens träningstävling, Dalacup MTBO, tisdagen den 26/5 i Bäsna. Mycket fin cykel terräng!\nAnmäl dig på Eventor senast söndag kväll.",
       "region": "Dalarna",
       "punching_system": "other",
       "races": [
@@ -9107,14 +9447,7 @@
             "lng": 15.6372338162606
           },
           "areas": [],
-          "urls": [
-            {
-              "type": "EntryList",
-              "url": "/Entry?eventId=58161",
-              "title": "Enter",
-              "last_updated_at": "2026-04-12T19:43:08.816517+00:00"
-            }
-          ],
+          "urls": [],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
@@ -9176,10 +9509,10 @@
       ],
       "documents": [
         {
-          "type": "Bulletin",
-          "title": "PM",
-          "url": "/Documents/Event/122692/PM",
-          "published_time": "2026-05-17"
+          "type": "Invitation",
+          "title": "Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58162/6824d7b1-b281-44e1-97dc-73820a8bfc3a/Inbjudan.Pdf",
+          "published_time": "2026-05-29"
         }
       ],
       "information": null,
@@ -9203,6 +9536,12 @@
               "url": "/Entry?eventId=58162",
               "title": "Enter",
               "last_updated_at": "2026-04-12T19:43:08.816640+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=58162&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-05-29T21:27:51.899465+00:00"
             }
           ],
           "documents": [],
@@ -9341,6 +9680,7 @@
         "H45-",
         "Prova-på",
         "Öppen kort",
+        "Öppen lång",
         "Öppen mellan"
       ],
       "urls": [
@@ -9355,14 +9695,26 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/121561/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58165/697ea8c9-490b-4442-8d0f-ab65bd80ea89/Inbjudan.pdf",
           "published_time": "2026-04-27"
+        },
+        {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58165/130306f7-35bb-438b-9793-4bcba0f4a6bb/PM.Pdf",
+          "published_time": "2026-05-29"
         },
         {
           "type": "Invitation",
           "title": "Inbjudan Klubbmästerskap OK Skogsfalken",
-          "url": "/Documents/Event/121787/Inbjudan-Klubbm-sterskap-OK-Skogsfalken",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58165/d5dbfd53-9d11-4805-b7b2-66ea429acc37/Inbjudan-Klubbm-sterskap-OK-Skogsfalken.pdf",
           "published_time": "2026-04-27"
+        },
+        {
+          "type": "ResultList",
+          "title": "Liveresultat",
+          "url": "https://liveresultat.orientering.se/followfull.php?comp=36801&lang=sv",
+          "published_time": null
         }
       ],
       "information": null,
@@ -9383,22 +9735,59 @@
           "urls": [
             {
               "type": "EntryList",
-              "url": "/Entry?eventId=58165",
-              "title": "Enter",
-              "last_updated_at": "2026-04-25T22:13:52.238431+00:00"
-            },
-            {
-              "type": "EntryList",
               "url": "/Events/Entries?eventId=58165&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-04-25T22:13:52.238431+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=58165&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-05-29T21:27:51.899294+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
+          "start_counts": {
+            "H17-44": 9,
+            "H-16": 1,
+            "D45-": 6,
+            "H45-": 10,
+            "Öppen kort": 2,
+            "Öppen mellan": 1
+          },
           "result_counts": null,
-          "fingerprints": []
+          "fingerprints": [
+            "09518f6f711fe3491ab59e2cbfcc1d0eefb3666e24686f11492c07562c67b5cd",
+            "11e82ae933d4b961ae97b24c6cee4024fe42db8d4dc88b3eac0177b212db36b7",
+            "1376d176e4ed690bcf9a4bb0fdfcd2e7346da76357a79cddf64e16ea2c1d5df4",
+            "185659660bb724a08a381bf10a231cdca9f57a258c1e05557ec4887a46b5d687",
+            "369cb1b8950bdab208b8efdb7e73389adda53d59aed2660d0e14fbce15fba249",
+            "3ec078f67422af81a439712894d659da8c23da4b3051bcc45152b37a738f75a8",
+            "449e11591d5aa8107fd36c54a2302c4bbbaaf106d9c6066871f373ab96a24767",
+            "46edacc4d957219c010a3ae03e33b3894a4c380c09acb84acf0733527c3ec299",
+            "514a36690bb1e9e28d73ea97b0c30b35fa4937bd0c11605916ae8345b41130ca",
+            "615733501cc1b8300b74d37cb7f9e068d718dd4fa1cb1cccf1498872c40363ac",
+            "68271db581c76ae55fd962a2fbc378686738685338dda43e4dac6099b7aabe35",
+            "6ec4a40c311bc80fdd7b0468b431a52968f50551e9de3402a18c0663025666a8",
+            "7364bada2846d2d0b82a88bf3ec006d5c56d3e2d8fa4c45eb77e8e8e0e220fc3",
+            "73a0fa65e9d864721b7be4282004d1682136be0b8171994625ba0370b798ee7e",
+            "7a3caa07c2bfbe24e5224f3c9f866d74e6fd2a110488c90846a07af384674e3e",
+            "8b0cf678202fe5b925bb72d4e6c3e4cdbaf2297082100c8aeaf9d865ca36bd95",
+            "9debb7a1ef9c0ee2173c5f5708da2c0ee34cce2f53c7929989be44b26d4c73f8",
+            "9fd854330c53c74cab33d13a509244cd4492aaaf9961c965986d63982b40001f",
+            "a0fcc543bb6d79c7a6a65643c1572de106c126f5dcc52f8853cf6084a7d1ca16",
+            "ab1334202faad77ff52148862cf1cae4c1d848f452069f1130a0bae40bc39cac",
+            "b30e9d82c96197602bb239713961347f4568b0caa11fa3388b66a0c93c22a5fc",
+            "b74a86bd8724f0bda37af024bd19cc41aacade3d6fb9a23978483a8e9b4c98d7",
+            "ca3e3c30c6ab20be5d36d0b7f39d2fe7e31eb5538b3967e08ed51ef188a88bc3",
+            "d2d84e127122039a05b2ae83f325d341c1a6430938aef4778c60deba214a415c",
+            "e1bcac2a6b11c3a72b0e0f3d5bee0db5179671527c635c49cb6bb7f8560cfcc4",
+            "e1bf19745b9be00f9918b7b329586abedf3071fa7f01ac85d83fc7a97f501ac4",
+            "e7efcf283512135a10d07394be96fc70aa48917a8406f30a4bd32efcb3947ce0",
+            "e9818e00cd1e4bf466afe1cdd103501dcd75f3fe32e63e35bcef2812c1797d91",
+            "f7d19cb86be251a9c417668177fb39e8539c0b12f9628e74cc38ca030706e79b"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -9715,13 +10104,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/121051/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58215/0fa93f60-b8a2-40c6-a82b-7a2067fd5a17/Inbjudan.pdf",
           "published_time": "2026-05-12"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/122507/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58215/71b46c3a-52f6-44bc-944a-eedde1043ad7/PM.pdf",
           "published_time": "2026-05-12"
         }
       ],
@@ -10373,8 +10762,14 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/121230/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58348/bd694e1c-1a16-45a3-b92b-f650c10a23cc/Inbjudan.pdf",
           "published_time": "2026-05-12"
+        },
+        {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58348/634203c2-4dcc-49d6-adf4-95de06267cd6/PM.pdf",
+          "published_time": "2026-05-23"
         }
       ],
       "information": null,
@@ -10394,23 +10789,70 @@
           "areas": [],
           "urls": [
             {
-              "type": "EntryList",
-              "url": "/Entry?eventId=58348",
-              "title": "Enter",
-              "last_updated_at": "2026-04-25T22:13:52.238419+00:00"
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/190542",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-05-29T21:27:51.899048+00:00"
             },
             {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=58348&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-04-25T22:13:52.238419+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=58348&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-05-29T21:27:51.899048+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=58348&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-05-29T21:27:51.899048+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "Herr Lång": 7,
+            "Herr Mellan": 11,
+            "Dam Lång": 2,
+            "Dam Mellan": 4
+          },
+          "result_counts": {
+            "Herr Lång": 7,
+            "Herr Mellan": 11,
+            "Dam Lång": 2,
+            "Dam Mellan": 4
+          },
+          "fingerprints": [
+            "020d455fcce32f6054704951272402d832a2cc04f34b47be1a35346b32b77298",
+            "023e1993ed5a6b87a28f09e3c6449708e1113f4c74bfb72411c462f8227ab0f3",
+            "1e8c58f11a5d807af4ae92fb0223d976ed045f17d30e23a6eda4cef8b05a257f",
+            "2e3b0467144204b49030625ff86e07ed89f7733c03dafb3168319c9fddadeaa2",
+            "30274db6d725ce1d89944d6f3ee402a9d36529445f3c8da90911afba2dd57d2e",
+            "38e586a290aae715b88507dff1f685164542d29f9b0c1f895d4714dc9958881f",
+            "4442d180b0e88b61d576d4e9ba1d8583127a7401fb997b102eabfb1bd58b9dcb",
+            "488edf5abe5e0d35a7c493e979e8333dd7ebab0dca1ffa894609bda1185d2f6d",
+            "48fa5703f02b404d13ab3c0662432f3b221c7a63e74893c9b084eb820b15e626",
+            "6bab0471203b7b6d0b74482c159bec7e19138432085d889c244bd288c4a13a00",
+            "7195ab5eeb40e34d4133e07af95ed748d35cf9d40e0e6661ad8c3ad22ee3e9b5",
+            "72ae3084052ff79382a4f12de7fbc0ecc749e14c709e3b02a2010c374e070d5d",
+            "79510ab27e8495f7c12cdf99691a309154ef317228f40612dd3334546923062c",
+            "7d4ecff132bb7e8240f7ae0f8b5ae87d64d4f78f73ce284358b01959dbe8dc6c",
+            "874e64a8a5b2812c73acf8d93478ee14467da7590cba1f51b1e7192c556e55be",
+            "9474644d7b071287e5a1edc048b5f7f8e2aff8901f5a94103579c1cfa0444dcd",
+            "9c3ad771dc0d78d8da8021cfbb79176624446259b6347b44a9bdc6d9389d9b24",
+            "a7bbbad2c0d2232ff539b9e36aa58ef1a74a0e393cd0f07cf51086265b38df2d",
+            "b5125f67be3dc682e6393439406a1f72aafe734b9618cfc2ce69e5b87634de88",
+            "beb25fb40a855530d02706cf4fb1bbafb88894c528c15f5eadd50db2535624de",
+            "d4100d9346700e258ec112e4fb1208ed0775ff3895c89ded94a77cacafd34326",
+            "e542ebdc12ba79531c3ce32f0fe556ae50e7221b75021c5ebda0a56ff0928ba9",
+            "e81fdaedc4d15c8f0abd994a6b37e7731c46cc9c4dbbf638be103277579204c9",
+            "fd232ff4d3affe39a8df1bc2ef5b0f1902f5d2b07c49efcdfc7d5bc43dbcf13a"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -10456,7 +10898,7 @@
         {
           "type": "Other",
           "title": "Öviksserien 2026",
-          "url": "/Documents/Event/120710/-viksserien-2026",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58354/7b30f6ba-1d98-49d8-bf05-b4c57c68f71e/-viksserien-2026.pdf",
           "published_time": "2026-04-02"
         }
       ],
@@ -10535,14 +10977,20 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/122065/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58558/03db529e-d670-49cd-bb4a-73833b1acdac/Inbjudan.pdf",
           "published_time": "2026-05-04"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/122682/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58558/ce1139d3-d711-49ff-8359-b343312affd5/PM.pdf",
           "published_time": "2026-05-16"
+        },
+        {
+          "type": "Other",
+          "title": "Sträcktider",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58558/8b0b04c0-0ba0-4a91-b6e3-5cfdb145ae73/Str-cktider.html",
+          "published_time": "2026-05-21"
         }
       ],
       "information": null,
@@ -10563,13 +11011,54 @@
               "url": "/Events/Entries?eventId=58558&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-05-20T18:50:27.702969+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=58558&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-05-29T21:27:51.899227+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=58558&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-05-29T21:27:51.899227+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "Lång": 8,
+            "Mellan": 6,
+            "Kort": 6
+          },
+          "result_counts": {
+            "Lång": 8,
+            "Mellan": 6,
+            "Kort": 6
+          },
+          "fingerprints": [
+            "342ddd5f2ffdad44e4c9ec6d5b64b22ebb3c880baf56134badb3e604274e7fde",
+            "365a3e541f4bd0c9d38b3e2b823e9f68c7e9ae9cca960204cf6fdfb266d230e2",
+            "39f4b9fdb594672e393b684adcd70d31a71fbb6a091bdd912a1c1c2d062dae4f",
+            "592c12273b74ee5e792d65509e01f5d282d7adec3b525c5de6187c646bf22cc6",
+            "6c09f8b6efc20844a4d7ed8d43e726d1c2e739ea4c7ebe021d2ccbdc9f98a9fc",
+            "6ea05b304e614f80b6e0b197a7b13b6ee6371e93d3de28ebfc8ccb37e0bdccec",
+            "78f2aad278fc1610cb668309a9f56daf3509555524fc6ef64fec54ae0ec5517a",
+            "8bb86a8264c4994edea43973c5a1c62c3b1926ed121a9af30c484383772997f3",
+            "9d4645874c4b79f4a1850f13c2555f83ba0b6b8a9d23f42043f2dd09c11ed849",
+            "9d4a61320110b1b463a371b7992bf0bddf4d5c02f21daaba0e0c6227ff68a240",
+            "a0fcc543bb6d79c7a6a65643c1572de106c126f5dcc52f8853cf6084a7d1ca16",
+            "b1e3520854b6bc36bd98560856f2c0dad1e196cc1d69feefca773e38d3486d47",
+            "b7cb25bad3c24176299bca115b7e60748439fd2073254a704bfaa282f3e0f792",
+            "bd024796426f6e88c7f301fefed8635d98b5cb712078edce0c034bddd202ce63",
+            "ca1dae3a0f8ef620f301abc5ea87a544e5c896b39888022944922125674ff995",
+            "dd8e325442ffa1d1ff777bb08a20b7bde202615b941f0344987fb6f10e4df909",
+            "e2e1adc317ac8c1c670509a43291e7f471623e60e750b412640ef65634ce7c67",
+            "f80bb954c7527dd5a8954a9bddaae66425b40ba96fde712bcf7638ecae5518a8",
+            "f9def36e074ded4d95ac03f3d5a90421d28b773c7f27a4779ca7d32572f1303a",
+            "fd10246323b4f5e4d309408a8a818828ed8f1688daf9af83ad2e44be427ed971"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -10621,13 +11110,13 @@
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/122447/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58590/96afdb7d-538b-4804-be47-3fd4df8fff2c/PM.pdf",
           "published_time": "2026-05-13"
         },
         {
           "type": "Other",
           "title": "Öviksserien 2026",
-          "url": "/Documents/Event/120707/-viksserien-2026",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58590/f65c8147-caf6-4e9e-bbf5-fbacaf0a7403/-viksserien-2026.pdf",
           "published_time": "2026-04-02"
         }
       ],
@@ -10761,7 +11250,7 @@
         {
           "type": "Other",
           "title": "Öviksserien 2026",
-          "url": "/Documents/Event/120711/-viksserien-2026",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58591/66ff5af7-d393-4c85-9ff8-65e80a06c040/-viksserien-2026.pdf",
           "published_time": "2026-04-02"
         }
       ],
@@ -10852,7 +11341,7 @@
         {
           "type": "Other",
           "title": "Öviksserien 2026",
-          "url": "/Documents/Event/120709/-viksserien-2026",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58595/2c8700bd-2638-430d-b591-9400377d8306/-viksserien-2026.pdf",
           "published_time": "2026-04-02"
         }
       ],
@@ -10963,7 +11452,7 @@
         {
           "type": "Other",
           "title": "Öviksserien 2026",
-          "url": "/Documents/Event/120712/-viksserien-2026",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58597/e81545dd-2c5d-424f-9050-641ca5d75ec6/-viksserien-2026.pdf",
           "published_time": "2026-04-02"
         }
       ],
@@ -11172,19 +11661,19 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/121094/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58722/3dd7824e-ac31-4b81-a7e4-3bd8d7873003/Inbjudan.pdf",
           "published_time": "2026-04-15"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/122110/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58722/8300d907-6b1e-4cfe-b27f-4b6219973e3b/PM.pdf",
           "published_time": "2026-05-05"
         },
         {
           "type": "Other",
           "title": "Kartnorm MTBO",
-          "url": "/Documents/Event/122111/Kartnorm-MTBO",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58722/0bb97a4e-a0b6-4309-9d8f-c0a7551a0811/Kartnorm-MTBO.pdf",
           "published_time": "2026-05-05"
         }
       ],
@@ -11286,13 +11775,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/121103/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58724/145d0d34-6280-404b-a610-ffbb581e8681/Inbjudan.pdf",
           "published_time": "2026-04-12"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/122013/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58724/206a4173-ca58-4730-a553-e6f4dbe2cbd5/PM.pdf",
           "published_time": "2026-05-03"
         },
         {
@@ -11558,7 +12047,7 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/121439/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58751/9bf77819-6c15-4e80-9241-f449aa0ebccf/Inbjudan.pdf",
           "published_time": "2026-04-26"
         },
         {
@@ -11738,14 +12227,20 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/121303/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58824/3ab79787-4353-4d96-90ae-9843eaed2e0d/Inbjudan.pdf",
           "published_time": "2026-04-15"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/122859/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58824/fb247895-c759-4df3-ae40-4234a7ef4589/PM.pdf",
           "published_time": "2026-05-20"
+        },
+        {
+          "type": "ResultList",
+          "title": "Liveresultat",
+          "url": "https://liveresultat.orientering.se/followfull.php?comp=36734&lang=sv",
+          "published_time": null
         }
       ],
       "information": null,
@@ -11765,23 +12260,74 @@
           "areas": [],
           "urls": [
             {
-              "type": "EntryList",
-              "url": "/Entry?eventId=58824",
-              "title": "Enter",
-              "last_updated_at": "2026-05-10T19:32:03.786902+00:00"
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/190416",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-05-29T21:27:51.898963+00:00"
             },
             {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=58824&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-05-20T18:50:27.702944+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=58824&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-05-29T21:27:51.898963+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=58824&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-05-29T21:27:51.898963+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "Bana A": 3,
+            "Bana B": 5,
+            "Bana C": 6,
+            "Bana D": 14
+          },
+          "result_counts": {
+            "Bana A": 3,
+            "Bana B": 5,
+            "Bana C": 6,
+            "Bana D": 14
+          },
+          "fingerprints": [
+            "03b45e032c88689650216c55eccc5289de8e166d3ba33961b24f2e07ef06ddf2",
+            "067de2e23e72092bd6f7135908dd606d761aaf0ae74ce47ac9cade109e7fd56a",
+            "0890bf758710dd21c740aaa722c3a6172dd338e69a60dc00619950e9afc6adb9",
+            "28156df815b2059ff176846cbe7305c11502e591ca19f88d454bac7103ec7062",
+            "4b352eb0f806529b531cad311bda6fce06ef88202ab5af127a107cf9dfcccea5",
+            "590c13e22c1cb280fdca1533dde9b6c04417a7267943749ddd26b4c500e0321b",
+            "5b21ad6256ae943621fd324c4adcb77026fa03754f388b5fde7bbec1cece4a1a",
+            "5db6b0516ef68caddf2803eb34b02eec589e03bb76e49d687738f5b18fd2638a",
+            "609bdf63bedecd9497fd340192793cf7cb1a81f51c340da40ec2ebec399aa2ba",
+            "63f40136fbe234ad26e32b61cb4f81d3ba82c5f2b34d652ea5801cab1f96bc48",
+            "78d4af58aff477873e5f48fb3ae256eadb8c48fe6961808ebe90056b35738d20",
+            "8d18fb0667f4bb2246a84ec4fd5c0b19eae0d4f02bf2d4c0e910be609d2bfab8",
+            "9398e8e25e420ceb4f511769fbefe91d2cc7a325d436f6798530b9a7bf07ae5e",
+            "985f4896779bada2d6b19b4cd9d6b5d58925e1a6afd8c74efe95877dd7ee8180",
+            "9b6d1dc8de5ec89ca1ee2a2b11a05f349ff93c8536dddfa9bdca00c16d550412",
+            "9ca9bf362f03284fc7cd2470b3b7f0062940a05fab66099e077b5f600aaa0c29",
+            "a98aa98a4036135c1907088c35e46c057400c1e30373cf0c3e53a58c015a1eb0",
+            "b2a65f91ee3ae06b162c0d57966e70d81f5561194405520dbe85275866308e4e",
+            "bcb159aa6aeb5eede5385df0eb5b2ea541ffef8235519bba25261278f39d8c4e",
+            "c85cc5052891b5dabbd4f205f6ff35a71bfcd7a73f19eb3a5d9cba22d1f6b2dc",
+            "c9c46853cbd86cbc89b1172c623a35ab8b7f2a60cf3543a72d433c0137ceaf68",
+            "cc34a514ae3c8468b4579b78c22e9f0b2743270a575cf5b070ef85e8b4863756",
+            "ce8632ec48325d435d9a864fabbbf1b69e010a95f023befe127ee23a18c25b48",
+            "d09c268b45d44ac1768f3d5a681501ac3bf2d3ae5c20be43f4cabddcbf7ce740",
+            "d60863aca6fc9ad9da38e4afdd6180ec9a56c6c0f0ffa3eeb6d8568ccbb5698e",
+            "f549ca56daa0fae6cecf5482049ab64688c69e668f769df787b9de856be906a7",
+            "f863f9aec464c5945811fc9b5ea9b4762d3179be41b0d9fb546d7305ec5f4609",
+            "fdc4883d88912f0d947b8c20ed170bd89e17e898d41a2f377c0fbbbef6dbe4fb"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -12017,7 +12563,7 @@
         {
           "type": "Other",
           "title": "Värmlandsserien",
-          "url": "/Documents/Event/122545/V-rmlandsserien",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58954/1598e817-1c37-4b60-9542-bff0cf3017d8/V-rmlandsserien.png",
           "published_time": "2026-05-13"
         }
       ],
@@ -12184,7 +12730,7 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/121728/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58956/e298d991-3c9f-483d-9a63-37221ba02b6b/Inbjudan.pdf",
           "published_time": "2026-04-26"
         }
       ],
@@ -12276,7 +12822,7 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/122614/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/59028/9280727f-675d-4664-9e68-9cf51dd2bc4a/Inbjudan.pdf",
           "published_time": "2026-05-14"
         }
       ],
@@ -12502,19 +13048,19 @@
         {
           "type": "Other",
           "title": "Karta",
-          "url": "/Documents/Event/122759/Karta",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/59069/a9a630af-eddd-4b4e-9da1-9d16e1801a03/Karta.pdf",
           "published_time": "2026-05-18"
         },
         {
           "type": "Other",
           "title": "Klassning av framkomlighet på stigar",
-          "url": "/Documents/Event/122760/Klassning-av-framkomlighet-p--stigar",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/59069/8050178f-b42d-4c52-939e-34e27d920b31/Klassning-av-framkomlighet-p--stigar.pdf",
           "published_time": "2026-05-18"
         },
         {
           "type": "Bulletin",
           "title": "NYTT uppdaterat PM",
-          "url": "/Documents/Event/122764/NYTT-uppdaterat-PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/59069/06ded25c-55a0-42eb-b8f2-46ba864e0f38/NYTT-uppdaterat-PM.pdf",
           "published_time": "2026-05-18"
         },
         {
@@ -12727,9 +13273,22 @@
           "url": "Events/Show/59228",
           "title": null,
           "last_updated_at": "2026-05-20T18:50:27.702772+00:00"
+        },
+        {
+          "type": "Series",
+          "url": "/Standings/View/Series/1605",
+          "title": "MtbO cupen Gotland 2026",
+          "last_updated_at": "2026-05-29T21:27:51.899372+00:00"
         }
       ],
-      "documents": [],
+      "documents": [
+        {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/59228/54835772-4e49-4a81-ae62-4fff52ee85fd/PM.Pdf",
+          "published_time": "2026-05-28"
+        }
+      ],
       "information": null,
       "region": "Gotland",
       "punching_system": "Sportident",
@@ -12800,7 +13359,7 @@
         }
       ],
       "documents": [],
-      "information": "Värmlandsserien mtbo deltävling 3   2026 0615\nArena: Troligtvis OK Älgens klubbstuga i Grums.\nStart: Mellan 18-19\nMer info kommer",
+      "information": "Värmlandsserien mtbo deltävling 3   2026 0615\nArena: OK Älgens klubbstuga i Grums.\nStart: Mellan 18-19\nMer info kommer",
       "region": "Värmland",
       "punching_system": "Sportident",
       "races": [
@@ -12820,6 +13379,73 @@
               "last_updated_at": "2026-05-20T18:50:27.702962+00:00"
             }
           ],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_59343",
+      "name": "MTBO Gotland 3 - DG Arena",
+      "start_time": "2026-06-11",
+      "end_time": "2026-06-11",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Local"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "Gotlands Bro OK",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Mats Sigalit"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:ABUWHAMAChUAHAwGLRwNG0ASCh5PEwof"
+        }
+      ],
+      "classes": [
+        "Kort 5 km",
+        "Lång 13 km",
+        "Mellan 8 km"
+      ],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/59343",
+          "title": null,
+          "last_updated_at": "2026-05-29T21:27:51.899153+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": "Gotland",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "MTBO Gotland 3 - DG Arena",
+          "datetimez": "2026-06-11T17:00:00+02:00",
+          "discipline": "Long",
+          "night_or_day": "day",
+          "position": {
+            "lat": 57.6057035695074,
+            "lng": 18.2817005927516
+          },
+          "areas": [],
+          "urls": [],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
