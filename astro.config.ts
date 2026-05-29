@@ -106,6 +106,7 @@ export default defineConfig({
   base: SITE.base,
   trailingSlash: SITE.trailingSlash ? 'always' : 'never',
   output: 'static',
+  compressHTML: true,
   adapter: netlify({
     imageCDN: true,
     excludeFiles: [
@@ -175,11 +176,7 @@ export default defineConfig({
 
     compress({
       CSS: true,
-      HTML: {
-        'html-minifier-terser': {
-          removeAttributeQuotes: false,
-        },
-      },
+      HTML: false,
       Image: false,
       JavaScript: true,
       SVG: false,
