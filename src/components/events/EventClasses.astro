@@ -1,0 +1,27 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+  classes?: string[];
+}
+
+const { classes = [] } = Astro.props;
+---
+
+{
+  classes && classes.length > 0 && (
+    <div class="mb-8 p-5 bg-white dark:bg-slate-900 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
+      <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-default font-heading">
+        <Icon name="tabler:list" class="w-5 h-5 text-primary" />
+        Klasser
+      </h2>
+      <div class="flex flex-wrap gap-2">
+        {classes.map((c) => (
+          <span class="px-2.5 py-1 text-xs bg-gray-50 dark:bg-slate-800 text-default rounded-lg border border-gray-200 dark:border-gray-700 font-medium">
+            {c}
+          </span>
+        ))}
+      </div>
+    </div>
+  )
+}

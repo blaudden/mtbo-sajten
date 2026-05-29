@@ -1,0 +1,80 @@
+---
+import LeafletMapReact from '../react/LeafletMap';
+import { Icon } from 'astro-icon/components';
+import type { ScraperEvent, ScraperRace } from '~/types/events';
+
+interface Props {
+  event: ScraperEvent;
+}
+
+const { event } = Astro.props;
+
+const getRaceName = (race: ScraperRace) => race.name || `Deltävling ${race.race_number}`;
+
+// Build markers from races
+const markers = event.races
+  .map((race) => {
+    // Check if race has a position
+    if (race.position && race.position.lat && race.position.lng) {
+      return {
+        lat: race.position.lat,
+        lng: race.position.lng,
+        title: `${getRaceName(race)} - Arena`,
+        color: 'blue' as const,
+        icon: 'start' as const,
+      };
+    }
+    // Fallback to first area coordinates if available
+    if (race.areas && race.areas.length > 0 && race.areas[0].lat && race.areas[0].lng) {
+      return {
+        lat: race.areas[0].lat,
+        lng: race.areas[0].lng,
+        title: `${getRaceName(race)} - Arena`,
+        color: 'blue' as const,
+        icon: 'start' as const,
+      };
+    }
+    return null;
+  })
+  .filter((m): m is NonNullable<typeof m> => m !== null);
+
+// Build polygons from race areas
+const polygons = event.races.flatMap((race) => {
+  return (race.areas || [])
+    .map((area) => {
+      if (area.polygon && area.polygon.length > 0) {
+        return {
+          points: area.polygon.map(([lat, lng]) => ({ lat, lng })),
+          title: `${getRaceName(race)} - Embargo`,
+          color: 'red' as const,
+        };
+      }
+      return null;
+    })
+    .filter((p): p is NonNullable<typeof p> => p !== null);
+});
+
+const hasMapData = markers.length > 0 || polygons.length > 0;
+const markersString = JSON.stringify(markers);
+const polygonsString = JSON.stringify(polygons);
+---
+
+{
+  hasMapData && (
+    <div class="mb-10">
+      <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-default font-heading">
+        <Icon name="tabler:map" class="w-5 h-5 text-primary" />
+        Karta med arena & tävlingsområden
+      </h2>
+      <div class="border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden shadow-sm">
+        <LeafletMapReact
+          client:only="react"
+          markers={markersString}
+          polygons={polygonsString}
+          height="400px"
+          zoom={12}
+        />
+      </div>
+    </div>
+  )
+}

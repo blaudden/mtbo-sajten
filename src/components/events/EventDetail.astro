@@ -12,6 +12,9 @@ import EventInfoGrid from './EventInfoGrid.astro';
 import EventRaceTable from './EventRaceTable.astro';
 import EventDocuments from './EventDocuments.astro';
 import EventLinks from './EventLinks.astro';
+import EventDeadlines from './EventDeadlines.astro';
+import EventClasses from './EventClasses.astro';
+import EventMap from './EventMap.astro';
 
 interface Props {
   event: ScraperEvent;
@@ -54,7 +57,7 @@ const externalLinkLabel = isEventor
 <article class="event-detail max-w-4xl mx-auto">
   <EventHeader event={event} countryCode={countryCode} statusLabel={statusLabel} statusColor={statusColor} />
 
-  <div class="mb-4">
+  <div class="mb-6">
     <EventInfoGrid
       dateRange={dateRange}
       organiserName={organiserName}
@@ -74,6 +77,12 @@ const externalLinkLabel = isEventor
       </div>
     )
   }
+
+  <EventDeadlines deadlines={event.entry_deadlines} />
+
+  <EventClasses classes={event.classes} />
+
+  <EventMap event={event} />
 
   <EventRaceTable event={event} />
 

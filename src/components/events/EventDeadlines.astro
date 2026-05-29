@@ -1,0 +1,42 @@
+---
+import { Icon } from 'astro-icon/components';
+import { formatRaceDate } from '~/utils/events';
+import type { ScraperEntryDeadline } from '~/types/events';
+
+interface Props {
+  deadlines?: ScraperEntryDeadline[];
+}
+
+const { deadlines = [] } = Astro.props;
+
+function translateDeadlineType(type: string): string {
+  const translations: Record<string, string> = {
+    ordinary: 'Ordinarie anmälan',
+    late: 'Efteranmälan',
+  };
+  return translations[type.toLowerCase()] || type;
+}
+---
+
+{
+  deadlines && deadlines.length > 0 && (
+    <div class="mb-8 p-5 bg-white dark:bg-slate-900 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
+      <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-default font-heading">
+        <Icon name="tabler:calendar-time" class="w-5 h-5 text-primary" />
+        Anmälningstider
+      </h2>
+      <ul class="divide-y divide-gray-100 dark:divide-gray-800">
+        {deadlines.map((dl) => (
+          <li class="py-2.5 flex items-center justify-between text-sm">
+            <span class="font-medium text-default">{translateDeadlineType(dl.type)}</span>
+            <span class="text-muted dark:text-slate-400">
+              {dl.datetimez.includes('T')
+                ? formatRaceDate(dl.datetimez, { includeTime: true })
+                : formatRaceDate(dl.datetimez + 'T00:00:00', { includeTime: false })}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}

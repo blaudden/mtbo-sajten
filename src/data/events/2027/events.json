@@ -1214,7 +1214,7 @@
       "status": "Sanctioned",
       "original_status": "Active",
       "types": [
-        "Local"
+        "Regional"
       ],
       "tags": [
         "FootO"
@@ -1230,6 +1230,10 @@
         {
           "role": "Contact person",
           "name": "Per Wollbrand"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:CFkJDkMADxshAgQEBBoHAQMcERU="
         }
       ],
       "classes": [],

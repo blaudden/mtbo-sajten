@@ -26,8 +26,19 @@ const isCanceled = event.status === 'Canceled';
   </div>
 
   <h1
-    class={`text-3xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading ${isCanceled ? 'line-through text-muted' : 'text-default'}`}
+    class={`text-3xl md:text-5xl font-bold leading-tighter tracking-tighter mb-2 font-heading ${isCanceled ? 'line-through text-muted' : 'text-default'}`}
   >
     {event.name}
   </h1>
+  {
+    event.types && event.types.length > 0 && (
+      <div class="flex flex-wrap gap-1.5 mt-2">
+        {event.types.map((type) => (
+          <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-gray-100 dark:bg-slate-800 text-muted dark:text-slate-400 border border-gray-200 dark:border-gray-700">
+            {type}
+          </span>
+        ))}
+      </div>
+    )
+  }
 </div>

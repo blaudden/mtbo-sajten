@@ -1323,6 +1323,18 @@
           "title": "Bulletin 2",
           "url": "/Documents/Event/9014/Bulletin-2",
           "published_time": "2026-03-11"
+        },
+        {
+          "type": "Bulletin",
+          "title": "Bulletin 3",
+          "url": "/Documents/Event/10410/Bulletin-3",
+          "published_time": "2026-05-01"
+        },
+        {
+          "type": "Bulletin",
+          "title": "Bulletin 4",
+          "url": "/Documents/Event/10508/Bulletin-4",
+          "published_time": "2026-05-19"
         }
       ],
       "information": null,
@@ -1480,6 +1492,18 @@
           "title": "Bulletin 2",
           "url": "/Documents/Event/9016/Bulletin-2",
           "published_time": "2026-03-11"
+        },
+        {
+          "type": "Bulletin",
+          "title": "Bulletin 3",
+          "url": "/Documents/Event/10411/Bulletin-3",
+          "published_time": "2026-05-01"
+        },
+        {
+          "type": "Bulletin",
+          "title": "Bulletin 4",
+          "url": "/Documents/Event/10509/Bulletin-4",
+          "published_time": "2026-05-19"
         }
       ],
       "information": null,
@@ -1649,10 +1673,64 @@
           "published_time": "2026-02-04"
         },
         {
+          "type": "Other",
+          "title": "TOM Day 1  - Sprint",
+          "url": "/Documents/Event/10405/TOM-Day-1----Sprint",
+          "published_time": "2026-04-30"
+        },
+        {
+          "type": "Other",
+          "title": "TOM Day 2",
+          "url": "/Documents/Event/10407/TOM-Day-2",
+          "published_time": "2026-05-01"
+        },
+        {
+          "type": "ResultList",
+          "title": "Sprint U23 results",
+          "url": "/Documents/Event/10408/Sprint-U23-results",
+          "published_time": "2026-05-01"
+        },
+        {
+          "type": "Other",
+          "title": "Sprint splits",
+          "url": "/Documents/Event/10409/Sprint-splits",
+          "published_time": "2026-05-01"
+        },
+        {
+          "type": "ResultList",
+          "title": "Middle U23 results",
+          "url": "/Documents/Event/10414/Middle-U23-results",
+          "published_time": "2026-05-02"
+        },
+        {
+          "type": "Other",
+          "title": "Middle splits",
+          "url": "/Documents/Event/10415/Middle-splits",
+          "published_time": "2026-05-02"
+        },
+        {
+          "type": "ResultList",
+          "title": "Long U23 results",
+          "url": "/Documents/Event/10419/Long-U23-results",
+          "published_time": "2026-05-03"
+        },
+        {
+          "type": "Other",
+          "title": "Long splits",
+          "url": "/Documents/Event/10420/Long-splits",
+          "published_time": "2026-05-03"
+        },
+        {
           "type": "Bulletin",
           "title": "Bulletin 3",
           "url": "/Documents/Event/10202/Bulletin-3",
           "published_time": "2026-03-10"
+        },
+        {
+          "type": "Bulletin",
+          "title": "Bulletin 4",
+          "url": "/Documents/Event/10395/Bulletin-4",
+          "published_time": "2026-04-29"
         }
       ],
       "information": null,
@@ -1670,7 +1748,26 @@
             "lng": 17.877
           },
           "areas": [],
-          "urls": [],
+          "urls": [
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=8937&groupBy=EventClass",
+              "title": "StartList",
+              "last_updated_at": "2026-05-10T19:32:03.787492+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/Show/8937",
+              "title": "ResultList",
+              "last_updated_at": "2026-05-10T19:32:03.787492+00:00"
+            },
+            {
+              "type": "LocalStartList",
+              "url": "data/events/2026/IOF_8614_startlist_1.yaml",
+              "title": null,
+              "last_updated_at": "2026-05-10T19:30:11.300056+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
@@ -1685,7 +1782,26 @@
           "night_or_day": null,
           "position": null,
           "areas": [],
-          "urls": [],
+          "urls": [
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=8935&groupBy=EventClass",
+              "title": "StartList",
+              "last_updated_at": "2026-05-10T19:32:03.787493+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/Show/8935",
+              "title": "ResultList",
+              "last_updated_at": "2026-05-10T19:32:03.787493+00:00"
+            },
+            {
+              "type": "LocalStartList",
+              "url": "data/events/2026/IOF_8614_startlist_2.yaml",
+              "title": null,
+              "last_updated_at": "2026-05-10T19:30:12.894067+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
@@ -1700,7 +1816,26 @@
           "night_or_day": null,
           "position": null,
           "areas": [],
-          "urls": [],
+          "urls": [
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=8936&groupBy=EventClass",
+              "title": "StartList",
+              "last_updated_at": "2026-05-10T19:32:03.787494+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/Show/8936",
+              "title": "ResultList",
+              "last_updated_at": "2026-05-10T19:32:03.787494+00:00"
+            },
+            {
+              "type": "LocalStartList",
+              "url": "data/events/2026/IOF_8614_startlist_3.yaml",
+              "title": null,
+              "last_updated_at": "2026-05-10T19:30:15.851234+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
@@ -1717,7 +1852,9 @@
       "end_time": "2026-09-12",
       "status": "Sanctioned",
       "original_status": "Active",
-      "types": [],
+      "types": [
+        "World Masters"
+      ],
       "tags": [],
       "form": null,
       "organisers": [
@@ -4032,6 +4169,12 @@
           "url": "https://www.oringen.se",
           "title": null,
           "last_updated_at": "2026-02-07T22:24:13.324690+00:00"
+        },
+        {
+          "type": "Series",
+          "url": "/Standings/View/Series/1594",
+          "title": "Svenska VeteranCupen MTBO 2026",
+          "last_updated_at": "2026-05-10T19:32:03.787331+00:00"
         }
       ],
       "documents": [],
@@ -4754,6 +4897,12 @@
           "url": "Events/Show/53809",
           "title": null,
           "last_updated_at": "2026-02-07T22:24:13.324647+00:00"
+        },
+        {
+          "type": "Series",
+          "url": "/Standings/View/Series/1594",
+          "title": "Svenska VeteranCupen MTBO 2026",
+          "last_updated_at": "2026-05-10T19:32:03.787291+00:00"
         }
       ],
       "documents": [],
@@ -4826,6 +4975,12 @@
           "url": "Events/Show/53810",
           "title": null,
           "last_updated_at": "2026-02-07T22:24:13.324619+00:00"
+        },
+        {
+          "type": "Series",
+          "url": "/Standings/View/Series/1594",
+          "title": "Svenska VeteranCupen MTBO 2026",
+          "last_updated_at": "2026-05-10T19:32:03.787283+00:00"
         }
       ],
       "documents": [],
@@ -4938,6 +5093,12 @@
           "url": "/Standings/View/Series/1539",
           "title": "Svenska cupen MTBO 2026",
           "last_updated_at": "2026-02-07T22:09:12.439560+00:00"
+        },
+        {
+          "type": "Series",
+          "url": "/Standings/View/Series/1594",
+          "title": "Svenska VeteranCupen MTBO 2026",
+          "last_updated_at": "2026-05-10T19:32:03.786985+00:00"
         }
       ],
       "documents": [
@@ -4948,13 +5109,37 @@
           "published_time": "2026-04-03"
         },
         {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "/Documents/Event/122244/PM",
+          "published_time": "2026-05-08"
+        },
+        {
           "type": "Invitation",
           "title": "Invitation",
           "url": "/Documents/Event/120794/Invitation",
           "published_time": "2026-04-04"
+        },
+        {
+          "type": "Other",
+          "title": "Arenakarta",
+          "url": "/Documents/Event/122261/Arenakarta",
+          "published_time": "2026-05-08"
+        },
+        {
+          "type": "Bulletin",
+          "title": "Kart PM",
+          "url": "/Documents/Event/122290/Kart-PM",
+          "published_time": "2026-05-08"
+        },
+        {
+          "type": "Bulletin",
+          "title": "Map PM",
+          "url": "/Documents/Event/122291/Map-PM",
+          "published_time": "2026-05-08"
         }
       ],
-      "information": "LÅNGDISTANS 10 MAJ:\nhttps://eventor.orientering.se/Events/Show/54361",
+      "information": "LÅNGDISTANS 10 MAJ:\nhttps://eventor.orientering.se/Events/Show/54361\n2026-05-08 pga att seedning blivit fel har vi lottat om startlistan för H21\n2026-05-08 Klassindelningen och strukna klasser har uppdaterats i PM.\n2026-05-09 Uppdaterad resultatlista pga fel totaltid för ett fåtal deltagare",
       "region": "Stockholm",
       "punching_system": "Sportident",
       "races": [
@@ -5030,23 +5215,278 @@
           ],
           "urls": [
             {
-              "type": "EntryList",
-              "url": "/Entry?eventId=54359",
-              "title": "Enter",
-              "last_updated_at": "2026-04-12T19:43:08.816456+00:00"
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/188557",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-05-10T19:32:03.786988+00:00"
             },
             {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=54359&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-04-12T19:43:08.816456+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=54359&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-05-10T19:32:03.786988+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=54359&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-05-10T19:32:03.786988+00:00"
+            },
+            {
+              "type": "LocalStartList",
+              "url": "data/events/2026/SWE_54359_startlist_1.yaml",
+              "title": null,
+              "last_updated_at": "2026-05-10T19:27:47.089187+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "D21": 13,
+            "H21": 12,
+            "D17-20": 7,
+            "H17-20": 6,
+            "D16": 2,
+            "H16": 3,
+            "D14": 1,
+            "H14": 3,
+            "D12": 2,
+            "H12": 3,
+            "D40": 2,
+            "H40": 4,
+            "D45": 4,
+            "H45": 3,
+            "D50": 5,
+            "H50": 11,
+            "D55": 5,
+            "H55": 11,
+            "D60": 6,
+            "H60": 17,
+            "D65": 5,
+            "H65": 13,
+            "D70": 1,
+            "H70": 15,
+            "H75": 3,
+            "Öppen kort": 6,
+            "Öppen Medel": 8,
+            "Öppen lång": 7
+          },
+          "result_counts": {
+            "D21": 13,
+            "H21": 12,
+            "D17-20": 7,
+            "H17-20": 6,
+            "D16": 2,
+            "H16": 3,
+            "D14": 1,
+            "H14": 3,
+            "D12": 2,
+            "H12": 3,
+            "D40": 2,
+            "H40": 4,
+            "D45": 4,
+            "H45": 3,
+            "D50": 5,
+            "H50": 11,
+            "D55": 5,
+            "H55": 11,
+            "D60": 6,
+            "H60": 17,
+            "D65": 5,
+            "H65": 13,
+            "D70": 1,
+            "H70": 15,
+            "H75": 3,
+            "Öppen kort": 6,
+            "Öppen Medel": 8,
+            "Öppen lång": 7
+          },
+          "fingerprints": [
+            "00679e9a4bd5925d4f3f184caf234fc5357f2732d78cc9696b3594df81bb3a60",
+            "009a1f7a4f170106892201becf112d5f405a13fe77e197e3ce2c9781c945d8ba",
+            "023e1993ed5a6b87a28f09e3c6449708e1113f4c74bfb72411c462f8227ab0f3",
+            "02d504ae0d860e78d30cc5abe9cfdbe5c33984fa657c48b68215e0d47098c02d",
+            "042173b9aa097dfc62fec7b214f3bddd862dbe5c5f42a28136a812a59f02d78f",
+            "054fca0d09efb39c74643d8347a658e2555a872cd47a789dcf93f06196fe01c7",
+            "067de2e23e72092bd6f7135908dd606d761aaf0ae74ce47ac9cade109e7fd56a",
+            "0890bf758710dd21c740aaa722c3a6172dd338e69a60dc00619950e9afc6adb9",
+            "094ef4b2c5340796ffe324c4373bfa63bbca4205c0b773281ff07323771fdd8c",
+            "0a84f605b1cab8c88e82e5c6b521821222a2388b97aa2b7b8ad278106b6797cf",
+            "0b1526a5aa7a0636670c0c09546043a96c30153b0115528a16c66ea8e7fd394e",
+            "0e87907f0a4bd6689ba295a6391797b254e2b200da002b4732aad1f40330ca43",
+            "0f68a7fe8f6f22dbe93f221802399946ff0e293505f8a34508d42fff1b474b45",
+            "124103c6097234e419a9f96aeebb7476c6e26d0aaf36b7f1b6b5f5b59e720c1a",
+            "12bc07431042426573fba82a11a5bc840411af103402f2f524beeaf1bcbf2f49",
+            "1469697b2bdc7986a4a93e3b954b78ef7b136a9aae1acce62f3181ec80ac6456",
+            "179e8bdc3009f84d579b853e0d45a3fe7fe578df27ef42cad599690ff6e4bd4f",
+            "17a1a6b8bc9481e2b2e862cd865d149c19ab806b0c1f137bba78fbbb2eda1109",
+            "18cd875c79194a4e9bc2d2044a765b84d0ef21789a667f29c17077712002cede",
+            "1ab8dc5b2eb043c5484aef48b40f68078f5e52c87e817d798d8f476a12aff16b",
+            "1b50aa405db49ac9d8a40f9f5dc69b75d3892edfe0506cf39c0560092971f76c",
+            "1bde460c125ec816550424030b954b2b7996f9f1b2b4eeea7db72916e6110e43",
+            "1c887cd9a237c5008ecefc55800f137be772d7ffb5c67b416dfa9a6334d17167",
+            "1c9b24771a78fbe9433ed9cb94f3a7e4ffa562bc4d27057de4619b9fb46f5d2b",
+            "1caa9b4966fd56a05745e1741a6f5ad398f9f074fd1d8e98c5545c80ff9d5256",
+            "1cab4bf2ff5e875fefbebdf1a6b92c5a04a8f48165e0391513f4d80b26562a79",
+            "1dd993d53f879a43ad1e96453cc7f0dab49d10ec05cb7c6cc8a5d5a0d47f2a16",
+            "1e8c58f11a5d807af4ae92fb0223d976ed045f17d30e23a6eda4cef8b05a257f",
+            "1ee61959927bc931c27d41374e14b951c41fe7917a61947dea1ba759c6ca8848",
+            "1f5c63866bd64be69627e9a7008a1c11e1c160ca68129470623dd544b7467463",
+            "204f843c22f5fe89a693b2e84f6bf7685c682b5601b8ba37e0a44c2f988bb921",
+            "21acd62af84330d00cb16710449b1b842e3d1f8b030252c010a7a6da22088cb4",
+            "224c25bff1b3824787906e5b075e6ec3a984debd30d5d02b1070e99f7533814c",
+            "244aa3cdf8663006bb9b2a2be24b25b76eafb0e2c2892f09e65efd153539d4cc",
+            "2655074a02afca37a3a5fedec2332a96280f9b5c564c9cdd006868431a922979",
+            "28156df815b2059ff176846cbe7305c11502e591ca19f88d454bac7103ec7062",
+            "2bbeb928a4bc44cb78ba45d9101af4e0ed34a7983a2f433978722502e20bf024",
+            "2bc21178020087449580226b458b791795a481ae6d9a9373b31125deb78bbdec",
+            "2c56c96765f867f87f837df1140084e448a2b3bceddc29782257674fa763018b",
+            "2cdcf8a50441103eed618a211ae6d3a5f9ddf424a83e93ccaf7626943eb8ca1b",
+            "2e3f193bcd1105a3e89d837862f9699b1b1222ed3dbb14fb5494883a12b9863b",
+            "2e4ae66a71bc0db7c618db80b55f5e356819cd290284eecef49c9e04b3bdd471",
+            "2f374cc85ad3419bd6ba8f4d063e5f39004d5e9487e75303b4f6cb995f1a2b87",
+            "30274db6d725ce1d89944d6f3ee402a9d36529445f3c8da90911afba2dd57d2e",
+            "308764f6c2056173151f53a6dcd59160d778d72996642fda76b21552a48fdf2b",
+            "32730d69d22f29d99dc873da8429f4927ebb64768d0d7c580b82e4ade9f2b2e3",
+            "341f9c05d70cfa061846bf3aaf2bf210a344d463b17e0669503f79c34816fb02",
+            "357eb57a53dfa069665292ab4f7bdfca389a49ebef50d323c944974b0a517078",
+            "35b7e2bc8c19a4f2e3e63f6659551b7b65172f355d677e199f0d6c25708ab691",
+            "35becb310f3b0aef85c11492a1e0f0633ba32b4c68dc1fb78c8f7f69e41d2a05",
+            "37a1e04f81dec90af1dd8f10c3d0dea56c2a07f2ca3d2e0878fd5e76d947fb26",
+            "37f99eedce7ddeca965c6f1ece1c1b41c8013c941b29ede147a6da277c180f05",
+            "38059ea2a289d0ff65dc3c3394ef8b119330710f50981ba87ab0709033a07723",
+            "3899593915e943fc8a778c859536b6a7f2744a88ef8523f194b65390ce95276f",
+            "38e586a290aae715b88507dff1f685164542d29f9b0c1f895d4714dc9958881f",
+            "3a51b5c08dc0e7dcc1a332aa18c805c2cd2e821dda60cd6bd173bea643bee1c7",
+            "3a7cf5f935e75b4aa9a41223744898b73473ef5e801c04fd8b5ab0133be869e5",
+            "3df795e3f7aad4d697c295c898dabb269ee5f14979751738e89dfcb472e339d9",
+            "3f57581413a3eadd944f11cdfc66dedb3427ad863d8ee6ed6b3289fda262c4f7",
+            "3f7da1ef7fcc8456bae734c5e67486c84aafeba0918d4633e0bf0f1fb627bdd0",
+            "44e74fee1a17e5ef3db4c1c521119a58048013ae3e45bc8cd20dea706638b3f6",
+            "459f81a9ca617e688a9aaa1a39028e86d9e36f3870080429856085f5451da252",
+            "46e4ca39a37f89495071013095a7462a6d9f5021e269b2d415d3dcc2d49109b8",
+            "499eb8d0718cdac93166903a282d17db43ca14aee1471a06b81959e9106a94a7",
+            "4a214ddb2e363bb2397e7f36eaa50c926ecb7a48b1907e2ded5149e6566346a9",
+            "4b352eb0f806529b531cad311bda6fce06ef88202ab5af127a107cf9dfcccea5",
+            "4c5ba7cd36b8c7029fddfc7c5317ca8dd9c37400f86ab5fa18e775d81089c995",
+            "4d03b2ee000680439cc6b54f5f2a6871f395726769a7ff8241d1e958ee7bf65c",
+            "5011f15814057f25c88cdf8eb2794e652e557d58da07ba2d6b77ad4cef962f5b",
+            "52a5b7efca0adb8b1458dd745fe52a561b5414cb1e028b969b59a821f55bf219",
+            "5450c213d8b17d8e0aaed12502b30a8022e396e1b4bfe9d6aa40853a99f6f655",
+            "54de0949cd745f2c2d3d033a0125e27ab0e9a6afd154aeb4d58fd290435aa8ce",
+            "571e91b051dac416297d0772784e1cd115c0c96e9a06b9aef8c843cb364ae769",
+            "58b413416ed9c016b4d9ebe3bebc9b802063b30700e60946fc58f8ab65eace6b",
+            "590c13e22c1cb280fdca1533dde9b6c04417a7267943749ddd26b4c500e0321b",
+            "59b578343814f3c21570cf23d1fe3c51d95fc8cfa9d01b8a2d3eaef8323e5878",
+            "59ca7f72167097095f1967fbe0b09101a3314512b403f4c1050af885c8f11a77",
+            "59e0962e0e0d25a7e26de2c3c3168240a09d52a1f1bbd81792d9edf48d217a95",
+            "5aacdb214004bb614d2c0aae6b467f6936a2ecf890aa21d0053a80f8c22e8e28",
+            "5b259fd7f45c1873a92a454aa9b5977320f48063dd1b2254d900923555f3dc7a",
+            "5bb0b8ce723102cb8eaa3c3e14cdce93d3b12b59b77699562eef320461a6dddf",
+            "5d6d2d2ce5cedf42eacc89162c23a0c362497bc3ea253720a8954905ba0c9c93",
+            "5f7a3ce70820c1dedc0dcaa08879c2a4a10c0ce0a25dc5ab731ee547d822d187",
+            "5fdd2cb617b454f28e103bfe905fef178bac2a6e992eddea5e672ecc5d968be9",
+            "615733501cc1b8300b74d37cb7f9e068d718dd4fa1cb1cccf1498872c40363ac",
+            "66f4bb3e00509ecc0a1ec8147dfa699b624d36e9dca9e0ff5936d32785ca30d6",
+            "6a4c8046375f8f4d51dca839ddec2a6d4ae383f056fbcf66b71fe1144c6f1cb7",
+            "6d1a29156a51e36dc278ba51ced89a8d6964458b64741832fbef65bf97540424",
+            "6db9b9d858d2e072b7f7aa3f7a1cb590ec1462520dc4d1b7bea5464bbf5c1e53",
+            "6fd8fdb9f9f95bc085576bf0c4a91f8f4ef4339942d070907752bdc799948d7e",
+            "70811d3bf37eaa5fdf6975d5214ca7ccf34b6e99f0e72be9fc8256d41072f7ab",
+            "764fbe85365368a3a1504717a4a7223a9ccdc81d2189e87eba5d73d2bf4001a8",
+            "78d4af58aff477873e5f48fb3ae256eadb8c48fe6961808ebe90056b35738d20",
+            "79f854965fa46849bd36a9438e2fe59e1bfe4593a5f66fe7eb85bdf72c03274e",
+            "7da60378061dd94eb5d5492f1a53488c4bf3f6b5d3d502780cb82b7b9fba7df0",
+            "7e1794392e23091dfea5bec5aa38601b3ee187311961797873d3a68979cdc470",
+            "7ebd0fa4ff0ed03c52f66f0ed2d724d9c3f99bdbfb65e73566f3146d6f8fd160",
+            "7f2ca67b9b4bc47abbe6e6ff373ab4463f943921bdb875e9bd414ed4e44a024e",
+            "80a66689e2aeeaffec874dc02d1f18c6f347601c97ba17ba8ab95447b1040060",
+            "810e90b018570b01dc9cea599758841d9ccee3c8b1b160fd8dbf4da997561654",
+            "85cc311f63918e3bf71c17ef79981bf24c32bc5519f360fcf801fb0644eace47",
+            "894c1cbd890cb7101997e1129b4f7e4403d5b17d9d9e172daf78dbd861851728",
+            "8979e3ef3a41ade41fbc8296a4149f43eda8e67bc4c3e9de330f7ee94afdbaf7",
+            "8a5a8df1f81b5071db7a2c82fc2f5875af3d436d565824dd3f0cce199c6e2d80",
+            "91e94004d3cf1d147561cc2870943aa56d8ed1cee6889fc87265c851897da5a9",
+            "9494133763833752768196b282baa4ffe581ce02e299e6e639d10777005bced0",
+            "96d645e97d16cf96f48c6a702cc790934ee4ddfabc9e8c34f4280e9131776b9d",
+            "9a542f352efc41d8dd74a2b2a26b25e8b8a9b61b6c0bc1c69899a030a3e9d0bf",
+            "9da9b6a3abf3e39c9c61328ca27c5b453b328382415c153b6ee2ac2ce08934e5",
+            "9ed5ddc305cc4577fe5ca8b80d6a25c3a2664351a64a4bf0243ddddf135854fc",
+            "9edee48b9b612d9726d0f481be25d7252410c46bfe634c8fc0d32cffa7275f5b",
+            "a15bab33315a373f4dd8003258e633b2516924a18853b90940ad4c05f7547533",
+            "a400f2386b0473f9ac31823119383dcc888c5ef3bf7f6e571439522fbbde902a",
+            "a461f36d16b6fb3b23b448710f40f4eb4dad77e3eb8e86aa041df534ce9aab65",
+            "a62b339b6e8cb74234b214197f795a403c63c379d21d79c44234d64c1234f6c6",
+            "a6c40e30bf793d6aabbe002a0f661d27ff5defa4cc0923a1e0b482df4264a967",
+            "a744b222c86ee6aef05b779a9b8ecb843613b01844f8fa777a24a6ad80798134",
+            "a7bbbad2c0d2232ff539b9e36aa58ef1a74a0e393cd0f07cf51086265b38df2d",
+            "a7edaa7fcecc005a4ff94c84aa5cdef407a1bc47e96f7504aaddf6fab87d54d2",
+            "a98d28117528f0558e118ae5cc7ecdd55735f2241888c19c0caf0d1ad7c1818f",
+            "ab8d0fddca62cb25560b77298a66759ff8e9c121db361e525e9665753f471934",
+            "abc817abe38ce7ea9311004306072e9a6f652b03021aac18d71dbc10bc5a96b7",
+            "aedd759f34f3811cdcda25c481af8839cea24bec117143737f736aba673f0fc1",
+            "af3aa778f1c1989aae8d4d37af4bc38808af881a03e36b2944cf6714dc87e576",
+            "b156ab3f20e94dfe448c63bdfbaad9032d64042f8c7964463785778d267c681e",
+            "b2a65f91ee3ae06b162c0d57966e70d81f5561194405520dbe85275866308e4e",
+            "b4752070c136d3a99736cbae1cf138902a58c874c45b8a97793146e46f7e6706",
+            "b5125f67be3dc682e6393439406a1f72aafe734b9618cfc2ce69e5b87634de88",
+            "b6ce920984ee7db33464e031fcbe3d537866d29ef5b5388a86cc8d55b230c4bc",
+            "b6f170c044ff3e3e792afe19eda11a374b35ed6d4cd6c188ee8e604a3de7b79a",
+            "b77391c416bfea42e95d1a13ff7f587fc95e999ed677e2c1f2a4139431559c8b",
+            "bbb1f18f2d37d1c4c2ea6f74e7713fdd9d81e8afc31fa3431a1881fe028199cf",
+            "bbc42ec29fd9f938fdb649f9d3844594abe6a6e1ccae0ef2e1b2aa0bb2bd9505",
+            "beb25fb40a855530d02706cf4fb1bbafb88894c528c15f5eadd50db2535624de",
+            "c0032586d6eda8e7bd2b93f34802e1c0bb120896995e0dc3c358e0450cacf307",
+            "c1ae68b9717874c548179f4aff5b3e7c697a6505aab855b511afab88099f300b",
+            "c218693b22f1e77d39ef10d2c2ff10eaed6318a7b46a31cc5a64bf2b0a409426",
+            "c31f2e5dcc2b6dd3aa206c176515d14461aa4f861aacb7158a8e0e08b6c588bf",
+            "ca0ae911743cd14cbd38f38291df0f76944fcf165484bf5a2ab501f98ed2dcc5",
+            "ca1dae3a0f8ef620f301abc5ea87a544e5c896b39888022944922125674ff995",
+            "ccfff156b27d94f4f00dfc39f9b25c303d7800f09c1d86d77b9f799779440edc",
+            "cf70a2dc001cd3e15289794ab4b3d0a71f890dd4dfab1d7541d9dfb272c4feb6",
+            "d0017c1404611d8ae9d9ef41ec9215f8859095ee252113ebc28de47417e79372",
+            "d069aca574652aa5bf586dfceb3abc2f76b1b3c5b0ca5b16804706a7d26c3f28",
+            "d09c6756ed55cdc7284c2da8ebcde6211153aa2616869a1102bdc8396372b130",
+            "d12c0a71c1e8553bede5d0641bef1285a9aebb756fa1d039830dfc40a0d93c0f",
+            "d31291efbab9e4c5d32171cf05a313bb1350d52d98d7874f7f1dce2958091002",
+            "d31a60aaca7521e3124fcc5490852320c44ef855d370b36a4355d340d310d0ea",
+            "d3e805abf608d2b04db6ee4818e9765e7f88d7518ddb04b634365811c2340984",
+            "d3fe56e6e63549c08380b28ee70ebba03405111de49f2d3e689976647d8db6ff",
+            "d60863aca6fc9ad9da38e4afdd6180ec9a56c6c0f0ffa3eeb6d8568ccbb5698e",
+            "d6588f2372a6593d6748d7a7987c6f1c2f9eedd87e5e2cf8ba6a6826d0772846",
+            "d83a92fa02c13262431d6473d2a69633f920415b42b6f93a0ad6d23d6cdf235c",
+            "d8d3a2d81da9d8a10336399ad579a7c4df209b954998992b5675a63fcbff22ba",
+            "dbd4ed8513e2575c15ba7ac72ba60edf1bfb95c68c0e16f2d31a5b8b9c3521cb",
+            "dce0418f6f721651f2fefca1ea4b1e123e3e0d7466d28e92b81a16e14aeccd50",
+            "dd511707156958c7a4e00f64064fbab7a25901735fcfc2ee1a2433797e5ce328",
+            "de23a50c1690a57d53858482e3eb6ab391921383b6b3357b4a6c283cc94d6844",
+            "e0105ab48c314bf12de2be099e921ab7adbe019d0ad7efaae180f84b37354ebc",
+            "e082237c01afd1fb7626a33fe4788570828a5488f32174777095e3c8cc6a374d",
+            "e1ae60a80587acd3cb984fe0a5786ca65cef1c4569ed8540a320d428ec48c5a8",
+            "e27caa4fe9977c784fb32d8027fccacb640f23efb97f9fcbcdb91c5d574c416b",
+            "e281da2e7532f22b2edf82dd6c858cae889aa6528429999559e2b88e535f9be0",
+            "e2e4a902aa5972294d6e871cf5283de68a8026ab30c423abad7d9d4bd6448e78",
+            "e3eb4fb5f07e64267ab3fd6f880671e86cb0eae61f0066072cdea926bf14b62c",
+            "ea20d064d4234936ad45af041d0dbe46d5f40c77189243390eb92c853d56d3d9",
+            "eb13ea51d4333e5daf28fee77a5245b8e088ae3746c8bab7d26ffadb950531dd",
+            "f04680060fa3315835510d5484d55efe1d5092db409be626b8b67522ff015b12",
+            "f141f802efc90c561fbd2d27c30d23b9531c071a84f5ea79f3f42911e07ec5ec",
+            "f1f858f941631b4ec0f6536849e18d4da23574adce19f40a71e185e07b319641",
+            "f4ae677290870ff8329ad162924738bf08d6a3156c3d581ec255f2a2fa1be70d",
+            "f57ba00f1da7c31a955f9d3a11c9914aed240600383a6e3c594f351bbc8fc186",
+            "f6b4dca8d63f504a259521a014af5cd69389d6644f51b2f9c302b6828682935d",
+            "f70436db5bdc91132a9ee8e1ba50949d6c99c0b4c675e6829fc4507205d57fb2",
+            "f7d19cb86be251a9c417668177fb39e8539c0b12f9628e74cc38ca030706e79b",
+            "fa96101ad8f159dbf6bcd262155065531df11a8d6ac22b048355eb9707acec2e",
+            "fe95c8f05d573be4f3f2b744e65bd0aac10dc1a4827c8042e1d89a8b11139c7f",
+            "ffee604846f01b15b80072a066301e37b8c99c4d2ca1137efa1a6b276c533797"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -5138,6 +5578,12 @@
           "url": "/Standings/View/Series/1539",
           "title": "Svenska cupen MTBO 2026",
           "last_updated_at": "2026-02-07T22:09:12.439595+00:00"
+        },
+        {
+          "type": "Series",
+          "url": "/Standings/View/Series/1594",
+          "title": "Svenska VeteranCupen MTBO 2026",
+          "last_updated_at": "2026-05-10T19:32:03.787003+00:00"
         }
       ],
       "documents": [
@@ -5148,13 +5594,25 @@
           "published_time": "2026-04-03"
         },
         {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "/Documents/Event/122245/PM",
+          "published_time": "2026-05-08"
+        },
+        {
           "type": "Invitation",
           "title": "Invitation",
           "url": "/Documents/Event/120795/Invitation",
           "published_time": "2026-04-04"
+        },
+        {
+          "type": "Other",
+          "title": "Arenakarta",
+          "url": "/Documents/Event/122262/Arenakarta",
+          "published_time": "2026-05-08"
         }
       ],
-      "information": "SPRINTDISTANS 9 MAJ:\nhttps://eventor.orientering.se/Events/Show/54359",
+      "information": "SPRINTDISTANS 9 MAJ:\nhttps://eventor.orientering.se/Events/Show/54359\nUppdatering av PM söndag långdistansen D60\nKlassindelningen och strukna klasser har uppdaterats i PM.",
       "region": "Stockholm",
       "punching_system": "Sportident",
       "races": [
@@ -5226,23 +5684,271 @@
           ],
           "urls": [
             {
-              "type": "EntryList",
-              "url": "/Entry?eventId=54361",
-              "title": "Enter",
-              "last_updated_at": "2026-04-12T19:43:08.816417+00:00"
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/188559",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-05-10T19:32:03.787006+00:00"
             },
             {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=54361&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-04-12T19:43:08.816417+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=54361&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-05-10T19:32:03.787006+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=54361&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-05-10T19:32:03.787006+00:00"
+            },
+            {
+              "type": "LocalStartList",
+              "url": "data/events/2026/SWE_54361_startlist_1.yaml",
+              "title": null,
+              "last_updated_at": "2026-05-20T18:48:09.232680+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "D21": 14,
+            "H21": 13,
+            "D17-20": 6,
+            "H17-20": 7,
+            "D16": 3,
+            "H16": 1,
+            "H14": 1,
+            "D12": 1,
+            "H12": 1,
+            "H10": 1,
+            "D40": 2,
+            "H40": 3,
+            "D45": 3,
+            "H45": 4,
+            "D50": 6,
+            "H50": 12,
+            "D55": 3,
+            "H55": 12,
+            "D60": 5,
+            "H60": 18,
+            "D65": 4,
+            "H65": 9,
+            "D70": 2,
+            "H70": 13,
+            "H75": 4,
+            "Öppen kort": 3,
+            "Öppen Medel": 17,
+            "Öppen lång": 3
+          },
+          "result_counts": {
+            "D21": 14,
+            "H21": 13,
+            "D17-20": 6,
+            "H17-20": 7,
+            "D16": 3,
+            "H16": 1,
+            "H14": 1,
+            "D12": 1,
+            "H12": 1,
+            "H10": 1,
+            "D40": 2,
+            "H40": 3,
+            "D45": 3,
+            "H45": 4,
+            "D50": 6,
+            "H50": 12,
+            "D55": 3,
+            "H55": 12,
+            "D60": 5,
+            "H60": 18,
+            "D65": 4,
+            "H65": 9,
+            "D70": 2,
+            "H70": 13,
+            "H75": 4,
+            "Öppen kort": 3,
+            "Öppen Medel": 17,
+            "Öppen lång": 3
+          },
+          "fingerprints": [
+            "01a6b1bc61e7ed23d6f63ed73d3698430dfdd5fc737a6f132685843202cdddcd",
+            "023e1993ed5a6b87a28f09e3c6449708e1113f4c74bfb72411c462f8227ab0f3",
+            "02d504ae0d860e78d30cc5abe9cfdbe5c33984fa657c48b68215e0d47098c02d",
+            "042173b9aa097dfc62fec7b214f3bddd862dbe5c5f42a28136a812a59f02d78f",
+            "054fca0d09efb39c74643d8347a658e2555a872cd47a789dcf93f06196fe01c7",
+            "067de2e23e72092bd6f7135908dd606d761aaf0ae74ce47ac9cade109e7fd56a",
+            "0890bf758710dd21c740aaa722c3a6172dd338e69a60dc00619950e9afc6adb9",
+            "094ef4b2c5340796ffe324c4373bfa63bbca4205c0b773281ff07323771fdd8c",
+            "0b79b6fda79f767385890c14a7704a39f5c1b88e91e92a081d804b7a8979ac2a",
+            "0e87907f0a4bd6689ba295a6391797b254e2b200da002b4732aad1f40330ca43",
+            "0f68a7fe8f6f22dbe93f221802399946ff0e293505f8a34508d42fff1b474b45",
+            "124103c6097234e419a9f96aeebb7476c6e26d0aaf36b7f1b6b5f5b59e720c1a",
+            "12bc07431042426573fba82a11a5bc840411af103402f2f524beeaf1bcbf2f49",
+            "17224cb48800ff039b418772dc503dfadcdc91e1c265f0a00fde7b476b88ecd2",
+            "178425abdccab15f9085c3eac032ae96a785520792dbcd69e10eaf56c2978e67",
+            "179e8bdc3009f84d579b853e0d45a3fe7fe578df27ef42cad599690ff6e4bd4f",
+            "1ab8dc5b2eb043c5484aef48b40f68078f5e52c87e817d798d8f476a12aff16b",
+            "1bde460c125ec816550424030b954b2b7996f9f1b2b4eeea7db72916e6110e43",
+            "1c887cd9a237c5008ecefc55800f137be772d7ffb5c67b416dfa9a6334d17167",
+            "1caa9b4966fd56a05745e1741a6f5ad398f9f074fd1d8e98c5545c80ff9d5256",
+            "1cab4bf2ff5e875fefbebdf1a6b92c5a04a8f48165e0391513f4d80b26562a79",
+            "1dd993d53f879a43ad1e96453cc7f0dab49d10ec05cb7c6cc8a5d5a0d47f2a16",
+            "1e8c58f11a5d807af4ae92fb0223d976ed045f17d30e23a6eda4cef8b05a257f",
+            "1ee61959927bc931c27d41374e14b951c41fe7917a61947dea1ba759c6ca8848",
+            "1f5c63866bd64be69627e9a7008a1c11e1c160ca68129470623dd544b7467463",
+            "204f843c22f5fe89a693b2e84f6bf7685c682b5601b8ba37e0a44c2f988bb921",
+            "224c25bff1b3824787906e5b075e6ec3a984debd30d5d02b1070e99f7533814c",
+            "24108de8f05e5db82b55bcedcd514ba62ba231ffdff00b3f6bff4fe9c65d1a02",
+            "244aa3cdf8663006bb9b2a2be24b25b76eafb0e2c2892f09e65efd153539d4cc",
+            "2655074a02afca37a3a5fedec2332a96280f9b5c564c9cdd006868431a922979",
+            "28156df815b2059ff176846cbe7305c11502e591ca19f88d454bac7103ec7062",
+            "2bbeb928a4bc44cb78ba45d9101af4e0ed34a7983a2f433978722502e20bf024",
+            "2c0118f406cd663619bfdb408203fec9cabd1ac62448d4b0fcdf17914228ebf6",
+            "2cdcf8a50441103eed618a211ae6d3a5f9ddf424a83e93ccaf7626943eb8ca1b",
+            "2e3f193bcd1105a3e89d837862f9699b1b1222ed3dbb14fb5494883a12b9863b",
+            "2e4ae66a71bc0db7c618db80b55f5e356819cd290284eecef49c9e04b3bdd471",
+            "30274db6d725ce1d89944d6f3ee402a9d36529445f3c8da90911afba2dd57d2e",
+            "308764f6c2056173151f53a6dcd59160d778d72996642fda76b21552a48fdf2b",
+            "32730d69d22f29d99dc873da8429f4927ebb64768d0d7c580b82e4ade9f2b2e3",
+            "341f9c05d70cfa061846bf3aaf2bf210a344d463b17e0669503f79c34816fb02",
+            "357eb57a53dfa069665292ab4f7bdfca389a49ebef50d323c944974b0a517078",
+            "35b7e2bc8c19a4f2e3e63f6659551b7b65172f355d677e199f0d6c25708ab691",
+            "37a1e04f81dec90af1dd8f10c3d0dea56c2a07f2ca3d2e0878fd5e76d947fb26",
+            "37f99eedce7ddeca965c6f1ece1c1b41c8013c941b29ede147a6da277c180f05",
+            "38059ea2a289d0ff65dc3c3394ef8b119330710f50981ba87ab0709033a07723",
+            "38e586a290aae715b88507dff1f685164542d29f9b0c1f895d4714dc9958881f",
+            "3a51b5c08dc0e7dcc1a332aa18c805c2cd2e821dda60cd6bd173bea643bee1c7",
+            "3a7cf5f935e75b4aa9a41223744898b73473ef5e801c04fd8b5ab0133be869e5",
+            "3df795e3f7aad4d697c295c898dabb269ee5f14979751738e89dfcb472e339d9",
+            "3f57581413a3eadd944f11cdfc66dedb3427ad863d8ee6ed6b3289fda262c4f7",
+            "3f7da1ef7fcc8456bae734c5e67486c84aafeba0918d4633e0bf0f1fb627bdd0",
+            "40f405115130b53100917c62f6d1a4ba42f99bd1f97435b5f0470e03e326c74c",
+            "42fb8ab8afdfd9636d9b8288d14525677108aaa7b033c3496dc0b8054e93936f",
+            "44e74fee1a17e5ef3db4c1c521119a58048013ae3e45bc8cd20dea706638b3f6",
+            "459f81a9ca617e688a9aaa1a39028e86d9e36f3870080429856085f5451da252",
+            "46e4ca39a37f89495071013095a7462a6d9f5021e269b2d415d3dcc2d49109b8",
+            "499eb8d0718cdac93166903a282d17db43ca14aee1471a06b81959e9106a94a7",
+            "4a214ddb2e363bb2397e7f36eaa50c926ecb7a48b1907e2ded5149e6566346a9",
+            "4b352eb0f806529b531cad311bda6fce06ef88202ab5af127a107cf9dfcccea5",
+            "4c5ba7cd36b8c7029fddfc7c5317ca8dd9c37400f86ab5fa18e775d81089c995",
+            "4d03b2ee000680439cc6b54f5f2a6871f395726769a7ff8241d1e958ee7bf65c",
+            "4f08c63ea38ce6d5015334b5947dc419642d6b23e0ee69f73210ac23e13bc4ba",
+            "5011f15814057f25c88cdf8eb2794e652e557d58da07ba2d6b77ad4cef962f5b",
+            "52a5b7efca0adb8b1458dd745fe52a561b5414cb1e028b969b59a821f55bf219",
+            "535035c5be3abd05da5867a7b732e8ee08990070e584c448d93f0fb01be7aed5",
+            "5450c213d8b17d8e0aaed12502b30a8022e396e1b4bfe9d6aa40853a99f6f655",
+            "54de0949cd745f2c2d3d033a0125e27ab0e9a6afd154aeb4d58fd290435aa8ce",
+            "571e91b051dac416297d0772784e1cd115c0c96e9a06b9aef8c843cb364ae769",
+            "585d4094cb86e61808fc5e3acf04404ff5573164a99bcc474967758cf0088198",
+            "58b413416ed9c016b4d9ebe3bebc9b802063b30700e60946fc58f8ab65eace6b",
+            "590c13e22c1cb280fdca1533dde9b6c04417a7267943749ddd26b4c500e0321b",
+            "59ca7f72167097095f1967fbe0b09101a3314512b403f4c1050af885c8f11a77",
+            "59e0962e0e0d25a7e26de2c3c3168240a09d52a1f1bbd81792d9edf48d217a95",
+            "5aacdb214004bb614d2c0aae6b467f6936a2ecf890aa21d0053a80f8c22e8e28",
+            "5b259fd7f45c1873a92a454aa9b5977320f48063dd1b2254d900923555f3dc7a",
+            "5bb0b8ce723102cb8eaa3c3e14cdce93d3b12b59b77699562eef320461a6dddf",
+            "5d6d2d2ce5cedf42eacc89162c23a0c362497bc3ea253720a8954905ba0c9c93",
+            "5f7a3ce70820c1dedc0dcaa08879c2a4a10c0ce0a25dc5ab731ee547d822d187",
+            "5fdd2cb617b454f28e103bfe905fef178bac2a6e992eddea5e672ecc5d968be9",
+            "615733501cc1b8300b74d37cb7f9e068d718dd4fa1cb1cccf1498872c40363ac",
+            "66f4bb3e00509ecc0a1ec8147dfa699b624d36e9dca9e0ff5936d32785ca30d6",
+            "6a4c8046375f8f4d51dca839ddec2a6d4ae383f056fbcf66b71fe1144c6f1cb7",
+            "70811d3bf37eaa5fdf6975d5214ca7ccf34b6e99f0e72be9fc8256d41072f7ab",
+            "70cf5eed83e104d5ab09d24215d5dd24a896b3d3201b09d40062cc526c319474",
+            "736304e1e964ab66c74eddd4a214516685425b77b4ebe991739ad711ce3c52f9",
+            "73ae41d65b23f4ed6e91aa5db0f17dcd5fffc91ecefd1fcbc5b9918d27019726",
+            "75f798ee96907c7e398650817ce85798cc0fcf715b34c4a52b4e1faff14b8642",
+            "760e9be15ab6799dd8fc306f2407e365e14224c05cc03711b97b6472b80272fa",
+            "764fbe85365368a3a1504717a4a7223a9ccdc81d2189e87eba5d73d2bf4001a8",
+            "78d4af58aff477873e5f48fb3ae256eadb8c48fe6961808ebe90056b35738d20",
+            "79f854965fa46849bd36a9438e2fe59e1bfe4593a5f66fe7eb85bdf72c03274e",
+            "7da60378061dd94eb5d5492f1a53488c4bf3f6b5d3d502780cb82b7b9fba7df0",
+            "7e1794392e23091dfea5bec5aa38601b3ee187311961797873d3a68979cdc470",
+            "7ebd0fa4ff0ed03c52f66f0ed2d724d9c3f99bdbfb65e73566f3146d6f8fd160",
+            "7f2ca67b9b4bc47abbe6e6ff373ab4463f943921bdb875e9bd414ed4e44a024e",
+            "80a66689e2aeeaffec874dc02d1f18c6f347601c97ba17ba8ab95447b1040060",
+            "810e90b018570b01dc9cea599758841d9ccee3c8b1b160fd8dbf4da997561654",
+            "894c1cbd890cb7101997e1129b4f7e4403d5b17d9d9e172daf78dbd861851728",
+            "8979e3ef3a41ade41fbc8296a4149f43eda8e67bc4c3e9de330f7ee94afdbaf7",
+            "8a5a8df1f81b5071db7a2c82fc2f5875af3d436d565824dd3f0cce199c6e2d80",
+            "91e94004d3cf1d147561cc2870943aa56d8ed1cee6889fc87265c851897da5a9",
+            "933d2f1af265affd9c57e47fb94f734e14ea6668abb7f56ce872e1d2c265487e",
+            "9494133763833752768196b282baa4ffe581ce02e299e6e639d10777005bced0",
+            "968f4c6c9ba547c6982ddb3082753bd333e5645f711f35179d8379c7eb398d6f",
+            "9a542f352efc41d8dd74a2b2a26b25e8b8a9b61b6c0bc1c69899a030a3e9d0bf",
+            "9da9b6a3abf3e39c9c61328ca27c5b453b328382415c153b6ee2ac2ce08934e5",
+            "9edee48b9b612d9726d0f481be25d7252410c46bfe634c8fc0d32cffa7275f5b",
+            "a15bab33315a373f4dd8003258e633b2516924a18853b90940ad4c05f7547533",
+            "a400f2386b0473f9ac31823119383dcc888c5ef3bf7f6e571439522fbbde902a",
+            "a461f36d16b6fb3b23b448710f40f4eb4dad77e3eb8e86aa041df534ce9aab65",
+            "a62b339b6e8cb74234b214197f795a403c63c379d21d79c44234d64c1234f6c6",
+            "a6c40e30bf793d6aabbe002a0f661d27ff5defa4cc0923a1e0b482df4264a967",
+            "a744b222c86ee6aef05b779a9b8ecb843613b01844f8fa777a24a6ad80798134",
+            "a7bbbad2c0d2232ff539b9e36aa58ef1a74a0e393cd0f07cf51086265b38df2d",
+            "a7edaa7fcecc005a4ff94c84aa5cdef407a1bc47e96f7504aaddf6fab87d54d2",
+            "a98d28117528f0558e118ae5cc7ecdd55735f2241888c19c0caf0d1ad7c1818f",
+            "ab8d0fddca62cb25560b77298a66759ff8e9c121db361e525e9665753f471934",
+            "abc817abe38ce7ea9311004306072e9a6f652b03021aac18d71dbc10bc5a96b7",
+            "aedd759f34f3811cdcda25c481af8839cea24bec117143737f736aba673f0fc1",
+            "af3aa778f1c1989aae8d4d37af4bc38808af881a03e36b2944cf6714dc87e576",
+            "b156ab3f20e94dfe448c63bdfbaad9032d64042f8c7964463785778d267c681e",
+            "b2a65f91ee3ae06b162c0d57966e70d81f5561194405520dbe85275866308e4e",
+            "b4752070c136d3a99736cbae1cf138902a58c874c45b8a97793146e46f7e6706",
+            "b5125f67be3dc682e6393439406a1f72aafe734b9618cfc2ce69e5b87634de88",
+            "b6ce920984ee7db33464e031fcbe3d537866d29ef5b5388a86cc8d55b230c4bc",
+            "b6f170c044ff3e3e792afe19eda11a374b35ed6d4cd6c188ee8e604a3de7b79a",
+            "bbb1f18f2d37d1c4c2ea6f74e7713fdd9d81e8afc31fa3431a1881fe028199cf",
+            "bbc42ec29fd9f938fdb649f9d3844594abe6a6e1ccae0ef2e1b2aa0bb2bd9505",
+            "beb25fb40a855530d02706cf4fb1bbafb88894c528c15f5eadd50db2535624de",
+            "c0032586d6eda8e7bd2b93f34802e1c0bb120896995e0dc3c358e0450cacf307",
+            "c1ae68b9717874c548179f4aff5b3e7c697a6505aab855b511afab88099f300b",
+            "c218693b22f1e77d39ef10d2c2ff10eaed6318a7b46a31cc5a64bf2b0a409426",
+            "c31f2e5dcc2b6dd3aa206c176515d14461aa4f861aacb7158a8e0e08b6c588bf",
+            "ca0ae911743cd14cbd38f38291df0f76944fcf165484bf5a2ab501f98ed2dcc5",
+            "ca1dae3a0f8ef620f301abc5ea87a544e5c896b39888022944922125674ff995",
+            "d069aca574652aa5bf586dfceb3abc2f76b1b3c5b0ca5b16804706a7d26c3f28",
+            "d12c0a71c1e8553bede5d0641bef1285a9aebb756fa1d039830dfc40a0d93c0f",
+            "d31291efbab9e4c5d32171cf05a313bb1350d52d98d7874f7f1dce2958091002",
+            "d31a60aaca7521e3124fcc5490852320c44ef855d370b36a4355d340d310d0ea",
+            "d3e805abf608d2b04db6ee4818e9765e7f88d7518ddb04b634365811c2340984",
+            "d3fe56e6e63549c08380b28ee70ebba03405111de49f2d3e689976647d8db6ff",
+            "d4f08c5c8388b4d566079d5f8e8e0483d0dd3980d6f66324135cff70380ea459",
+            "d60863aca6fc9ad9da38e4afdd6180ec9a56c6c0f0ffa3eeb6d8568ccbb5698e",
+            "d6588f2372a6593d6748d7a7987c6f1c2f9eedd87e5e2cf8ba6a6826d0772846",
+            "d83a92fa02c13262431d6473d2a69633f920415b42b6f93a0ad6d23d6cdf235c",
+            "dbd4ed8513e2575c15ba7ac72ba60edf1bfb95c68c0e16f2d31a5b8b9c3521cb",
+            "dce0418f6f721651f2fefca1ea4b1e123e3e0d7466d28e92b81a16e14aeccd50",
+            "de23a50c1690a57d53858482e3eb6ab391921383b6b3357b4a6c283cc94d6844",
+            "de86aef4fda4023d0997da58891d37f773e78b77fad51a64a3488b09af689ced",
+            "e0105ab48c314bf12de2be099e921ab7adbe019d0ad7efaae180f84b37354ebc",
+            "e082237c01afd1fb7626a33fe4788570828a5488f32174777095e3c8cc6a374d",
+            "e0c64c0a885c28ea0131a7ad4b37f5b8e6db19f8ced6c7653b86252f4e429577",
+            "e1ae60a80587acd3cb984fe0a5786ca65cef1c4569ed8540a320d428ec48c5a8",
+            "e281da2e7532f22b2edf82dd6c858cae889aa6528429999559e2b88e535f9be0",
+            "e2e4a902aa5972294d6e871cf5283de68a8026ab30c423abad7d9d4bd6448e78",
+            "e3eb4fb5f07e64267ab3fd6f880671e86cb0eae61f0066072cdea926bf14b62c",
+            "e542ebdc12ba79531c3ce32f0fe556ae50e7221b75021c5ebda0a56ff0928ba9",
+            "e81fdaedc4d15c8f0abd994a6b37e7731c46cc9c4dbbf638be103277579204c9",
+            "eb13ea51d4333e5daf28fee77a5245b8e088ae3746c8bab7d26ffadb950531dd",
+            "f04680060fa3315835510d5484d55efe1d5092db409be626b8b67522ff015b12",
+            "f141f802efc90c561fbd2d27c30d23b9531c071a84f5ea79f3f42911e07ec5ec",
+            "f1f858f941631b4ec0f6536849e18d4da23574adce19f40a71e185e07b319641",
+            "f4ae677290870ff8329ad162924738bf08d6a3156c3d581ec255f2a2fa1be70d",
+            "f57ba00f1da7c31a955f9d3a11c9914aed240600383a6e3c594f351bbc8fc186",
+            "f6b4dca8d63f504a259521a014af5cd69389d6644f51b2f9c302b6828682935d",
+            "f70436db5bdc91132a9ee8e1ba50949d6c99c0b4c675e6829fc4507205d57fb2",
+            "f7d19cb86be251a9c417668177fb39e8539c0b12f9628e74cc38ca030706e79b",
+            "f9da6ac093bf0791fe09a88124a79ce6d7e86449ed972ac6b159ba5be0005e9b",
+            "fa96101ad8f159dbf6bcd262155065531df11a8d6ac22b048355eb9707acec2e",
+            "fc15d496596d260aa64a2c4179d8386ed93d7e2bd18ca8f44115f918ea307566",
+            "fe95c8f05d573be4f3f2b744e65bd0aac10dc1a4827c8042e1d89a8b11139c7f"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -5300,6 +6006,12 @@
           "url": "http://www.mtbo26.se",
           "title": null,
           "last_updated_at": "2026-02-07T22:24:13.324632+00:00"
+        },
+        {
+          "type": "Series",
+          "url": "/Standings/View/Series/1594",
+          "title": "Svenska VeteranCupen MTBO 2026",
+          "last_updated_at": "2026-05-10T19:32:03.787299+00:00"
         }
       ],
       "documents": [],
@@ -5378,6 +6090,12 @@
           "url": "http://www.mtbo26.se",
           "title": null,
           "last_updated_at": "2026-02-07T22:24:13.324604+00:00"
+        },
+        {
+          "type": "Series",
+          "url": "/Standings/View/Series/1594",
+          "title": "Svenska VeteranCupen MTBO 2026",
+          "last_updated_at": "2026-05-10T19:32:03.787188+00:00"
         }
       ],
       "documents": [],
@@ -5456,6 +6174,12 @@
           "url": "http://www.mtbo26.se",
           "title": null,
           "last_updated_at": "2026-02-07T22:24:13.324659+00:00"
+        },
+        {
+          "type": "Series",
+          "url": "/Standings/View/Series/1594",
+          "title": "Svenska VeteranCupen MTBO 2026",
+          "last_updated_at": "2026-05-10T19:32:03.787306+00:00"
         }
       ],
       "documents": [],
@@ -5513,6 +6237,10 @@
           "name": "Lars Pontén"
         },
         {
+          "role": "Course setter",
+          "name": "Berth-Arne Bengtsson"
+        },
+        {
           "role": "Event controller",
           "name": "Patrik Svedberg"
         }
@@ -5564,6 +6292,12 @@
           "url": "/Standings/View/Series/1539",
           "title": "Svenska cupen MTBO 2026",
           "last_updated_at": "2026-02-07T22:24:13.324739+00:00"
+        },
+        {
+          "type": "Series",
+          "url": "/Standings/View/Series/1594",
+          "title": "Svenska VeteranCupen MTBO 2026",
+          "last_updated_at": "2026-05-10T19:32:03.787196+00:00"
         }
       ],
       "documents": [
@@ -5580,7 +6314,7 @@
           "published_time": "2026-04-28"
         }
       ],
-      "information": "2026-05-28: Inbjudan publicerad\n2026-03-25: Deltagande i Uppsala möte den 25–26 april är tillåtet, under förutsättning att inget försök till rekognosering av MTBO-terrängen görs.",
+      "information": "2026-05-28: Inbjudan publicerad\n2026-03-25: Deltagande i Uppsala möte den 25–26 april är tillåtet, under förutsättning att inget försök till rekognosering av MTBO-terrängen görs.\n2026-05-12 Avlyst område utökat. Norbyvägen tillåten.",
       "region": "Uppland",
       "punching_system": "Sportident",
       "races": [
@@ -5628,20 +6362,160 @@
                   17.610306012729072
                 ],
                 [
-                  59.825767625977306,
-                  17.60902448196526
+                  59.82017066771246,
+                  17.61555413490416
                 ],
                 [
-                  59.82752183698926,
-                  17.610520259598445
+                  59.82249963359905,
+                  17.61453012544004
+                ],
+                [
+                  59.82664300880555,
+                  17.617975043211903
+                ],
+                [
+                  59.826555440656676,
+                  17.61569324434524
+                ],
+                [
+                  59.827006235455,
+                  17.6121132112578
                 ],
                 [
                   59.828213521004926,
                   17.608341663871485
                 ],
                 [
+                  59.82945065225269,
+                  17.609804745478012
+                ],
+                [
                   59.82964572775728,
                   17.61069334912357
+                ],
+                [
+                  59.831243821846584,
+                  17.615183102230517
+                ],
+                [
+                  59.834696019313185,
+                  17.61237958127987
+                ],
+                [
+                  59.834966028824965,
+                  17.614368932999227
+                ],
+                [
+                  59.82864693122943,
+                  17.62018320752161
+                ],
+                [
+                  59.82258423364868,
+                  17.616911935300383
+                ],
+                [
+                  59.82157545234605,
+                  17.617743338373216
+                ],
+                [
+                  59.821159783147124,
+                  17.619193279649036
+                ],
+                [
+                  59.8224451968274,
+                  17.62444781622465
+                ],
+                [
+                  59.829822907238,
+                  17.63123652118476
+                ],
+                [
+                  59.83250821031865,
+                  17.63000670996675
+                ],
+                [
+                  59.83286556601348,
+                  17.628140026047785
+                ],
+                [
+                  59.83546900986141,
+                  17.627555576201726
+                ],
+                [
+                  59.83618218065729,
+                  17.62912595286129
+                ],
+                [
+                  59.83784759836439,
+                  17.63025337891319
+                ],
+                [
+                  59.83928302144611,
+                  17.62997070963403
+                ],
+                [
+                  59.840716373003914,
+                  17.629640928808342
+                ],
+                [
+                  59.84226443055195,
+                  17.628629363903684
+                ],
+                [
+                  59.842842728692034,
+                  17.62772002216602
+                ],
+                [
+                  59.84342570556754,
+                  17.626598678468984
+                ],
+                [
+                  59.84470445495634,
+                  17.624078303747833
+                ],
+                [
+                  59.84562163788604,
+                  17.623939193168326
+                ],
+                [
+                  59.846567183353756,
+                  17.623372426236973
+                ],
+                [
+                  59.84734783864096,
+                  17.62102928241339
+                ],
+                [
+                  59.846296133372164,
+                  17.61785364871557
+                ],
+                [
+                  59.844053773021045,
+                  17.61750792778361
+                ],
+                [
+                  59.84223518045633,
+                  17.6177345965452
+                ],
+                [
+                  59.841185622896575,
+                  17.61752543469204
+                ],
+                [
+                  59.83921174657863,
+                  17.614299154576543
+                ],
+                [
+                  59.836730975037256,
+                  17.612700473134513
+                ],
+                [
+                  59.83613537477149,
+                  17.611047568969123
+                ],
+                [
+                  59.83814886747132,
+                  17.61014566555734
                 ],
                 [
                   59.83795247984898,
@@ -5656,7 +6530,7 @@
                   17.59185435213572
                 ],
                 [
-                  59.84380900472905,
+                  59.84380900472908,
                   17.591752986722504
                 ],
                 [
@@ -5832,6 +6706,12 @@
           "url": "/Standings/View/Series/1539",
           "title": "Svenska cupen MTBO 2026",
           "last_updated_at": "2026-02-07T22:24:13.324675+00:00"
+        },
+        {
+          "type": "Series",
+          "url": "/Standings/View/Series/1594",
+          "title": "Svenska VeteranCupen MTBO 2026",
+          "last_updated_at": "2026-05-10T19:32:03.787245+00:00"
         }
       ],
       "documents": [
@@ -6100,6 +6980,12 @@
           "url": "/Standings/View/Series/1539",
           "title": "Svenska cupen MTBO 2026",
           "last_updated_at": "2026-02-07T22:24:13.324722+00:00"
+        },
+        {
+          "type": "Series",
+          "url": "/Standings/View/Series/1594",
+          "title": "Svenska VeteranCupen MTBO 2026",
+          "last_updated_at": "2026-05-10T19:32:03.787174+00:00"
         }
       ],
       "documents": [
@@ -6717,6 +7603,12 @@
           "published_time": "2026-04-17"
         },
         {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "/Documents/Event/122153/PM",
+          "published_time": "2026-05-06"
+        },
+        {
           "type": "Other",
           "title": "Kartnorm MTBO",
           "url": "/Documents/Event/120011/Kartnorm-MTBO",
@@ -6727,6 +7619,12 @@
           "title": "Inbjudan hela Närkeserien i MTBO",
           "url": "/Documents/Event/120012/Inbjudan-hela-N-rkeserien-i-MTBO",
           "published_time": "2026-03-09"
+        },
+        {
+          "type": "ResultList",
+          "title": "Liveresultat",
+          "url": "https://liveresultat.orientering.se/followfull.php?comp=36583&lang=sv",
+          "published_time": null
         }
       ],
       "information": null,
@@ -6746,23 +7644,74 @@
           "areas": [],
           "urls": [
             {
-              "type": "EntryList",
-              "url": "/Entry?eventId=57925",
-              "title": "Enter and/or order services",
-              "last_updated_at": "2026-04-25T22:13:52.238823+00:00"
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/188995",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-05-20T18:50:27.702986+00:00"
             },
             {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=57925&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-04-25T22:13:52.238823+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=57925&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-05-20T18:50:27.702986+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=57925&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-05-20T18:50:27.702986+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "Herr 3 km": 1,
+            "Dam 5 km": 5,
+            "Herr 5 km": 5,
+            "Dam 8 km": 7,
+            "Herr 8 km": 9
+          },
+          "result_counts": {
+            "Herr 3 km": 1,
+            "Dam 5 km": 5,
+            "Herr 5 km": 5,
+            "Dam 8 km": 7,
+            "Herr 8 km": 9
+          },
+          "fingerprints": [
+            "06d7dd216fa8aded66be84a183f0a892aafe46547d032b0ce27ff16f889235e7",
+            "094ef4b2c5340796ffe324c4373bfa63bbca4205c0b773281ff07323771fdd8c",
+            "151b84f536ee211405992e38183148349107bfc90918da361e804e809cbdb401",
+            "1999622c26ae26ad73da21659eb51368d52af6ec2ecc12690e259e7e6abff9bc",
+            "26c178bf2b53c3eaed5208bd28941f35b4977ccd69379e2a15fc4ba4ec9eccd9",
+            "33dcd3ad458192012822d15395684ee2f9d979ee80356a97d543637449b13e94",
+            "41ffba4b20aca38ffcce9a848d9a7e1684c36e7adbfa0a6c8b5c6d630f0f6472",
+            "552ff1762cc52f67206dda12dcaa87e370099c7bd7e4434db50c9bb5b60b809b",
+            "575aa783449ada8ce155d3e34ade7c4f707caa07cde2feb0730b10bb5e79ed06",
+            "590c13e22c1cb280fdca1533dde9b6c04417a7267943749ddd26b4c500e0321b",
+            "59df5086ace207f11629c05138b3143ecbd1aaa2632e9fee2de3df775ea7939e",
+            "5fe86e4bb4b4f249511fa34d14bb3b8993008d524f059c0d35a463a2a1a886db",
+            "67458fe65f1898073702646c426de25360c23cea77a120cb4af57b05118bfc9a",
+            "6bde9865de2a051a86a2e7d79a005a3ea68251d4524da26137616d98c2af1506",
+            "706f979b39005ff97bf6d32baf34053fa1834f453fc9c6b853a09765e828c61d",
+            "7a730933da6f99469eddb73e1876adbdb07a9bf69b8b5c58aa2a6f3d93829866",
+            "874275099a9ca50221a9236d40d65c554288f82839302e718551fa51038306ca",
+            "92a9f679fa8d0b00d8f65defcfce144d9631794834a4a09e6326474247908484",
+            "99993e1321493302a78195d71f404aa4b7216684cd36e9d5b272c1fd9d6e93bb",
+            "a1baf0de033e9552ea9eef494324f5c3bb4b3021c4a98886e0ce216d9f739ae0",
+            "b4752070c136d3a99736cbae1cf138902a58c874c45b8a97793146e46f7e6706",
+            "d4100d9346700e258ec112e4fb1208ed0775ff3895c89ded94a77cacafd34326",
+            "dc948677ea7d71eea5a84500617899169d16cf951dd77e5aa705ed4f35d36cf9",
+            "ddccc8840629aaa141ed38331543ac15c0c8106ebbc5f3f5028d61845ab7cf5d",
+            "f9d2a1080b31dedd40cc265687bc8dcd16710fa955ae02f5498701c56401d34d",
+            "fd232ff4d3affe39a8df1bc2ef5b0f1902f5d2b07c49efcdfc7d5bc43dbcf13a"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -6927,6 +7876,12 @@
       ],
       "documents": [
         {
+          "type": "Invitation",
+          "title": "Inbjudan",
+          "url": "/Documents/Event/122556/Inbjudan",
+          "published_time": "2026-05-13"
+        },
+        {
           "type": "Other",
           "title": "Kartnorm MTBO",
           "url": "/Documents/Event/120016/Kartnorm-MTBO",
@@ -6954,7 +7909,14 @@
             "lng": 14.7011829623795
           },
           "areas": [],
-          "urls": [],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Entry?eventId=57927",
+              "title": "Enter and/or order services",
+              "last_updated_at": "2026-05-20T18:50:27.703169+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
@@ -7218,15 +8180,54 @@
             {
               "type": "Livelox",
               "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/186910",
-              "title": "Map, courses and routes will be available in Livelox",
-              "last_updated_at": "2026-04-25T22:13:52.238771+00:00"
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-05-10T19:32:03.787019+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=58114&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-05-10T19:32:03.787019+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=58114&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-05-10T19:32:03.787019+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=58114&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-05-10T19:32:03.787019+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "Kort": 1,
+            "Mellan": 9,
+            "Lång": 2
+          },
+          "result_counts": {
+            "Kort": 1,
+            "Mellan": 9,
+            "Lång": 2
+          },
+          "fingerprints": [
+            "109d1c4016cd81d6940c0ee28aa47c3f68c311f0df309b49b29147e561d5a7d8",
+            "2406c0d650252f0cf35b76a953e6bb3dcde5fe658063643f6d4042420ffb6a8d",
+            "687591c7aad1f7178a7d90298d4b6b097d39a172a0949d73a870c5d32ca773d7",
+            "8e93b6ced8c935a70f9219cfa4bb402cd89221af37612684f337f1a434b4da7f",
+            "96bcd73f4ca29f2505553a415264211ee226351d54a7c5cc0f52686508d36f75",
+            "97068f866d01b00ebddbcc6423803f50e63043fe858936eeaa0f8bfd2778326e",
+            "a3b229b5d17639eb144c764f86a9fff1c13e6dbd8f281d8db101448acf03d7d6",
+            "b63b6458f47cbca153155dcdceabac929e7b49a019186f1af321b13223e95064",
+            "ccee8fb49145f39717bc3cde458371abcb1c4b64e0a69c13e95a81e88b6b62ad",
+            "e2c0888cd64b1bd89292c727d25cdfa3573d8c82afe19ba84215a253122488bc",
+            "ead775e9098dadd3e73e5186f195190ec0adf60d0dcc5bbabcba3ecb6928bd8c",
+            "ff579115ff3c2e130c1bc3ffbaadd55a0668fcab0c1586ebbcf0b8eba17f03c3"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -7789,15 +8790,15 @@
       "officials": [
         {
           "role": "Contact person",
-          "name": "Annika Engström"
+          "name": "Steven Hale"
         },
         {
           "role": "Contact phone number",
-          "name": "0703146421"
+          "name": "076-844 40 30"
         },
         {
           "role": "Contact email",
-          "name": "enc:DBoMBkYSTRMKXgAcCgcWHUIeIxoOBAgTBBhMDEIe"
+          "name": "enc:CBgDBwMdBgQEBBYyChkDBkFdAB0M"
         }
       ],
       "classes": [
@@ -7813,8 +8814,15 @@
           "last_updated_at": "2026-04-12T19:43:08.816479+00:00"
         }
       ],
-      "documents": [],
-      "information": "MTBO-träning i och runt Falun. Finns 3 alternativ - Nybörjare, Kort och Lång. Anmäl dig senast på måndagen för att vara säker på att få en karta. Cyklister som inte är med i OK Kåre betalar 40 kr, swish till OK Kåres nr: 1233999018.\nAlla är välkomna!",
+      "documents": [
+        {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "https://docs.google.com/document/d/e/2PACX-1vSWAG60tn04QjiVaeercuUjwLUh2g33_Ea_i8zhlm09JJxlLqlOJz50vt3qxZE_mpz_7zdz9XERTjgD/pub",
+          "published_time": null
+        }
+      ],
+      "information": "MTBO-träning i och runt Falun. Finns 3 alternativ - Nybörjare, Kort och Lång. Anmäl dig senast på måndagen för att vara säker på att få en karta. Cyklister som inte är med i OK Kåre betalar 40 kr, swish till OK Kåres nr: 1233999018.\nAlla är välkomna!\nDenna gång är det tre slingor 2,7-3,4 km långa. Du får köra så många du vill. Du får bla träna på enkelriktning och förbjudna stigar.\nSamling Sjulsarvsparkeringen, se länk i PM.",
       "region": "Dalarna",
       "punching_system": "other",
       "races": [
@@ -7825,16 +8833,16 @@
           "discipline": "Long",
           "night_or_day": "day",
           "position": {
-            "lat": 60.6066599841244,
-            "lng": 15.6366118889154
+            "lat": 60.6255104992586,
+            "lng": 15.6710502218484
           },
           "areas": [],
           "urls": [
             {
               "type": "EntryList",
-              "url": "/Entry?eventId=58159",
-              "title": "Enter",
-              "last_updated_at": "2026-04-12T19:43:08.816480+00:00"
+              "url": "/Events/Entries?eventId=58159&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-05-10T19:32:03.787118+00:00"
             }
           ],
           "documents": [],
@@ -7876,6 +8884,14 @@
         {
           "role": "Contact email",
           "name": "enc:DBoMBkYSTRMKXgAcCgcWHUIeIxoOBAgTBBhMDEIe"
+        },
+        {
+          "role": "Course setters",
+          "name": "Greta Brandin"
+        },
+        {
+          "role": "Course setters",
+          "name": "Julia Jennische Péclard"
         }
       ],
       "classes": [
@@ -7892,7 +8908,7 @@
         }
       ],
       "documents": [],
-      "information": "MTBO-träning i och runt Falun. Finns 3 alternativ - Nybörjare, Kort och Lång. Anmäl dig senast på måndagen för att vara säker på att få en karta. Cyklister som inte är med i OK Kåre betalar 40 kr, swish till OK Kåres nr: 1233999018.\nAlla är välkomna!",
+      "information": "MTBO-träning i och runt Falun. Finns 3 alternativ - Nybörjare, Kort och Lång. Anmäl dig senast på måndagen för att vara säker på att få en karta. Cyklister som inte är med i OK Kåre betalar 40 kr, swish till OK Kåres nr: 1233999018.\nAlla är välkomna!\nDagens träning är en linjeorientering i Stenslund-Ingarvet. Finns en bana som är lätt att korta av. Starten är på cykelvägen mellan Hanröleden och Skarpskyttevägen:\nhttps://www.google.com/maps/place/Sl%C3%A4tta-Korsarvet\n,+791+74+Falun/@60.616256,15.6107334,377m/data=!3m1!1e3!4m6!3m5!1s0x46677062f44a22f1:0xc80d9f76a1ec65c9!8m2!3d60.6161139!4d15.6129757!16s%2Fg%2F11c674vkrp!5m1!1e1!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
       "region": "Dalarna",
       "punching_system": "other",
       "races": [
@@ -7903,16 +8919,16 @@
           "discipline": "Long",
           "night_or_day": "day",
           "position": {
-            "lat": 60.6065453621311,
-            "lng": 15.6329804375971
+            "lat": 60.616111826473,
+            "lng": 15.612971158346
           },
           "areas": [],
           "urls": [
             {
               "type": "EntryList",
-              "url": "/Entry?eventId=58160",
-              "title": "Enter",
-              "last_updated_at": "2026-04-12T19:43:08.816673+00:00"
+              "url": "/Events/Entries?eventId=58160&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-05-20T18:50:27.702924+00:00"
             }
           ],
           "documents": [],
@@ -8022,16 +9038,16 @@
       ],
       "officials": [
         {
-          "role": "Contact person",
-          "name": "Annika Engström"
-        },
-        {
           "role": "Contact phone number",
-          "name": "0703146421"
+          "name": "0706955917"
         },
         {
           "role": "Contact email",
-          "name": "enc:DBoMBkYSTRMKXgAcCgcWHUIeIxoOBAgTBBhMDEIe"
+          "name": "enc:HgAHCUwdTRdPGgoaDBoRHEIdTQELMAIfDB0OQU4cDg=="
+        },
+        {
+          "role": "Event director",
+          "name": "Stefan Johansson"
         },
         {
           "role": "Course setter",
@@ -8052,7 +9068,14 @@
           "last_updated_at": "2026-04-12T19:43:08.816639+00:00"
         }
       ],
-      "documents": [],
+      "documents": [
+        {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "/Documents/Event/122692/PM",
+          "published_time": "2026-05-17"
+        }
+      ],
       "information": null,
       "region": "Dalarna",
       "punching_system": "Sportident",
@@ -8064,8 +9087,8 @@
           "discipline": "Middle",
           "night_or_day": "day",
           "position": {
-            "lat": 60.6067566071808,
-            "lng": 15.6386901855469
+            "lat": 60.6322747412943,
+            "lng": 15.5496837615967
           },
           "areas": [],
           "urls": [
@@ -8587,7 +9610,13 @@
           "type": "Invitation",
           "title": "Inbjudan",
           "url": "/Documents/Event/121051/Inbjudan",
-          "published_time": "2026-04-11"
+          "published_time": "2026-05-12"
+        },
+        {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "/Documents/Event/122507/PM",
+          "published_time": "2026-05-12"
         }
       ],
       "information": null,
@@ -8646,23 +9675,74 @@
           ],
           "urls": [
             {
-              "type": "EntryList",
-              "url": "/Entry?eventId=58215",
-              "title": "Enter",
-              "last_updated_at": "2026-04-12T19:43:08.816543+00:00"
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/189160",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-05-20T18:50:27.703144+00:00"
             },
             {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=58215&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-04-12T19:43:08.816543+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=58215&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-05-20T18:50:27.703144+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=58215&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-05-20T18:50:27.703144+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "Mellan herr": 9,
+            "Mellan dam": 5,
+            "Lång herr": 12,
+            "Lång dam": 2
+          },
+          "result_counts": {
+            "Mellan herr": 9,
+            "Mellan dam": 5,
+            "Lång herr": 12,
+            "Lång dam": 2
+          },
+          "fingerprints": [
+            "023e1993ed5a6b87a28f09e3c6449708e1113f4c74bfb72411c462f8227ab0f3",
+            "042173b9aa097dfc62fec7b214f3bddd862dbe5c5f42a28136a812a59f02d78f",
+            "09f65f2f22c60ff240c91f7d09a35da3ed36a1145766427f412f5b44f7ca89d3",
+            "0f68a7fe8f6f22dbe93f221802399946ff0e293505f8a34508d42fff1b474b45",
+            "1bde460c125ec816550424030b954b2b7996f9f1b2b4eeea7db72916e6110e43",
+            "2e4ae66a71bc0db7c618db80b55f5e356819cd290284eecef49c9e04b3bdd471",
+            "2e4b7eba73eeb489abb53ca1757a45ecb185fed9aa8cf0ae2332371a83d12140",
+            "30274db6d725ce1d89944d6f3ee402a9d36529445f3c8da90911afba2dd57d2e",
+            "381ecdfc1d593fe39e638abd8af05abfa3d988ee23d010b0c055ca9c7e76f640",
+            "5cdec43de177ef98a0d9525d4e807e1350fd8a12832d0490f0c983314a52c42b",
+            "6b48b57ad0e2258e5bc12346f69fce68021cea68b291e1ab71b25267c47cda3b",
+            "6bab0471203b7b6d0b74482c159bec7e19138432085d889c244bd288c4a13a00",
+            "6bfad43a65dafae6f430061ce621112690fa3d1f0232399f9c43939109689414",
+            "70a8fa90d78d7fcc1a060d8fb916b0a77392b87b1158b54f5953c27450635107",
+            "71f32dea94a832d2517940f7c2fe32745d401f44bb6551618f6632c5a8134e44",
+            "74ccc5df0149a28a7b3013414b12d4bef96a0f2a3708c4b4c83bfb34ad8bc46b",
+            "79510ab27e8495f7c12cdf99691a309154ef317228f40612dd3334546923062c",
+            "896661c4a5010c3214a910f61cf03def9553d5922334d553ef15c370bcd052b6",
+            "9ed924a0764af87c144eeb1d0e3bd83c147a118ac840891446b78bc37aaa2e63",
+            "a7bbbad2c0d2232ff539b9e36aa58ef1a74a0e393cd0f07cf51086265b38df2d",
+            "b5125f67be3dc682e6393439406a1f72aafe734b9618cfc2ce69e5b87634de88",
+            "b78e241a6c95ea800a56aec7cac31b893e89969cebae4ffd153d10f17b47e6da",
+            "d3e74c8dd2946bc046dfd5a448b7af0a5a0464e2e1c54871fdec02a30b9373bb",
+            "d4100d9346700e258ec112e4fb1208ed0775ff3895c89ded94a77cacafd34326",
+            "de23a50c1690a57d53858482e3eb6ab391921383b6b3357b4a6c283cc94d6844",
+            "e542ebdc12ba79531c3ce32f0fe556ae50e7221b75021c5ebda0a56ff0928ba9",
+            "e7b5a552bea348231b8959eeb4defc37adb691f2c81bdcc4b0701e07c022bec6",
+            "fd232ff4d3affe39a8df1bc2ef5b0f1902f5d2b07c49efcdfc7d5bc43dbcf13a"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -8747,23 +9827,55 @@
           "areas": [],
           "urls": [
             {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/187389",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-05-10T19:32:03.787134+00:00"
+            },
+            {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=58247&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-04-25T22:13:52.238894+00:00"
             },
             {
-              "type": "Livelox",
-              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/187389",
-              "title": "Map, courses and routes will be available in Livelox",
-              "last_updated_at": "2026-04-28T19:35:11.079823+00:00"
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=58247&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-05-10T19:32:03.787134+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=58247&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-05-10T19:32:03.787134+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "Öppen 10,8": 8,
+            "Öppen 7,9": 5
+          },
+          "result_counts": {
+            "Öppen 10,8": 8,
+            "Öppen 7,9": 5
+          },
+          "fingerprints": [
+            "0735c2c2532b481a9d2ed84a17b50fe433f6deb95074ff741766ca2371bc76a1",
+            "1caa9b4966fd56a05745e1741a6f5ad398f9f074fd1d8e98c5545c80ff9d5256",
+            "3f7da1ef7fcc8456bae734c5e67486c84aafeba0918d4633e0bf0f1fb627bdd0",
+            "524b8a74c243b147289786959f33ac7c55263cd30476f8258c7669a57c64527f",
+            "5623922492b9e008a363f1db4824b0361a825f7565377fc6d4e2f98915ea9aec",
+            "80a66689e2aeeaffec874dc02d1f18c6f347601c97ba17ba8ab95447b1040060",
+            "87d7f70228a35246be984b942cc51c3e52723627619b7f6d4b625dd9fe8aae2e",
+            "bf7ab175c0fbe8ae16a55b5ecd37b393a41644f86bba51016125bc9058dcceaf",
+            "c349aec92db192f6cb45abe51f45d2e66f81a2a7635e90ebc3d16bfee4908153",
+            "d67449724c3c566bbcbf489dcd49af150da5a0d845ee508be646c686e14c0a75",
+            "e40d314fff4c3703c3e4b7922f0ec7be0d281dd94747496f5b9872d8f82f662d",
+            "ef4960e9aec8d538c1f2fdf55d9a026386a14c6f9b5ef78a8360be5d91e7e930",
+            "f6973766a9b55d2592616333598c2eba32da5b701e76ef3f738935f58fdc7dfa"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -8881,23 +9993,224 @@
           "areas": [],
           "urls": [
             {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/186700",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-05-10T19:32:03.787029+00:00"
+            },
+            {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=58333&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-04-25T22:13:52.238781+00:00"
             },
             {
-              "type": "Livelox",
-              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/186700",
-              "title": "Map, courses and routes will be available in Livelox",
-              "last_updated_at": "2026-04-25T22:13:52.238781+00:00"
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=58333&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-05-10T19:32:03.787029+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=58333&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-05-10T19:32:03.787029+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "Inskolning 2 km": 11,
+            "UH Vit 2 km": 5,
+            "UD Vit 2 km": 6,
+            "UH Gul 2,5 km": 7,
+            "UD Gul 2,5 km": 3,
+            "UH Orange 3 km": 2,
+            "UD Orange 3 km": 2,
+            "UH Orange 5 km": 7,
+            "UD Orange 5 km": 2,
+            "Vit 2 km": 20,
+            "Gul 4 km": 9,
+            "Orange 3 km": 33,
+            "Orange 5 km": 27,
+            "MTBO Lätt 3,5km": 5,
+            "MTBO Medelsvår 6km": 11,
+            "MTBO Svår 10km": 5
+          },
+          "result_counts": {
+            "Inskolning 2 km": 11,
+            "UH Vit 2 km": 5,
+            "UD Vit 2 km": 6,
+            "UH Gul 2,5 km": 7,
+            "UD Gul 2,5 km": 3,
+            "UH Orange 3 km": 2,
+            "UD Orange 3 km": 2,
+            "UH Orange 5 km": 7,
+            "UD Orange 5 km": 2,
+            "Vit 2 km": 20,
+            "Gul 4 km": 9,
+            "Orange 3 km": 33,
+            "Orange 5 km": 27,
+            "MTBO Lätt 3,5km": 5,
+            "MTBO Medelsvår 6km": 11,
+            "MTBO Svår 10km": 5
+          },
+          "fingerprints": [
+            "00bf57c0d46c96f60f34c2e38175367f997696579d55ab4d5308e61e8656c6bc",
+            "01fabb7de83bfe0b4344975b6ec90ec978988ba76a2fc763ea54547d6c59c92e",
+            "048aa7357c41ecaadda9aada04e8b0a70b21708b2b16b69c07afe2e80b9ea06c",
+            "060d45d0d3ef205b95af6177aca32c5fb90de758036a1f22d2b3a4ce5d5f4d2a",
+            "06afdb10720f0ac26d0fa0da5aea31d76f59bec329d1e924bc50a6b1564c3e6f",
+            "08cd2026ed4a7e2a6441834c5d2dfc96b324b66a747e234ab9d8d5956b1b0252",
+            "08fc494be85ff929cdfea105b57bfef4967a9f2d3cf2bf9bb9f880df5929cb57",
+            "0b71e8eac0116d8fe34068e9bd6ee5636755a8555c00d3f4a9daa6b6bc4787b7",
+            "0dc63e1d93c234412b8df5011565bfdb8fac47457e786832b78abd4dbb6af8f2",
+            "0f60fc889def11335a42bfb049b24be7e54f435c7e70fde4b77c4240a74f10c1",
+            "10acd940540ca7f09bb3dc07060ed5ec6b02c522de8eb721765ddb21fbcb0cf7",
+            "11b21041ac58121da55c3c573c2146b594a37d49dbe1ea02ac73d09a72c85580",
+            "15dc71ffa96f36b757ef62403daf3625934ab81c66c4f418bc8a06f5839d0802",
+            "18a27cdb2246f76ebad55380e17823fbf8ddc8b27cea3a917de411176d79090e",
+            "19283f18ca4e0263b6f6e18efb6bb7072bd8dc306a2340555f3301142c6be9c3",
+            "192b3f05938a7158f7759d12ab1f11881e3ee37e5f52faf825edcaa13e92cf24",
+            "197407b9221b97e1146529067c57270ac1129c8735e1aaf077800dafa4631fbc",
+            "19fb75ff2563fa9c0945e9f4f19a2989d7ecf9686455e55b410bec1ea77fbdb1",
+            "1b8ee367f42c20499d1b0f833ef21f4e5c9f009ec8cf59386079b5ab5cde8f3d",
+            "1bde460c125ec816550424030b954b2b7996f9f1b2b4eeea7db72916e6110e43",
+            "1bf9a91f3f64e1a671b68a9bfd3137bb77a4909305bdf9e3566c48be022ceb0d",
+            "1f9493757869e593fd82a98a6d37096bfc980e98f276acd1dd9911d71d4f8a4d",
+            "22928c83643750eaa3aea3b8fdedc6d6bc7180c283aa64db3ab8655d2af98600",
+            "244050b5f08b3dbef4dcb0ac7791424060472c9f43ad80c0ed01c9052cf8114d",
+            "2a6a6cd603bfe7e4317b5842cfda31ad78676b249da94ffaaf00c455f3c83890",
+            "2ae90cc6e2d39528eb7c96735d04cde4270f0481aa8f3264da36874b25956b9b",
+            "2bc335dbe227e6acbe5ac105df5cce559775fe52597c3ac71f3b9a68a619c4b9",
+            "2bd3843810414bc9e740287d61dc0838347bfde628571944106ee9275412e35a",
+            "2c78ec87f84b917e5afd189dfdb786d96af8c2822a02ef562b36e9ead49099b4",
+            "2e5bc2319e1447aae31b92cd08f9e5a6d95454bff6690f484b51b3caa7404f58",
+            "2f7b7491578839a8b332552a7b32a758c0bf4bb3eae63b0b7cdcd8a561d5406c",
+            "2f7fad313fb3bc86b922f183116ccd1932f53a7931cee3fa77a8c43348a344be",
+            "307c5dec616363a72b2c7b9720dd73b06f8ac9aaa70c2d0a3032fe808cf5fa1a",
+            "311734acc73baec35dd9baf61ee7eaa7093c7e0e9ba213a2f154235f6335b8ca",
+            "31a25cee0b1af91ded258842def6b3712f7e19ae85d787fd389f43e298079aea",
+            "32314b8710a11928700019277df5159039121fe6cdd9a380c4e66bd7fa97c535",
+            "32324205aa4507743621dc6939c237f3fe9628fdc3c151c6799ebc7407495433",
+            "3265c0dc8bf45e12511c14d077bd09af105fe683adaa4065b5bc5300afbfe38e",
+            "32730d69d22f29d99dc873da8429f4927ebb64768d0d7c580b82e4ade9f2b2e3",
+            "32b3cebaed94f9185036dbc656986d0e86a12d720dfe81a75429aae37784e2a8",
+            "33425f692dfbf18c7674c8312e78bbeb909c194ea930bda05a1cf4ff8c4a92c4",
+            "366f42db8b92e92ecb1f58afe857fd638d6ea78c48fba6d60c5ae3c876f956dc",
+            "368304a58e0af41c145f9be8931ce14299bd15ad769ac4895830853b505e6a6c",
+            "3bb4c46f77543bb8fbc122689b90ff111b792f0e24c2659ff06040e358064f2e",
+            "3e1a640caab1d0e89d955faf71e6523df5137de411514c6abe743a6a681d0538",
+            "3f6ef9729b80e9f2a9c21963dbad0b96c8bfb17405e34b657423f5792974e983",
+            "3fb1640dd91f440ed29433cc9131d3ab720e97df51c9482e0a9129d118da8ce4",
+            "4077a9d9ccf2a3db7b645e49ebeae94f56b1079b065b44ef163cf25d6ceb17f1",
+            "436a499f159ddd3d47e87f41576bf5f13828845e8878cab02fadd38981c08994",
+            "449e11591d5aa8107fd36c54a2302c4bbbaaf106d9c6066871f373ab96a24767",
+            "456815c589b3836520341d1573eddcf1edc5eb860349be6f544e893dc8c5aefa",
+            "4746a651b82b94bb1544b951f2097b29ec49285a9dcb17e16f2ba37f4082cfd1",
+            "490d637da8ee6991b1a1fe7ad7fb4c5fa33ec31e487579e0d88c80539f1aeee0",
+            "49b1b1610d0e059140829be13967247ea55670d92658947859931423f72b4a33",
+            "4c0ef6cd25868db57e7c885519f77881f3d626c2c8c1796b14ac5fe248009593",
+            "4e41029bc7317acd5f420108086ca81ee0527451a5c81ecc2f0c9b6d19027fe0",
+            "4fee38605a1e88d0991ad5704348cbb14a7c152f4c041d26cdbcb21e81558734",
+            "50bf84d73dbb627d97a8822d6f89f1dfc6e9b200640aacbfcf749d6baf78fefd",
+            "53290f107ec4ef473dedeb4ae45bfa5a3fb2a4af7ea8bc6242cd48f8c7008294",
+            "567bb7bfece49bcf31b74af9df0ce24fa782da0666f50747ba92de76ef1f5e09",
+            "5a56b24a1d045f2ecb5ef044fb64e4e8ddbc1e9c030e61397109c6ad3efbfd37",
+            "5b836ff93a350ecf49e43d1693dc511e8fde06d133eb1ff8c3c17d2f147fff25",
+            "5c6d27807f9ae4363c4f00c92855c078903e90f20d5e4fca8288aaffaf9321b6",
+            "5c8e1a7be776b673248532072f993fe9105593630e1f116e0543f81e2adb719c",
+            "5f0235e1e80e741e13a22c5ebab8297a538c50b794e92cfe08cf3586ddd6d287",
+            "6ac90dd734650c3e1c6a10992f6584a46ff7681a90b74958d03442c96350f373",
+            "6b8acceef32fb6f50dcc3a7e07f92204bdad7021264f469a225d9725fe194552",
+            "6d4567e22a4c9fa89bc1d2730050d2e96f850a0808e071eb324b37b940723c55",
+            "6ec4a40c311bc80fdd7b0468b431a52968f50551e9de3402a18c0663025666a8",
+            "6f62f08acdf3c63c0a5046e3e6c1cc68f685f8f43e2bb49bc25a030f4b41c762",
+            "7182e2688e0ca39dab782f7daaba2fc02c10584c7ec9de51967c80a9e88eb6d8",
+            "722bc550a00dce921b10aa0597177265413f10762821ee57e3275d3663f3b832",
+            "7364bada2846d2d0b82a88bf3ec006d5c56d3e2d8fa4c45eb77e8e8e0e220fc3",
+            "781c6a5ac6ee4142084b9690e454d88af697acb4b1658a60b200485b67e215d4",
+            "78e562c3f83a729e288b93193c5da2577a657b20256e190ac828608a8555f09f",
+            "7994561f8e8ca52b92da218186f6a85b942495d7d25dc2e1cdce40d0e29f12c0",
+            "7a8c6615fb79a0cfe11537f0a8ef313fd8836dda8eb86aaecec4bfb70c1aa2f8",
+            "7aeeb3110aef99d56bef745a673b46f896ed4aed8b18b1a792d8024695c74bb8",
+            "7cf9da4dd3266a68dc27544c8e42a285b0583c5a9fc11ddd4a7243e1c3ce22a1",
+            "7d39e77f31cb974df44d9f1a7fea0568ff1561d5af017bed03a1f59830638671",
+            "7e801a9ea84cda1ec61c0cd38e08aa0362d1f380656e42a626c1420d946db311",
+            "7e8e8da7356d0e87d5faae60b0c03479ba2d0b37e4279cc97fa976125dc1f938",
+            "811ac40a94a17855b71c6dd6c17a461adcd750acd329c0e8280a02a4cbbd7cf3",
+            "816823f30bc52262969beb4c4af851510de40156cdfeca68c1b79656dd876c3c",
+            "82ed1caa17bc202e235120b201d592e0297477b1f31e6f44c4a11059a584a801",
+            "85bf74ce8d6f7926b4c2fb0fd8226b3c7ae5a560800c43c5d94cf9eda2b91355",
+            "8613fc4131c6096e99845ee134871e2469851722a6d547dc421524cdeba36576",
+            "8891584d95fd9ddc565d616f0a95093da533fc2cd79365268afe616f6b89966d",
+            "8902f992977c0a2c3e0a1821ffece780d19ff393daf1a67b2c83f9c26fef8afe",
+            "8bbe9012ef2c642abf2c54e2dd146fbb29fc85f1e7d70e67cd5bac34dcd66b47",
+            "8d403f00d826e3a09e5baf892d3a7d3f2f8fcb12a4b8dfee588d26de733cb5bc",
+            "8e06be5218597da54a9f6bdf244e8df3f4ba24c99641af11ea8cdd225a1dfd9e",
+            "9297972c9219c24240c18bbe1e8a6e0f5f490af4bbe2a4261204a7b63d1950d0",
+            "92a863c832ff195b7e2520b0acf01d3c39dcbc7b4d8520e8ede4073f648651b9",
+            "9361bf69a2627a12c9fcf70fc346c34ac9c40f1fc4d9e8061dbdd665bbc77ee1",
+            "946ec6dd59004b6ff6a9f9a805718a6935ab95c6b72a104908539b09e316de03",
+            "9556d452592296fe659a474530e2dac66c97dc4625893841b9449b94784aa06b",
+            "9863bf9c5fb9fa40f29245693aa35602f0bc73fc936257eb2227a6387271e09b",
+            "994258eebe4b901d096f6bdf998bd0c84207b254afd359d6862ffc5746e26db4",
+            "9dd40cf519fd64ec3d9f7964d08b220e2a3b95c41e279e562b626cd447809456",
+            "9edcb9a294bc7c333fac0d62446e0601305a96b77ba597770a6baf0bcabca5c1",
+            "9ef9ef2d90a357803729344e0d5dfc6099fcf3462b6bd515f0fb461932f9364a",
+            "a51c366ba7c9f1464989932be87353b6d491c04d6daf4c22b9b1b6519b50fd64",
+            "a6796effc3b654194c04ce0a50c947d32553024be816a03012ffbe0c13006b15",
+            "a808dc5a06c60f1a16a307eeb128273da8bbe3839ac675377b51f632b5b0fb33",
+            "a90e2b6f7875c7b1d7fc1690e867f20e28b0b00507edeb21d00a5d9e856e2df2",
+            "a989fe020d55dcdd8f400a9904369d0450cdc87df655b64f88ab604839203449",
+            "ac9be21e2e8133657badbe3b8bd5b382ca3872b2f475efff7a574211755474a5",
+            "b0e289cbc22daa54852bfa1004940d41ade785a69c8722ec177847cefb59a2e2",
+            "b1f8c719779b37bc9cc25371c1c6ed29ea5e4dfc0d30e804c9fc548783edc5b0",
+            "b2fb8a946aa29da2aae4e173d06fd69eba784a987880d90ea464048170c9e7b2",
+            "b486f5d424d12407d582522fa08f4d04e5cd25e23bf3c41323284e4846ea5769",
+            "b83265d1a94600db46ac94aa736daa260632750c21a2c281373c0c4ab2546138",
+            "b877b723478ebee4aadcee99ca8061a3b14834f4afdf471cd5699fea52d96f68",
+            "bccf04caced318d2e932b9abccb2768c8424d7c3d90543fc33ad0c9df4d5c885",
+            "bd710a48bff9b89f0a7ab7c629ae478d3f3d376a50c4a5fd719d0dfd930e9332",
+            "bf0c5ee4b448dcee42654f37c61cd5a384e23e848f5d2eac05c2d7921ec5a22f",
+            "c029321b82c4916cf5994976ee6afd1163ebe9702251b8fdd8a2fdf13ccffa8a",
+            "c1ad90ee3787a3484bfe6dae2bb5eb835d01abd64a384b8c1832044d3ca3dba6",
+            "c2a20b9d4c77dcd475c084a2f0ac3ddfd5b546b84fad451e43fcddde20eaece1",
+            "c4840270f657ebb8aec4a87bf5181ae19e817bc552affabf0fe795432badda4a",
+            "c8ec4d373d4df36815452ddb23d0ea258d196230cad257e490462a4b0bcf368f",
+            "c961f6ffa58ca878fb734c29a868442847dc757cea10c76797967674c7d3859f",
+            "ca0216174b1ca2cfb9d9bd5eb2eaa310f05e8b4cd33f95e6dbe23a944aee93bb",
+            "cbfcb08da88632c726ddde19787f3b66dbebc69757dc36d7e0b441a662712875",
+            "ce0940f74810d803447b5796bcd4640ed3b66914e821cc0bcaf65262e87d7b76",
+            "cf8e83e4ffdff40cc3ad261f58537065780dea223e2e0911c525ece7b2d79a22",
+            "d2f6d8ae3b30310006a584ab32f1c0fd96ab0a9790c87906baeff036b96cd6ae",
+            "d62abd79602a9ae3c263211ec6b3706512632e2d294e64fb2ee1ebf80419ca97",
+            "d83a92fa02c13262431d6473d2a69633f920415b42b6f93a0ad6d23d6cdf235c",
+            "df78a5a1a14b26c6c9ee34d1a8b86d1761e23dc837f8cf026934c7edb969ca51",
+            "df8c89a63ccc9448643f69237ef79da7eab971b50e987eda4cf400ab325ce551",
+            "dfc983733f9ad01b063647245929ce793ffa1b5118d6a2be955604d67ecc02b7",
+            "e09ee4c6e4fc849e6f2a76dc775ed4b6ea4f71a334450e82e00f4043cf0924b8",
+            "e1fbcb48f3251550db6201ec9da42c8e18d066a04b2d5c760499c5b1da2f56e7",
+            "e30a63587ec25bc38881e173a4988611a298c449651eeeb7dae2571faab675bd",
+            "e34c791d9d1f9d085f0661dd85fad07e71380c7cd497975e9e2ce2c5b3dfde45",
+            "e4e32dfea556066e242e9e7f9cd0614fe43515b7d36033aa264348e28007f79a",
+            "e6a7b593bb7a6db9ca45576c171febe6bfd0ba69a3236af62c94ed27b5273725",
+            "e9818e00cd1e4bf466afe1cdd103501dcd75f3fe32e63e35bcef2812c1797d91",
+            "ef72bf5bff06a4653dc775c9281b519f50a1958145adbee223722a53bfd5dc73",
+            "f39a9a7bf334d63ff4ec66577709e2168ef6abd5fd56fccb0e8cbc4b167cc597",
+            "f3d15b9ba6f64ef28b024db3cf6488a422e29c353e063ce9c739423b190c6784",
+            "f51976a91ae2bc12815e6075c6901b784932ebc54cd4e5c7142c3a7c6e5c0ab3",
+            "f62c4411e742f0605fca6fc979b266c7b7ed90d12392e4b785d8c2631d97eb7c",
+            "f733c9f84ab95d082dba37f9905a20bd2ed6699222373390e67ac0be4a08565f",
+            "f7d19cb86be251a9c417668177fb39e8539c0b12f9628e74cc38ca030706e79b",
+            "f86912b1f8e2328c199131b0d7b2e79a206006f29c11bd5c63523af1f065df01",
+            "f898d398d71adbc4d7c0f9644cc8b17371810ac55795c757e719ec719fb02d69",
+            "fa2e84a1de2ed9a7f89959e1f26901949d8f06c6fef8e9fbe89bf15e2fb3fcf3",
+            "faede2cd2ad60e85dbe37cf818384cb432da87fb665a6ff8981e06a5b5af57f1",
+            "fb0a2487082822f39b3d6a405b93bc2979e92dca8b04c1d29475566d1a8cb50f",
+            "fb6e29899e0e14d5ce7b6aa74aba29150ae47a3b1ef49afb4fb520f75f8bc412",
+            "fc250abfc8987289739134880f1152da24ca14875398e89a2c8a1f7d0be4de2f"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -8955,7 +10268,7 @@
           "type": "Invitation",
           "title": "Inbjudan",
           "url": "/Documents/Event/121230/Inbjudan",
-          "published_time": "2026-04-14"
+          "published_time": "2026-05-12"
         }
       ],
       "information": null,
@@ -9084,14 +10397,26 @@
       "officials": [
         {
           "role": "Contact person",
-          "name": "Erik Lennartsson"
+          "name": "Åsa Bergfors"
         },
         {
           "role": "Contact email",
           "name": "enc:DAcDQU8WERUHHxcBLRMPDkQfTREOHQ=="
+        },
+        {
+          "role": "Event director",
+          "name": "Åsa Bergfors"
+        },
+        {
+          "role": "Course setter",
+          "name": "Leif Carlsson"
         }
       ],
-      "classes": [],
+      "classes": [
+        "Kort",
+        "Lång",
+        "Mellan"
+      ],
       "urls": [
         {
           "type": "Path",
@@ -9100,7 +10425,20 @@
           "last_updated_at": "2026-04-12T19:43:08.816534+00:00"
         }
       ],
-      "documents": [],
+      "documents": [
+        {
+          "type": "Invitation",
+          "title": "Inbjudan",
+          "url": "/Documents/Event/122065/Inbjudan",
+          "published_time": "2026-05-04"
+        },
+        {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "/Documents/Event/122682/PM",
+          "published_time": "2026-05-16"
+        }
+      ],
       "information": null,
       "region": "Småland",
       "punching_system": "Sportident",
@@ -9113,7 +10451,14 @@
           "night_or_day": "day",
           "position": null,
           "areas": [],
-          "urls": [],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=58558&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-05-20T18:50:27.702969+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
@@ -9168,13 +10513,19 @@
       ],
       "documents": [
         {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "/Documents/Event/122447/PM",
+          "published_time": "2026-05-13"
+        },
+        {
           "type": "Other",
           "title": "Öviksserien 2026",
           "url": "/Documents/Event/120707/-viksserien-2026",
           "published_time": "2026-04-02"
         }
       ],
-      "information": null,
+      "information": "Välkomna på MtbO- premiär i fina Skyttisterrängen.  Det finns tre banor 3 km, 6 km eller 10 km. Fri start mellan 18-19 eller masstart 18.30. Har man ingen cykel får man ju springa/gå.\nDusch och toalett i Örnenstugan. Några kartställ finns att låna liksom Sportident. Livelox!\nVi ses",
       "region": "Ångermanland",
       "punching_system": "Sportident",
       "races": [
@@ -9191,23 +10542,68 @@
           "areas": [],
           "urls": [
             {
-              "type": "EntryList",
-              "url": "/Entry?eventId=58590",
-              "title": "Enter",
-              "last_updated_at": "2026-04-12T19:43:08.816698+00:00"
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/189489",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-05-20T18:50:27.702699+00:00"
             },
             {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=58590&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-04-12T19:43:08.816698+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=58590&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-05-20T18:50:27.702699+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=58590&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-05-20T18:50:27.702699+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "KORTA": 12,
+            "MELLAN": 6,
+            "LÅNGA": 6
+          },
+          "result_counts": {
+            "KORTA": 12,
+            "MELLAN": 6,
+            "LÅNGA": 6
+          },
+          "fingerprints": [
+            "023256d2ddd7ad429308e366f1cc4061c8c64ca2f13b58e491eae73284ab3531",
+            "11bdaeacec8408b6cfdbc4cd3aceebcf7658ac5e2df1d9af63dcce629c9afac8",
+            "192d16b34678fb51ec39e7492e847e433968a0fa79daeb3b97a6dc30eaeb663e",
+            "199a3822c9b38e92661677343e4096f116141fa4c21f97dfedfb5f9161404356",
+            "24aa03ef0d5207bb725828edd01519a03c0f052fa56049caab5d77bae9784007",
+            "289785ca3f5b0c8ebcc97a67e0217444cb830aff83a7a0e19636756316c97c1c",
+            "39a1590411d3edd005386a76265ed650a9b85e20b10bb4acd9ba10b1b57b2745",
+            "429fadcc31567a59a67f31ac1e74462f877243bdc487e4a42d192652662beeae",
+            "447ee74faf7aecedf2284ccd1051b463859572c275cdbd32b752491605262f50",
+            "47d6a4f8bea6759a4434b8cbe26ac8b893e3b76fae7db3400ab792c9f24bffd3",
+            "5958ef62cbc3b5b87c3e92e2982ada639d9a8362bc66ed75defbf5e6498c6e70",
+            "5e37237bb560703f675bc3c76a56c56ebddc288b0379a9bf119b8bf1e200a42b",
+            "7a95e339e012163056e0d3dc6673f462222a122302a7568f58ad8fe6759f9524",
+            "8fdb515589cdf18293b107d3c9a62f74f8f5b56a600e6a43e5935d078cfe3fc5",
+            "a7d5d7872e35409a5a20e6002fa7d9b8aaad9cd35423e542b6a0fb3da5f24660",
+            "ad0188a2db5d15fc36c80d8e79f096123a15fad695669fbff1add527a1a6cecb",
+            "b3a7796691ce3914c9c56c075f45f03b4075c513c196b71a0841b74f0b3b96e6",
+            "ba70c9d29aab8b0504cc1bc413bf25eb1af6c9f20f3e0db90da91dccd10f4db1",
+            "bc8dfe96b329b431185c1422211e30f13fc2279f47520d36fcd1402d5b11ae39",
+            "bf120e220b794edf4a210e16f4f74faa97078cf0555d2019e62cd532db614f15",
+            "d9ec700e75005f2c50fd708d6caea014535ae0f77dd8b4f28c5382f8a6131de8",
+            "e33612164ceba654340c673f51cb87f901d3ecbfa16f3c1fca30caad02a712d6",
+            "e413c7a7d313b7f23ec8f38875f92d8204ae2c93800f5dd5bde0e6f8c3a2e467",
+            "ff6daf578b65f1ba892c7dc24b198de98c2c41d500bd3f3c31e86123c54418d9"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -9354,7 +10750,7 @@
           "published_time": "2026-04-02"
         }
       ],
-      "information": null,
+      "information": "Samling grusgropen 200 meter söder om Mjäla 143 på väg 893 mellan Gärdal och Mjäla.",
       "region": "Ångermanland",
       "punching_system": "Sportident",
       "races": [
@@ -9364,8 +10760,50 @@
           "datetimez": "2026-06-08T18:00:00+02:00",
           "discipline": "Middle",
           "night_or_day": "day",
-          "position": null,
-          "areas": [],
+          "position": {
+            "lat": 63.2548539140087,
+            "lng": 18.436187800663
+          },
+          "areas": [
+            {
+              "lat": 63.2548539140087,
+              "lng": 18.436187800663,
+              "polygon": [
+                [
+                  63.250043785654384,
+                  18.404752615404682
+                ],
+                [
+                  63.275466237034294,
+                  18.415139653237755
+                ],
+                [
+                  63.275466237034294,
+                  18.441622444572722
+                ],
+                [
+                  63.25712039674178,
+                  18.45652779408849
+                ],
+                [
+                  63.24676379240174,
+                  18.477237865562014
+                ],
+                [
+                  63.23743967233247,
+                  18.443104599614912
+                ],
+                [
+                  63.24451937185853,
+                  18.40628669477309
+                ],
+                [
+                  63.250043785654384,
+                  18.404752615404682
+                ]
+              ]
+            }
+          ],
           "urls": [],
           "documents": [],
           "entry_counts": null,
@@ -9611,8 +11049,10 @@
         }
       ],
       "classes": [
-        "MTB-cykel",
-        "Prova på vanlig cykel"
+        "MTB-1",
+        "MTB-2",
+        "MTB-3",
+        "Prova på kort"
       ],
       "urls": [
         {
@@ -9628,9 +11068,21 @@
           "title": "Inbjudan",
           "url": "/Documents/Event/121094/Inbjudan",
           "published_time": "2026-04-15"
+        },
+        {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "/Documents/Event/122110/PM",
+          "published_time": "2026-05-05"
+        },
+        {
+          "type": "Other",
+          "title": "Kartnorm MTBO",
+          "url": "/Documents/Event/122111/Kartnorm-MTBO",
+          "published_time": "2026-05-05"
         }
       ],
-      "information": null,
+      "information": "PM och Kartnorm MTBO upplagt 2026-05-05\nPM med banläggarens kommentarer upplagt 2026-05-06",
       "region": "Uppland",
       "punching_system": "Sportident",
       "races": [
@@ -9648,15 +11100,15 @@
           "urls": [
             {
               "type": "EntryList",
-              "url": "/Entry?eventId=58722",
-              "title": "Enter and/or order services",
-              "last_updated_at": "2026-04-12T19:43:08.816487+00:00"
-            },
-            {
-              "type": "EntryList",
               "url": "/Events/Entries?eventId=58722&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-04-25T22:13:52.238719+00:00"
+            },
+            {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/188530",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-05-10T19:32:03.787050+00:00"
             }
           ],
           "documents": [],
@@ -9730,6 +11182,18 @@
           "title": "Inbjudan",
           "url": "/Documents/Event/121103/Inbjudan",
           "published_time": "2026-04-12"
+        },
+        {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "/Documents/Event/122013/PM",
+          "published_time": "2026-05-03"
+        },
+        {
+          "type": "ResultList",
+          "title": "LIVERESULTAT",
+          "url": "https://liveresultat.orientering.se/followfull.php?comp=36514&lang=sv",
+          "published_time": null
         }
       ],
       "information": null,
@@ -9750,22 +11214,82 @@
           "urls": [
             {
               "type": "EntryList",
-              "url": "/Entry?eventId=58724",
-              "title": "Enter",
-              "last_updated_at": "2026-04-12T19:43:08.816500+00:00"
-            },
-            {
-              "type": "EntryList",
               "url": "/Events/Entries?eventId=58724&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-04-12T19:43:08.816500+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=58724&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-05-10T19:32:03.786951+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=58724&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-05-10T19:32:03.786951+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "Bana A": 6,
+            "Bana B": 5,
+            "Bana C": 15,
+            "Bana D": 17
+          },
+          "result_counts": {
+            "Bana A": 6,
+            "Bana B": 5,
+            "Bana C": 15,
+            "Bana D": 17
+          },
+          "fingerprints": [
+            "0890bf758710dd21c740aaa722c3a6172dd338e69a60dc00619950e9afc6adb9",
+            "09c7eeae40ac18f7919c2347c3b6d20597283b3db58b4055ad8f99b33bc585eb",
+            "133cfede828ffa5a14e4f54e49d06d3312da0ae2c4c7fefedc1e7ad83ec28c5e",
+            "1ab77db1ede77a92d786bd98f7ddcac893248fe0e9c98ec57ead40c764b32e31",
+            "1fd10167828cd9f5d5901d9aa001eb64e8e711cdece1f280fb8a899e114060f0",
+            "2012365322e8bf99d6ab7c64d68a12e9e3f055e98fed65a8734d9deb9df795d5",
+            "28156df815b2059ff176846cbe7305c11502e591ca19f88d454bac7103ec7062",
+            "2cdcf8a50441103eed618a211ae6d3a5f9ddf424a83e93ccaf7626943eb8ca1b",
+            "34f3133654b0d1c5b200fd70037be37921d39a4d3088a8709cc4feeaad410a32",
+            "3df795e3f7aad4d697c295c898dabb269ee5f14979751738e89dfcb472e339d9",
+            "44660e05ea8917a47213b773396d9b22c56758681818f22111eca251b742a3a8",
+            "44e74fee1a17e5ef3db4c1c521119a58048013ae3e45bc8cd20dea706638b3f6",
+            "499eb8d0718cdac93166903a282d17db43ca14aee1471a06b81959e9106a94a7",
+            "590c13e22c1cb280fdca1533dde9b6c04417a7267943749ddd26b4c500e0321b",
+            "5db6b0516ef68caddf2803eb34b02eec589e03bb76e49d687738f5b18fd2638a",
+            "643cdcc60c4dc958643c35da3affcb7d63a59fa9f0ebfbbacc21e32821396546",
+            "6a4c8046375f8f4d51dca839ddec2a6d4ae383f056fbcf66b71fe1144c6f1cb7",
+            "73ae41d65b23f4ed6e91aa5db0f17dcd5fffc91ecefd1fcbc5b9918d27019726",
+            "77b98a51a170467baee0607f99430fb7932a09d7e22d2562b9eaeb06495f92ea",
+            "7c449e44b8e45cfca42dfb34ece6175fb305d00051953a7cd8a10a134ed522d3",
+            "808d18301e5fe30f287deaebcfecae85980e75a9fbfd906f6d2b7ee97e76d98b",
+            "8d1835ac6d552062a9a62042fb17b93e2cfc50c562c53c931f1fa596d0eb663a",
+            "929b0545b25fe026509671148fbf2d4015475e97fa1ac55266acfcd8458e6142",
+            "933d2f1af265affd9c57e47fb94f734e14ea6668abb7f56ce872e1d2c265487e",
+            "9a542f352efc41d8dd74a2b2a26b25e8b8a9b61b6c0bc1c69899a030a3e9d0bf",
+            "9ca9bf362f03284fc7cd2470b3b7f0062940a05fab66099e077b5f600aaa0c29",
+            "a0bb28eb3aef4cc0a293a5f125e31b91a2a401d10e50af39580504489f378c90",
+            "a461f36d16b6fb3b23b448710f40f4eb4dad77e3eb8e86aa041df534ce9aab65",
+            "b1cecc72c9d77c0e46fe3993eb68898c97031471de7a7b0e8d7b9ded06c084b9",
+            "b2a65f91ee3ae06b162c0d57966e70d81f5561194405520dbe85275866308e4e",
+            "b6f170c044ff3e3e792afe19eda11a374b35ed6d4cd6c188ee8e604a3de7b79a",
+            "bcb159aa6aeb5eede5385df0eb5b2ea541ffef8235519bba25261278f39d8c4e",
+            "bd0065f464295737c647d829b1e0fb544bf22d9dfb1f05a0c659c533bcaa99d4",
+            "bd2c7000faf591e1ebcc4847d589274011a57df03fe7265d2dc5e464294eff9a",
+            "c298b611db7ebfd328df4e317e488c99785a065b4244f7cbbe4773685b39766e",
+            "ccebe95d1adbed5846c00237fdbae6df20b0e7a883d73531f7eef92c6ee2a10e",
+            "d069aca574652aa5bf586dfceb3abc2f76b1b3c5b0ca5b16804706a7d26c3f28",
+            "d2779cf05519453842e81b2147d4673dda69a872610d6e17a0b3522bfa7ea73b",
+            "d475cd1467c091dc381e29bdecb91a03471e2453cdaeecaee029ae267c724e26",
+            "d60863aca6fc9ad9da38e4afdd6180ec9a56c6c0f0ffa3eeb6d8568ccbb5698e",
+            "f6b4dca8d63f504a259521a014af5cd69389d6644f51b2f9c302b6828682935d",
+            "f863f9aec464c5945811fc9b5ea9b4762d3179be41b0d9fb546d7305ec5f4609",
+            "fdc4883d88912f0d947b8c20ed170bd89e17e898d41a2f377c0fbbbef6dbe4fb"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -9930,6 +11454,12 @@
           "title": "Inbjudan",
           "url": "/Documents/Event/121439/Inbjudan",
           "published_time": "2026-04-26"
+        },
+        {
+          "type": "ResultList",
+          "title": "Liveresultat",
+          "url": "https://liveresultat.orientering.se/followfull.php?comp=36475&lang=sv",
+          "published_time": null
         }
       ],
       "information": null,
@@ -9949,23 +11479,87 @@
           "areas": [],
           "urls": [
             {
-              "type": "EntryList",
-              "url": "/Entry?eventId=58751",
-              "title": "Enter",
-              "last_updated_at": "2026-04-25T22:13:52.238835+00:00"
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/186134",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-05-10T19:32:03.786922+00:00"
             },
             {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=58751&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-04-25T22:13:52.238835+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=58751&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-05-10T19:32:03.786922+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=58751&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-05-10T19:32:03.786922+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "Kort Herr": 6,
+            "Mellan Herr": 10,
+            "Lång Herr": 9,
+            "Kort Dam": 4,
+            "Mellan Dam": 4,
+            "Lång Dam": 4
+          },
+          "result_counts": {
+            "Kort Herr": 6,
+            "Mellan Herr": 10,
+            "Lång Herr": 9,
+            "Kort Dam": 4,
+            "Mellan Dam": 4,
+            "Lång Dam": 4
+          },
+          "fingerprints": [
+            "007d253ace1fce013a347a171dd137ae0c47749fda5ce485eab2ad5ab3d48f23",
+            "023e1993ed5a6b87a28f09e3c6449708e1113f4c74bfb72411c462f8227ab0f3",
+            "0f68a7fe8f6f22dbe93f221802399946ff0e293505f8a34508d42fff1b474b45",
+            "1bde460c125ec816550424030b954b2b7996f9f1b2b4eeea7db72916e6110e43",
+            "1c6669b0a43ef36d2e3f19afc372525a1c67f62bdecf6050ef054d418e9239f3",
+            "1e8c58f11a5d807af4ae92fb0223d976ed045f17d30e23a6eda4cef8b05a257f",
+            "22bf7a78dbdb2cb9a1facfd02c33744ef08e6ee8722a5ad47745ac93a14573ac",
+            "29507bcb48f0788a1c5a6f6b995c5236b76920439c6addef05edf26d3da59dda",
+            "2e4ae66a71bc0db7c618db80b55f5e356819cd290284eecef49c9e04b3bdd471",
+            "30274db6d725ce1d89944d6f3ee402a9d36529445f3c8da90911afba2dd57d2e",
+            "3093b2d1caa3ff4a0cb68acb19c84d2b6b53da1ef72c0505bc45ccfc202e3c03",
+            "32a6d8e8341e74c3f7ead26e2479d0764a9d0faff8c2fffa9b5995c6df153b11",
+            "341f9c05d70cfa061846bf3aaf2bf210a344d463b17e0669503f79c34816fb02",
+            "37f99eedce7ddeca965c6f1ece1c1b41c8013c941b29ede147a6da277c180f05",
+            "38e586a290aae715b88507dff1f685164542d29f9b0c1f895d4714dc9958881f",
+            "488edf5abe5e0d35a7c493e979e8333dd7ebab0dca1ffa894609bda1185d2f6d",
+            "5865faa16b46811be880ac6c53e209d978d8107a4aa5a0b357ea2f349a6def03",
+            "5cdec43de177ef98a0d9525d4e807e1350fd8a12832d0490f0c983314a52c42b",
+            "874e64a8a5b2812c73acf8d93478ee14467da7590cba1f51b1e7192c556e55be",
+            "8a3beb786793a49620d17dfea66077866f83ba428df9d5cd935f83419ced6151",
+            "90a623eb600399089faa9422bc679556e673efad5126032590fd1282468b530b",
+            "9474644d7b071287e5a1edc048b5f7f8e2aff8901f5a94103579c1cfa0444dcd",
+            "a7bbbad2c0d2232ff539b9e36aa58ef1a74a0e393cd0f07cf51086265b38df2d",
+            "b5125f67be3dc682e6393439406a1f72aafe734b9618cfc2ce69e5b87634de88",
+            "b78e241a6c95ea800a56aec7cac31b893e89969cebae4ffd153d10f17b47e6da",
+            "b7c2e8a19aac9bba5a526896ffda0bad4d5db7fa2bd207c2fc39b5e2ee389a0c",
+            "b83999bc31a61707c08febaed2d799b313c1c1b31a0aff1345d1b39f6c1a2da7",
+            "beb25fb40a855530d02706cf4fb1bbafb88894c528c15f5eadd50db2535624de",
+            "c7d1d47013d1138db879e85866ffe346bfd402c1015649dc092a70f2ad8d701f",
+            "d3ac3cc6a870c3bc69944f6389f3c49a224188d55e5c52977dd282f50d0193f3",
+            "d4100d9346700e258ec112e4fb1208ed0775ff3895c89ded94a77cacafd34326",
+            "d83a92fa02c13262431d6473d2a69633f920415b42b6f93a0ad6d23d6cdf235c",
+            "dcd7b9a80a2d39237f4baa581ee568f74903854dbcbe401aa1aa9b14ad055753",
+            "de23a50c1690a57d53858482e3eb6ab391921383b6b3357b4a6c283cc94d6844",
+            "e542ebdc12ba79531c3ce32f0fe556ae50e7221b75021c5ebda0a56ff0928ba9",
+            "eb1cf4a782860aea093ee157f243e879865e9171f392b14e0d5b75453b3ab4f8",
+            "fd232ff4d3affe39a8df1bc2ef5b0f1902f5d2b07c49efcdfc7d5bc43dbcf13a"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -10000,9 +11594,26 @@
         {
           "role": "Contact email",
           "name": "enc:Hh8LA0ERBgAGMA0dGRkDBkFdAB0M"
+        },
+        {
+          "role": "Event director",
+          "name": "Stefan Killberg"
+        },
+        {
+          "role": "Course setters",
+          "name": "Esbjörn Andrén"
+        },
+        {
+          "role": "Course setters",
+          "name": "Stefan Killberg"
         }
       ],
-      "classes": [],
+      "classes": [
+        "Bana A",
+        "Bana B",
+        "Bana C",
+        "Bana D"
+      ],
       "urls": [
         {
           "type": "Path",
@@ -10023,6 +11634,12 @@
           "title": "Inbjudan",
           "url": "/Documents/Event/121303/Inbjudan",
           "published_time": "2026-04-15"
+        },
+        {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "/Documents/Event/122859/PM",
+          "published_time": "2026-05-20"
         }
       ],
       "information": null,
@@ -10040,7 +11657,20 @@
             "lng": 15.2834505799708
           },
           "areas": [],
-          "urls": [],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Entry?eventId=58824",
+              "title": "Enter",
+              "last_updated_at": "2026-05-10T19:32:03.786902+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=58824&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-05-20T18:50:27.702944+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
@@ -10138,9 +11768,9 @@
           "urls": [
             {
               "type": "EntryList",
-              "url": "/Entry?eventId=58911",
-              "title": "Enter",
-              "last_updated_at": "2026-04-25T22:13:52.238877+00:00"
+              "url": "/Events/Entries?eventId=58911&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-05-10T19:32:03.787067+00:00"
             }
           ],
           "documents": [],
@@ -10277,15 +11907,22 @@
           "last_updated_at": "2026-04-25T22:13:52.238505+00:00"
         }
       ],
-      "documents": [],
-      "information": null,
+      "documents": [
+        {
+          "type": "Other",
+          "title": "Värmlandsserien",
+          "url": "/Documents/Event/122545/V-rmlandsserien",
+          "published_time": "2026-05-13"
+        }
+      ],
+      "information": "Välkomna till etapp 1 av Värmlandsserien 2026!\nSamling sker vid Viks motionsspår på Snickaregatan i Arvika. Vägvisning finns från den östra infarten till Arvika.\nObservera: På grund av att Arvika IS har MTB-träning i området är första start framflyttad till kl. 18.30.\nTerrängen är lättcyklad och består av motionsspår, villaområden, gator. Visa hänsyn till andra och följ trafikreglerna.\nMellan två av kontrollerna passerar banan Arvika ridhus. Den sträckan räknas inte in i tävlingstiden för att möjliggöra passage i lugnt tempo. Minsta sträcktid för passagen är 3 minuter. (ingen kan alltså få en snabbare tid än 3 minuter). Detta gäller till kontroll nr 155.\nEtt begränsat antal kartställ finns att låna.\nHjälm är obligatorisk och ringklocka rekommenderas.\nKartskala är 1:7500, A4 och kartvändning för 8 och 5 km.\nKontrollerna är programmerade i touchläge.\nEn stig är enkelriktad och markerad med pilar.\nDet är tillåtet att cykla på stigar, vägar, svartprickat och orange. Dvs gult och vitt får man inte cykla på.\nTill start c:a 2 km. Startkarta fås vid målet.",
       "region": "Värmland",
       "punching_system": "Sportident",
       "races": [
         {
           "race_number": 1,
           "name": "Värmlandssserien MTBO #1",
-          "datetimez": "2026-05-18T00:00:00+02:00",
+          "datetimez": "2026-05-18T18:30:00+02:00",
           "discipline": "Middle",
           "night_or_day": "day",
           "position": {
@@ -10295,23 +11932,85 @@
           "areas": [],
           "urls": [
             {
-              "type": "EntryList",
-              "url": "/Entry?eventId=58954",
-              "title": "Enter",
-              "last_updated_at": "2026-04-25T22:13:52.238507+00:00"
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/189899",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-05-20T18:50:27.702856+00:00"
             },
             {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=58954&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-04-28T19:35:11.079681+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=58954&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-05-20T18:50:27.702856+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=58954&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-05-20T18:50:27.702856+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "Herrar 8 km": 14,
+            "Herrar 5 km": 6,
+            "Herrar 3 km": 2,
+            "Damer 8 km": 5,
+            "Damer 5 km": 5,
+            "Damer 3 km": 3
+          },
+          "result_counts": {
+            "Herrar 8 km": 14,
+            "Herrar 5 km": 6,
+            "Herrar 3 km": 2,
+            "Damer 8 km": 5,
+            "Damer 5 km": 5,
+            "Damer 3 km": 3
+          },
+          "fingerprints": [
+            "0761672688f369792df09b3f1c87d1602147903126163f52fca0dd3d5444473f",
+            "0c12c513a82f0eabefbc01b3dfa3c56a911322988c09fd749733341b153d7f41",
+            "0ccb3ef9587cdafab4cca3d7bdddc816fa6345e198162981d258d0f85947ac03",
+            "0eb66051624f01fc5427cb6ad54dd8c16b88246d3549fa42f2cb1eb2b835db34",
+            "1f14d6b6177f54eda8c637291d654fe4b1bcedc62fe83b90efc5525399d5dac9",
+            "2a00cc0cbd2b303e9c4c4b891a3d005cbf01a25fb254ee7eee88143afd6d3ce0",
+            "2bbd309bc197a15ab442d8544b2089441dc53f0f5346ee918c00bc22966bac5c",
+            "31cb1d892c4205d3aa8d58aca688094fe703419bb5cec6aa7e6776ffff4e5e6a",
+            "3476a19a7f735d13f749f26af4d9e7347cd50119474b073891fc83c9aea0166b",
+            "3a0e5a41d7220f6f811418849ce616a560d4dca96e9dfdffbccf8f00fd0fd5c6",
+            "4b0bd80b886ce6a305bd66eabb8e450dd092b98048b9011e4c987cd8aff6d104",
+            "4c5ba7cd36b8c7029fddfc7c5317ca8dd9c37400f86ab5fa18e775d81089c995",
+            "4f6810830a80c4bccdae773f94a047c0fe68eae724bdae8487aac996197f5118",
+            "51e9a4bdc3599c04149067c1b482f20bef400c302101985c602868b447c0a8ca",
+            "562d5a5f9eae852e6ac81256d73a6837d94242168b75b6d5b0bffc0857cdcbf1",
+            "5e6508c5c950ab410fb901e2edc0f9f1f586ffbb54cfac30a65202d59ca56a05",
+            "60256b6e26d7b2f9db1117d325c3c7647389aa39aef12fe50e8cb41ed1a4f9fb",
+            "6db04add4e02722bf9cbdfae1b6dd5123c5b3246acc3fc5aa0590351d8382acc",
+            "7aea3ed6783d9a0e583e12c5386a9437e1604f52fd93d5c4fbc879935d4d97b7",
+            "7bca59e045f91491ad0ecf56e7c6d26c965c7de5383ac87c492dc6e7b1a7784b",
+            "810e90b018570b01dc9cea599758841d9ccee3c8b1b160fd8dbf4da997561654",
+            "8eaf44c4d255888b407afb94c510f0b84641ce93186ffc7ba88f8758a93ff8a2",
+            "901ce25f832d80d4842147af9fd636e4f5f6c74b25bbc30d2c832d833d8410fd",
+            "927835126f5d64ff37450e8e2c0f875b4951fd6da8dea7fb9409f78f32a31cc0",
+            "9766eedada75f310d52fac68086be2c041aa6411d2cd3e433bdeda62fc3780ca",
+            "9ec104a49483e8f4763649d0abeb660f003e90f87c6b6e371a55d197e56f7ddb",
+            "a82929f542ae15937dae8b62599b9a82c9b06853ad9f447b3045974b13ded60f",
+            "b4752070c136d3a99736cbae1cf138902a58c874c45b8a97793146e46f7e6706",
+            "c0030a2165f968b7cde825e322251852affd9814f165a56bb898bddd6dda6a3a",
+            "d397d0fa611caa2c039b00215c2d1ddd0307cddba188bfffea1b2b1015847f5a",
+            "d86b6e33504ac09a8b99f62365f37d0d011a162e520748054439256f1889066a",
+            "f1e2a08120cc801a81baf15836922a3d44e549d5a94c2946349d5c6c1a10a6f3",
+            "f67714ecc6cf000f47c7280efcc103c214e3c99138b8e3699def64424bef2f01",
+            "f6a64798863533804ea8b3deec9b242c3e5c72ef6a844d09b8bfe06b96057181",
+            "f6e593455f188638140089d44be744f0dc19884e9ab8895967352280da5ae3cc"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -10467,7 +12166,14 @@
           "last_updated_at": "2026-04-28T19:35:11.079810+00:00"
         }
       ],
-      "documents": [],
+      "documents": [
+        {
+          "type": "Invitation",
+          "title": "Inbjudan",
+          "url": "/Documents/Event/122614/Inbjudan",
+          "published_time": "2026-05-14"
+        }
+      ],
       "information": null,
       "region": "Värmland",
       "punching_system": "Sportident",
@@ -10483,7 +12189,20 @@
             "lng": 13.2192973631293
           },
           "areas": [],
-          "urls": [],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Entry?eventId=59028",
+              "title": "Enter",
+              "last_updated_at": "2026-05-10T19:32:03.787076+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=59028&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-05-10T19:32:03.787076+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
@@ -10618,6 +12337,383 @@
           },
           "areas": [],
           "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_59069",
+      "name": "Närtävling MTBO",
+      "start_time": "2026-05-20",
+      "end_time": "2026-05-20",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Local"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "Ulricehamns OK",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Anders Thomasson"
+        },
+        {
+          "role": "Contact phone number",
+          "name": "0702357801"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:DBoGCl8AFxpUQSUVABULAwMQDB8="
+        }
+      ],
+      "classes": [
+        "Lätt kort",
+        "Lätt mellan",
+        "Lång",
+        "Nybörjare"
+      ],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/59069",
+          "title": null,
+          "last_updated_at": "2026-05-10T19:32:03.787059+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "type": "Other",
+          "title": "Karta",
+          "url": "/Documents/Event/122759/Karta",
+          "published_time": "2026-05-18"
+        },
+        {
+          "type": "Other",
+          "title": "Klassning av framkomlighet på stigar",
+          "url": "/Documents/Event/122760/Klassning-av-framkomlighet-p--stigar",
+          "published_time": "2026-05-18"
+        },
+        {
+          "type": "Bulletin",
+          "title": "NYTT uppdaterat PM",
+          "url": "/Documents/Event/122764/NYTT-uppdaterat-PM",
+          "published_time": "2026-05-18"
+        },
+        {
+          "type": "ResultList",
+          "title": "Liveresultat",
+          "url": "https://liveresultat.orientering.se/followfull.php?comp=36449&lang=sv",
+          "published_time": null
+        }
+      ],
+      "information": null,
+      "region": "Västergötland",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "Närtävling MTBO",
+          "datetimez": "2026-05-20T17:30:00+02:00",
+          "discipline": "Middle",
+          "night_or_day": "day",
+          "position": {
+            "lat": 57.7856400747142,
+            "lng": 13.4447574233647
+          },
+          "areas": [],
+          "urls": [
+            {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/187552",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-05-20T18:50:27.702976+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=59069&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-05-10T19:32:03.787060+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=59069&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-05-20T18:50:27.702976+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=59069&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-05-20T18:50:27.702976+00:00"
+            }
+          ],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": {
+            "Lång": 15,
+            "Lätt mellan": 8,
+            "Lätt kort": 2,
+            "Nybörjare": 2
+          },
+          "result_counts": {
+            "Lång": 15,
+            "Lätt mellan": 8,
+            "Lätt kort": 2,
+            "Nybörjare": 2
+          },
+          "fingerprints": [
+            "0228c3344cbeb9f957925f287112869be215d852917fa764e1814c183dbf00d1",
+            "04bdb21cf3d063f406237e7b80762e44a758d6dfd923eef2a22411cb6bd40263",
+            "0735c2c2532b481a9d2ed84a17b50fe433f6deb95074ff741766ca2371bc76a1",
+            "10fac6c3dd8030e9d15ac1997f6746ebf332a94c8dad7f3f848e372858dd3d51",
+            "146bac935a88fd54ba47abe8d4c93b1aee2db38aee41a2ccd88e80b78bd6787f",
+            "17a1a6b8bc9481e2b2e862cd865d149c19ab806b0c1f137bba78fbbb2eda1109",
+            "1caa9b4966fd56a05745e1741a6f5ad398f9f074fd1d8e98c5545c80ff9d5256",
+            "2bd89daf8d032b4b1fc2cfb6d645ff15ca4735dea7cabd44f9c761a21ac314d1",
+            "30fde33fbe2a40b736b0d70600f655b2bb5c1f31468e2696c3889d1882ace546",
+            "341289b7b5bb1fea126372dea13b3ce33006d1a9cda94765c217e11dd7a344ef",
+            "3a24049626fdef556834ca9408f6729e0698b064ee7ca082bbd2bce8a946abde",
+            "3eaf5d0fa9dc8005cb1088e2869ab16e31246b71d8117a48dc658503685be3f8",
+            "43503157c4e974fe1ee44583ddd884b8d5c75f40ad5b72e058f130dc7ca29651",
+            "5c72f1973f5d599013dbabe9c491ae61e7b7d952b4cd9aba23f5d5a744caeae5",
+            "682cca9625300efbfc75a4022e6cf923a48396fefddb5cc2447a710e274de2d3",
+            "7671e577d6c8d9766f5bc2f21c529394deab440b752f0bf62e6b173e5db100bd",
+            "80a66689e2aeeaffec874dc02d1f18c6f347601c97ba17ba8ab95447b1040060",
+            "85eb5a461ea3da975190cf691ad7758e43c975d0ea038127bde717b3dad14c04",
+            "95a9b6348872c21a910aa005f3177775b0d1eb4e75f6517ce34dcf331eceeb2f",
+            "9930ea04687170e391260feb2135f83fa3c1cefc4f67cc08884e34e0d968a6b8",
+            "c27bb053f2c01e2932232d0341c9da5061ef47b36973179e8a2666b3c4383cf5",
+            "d83e56fd7fee4297be6a53c68d234dec47629427cf41046b30f1c582698c3a78",
+            "dc7ac06919fef98253839184f1fcbc0cd127780e58f0787814bb7e0957d94f99",
+            "e667dd9e568c17b9ca1de8ed72bf289b65c27f2b1748d4f284020f315d95d2f8",
+            "f0917a784766553656b2bcf3402671aefe39d87848296627e04fede8ddbed859",
+            "f2989fc750e071cd5b88d8f384965262d30841c78fd86caeb317bd521a7a5532",
+            "f7dfe510a51bb14db06b9e4fc4ee5754e855eda399d7e6725ff465ae5394da05"
+          ]
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_59189",
+      "name": "ABCD-cup MTBO",
+      "start_time": "2026-08-12",
+      "end_time": "2026-08-12",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Local"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "Waxholms OK",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Krister Gumaelius"
+        },
+        {
+          "role": "Contact phone number",
+          "name": "0706443604"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:Bx8QBl4HBgAGMAIfDB0OQU4cDg=="
+        }
+      ],
+      "classes": [
+        "Lätt cykling",
+        "MTBO Kort",
+        "MTBO Lång",
+        "MTBO Mellan",
+        "MTBO Prova"
+      ],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/59189",
+          "title": null,
+          "last_updated_at": "2026-05-10T19:32:03.787216+00:00"
+        },
+        {
+          "type": "Website",
+          "url": "http://www.waxholmsok.se",
+          "title": null,
+          "last_updated_at": "2026-05-10T19:32:03.787216+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": "Stockholm",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "ABCD-cup MTBO",
+          "datetimez": "2026-08-12T17:00:00+02:00",
+          "discipline": "Middle",
+          "night_or_day": "day",
+          "position": null,
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_59228",
+      "name": "MTBO Gotland 2",
+      "start_time": "2026-06-03",
+      "end_time": "2026-06-03",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Local"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "Visborgs OK",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Stefan Hellström"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:HgAHCUwdTUBWR11CVTQWCkEaAlwCHwg="
+        }
+      ],
+      "classes": [
+        "Kort",
+        "Lång",
+        "Mellan"
+      ],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/59228",
+          "title": null,
+          "last_updated_at": "2026-05-20T18:50:27.702772+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": "Gotland",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "MTBO Gotland 2",
+          "datetimez": "2026-06-03T17:00:00+02:00",
+          "discipline": "Long",
+          "night_or_day": "day",
+          "position": {
+            "lat": 57.6154293940319,
+            "lng": 18.3350972255663
+          },
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_59268",
+      "name": "Värmlandsserien MTBO deltävling 3",
+      "start_time": "2026-06-15",
+      "end_time": "2026-06-15",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Local"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "Skattkärrs SOK",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Stefan Wennberg"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:GhEMAU8WERVWQCUGCBgLDgMQDB8="
+        }
+      ],
+      "classes": [
+        "Damer 3 km",
+        "Damer 5 km",
+        "Damer 8 km",
+        "Herrar 3 km",
+        "Herrar 5 km",
+        "Herrar 8 km"
+      ],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/59268",
+          "title": null,
+          "last_updated_at": "2026-05-20T18:50:27.702961+00:00"
+        }
+      ],
+      "documents": [],
+      "information": "Värmlandsserien mtbo deltävling 3   2026 0615\nArena: Troligtvis OK Älgens klubbstuga i Grums.\nStart: Mellan 18-19\nMer info kommer",
+      "region": "Värmland",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "Värmlandsserien MTBO deltävling 3",
+          "datetimez": "2026-06-15T18:00:00+02:00",
+          "discipline": "Middle",
+          "night_or_day": "day",
+          "position": null,
+          "areas": [],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Entry?eventId=59268",
+              "title": "Enter",
+              "last_updated_at": "2026-05-20T18:50:27.702962+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,

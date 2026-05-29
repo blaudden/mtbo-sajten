@@ -22,7 +22,6 @@ import {
   getRacesForLanding,
   getEventBySlug,
   resolveCountryCode,
-  getOrganiserName,
   formatEventDateRange,
   countryCodeToName,
 } from '~/utils/events';
@@ -95,8 +94,9 @@ if (pageType === 'landing') {
   );
 
   metadata = {
-    title: 'MTBO Tävlingskalender',
-    description: 'Kommande och nyligen genomförda MTBO-tävlingar i Sverige och internationellt.',
+    title: 'MTBO Tävlingskalender — Kalender, program & tävlingar',
+    description:
+      'Kommande och nyligen genomförda MTBO-tävlingar i Sverige och internationellt. Se kalender, program, anmälan och info för alla mountainbikeorienterings-event.',
     openGraph: { type: 'website' },
   };
 } else if (pageType === 'year' && year) {
@@ -106,8 +106,8 @@ if (pageType === 'landing') {
   subtitle = formatEventDateRange(`${year}-01-01`, `${year}-12-31`);
 
   metadata = {
-    title: `MTBO Tävlingskalender ${year}`,
-    description: `Alla mountainbikeorienteringstävlingar ${year}. Se datum, arrangörer och anmälningslänkar.`,
+    title: `MTBO Tävlingskalender ${year} — Kalender & program`,
+    description: `Alla mountainbikeorienteringstävlingar under ${year}. Se datum, program, arrangörer och anmälningslänkar för årets alla MTBO-event och deltävlingar.`,
     openGraph: { type: 'website' },
   };
 } else if (pageType === 'detail' && eventSlug) {
@@ -116,12 +116,11 @@ if (pageType === 'landing') {
   if (event) {
     const country = resolveCountryCode(event);
     const countryName = countryCodeToName(country);
-    const organiser = getOrganiserName(event);
     const dateRange = formatEventDateRange(event.start_time, event.end_time);
 
     metadata = {
       title: `${event.name} | MTBO Tävlingskalender`,
-      description: `${event.name} — ${dateRange}. ${organiser ? 'Arrangör: ' + organiser + '.' : ''} Mountainbikeorientering i ${countryName}.`,
+      description: `${event.name} (${dateRange}) — Information, anmälningslänkar, klasser, karta och program för detta MTBO-event (mountainbikeorientering) i ${countryName}.`,
       openGraph: {
         type: 'website',
         images: [{ url: new URL(`/og-images/events/${event.slug}.jpg`, Astro.site).toString() }],

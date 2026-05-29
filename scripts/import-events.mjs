@@ -26,7 +26,23 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = path.resolve(__dirname, '..');
 const DEST_DIR = path.join(PROJECT_ROOT, 'src', 'data', 'events');
 const OG_DEST_DIR = path.join(PROJECT_ROOT, 'public', 'og-images', 'events');
-const TEMPLATE_PATH = path.join(PROJECT_ROOT, 'src', 'assets', 'images', 'event_og_template.png');
+const IMAGES_DIR = path.join(PROJECT_ROOT, 'src', 'assets', 'images');
+
+// Discover all template files matching event_og_template*.png
+const templateFiles = fs
+  .readdirSync(IMAGES_DIR)
+  .filter((f) => f.startsWith('event_og_template') && f.endsWith('.png'))
+  .map((f) => path.join(IMAGES_DIR, f))
+  .sort();
+
+function getTemplateForEvent() {
+  if (templateFiles.length === 0) {
+    throw new Error('No OG templates found in src/assets/images');
+  }
+  const index = Math.floor(Math.random() * templateFiles.length);
+  return templateFiles[index];
+}
+
 const SCRAPER_REPO = 'https://github.com/blaudden/mtbo-scraper.git';
 const MIN_YEAR = 2022;
 
@@ -179,7 +195,8 @@ async function importData(scraperRoot) {
             </svg>
           `;
 
-          await sharp(TEMPLATE_PATH)
+          const templatePath = getTemplateForEvent();
+          await sharp(templatePath)
             .composite([{ input: Buffer.from(svgText) }])
             .jpeg({ quality: 80 })
             .toFile(ogPath);
