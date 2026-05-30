@@ -16,13 +16,13 @@ jobs:
         with:
           node-version: '22'
           cache: 'npm'
-      
+
       - name: Install dependencies
         run: npm install --legacy-peer-deps
-      
+
       - name: Check types & lint
         run: npm run check
-      
+
       - name: Build project
         run: npm run build
 

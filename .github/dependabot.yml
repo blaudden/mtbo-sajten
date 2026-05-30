@@ -20,7 +20,7 @@ updates:
         update-types:
           - "minor"
           - "patch"
-          
+
       # Group 2: All major upgrades into a single separate PR (acts as a warning radar)
       all-npm-major:
         patterns:

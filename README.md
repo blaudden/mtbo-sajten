@@ -11,6 +11,16 @@ The site is built using [Astro](https://astro.build/) based on the [Astrowind](h
 [![Stars](https://img.shields.io/github/stars/blaudden/mtbo-sajten.svg?style=social&label=stars&maxAge=86400&color=ff69b4)](https://github.com/blaudden/mtbo-sajten)
 [![Forks](https://img.shields.io/github/forks/blaudden/mtbo-sajten.svg?style=social&label=forks&maxAge=86400&color=ff69b4)](https://github.com/blaudden/mtbo-sajten)
 
+## Development Setup & Commit Hooks
+
+This repository uses `pre-commit` to ensure code formatting, linting, and tests pass before commits are made.
+
+To set up the commit hooks after cloning the repository, run:
+
+```bash
+./tools/setup-commit-hooks.sh
+```
+
 ## Commands
 
 All commands are run from the root of the project, from a terminal:
