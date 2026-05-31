@@ -66,6 +66,43 @@ export interface AnalyticsConfig {
   };
 }
 
+export interface UIColors {
+  primary?: string;
+  secondary?: string;
+  accent?: string;
+  heading?: string;
+  default?: string;
+  muted?: string;
+  bgPage?: string;
+  info?: string;
+  success?: string;
+  warning?: string;
+  error?: string;
+  link?: string;
+  linkActive?: string;
+}
+
+export interface UITokens {
+  default?: {
+    fonts?: {
+      sans?: string;
+      serif?: string;
+      heading?: string;
+    };
+    colors?: UIColors;
+  };
+  dark?: {
+    fonts?: Record<string, string>;
+    colors?: UIColors;
+  };
+}
+
+export interface UIConfig {
+  theme?: string;
+  classes?: Record<string, string>;
+  tokens?: UITokens;
+}
+
 const config = yaml.load(fs.readFileSync('src/config.yaml', 'utf8')) as {
   site?: SiteConfig;
   metadata?: MetaDataConfig;
@@ -73,8 +110,8 @@ const config = yaml.load(fs.readFileSync('src/config.yaml', 'utf8')) as {
   apps?: {
     blog?: AppBlogConfig;
   };
-  ui?: unknown;
-  analytics?: unknown;
+  ui?: UIConfig;
+  analytics?: AnalyticsConfig;
 };
 
 const DEFAULT_SITE_NAME = 'Website';
@@ -177,8 +214,7 @@ const getUI = () => {
     tokens: {},
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  return merge({}, _default, config?.ui ?? {}) as any;
+  return merge({}, _default, config?.ui ?? {}) as UIConfig;
 };
 
 const getAnalytics = () => {
