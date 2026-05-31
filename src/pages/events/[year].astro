@@ -1,0 +1,69 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import EventRaceListing from '~/components/events/EventRaceListing.astro';
+import { Icon } from 'astro-icon/components';
+
+import { getAvailableYears, getRacesForYear, formatEventDateRange } from '~/utils/events';
+
+export async function getStaticPaths() {
+  const availableYears = getAvailableYears();
+  return availableYears.map((year) => ({
+    params: { year: String(year) },
+    props: { year },
+  }));
+}
+
+const { year } = Astro.props;
+const availableYears = getAvailableYears();
+const yearTabs = [...availableYears].reverse();
+
+const races = await getRacesForYear(year);
+const subtitle = formatEventDateRange(`${year}-01-01`, `${year}-12-31`);
+
+const metadata = {
+  title: `MTBO Tävlingskalender ${year} — Kalender & program`,
+  description: `Alla mountainbikeorienteringstävlingar under ${year}. Se datum, program, arrangörer och anmälningslänkar för årets alla MTBO-event och deltävlingar.`,
+  openGraph: { type: 'website' },
+};
+---
+
+<Layout metadata={metadata}>
+  <WidgetWrapper containerClass="max-w-7xl mx-auto pt-4 md:pt-6 lg:pt-8">
+    {/* Navigation: year tabs */}
+    <nav class="mb-6" aria-label="Välj år">
+      <div class="flex flex-wrap items-center gap-2">
+        <a
+          href="/events"
+          class="px-3 py-1.5 text-sm font-medium rounded-lg transition-colors text-muted hover:text-default hover:bg-gray-100 dark:hover:bg-gray-800"
+        >
+          <Icon name="tabler:calendar" class="w-4 h-4 inline-block mr-1 -mt-0.5" />
+          Aktuella
+        </a>
+        {
+          yearTabs.map((y) => (
+            <a
+              href={`/events/${y}`}
+              class={`px-3 py-1.5 text-sm font-medium rounded-lg transition-colors ${
+                year === y
+                  ? 'bg-primary text-white shadow-sm'
+                  : 'text-muted hover:text-default hover:bg-gray-100 dark:hover:bg-gray-800'
+              }`}
+            >
+              {y}
+            </a>
+          ))
+        }
+      </div>
+    </nav>
+
+    <EventRaceListing
+      races={races}
+      showCountryFilter={true}
+      title={`MTBO Tävlingskalender ${year}`}
+      subtitle={subtitle}
+    />
+  </WidgetWrapper>
+</Layout>

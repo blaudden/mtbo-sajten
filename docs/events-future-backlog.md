@@ -5,6 +5,7 @@ This document tracks features and improvements that have been deferred for futur
 ## High Priority
 
 - **Entry Deadlines:** Display registration deadlines on the event detail page. This data is available in the scraper output (`entry_deadlines`) but not currently rendered in the UI.
+- **Real-time Participant Count Enrichment:** Fetch up-to-date entry/start counts in real-time (e.g. via a serverless function/edge handler querying the event provider's API directly) when the user views the event detail page, ensuring counts are always fresh rather than relying entirely on static scraper build caches.
 
 ## Medium Priority
 

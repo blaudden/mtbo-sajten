@@ -1,0 +1,58 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import EventRaceListing from '~/components/events/EventRaceListing.astro';
+import { Icon } from 'astro-icon/components';
+
+import type { MetaData } from '~/types';
+import { getAvailableYears, getRacesForLanding, formatEventDateRange } from '~/utils/events';
+
+const availableYears = getAvailableYears();
+const yearTabs = [...availableYears].reverse();
+
+const landingData = await getRacesForLanding();
+const races = landingData.races;
+
+const subtitle = formatEventDateRange(
+  landingData.from.toISOString().split('T')[0],
+  landingData.to.toISOString().split('T')[0]
+);
+
+const metadata: MetaData = {
+  title: 'MTBO Tävlingskalender — Kalender, program & tävlingar',
+  description:
+    'Kommande och nyligen genomförda MTBO-tävlingar i Sverige och internationellt. Se kalender, program, anmälan och info för alla mountainbikeorienterings-event.',
+  openGraph: { type: 'website' },
+};
+---
+
+<Layout metadata={metadata}>
+  <WidgetWrapper containerClass="max-w-7xl mx-auto pt-4 md:pt-6 lg:pt-8">
+    {/* Navigation: year tabs */}
+    <nav class="mb-6" aria-label="Välj år">
+      <div class="flex flex-wrap items-center gap-2">
+        <a
+          href="/events"
+          class="px-3 py-1.5 text-sm font-medium rounded-lg transition-colors bg-primary text-white shadow-sm"
+        >
+          <Icon name="tabler:calendar" class="w-4 h-4 inline-block mr-1 -mt-0.5" />
+          Aktuella
+        </a>
+        {
+          yearTabs.map((y) => (
+            <a
+              href={`/events/${y}`}
+              class="px-3 py-1.5 text-sm font-medium rounded-lg transition-colors text-muted hover:text-default hover:bg-gray-100 dark:hover:bg-gray-800"
+            >
+              {y}
+            </a>
+          ))
+        }
+      </div>
+    </nav>
+
+    <EventRaceListing races={races} showCountryFilter={true} title="MTBO Tävlingskalender" subtitle={subtitle} />
+  </WidgetWrapper>
+</Layout>

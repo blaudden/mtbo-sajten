@@ -38,6 +38,7 @@ interface LeafletMapProps {
   center?: { lat: number; lng: number } | string;
   zoom?: number;
   height?: string;
+  minZoom?: number;
 }
 
 // Function to create custom colored marker icons
@@ -81,6 +82,83 @@ const createColoredIcon = (color: MarkerColor = 'blue', iconType: MarkerIconType
   });
 };
 
+// Helper to parse points from string or array (hoisted)
+function parsePoints(points: { lat: number; lng: number }[] | string): { lat: number; lng: number }[] {
+  if (Array.isArray(points)) {
+    return points;
+  }
+  if (typeof points === 'string') {
+    try {
+      // Try parsing as JSON first
+      if (points.trim().startsWith('[')) {
+        return JSON.parse(points);
+      }
+      // Parse as "lat,lng; lat,lng" string
+      return points
+        .split(';')
+        .map((p) => {
+          const [lat, lng] = p.trim().split(',').map(Number);
+          if (!isNaN(lat) && !isNaN(lng)) {
+            return { lat, lng };
+          }
+          return null;
+        })
+        .filter((p): p is { lat: number; lng: number } => p !== null);
+    } catch (e) {
+      console.error('Failed to parse points:', points, e);
+      return [];
+    }
+  }
+  return [];
+}
+
+// Controller component that uses useMap hook
+const MapController: FC<{
+  markers: MarkerData[];
+  polygons: PolygonData[];
+  polylines: PolylineData[];
+  center?: [number, number] | null;
+}> = ({ markers, polygons, polylines, center }) => {
+  const map = useMap();
+
+  // Create a stable key of the actual coordinates to avoid resetting when the references change but contents are identical.
+  const geometryKey = JSON.stringify({
+    markers: markers.map((m) => ({ lat: m.lat, lng: m.lng })),
+    polygons: polygons.map((p) => p.points),
+    polylines: polylines.map((l) => l.points),
+    center,
+  });
+
+  useEffect(() => {
+    if (!center) {
+      const allPoints: [number, number][] = [];
+
+      markers.forEach((m) => {
+        if (m.lat && m.lng) allPoints.push([m.lat, m.lng]);
+      });
+
+      polygons.forEach((p) => {
+        const points = parsePoints(p.points);
+        points.forEach((pt) => allPoints.push([pt.lat, pt.lng]));
+      });
+
+      polylines.forEach((l) => {
+        const points = parsePoints(l.points);
+        points.forEach((pt) => allPoints.push([pt.lat, pt.lng]));
+      });
+
+      if (allPoints.length > 0) {
+        const bounds = L.latLngBounds(allPoints);
+        map.fitBounds(bounds, { padding: [50, 50], maxZoom: 15 });
+      }
+    } else {
+      map.setView(center, map.getZoom());
+    }
+  }, [geometryKey, map]);
+
+  return null;
+};
+
 const LeafletMap: FC<LeafletMapProps> = ({
   markers = [],
   polygons = [],
@@ -88,6 +166,7 @@ const LeafletMap: FC<LeafletMapProps> = ({
   center,
   zoom = 13,
   height = '400px',
+  minZoom = 5,
 }) => {
   const [parsedMarkers, setParsedMarkers] = useState<MarkerData[]>([]);
   const [parsedPolygons, setParsedPolygons] = useState<PolygonData[]>([]);
@@ -110,6 +189,14 @@ const LeafletMap: FC<LeafletMapProps> = ({
       });
     }
   }, []);
+
+  // Stable key of the inputs to prevent processing state updates on every parent render
+  const inputsKey = JSON.stringify({
+    markers,
+    polygons,
+    polylines,
+    center,
+  });
 
   useEffect(() => {
     // Process markers, polygons, polylines regardless of map modules loaded yet
@@ -216,7 +303,7 @@ const LeafletMap: FC<LeafletMapProps> = ({
         setMapCenter(DEFAULT_MAP_CENTER);
       }
     }
-  }, [markers, polygons, polylines, center]);
+  }, [inputsKey]);
 
   if (!isMounted || !mapCenter) {
     return (
@@ -235,48 +322,12 @@ const LeafletMap: FC<LeafletMapProps> = ({
     );
   }
 
-  // Controller component that uses useMap hook
-  const MapController: FC<{
-    markers: MarkerData[];
-    polygons: PolygonData[];
-    polylines: PolylineData[];
-    center?: [number, number] | null;
-  }> = ({ markers, polygons, polylines, center }) => {
-    const map = useMap();
-
-    useEffect(() => {
-      if (!center) {
-        const allPoints: [number, number][] = [];
-
-        markers.forEach((m) => {
-          if (m.lat && m.lng) allPoints.push([m.lat, m.lng]);
-        });
-
-        polygons.forEach((p) => {
-          const points = parsePoints(p.points);
-          points.forEach((pt) => allPoints.push([pt.lat, pt.lng]));
-        });
-
-        polylines.forEach((l) => {
-          const points = parsePoints(l.points);
-          points.forEach((pt) => allPoints.push([pt.lat, pt.lng]));
-        });
-
-        if (allPoints.length > 0) {
-          const bounds = L.latLngBounds(allPoints);
-          map.fitBounds(bounds, { padding: [50, 50] });
-        }
-      }
-    }, [markers, polygons, polylines, center, map]);
-
-    return null;
-  };
-
   return (
     <div style={{ height, width: '100%' }} className="relative z-0 isolate">
       <MapContainer
         center={mapCenter}
         zoom={zoom}
+        minZoom={minZoom}
         scrollWheelZoom={false}
         style={{ height: '100%', width: '100%', borderRadius: '0.5rem' }}
       >
@@ -387,34 +438,6 @@ const getColorHex = (color?: MarkerColor) => {
   return colorMap[color || 'blue'] || colorMap.blue;
 };
 
-// Helper to parse points from string or array
-const parsePoints = (points: { lat: number; lng: number }[] | string): { lat: number; lng: number }[] => {
-  if (Array.isArray(points)) {
-    return points;
-  }
-  if (typeof points === 'string') {
-    try {
-      // Try parsing as JSON first
-      if (points.trim().startsWith('[')) {
-        return JSON.parse(points);
-      }
-      // Parse as "lat,lng; lat,lng" string
-      return points
-        .split(';')
-        .map((p) => {
-          const [lat, lng] = p.trim().split(',').map(Number);
-          if (!isNaN(lat) && !isNaN(lng)) {
-            return { lat, lng };
-          }
-          return null;
-        })
-        .filter((p): p is { lat: number; lng: number } => p !== null);
-    } catch (e) {
-      console.error('Failed to parse points:', points, e);
-      return [];
-    }
-  }
-  return [];
-};
+// parsePoints helper moved to the top of the file
 
 export default LeafletMapWrapper;
