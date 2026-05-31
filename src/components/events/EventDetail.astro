@@ -52,14 +52,6 @@ const isEventor = externalUrl?.toLowerCase().includes('eventor');
 const externalLinkLabel = isEventor
   ? 'Visa på Eventor'
   : externalUrl?.replace(/^https?:\/\/(www\.)?/, '').split('/')[0] || 'Webbplats';
-
-const totalParticipants = event.races.reduce((sum, race) => {
-  const counts = race.start_counts || race.entry_counts || {};
-  return sum + Object.values(counts).reduce((acc, val) => acc + (val || 0), 0);
-}, 0);
-
-const todayStr = new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Stockholm' });
-const isFuture = event.start_time >= todayStr;
 ---
 
 <article class="event-detail max-w-4xl mx-auto">
@@ -110,23 +102,6 @@ const isFuture = event.start_time >= todayStr;
                 Anmäl dig till tävlingen på {isEventor ? 'Eventor' : 'tävlingens webbplats'}.
               </p>
             </div>
-
-            {totalParticipants > 0 && (
-              <div class="flex items-start gap-2.5 p-3 bg-orange-50/50 dark:bg-orange-950/10 border border-orange-100 dark:border-orange-900/30 rounded-xl text-xs text-orange-800 dark:text-orange-300 font-medium">
-                <Icon name="tabler:users" class="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
-                <div>
-                  {isFuture ? (
-                    <span>
-                      <strong>{totalParticipants}</strong> deltagare är anmälda.
-                    </span>
-                  ) : (
-                    <span>
-                      <strong>{totalParticipants}</strong> deltagare kom till start.
-                    </span>
-                  )}
-                </div>
-              </div>
-            )}
 
             <a
               href={externalUrl}
