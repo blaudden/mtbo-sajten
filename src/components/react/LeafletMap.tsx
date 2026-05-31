@@ -81,6 +81,43 @@ const createColoredIcon = (color: MarkerColor = 'blue', iconType: MarkerIconType
   });
 };
 
+// Controller component that uses useMap hook
+const MapController: FC<{
+  markers: MarkerData[];
+  polygons: PolygonData[];
+  polylines: PolylineData[];
+  center?: [number, number] | null;
+}> = ({ markers, polygons, polylines, center }) => {
+  const map = useMap();
+
+  useEffect(() => {
+    if (!center) {
+      const allPoints: [number, number][] = [];
+
+      markers.forEach((m) => {
+        if (m.lat && m.lng) allPoints.push([m.lat, m.lng]);
+      });
+
+      polygons.forEach((p) => {
+        const points = parsePoints(p.points);
+        points.forEach((pt) => allPoints.push([pt.lat, pt.lng]));
+      });
+
+      polylines.forEach((l) => {
+        const points = parsePoints(l.points);
+        points.forEach((pt) => allPoints.push([pt.lat, pt.lng]));
+      });
+
+      if (allPoints.length > 0) {
+        const bounds = L.latLngBounds(allPoints);
+        map.fitBounds(bounds, { padding: [50, 50] });
+      }
+    }
+  }, [markers, polygons, polylines, center, map]);
+
+  return null;
+};
+
 const LeafletMap: FC<LeafletMapProps> = ({
   markers = [],
   polygons = [],
@@ -234,43 +271,6 @@ const LeafletMap: FC<LeafletMapProps> = ({
       </div>
     );
   }
-
-  // Controller component that uses useMap hook
-  const MapController: FC<{
-    markers: MarkerData[];
-    polygons: PolygonData[];
-    polylines: PolylineData[];
-    center?: [number, number] | null;
-  }> = ({ markers, polygons, polylines, center }) => {
-    const map = useMap();
-
-    useEffect(() => {
-      if (!center) {
-        const allPoints: [number, number][] = [];
-
-        markers.forEach((m) => {
-          if (m.lat && m.lng) allPoints.push([m.lat, m.lng]);
-        });
-
-        polygons.forEach((p) => {
-          const points = parsePoints(p.points);
-          points.forEach((pt) => allPoints.push([pt.lat, pt.lng]));
-        });
-
-        polylines.forEach((l) => {
-          const points = parsePoints(l.points);
-          points.forEach((pt) => allPoints.push([pt.lat, pt.lng]));
-        });
-
-        if (allPoints.length > 0) {
-          const bounds = L.latLngBounds(allPoints);
-          map.fitBounds(bounds, { padding: [50, 50] });
-        }
-      }
-    }, [markers, polygons, polylines, center, map]);
-
-    return null;
-  };
 
   return (
     <div style={{ height, width: '100%' }} className="relative z-0 isolate">

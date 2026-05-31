@@ -1,0 +1,78 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import EventDetail from '~/components/events/EventDetail.astro';
+import { Icon } from 'astro-icon/components';
+
+import type { MetaData } from '~/types';
+import {
+  loadAllEvents,
+  getEventBySlug,
+  resolveCountryCode,
+  formatEventDateRange,
+  countryCodeToName,
+} from '~/utils/events';
+import { generateEventJsonLd } from '~/utils/jsonLd';
+
+export async function getStaticPaths() {
+  const allEvents = await loadAllEvents();
+  return allEvents.map((event) => ({
+    params: { slug: event.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const event = await getEventBySlug(slug);
+
+let metadata: MetaData = {};
+let jsonLd: Record<string, unknown> | null = null;
+
+if (event) {
+  const country = resolveCountryCode(event);
+  const countryName = countryCodeToName(country);
+  const dateRange = formatEventDateRange(event.start_time, event.end_time);
+
+  metadata = {
+    title: `${event.name} | MTBO Tävlingskalender`,
+    description: `${event.name} (${dateRange}) — Information, anmälningslänkar, klasser, karta och program för detta MTBO-event (mountainbikeorientering) i ${countryName}.`,
+    openGraph: {
+      type: 'website',
+      images: [{ url: new URL(`/og-images/events/${event.slug}.jpg`, Astro.site).toString() }],
+    },
+  };
+
+  jsonLd = generateEventJsonLd(event);
+}
+---
+
+<Layout metadata={metadata}>
+  {jsonLd && <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+
+  <WidgetWrapper containerClass="max-w-7xl mx-auto pt-4 md:pt-6 lg:pt-8">
+    {/* Back link for detail pages */}
+    <nav class="mb-6">
+      <a
+        href="/events"
+        class="inline-flex items-center gap-1.5 text-sm text-muted dark:text-slate-400 hover:text-primary transition-colors"
+      >
+        <Icon name="tabler:arrow-left" class="w-4 h-4" />
+        Tillbaka till tävlingskalendern
+      </a>
+    </nav>
+
+    {
+      event ? (
+        <EventDetail event={event} />
+      ) : (
+        <div class="text-center py-12">
+          <Icon name="tabler:alert-circle" class="w-12 h-12 mx-auto mb-3 text-gray-300" />
+          <h1 class="text-2xl font-bold mb-2 dark:text-white">Tävlingen hittades inte</h1>
+          <p class="text-muted dark:text-slate-400 mb-4">Kontrollera adressen och försök igen.</p>
+          <a href="/events" class="text-primary hover:underline">
+            Tillbaka till tävlingskalendern
+          </a>
+        </div>
+      )
+    }
+  </WidgetWrapper>
+</Layout>

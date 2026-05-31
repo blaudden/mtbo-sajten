@@ -177,7 +177,8 @@ const getUI = () => {
     tokens: {},
   };
 
-  return merge({}, _default, config?.ui ?? {});
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return merge({}, _default, config?.ui ?? {}) as any;
 };
 
 const getAnalytics = () => {
