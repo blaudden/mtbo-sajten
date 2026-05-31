@@ -38,6 +38,7 @@ interface LeafletMapProps {
   center?: { lat: number; lng: number } | string;
   zoom?: number;
   height?: string;
+  minZoom?: number;
 }
 
 // Function to create custom colored marker icons
@@ -148,7 +149,7 @@ const MapController: FC<{
 
       if (allPoints.length > 0) {
         const bounds = L.latLngBounds(allPoints);
-        map.fitBounds(bounds, { padding: [50, 50] });
+        map.fitBounds(bounds, { padding: [50, 50], maxZoom: 15 });
       }
     } else {
       map.setView(center, map.getZoom());
@@ -165,6 +166,7 @@ const LeafletMap: FC<LeafletMapProps> = ({
   center,
   zoom = 13,
   height = '400px',
+  minZoom = 5,
 }) => {
   const [parsedMarkers, setParsedMarkers] = useState<MarkerData[]>([]);
   const [parsedPolygons, setParsedPolygons] = useState<PolygonData[]>([]);
@@ -325,6 +327,7 @@ const LeafletMap: FC<LeafletMapProps> = ({
       <MapContainer
         center={mapCenter}
         zoom={zoom}
+        minZoom={minZoom}
         scrollWheelZoom={false}
         style={{ height: '100%', width: '100%', borderRadius: '0.5rem' }}
       >
