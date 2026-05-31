@@ -48,7 +48,7 @@ if (event) {
 ---
 
 <Layout metadata={metadata}>
-  {jsonLd && <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+  {jsonLd && <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd).replace(/</g, '\\u003c')} />}
 
   <WidgetWrapper containerClass="max-w-7xl mx-auto pt-4 md:pt-6 lg:pt-8">
     {/* Back link for detail pages */}

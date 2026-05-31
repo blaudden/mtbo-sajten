@@ -75,11 +75,21 @@ if (metadata?.openGraph?.type === 'article') {
 ---
 
 <!-- Breadcrumb Schema -->
-<script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbList)} />
+<script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbList).replace(/</g, '\\u003c')} />
 
 <!-- WebSite Schema -->{
-  websiteSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+  websiteSchema && (
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(websiteSchema).replace(/</g, '\\u003c')} />
+  )
 }
 
 <!-- BlogPosting Schema -->
-{blogPostingSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(blogPostingSchema)} />}
+{
+  blogPostingSchema && (
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify(blogPostingSchema).replace(/</g, '\\u003c')}
+    />
+  )
+}
