@@ -28,13 +28,7 @@ const postCollection = defineCollection({
   }),
 });
 
-const entryCountSchema = z
-  .object({
-    total: z.number().optional(),
-    current: z.number().optional(),
-  })
-  .nullable()
-  .optional();
+const entryCountSchema = z.record(z.string(), z.number()).nullable().optional();
 
 const fingerprintSchema = z.object({
   type: z.string(),

@@ -39,10 +39,7 @@ export interface ScraperPosition {
   lng: number;
 }
 
-export interface ScraperCounts {
-  total?: number;
-  current?: number;
-}
+export type ScraperCounts = Record<string, number>;
 
 export interface ScraperRace {
   race_number: number;
