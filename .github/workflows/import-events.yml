@@ -17,17 +17,17 @@ jobs:
 
     steps:
       - name: Checkout mtbo-sajten
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Checkout mtbo-scraper
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: blaudden/mtbo-scraper
           path: _scraper
           sparse-checkout: data/events
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version-file: 'package.json'
 
