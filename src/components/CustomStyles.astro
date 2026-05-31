@@ -1,45 +1,38 @@
 ---
-import { UI } from '~/utils/config';
 // @ts-expect-error missing font types
 import '@fontsource-variable/inter';
 
-const defaultColors = UI?.tokens?.default?.colors || {};
-const darkColors = UI?.tokens?.dark?.colors || {};
+// 'DM Sans'
+// Nunito
+// Dosis
+// Outfit
+// Roboto
+// Literata
+// 'IBM Plex Sans'
+// Karla
+// Poppins
+// 'Fira Sans'
+// 'Libre Franklin'
+// Inconsolata
+// Raleway
+// Oswald
+// 'Space Grotesk'
+// Urbanist
 ---
 
-<style
-  is:inline
-  is:global
-  define:vars={{
-    primary: defaultColors.primary || 'rgb(0 102 204)',
-    secondary: defaultColors.secondary || 'rgb(30 58 138)',
-    accent: defaultColors.accent || 'rgb(109 40 217)',
-    textHeading: defaultColors.heading || 'rgb(0 0 0)',
-    textDefault: defaultColors.default || 'rgb(16 16 16)',
-    textMuted: defaultColors.muted || 'rgb(40 40 40)',
-    bgPage: defaultColors.bgPage || 'rgb(255 255 255)',
-
-    darkPrimary: darkColors.primary || 'rgb(96 165 250)',
-    darkSecondary: darkColors.secondary || 'rgb(30 58 138)',
-    darkAccent: darkColors.accent || 'rgb(135 77 226)',
-    darkTextHeading: darkColors.heading || 'rgb(247 248 248)',
-    darkTextDefault: darkColors.default || 'rgb(247 248 248)',
-    darkTextMuted: darkColors.muted || 'rgb(200 188 208)',
-    darkBgPage: darkColors.bgPage || 'rgb(3 6 32)',
-  }}
->
+<style is:inline is:global>
   :root {
     --aw-font-sans: 'Inter Variable';
     --aw-font-serif: var(--aw-font-sans);
     --aw-font-heading: var(--aw-font-sans);
-    --aw-color-primary: var(--primary);
-    --aw-color-secondary: var(--secondary);
-    --aw-color-accent: var(--accent);
-    --aw-color-text-heading: var(--textHeading);
-    --aw-color-text-default: var(--textDefault);
-    --aw-color-text-muted: var(--textMuted);
-    --aw-color-bg-page: var(--bgPage);
-    --aw-color-bg-page-dark: var(--darkBgPage);
+    --aw-color-primary: rgb(0 106 166); /* #006aa6 */
+    --aw-color-secondary: rgb(30 58 138);
+    --aw-color-accent: rgb(234 179 80); /* #eab350 */
+    --aw-color-text-heading: rgb(0 0 0);
+    --aw-color-text-default: rgb(16 16 16);
+    --aw-color-text-muted: rgb(16 16 16 / 66%);
+    --aw-color-bg-page: rgb(255 255 255);
+    --aw-color-bg-page-dark: rgb(3 6 32);
 
     ::selection {
       background-color: lavender;
@@ -50,12 +43,12 @@ const darkColors = UI?.tokens?.dark?.colors || {};
     --aw-font-sans: 'Inter Variable';
     --aw-font-serif: var(--aw-font-sans);
     --aw-font-heading: var(--aw-font-sans);
-    --aw-color-primary: var(--darkPrimary);
-    --aw-color-secondary: var(--darkSecondary);
-    --aw-color-accent: var(--darkAccent);
-    --aw-color-text-heading: var(--darkTextHeading);
-    --aw-color-text-default: var(--darkTextDefault);
-    --aw-color-text-muted: var(--darkTextMuted);
+    --aw-color-primary: rgb(0 106 166); /* #006aa6 */
+    --aw-color-secondary: rgb(30 58 138);
+    --aw-color-accent: rgb(234 179 80); /* #eab350 */
+    --aw-color-text-heading: rgb(0 0 0);
+    --aw-color-text-default: rgb(229 236 246);
+    --aw-color-text-muted: rgb(229 236 246 / 66%);
     --aw-color-bg-page: var(--aw-color-bg-page-dark);
 
     ::selection {

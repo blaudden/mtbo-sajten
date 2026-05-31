@@ -81,6 +81,36 @@ const createColoredIcon = (color: MarkerColor = 'blue', iconType: MarkerIconType
   });
 };
 
+// Helper to parse points from string or array (hoisted)
+function parsePoints(points: { lat: number; lng: number }[] | string): { lat: number; lng: number }[] {
+  if (Array.isArray(points)) {
+    return points;
+  }
+  if (typeof points === 'string') {
+    try {
+      // Try parsing as JSON first
+      if (points.trim().startsWith('[')) {
+        return JSON.parse(points);
+      }
+      // Parse as "lat,lng; lat,lng" string
+      return points
+        .split(';')
+        .map((p) => {
+          const [lat, lng] = p.trim().split(',').map(Number);
+          if (!isNaN(lat) && !isNaN(lng)) {
+            return { lat, lng };
+          }
+          return null;
+        })
+        .filter((p): p is { lat: number; lng: number } => p !== null);
+    } catch (e) {
+      console.error('Failed to parse points:', points, e);
+      return [];
+    }
+  }
+  return [];
+}
+
 // Controller component that uses useMap hook
 const MapController: FC<{
   markers: MarkerData[];
@@ -89,6 +119,14 @@ const MapController: FC<{
   center?: [number, number] | null;
 }> = ({ markers, polygons, polylines, center }) => {
   const map = useMap();
+
+  // Create a stable key of the actual coordinates to avoid resetting when the references change but contents are identical.
+  const geometryKey = JSON.stringify({
+    markers: markers.map((m) => ({ lat: m.lat, lng: m.lng })),
+    polygons: polygons.map((p) => p.points),
+    polylines: polylines.map((l) => l.points),
+    center,
+  });
 
   useEffect(() => {
     if (!center) {
@@ -112,8 +150,10 @@ const MapController: FC<{
         const bounds = L.latLngBounds(allPoints);
         map.fitBounds(bounds, { padding: [50, 50] });
       }
+    } else {
+      map.setView(center, map.getZoom());
     }
-  }, [markers, polygons, polylines, center, map]);
+  }, [geometryKey, map]);
 
   return null;
 };
@@ -147,6 +187,14 @@ const LeafletMap: FC<LeafletMapProps> = ({
       });
     }
   }, []);
+
+  // Stable key of the inputs to prevent processing state updates on every parent render
+  const inputsKey = JSON.stringify({
+    markers,
+    polygons,
+    polylines,
+    center,
+  });
 
   useEffect(() => {
     // Process markers, polygons, polylines regardless of map modules loaded yet
@@ -253,7 +301,7 @@ const LeafletMap: FC<LeafletMapProps> = ({
         setMapCenter(DEFAULT_MAP_CENTER);
       }
     }
-  }, [markers, polygons, polylines, center]);
+  }, [inputsKey]);
 
   if (!isMounted || !mapCenter) {
     return (
@@ -387,34 +435,6 @@ const getColorHex = (color?: MarkerColor) => {
   return colorMap[color || 'blue'] || colorMap.blue;
 };
 
-// Helper to parse points from string or array
-const parsePoints = (points: { lat: number; lng: number }[] | string): { lat: number; lng: number }[] => {
-  if (Array.isArray(points)) {
-    return points;
-  }
-  if (typeof points === 'string') {
-    try {
-      // Try parsing as JSON first
-      if (points.trim().startsWith('[')) {
-        return JSON.parse(points);
-      }
-      // Parse as "lat,lng; lat,lng" string
-      return points
-        .split(';')
-        .map((p) => {
-          const [lat, lng] = p.trim().split(',').map(Number);
-          if (!isNaN(lat) && !isNaN(lng)) {
-            return { lat, lng };
-          }
-          return null;
-        })
-        .filter((p): p is { lat: number; lng: number } => p !== null);
-    } catch (e) {
-      console.error('Failed to parse points:', points, e);
-      return [];
-    }
-  }
-  return [];
-};
+// parsePoints helper moved to the top of the file
 
 export default LeafletMapWrapper;
