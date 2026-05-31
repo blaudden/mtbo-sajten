@@ -113,11 +113,11 @@ const isFuture = event.start_time >= todayStr;
 
             {totalParticipants > 0 && (
               <div class="flex items-start gap-2.5 p-3 bg-orange-50/50 dark:bg-orange-950/10 border border-orange-100 dark:border-orange-900/30 rounded-xl text-xs text-orange-800 dark:text-orange-300 font-medium">
-                <Icon name="tabler:trending-up" class="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0 animate-pulse" />
+                <Icon name="tabler:users" class="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
                 <div>
                   {isFuture ? (
                     <span>
-                      <strong>{totalParticipants}</strong> deltagare är anmälda just nu. Trenden pekar uppåt!
+                      <strong>{totalParticipants}</strong> deltagare är anmälda.
                     </span>
                   ) : (
                     <span>
