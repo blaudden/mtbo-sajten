@@ -8717,10 +8717,22 @@
       ],
       "documents": [
         {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58115/441b72ee-3a57-45a1-8d64-b421b5026bd1/PM.Pdf",
+          "published_time": "2026-05-31"
+        },
+        {
           "type": "Invitation",
           "title": "Huvudinbjudan MTBO Smålandskusten",
           "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58115/a6f10714-5831-409a-888b-24920356889e/Huvudinbjudan-MTBO-Sm-landskusten.pdf",
           "published_time": "2026-03-16"
+        },
+        {
+          "type": "Other",
+          "title": "Poängställning MTBO Smålandskusten",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58115/2bddf031-4e0b-4f78-acbf-8373402f632a/Poängställning MTBO Smålandskusten.Pdf",
+          "published_time": "2026-05-31"
         }
       ],
       "information": "Detta är en av flera närtävlingar, Smålandskusten, se Huvudinbjudan för de andra datumen",
@@ -8777,7 +8789,14 @@
               ]
             }
           ],
-          "urls": [],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Entry?eventId=58115",
+              "title": "Enter",
+              "last_updated_at": "2026-06-01T07:05:49.924382+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
@@ -9569,6 +9588,12 @@
           "title": "Inbjudan",
           "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58162/6824d7b1-b281-44e1-97dc-73820a8bfc3a/Inbjudan.Pdf",
           "published_time": "2026-05-29"
+        },
+        {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58162/5d3b205b-75ef-4edf-b829-405baf3d15ab/PM.Pdf",
+          "published_time": "2026-05-31"
         }
       ],
       "information": null,
@@ -9578,7 +9603,7 @@
         {
           "race_number": 1,
           "name": "Dalaserien MTBO #3",
-          "datetimez": "2026-06-03T17:00:00+02:00",
+          "datetimez": "2026-06-03T17:30:00+02:00",
           "discipline": "Middle",
           "night_or_day": "day",
           "position": {
@@ -9814,17 +9839,17 @@
             "H17-44": 9,
             "H-16": 1,
             "D45-": 6,
-            "H45-": 11,
+            "H45-": 10,
             "Öppen kort": 4,
-            "Öppen mellan": 1
+            "Öppen mellan": 2
           },
           "result_counts": {
             "H17-44": 9,
             "H-16": 1,
             "D45-": 6,
-            "H45-": 11,
+            "H45-": 10,
             "Öppen kort": 4,
-            "Öppen mellan": 1
+            "Öppen mellan": 2
           },
           "fingerprints": [
             "09518f6f711fe3491ab59e2cbfcc1d0eefb3666e24686f11492c07562c67b5cd",
@@ -11387,7 +11412,7 @@
       "officials": [
         {
           "role": "Contact email",
-          "name": "enc:CxsQHEoBBhxPAwQADDQFAkwaD1wCHwg="
+          "name": "enc:CxsQHEoBBhxPAxEXCxUML0oeAhsNXgYdAA=="
         }
       ],
       "classes": [
@@ -11417,7 +11442,7 @@
           "published_time": "2026-04-02"
         }
       ],
-      "information": "Samling grusgropen 200 meter söder om Mjäla 143 på väg 893 mellan Gärdal och Mjäla.",
+      "information": "Samling grusgropen 200 meter söder om Mjäla 143 på väg 893 mellan Gärdal och Mjäla.\nAnmäl i förväg via Eventor, Anmälan på plats i mån av kartor.\nNågra kartställ finns för utlåning.\nStämpling med SporIdent. Air kommer att vara aktiverat.\nFri start mellan 18.00 och 19.00.\nTre banor\n. Lång ca 11 km (lite extra lång då det är några längre vägvalssträckor längs väg)\n- Mellan ca 6 km\n. Kort ca 3 km\nNågra otydliga stigar och svårupptäckta korsningar är snitslade med vit snitsel. Själva stigarnas framkomlighet är dock inte sämre utan stämmer med kartan.\nDet är endast tillåtet att färdas längs karttecken som enligt normen är tillåtna, dvs stig, väg, bruna ytor, oranga ytor och linjer, samt sandig mark.\nKarttecknet för sandig mark (svartprickigt på ljusgult) förekommer endast på lång och mellan. Detta karttecken är alltså enligt kartnormen tillåtet att cykla på, men kan vara långsamt, vilket kan vara bra att veta på vissa stäckor.\nLånga banan går längs en större väg. Var försiktig i trafiken, Trafikreglerna gäller som vanligt.",
       "region": "Ångermanland",
       "punching_system": "Sportident",
       "races": [
@@ -11471,7 +11496,20 @@
               ]
             }
           ],
-          "urls": [],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Entry?eventId=58595",
+              "title": "Enter",
+              "last_updated_at": "2026-06-01T07:05:49.924289+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=58595&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-06-01T07:05:49.924289+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
@@ -12914,12 +12952,6 @@
           },
           "areas": [],
           "urls": [
-            {
-              "type": "EntryList",
-              "url": "/Entry?eventId=59028",
-              "title": "Enter",
-              "last_updated_at": "2026-05-10T19:32:03.787076+00:00"
-            },
             {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=59028&groupBy=EventClass",
