@@ -1,27 +1,27 @@
 {
   "schema_version": "2.0",
-  "last_scraped_at": "2026-06-01T07:05:49.924099+00:00",
+  "last_scraped_at": "2026-06-03T04:34:25.702028+00:00",
   "data_root": "data/events",
   "partitions": {
     "2010": {
       "path": "data/events/2010/events.json",
       "count": 39,
-      "last_updated_at": "2026-03-14T06:47:47.382746+00:00"
+      "last_updated_at": "2026-06-01T12:10:25.933363+00:00"
     },
     "2011": {
       "path": "data/events/2011/events.json",
       "count": 69,
-      "last_updated_at": "2026-03-14T06:47:47.382746+00:00"
+      "last_updated_at": "2026-06-01T12:10:48.056814+00:00"
     },
     "2025": {
       "path": "data/events/2025/events.json",
       "count": 139,
-      "last_updated_at": "2026-03-14T06:47:47.382746+00:00"
+      "last_updated_at": "2026-06-01T12:15:29.812178+00:00"
     },
     "2026": {
       "path": "data/events/2026/events.json",
-      "count": 87,
-      "last_updated_at": "2026-06-01T07:05:49.924099+00:00"
+      "count": 88,
+      "last_updated_at": "2026-06-03T04:33:24.649024+00:00"
     },
     "2027": {
       "path": "data/events/2027/events.json",
@@ -31,22 +31,22 @@
     "2012": {
       "path": "data/events/2012/events.json",
       "count": 70,
-      "last_updated_at": "2026-03-14T06:47:47.382746+00:00"
+      "last_updated_at": "2026-06-01T12:10:54.689344+00:00"
     },
     "2013": {
       "path": "data/events/2013/events.json",
       "count": 75,
-      "last_updated_at": "2026-03-14T06:47:47.382746+00:00"
+      "last_updated_at": "2026-06-01T12:11:22.017136+00:00"
     },
     "2014": {
       "path": "data/events/2014/events.json",
       "count": 85,
-      "last_updated_at": "2026-03-14T06:47:47.382746+00:00"
+      "last_updated_at": "2026-06-01T12:12:02.384130+00:00"
     },
     "2015": {
       "path": "data/events/2015/events.json",
       "count": 84,
-      "last_updated_at": "2026-03-14T06:47:47.382746+00:00"
+      "last_updated_at": "2026-06-01T12:12:36.840011+00:00"
     },
     "2016": {
       "path": "data/events/2016/events.json",
@@ -56,7 +56,7 @@
     "2017": {
       "path": "data/events/2017/events.json",
       "count": 123,
-      "last_updated_at": "2026-03-14T06:47:47.382746+00:00"
+      "last_updated_at": "2026-06-01T12:13:25.246166+00:00"
     },
     "2018": {
       "path": "data/events/2018/events.json",
@@ -66,32 +66,32 @@
     "2019": {
       "path": "data/events/2019/events.json",
       "count": 122,
-      "last_updated_at": "2026-03-14T06:47:47.382746+00:00"
+      "last_updated_at": "2026-06-01T12:14:14.206549+00:00"
     },
     "2020": {
       "path": "data/events/2020/events.json",
       "count": 145,
-      "last_updated_at": "2026-03-14T06:47:47.382746+00:00"
+      "last_updated_at": "2026-06-01T12:14:22.683857+00:00"
     },
     "2021": {
       "path": "data/events/2021/events.json",
       "count": 113,
-      "last_updated_at": "2026-03-14T06:47:47.382746+00:00"
+      "last_updated_at": "2026-06-01T12:14:31.370034+00:00"
     },
     "2022": {
       "path": "data/events/2022/events.json",
       "count": 123,
-      "last_updated_at": "2026-03-14T06:47:47.382746+00:00"
+      "last_updated_at": "2026-06-01T12:14:42.146906+00:00"
     },
     "2023": {
       "path": "data/events/2023/events.json",
       "count": 110,
-      "last_updated_at": "2026-03-14T06:47:47.382746+00:00"
+      "last_updated_at": "2026-06-01T12:14:51.074190+00:00"
     },
     "2024": {
       "path": "data/events/2024/events.json",
       "count": 98,
-      "last_updated_at": "2026-03-14T06:47:47.382746+00:00"
+      "last_updated_at": "2026-06-01T12:15:00.269762+00:00"
     }
   },
   "sources": {
@@ -100,7 +100,7 @@
       "name": "IOF Eventor",
       "url": "https://eventor.orienteering.org",
       "count": 421,
-      "last_updated_at": "2026-05-31T16:36:24.774433+00:00"
+      "last_updated_at": "2026-06-01T12:15:29.812178+00:00"
     },
     "MAN": {
       "country_code": "MAN",
@@ -113,15 +113,15 @@
       "country_code": "SWE",
       "name": "Swedish Eventor",
       "url": "https://eventor.orientering.se",
-      "count": 1231,
-      "last_updated_at": "2026-06-01T07:05:49.924099+00:00"
+      "count": 1232,
+      "last_updated_at": "2026-06-03T04:33:24.649024+00:00"
     },
     "NOR": {
       "country_code": "NOR",
       "name": "Norwegian Eventor",
       "url": "https://eventor.orientering.no",
       "count": 79,
-      "last_updated_at": "2026-04-12T19:43:08.816284+00:00"
+      "last_updated_at": "2026-06-01T12:15:29.812178+00:00"
     }
   }
 }

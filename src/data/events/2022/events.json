@@ -44,7 +44,11 @@
           "country_code": "SWE"
         },
         {
-          "name": "OK Kare\nSaterbygdens OK",
+          "name": "OK Kare",
+          "country_code": "SWE"
+        },
+        {
+          "name": "Saterbygdens OK",
           "country_code": "SWE"
         }
       ],
@@ -639,7 +643,7 @@
           "race_number": 5,
           "name": "Mass start",
           "datetimez": "2022-07-20T10:00:00+02:00",
-          "discipline": "Other",
+          "discipline": "Mass start",
           "night_or_day": null,
           "position": null,
           "areas": [],
@@ -813,7 +817,11 @@
           "country_code": "SWE"
         },
         {
-          "name": "OK Kare\nSaterbygdens OK",
+          "name": "OK Kare",
+          "country_code": "SWE"
+        },
+        {
+          "name": "Saterbygdens OK",
           "country_code": "SWE"
         }
       ],
@@ -1028,7 +1036,7 @@
           "race_number": 2,
           "name": "Relay",
           "datetimez": "2022-07-16T00:00:00+02:00",
-          "discipline": "Other",
+          "discipline": "Relay",
           "night_or_day": null,
           "position": null,
           "areas": [],
@@ -1261,7 +1269,7 @@
           "race_number": 5,
           "name": "Mass start",
           "datetimez": "2022-07-20T00:00:00+02:00",
-          "discipline": "Other",
+          "discipline": "Mass start",
           "night_or_day": null,
           "position": null,
           "areas": [],
@@ -2042,7 +2050,7 @@
           "race_number": 3,
           "name": "Relay",
           "datetimez": "2022-09-18T00:00:00+00:00",
-          "discipline": "Other",
+          "discipline": "Relay",
           "night_or_day": null,
           "position": null,
           "areas": [],
@@ -3691,7 +3699,7 @@
           "race_number": 1,
           "name": "Mass start",
           "datetimez": "2022-09-15T00:00:00+00:00",
-          "discipline": "Other",
+          "discipline": "Mass start",
           "night_or_day": "day",
           "position": {
             "lat": 43.2476183659528,
@@ -6698,13 +6706,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/80110/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/36737/1b5d21c2-cfa0-44a5-8e5c-86bec7243db0/Inbjudan.pdf",
           "published_time": "2022-05-07"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/82820/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/36737/fd08015b-d849-4f97-aab4-c4645702bd11/PM.pdf",
           "published_time": "2022-07-18"
         }
       ],
@@ -6880,13 +6888,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/80111/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/36738/727de1ae-9e05-4601-94a3-f19df50cc98b/Inbjudan.pdf",
           "published_time": "2022-05-07"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/82822/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/36738/f88d41e8-bfe2-4233-9db6-16e5b7f06c55/PM.pdf",
           "published_time": "2022-07-18"
         }
       ],
@@ -7069,7 +7077,7 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/80112/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/36740/445cf57c-15f7-49bf-90f4-3adc755de611/Inbjudan.pdf",
           "published_time": "2022-05-07"
         }
       ],
@@ -7187,13 +7195,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/81174/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/36822/895a59cf-94e4-4d23-b25b-7d6bff93c47a/Inbjudan.pdf",
           "published_time": "2022-05-29"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/81933/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/36822/40fcfb8d-8609-4383-9a7c-54cd7c2bcf50/PM.pdf",
           "published_time": "2022-06-16"
         }
       ],
@@ -7420,13 +7428,13 @@
         {
           "type": "Other",
           "title": "O-Ringen Uppsala 2022 MTBO Model event and camping map",
-          "url": "/Documents/Event/72216/O-Ringen-Uppsala-2022-MTBO-Model-event-and-camping-map",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/37349/8a95832a-536b-49b8-9d7d-9a63ebe2fe8a/O-Ringen Uppsala 2022 MTBO Model event and camping map.pdf",
           "published_time": "2022-05-26"
         },
         {
           "type": "Bulletin",
           "title": "Bulletin # 2.3 - Guide to MTBO at O-Ringen Uppsala 2022",
-          "url": "/Documents/Event/72219/Bulletin---2.3---Guide-to-MTBO-at-O-Ringen-Uppsala-2022",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/37349/78e07ac4-dc2f-44bb-afda-75de85ee41b3/Bulletin %23 2.3 - Guide to MTBO at O-Ringen Uppsala 2022.pdf",
           "published_time": "2021-10-20"
         },
         {
@@ -10413,43 +10421,43 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/77585/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38309/1492720c-6457-437d-ac51-b3041eeb4b6c/Inbjudan.pdf",
           "published_time": "2022-02-16"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/82710/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38309/9a26de90-8132-4c7b-94e2-46796ce5a617/PM.pdf",
           "published_time": "2022-07-12"
         },
         {
           "type": "Invitation",
           "title": "Invitation",
-          "url": "/Documents/Event/77586/Invitation",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38309/df94db5b-bdfb-4558-8840-e5637a373843/Invitation.pdf",
           "published_time": "2022-07-07"
         },
         {
           "type": "Other",
           "title": "Menu",
-          "url": "/Documents/Event/82032/Menu",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38309/cc30f5ab-23e9-4eaa-9ed2-bf2fbff527b1/Menu.pdf",
           "published_time": "2022-06-18"
         },
         {
           "type": "Other",
           "title": "Banlängder",
-          "url": "/Documents/Event/82591/Banl-ngder",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38309/0e04e6c2-982f-4e87-a930-5aed6621daf8/Banlängder.pdf",
           "published_time": "2022-07-07"
         },
         {
           "type": "Other",
           "title": "Courses",
-          "url": "/Documents/Event/82592/Courses",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38309/f265d304-8fbf-41a2-b228-8f00c89d5a9f/Courses.pdf",
           "published_time": "2022-07-07"
         },
         {
           "type": "Other",
           "title": "Race Information",
-          "url": "/Documents/Event/82711/Race-Information",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38309/fbbc4408-e1b0-4be1-a406-6fbf6c91b000/Race Information.pdf",
           "published_time": "2022-07-12"
         }
       ],
@@ -10816,43 +10824,43 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/77587/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38310/1d9378ca-d182-46ee-8402-1f7ba9c2d371/Inbjudan.pdf",
           "published_time": "2022-02-16"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/82712/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38310/8146b24f-c3c3-40ff-a493-f2ddb07fadaf/PM.pdf",
           "published_time": "2022-07-12"
         },
         {
           "type": "Invitation",
           "title": "Invitation",
-          "url": "/Documents/Event/77588/Invitation",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38310/7dca45e5-4e3b-4e94-8bbf-9f13ddf6321f/Invitation.pdf",
           "published_time": "2022-02-16"
         },
         {
           "type": "Other",
           "title": "Menu",
-          "url": "/Documents/Event/82033/Menu",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38310/b11ffc60-fc11-4540-ad1f-74b264854f50/Menu.pdf",
           "published_time": "2022-06-18"
         },
         {
           "type": "Other",
           "title": "Banlängder",
-          "url": "/Documents/Event/82593/Banl-ngder",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38310/62322b24-d359-4501-950a-21aa7c1733ea/Banlängder.pdf",
           "published_time": "2022-07-07"
         },
         {
           "type": "Other",
           "title": "Courses",
-          "url": "/Documents/Event/82594/Courses",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38310/025d2bd8-87e7-48bb-88c9-451bfeba9b2a/Courses.pdf",
           "published_time": "2022-07-07"
         },
         {
           "type": "Other",
           "title": "Race Information",
-          "url": "/Documents/Event/82713/Race-Information",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38310/e58388d9-a713-464e-ba14-2454f834c7c1/Race Information.pdf",
           "published_time": "2022-07-12"
         }
       ],
@@ -11242,55 +11250,55 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/77589/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38311/78ddf99e-2f32-4b62-86ec-c4c59ffd5269/Inbjudan.pdf",
           "published_time": "2022-02-16"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/82714/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38311/a96b2d83-c772-4b3c-87fa-5b71ea9a2163/PM.pdf",
           "published_time": "2022-07-12"
         },
         {
           "type": "Invitation",
           "title": "Invitation",
-          "url": "/Documents/Event/77590/Invitation",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38311/9109ba0b-4384-4f7e-83d9-9ab90769869b/Invitation.pdf",
           "published_time": "2022-02-16"
         },
         {
           "type": "Other",
           "title": "Menu",
-          "url": "/Documents/Event/82034/Menu",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38311/9555a98d-c141-4c93-bb50-11d19efab5bf/Menu.pdf",
           "published_time": "2022-06-18"
         },
         {
           "type": "Other",
           "title": "Banlängder",
-          "url": "/Documents/Event/82595/Banl-ngder",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38311/07e176a9-f974-4b04-99af-e5edb780e65d/Banlängder.pdf",
           "published_time": "2022-07-07"
         },
         {
           "type": "Other",
           "title": "Courses",
-          "url": "/Documents/Event/82596/Courses",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38311/9cdb8006-e672-47ed-af0c-5b55a0c9c43d/Courses.pdf",
           "published_time": "2022-07-07"
         },
         {
           "type": "Other",
           "title": "Race Information",
-          "url": "/Documents/Event/82715/Race-Information",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38311/3219207c-13e2-4ef7-8ed5-f901fcf765c6/Race Information.pdf",
           "published_time": "2022-07-12"
         },
         {
           "type": "StartList",
           "title": "Start procedure for mass start",
-          "url": "/Documents/Event/82851/Start-procedure-for-mass-start",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38311/203b0e62-8b62-4cf0-8411-589c85192c18/Start procedure for mass start.pdf",
           "published_time": "2022-07-20"
         },
         {
           "type": "StartList",
           "title": "Startprocedur masstart",
-          "url": "/Documents/Event/82852/Startprocedur-masstart",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38311/18afb113-8355-4ca8-b7b6-efd1aa68ee0e/Startprocedur masstart.pdf",
           "published_time": "2022-07-20"
         }
       ],
@@ -11653,43 +11661,43 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/74960/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38349/80285d43-50b5-44ff-95e8-ecc3aa9a2045/Inbjudan.pdf",
           "published_time": "2022-02-14"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/82687/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38349/fb36a8bd-5c9a-4133-8e2a-80479d15ce65/PM.pdf",
           "published_time": "2022-07-12"
         },
         {
           "type": "Invitation",
           "title": "Invitation",
-          "url": "/Documents/Event/74961/Invitation",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38349/167ff197-71a9-487e-a8a7-7fddf7ce540d/Invitation.pdf",
           "published_time": "2022-02-14"
         },
         {
           "type": "Other",
           "title": "Banlängder",
-          "url": "/Documents/Event/80569/Banl-ngder",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38349/ecd01038-d81c-4599-9d70-17fb787585d5/Banlängder.pdf",
           "published_time": "2022-05-17"
         },
         {
           "type": "Other",
           "title": "Courses",
-          "url": "/Documents/Event/80570/Courses",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38349/51da9f7a-7e94-4e84-958c-89cb375800d6/Courses.pdf",
           "published_time": "2022-05-17"
         },
         {
           "type": "Other",
           "title": "Menu",
-          "url": "/Documents/Event/81926/Menu",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38349/003c778e-380f-4236-a2aa-935521f10e39/Menu.pdf",
           "published_time": "2022-06-15"
         },
         {
           "type": "Other",
           "title": "Race Information",
-          "url": "/Documents/Event/82688/Race-Information",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38349/e412832f-b1ea-42b0-94c4-326a067715dd/Race Information.pdf",
           "published_time": "2022-07-12"
         }
       ],
@@ -12302,43 +12310,43 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/74962/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38350/c9a9379d-7475-4bf3-b5cc-21b3c35be0cb/Inbjudan.pdf",
           "published_time": "2022-02-14"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/82689/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38350/d42bf37c-7fc3-458b-bba1-66435e867069/PM.pdf",
           "published_time": "2022-07-12"
         },
         {
           "type": "Invitation",
           "title": "Invitation",
-          "url": "/Documents/Event/74964/Invitation",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38350/81bdfe48-e287-411c-9784-812f7fb5c1d5/Invitation.pdf",
           "published_time": "2022-02-14"
         },
         {
           "type": "Other",
           "title": "Banlängder",
-          "url": "/Documents/Event/80571/Banl-ngder",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38350/a503258e-7f07-4aca-aa7b-3dcf7c6cdc5a/Banlängder.pdf",
           "published_time": "2022-05-17"
         },
         {
           "type": "Other",
           "title": "Courses",
-          "url": "/Documents/Event/80572/Courses",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38350/e2ccf18e-a1f6-416b-82f3-37dcbb98184b/Courses.pdf",
           "published_time": "2022-05-17"
         },
         {
           "type": "Other",
           "title": "Menu",
-          "url": "/Documents/Event/81925/Menu",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38350/6bec5591-f8c6-4f5f-bfeb-1b624c2bb8a7/Menu.pdf",
           "published_time": "2022-06-15"
         },
         {
           "type": "Other",
           "title": "Race Information",
-          "url": "/Documents/Event/82690/Race-Information",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38350/ae36e329-c120-4eca-8bd8-fb683e0c637a/Race Information.pdf",
           "published_time": "2022-07-12"
         }
       ],
@@ -12928,31 +12936,31 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/78306/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38410/164726e8-d167-4a04-8179-904df4c28a68/Inbjudan.pdf",
           "published_time": "2022-05-23"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/80883/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38410/0ad0c3ab-42b5-41d5-bf47-81f7b5499b8e/PM.pdf",
           "published_time": "2022-05-27"
         },
         {
           "type": "Other",
           "title": "SM Bankett (OBS! anmälan via Eventor tilläggstjänster på lördagens tävling)",
-          "url": "/Documents/Event/79313/SM-Bankett-(OBS!-anm-lan-via-Eventor-till-ggstj-nster-p--l-rdagens-t-vling)",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38410/5ea3e97a-e913-457f-b0c9-b6de87dd06e8/SM Bankett %28OBS%21 anmälan via Eventor tilläggstjänster på lördagens tävling%29.pdf",
           "published_time": "2022-04-20"
         },
         {
           "type": "Other",
           "title": "Memo_overall_rules_ENG",
-          "url": "/Documents/Event/80990/Memo_overall_rules_ENG",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38410/8b00868d-4db3-4fe4-a620-277f377e00a1/Memo_overall_rules_ENG.pdf",
           "published_time": "2022-05-26"
         },
         {
           "type": "Bulletin",
           "title": "PM priser",
-          "url": "/Documents/Event/81053/PM-priser",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38410/cabc2c19-594e-48a2-a50d-b8599c125444/PM priser.pdf",
           "published_time": "2022-05-27"
         },
         {
@@ -12970,7 +12978,7 @@
         {
           "type": "ResultList",
           "title": "SM resultat",
-          "url": "/Documents/Event/81256/SM-resultat",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38410/28440ff2-6e48-49f1-beae-01fa725396cf/SM resultat.pdf",
           "published_time": "2022-05-31"
         }
       ],
@@ -13555,31 +13563,31 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/78307/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38411/27b1a203-859d-47a4-a751-31d1f04005ab/Inbjudan.pdf",
           "published_time": "2022-05-23"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/80884/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38411/214570c2-528e-46f9-9e0f-4c15481591ca/PM.pdf",
           "published_time": "2022-05-27"
         },
         {
           "type": "Other",
           "title": "SM bankett (anmäl på tilläggstjänster)",
-          "url": "/Documents/Event/79314/SM-bankett-(anm-l-p--till-ggstj-nster)",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38411/ef6a7bcf-3e69-47fb-ac1f-c99087f6ebac/SM bankett %28anmäl på tilläggstjänster%29.pdf",
           "published_time": "2022-04-20"
         },
         {
           "type": "Other",
           "title": "Memo_overall_rules_ENG",
-          "url": "/Documents/Event/80991/Memo_overall_rules_ENG",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38411/e37c562f-b324-4297-8775-c3c9803478c5/Memo_overall_rules_ENG.pdf",
           "published_time": "2022-05-26"
         },
         {
           "type": "Bulletin",
           "title": "PM priser",
-          "url": "/Documents/Event/81054/PM-priser",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38411/fc1490a2-053a-433f-a1a5-651b03d7ba9f/PM priser.pdf",
           "published_time": "2022-05-27"
         },
         {
@@ -13597,7 +13605,7 @@
         {
           "type": "ResultList",
           "title": "SM resultat",
-          "url": "/Documents/Event/81258/SM-resultat",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38411/b52d3a1c-4e3f-4a1b-b653-9540b09ab8dc/SM resultat.pdf",
           "published_time": "2022-05-31"
         }
       ],
@@ -14239,37 +14247,37 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/78308/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38413/007471b6-1039-4caf-93e9-a43d52a2738b/Inbjudan.pdf",
           "published_time": "2022-05-23"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/80885/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38413/aa74beb1-ee0f-417e-bf82-4e92e7cb979b/PM.pdf",
           "published_time": "2022-05-27"
         },
         {
           "type": "Other",
           "title": "SM bankett/middag lördag kväll anmälan via eventor för lördagens tävling (tilläggstjänster)",
-          "url": "/Documents/Event/79315/SM-bankett-middag-l-rdag-kv-ll-anm-lan-via-eventor-f-r-l-rdagens-t-vling-(till-ggstj-nster)",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38413/2f54ad14-96c5-47af-8b76-87b65fcac368/SM bankett/middag lördag kväll anmälan via eventor för lördagens tävling %28tilläggstjänster%29.pdf",
           "published_time": "2022-04-20"
         },
         {
           "type": "Other",
           "title": "Memo_overall_rules_ENG",
-          "url": "/Documents/Event/80992/Memo_overall_rules_ENG",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38413/97ee8695-ba76-43a0-81aa-24b0b86241a1/Memo_overall_rules_ENG.pdf",
           "published_time": "2022-05-26"
         },
         {
           "type": "Bulletin",
           "title": "Tilläggs-PM Medeldistans",
-          "url": "/Documents/Event/81037/Till-ggs-PM-Medeldistans",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38413/411260b3-8f8b-4122-82f4-ccfa765a6431/Tilläggs-PM Medeldistans.pdf",
           "published_time": "2022-05-27"
         },
         {
           "type": "Bulletin",
           "title": "PM priser",
-          "url": "/Documents/Event/81055/PM-priser",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38413/d82d5d07-5b4f-4216-b837-a95f0cff2451/PM priser.pdf",
           "published_time": "2022-05-27"
         },
         {
@@ -14287,7 +14295,7 @@
         {
           "type": "ResultList",
           "title": "SM resultat",
-          "url": "/Documents/Event/81259/SM-resultat",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38413/b96461e6-0ad4-45bd-a5bf-921e66434ebf/SM resultat.pdf",
           "published_time": "2022-05-31"
         }
       ],
@@ -14898,55 +14906,55 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/76103/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38421/bc433416-d774-41c2-86b6-5ce49d824c48/Inbjudan.pdf",
           "published_time": "2022-04-13"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/79405/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38421/d8f475a0-5214-4672-bdca-362b11052f1c/PM.pdf",
           "published_time": "2022-04-22"
         },
         {
           "type": "Other",
           "title": "Bilder från terrängen",
-          "url": "/Documents/Event/77359/Bilder-fr-n-terr-ngen",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38421/f791e340-79ee-417f-b84f-0e85c400a675/Bilder från terrängen.pdf",
           "published_time": "2022-02-07"
         },
         {
           "type": "Other",
           "title": "Program Svenska VeteranCupen MTBO 2022",
-          "url": "/Documents/Event/77480/Program-Svenska-VeteranCupen-MTBO-2022",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38421/52a27825-f0aa-477c-b63c-28d2fc4ee133/Program Svenska VeteranCupen MTBO 2022.pdf",
           "published_time": "2022-02-12"
         },
         {
           "type": "Other",
           "title": "Program Svenska Cupen MTBO 2022",
-          "url": "/Documents/Event/77481/Program-Svenska-Cupen-MTBO-2022",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38421/10d6b7e2-387a-47ed-a2b2-c6c00ba0d5c8/Program Svenska Cupen MTBO 2022.pdf",
           "published_time": "2022-02-12"
         },
         {
           "type": "Other",
           "title": "Logi förslag",
-          "url": "/Documents/Event/77591/Logi-f-rslag",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38421/2fb74863-3aa0-43fe-8b2c-316a6b775c39/Logi förslag.pdf",
           "published_time": "2022-02-16"
         },
         {
           "type": "Other",
           "title": "ISMTBOM 2022",
-          "url": "/Documents/Event/79032/ISMTBOM-2022",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38421/962b7e9e-82ea-41f0-80f8-72785680ff84/ISMTBOM 2022.pdf",
           "published_time": "2022-04-13"
         },
         {
           "type": "Other",
           "title": "TA-karta sprint",
-          "url": "/Documents/Event/79398/TA-karta-sprint",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38421/682a4fad-8da9-42ea-99d4-dc70e0ddde03/TA-karta sprint.pdf",
           "published_time": "2022-04-21"
         },
         {
           "type": "Other",
           "title": "Terräng & banor",
-          "url": "/Documents/Event/79401/Terr-ng---banor",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38421/e060281b-3fe9-4547-90b2-75202d0f2d73/Terräng %26 banor.pdf",
           "published_time": "2022-04-21"
         }
       ],
@@ -15381,55 +15389,55 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/76104/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38422/0b948f91-4c37-4748-b8a3-a0411c28ce3d/Inbjudan.pdf",
           "published_time": "2022-04-13"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/79406/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38422/f5911221-890e-416f-a122-1a4a575c36f3/PM.pdf",
           "published_time": "2022-04-22"
         },
         {
           "type": "Other",
           "title": "Bilder från terrängen",
-          "url": "/Documents/Event/77360/Bilder-fr-n-terr-ngen",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38422/e1f8423c-549e-4dc4-bd5f-153aad51d7ca/Bilder från terrängen.pdf",
           "published_time": "2022-02-07"
         },
         {
           "type": "Other",
           "title": "Program Svenska VeteranCupen MTBO 2022",
-          "url": "/Documents/Event/77479/Program-Svenska-VeteranCupen-MTBO-2022",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38422/5ebd580f-38ad-40f7-9f4e-470736bbe9fe/Program Svenska VeteranCupen MTBO 2022.pdf",
           "published_time": "2022-02-12"
         },
         {
           "type": "Other",
           "title": "Program Svenska Cupen MTBO 2022",
-          "url": "/Documents/Event/77482/Program-Svenska-Cupen-MTBO-2022",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38422/79a1cc51-d383-4a25-99d5-3251919dfc00/Program Svenska Cupen MTBO 2022.pdf",
           "published_time": "2022-02-12"
         },
         {
           "type": "Other",
           "title": "Logi förslag",
-          "url": "/Documents/Event/77592/Logi-f-rslag",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38422/be6c241a-650d-441c-bc26-56ec74491342/Logi förslag.pdf",
           "published_time": "2022-02-16"
         },
         {
           "type": "Other",
           "title": "ISMTBOM 2022",
-          "url": "/Documents/Event/79033/ISMTBOM-2022",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38422/9c51e458-51c1-4aad-859a-9a6193ec0591/ISMTBOM 2022.pdf",
           "published_time": "2022-04-13"
         },
         {
           "type": "Other",
           "title": "TA-karta medel",
-          "url": "/Documents/Event/79399/TA-karta-medel",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38422/84387629-b811-4133-9564-0930ec0ca333/TA-karta medel.pdf",
           "published_time": "2022-04-21"
         },
         {
           "type": "Other",
           "title": "Terräng & banor",
-          "url": "/Documents/Event/79400/Terr-ng---banor",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38422/29b7ddbc-4ac2-41a8-bdc6-5d08e198cecd/Terräng %26 banor.pdf",
           "published_time": "2022-04-21"
         }
       ],
@@ -15916,25 +15924,25 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/77240/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38524/d293292a-3b84-4dcb-a17a-62e1a8c38881/Inbjudan.pdf",
           "published_time": "2022-02-22"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/78574/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38524/c59a52bb-f25e-4c86-ab18-ae1d15244d09/PM.pdf",
           "published_time": "2022-03-30"
         },
         {
           "type": "Other",
           "title": "Svenska Veterancupen",
-          "url": "/Documents/Event/77241/Svenska-Veterancupen",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38524/c74c3c9d-5003-4ee8-8ca0-2a162ea4dd45/Svenska Veterancupen.pdf",
           "published_time": "2022-01-31"
         },
         {
           "type": "Other",
           "title": "Boendeförslag",
-          "url": "/Documents/Event/77287/Boendef-rslag",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38524/6653b44b-2d30-4def-b624-07743c8e9006/Boendeförslag.pdf",
           "published_time": "2022-02-02"
         },
         {
@@ -16396,19 +16404,19 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/77242/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38525/513e2314-fd3a-4ef8-bd15-e1c1638b74fa/Inbjudan.pdf",
           "published_time": "2022-02-22"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/78575/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38525/e6058db4-fcc9-4283-9db5-949b4850995a/PM.pdf",
           "published_time": "2022-03-30"
         },
         {
           "type": "Other",
           "title": "Svenska Veterancupen",
-          "url": "/Documents/Event/77243/Svenska-Veterancupen",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38525/91052ff9-a4fd-4a3f-bae9-7a1d8406d4bf/Svenska Veterancupen.pdf",
           "published_time": "2022-01-31"
         },
         {
@@ -16814,43 +16822,43 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/77137/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38618/4cc27082-60b7-4b5b-9c6b-2d583c88f817/Inbjudan.pdf",
           "published_time": "2022-04-27"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/79661/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38618/200e59de-604c-43c3-b62a-bb3356a4b1f2/PM.pdf",
           "published_time": "2022-04-27"
         },
         {
           "type": "Other",
           "title": "Terrängbilder",
-          "url": "/Documents/Event/77244/Terr-ngbilder",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38618/f050455b-b22a-4c6e-bfe3-27913b350a39/Terrängbilder.pdf",
           "published_time": "2022-01-31"
         },
         {
           "type": "Other",
           "title": "Program- Svenska VeteranCupen MTBO 2022",
-          "url": "/Documents/Event/78238/Program--Svenska-VeteranCupen-MTBO-2022",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38618/a1efdab0-27dd-46c6-86eb-7d92d76ddf03/Program- Svenska VeteranCupen MTBO 2022.pdf",
           "published_time": "2022-03-20"
         },
         {
           "type": "Other",
           "title": "Program- SvenskaCupen MTBO 2022",
-          "url": "/Documents/Event/78239/Program--SvenskaCupen-MTBO-2022",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38618/5672966f-06ea-47da-b4a4-fee05ddc6047/Program- SvenskaCupen MTBO 2022.pdf",
           "published_time": "2022-03-20"
         },
         {
           "type": "Other",
           "title": "Logi förslag",
-          "url": "/Documents/Event/78463/Logi-f-rslag",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38618/f115d5f6-8e7f-4c25-a33d-16809deb5e9b/Logi förslag.docx",
           "published_time": "2022-03-27"
         },
         {
           "type": "Other",
           "title": "Arenaskiss - 2 sidor",
-          "url": "/Documents/Event/79634/Arenaskiss---2-sidor",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38618/2c0807f4-865a-40e4-af5b-c11b1092c0ef/Arenaskiss - 2 sidor.pdf",
           "published_time": "2022-04-27"
         }
       ],
@@ -17283,43 +17291,43 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/77136/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38619/72306797-8c2c-4460-8516-fc4d7eebef36/Inbjudan.pdf",
           "published_time": "2022-04-27"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/79662/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38619/63745391-73d1-4c23-a7ca-2c3f274f0379/PM.pdf",
           "published_time": "2022-04-27"
         },
         {
           "type": "Other",
           "title": "Terrängbilder",
-          "url": "/Documents/Event/77245/Terr-ngbilder",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38619/4b60e888-f729-425b-94bb-d02d4d4751ea/Terrängbilder.pdf",
           "published_time": "2022-01-31"
         },
         {
           "type": "Other",
           "title": "Program- Svenska VeteranCupen MTBO 2022",
-          "url": "/Documents/Event/78240/Program--Svenska-VeteranCupen-MTBO-2022",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38619/34c705cc-04dc-4eb8-a490-e13936a01b72/Program- Svenska VeteranCupen MTBO 2022.pdf",
           "published_time": "2022-03-20"
         },
         {
           "type": "Other",
           "title": "Program- SveskaCupen MTBO 2022",
-          "url": "/Documents/Event/78242/Program--SveskaCupen-MTBO-2022",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38619/8a3f869d-7c6d-424f-9641-9c6c809e0904/Program- SveskaCupen MTBO 2022.pdf",
           "published_time": "2022-03-20"
         },
         {
           "type": "Other",
           "title": "Logi förslag",
-          "url": "/Documents/Event/78464/Logi-f-rslag",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38619/706f43fd-18de-4dac-afec-33910bba39df/Logi förslag.docx",
           "published_time": "2022-03-27"
         },
         {
           "type": "Other",
           "title": "Arenaskiss - 2 sidor",
-          "url": "/Documents/Event/79635/Arenaskiss---2-sidor",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38619/bf1688a6-5e53-4fb8-a321-7fa0bb17301c/Arenaskiss - 2 sidor.pdf",
           "published_time": "2022-04-27"
         }
       ],
@@ -17838,13 +17846,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/78474/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38622/13353c09-17ef-4eb5-9620-9c0e88120276/Inbjudan.pdf",
           "published_time": "2022-08-06"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/83989/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38622/b62252ad-da03-45e1-af3b-cd741f189ba6/PM.pdf",
           "published_time": "2022-09-02"
         },
         {
@@ -18252,13 +18260,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/78473/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38623/4181c99d-5a5c-4a4d-9d3d-4c4c519132c8/Inbjudan.pdf",
           "published_time": "2022-08-06"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/83990/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38623/28176d43-271f-4b16-9bb2-257da2a0d786/PM.pdf",
           "published_time": "2022-09-02"
         },
         {
@@ -18632,13 +18640,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/80009/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38718/93fb26c2-2a21-419d-8194-3ebdbf56383e/Inbjudan.pdf",
           "published_time": "2022-05-19"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/83647/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38718/c4a0e6ce-395d-4f03-97c5-670e5d576f11/PM.pdf",
           "published_time": "2022-08-20"
         },
         {
@@ -19015,13 +19023,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/80010/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38719/dbad7211-c7a7-4551-9d4f-4e54de7980b3/Inbjudan.pdf",
           "published_time": "2022-05-19"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/83648/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/38719/5f5bcf5d-14c8-43e2-91b6-0be79036f0be/PM.pdf",
           "published_time": "2022-08-20"
         },
         {
@@ -19394,25 +19402,25 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/76370/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/39002/31fbedb8-bcce-4fe3-8d7d-7cd76297fbf9/Inbjudan.pdf",
           "published_time": "2022-01-07"
         },
         {
           "type": "Bulletin",
           "title": "Kart-PM",
-          "url": "/Documents/Event/76657/Kart-PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/39002/e1506604-49d1-4c5a-8cda-430d55e44266/Kart-PM.pdf",
           "published_time": "2022-01-01"
         },
         {
           "type": "Bulletin",
           "title": "Tävlings-PM",
-          "url": "/Documents/Event/76740/T-vlings-PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/39002/570f46f2-a9b5-410e-b074-556234ea96ea/Tävlings-PM.pdf",
           "published_time": "2022-01-07"
         },
         {
           "type": "StartList",
           "title": "Startlista inkl efteranmälda",
-          "url": "/Documents/Event/76757/Startlista-inkl-efteranm-lda",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/39002/93ac3f0b-26ae-46ac-bc06-f86a515d7fa6/Startlista inkl efteranmälda.pdf",
           "published_time": "2022-01-07"
         }
       ],
@@ -19600,7 +19608,7 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/76624/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/39307/42f6a22e-2e4a-48a4-8cb7-d1d334df25ef/Inbjudan.pdf",
           "published_time": "2022-01-13"
         }
       ],
@@ -19674,7 +19682,7 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/76625/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/39308/25d78ac2-0650-45b1-90d1-6f18d42f55e2/Inbjudan.pdf",
           "published_time": "2022-01-28"
         }
       ],
@@ -19748,7 +19756,7 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/76628/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/39309/a6c66344-89fa-4ee5-9c50-50f65cd10c2e/Inbjudan.pdf",
           "published_time": "2022-02-08"
         }
       ],
@@ -19849,32 +19857,26 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/77269/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/39352/ae627c7a-1f9f-440d-9655-c277fc800c19/Inbjudan.pdf",
           "published_time": "2022-05-07"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/80278/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/39352/c15d44a5-aa6c-4329-a0d2-b58a7614231a/PM.pdf",
           "published_time": "2022-05-11"
         },
         {
           "type": "Bulletin",
           "title": "Karta PM",
-          "url": "/Documents/Event/79064/Karta-PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/39352/5c4db8ff-0fdb-4d69-8f8f-2172c4e0c600/Karta PM.pdf",
           "published_time": "2022-04-13"
         },
         {
           "type": "Other",
           "title": "Karta",
-          "url": "/Documents/Event/79068/Karta",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/39352/1b6aa159-8162-44d9-9c35-a40a431c328c/Karta.jpg",
           "published_time": "2022-04-13"
-        },
-        {
-          "type": "Other",
-          "title": "Slutställning Smålandscupen 2022",
-          "url": "/Documents/Event/86012/Slutst-llning-Sm-landscupen-2022",
-          "published_time": "2022-11-06"
         }
       ],
       "information": "Inbjudan uppdaterad med preliminära banlängder.\nEfter önskemål tillåts 2 cyklister på andrasträckan i ungdomsklassen.",
@@ -20011,7 +20013,7 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/77145/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/39547/938f7f4a-fcd9-4608-bb16-e10eb9b44bf0/Inbjudan.pdf",
           "published_time": "2022-02-08"
         }
       ],
@@ -20082,7 +20084,7 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/77146/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/39548/ee4da7ff-092d-4742-bce8-e3312859c970/Inbjudan.pdf",
           "published_time": "2022-02-08"
         }
       ],
@@ -20174,19 +20176,19 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/77414/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/39669/71587f17-6b22-46c7-b602-23db4fba3fc8/Inbjudan.pdf",
           "published_time": "2022-02-10"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/77916/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/39669/d16be71f-c268-4343-83ed-ae3611d78f50/PM.pdf",
           "published_time": "2022-03-05"
         },
         {
           "type": "Other",
           "title": "Arenakarta",
-          "url": "/Documents/Event/77917/Arenakarta",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/39669/bcc58ae1-d3ac-4aac-b10f-15d889df6d41/Arenakarta.pdf",
           "published_time": "2022-03-05"
         },
         {
@@ -20198,7 +20200,7 @@
         {
           "type": "StartList",
           "title": "Startlista inkl efteranm",
-          "url": "/Documents/Event/78027/Startlista-inkl-efteranm",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/39669/c418173d-fbd0-40f9-851c-8e46dfbec139/Startlista inkl efteranm.pdf",
           "published_time": "2022-03-12"
         }
       ],
@@ -20452,13 +20454,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/79765/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/39688/d34761c0-d927-444a-906e-fd2896b48532/Inbjudan.pdf",
           "published_time": "2022-04-30"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/81355/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/39688/5b6ae3d4-255b-41f0-988e-22dc4754fb85/PM.pdf",
           "published_time": "2022-06-05"
         },
         {
@@ -20970,25 +20972,25 @@
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/80652/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/39877/4a323b8f-6c5f-4262-88cf-eb9bac236c5b/PM.pdf",
           "published_time": "2022-05-19"
         },
         {
           "type": "Other",
           "title": "Banlängder och kartskala",
-          "url": "/Documents/Event/80706/Banl-ngder-och-kartskala",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/39877/aad6bc05-3ea2-4832-bc10-712dc5f65270/Banlängder och kartskala.pdf",
           "published_time": "2022-05-20"
         },
         {
           "type": "ResultList",
           "title": "2022 0522 MTB O resultat",
-          "url": "/Documents/Event/80811/2022-0522-MTB-O-resultat",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/39877/e3fe08a5-a2e1-4198-bd05-0ae763217247/2022 0522 MTB O resultat.pdf",
           "published_time": "2022-05-22"
         },
         {
           "type": "Other",
           "title": "2022 0522 MTB O Sträcktider",
-          "url": "/Documents/Event/80812/2022-0522-MTB-O-Str-cktider",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/39877/95220fcd-9af6-4523-925d-96eac1dd8d2f/2022 0522 MTB O Sträcktider.pdf",
           "published_time": "2022-05-22"
         }
       ],
@@ -21157,25 +21159,25 @@
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/78983/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/39898/9c4fbf95-c398-418c-8749-f1921acf3f91/PM.pdf",
           "published_time": "2022-04-18"
         },
         {
           "type": "Other",
           "title": "Bana kort",
-          "url": "/Documents/Event/79334/Bana-kort",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/39898/197c2628-52d7-4b0f-be25-3ce26eaa1217/Bana kort.pdf",
           "published_time": "2022-04-20"
         },
         {
           "type": "Other",
           "title": "Bana mellan",
-          "url": "/Documents/Event/79335/Bana-mellan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/39898/44adc700-c28e-4bc0-91d0-faf63d4314dd/Bana mellan.pdf",
           "published_time": "2022-04-20"
         },
         {
           "type": "Other",
           "title": "Bana Lång",
-          "url": "/Documents/Event/79336/Bana-L-ng",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/39898/50e66d63-1992-41cf-95e0-d1cf64d788c6/Bana Lång.pdf",
           "published_time": "2022-04-20"
         }
       ],
@@ -21307,7 +21309,7 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/78046/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/39981/46c52805-c0fe-41de-a9fa-e138bd64c064/Inbjudan.pdf",
           "published_time": "2022-03-13"
         }
       ],
@@ -21446,7 +21448,7 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/78289/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/40111/a7970df9-6e57-4364-8675-f94f3bf0c260/Inbjudan.pdf",
           "published_time": "2022-03-21"
         }
       ],
@@ -21773,19 +21775,19 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/79985/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/40691/0e84b5e3-a2b5-4465-bac7-06e961974a05/Inbjudan.pdf",
           "published_time": "2022-05-04"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/80326/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/40691/9ea53227-b87f-480c-a93e-aa971f6a4c65/PM.pdf",
           "published_time": "2022-05-15"
         },
         {
           "type": "Other",
           "title": "Arenakarta med kartprov",
-          "url": "/Documents/Event/79952/Arenakarta-med-kartprov",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/40691/6204ebed-3b0c-4c96-9ad3-361e7ba94efb/Arenakarta med kartprov.pdf",
           "published_time": "2022-05-03"
         },
         {
@@ -21961,7 +21963,7 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/78945/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/40735/12f364a8-2f21-4056-9611-e1e36b60eec9/Inbjudan.pdf",
           "published_time": "2022-07-07"
         },
         {
@@ -22111,7 +22113,7 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/78948/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/40740/866396ce-904e-4115-8f2e-2a68211b5aa8/Inbjudan.pdf",
           "published_time": "2022-07-09"
         },
         {
@@ -22256,13 +22258,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/81022/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/40800/0c8b63f9-ae63-487a-8336-e34ce663ac46/Inbjudan.pdf",
           "published_time": "2022-05-27"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/81852/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/40800/a3c50fe5-98ab-4635-930b-68a976a1fc5f/PM.pdf",
           "published_time": "2022-06-14"
         },
         {
@@ -22274,25 +22276,25 @@
         {
           "type": "Other",
           "title": "Karta Svår 5km",
-          "url": "/Documents/Event/81956/Karta-Sv-r-5km",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/40800/60e996a8-dfb4-49cb-999d-7c38b2b8ced9/Karta Svår 5km.pdf",
           "published_time": "2022-06-16"
         },
         {
           "type": "Other",
           "title": "Karta Medelsvår 3,5km",
-          "url": "/Documents/Event/81957/Karta-Medelsv-r-3%2c5km",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/40800/4b46c88b-e108-44ce-af87-541fb8f77d20/Karta Medelsvår 3%2C5km.pdf",
           "published_time": "2022-06-16"
         },
         {
           "type": "Other",
           "title": "Karta Lätt 2,5km",
-          "url": "/Documents/Event/81958/Karta-L-tt-2%2c5km",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/40800/317fdb1d-a9dc-40eb-b7e7-391aa2978934/Karta Lätt 2%2C5km.pdf",
           "published_time": "2022-06-16"
         },
         {
           "type": "Other",
           "title": "Karta Mycket Lätt 2km",
-          "url": "/Documents/Event/81959/Karta-Mycket-L-tt-2km",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/40800/1db995ab-ba3d-46ae-9f89-9637c206eb17/Karta Mycket Lätt 2km.pdf",
           "published_time": "2022-06-16"
         }
       ],
@@ -22456,7 +22458,7 @@
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/79829/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/40881/ed1a703d-07a2-410e-9e24-54fb8b94c23f/PM.pdf",
           "published_time": "2022-05-02"
         }
       ],
@@ -22639,7 +22641,7 @@
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/80765/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/40925/9c80c46b-9bcd-4edf-ae23-5a5baab343be/PM.pdf",
           "published_time": "2022-05-22"
         }
       ],
@@ -22989,13 +22991,13 @@
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/81394/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/41001/72dfe785-53b9-4501-ac0d-e506d88bd9af/PM.pdf",
           "published_time": "2022-06-07"
         },
         {
           "type": "Other",
           "title": "Öviksserien MtbO 2022",
-          "url": "/Documents/Event/79956/-viksserien-MtbO-2022",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/41001/13116707-cc79-4b39-be9e-d436ea588398/Öviksserien MtbO 2022.pdf",
           "published_time": "2022-06-09"
         },
         {
@@ -23393,7 +23395,7 @@
         {
           "type": "Other",
           "title": "Öviksserien",
-          "url": "/Documents/Event/82180/-viksserien",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/41054/bccfcd2b-115d-4b59-b900-dc0de2187a1f/Öviksserien.pdf",
           "published_time": "2022-06-22"
         }
       ],
@@ -23523,13 +23525,13 @@
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/83880/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/41188/38ca997d-7a0a-4b26-8bc5-856e6a15c8bd/PM.pdf",
           "published_time": "2022-08-24"
         },
         {
           "type": "Other",
           "title": "Öviksserien MtbO 2022",
-          "url": "/Documents/Event/79954/-viksserien-MtbO-2022",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/41188/82cdd59f-6387-462a-8cd9-2608693d4619/Öviksserien MtbO 2022.pdf",
           "published_time": "2022-06-09"
         }
       ],
@@ -23645,28 +23647,10 @@
       ],
       "documents": [
         {
-          "type": "Bulletin",
-          "title": "PM",
-          "url": "/Documents/Event/85326/PM",
-          "published_time": "2022-10-10"
-        },
-        {
           "type": "Other",
           "title": "Öviksserien MtbO 2022",
-          "url": "/Documents/Event/79955/-viksserien-MtbO-2022",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/41189/ec342295-4664-4f0e-91b4-6d01ce7417e8/Öviksserien MtbO 2022.pdf",
           "published_time": "2022-09-19"
-        },
-        {
-          "type": "Other",
-          "title": "SYMBOLER",
-          "url": "/Documents/Event/85392/SYMBOLER",
-          "published_time": "2022-10-10"
-        },
-        {
-          "type": "Other",
-          "title": "PRISTAGARE",
-          "url": "/Documents/Event/85531/PRISTAGARE",
-          "published_time": "2022-10-15"
         }
       ],
       "information": "Pannlampa på! Tre banor 2,5 km,4 km och 8 km. Samling 18.30. Mass-start kl 18.45. Kartställ och sportidentpinnar finns att låna.\nStart och mål vid nya parkeringen nedanför Örnenstugan (fd Jäbo fd MHF). Snälla banor med alternativa vägval runt på \"fina\" stigar/vägar.\nGår ju utmärkt att även springa som TrailO. Livelox.\nVälkomna!",
@@ -23887,13 +23871,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/80314/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/41301/913136e0-3e11-4bd4-9449-7db88f93a23e/Inbjudan.pdf",
           "published_time": "2022-05-11"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/81659/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/41301/ff852bec-5df3-45d4-9efc-e0d683683667/PM.pdf",
           "published_time": "2022-06-09"
         },
         {
@@ -24063,13 +24047,13 @@
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/80521/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/41303/9ce346f6-1fbe-4762-9b6c-a21c2212c7ed/PM.pdf",
           "published_time": "2022-05-16"
         },
         {
           "type": "Other",
           "title": "Öviksserien MtbO 2022",
-          "url": "/Documents/Event/80222/-viksserien-MtbO-2022",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/41303/f45a33d3-4a10-466f-a113-81e66888b593/Öviksserien MtbO 2022.pdf",
           "published_time": "2022-05-12"
         }
       ],
@@ -24350,7 +24334,7 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/81986/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/41434/70030f43-12dc-4a2e-91e6-80830478b672/Inbjudan.docx",
           "published_time": "2022-06-16"
         }
       ],
@@ -24622,13 +24606,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/81550/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/41686/93637f35-d081-450a-b0b0-d2b03d93c25d/Inbjudan.pdf",
           "published_time": "2022-06-07"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/82095/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/41686/872b0a19-d590-49bb-a0c9-20c1e7c1bb2e/PM.pdf",
           "published_time": "2022-06-20"
         },
         {
@@ -24805,26 +24789,7 @@
           "last_updated_at": "2026-02-08T23:17:02.268883+00:00"
         }
       ],
-      "documents": [
-        {
-          "type": "Invitation",
-          "title": "Inbjudan",
-          "url": "/Documents/Event/84661/Inbjudan",
-          "published_time": "2022-09-11"
-        },
-        {
-          "type": "Bulletin",
-          "title": "PM",
-          "url": "/Documents/Event/85014/PM",
-          "published_time": "2022-09-23"
-        },
-        {
-          "type": "Other",
-          "title": "Slutställning Smålandscupen MTBO 2022",
-          "url": "/Documents/Event/86028/Slutst-llning-Sm-landscupen-MTBO-2022",
-          "published_time": "2022-11-06"
-        }
-      ],
+      "documents": [],
       "information": "OBS, det är fri starttid även om det är startlistan står 10:00 på alla, vid köbildning är det bra att värma upp en runda till!\nLiveresultat:\nhttps://liveresultat.orientering.se/followfull.php?comp=24147&lang=sv",
       "region": "Småland",
       "punching_system": "Sportident",
@@ -25086,13 +25051,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/82024/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/41822/5ee7bfa2-3274-4325-9717-4eb23fd1ef6a/Inbjudan.pdf",
           "published_time": "2022-06-17"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/83054/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/41822/84f9e48a-b236-4e93-bd45-edf4135624aa/PM.pdf",
           "published_time": "2022-08-09"
         }
       ],
@@ -25299,7 +25264,7 @@
         {
           "type": "Other",
           "title": "Öviksserien 2022",
-          "url": "/Documents/Event/82165/-viksserien-2022",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/41872/1ba499d8-14fd-4907-ae17-74c6fc178111/Öviksserien 2022.pdf",
           "published_time": "2022-06-22"
         }
       ],
@@ -25413,13 +25378,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/83041/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/41883/8c1e624b-376e-4acb-88ff-72a8dbf8942a/Inbjudan.pdf",
           "published_time": "2022-08-01"
         },
         {
           "type": "Other",
           "title": "Uppvärmningskarta",
-          "url": "/Documents/Event/83443/Uppv-rmningskarta",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/41883/64c4e7a0-d1cf-403c-bbf6-735d83ac5e5d/Uppvärmningskarta.pdf",
           "published_time": "2022-08-13"
         }
       ],
@@ -25544,7 +25509,7 @@
       "officials": [
         {
           "role": "Contact person",
-          "name": "Karin Moodh"
+          "name": "Karin Fogelberg Moodh"
         },
         {
           "role": "Contact phone number",
@@ -25577,20 +25542,7 @@
           "last_updated_at": "2026-02-08T23:17:02.269007+00:00"
         }
       ],
-      "documents": [
-        {
-          "type": "Bulletin",
-          "title": "PM",
-          "url": "/Documents/Event/84161/PM",
-          "published_time": "2022-08-30"
-        },
-        {
-          "type": "Other",
-          "title": "Arena",
-          "url": "/Documents/Event/84172/Arena",
-          "published_time": "2022-08-30"
-        }
-      ],
+      "documents": [],
       "information": "Tävlingen är tyvärr inställd p g a för få anmälda.\nUppdaterad inbjudan/pm finns nu upplagt med all information om tävlingen.",
       "region": "Värmland",
       "punching_system": "Sportident",
@@ -25678,7 +25630,7 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/82818/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/42041/17243450-7e74-46d9-8527-c19b245dce4e/Inbjudan.pdf",
           "published_time": "2022-07-18"
         },
         {
@@ -25826,13 +25778,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/83000/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/42114/f69dcf61-8874-44b4-8a7c-e7151aa129f5/Inbjudan.pdf",
           "published_time": "2022-07-31"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/83444/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/42114/cb673e70-1aa0-4f18-b7b4-7b7be18d1abe/PM.pdf",
           "published_time": "2022-08-13"
         }
       ],
@@ -26083,14 +26035,8 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/83587/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/42178/3094c0f2-6cce-4254-b936-03ac221e5cdc/Inbjudan.pdf",
           "published_time": "2022-08-17"
-        },
-        {
-          "type": "Bulletin",
-          "title": "PM",
-          "url": "/Documents/Event/84981/PM",
-          "published_time": "2022-09-22"
         },
         {
           "type": "ResultList",
@@ -26311,13 +26257,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/83365/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/42208/3e77d276-be4f-45e2-b5bb-be36768883de/Inbjudan.pdf",
           "published_time": "2022-08-11"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/84007/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/42208/26adf345-fcf6-4ee8-959a-0b8919dcbd3c/PM.pdf",
           "published_time": "2022-08-26"
         }
       ],
@@ -26490,14 +26436,8 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/83940/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/42221/7ac20c79-21ab-4514-baa5-9e4cb63e9131/Inbjudan.docx",
           "published_time": "2022-08-29"
-        },
-        {
-          "type": "Bulletin",
-          "title": "PM",
-          "url": "/Documents/Event/84455/PM",
-          "published_time": "2022-09-06"
         },
         {
           "type": "Other",
@@ -26681,7 +26621,7 @@
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/83822/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/42229/549a31c2-0151-43c8-bfa4-ad882cad94cf/PM.pdf",
           "published_time": "2022-08-23"
         }
       ],
@@ -26857,18 +26797,6 @@
         }
       ],
       "documents": [
-        {
-          "type": "Invitation",
-          "title": "Inbjudan",
-          "url": "/Documents/Event/84605/Inbjudan",
-          "published_time": "2022-09-10"
-        },
-        {
-          "type": "Bulletin",
-          "title": "PM",
-          "url": "/Documents/Event/85130/PM",
-          "published_time": "2022-09-29"
-        },
         {
           "type": "ResultList",
           "title": "Liveresultat",
@@ -27062,14 +26990,8 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/83595/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/42309/ef05f62c-d7fa-4a6d-b957-691a161a28a2/Inbjudan.pdf",
           "published_time": "2022-08-17"
-        },
-        {
-          "type": "Bulletin",
-          "title": "PM",
-          "url": "/Documents/Event/84817/PM",
-          "published_time": "2022-09-16"
         }
       ],
       "information": "Testa ett kort MTBO-race i mycket lämplig terräng!\nOch innan kan du springa en rolig skogssprint.",
@@ -27235,14 +27157,8 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/83801/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/42311/483753e5-1588-425b-b819-30242d27d478/Inbjudan.pdf",
           "published_time": "2022-08-22"
-        },
-        {
-          "type": "Bulletin",
-          "title": "PM",
-          "url": "/Documents/Event/84770/PM",
-          "published_time": "2022-09-14"
         }
       ],
       "information": "Observera Ändring av tävlingsområde till Skutberget med Sörmon.",
@@ -27439,13 +27355,13 @@
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/83710/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/42317/53b9f9c8-13d2-464a-a777-2c0323d3bed3/PM.pdf",
           "published_time": "2022-08-20"
         },
         {
           "type": "Other",
           "title": "Karttecken MTB-O",
-          "url": "/Documents/Event/83711/Karttecken-MTB-O",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/42317/6d750ede-e354-476f-8f25-22de276a427b/Karttecken MTB-O.jpg",
           "published_time": "2022-08-20"
         }
       ],
@@ -27628,7 +27544,7 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/83652/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/42327/a4b38dc9-c1ba-4d64-be5a-1930382f5c03/Inbjudan.pdf",
           "published_time": "2022-08-21"
         }
       ],
@@ -27751,7 +27667,7 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/83868/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/42377/ce0f97f6-eddc-4ef8-a2ee-162224fa1ddb/Inbjudan.pdf",
           "published_time": "2022-08-24"
         }
       ],
@@ -27888,7 +27804,7 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/83906/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/42384/6a00b57b-78c2-4607-9fcc-64b590de5a61/Inbjudan.pdf",
           "published_time": "2022-08-24"
         }
       ],
@@ -28021,13 +27937,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/84117/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/42439/c4ee2a3e-398f-47b6-b4ed-d6f0b99ba5c3/Inbjudan.pdf",
           "published_time": "2022-08-29"
         },
         {
           "type": "Other",
           "title": "Karta över banan",
-          "url": "/Documents/Event/84118/Karta--ver-banan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/42439/d559c038-a1d1-4ee2-a1ea-6dfd0561b04f/Karta över banan.pdf",
           "published_time": "2022-08-29"
         },
         {
@@ -28035,12 +27951,6 @@
           "title": "Anmälningsformulär",
           "url": "https://forms.gle/vsLGK4XX3H9aafVQ7",
           "published_time": null
-        },
-        {
-          "type": "Other",
-          "title": "Anmälningslista",
-          "url": "/Documents/Event/85248/Anm-lningslista",
-          "published_time": "2022-10-02"
         }
       ],
       "information": "********************\nOBS! Ej MtbO!\n********************\n***Ingen anmälan via Eventor, se istället inbjudan***\nVälkomna till Svartåtrampet 2022!\nSamarrangemang mellan Degerfors OK samt Svartå IF.\nEn MTB-träning med tidtagning.\nSe mer information och anmälan till höger i rutan \"Dokument och länkar\"\n********************\nOBS! Ej MtbO!\n********************",
@@ -28223,7 +28133,7 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/84387/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/42521/05f919c0-1a4b-44a2-85b7-f815d0c4df2d/Inbjudan.pdf",
           "published_time": "2022-09-05"
         }
       ],
@@ -28386,13 +28296,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/84520/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/42525/6e55ae9c-d096-4419-ac6b-90809046978c/Inbjudan.pdf",
           "published_time": "2022-09-07"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/85206/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/42525/92fed4f3-4818-4731-b1e6-872da5dce333/PM.pdf",
           "published_time": "2022-09-30"
         }
       ],
@@ -28690,7 +28600,7 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/84525/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/42565/5a585b39-b2e0-4d0a-8784-aefc32da65d0/Inbjudan.pdf",
           "published_time": "2022-09-08"
         }
       ],
@@ -28766,7 +28676,7 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/85018/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/42773/56646f4f-26a9-4cc3-b1eb-1ef7a33b95c4/Inbjudan.pdf",
           "published_time": "2022-09-23"
         }
       ],
@@ -28847,7 +28757,7 @@
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/85807/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/43083/9b97e5f4-9b59-4baa-ab89-1d94b1479c26/PM.pdf",
           "published_time": "2022-10-25"
         }
       ],
@@ -29012,25 +28922,25 @@
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/86147/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/43229/6cdd509b-73df-4d26-9f6c-2c301c840ada/PM.docx",
           "published_time": "2022-11-12"
         },
         {
           "type": "StartList",
           "title": "Startlista",
-          "url": "/Documents/Event/86145/Startlista",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/43229/7667e49d-3a86-4965-bc26-4fdfcb0ffb31/Startlista.html",
           "published_time": "2022-11-12"
         },
         {
           "type": "ResultList",
           "title": "Resultat MTBO 221113",
-          "url": "/Documents/Event/86183/Resultat-MTBO-221113",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/43229/83011d1b-e277-4253-860a-f3e7d2251c27/Resultat MTBO 221113.html",
           "published_time": "2022-11-14"
         },
         {
           "type": "Other",
           "title": "Sträcktider MTBO 221113",
-          "url": "/Documents/Event/86184/Str-cktider-MTBO-221113",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/43229/29334cc0-084f-4721-a8a5-d6ed6298beca/Sträcktider MTBO 221113.html",
           "published_time": "2022-11-14"
         }
       ],
@@ -29210,7 +29120,7 @@
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/86190/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/43381/eff3ca83-38b6-4eed-b37f-672591ed75fa/PM.pdf",
           "published_time": "2022-11-16"
         }
       ],
@@ -29401,13 +29311,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/86486/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/43528/04af0034-c81b-451d-83be-35a6d56fa402/Inbjudan.pdf",
           "published_time": "2022-12-03"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/86571/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/43528/d3ba8bc0-8618-4382-be63-284d7e1dcabf/PM.pdf",
           "published_time": "2022-12-09"
         }
       ],

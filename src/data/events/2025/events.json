@@ -197,7 +197,7 @@
           "race_number": 3,
           "name": "Mass start",
           "datetimez": "2025-08-14T10:00:00+02:00",
-          "discipline": "Other",
+          "discipline": "Mass start",
           "night_or_day": null,
           "position": null,
           "areas": [],
@@ -265,7 +265,7 @@
           "race_number": 5,
           "name": "Relay",
           "datetimez": "2025-08-17T10:00:00+02:00",
-          "discipline": "Other",
+          "discipline": "Relay",
           "night_or_day": null,
           "position": null,
           "areas": [],
@@ -458,7 +458,7 @@
           "race_number": 3,
           "name": "Mass start",
           "datetimez": "2025-08-14T10:00:00+02:00",
-          "discipline": "Other",
+          "discipline": "Mass start",
           "night_or_day": null,
           "position": null,
           "areas": [],
@@ -526,7 +526,7 @@
           "race_number": 5,
           "name": "Relay",
           "datetimez": "2025-08-17T10:00:00+02:00",
-          "discipline": "Other",
+          "discipline": "Relay",
           "night_or_day": null,
           "position": null,
           "areas": [],
@@ -704,7 +704,7 @@
           "race_number": 1,
           "name": "Mass start",
           "datetimez": "2025-05-15T10:00:00+03:00",
-          "discipline": "Other",
+          "discipline": "Mass start",
           "night_or_day": null,
           "position": {
             "lat": 54.6748165533286,
@@ -1180,7 +1180,7 @@
           "race_number": 4,
           "name": "Mixed Relay",
           "datetimez": "2025-05-18T11:00:00+03:00",
-          "discipline": "Other",
+          "discipline": "Relay",
           "night_or_day": null,
           "position": null,
           "areas": [],
@@ -1806,7 +1806,7 @@
           "race_number": 4,
           "name": "Relay",
           "datetimez": "2025-05-18T11:00:00+03:00",
-          "discipline": "Other",
+          "discipline": "Relay",
           "night_or_day": null,
           "position": null,
           "areas": [],
@@ -2025,7 +2025,7 @@
           "race_number": 3,
           "name": "Relay",
           "datetimez": "2025-09-21T09:30:00+03:00",
-          "discipline": "Other",
+          "discipline": "Relay",
           "night_or_day": null,
           "position": null,
           "areas": [],
@@ -2249,7 +2249,7 @@
           "race_number": 2,
           "name": "Mass start",
           "datetimez": "2025-05-02T00:00:00+02:00",
-          "discipline": "Other",
+          "discipline": "Mass start",
           "night_or_day": "day",
           "position": {
             "lat": 38.0777918332337,
@@ -4420,7 +4420,7 @@
         {
           "type": "Invitation",
           "title": "Innbydelse",
-          "url": "/Documents/Event/46399/Innbydelse",
+          "url": "https://eventor-norway-storage.orientering.se/eventdocuments/21169/b801e667-ffe0-443a-b5ed-97a55b29459b/Innbydelse.pdf",
           "published_time": "2025-06-09"
         }
       ],
@@ -4556,7 +4556,7 @@
         {
           "type": "Invitation",
           "title": "Innbydelse",
-          "url": "/Documents/Event/46400/Innbydelse",
+          "url": "https://eventor-norway-storage.orientering.se/eventdocuments/21170/bd074886-c050-45aa-a160-de65408cbdc7/Innbydelse.pdf",
           "published_time": "2025-06-09"
         }
       ],
@@ -4830,19 +4830,19 @@
         {
           "type": "Invitation",
           "title": "Innbydelse",
-          "url": "/Documents/Event/45944/Innbydelse",
+          "url": "https://eventor-norway-storage.orientering.se/eventdocuments/21948/a19d0572-08a1-4b52-948b-3d6ad2833ab9/Innbydelse.pdf",
           "published_time": "2025-05-28"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/46265/PM",
+          "url": "https://eventor-norway-storage.orientering.se/eventdocuments/21948/05b92ffb-1d8e-4d8b-94b4-68a5e8f03a7b/PM.pdf",
           "published_time": "2025-06-02"
         },
         {
           "type": "Other",
           "title": "Kartsymboler i MTB-O",
-          "url": "/Documents/Event/45945/Kartsymboler-i-MTB-O",
+          "url": "https://eventor-norway-storage.orientering.se/eventdocuments/21948/dbfcf2e5-6715-44ea-90e3-921648ce2698/Kartsymboler-i-MTB-O.pdf",
           "published_time": "2025-05-19"
         },
         {
@@ -4975,13 +4975,13 @@
         {
           "type": "Invitation",
           "title": "Innbydelse",
-          "url": "/Documents/Event/46448/Innbydelse",
+          "url": "https://eventor-norway-storage.orientering.se/eventdocuments/21990/909ea92f-6fd7-42cc-8b67-b2ee5a16567f/Innbydelse.pdf",
           "published_time": "2025-06-10"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/46676/PM",
+          "url": "https://eventor-norway-storage.orientering.se/eventdocuments/21990/4b2c6650-0e83-4885-8ebf-ffc54a495f35/PM.pdf",
           "published_time": "2025-06-26"
         }
       ],
@@ -5136,13 +5136,13 @@
         {
           "type": "Invitation",
           "title": "Innbydelse",
-          "url": "/Documents/Event/46449/Innbydelse",
+          "url": "https://eventor-norway-storage.orientering.se/eventdocuments/21991/0a3d3b4e-5b03-492d-943e-042c3a23ee03/Innbydelse.pdf",
           "published_time": "2025-06-10"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/46677/PM",
+          "url": "https://eventor-norway-storage.orientering.se/eventdocuments/21991/f2b183da-e0e0-43c5-86a3-5ee23dd5f11a/PM.pdf",
           "published_time": "2025-06-26"
         }
       ],
@@ -5271,19 +5271,19 @@
         {
           "type": "Invitation",
           "title": "Innbydelse",
-          "url": "/Documents/Event/46120/Innbydelse",
+          "url": "https://eventor-norway-storage.orientering.se/eventdocuments/22025/37e31fb1-8d1d-475c-a6ce-6aeee4a79698/Innbydelse.pdf",
           "published_time": "2025-05-26"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/46474/PM",
+          "url": "https://eventor-norway-storage.orientering.se/eventdocuments/22025/44a135ae-8e03-4c62-a192-73a366586116/PM.pdf",
           "published_time": "2025-06-11"
         },
         {
           "type": "Other",
           "title": "Symboler i MTBO",
-          "url": "/Documents/Event/45876/Symboler-i-MTBO",
+          "url": "https://eventor-norway-storage.orientering.se/eventdocuments/22025/c9aedc04-a0c2-42bf-b7d0-9e3b51cd55f9/Symboler-i-MTBO.pdf",
           "published_time": "2025-05-15"
         }
       ],
@@ -5490,7 +5490,7 @@
         {
           "type": "Invitation",
           "title": "Innbydelse",
-          "url": "/Documents/Event/47004/Innbydelse",
+          "url": "https://eventor-norway-storage.orientering.se/eventdocuments/22375/a31e30f4-3821-4a58-a652-b0eac52999a3/Innbydelse.pdf",
           "published_time": "2025-08-05"
         },
         {
@@ -5672,7 +5672,7 @@
         {
           "type": "Invitation",
           "title": "Innbydelse",
-          "url": "/Documents/Event/48296/Innbydelse",
+          "url": "https://eventor-norway-storage.orientering.se/eventdocuments/22410/c2f50174-3820-4559-9ebe-3768dd70ed2d/Innbydelse.pdf",
           "published_time": "2025-10-16"
         },
         {
@@ -5690,7 +5690,7 @@
         {
           "type": "Other",
           "title": "Kartutsnitt",
-          "url": "/Documents/Event/48378/Kartutsnitt",
+          "url": "https://eventor-norway-storage.orientering.se/eventdocuments/22410/7a6c3926-b3e3-450c-b8ed-82125e8786f6/Kartutsnitt.pdf",
           "published_time": "2025-10-23"
         }
       ],
@@ -5806,8 +5806,8 @@
         "National"
       ],
       "tags": [
-        "FootO",
         "TrailO",
+        "FootO",
         "EVENT_SKIP"
       ],
       "form": "Individual",
@@ -5848,16 +5848,10 @@
           "title": "Start- och resultatlistor",
           "url": "https://resultat.oringen.se/2025",
           "published_time": null
-        },
-        {
-          "type": "Other",
-          "title": "Anmälan Protest Etapp 1",
-          "url": "/Documents/Event/114186/Anm-lan-Protest-Etapp-1",
-          "published_time": "2025-07-21"
         }
       ],
       "information": "Information och anmälan hittas på\nwww.oringen.se\n/ Information and registration can be found at\nwww.oringen.se.",
-      "region": null,
+      "region": "Småland",
       "punching_system": "Sportident",
       "races": [
         {
@@ -6853,7 +6847,7 @@
         }
       ],
       "information": "Mer information samt anmälan hittar du på\nwww.oringen.se\nStarttider och resultat hittar du på\nhttps://resultat.oringen.se\n---\nMore information and registration can be found at\nwww.oringen.se\nStart times and results can be found at\nhttps://resultat.oringen.se",
-      "region": null,
+      "region": "Småland",
       "punching_system": "Sportident",
       "races": [
         {
@@ -9605,26 +9599,7 @@
           "last_updated_at": "2026-02-01T22:21:00.790088+00:00"
         }
       ],
-      "documents": [
-        {
-          "type": "Invitation",
-          "title": "Inbjudan",
-          "url": "/Documents/Event/111368/Inbjudan",
-          "published_time": "2025-05-07"
-        },
-        {
-          "type": "Bulletin",
-          "title": "PM",
-          "url": "/Documents/Event/113525/PM",
-          "published_time": "2025-06-25"
-        },
-        {
-          "type": "Other",
-          "title": "Flyeer info",
-          "url": "/Documents/Event/108895/Flyeer-info",
-          "published_time": "2025-02-27"
-        }
-      ],
+      "documents": [],
       "information": "Poängberäkningen för Svenska veterancupen kommer beräknas på 5-årsintervaller i efterhand.\nNya anmälningstidpunkter ordinarie söndag och efteranmälan tisdag är det som gäller.",
       "region": "Norrbotten",
       "punching_system": "Sportident",
@@ -9884,26 +9859,7 @@
           "last_updated_at": "2026-02-01T22:21:08.542869+00:00"
         }
       ],
-      "documents": [
-        {
-          "type": "Invitation",
-          "title": "Inbjudan",
-          "url": "/Documents/Event/111370/Inbjudan",
-          "published_time": "2025-05-07"
-        },
-        {
-          "type": "Bulletin",
-          "title": "PM",
-          "url": "/Documents/Event/113526/PM",
-          "published_time": "2025-06-25"
-        },
-        {
-          "type": "Other",
-          "title": "Flyeer info",
-          "url": "/Documents/Event/108897/Flyeer-info",
-          "published_time": "2025-02-27"
-        }
-      ],
+      "documents": [],
       "information": "Poängberäkningen för Svenska veterancupen kommer beräknas på 5-årsintervaller i efterhand.\nNya anmälningstidpunkter ordinarie söndag och efteranmälan tisdag är det som gäller.",
       "region": "Norrbotten",
       "punching_system": "Sportident",
@@ -10146,68 +10102,14 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/107644/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/50902/d1061adc-9e5c-45af-9e01-f7ff8493be00/Inbjudan.pdf",
           "published_time": "2025-03-23"
-        },
-        {
-          "type": "Bulletin",
-          "title": "PM",
-          "url": "/Documents/Event/110059/PM",
-          "published_time": "2025-04-09"
-        },
-        {
-          "type": "Other",
-          "title": "Gammal karta Hovdala 2020",
-          "url": "/Documents/Event/108755/Gammal-karta-Hovdala-2020",
-          "published_time": "2025-02-19"
-        },
-        {
-          "type": "Other",
-          "title": "Kartutsnitt tävlingskarta 2025-1",
-          "url": "/Documents/Event/108758/Kartutsnitt-t-vlingskarta-2025-1",
-          "published_time": "2025-02-19"
-        },
-        {
-          "type": "Other",
-          "title": "Kartutsnitt tävlingskarta 2025-2",
-          "url": "/Documents/Event/108759/Kartutsnitt-t-vlingskarta-2025-2",
-          "published_time": "2025-02-19"
         },
         {
           "type": "Other",
           "title": "Medeldistans söndag 13 april",
           "url": "/Events/Show/51187",
           "published_time": null
-        },
-        {
-          "type": "Other",
-          "title": "Banlängder, skala, kartvänd",
-          "url": "/Documents/Event/109512/Banl-ngder%2c-skala%2c-kartv-nd",
-          "published_time": "2025-03-25"
-        },
-        {
-          "type": "Other",
-          "title": "Banläggaren har ordet",
-          "url": "/Documents/Event/109520/Banl-ggaren-har-ordet",
-          "published_time": "2025-03-26"
-        },
-        {
-          "type": "Bulletin",
-          "title": "PM Dusch",
-          "url": "/Documents/Event/110019/PM-Dusch",
-          "published_time": "2025-04-08"
-        },
-        {
-          "type": "Bulletin",
-          "title": "PM Ställplats",
-          "url": "/Documents/Event/110112/PM-St-llplats",
-          "published_time": "2025-04-08"
-        },
-        {
-          "type": "Other",
-          "title": "Arenaskiss",
-          "url": "/Documents/Event/110113/Arenaskiss",
-          "published_time": "2025-04-08"
         },
         {
           "type": "ResultList",
@@ -10705,62 +10607,14 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/107645/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/51187/7a094d4d-a072-4a34-a3ea-50eb4c694024/Inbjudan.pdf",
           "published_time": "2025-03-23"
-        },
-        {
-          "type": "Bulletin",
-          "title": "PM",
-          "url": "/Documents/Event/110058/PM",
-          "published_time": "2025-04-09"
-        },
-        {
-          "type": "Other",
-          "title": "Gammal karta Mölleröd 2024",
-          "url": "/Documents/Event/108756/Gammal-karta-M-ller-d-2024",
-          "published_time": "2025-02-19"
-        },
-        {
-          "type": "Other",
-          "title": "Kartutsnitt tävlingskarta 2025",
-          "url": "/Documents/Event/108757/Kartutsnitt-t-vlingskarta-2025",
-          "published_time": "2025-02-19"
         },
         {
           "type": "Other",
           "title": "Långdistans lördag 12 april",
           "url": "/Events/Show/50902",
           "published_time": null
-        },
-        {
-          "type": "Other",
-          "title": "Banlängd, skala, kartvänd",
-          "url": "/Documents/Event/109513/Banl-ngd%2c-skala%2c-kartv-nd",
-          "published_time": "2025-03-26"
-        },
-        {
-          "type": "Other",
-          "title": "Banläggaren och kartritaren har ordet",
-          "url": "/Documents/Event/109804/Banl-ggaren-och-kartritaren-har-ordet",
-          "published_time": "2025-04-02"
-        },
-        {
-          "type": "Bulletin",
-          "title": "PM Dusch",
-          "url": "/Documents/Event/110020/PM-Dusch",
-          "published_time": "2025-04-08"
-        },
-        {
-          "type": "Bulletin",
-          "title": "PM Ställplats",
-          "url": "/Documents/Event/110114/PM-St-llplats",
-          "published_time": "2025-04-08"
-        },
-        {
-          "type": "Other",
-          "title": "Arenaskiss",
-          "url": "/Documents/Event/110115/Arenaskiss",
-          "published_time": "2025-04-08"
         },
         {
           "type": "ResultList",
@@ -11253,21 +11107,9 @@
       ],
       "documents": [
         {
-          "type": "Invitation",
-          "title": "Inbjudan",
-          "url": "/Documents/Event/110135/Inbjudan",
-          "published_time": "2025-04-26"
-        },
-        {
-          "type": "Bulletin",
-          "title": "PM",
-          "url": "/Documents/Event/112333/PM",
-          "published_time": "2025-05-25"
-        },
-        {
           "type": "Other",
           "title": "information för anmälan",
-          "url": "/Documents/Event/106920/information-f-r-anm-lan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/51273/c873165f-5bf9-4f7c-9c49-629d1ada9999/information för anmälan.pdf",
           "published_time": "2024-11-20"
         },
         {
@@ -11870,21 +11712,9 @@
       ],
       "documents": [
         {
-          "type": "Invitation",
-          "title": "Inbjudan",
-          "url": "/Documents/Event/110136/Inbjudan",
-          "published_time": "2025-04-26"
-        },
-        {
-          "type": "Bulletin",
-          "title": "PM",
-          "url": "/Documents/Event/112334/PM",
-          "published_time": "2025-05-25"
-        },
-        {
           "type": "Other",
           "title": "information för anmälan",
-          "url": "/Documents/Event/106921/information-f-r-anm-lan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/51274/e738cc2a-0de3-4f45-a2d9-4cdfdf05ce58/information för anmälan.pdf",
           "published_time": "2024-11-20"
         },
         {
@@ -12455,21 +12285,9 @@
       ],
       "documents": [
         {
-          "type": "Invitation",
-          "title": "Inbjudan",
-          "url": "/Documents/Event/110137/Inbjudan",
-          "published_time": "2025-04-26"
-        },
-        {
-          "type": "Bulletin",
-          "title": "PM",
-          "url": "/Documents/Event/112335/PM",
-          "published_time": "2025-05-25"
-        },
-        {
           "type": "Other",
           "title": "information för anmälan",
-          "url": "/Documents/Event/106922/information-f-r-anm-lan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/51275/739d0e05-3d3e-494a-b0ad-a24f6b77875c/information för anmälan.pdf",
           "published_time": "2024-11-20"
         },
         {
@@ -12489,12 +12307,6 @@
           "title": "länk till videos från området",
           "url": "https://www.youtube.com/@sonnymyrefelt1966",
           "published_time": null
-        },
-        {
-          "type": "StartList",
-          "title": "Starttider ultralång",
-          "url": "/Documents/Event/112463/Starttider-ultral-ng",
-          "published_time": "2025-05-30"
         }
       ],
       "information": "Justerad resultatlista finns nu\nVerkar vara en bugg vid uppladdning av startlistan så vi har lagt ut HTML filen bland dokument.\nPM på svenska är ute nu.\nNordic MTBO Camp arrangeras 2025 av Lessebo OK och Nybro OK med event center i Kosta. Varmt välkomna!",
@@ -12946,21 +12758,9 @@
       ],
       "documents": [
         {
-          "type": "Invitation",
-          "title": "Inbjudan",
-          "url": "/Documents/Event/110138/Inbjudan",
-          "published_time": "2025-04-26"
-        },
-        {
-          "type": "Bulletin",
-          "title": "PM",
-          "url": "/Documents/Event/112336/PM",
-          "published_time": "2025-05-25"
-        },
-        {
           "type": "Other",
           "title": "information för anmälan",
-          "url": "/Documents/Event/106923/information-f-r-anm-lan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/51276/84b1b226-f96c-4581-b118-4be60214d6a0/information för anmälan.pdf",
           "published_time": "2024-11-20"
         },
         {
@@ -13564,64 +13364,10 @@
       ],
       "documents": [
         {
-          "type": "Invitation",
-          "title": "Inbjudan",
-          "url": "/Documents/Event/112148/Inbjudan",
-          "published_time": "2025-05-21"
-        },
-        {
-          "type": "Bulletin",
-          "title": "PM",
-          "url": "/Documents/Event/115587/PM",
-          "published_time": "2025-08-28"
-        },
-        {
-          "type": "Invitation",
-          "title": "Invitation English",
-          "url": "/Documents/Event/112162/Invitation-English",
-          "published_time": "2025-05-21"
-        },
-        {
           "type": "Other",
           "title": "Facebook",
           "url": "https://www.facebook.com/events/674428198817797/?acontext=%7B%22event_action_history%22%3A[%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D",
           "published_time": null
-        },
-        {
-          "type": "Other",
-          "title": "Gammal karta Mörrum",
-          "url": "/Documents/Event/114996/Gammal-karta-M-rrum",
-          "published_time": "2025-08-17"
-        },
-        {
-          "type": "Other",
-          "title": "Banlängder, skala, kartvändning",
-          "url": "/Documents/Event/115042/Banl-ngder%2c-skala%2c-kartv-ndning",
-          "published_time": "2025-08-17"
-        },
-        {
-          "type": "Other",
-          "title": "Meny Markan",
-          "url": "/Documents/Event/115530/Meny-Markan",
-          "published_time": "2025-08-27"
-        },
-        {
-          "type": "Other",
-          "title": "Ställplats",
-          "url": "/Documents/Event/115586/St-llplats",
-          "published_time": "2025-08-28"
-        },
-        {
-          "type": "Other",
-          "title": "Översiktskarta",
-          "url": "/Documents/Event/115592/-versiktskarta",
-          "published_time": "2025-08-28"
-        },
-        {
-          "type": "Other",
-          "title": "Karta Arena",
-          "url": "/Documents/Event/115593/Karta-Arena",
-          "published_time": "2025-08-28"
         }
       ],
       "information": "20250729: IBAN: SE 45 8000 0000 0735 4111 7923\nBIC: SWEDSESS\n20250817: Gammal karta samt Banlängd, skala och kartvändning\n20250829: Startlistan uppdaterad",
@@ -14139,64 +13885,10 @@
       ],
       "documents": [
         {
-          "type": "Invitation",
-          "title": "Inbjudan",
-          "url": "/Documents/Event/112149/Inbjudan",
-          "published_time": "2025-05-21"
-        },
-        {
-          "type": "Bulletin",
-          "title": "PM",
-          "url": "/Documents/Event/115588/PM",
-          "published_time": "2025-08-28"
-        },
-        {
-          "type": "Invitation",
-          "title": "Invitation English",
-          "url": "/Documents/Event/112163/Invitation-English",
-          "published_time": "2025-05-21"
-        },
-        {
           "type": "Other",
           "title": "Facebook",
           "url": "https://www.facebook.com/events/674428198817797/?acontext=%7B%22event_action_history%22%3A[%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D",
           "published_time": null
-        },
-        {
-          "type": "Other",
-          "title": "Gammal karta Långakärr",
-          "url": "/Documents/Event/115004/Gammal-karta-L-ngak-rr",
-          "published_time": "2025-08-17"
-        },
-        {
-          "type": "Other",
-          "title": "Banlängder, skala, kartvändning",
-          "url": "/Documents/Event/115029/Banl-ngder%2c-skala%2c-kartv-ndning",
-          "published_time": "2025-08-17"
-        },
-        {
-          "type": "Other",
-          "title": "Meny Markan",
-          "url": "/Documents/Event/115531/Meny-Markan",
-          "published_time": "2025-08-27"
-        },
-        {
-          "type": "Other",
-          "title": "Ställplats",
-          "url": "/Documents/Event/115585/St-llplats",
-          "published_time": "2025-08-28"
-        },
-        {
-          "type": "Other",
-          "title": "Översiktskarta",
-          "url": "/Documents/Event/115594/-versiktskarta",
-          "published_time": "2025-08-28"
-        },
-        {
-          "type": "Other",
-          "title": "Karta Arena",
-          "url": "/Documents/Event/115595/Karta-Arena",
-          "published_time": "2025-08-28"
         }
       ],
       "information": "20250729: IBAN: SE 45 8000 0000 0735 4111 7923\nBIC: SWEDSESS\n20250817: Gammal karta samt Banlängd, skala och kartvändning\n20250819: Kostnad Kamratmåltid inklusive en alkoholfri dryck 250kr per person, 95 kr för barn under 12 år. Sista anmälan 24 augusti. Meddela tävlingsledaren om du önskar specialkost eller har allergier.\n20250829: Startlistan uppdaterad!",
@@ -14731,58 +14423,10 @@
       ],
       "documents": [
         {
-          "type": "Invitation",
-          "title": "Inbjudan",
-          "url": "/Documents/Event/112150/Inbjudan",
-          "published_time": "2025-05-21"
-        },
-        {
-          "type": "Bulletin",
-          "title": "PM",
-          "url": "/Documents/Event/115589/PM",
-          "published_time": "2025-08-28"
-        },
-        {
-          "type": "Invitation",
-          "title": "Invitation English",
-          "url": "/Documents/Event/112164/Invitation-English",
-          "published_time": "2025-05-21"
-        },
-        {
           "type": "Other",
           "title": "Facebook",
           "url": "https://www.facebook.com/events/674428198817797/?acontext=%7B%22event_action_history%22%3A[%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D",
           "published_time": null
-        },
-        {
-          "type": "Other",
-          "title": "Gammal karta Danstorp Ekeberg",
-          "url": "/Documents/Event/115005/Gammal-karta-Danstorp-Ekeberg",
-          "published_time": "2025-08-17"
-        },
-        {
-          "type": "Other",
-          "title": "Banlängder, skala, kartvändning",
-          "url": "/Documents/Event/115030/Banl-ngder%2c-skala%2c-kartv-ndning",
-          "published_time": "2025-08-17"
-        },
-        {
-          "type": "Other",
-          "title": "Meny Markan",
-          "url": "/Documents/Event/115532/Meny-Markan",
-          "published_time": "2025-08-27"
-        },
-        {
-          "type": "Other",
-          "title": "Översiktskarta",
-          "url": "/Documents/Event/115590/-versiktskarta",
-          "published_time": "2025-08-28"
-        },
-        {
-          "type": "Other",
-          "title": "Karta Arena",
-          "url": "/Documents/Event/115591/Karta-Arena",
-          "published_time": "2025-08-28"
         }
       ],
       "information": "20250729: IBAN: SE 45 8000 0000 0735 4111 7923\nBIC: SWEDSESS\n20250817: Gammal karta samt Banlängd, skala och kartvändning\n20250829: Startlistan uppdaterad!",
@@ -15290,62 +14934,7 @@
           "last_updated_at": "2026-02-01T22:19:12.013317+00:00"
         }
       ],
-      "documents": [
-        {
-          "type": "Invitation",
-          "title": "Inbjudan",
-          "url": "/Documents/Event/109633/Inbjudan",
-          "published_time": "2025-03-30"
-        },
-        {
-          "type": "Bulletin",
-          "title": "PM",
-          "url": "/Documents/Event/112806/PM",
-          "published_time": "2025-06-04"
-        },
-        {
-          "type": "Other",
-          "title": "Tävlingsområde 2017",
-          "url": "/Documents/Event/109327/T-vlingsomr-de-2017",
-          "published_time": "2025-03-17"
-        },
-        {
-          "type": "Bulletin",
-          "title": "PM Boende",
-          "url": "/Documents/Event/109481/PM-Boende",
-          "published_time": "2025-03-24"
-        },
-        {
-          "type": "Bulletin",
-          "title": "PM karta",
-          "url": "/Documents/Event/110719/PM-karta",
-          "published_time": "2025-04-23"
-        },
-        {
-          "type": "Other",
-          "title": "Banläggarna har ordet",
-          "url": "/Documents/Event/111934/Banl-ggarna-har-ordet",
-          "published_time": "2025-05-17"
-        },
-        {
-          "type": "Bulletin",
-          "title": "PM trafik",
-          "url": "/Documents/Event/112489/PM-trafik",
-          "published_time": "2025-05-28"
-        },
-        {
-          "type": "Bulletin",
-          "title": "PM banlängder skalor kartstorlek kartvändning",
-          "url": "/Documents/Event/112490/PM-banl-ngder-skalor-kartstorlek-kartv-ndning",
-          "published_time": "2025-06-04"
-        },
-        {
-          "type": "Other",
-          "title": "Del av tävlingsområdet 2024",
-          "url": "/Documents/Event/112797/Del-av-t-vlingsomr-det-2024",
-          "published_time": "2025-06-04"
-        }
-      ],
+      "documents": [],
       "information": null,
       "region": "Västergötland",
       "punching_system": "Sportident",
@@ -15723,62 +15312,7 @@
           "last_updated_at": "2026-02-01T22:19:18.464841+00:00"
         }
       ],
-      "documents": [
-        {
-          "type": "Invitation",
-          "title": "Inbjudan",
-          "url": "/Documents/Event/109634/Inbjudan",
-          "published_time": "2025-03-30"
-        },
-        {
-          "type": "Bulletin",
-          "title": "PM",
-          "url": "/Documents/Event/112807/PM",
-          "published_time": "2025-06-04"
-        },
-        {
-          "type": "Other",
-          "title": "Tävlingsområde 2017",
-          "url": "/Documents/Event/109328/T-vlingsomr-de-2017",
-          "published_time": "2025-03-17"
-        },
-        {
-          "type": "Bulletin",
-          "title": "PM Boende",
-          "url": "/Documents/Event/109482/PM-Boende",
-          "published_time": "2025-03-24"
-        },
-        {
-          "type": "Bulletin",
-          "title": "PM karta",
-          "url": "/Documents/Event/110720/PM-karta",
-          "published_time": "2025-04-23"
-        },
-        {
-          "type": "Other",
-          "title": "Banläggarna har ordet",
-          "url": "/Documents/Event/111935/Banl-ggarna-har-ordet",
-          "published_time": "2025-05-17"
-        },
-        {
-          "type": "Bulletin",
-          "title": "PM trafik",
-          "url": "/Documents/Event/112491/PM-trafik",
-          "published_time": "2025-05-28"
-        },
-        {
-          "type": "Bulletin",
-          "title": "PM banlängder skalor kartstorlek kartvändning",
-          "url": "/Documents/Event/112492/PM-banl-ngder-skalor-kartstorlek-kartv-ndning",
-          "published_time": "2025-06-05"
-        },
-        {
-          "type": "Other",
-          "title": "Del av tävlingsområdet 2024",
-          "url": "/Documents/Event/112798/Del-av-t-vlingsomr-det-2024",
-          "published_time": "2025-06-04"
-        }
-      ],
+      "documents": [],
       "information": "Korrigerade resultat på medeldistansen.\nPå grund av att vi inte uppmärksammat att en grind som tagits bort efter att kartan var färdig, samt att ett kryss för förbjuden väg försvunnit från banfilen, blev vi tvungna att använda den tid som deltagarna hade vid förvarningen som måltid. (utflyttat mål) De officiella placeringarna och sluttiderna är de som finns på eventor.\nTävlingsledningen",
       "region": "Västergötland",
       "punching_system": "Sportident",
@@ -16171,32 +15705,7 @@
           "last_updated_at": "2026-02-01T22:17:52.037399+00:00"
         }
       ],
-      "documents": [
-        {
-          "type": "Invitation",
-          "title": "Inbjudan",
-          "url": "/Documents/Event/109084/Inbjudan",
-          "published_time": "2025-03-06"
-        },
-        {
-          "type": "Bulletin",
-          "title": "PM",
-          "url": "/Documents/Event/112182/PM",
-          "published_time": "2025-05-23"
-        },
-        {
-          "type": "Other",
-          "title": "Gammal MTBO-karta",
-          "url": "/Documents/Event/111530/Gammal-MTBO-karta",
-          "published_time": "2025-05-10"
-        },
-        {
-          "type": "StartList",
-          "title": "Kartklipp, varvningsinformation och starttider",
-          "url": "/Documents/Event/112227/Kartklipp%2c-varvningsinformation-och-starttider",
-          "published_time": "2025-05-23"
-        }
-      ],
+      "documents": [],
       "information": "Inom avlyst område är det tillåtet att besöka Högbo Bruks fina skidspår med skidor, utan karta, och som deltagare/publik på skidtävlingar, utan karta. All tränings- och tävlingscykling inom området inkl MTB-lederna är avlysta tills tävlingarna är över.\nOBS! PM uppdaterat 2025-05-23 med ändrad \"målgångsinformation\" och information om USM-priser.\nNu har vi gått igenom alla klasser och laddat upp nya resultatlistor.",
       "region": "Gästrikland",
       "punching_system": "Sportident",
@@ -16668,46 +16177,16 @@
       ],
       "documents": [
         {
-          "type": "Bulletin",
-          "title": "PM",
-          "url": "/Documents/Event/112212/PM",
-          "published_time": "2025-05-22"
-        },
-        {
           "type": "Other",
           "title": "2017 års sprint på Livelox",
           "url": "https://www.livelox.com/Events/Show/26604/MtbO-Svenska-Cupen-5-sprint",
           "published_time": null
         },
         {
-          "type": "Invitation",
-          "title": "Inbjudan",
-          "url": "/Documents/Event/111961/Inbjudan",
-          "published_time": "2025-05-18"
-        },
-        {
-          "type": "Other",
-          "title": "Terrängbilder och kartprov",
-          "url": "/Documents/Event/112048/Terr-ngbilder-och-kartprov",
-          "published_time": "2025-05-19"
-        },
-        {
           "type": "Other",
           "title": "Träning efter tävlingen!",
           "url": "/Events/Show/54705",
           "published_time": null
-        },
-        {
-          "type": "Other",
-          "title": "Gammal karta",
-          "url": "/Documents/Event/112213/Gammal-karta",
-          "published_time": "2025-05-22"
-        },
-        {
-          "type": "StartList",
-          "title": "Startlista",
-          "url": "/Documents/Event/112249/Startlista",
-          "published_time": "2025-05-23"
         },
         {
           "type": "Other",
@@ -17301,14 +16780,7 @@
           "last_updated_at": "2026-02-01T22:17:09.844380+00:00"
         }
       ],
-      "documents": [
-        {
-          "type": "Bulletin",
-          "title": "PM",
-          "url": "/Documents/Event/111752/PM",
-          "published_time": "2025-05-13"
-        }
-      ],
+      "documents": [],
       "information": "Välkomna till ännu en deltävling i Blekingecupen. Samling vid Dackestugan i Rödeby.\nBanlängder:\nD/H16 + Öppen Kort 6 km\nD/H45 + Öppen Medel 12 km\nD/H17-44 + Öppen Lång 18 km\nProva-På 2,5 km",
       "region": "Blekinge",
       "punching_system": "Sportident",
@@ -17489,26 +16961,7 @@
           "last_updated_at": "2026-02-01T22:20:18.877335+00:00"
         }
       ],
-      "documents": [
-        {
-          "type": "Invitation",
-          "title": "Inbjudan",
-          "url": "/Documents/Event/111885/Inbjudan",
-          "published_time": "2025-05-16"
-        },
-        {
-          "type": "Bulletin",
-          "title": "PM",
-          "url": "/Documents/Event/113234/PM",
-          "published_time": "2025-06-16"
-        },
-        {
-          "type": "Other",
-          "title": "Öviksserien 2025",
-          "url": "/Documents/Event/109812/-viksserien-2025",
-          "published_time": "2025-04-02"
-        }
-      ],
+      "documents": [],
       "information": null,
       "region": "Ångermanland",
       "punching_system": "Sportident",
@@ -17733,18 +17186,6 @@
         }
       ],
       "documents": [
-        {
-          "type": "Invitation",
-          "title": "Inbjudan",
-          "url": "/Documents/Event/109256/Inbjudan",
-          "published_time": "2025-03-13"
-        },
-        {
-          "type": "Bulletin",
-          "title": "PM",
-          "url": "/Documents/Event/110493/PM",
-          "published_time": "2025-04-18"
-        },
         {
           "type": "ResultList",
           "title": "Liveresultat",
@@ -18020,25 +17461,25 @@
         {
           "type": "Bulletin",
           "title": "PM KM Lunds OK",
-          "url": "/Documents/Event/117115/PM-KM-Lunds-OK-",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/52671/c49401b0-1b5a-46d4-9cdc-df9de8a11980/PM-KM-Lunds-OK-.pdf",
           "published_time": "2025-10-13"
         },
         {
           "type": "Invitation",
           "title": "Inbjudan update 16/10",
-          "url": "/Documents/Event/117171/Inbjudan-update-16-10",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/52671/8cba9dda-fd75-477c-b0e1-17e6deca2361/Inbjudan-update-16-10.pdf",
           "published_time": "2025-10-16"
         },
         {
           "type": "Bulletin",
           "title": "PM Update 16/10",
-          "url": "/Documents/Event/117172/PM-Update-16-10",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/52671/e3497763-5a8c-4982-8e01-d50f1faad937/PM-Update-16-10.pdf",
           "published_time": "2025-10-16"
         },
         {
           "type": "Other",
           "title": "Kvarglömt/upphittat",
-          "url": "/Documents/Event/117254/Kvargl-mt-upphittat-",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/52671/c236ccb7-4558-40b8-a1a2-ab54542d0959/Kvargl-mt-upphittat-.JPG",
           "published_time": "2025-10-19"
         }
       ],
@@ -18242,13 +17683,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/109405/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/52751/8f400659-82fd-4701-8619-10d6bce245f0/Inbjudan.pdf",
           "published_time": "2025-03-20"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/112222/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/52751/8a2d849e-b039-406f-8001-606b75dd63fa/PM.pdf",
           "published_time": "2025-05-28"
         }
       ],
@@ -18387,7 +17828,7 @@
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/114246/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/52752/9e12250f-6e25-49ae-a89b-f1dfbee84b15/PM.pdf",
           "published_time": "2025-07-28"
         }
       ],
@@ -18522,7 +17963,7 @@
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/116807/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/52753/250bfa79-3d47-4840-ad34-00958bed48e2/PM.pdf",
           "published_time": "2025-09-30"
         }
       ],
@@ -18662,7 +18103,7 @@
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/116003/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/52772/81e9c67e-e1f2-4f64-ba7b-f746ee70e243/PM.pdf",
           "published_time": "2025-09-05"
         }
       ],
@@ -18805,13 +18246,13 @@
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/109987/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/52876/785a809d-7ade-41d2-8d18-23b83a92f53d/PM.pdf",
           "published_time": "2025-04-07"
         },
         {
           "type": "Other",
           "title": "MtbO-Cupen 2025",
-          "url": "/Documents/Event/109986/MtbO-Cupen-2025",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/52876/4a4f9cbe-fe0b-4f2d-87e6-305b930257ef/MtbO-Cupen-2025.pdf",
           "published_time": "2025-04-16"
         }
       ],
@@ -18974,13 +18415,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/112743/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/52877/56e13c51-a624-4e69-b01b-65363ba72f98/Inbjudan.pdf",
           "published_time": "2025-06-03"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/112742/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/52877/734983bf-b9a1-4b0b-9ae6-83f04995baff/PM.pdf",
           "published_time": "2025-06-04"
         }
       ],
@@ -19112,13 +18553,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/108426/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53025/379fef5d-f1cf-4eb8-8c9e-552932786eca/Inbjudan.pdf",
           "published_time": "2025-02-04"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/108788/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53025/89365aa3-f0a6-4d71-937e-c5533feb7fe1/PM.pdf",
           "published_time": "2025-02-21"
         }
       ],
@@ -19333,19 +18774,19 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/113982/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53084/2c9bbcf4-79d0-40e6-986d-60031b801785/Inbjudan.pdf",
           "published_time": "2025-07-11"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/114814/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53084/2d3a2d2e-2368-47ca-b13c-4a9b8558f1db/PM.pdf",
           "published_time": "2025-08-14"
         },
         {
           "type": "Other",
           "title": "Kartnorm MTBO",
-          "url": "/Documents/Event/113980/Kartnorm-MTBO",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53084/b6283e0c-bba3-4eef-9edf-88c897375eb4/Kartnorm-MTBO.pdf",
           "published_time": "2025-07-11"
         },
         {
@@ -19357,13 +18798,13 @@
         {
           "type": "Other",
           "title": "Vägvisning till Bäsna",
-          "url": "/Documents/Event/114815/V-gvisning-till-B-sna",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53084/56dd0f9f-0290-4934-840a-9b74e15b7afe/V-gvisning-till-B-sna.pdf",
           "published_time": "2025-08-14"
         },
         {
           "type": "Other",
           "title": "Arena karta för varvning",
-          "url": "/Documents/Event/114816/Arena-karta-f-r-varvning",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53084/5f9c7045-e10b-4808-ab63-b7b57bd05d84/Arena-karta-f-r-varvning.pdf",
           "published_time": "2025-08-14"
         }
       ],
@@ -19653,19 +19094,19 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/113983/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53092/c61c3c36-0cd7-4f87-a582-3cdfc1227a37/Inbjudan.pdf",
           "published_time": "2025-07-11"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/114817/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53092/5b0eb907-b4e7-4107-8aac-b7b8c4ab7258/PM.pdf",
           "published_time": "2025-08-14"
         },
         {
           "type": "Other",
           "title": "Kartnorm MTBO",
-          "url": "/Documents/Event/113977/Kartnorm-MTBO",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53092/0bdc5f7c-930c-498d-96b5-592e0803e3ca/Kartnorm-MTBO.pdf",
           "published_time": "2025-07-10"
         },
         {
@@ -20084,13 +19525,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/108735/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53203/bde15de7-dc0b-4c9a-8f35-abf9b58a14a2/Inbjudan.pdf",
           "published_time": "2025-03-02"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/109447/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53203/2f74c286-8fc1-4bad-80d2-8c2633326f12/PM.pdf",
           "published_time": "2025-03-22"
         }
       ],
@@ -20354,13 +19795,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/116067/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53271/1f8700a5-a778-41ec-8f32-258ac0df4c73/Inbjudan.pdf",
           "published_time": "2025-09-07"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/116571/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53271/d2fdb5fd-4fb0-4edf-b200-1cd072283c33/PM.pdf",
           "published_time": "2025-09-22"
         },
         {
@@ -20543,7 +19984,7 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/108899/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53309/622e3feb-ebfa-4e9f-89dd-551f6a11a673/Inbjudan.pdf",
           "published_time": "2025-03-28"
         }
       ],
@@ -20766,7 +20207,7 @@
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/116120/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53469/5a2f5e78-5767-4074-bfb7-46909cf1fe04/PM.pdf",
           "published_time": "2025-09-11"
         }
       ],
@@ -20895,13 +20336,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan MTBO 22 maj",
-          "url": "/Documents/Event/111130/Inbjudan-MTBO-22-maj",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53607/5b3656ed-807c-4ef9-97bf-5f31d9c19371/Inbjudan-MTBO-22-maj.pdf",
           "published_time": "2025-05-02"
         },
         {
           "type": "Invitation",
           "title": "MTBO Huvudinbjudan 2025",
-          "url": "/Documents/Event/111131/MTBO-Huvudinbjudan-2025",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53607/04b21027-2f3d-4641-a899-6a88cc1c5d64/MTBO-Huvudinbjudan-2025.pdf",
           "published_time": "2025-05-02"
         }
       ],
@@ -21127,25 +20568,25 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/109611/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53811/00fd8779-929c-4c1c-a59e-30e96d5594e6/Inbjudan.pdf",
           "published_time": "2025-04-30"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/111447/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53811/60425077-a50f-41b7-b506-801ffdddada2/PM.pdf",
           "published_time": "2025-05-08"
         },
         {
           "type": "Invitation",
           "title": "Inbjudan deltävling 1",
-          "url": "/Documents/Event/109612/Inbjudan-delt-vling-1",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53811/334fd283-3150-47f5-ad58-f795bbead9e0/Inbjudan-delt-vling-1.pdf",
           "published_time": "2025-03-29"
         },
         {
           "type": "Other",
           "title": "Kartnorm MTBO",
-          "url": "/Documents/Event/111032/Kartnorm-MTBO",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53811/49a133d8-7359-40b7-b81c-de4be6a4b80a/Kartnorm-MTBO.pdf",
           "published_time": "2025-04-30"
         },
         {
@@ -21322,25 +20763,25 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/109613/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53812/6185b75a-8e7f-4c85-b8d2-ad8a38d2c29f/Inbjudan.pdf",
           "published_time": "2025-03-29"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/112832/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53812/cb882739-06ec-481f-98b6-a23808d43f6d/PM.pdf",
           "published_time": "2025-06-05"
         },
         {
           "type": "Invitation",
           "title": "Inbjudan hela Närkeserien",
-          "url": "/Documents/Event/109614/Inbjudan-hela-N-rkeserien",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53812/4af97e27-ce36-4329-bdcd-e48540c0bbb5/Inbjudan-hela-N-rkeserien.pdf",
           "published_time": "2025-04-30"
         },
         {
           "type": "Other",
           "title": "Kartnorm MTBO",
-          "url": "/Documents/Event/111033/Kartnorm-MTBO",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53812/1c611552-e339-4141-aea7-e9d53ec8ee7c/Kartnorm-MTBO.pdf",
           "published_time": "2025-04-30"
         }
       ],
@@ -21803,25 +21244,25 @@
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/112349/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53938/71d2f8c6-d93f-4979-bb91-1f21dfccb941/PM.pdf",
           "published_time": "2025-05-25"
         },
         {
           "type": "Other",
           "title": "Bana A",
-          "url": "/Documents/Event/112350/Bana-A",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53938/6796366e-f9c1-4d29-8cb0-00301983c2e5/Bana-A.pdf",
           "published_time": "2025-05-25"
         },
         {
           "type": "Other",
           "title": "Bana B",
-          "url": "/Documents/Event/112351/Bana-B",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53938/fd0aaff8-f339-4f76-b953-e617f6d1fc4b/Bana-B.pdf",
           "published_time": "2025-05-25"
         },
         {
           "type": "Other",
           "title": "Bana C",
-          "url": "/Documents/Event/112352/Bana-C",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53938/04442386-2074-4680-8f22-11a4c0933f23/Bana-C.pdf",
           "published_time": "2025-05-25"
         }
       ],
@@ -21985,19 +21426,19 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/112468/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53940/d6b92c1e-7267-4b2c-989c-c2a3ab59a58d/Inbjudan.pdf",
           "published_time": "2025-05-27"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/112819/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53940/8b2e74d9-a952-4c65-bdcc-0478e0eb12c0/PM.pdf",
           "published_time": "2025-06-08"
         },
         {
           "type": "Other",
           "title": "Total poängställning Dalaserien MTBO 2025",
-          "url": "/Documents/Event/113270/Total-po-ngst-llning-Dalaserien-MTBO-2025",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53940/25999231-b458-4a06-8080-80bb57b1df5b/Total-po-ngst-llning-Dalaserien-MTBO-2025.pdf",
           "published_time": "2025-06-17"
         }
       ],
@@ -22125,13 +21566,13 @@
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/111611/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53950/bfa42805-68bc-4da6-abda-8011ab5d803c/PM.pdf",
           "published_time": "2025-05-12"
         },
         {
           "type": "Other",
           "title": "ÖVIKSSERIEN 2025",
-          "url": "/Documents/Event/109811/-VIKSSERIEN-2025",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53950/b124dd0a-1e1f-4775-bf0e-40c79c6d804c/-VIKSSERIEN-2025.pdf",
           "published_time": "2025-04-02"
         }
       ],
@@ -22312,7 +21753,7 @@
         {
           "type": "Other",
           "title": "Öviksserien 2025",
-          "url": "/Documents/Event/109819/-viksserien-2025",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53955/ec04c05a-7964-4f8b-9f5e-9f4b9d7b14d0/-viksserien-2025.pdf",
           "published_time": "2025-04-02"
         }
       ],
@@ -22439,7 +21880,7 @@
         {
           "type": "Other",
           "title": "Öviksserien 2025",
-          "url": "/Documents/Event/109824/-viksserien-2025",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53958/6f814bb8-d3bb-4f22-bbf0-22f37c418cb5/-viksserien-2025.pdf",
           "published_time": "2025-04-03"
         }
       ],
@@ -22572,13 +22013,13 @@
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/114912/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53961/56baee92-bc7f-408c-aa9c-6c3fcae52956/PM.pdf",
           "published_time": "2025-08-15"
         },
         {
           "type": "Other",
           "title": "Öviksserien 2025",
-          "url": "/Documents/Event/109825/-viksserien-2025",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53961/4f069fe6-95f3-43c8-b79e-b38a429889e7/-viksserien-2025.pdf",
           "published_time": "2025-04-03"
         }
       ],
@@ -22740,13 +22181,13 @@
         {
           "type": "Other",
           "title": "Öviksserien 2025",
-          "url": "/Documents/Event/109826/-viksserien-2025",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53962/fbdd3b66-546e-491c-8aeb-78a1a007965b/-viksserien-2025.pdf",
           "published_time": "2025-04-03"
         },
         {
           "type": "Other",
           "title": "PRISTAGARE MTBO-25",
-          "url": "/Documents/Event/116579/PRISTAGARE-MTBO-25",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53962/9017a773-4944-4316-9cae-086ad126af57/PRISTAGARE-MTBO-25.pdf",
           "published_time": "2025-09-22"
         }
       ],
@@ -22835,19 +22276,19 @@
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/116089/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53963/cab22983-b0c1-454d-b7e7-49bdcf739864/PM.pdf",
           "published_time": "2025-09-10"
         },
         {
           "type": "Other",
           "title": "Öviksserien 2025",
-          "url": "/Documents/Event/109836/-viksserien-2025",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53963/7feba840-d433-4f96-8d19-b632efbff04c/-viksserien-2025.pdf",
           "published_time": "2025-04-03"
         },
         {
           "type": "Other",
           "title": "PRISTAGARE",
-          "url": "/Documents/Event/116578/PRISTAGARE",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53963/512b8402-1c76-497e-8e29-e9a8e05dfb22/PRISTAGARE.pdf",
           "published_time": "2025-09-22"
         }
       ],
@@ -22974,7 +22415,7 @@
         {
           "type": "Other",
           "title": "Information flyer",
-          "url": "/Documents/Event/109925/Information-flyer",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54003/ef7d39e7-6a98-4503-8e77-646fc01f11bd/Information-flyer.pdf",
           "published_time": "2025-04-06"
         },
         {
@@ -23076,13 +22517,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/110280/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54008/144ba141-48ba-4dde-b6dd-9cf052598621/Inbjudan.pdf",
           "published_time": "2025-04-13"
         },
         {
           "type": "ResultList",
           "title": "Resultat Dalaserien MTBO #1",
-          "url": "/Documents/Event/111104/Resultat-Dalaserien-MTBO--1",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54008/78e4cf48-0c11-46e8-90b7-d0113ad5cf3d/Resultat-Dalaserien-MTBO--1.pdf",
           "published_time": "2025-05-02"
         }
       ],
@@ -23453,7 +22894,7 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/110129/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54093/35da06e0-fbff-48ab-9048-e1fdf455009c/Inbjudan.pdf",
           "published_time": "2025-04-09"
         }
       ],
@@ -23724,13 +23165,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/114380/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54254/9e5bbd79-48aa-488e-a21c-83667c6d89ef/Inbjudan.pdf",
           "published_time": "2025-08-01"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/114747/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54254/85f98b40-25db-4adc-af75-8818d553e30a/PM.docx",
           "published_time": "2025-08-12"
         }
       ],
@@ -23891,13 +23332,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/110609/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54336/8196703e-87e3-466e-9745-d422925905cd/Inbjudan.pdf",
           "published_time": "2025-04-21"
         },
         {
           "type": "Other",
           "title": "Totalställning Dalaserien MTBO 2025",
-          "url": "/Documents/Event/111489/Totalst-llning-Dalaserien-MTBO-2025",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54336/79dd69e4-a233-439f-bd15-4cb973635c28/Totalst-llning-Dalaserien-MTBO-2025.pdf",
           "published_time": "2025-05-09"
         },
         {
@@ -24390,13 +23831,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/111277/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54523/d17ec0de-751a-4cae-a185-59677d4f41f0/Inbjudan.pdf",
           "published_time": "2025-05-05"
         },
         {
           "type": "Other",
           "title": "Total poängställning Dalaserien MTBO 2025",
-          "url": "/Documents/Event/112250/Total-po-ngst-llning-Dalaserien-MTBO-2025",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54523/992cf8a9-e247-421a-b059-f976c3c99314/Total-po-ngst-llning-Dalaserien-MTBO-2025.pdf",
           "published_time": "2025-05-23"
         }
       ],
@@ -24540,7 +23981,7 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/113684/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54640/678ec417-299f-4e21-b737-60ac08ba0fcf/Inbjudan.pdf",
           "published_time": "2025-08-07"
         }
       ],
@@ -24826,25 +24267,25 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/112990/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54733/d1725ae4-a936-4f30-adb0-23cdaf396ba4/Inbjudan.pdf",
           "published_time": "2025-06-09"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/113850/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54733/f403cdf7-847c-49b1-befa-78602f9e3a94/PM.pdf",
           "published_time": "2025-07-07"
         },
         {
           "type": "Invitation",
           "title": "Inbjudan hela Närkeserien",
-          "url": "/Documents/Event/113508/Inbjudan-hela-N-rkeserien",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54733/19c683b2-92a5-4f54-b9cc-c5dcc0dd1f13/Inbjudan-hela-N-rkeserien.pdf",
           "published_time": "2025-06-25"
         },
         {
           "type": "Other",
           "title": "Kartnorm MTBO",
-          "url": "/Documents/Event/113509/Kartnorm-MTBO",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54733/eb563b0d-a145-4ff2-8b9c-cf891182ba7f/Kartnorm-MTBO.pdf",
           "published_time": "2025-06-25"
         },
         {
@@ -25041,13 +24482,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/113235/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54734/fd40d289-c4d1-4140-88f6-95bf450b7783/Inbjudan.pdf",
           "published_time": "2025-06-16"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/114673/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54734/58599b8b-7061-47b0-9f13-dc73293cc173/PM.pdf",
           "published_time": "2025-08-10"
         },
         {
@@ -25065,7 +24506,7 @@
         {
           "type": "Other",
           "title": "MTBO kartnorm",
-          "url": "/Documents/Event/114672/MTBO-kartnorm",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54734/6a3c8b52-8c98-471c-8c1b-5626c099ee88/MTBO-kartnorm.pdf",
           "published_time": "2025-08-10"
         }
       ],
@@ -25285,13 +24726,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/115439/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54735/fe806b35-86d0-4227-b0ae-9dc8b18743ac/Inbjudan.pdf",
           "published_time": "2025-08-25"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/115750/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54735/cfeb74a1-b33a-4072-b672-6cbc4f6cb172/PM.pdf",
           "published_time": "2025-09-01"
         },
         {
@@ -25492,7 +24933,7 @@
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/113188/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54758/a3ceb260-4376-4b8c-aab9-e7e87673d98c/PM.pdf",
           "published_time": "2025-06-15"
         }
       ],
@@ -25652,7 +25093,7 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/113278/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54775/33e2a457-be82-4db3-8cb2-11558e52d287/Inbjudan.pdf",
           "published_time": "2025-06-18"
         }
       ],
@@ -25837,7 +25278,7 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/112645/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54838/6165829b-9ad3-4d5b-be29-b946aff027c5/Inbjudan.PDF",
           "published_time": "2025-06-01"
         },
         {
@@ -26015,7 +25456,7 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/112795/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54839/b52b5952-0b4b-41ef-8d86-c4a4458ddebf/Inbjudan.pdf",
           "published_time": "2025-06-04"
         },
         {
@@ -26229,7 +25670,7 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/112796/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54840/1a5464fa-8df6-4691-a125-98714bcc68ee/Inbjudan.pdf",
           "published_time": "2025-06-04"
         }
       ],
@@ -26427,13 +25868,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/114507/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54931/dd2699c9-230b-460f-8a27-6ec46beb3dc0/Inbjudan.pdf",
           "published_time": "2025-08-12"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/115424/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54931/afa48d6b-247f-4681-8116-f33cb619bc32/PM.pdf",
           "published_time": "2025-09-02"
         }
       ],
@@ -26569,7 +26010,7 @@
         },
         {
           "role": "Course setters",
-          "name": "Lotta Lidman Lidman Almqvist"
+          "name": "Lotta Lidman Almqvist"
         }
       ],
       "classes": [
@@ -26596,13 +26037,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/113516/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54942/cd86b753-2d8e-4dc7-8543-129232edcdaf/Inbjudan.pdf",
           "published_time": "2025-06-25"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/115170/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/54942/67d034ea-a470-4e55-a5b2-04e191e162aa/PM.pdf",
           "published_time": "2025-08-20"
         }
       ],
@@ -26728,7 +26169,7 @@
         {
           "type": "Other",
           "title": "BANBESKRIVNING",
-          "url": "/Documents/Event/113427/BANBESKRIVNING",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/55125/a216e627-16b7-40d3-b130-620096343621/BANBESKRIVNING.pdf",
           "published_time": "2025-06-23"
         }
       ],
@@ -26844,7 +26285,7 @@
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/114027/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/55234/efe6dd76-9bc8-4e07-90b7-58042b04b2aa/PM.pdf",
           "published_time": "2025-07-14"
         }
       ],
@@ -27075,19 +26516,19 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/114245/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/55278/cb3d599c-12ca-4587-9165-f2dc33784e84/Inbjudan.docx",
           "published_time": "2025-07-27"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/115055/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/55278/de39bc0e-a601-47bd-8c41-e8756163aec4/PM.pdf",
           "published_time": "2025-08-18"
         },
         {
           "type": "Other",
           "title": "Kartnorm-MTBO",
-          "url": "/Documents/Event/115045/Kartnorm-MTBO",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/55278/a75cb89a-e8eb-48f5-95aa-c003cc0b5a43/Kartnorm-MTBO.pdf",
           "published_time": "2025-08-18"
         }
       ],
@@ -27322,13 +26763,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/114487/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/55338/5d0c2890-13fb-40d0-9fbc-b8c65f1fbfc7/Inbjudan.pdf",
           "published_time": "2025-08-04"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/115645/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/55338/be50a343-fe2e-4895-9ca8-e6323c3f263d/PM.pdf",
           "published_time": "2025-08-29"
         },
         {
@@ -27676,13 +27117,13 @@
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/114208/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/55383/eb161958-cf14-4539-90ca-fb1201edc5e5/PM.pdf",
           "published_time": "2025-08-10"
         },
         {
           "type": "Other",
           "title": "Teckenförklaring MTBO",
-          "url": "/Documents/Event/114658/Teckenf-rklaring-MTBO",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/55383/b2be9d8a-66d1-4b48-b90c-623f21c3e135/Teckenf-rklaring-MTBO.pdf",
           "published_time": "2025-08-10"
         }
       ],
@@ -27848,13 +27289,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/114345/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/55422/8a0b310a-4250-46b5-89ac-fad556859ecb/Inbjudan.pdf",
           "published_time": "2025-08-02"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/115669/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/55422/effbe2c8-f3ec-41b0-a450-8334620c1ac1/PM.pdf",
           "published_time": "2025-08-31"
         }
       ],
@@ -28065,7 +27506,7 @@
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/115362/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/55423/c3ffd2bb-2b9f-4cd8-ab61-9a04b0b5bcf6/PM.pdf",
           "published_time": "2025-08-24"
         }
       ],
@@ -28232,13 +27673,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/114405/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/55460/0b2aad6f-ca3c-4871-8223-0f6fd2b9c447/Inbjudan.pdf",
           "published_time": "2025-08-02"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/116617/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/55460/6d10bb63-2d00-41c8-8f97-f03fa1729a53/PM.pdf",
           "published_time": "2025-09-27"
         }
       ],
@@ -28395,13 +27836,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/114450/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/55463/a84657cb-16ac-42b3-853e-9bea9a5d44b5/Inbjudan.pdf",
           "published_time": "2025-08-03"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/115096/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/55463/2223adb1-ef07-427b-8b59-e85fdbd4450d/PM.pdf",
           "published_time": "2025-08-19"
         }
       ],
@@ -28540,13 +27981,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/114685/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/55506/4e22ad2c-654f-4cdb-b31e-7229d617c697/Inbjudan.pdf",
           "published_time": "2025-08-11"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/116316/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/55506/54eda805-2748-475a-899c-06c02d452bf7/PM.pdf",
           "published_time": "2025-09-15"
         },
         {
@@ -28728,13 +28169,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/114707/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/55585/06b4aa1a-4bad-4336-8203-870918ced2c9/Inbjudan.pdf",
           "published_time": "2025-08-12"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/115919/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/55585/c4521340-a349-440c-ae12-02b51400f6c5/PM.pdf",
           "published_time": "2025-09-04"
         },
         {
@@ -28746,13 +28187,13 @@
         {
           "type": "ResultList",
           "title": "Resultat Dalaserien per banor",
-          "url": "/Documents/Event/115947/Resultat-Dalaserien-per-banor",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/55585/717efab8-6394-4b71-bd86-c676c8e58392/Resultat-Dalaserien-per-banor.pdf",
           "published_time": "2025-09-04"
         },
         {
           "type": "Other",
           "title": "Slutställning Dalaserien MTBO 2025",
-          "url": "/Documents/Event/115979/Slutst-llning-Dalaserien-MTBO-2025",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/55585/f75393b2-48e3-483d-9dd1-77c909e89c49/Slutst-llning-Dalaserien-MTBO-2025.pdf",
           "published_time": "2025-09-05"
         }
       ],
@@ -28948,13 +28389,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/114803/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/55619/539e0d51-576a-4567-b17c-35dae1aa530c/Inbjudan.pdf",
           "published_time": "2025-09-15"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/116309/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/55619/b4c6a35f-1314-413a-a772-bdd29e5eabb1/PM.pdf",
           "published_time": "2025-09-15"
         },
         {
@@ -29127,13 +28568,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/115345/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/55659/ecbfb348-c75b-40e5-a710-139c0aa5fd0a/Inbjudan.pdf",
           "published_time": "2025-08-24"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/116107/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/55659/b0bde65e-0fd9-4f92-b205-7936cc0debd3/PM.pdf",
           "published_time": "2025-09-08"
         }
       ],
@@ -29352,7 +28793,7 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/115414/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/55739/eaf2f7c6-4fc7-4906-bd0c-dcf0fc3170f2/Inbjudan.pdf",
           "published_time": "2025-08-24"
         }
       ],
@@ -29431,7 +28872,7 @@
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/115451/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/55770/e488c066-6e1c-492d-bb19-7b893f012f71/PM.pdf",
           "published_time": "2025-08-25"
         }
       ],
@@ -29512,7 +28953,7 @@
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/115676/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/55771/e2752957-9a12-42ed-a310-8d7a06a79f14/PM.pdf",
           "published_time": "2025-08-30"
         }
       ],
@@ -29722,13 +29163,13 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/116336/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/55874/40a3935a-12ed-4731-b091-b4130b0d4ec5/Inbjudan.pdf",
           "published_time": "2025-09-15"
         },
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "/Documents/Event/116799/PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/55874/7778f44b-697b-4082-8888-dec410764346/PM.pdf",
           "published_time": "2025-10-01"
         },
         {
@@ -29740,7 +29181,7 @@
         {
           "type": "StartList",
           "title": "P-karta och väg till start",
-          "url": "/Documents/Event/116796/P-karta-och-v-g-till-start",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/55874/76c41815-7a28-4cfe-beb8-d423baa75945/P-karta-och-v-g-till-start.pdf",
           "published_time": "2025-09-30"
         }
       ],
@@ -30111,7 +29552,7 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/116358/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/56078/c6e15cf8-e77d-4936-ba0b-f0aa868ea370/Inbjudan.pdf",
           "published_time": "2025-09-18"
         },
         {
@@ -30202,7 +29643,7 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "/Documents/Event/116989/Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/56080/6c989f91-0c7c-4e83-926e-4f17986cb2b1/Inbjudan.pdf",
           "published_time": "2025-10-14"
         },
         {
