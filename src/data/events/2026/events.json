@@ -8194,6 +8194,12 @@
           "url": "Events/Show/57926",
           "title": null,
           "last_updated_at": "2026-03-13T12:42:26.542010+00:00"
+        },
+        {
+          "type": "Series",
+          "url": "/Standings/View/Series/1606",
+          "title": "Närkeserien 2026",
+          "last_updated_at": "2026-06-04T06:48:51.931970+00:00"
         }
       ],
       "documents": [
@@ -8789,6 +8795,12 @@
               "url": "/Entry?eventId=58115",
               "title": "Enter",
               "last_updated_at": "2026-06-01T07:05:49.924382+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=58115&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-06-04T06:48:51.931916+00:00"
             }
           ],
           "documents": [],
@@ -13501,15 +13513,57 @@
             {
               "type": "Livelox",
               "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/191879",
-              "title": "Map, courses and routes will be available in Livelox",
-              "last_updated_at": "2026-06-03T04:33:24.649367+00:00"
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-06-04T06:48:51.932051+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=59228&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-06-04T06:48:51.932051+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=59228&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-06-04T06:48:51.932051+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=59228&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-06-04T06:48:51.932051+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "Kort": 2,
+            "Mellan": 10,
+            "Lång": 3
+          },
+          "result_counts": {
+            "Kort": 2,
+            "Mellan": 10,
+            "Lång": 3
+          },
+          "fingerprints": [
+            "109d1c4016cd81d6940c0ee28aa47c3f68c311f0df309b49b29147e561d5a7d8",
+            "217ea47dff8d67b6fb20dfaeb1bcc4f0e5f1d10ab95e461a6d24514709712c69",
+            "2406c0d650252f0cf35b76a953e6bb3dcde5fe658063643f6d4042420ffb6a8d",
+            "687591c7aad1f7178a7d90298d4b6b097d39a172a0949d73a870c5d32ca773d7",
+            "833f1ba1c18d3e56b51d5f4a174b05657fdf99fbcc0e69c1961d0112f4060e94",
+            "867c75e68f941e7bb39f88a1a6b86c46418cbd11782c42dfbb7fe2249ef8a6f4",
+            "92859e6ca990489e59e151b0e742d7429146f12f351acbdba78fae8b9ad00364",
+            "96bcd73f4ca29f2505553a415264211ee226351d54a7c5cc0f52686508d36f75",
+            "a3b229b5d17639eb144c764f86a9fff1c13e6dbd8f281d8db101448acf03d7d6",
+            "c8cbf9c307c68a032e0b0d43423249ab551b5bdde31a1f0c781ed521ab3d6cd1",
+            "ccee8fb49145f39717bc3cde458371abcb1c4b64e0a69c13e95a81e88b6b62ad",
+            "e4ee627e23a0f59319cf0aa69572b975d9689165e1a508e9036f897b0009e672",
+            "e9caa297f283d2b31495eaa0950e349685326953a0b8f41c56a60fe381498336",
+            "ebf058feea488a8b6b2321499ecf8637286a5b931ed6e49eb75514aa570364a3",
+            "fa2b505bd2e3fc0f9a8f0fa254af9761aeeb852eba8ff1cfbfb975987b4a595d"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -13617,9 +13671,11 @@
         }
       ],
       "classes": [
-        "Kort 5 km",
-        "Lång 13 km",
-        "Mellan 8 km"
+        "3 km",
+        "5 km",
+        "Kort 4",
+        "Lång 11",
+        "Mellan 7"
       ],
       "urls": [
         {
@@ -13645,7 +13701,14 @@
             "lng": 18.2817005927516
           },
           "areas": [],
-          "urls": [],
+          "urls": [
+            {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/192115",
+              "title": "Map, courses and routes will be available in Livelox",
+              "last_updated_at": "2026-06-04T06:48:51.931956+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
