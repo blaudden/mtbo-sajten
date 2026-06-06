@@ -8210,6 +8210,12 @@
           "published_time": "2026-04-17"
         },
         {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57926/fe02e1d8-3a56-445a-b5b9-5e1e090899df/PM.Pdf",
+          "published_time": "2026-06-05"
+        },
+        {
           "type": "Other",
           "title": "Kartnorm MTBO",
           "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57926/5bec0ad9-fdf1-4abb-9847-bf53d4a0e2b0/Kartnorm-MTBO.pdf",
@@ -8719,8 +8725,8 @@
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58115/441b72ee-3a57-45a1-8d64-b421b5026bd1/PM.Pdf",
-          "published_time": "2026-05-31"
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58115/22c65eef-fc64-4375-998d-9c9342d81a98/PM.Pdf",
+          "published_time": "2026-06-05"
         },
         {
           "type": "Invitation",
@@ -13631,6 +13637,12 @@
               "url": "/Entry?eventId=59268",
               "title": "Enter",
               "last_updated_at": "2026-05-20T18:50:27.702962+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=59268&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-06-06T05:58:35.834790+00:00"
             }
           ],
           "documents": [],
