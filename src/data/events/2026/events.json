@@ -8246,12 +8246,6 @@
           "urls": [
             {
               "type": "EntryList",
-              "url": "/Entry?eventId=57926",
-              "title": "Enter and/or order services",
-              "last_updated_at": "2026-04-25T22:13:52.238516+00:00"
-            },
-            {
-              "type": "EntryList",
               "url": "/Events/Entries?eventId=57926&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-04-25T22:13:52.238516+00:00"
@@ -8748,7 +8742,7 @@
         {
           "race_number": 1,
           "name": "MTBO Smålandskusten Närtävling",
-          "datetimez": "2026-06-11T18:00:00+02:00",
+          "datetimez": "2026-06-11T17:45:00+02:00",
           "discipline": "Long",
           "night_or_day": "day",
           "position": {
@@ -8807,6 +8801,12 @@
               "url": "/Events/Entries?eventId=58115&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-06-04T06:48:51.931916+00:00"
+            },
+            {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/192655",
+              "title": "Map, courses and routes will be available in Livelox",
+              "last_updated_at": "2026-06-08T06:49:49.283507+00:00"
             }
           ],
           "documents": [],
@@ -9676,6 +9676,10 @@
         {
           "role": "Contact email",
           "name": "enc:DBoMBkYSTRMKXgAcCgcWHUIeIxoOBAgTBBhMDEIe"
+        },
+        {
+          "role": "Course setter",
+          "name": "Rasmus Nordgren"
         }
       ],
       "classes": [
@@ -9692,7 +9696,7 @@
         }
       ],
       "documents": [],
-      "information": "MTBO-träning i och runt Falun. Finns 3 alternativ - Nybörjare, Kort och Lång. Anmäl dig senast på måndagen för att vara säker på att få en karta. Cyklister som inte är med i OK Kåre betalar 40 kr, swish till OK Kåres nr: 1233999018.\nAlla är välkomna!",
+      "information": "MTBO-träning i och runt Falun. Finns 3 alternativ - Nybörjare, Kort och Lång. Anmäl dig senast på måndagen för att vara säker på att få en karta. Cyklister som inte är med i OK Kåre betalar 40 kr, swish till OK Kåres nr: 1233999018.\nAlla är välkomna!\nSamling vid Kårestugan.",
       "region": "Dalarna",
       "punching_system": "other",
       "races": [
@@ -9703,8 +9707,8 @@
           "discipline": "Long",
           "night_or_day": "day",
           "position": {
-            "lat": 60.6068507201042,
-            "lng": 15.6396419056936
+            "lat": 60.6218652611217,
+            "lng": 15.6683393842678
           },
           "areas": [],
           "urls": [
@@ -9713,6 +9717,12 @@
               "url": "/Entry?eventId=58163",
               "title": "Enter",
               "last_updated_at": "2026-04-12T19:43:08.816551+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=58163&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-06-08T06:49:49.283449+00:00"
             }
           ],
           "documents": [],
@@ -11517,15 +11527,15 @@
           "urls": [
             {
               "type": "EntryList",
-              "url": "/Entry?eventId=58595",
-              "title": "Enter",
-              "last_updated_at": "2026-06-01T07:05:49.924289+00:00"
-            },
-            {
-              "type": "EntryList",
               "url": "/Events/Entries?eventId=58595&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-06-01T07:05:49.924289+00:00"
+            },
+            {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/192568",
+              "title": "Map, courses and routes will be available in Livelox",
+              "last_updated_at": "2026-06-08T06:49:49.283412+00:00"
             }
           ],
           "documents": [],
@@ -13619,7 +13629,7 @@
         }
       ],
       "documents": [],
-      "information": "Värmlandsserien mtbo deltävling 3   2026 0615\nArena: OK Älgens klubbstuga i Grums.\nStart: Mellan 18-19\nMer info kommer",
+      "information": "Värmlandsserien mtbo deltävling 3   2026 0615\nArena: OK Älgens klubbstuga i Grums. Troligtvis tillgång till ombyte och toa.\nStart: Mellan 18-19\nKlasser DH 8km, DH 5 km, DH 3 km\nKarta: Mtbo Agnhammarskogen. Egenhändigt reviderad av arrangören.\nSkala: DH 8 km  1:10 000. DH 5 km  1:7 500. DH 3 km 1:7 500.\nAlla banor A4 storlek.\nTillåtet att köra på gult då jag ej lyckats få till orange färg.",
       "region": "Värmland",
       "punching_system": "Sportident",
       "races": [
