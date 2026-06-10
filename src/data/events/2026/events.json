@@ -2871,7 +2871,7 @@
           "published_time": null
         }
       ],
-      "information": "These events also offer a full range of age classes and are also part of the 2027 World Masters Series.  Entries for those classes are via Australian Eventor - link in Bulletin 1.\nhttps://eventor.orienteering.asn.au/Events/Show/23068\nWRE entrants based in Australia are encouraged to enter and pay through AUS Eventor. WRE entrants from outside Australia should enter here in IOF Eventor and may pay when they arrive at Registration at the Australian Champs events.",
+      "information": "These events also offer a full range of age classes and are also part of the 2027 World Masters Series.  Entries for all classes are via Australian Eventor - link in Bulletin 1.\nhttps://eventor.orienteering.asn.au/Events/Show/23066\nAll WRE entrants  are encouraged to enter and pay via PayPal through AUS Eventor. If it is not possible to pay in that way, WRE entrants from outside Australia may enter here in IOF Eventor and pay when they arrive at Registration at the Australian Champs events.\nNote re Battle of the Legends - entry in Legends classes does not qualify for WRE points.",
       "region": null,
       "punching_system": "Sportident",
       "races": [
@@ -2981,7 +2981,7 @@
           "published_time": null
         }
       ],
-      "information": "These events also offer a full range of age classes and are also part of the 2027 World Masters Series.  Entries for those classes are via Australian Eventor - link in Bulletin 1.\nhttps://eventor.orienteering.asn.au/Events/Show/23066\nWRE entrants based in Australia are encouraged to enter and pay through AUS Eventor. WRE entrants from outside Australia should enter here in IOF Eventor and may pay when they arrive at Registration at the Australian Champs events.\nNote re Battle of the Legends - entry in Legends classes does not qualify for WRE points.",
+      "information": "These events also offer a full range of age classes and are also part of the 2027 World Masters Series.  Entries for all classes are via Australian Eventor - link in Bulletin 1.\nhttps://eventor.orienteering.asn.au/Events/Show/23066\nAll WRE entrants  are encouraged to enter and pay via PayPal through AUS Eventor. If it is not possible to pay in that way, WRE entrants from outside Australia may enter here in IOF Eventor and pay when they arrive at Registration at the Australian Champs events.\nNote re Battle of the Legends - entry in Legends classes does not qualify for WRE points.",
       "region": null,
       "punching_system": "Sportident",
       "races": [
@@ -6632,11 +6632,11 @@
         {
           "type": "Bulletin",
           "title": "PM Boende",
-          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57105/b3a24927-1407-453c-968b-e9f625506c4a/PM-Boende.pdf",
-          "published_time": "2026-05-24"
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57105/bc1e990a-317a-4992-9ad7-dd926e4197b8/PM Boende.Pdf",
+          "published_time": "2026-06-07"
         }
       ],
-      "information": "2026-05-24: Boende PM publicerad\n2026-05-12: Avlyst område utökat. Norbyvägen tillåten.\n2026-04-28: Inbjudan publicerad\n2026-03-25: Deltagande i Uppsala möte den 25–26 april är tillåtet, under förutsättning att inget försök till rekognosering av MTBO-terrängen görs.",
+      "information": "2026-05-24, 2026-06-07: Boende PM publicerat och uppdaterat med Husbilsparkering\n2026-05-12: Avlyst område utökat. Norbyvägen tillåten.\n2026-04-28: Inbjudan publicerad\n2026-03-25: Deltagande i Uppsala möte den 25–26 april är tillåtet, under förutsättning att inget försök till rekognosering av MTBO-terrängen görs.",
       "region": "Uppland",
       "punching_system": "Sportident",
       "races": [
@@ -7048,9 +7048,15 @@
           "title": "Invitation",
           "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57106/a2fd809a-b441-49d7-9882-03ccb3d3a05b/Invitation.pdf",
           "published_time": "2026-04-28"
+        },
+        {
+          "type": "Bulletin",
+          "title": "Boende PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57106/70ed4a09-012a-44a0-8dde-e4c1a0d2f625/Boende PM.Pdf",
+          "published_time": "2026-06-07"
         }
       ],
-      "information": "2026-05-24: Boende PM publicerad\n2026-04-28: Inbjudan publicerad",
+      "information": "2026-06-07: Boende PM publicerat och uppdaterat med Husbilsparkering\n2026-04-28: Inbjudan publicerad",
       "region": "Uppland",
       "punching_system": "Sportident",
       "races": [
@@ -7430,11 +7436,11 @@
         {
           "type": "Bulletin",
           "title": "Boende PM",
-          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57107/6dedb455-d6a2-4acf-a86a-6fe94cbfeae8/Boende-PM.pdf",
-          "published_time": "2026-05-24"
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57107/3e0601d9-8da7-4acf-8e7e-c07cf14e340f/Boende PM.Pdf",
+          "published_time": "2026-06-07"
         }
       ],
-      "information": "2026-05-24: Boende PM publicerad\n2026-04-28: Inbjudan publicerad\n2026-03-25: Deltagande i Uppsala möte den 25–26 april är tillåtet, under förutsättning att inget försök till rekognosering av MTBO-terrängen görs.",
+      "information": "2026-05-24, 2026-06-07: Boende PM publicerat och uppdaterat med Husbilsparkering\n2026-04-28: Inbjudan publicerad\n2026-03-25: Deltagande i Uppsala möte den 25–26 april är tillåtet, under förutsättning att inget försök till rekognosering av MTBO-terrängen görs.",
       "region": "Uppland",
       "punching_system": "Sportident",
       "races": [
@@ -7888,18 +7894,26 @@
       "officials": [
         {
           "role": "Contact person",
-          "name": "Eero Niemi"
-        },
-        {
-          "role": "Contact email",
-          "name": "enc:CBEQAG0dChcMGUsBCA=="
-        },
-        {
-          "role": "Event director",
           "name": "Per-Johan Josefsson"
         },
         {
-          "role": "Course setter",
+          "role": "Contact email",
+          "name": "enc:HREQQUccCxMPXg8dHhEEHF4cDTIGHQQbAVoBAEA="
+        },
+        {
+          "role": "Event directors",
+          "name": "Christina Josefsson"
+        },
+        {
+          "role": "Event directors",
+          "name": "Per-Johan Josefsson"
+        },
+        {
+          "role": "Course setters",
+          "name": "Christina Josefsson"
+        },
+        {
+          "role": "Course setters",
           "name": "Per-Johan Josefsson"
         },
         {
@@ -7967,9 +7981,19 @@
           "datetimez": "2026-06-24T19:00:00+02:00",
           "discipline": "Middle",
           "night_or_day": "day",
-          "position": null,
+          "position": {
+            "lat": 63.173948428744,
+            "lng": 18.5440888715555
+          },
           "areas": [],
-          "urls": [],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Entry?eventId=57478",
+              "title": "Enter",
+              "last_updated_at": "2026-06-10T04:08:24.511138+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
@@ -8226,6 +8250,12 @@
           "title": "Inbjudan hela Närkeserien i MTBO",
           "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57926/8319fcd3-eca0-4f06-9657-abc684eac885/Inbjudan-hela-N-rkeserien-i-MTBO.pdf",
           "published_time": "2026-03-09"
+        },
+        {
+          "type": "ResultList",
+          "title": "Liveresultat",
+          "url": "https://liveresultat.orientering.se/followfull.php?comp=36959&lang=sv",
+          "published_time": null
         }
       ],
       "information": null,
@@ -8245,24 +8275,88 @@
           "areas": [],
           "urls": [
             {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/192940",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-06-10T04:08:24.511282+00:00"
+            },
+            {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=57926&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-04-25T22:13:52.238516+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=57926&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-06-10T04:08:24.511282+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=57926&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-06-10T04:08:24.511282+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "Dam 3 km": 3,
+            "Herr 3 km": 3,
+            "Dam 5 km": 4,
+            "Herr 5 km": 5,
+            "Dam 8 km": 8,
+            "Herr 8 km": 9
+          },
+          "result_counts": {
+            "Dam 3 km": 3,
+            "Herr 3 km": 3,
+            "Dam 5 km": 4,
+            "Herr 5 km": 5,
+            "Dam 8 km": 8,
+            "Herr 8 km": 9
+          },
+          "fingerprints": [
+            "00679e9a4bd5925d4f3f184caf234fc5357f2732d78cc9696b3594df81bb3a60",
+            "1999622c26ae26ad73da21659eb51368d52af6ec2ecc12690e259e7e6abff9bc",
+            "2b64917f3461b994b0655ce920c25ca765313a6070570b5500ae8332ac5ad365",
+            "2e5e3bbfd01ae18e40b3eef34e55a37e3a66f61577478b67a54a041e0c60833d",
+            "33dcd3ad458192012822d15395684ee2f9d979ee80356a97d543637449b13e94",
+            "4d26ffd50106cde84c863e8c10d437c0850c1583d3610be5c731aff71535318b",
+            "543e028cde84de4daf25553ca4aee40cdb2fcf1dcdff67daa764b358a3437c35",
+            "552ff1762cc52f67206dda12dcaa87e370099c7bd7e4434db50c9bb5b60b809b",
+            "575aa783449ada8ce155d3e34ade7c4f707caa07cde2feb0730b10bb5e79ed06",
+            "59df5086ace207f11629c05138b3143ecbd1aaa2632e9fee2de3df775ea7939e",
+            "5fe86e4bb4b4f249511fa34d14bb3b8993008d524f059c0d35a463a2a1a886db",
+            "6bde9865de2a051a86a2e7d79a005a3ea68251d4524da26137616d98c2af1506",
+            "71d2dd3f8bc03875e6c57510255acebf0d06aef8bfe6cbc6c544570c754dd702",
+            "72cb9bc4417a980d7951c51a64451e30e879a8aed921c53d8e7348afd1fe9a7f",
+            "7ebeb47531c126471f67f4c2fee9ba8c49f7deb428a665ca5d43658bc35228c0",
+            "7fcd3cf4727928bf7b7143428d878f81e3d1afd6eb2e59f542ab3bd1676aadcb",
+            "874275099a9ca50221a9236d40d65c554288f82839302e718551fa51038306ca",
+            "8cd9098e6374bfeaada1f0109b2e5907c8c1abc2b6d92e567453ae28b8834c0e",
+            "92a9f679fa8d0b00d8f65defcfce144d9631794834a4a09e6326474247908484",
+            "99993e1321493302a78195d71f404aa4b7216684cd36e9d5b272c1fd9d6e93bb",
+            "9a00480c5323f52c1c70561aebff208f25cb4de0c4ef32d99734b3ea81711831",
+            "a15bab33315a373f4dd8003258e633b2516924a18853b90940ad4c05f7547533",
+            "a1baf0de033e9552ea9eef494324f5c3bb4b3021c4a98886e0ce216d9f739ae0",
+            "b9ad215200ba7206effa6b23120df8680ae83f802fd05604904655aaf79fa125",
+            "c29cb8878e84a57e151b73063442ebe465c7b4cb3dd6f48db7a7afa2c9511f7e",
+            "d4100d9346700e258ec112e4fb1208ed0775ff3895c89ded94a77cacafd34326",
+            "d502c04b3118e5f0788d09b8c0a758d0f14ef843a14bdda43a444d898f070146",
+            "dce0418f6f721651f2fefca1ea4b1e123e3e0d7466d28e92b81a16e14aeccd50",
+            "ddccc8840629aaa141ed38331543ac15c0c8106ebbc5f3f5028d61845ab7cf5d",
+            "f2b5ae66e8dd06fe3972b532b9185a23dac50684d8cb95f5f63ee332ea35ea9b",
+            "fd232ff4d3affe39a8df1bc2ef5b0f1902f5d2b07c49efcdfc7d5bc43dbcf13a"
+          ]
         }
       ],
       "entry_deadlines": []
     },
     {
       "id": "SWE_57927",
-      "name": "Närkeserien i MTBO deltävling 3",
+      "name": "Närkeserien deltävling 3 och Värmlandsserien deltävling 4 i MTBO",
       "start_time": "2026-07-13",
       "end_time": "2026-07-13",
       "status": "Sanctioned",
@@ -8310,14 +8404,20 @@
           "url": "Events/Show/57927",
           "title": null,
           "last_updated_at": "2026-03-13T12:42:26.542024+00:00"
+        },
+        {
+          "type": "Series",
+          "url": "/Standings/View/Series/1606",
+          "title": "Närkeserien 2026",
+          "last_updated_at": "2026-06-10T04:08:24.511118+00:00"
         }
       ],
       "documents": [
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57927/f65f9871-cf04-4a61-a3c8-26a072a76112/Inbjudan.pdf",
-          "published_time": "2026-05-13"
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57927/2e11c676-2c54-44c0-ad92-9ab3c3f50365/Inbjudan.Pdf",
+          "published_time": "2026-06-07"
         },
         {
           "type": "Other",
@@ -8338,7 +8438,7 @@
       "races": [
         {
           "race_number": 1,
-          "name": "Närkeserien i MTBO deltävling 3",
+          "name": "Närkeserien deltävling 3 och Värmlandsserien deltävling 4 i MTBO",
           "datetimez": "2026-07-13T18:00:00+02:00",
           "discipline": "Middle",
           "night_or_day": "day",
@@ -8410,6 +8510,12 @@
           "url": "Events/Show/57928",
           "title": null,
           "last_updated_at": "2026-03-13T12:42:26.541951+00:00"
+        },
+        {
+          "type": "Series",
+          "url": "/Standings/View/Series/1606",
+          "title": "Närkeserien 2026",
+          "last_updated_at": "2026-06-10T04:08:24.510918+00:00"
         }
       ],
       "documents": [
@@ -8501,6 +8607,12 @@
           "url": "Events/Show/57929",
           "title": null,
           "last_updated_at": "2026-03-13T12:42:26.541940+00:00"
+        },
+        {
+          "type": "Series",
+          "url": "/Standings/View/Series/1606",
+          "title": "Närkeserien 2026",
+          "last_updated_at": "2026-06-10T04:08:24.511588+00:00"
         }
       ],
       "documents": [
@@ -8790,12 +8902,6 @@
             }
           ],
           "urls": [
-            {
-              "type": "EntryList",
-              "url": "/Entry?eventId=58115",
-              "title": "Enter",
-              "last_updated_at": "2026-06-01T07:05:49.924382+00:00"
-            },
             {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=58115&groupBy=EventClass",
@@ -9712,12 +9818,6 @@
           },
           "areas": [],
           "urls": [
-            {
-              "type": "EntryList",
-              "url": "/Entry?eventId=58163",
-              "title": "Enter",
-              "last_updated_at": "2026-04-12T19:43:08.816551+00:00"
-            },
             {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=58163&groupBy=EventClass",
@@ -11526,23 +11626,68 @@
           ],
           "urls": [
             {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/192568",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-06-10T04:08:24.510811+00:00"
+            },
+            {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=58595&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-06-01T07:05:49.924289+00:00"
             },
             {
-              "type": "Livelox",
-              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/192568",
-              "title": "Map, courses and routes will be available in Livelox",
-              "last_updated_at": "2026-06-08T06:49:49.283412+00:00"
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=58595&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-06-10T04:08:24.510811+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=58595&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-06-10T04:08:24.510811+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "KORTA": 3,
+            "MELLAN": 8,
+            "LÅNGA": 13
+          },
+          "result_counts": {
+            "KORTA": 3,
+            "MELLAN": 8,
+            "LÅNGA": 13
+          },
+          "fingerprints": [
+            "023256d2ddd7ad429308e366f1cc4061c8c64ca2f13b58e491eae73284ab3531",
+            "11bdaeacec8408b6cfdbc4cd3aceebcf7658ac5e2df1d9af63dcce629c9afac8",
+            "179e8bdc3009f84d579b853e0d45a3fe7fe578df27ef42cad599690ff6e4bd4f",
+            "2a3d55dff31f056e2ca3843c105500308a49414261a143e0b1d48e49ffda9785",
+            "47d6a4f8bea6759a4434b8cbe26ac8b893e3b76fae7db3400ab792c9f24bffd3",
+            "4a1c9fd9483f89ce918f56c0c98c16e72ad8d2678df5186da0fdee8f30fb304d",
+            "52a5b7efca0adb8b1458dd745fe52a561b5414cb1e028b969b59a821f55bf219",
+            "5e37237bb560703f675bc3c76a56c56ebddc288b0379a9bf119b8bf1e200a42b",
+            "5f7a3ce70820c1dedc0dcaa08879c2a4a10c0ce0a25dc5ab731ee547d822d187",
+            "791d8a10ee8d96256f62c55ff85688e71dcee4126b0f3bdd8443be6c850599b8",
+            "7a95e339e012163056e0d3dc6673f462222a122302a7568f58ad8fe6759f9524",
+            "7ebd0fa4ff0ed03c52f66f0ed2d724d9c3f99bdbfb65e73566f3146d6f8fd160",
+            "a62b339b6e8cb74234b214197f795a403c63c379d21d79c44234d64c1234f6c6",
+            "a7d5d7872e35409a5a20e6002fa7d9b8aaad9cd35423e542b6a0fb3da5f24660",
+            "a89dcdfbade3e6e875542f7a77b20dc30c4e3d3c20249790203f8d8e7a1e5ca7",
+            "aaaefd04a3033f4b6e3bf0f17a2fc1ac360938e2f01683667d1bbeda9ea03143",
+            "bc8dfe96b329b431185c1422211e30f13fc2279f47520d36fcd1402d5b11ae39",
+            "bf120e220b794edf4a210e16f4f74faa97078cf0555d2019e62cd532db614f15",
+            "c3422ef4b86d217cddb5be5417998ba2a701a848e4c6a9b34a6bb7b5198e5d0d",
+            "c4a5802936681506787eaadcbd6e86de3e9b0e2f02771f8804dbfca47d961c50",
+            "cc931d60a11c97fce606469e7d26012b1128859d6ffcb80a9ab45599773ab7c9",
+            "d9ec700e75005f2c50fd708d6caea014535ae0f77dd8b4f28c5382f8a6131de8",
+            "deb599283419e3af8a8786074d5ee4bafe5b18e0320c9ec6ff5638ce266cdc1d",
+            "fbb6867d53596b140d076032db706c72ab3e011cf2f8fc5d9ac7cebcbcd89620"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -13130,6 +13275,12 @@
               "url": "/Entry?eventId=59057",
               "title": "Enter",
               "last_updated_at": "2026-05-31T16:36:24.775236+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=59057&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-06-10T04:08:24.511266+00:00"
             }
           ],
           "documents": [],
