@@ -5,7 +5,7 @@
 import { Icon } from 'astro-icon/components';
 import { Image } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
-import { resolveRelativeUrl } from '~/utils/events';
+import { resolveRelativeUrl, getSmartIconInfo, getRaceTerminology } from '~/utils/events';
 import type { ScraperEvent } from '~/types/events';
 
 import liveloxIcon from '~/assets/images/livelox-icon.png';
@@ -13,16 +13,50 @@ import eventorSweIcon from '~/assets/images/eventor-swe.png';
 import eventorIofIcon from '~/assets/images/eventor-iof.png';
 import eventorNorIcon from '~/assets/images/eventor-nor.png';
 
-import { getSmartIconInfo } from '~/utils/events';
-
 interface Props {
   event: ScraperEvent;
 }
 
 const { event } = Astro.props;
 
-// URLs that are not Path type (those are used for external link)
-const relatedUrls = (event.urls || []).filter((u) => u.type !== 'Path');
+// Aggregate and deduplicate URLs from event level and all race levels (excluding Path type)
+const relatedUrls: Array<{ title: string; url: string; type: string }> = [];
+const seenUrls = new Set<string>();
+
+// Add event-level URLs
+for (const url of event.urls || []) {
+  if (url.type === 'Path') continue;
+  const resolvedUrl = resolveRelativeUrl(url.url, event);
+  if (!seenUrls.has(resolvedUrl)) {
+    seenUrls.add(resolvedUrl);
+    relatedUrls.push({
+      title: url.title || url.type,
+      url: resolvedUrl,
+      type: url.type,
+    });
+  }
+}
+
+// Add race-level URLs
+const { singular: term } = getRaceTerminology(event);
+const hasMultipleRaces = event.races.length > 1;
+
+for (let i = 0; i < event.races.length; i++) {
+  const race = event.races[i];
+  const prefix = hasMultipleRaces ? `${term} ${race.race_number || i + 1}: ` : '';
+  for (const url of race.urls || []) {
+    if (url.type === 'Path') continue;
+    const resolvedUrl = resolveRelativeUrl(url.url, event);
+    if (!seenUrls.has(resolvedUrl)) {
+      seenUrls.add(resolvedUrl);
+      relatedUrls.push({
+        title: prefix + (url.title || url.type),
+        url: resolvedUrl,
+        type: url.type,
+      });
+    }
+  }
+}
 ---
 
 {
@@ -31,8 +65,7 @@ const relatedUrls = (event.urls || []).filter((u) => u.type !== 'Path');
       <h2 class="text-xl font-semibold mb-4 dark:text-white">Länkar</h2>
       <ul class="space-y-2">
         {relatedUrls.map((url) => {
-          const resolvedUrl = resolveRelativeUrl(url.url, event);
-          const iconInfo = getSmartIconInfo(resolvedUrl, url.title || url.type, url.type);
+          const iconInfo = getSmartIconInfo(url.url, url.title, url.type);
 
           let iconImage: ImageMetadata | undefined;
           if (iconInfo.type === 'image') {
@@ -45,7 +78,7 @@ const relatedUrls = (event.urls || []).filter((u) => u.type !== 'Path');
           return (
             <li>
               <a
-                href={resolvedUrl}
+                href={url.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 class="inline-flex items-center gap-2 text-sm text-primary hover:underline"
@@ -55,7 +88,7 @@ const relatedUrls = (event.urls || []).filter((u) => u.type !== 'Path');
                 ) : (
                   <Icon name={iconInfo.name || 'tabler:link'} class="w-4 h-4" />
                 )}
-                {url.title || url.type}
+                {url.title}
               </a>
             </li>
           );

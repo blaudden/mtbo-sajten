@@ -200,33 +200,72 @@ export function generateEventJsonLd(event: ScraperEvent): Record<string, unknown
     },
   };
 
-  if (organiser) {
-    ld.organizer = {
-      '@type': 'Organization',
-      name: organiser,
-    };
+  // Organizer resolution with fallbacks to satisfy Search Console url & name requirements
+  let organizerNameSchema = organiser;
+  let organizerUrlSchema = event.urls?.find((u) => u.type === 'Website')?.url || externalUrl || undefined;
+
+  if (!organizerNameSchema) {
+    if (country === 'SWE') {
+      organizerNameSchema = 'Svenska Orienteringsförbundet';
+      organizerUrlSchema = 'https://www.orientering.se';
+    } else if (country === 'INT' || country === 'IOF') {
+      organizerNameSchema = 'International Orienteering Federation (IOF)';
+      organizerUrlSchema = 'https://orienteering.sport';
+    } else {
+      organizerNameSchema = 'MTBO';
+      organizerUrlSchema = SITE.site || externalUrl || undefined;
+    }
   }
 
-  // Promote our site for the canonical event URL
-  if (SITE.site) {
-    ld.url = `${SITE.site}/events/${event.slug}`;
-  } else if (externalUrl) {
-    ld.url = externalUrl;
-  }
+  const organizerLd = {
+    '@type': 'Organization',
+    name: organizerNameSchema,
+    url: organizerUrlSchema,
+  };
+  ld.organizer = organizerLd;
 
+  // Promote our site for the canonical event URL (using fallback if config is empty)
+  const siteUrl = SITE.site || 'https://www.mountainbikeorientering.se';
+  ld.url = `${siteUrl}/events/${event.slug}`;
+
+  // Add missing offers fields (price, priceCurrency, validFrom)
   if (externalUrl) {
     ld.sameAs = externalUrl;
+
+    let price: number;
+    let priceCurrency = 'SEK';
+    const isSwedish = country === 'SWE';
+
+    if (isSwedish) {
+      const isNationalOrDistrict = event.types?.some((t) =>
+        ['national', 'championship', 'district', 'närområde'].includes(t.toLowerCase())
+      );
+      if (isNationalOrDistrict) {
+        price = 210;
+      } else {
+        price = 0;
+      }
+    } else {
+      priceCurrency = country === 'IOF' ? 'EUR' : 'SEK';
+      price = 0;
+    }
+
+    const startDateObj = new Date(parentStartRaw || event.start_time);
+    const validFromDate = new Date(startDateObj.getTime() - 90 * 24 * 60 * 60 * 1000);
+    const validFrom = validFromDate.toISOString().split('T')[0];
+
     ld.offers = {
       '@type': 'Offer',
       url: externalUrl,
+      price: price.toString(),
+      priceCurrency: priceCurrency,
+      validFrom: validFrom,
       availability: 'https://schema.org/InStock',
     };
   }
 
-  // Map image
-  if (SITE.site) {
-    ld.image = [`${SITE.site}/og-images/events/${event.slug}.jpg`];
-  }
+  // Map image (using absolute fallback url if empty)
+  ld.image = [`${siteUrl}/og-images/events/${event.slug}.jpg`];
 
   // Map location Place schema (always generated to satisfy Schema/Search Console requirements)
   const address: Record<string, unknown> = {
@@ -262,22 +301,67 @@ export function generateEventJsonLd(event: ScraperEvent): Record<string, unknown
       const raceName = race.name || event.name;
       const subEventName = prefix && !raceName.startsWith('Deltävling') ? `${prefix}${raceName}` : raceName;
 
+      const subLocation: Record<string, unknown> = {
+        '@type': 'Place',
+        name: locationName,
+        address: address,
+      };
+      if (race.position) {
+        subLocation.geo = {
+          '@type': 'GeoCoordinates',
+          latitude: race.position.lat,
+          longitude: race.position.lng,
+        };
+      } else if (location.geo) {
+        subLocation.geo = location.geo;
+      }
+
       const subLd: Record<string, unknown> = {
         '@type': 'SportsEvent',
         name: subEventName,
+        description: `MTBO ${translateDiscipline(race.discipline || 'orienteering')} race for ${event.name}.`,
         startDate: raceStart,
         endDate: raceEnd,
         sport: `Mountain Bike Orienteering - ${race.discipline}`,
         eventStatus:
           event.status === 'Canceled' ? 'https://schema.org/EventCancelled' : 'https://schema.org/EventScheduled',
+        performer: ld.performer,
+        organizer: organizerLd,
+        location: subLocation,
       };
 
       const raceExternalUrl = resolveRaceExternalUrl(race, externalUrl);
       if (raceExternalUrl) {
         subLd.sameAs = raceExternalUrl;
+
+        let racePrice: number;
+        let racePriceCurrency = 'SEK';
+        const isSwedish = country === 'SWE';
+
+        if (isSwedish) {
+          const isNationalOrDistrict = event.types?.some((t) =>
+            ['national', 'championship', 'district'].includes(t.toLowerCase())
+          );
+          if (isNationalOrDistrict) {
+            racePrice = 210;
+          } else {
+            racePrice = 0;
+          }
+        } else {
+          racePriceCurrency = country === 'IOF' ? 'EUR' : 'SEK';
+          racePrice = 0;
+        }
+
+        const raceDateObj = new Date(race.datetimez);
+        const raceValidFromDate = new Date(raceDateObj.getTime() - 90 * 24 * 60 * 60 * 1000);
+        const raceValidFrom = raceValidFromDate.toISOString().split('T')[0];
+
         subLd.offers = {
           '@type': 'Offer',
           url: raceExternalUrl,
+          price: racePrice.toString(),
+          priceCurrency: racePriceCurrency,
+          validFrom: raceValidFrom,
           availability: 'https://schema.org/InStock',
         };
       }

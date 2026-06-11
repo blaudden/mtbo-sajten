@@ -602,3 +602,16 @@ export function getSmartIconInfo(urlStr: string, title?: string, docType?: strin
 
   return { type: 'icon', name: 'tabler:file-text' };
 }
+
+/**
+ * Resolves the Swedish singular and plural terminology for event races.
+ * - Sweden (SWE) and Norway (NOR) multi-race events use "Etapp" / "Etapper".
+ * - Other/IOF events use "Tävling" / "Tävlingar".
+ */
+export function getRaceTerminology(event: ScraperEvent): { singular: string; plural: string } {
+  const country = resolveCountryCode(event);
+  if (country === 'SWE' || country === 'NOR') {
+    return { singular: 'Etapp', plural: 'Etapper' };
+  }
+  return { singular: 'Tävling', plural: 'Tävlingar' };
+}

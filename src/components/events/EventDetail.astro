@@ -4,7 +4,13 @@
  * Orchestrates atomic components: Header, InfoGrid, RaceTable, Documents, Links.
  */
 import type { ScraperEvent } from '~/types/events';
-import { formatEventDateRange, resolveCountryCode, getOrganiserName, resolveExternalUrl } from '~/utils/events';
+import {
+  formatEventDateRange,
+  resolveCountryCode,
+  getOrganiserName,
+  resolveExternalUrl,
+  formatRaceDate,
+} from '~/utils/events';
 import { Icon } from 'astro-icon/components';
 
 import EventHeader from './EventHeader.astro';
@@ -23,7 +29,10 @@ interface Props {
 const { event } = Astro.props;
 const countryCode = resolveCountryCode(event);
 const organiserName = getOrganiserName(event);
-const dateRange = formatEventDateRange(event.start_time, event.end_time);
+const dateRange =
+  event.races.length === 1
+    ? formatRaceDate(event.races[0].datetimez, { includeYear: true, includeTime: true })
+    : formatEventDateRange(event.start_time, event.end_time);
 const externalUrl = resolveExternalUrl(event);
 
 // Status badge styling
@@ -64,6 +73,7 @@ const externalLinkLabel = isEventor
       region={event.region ?? undefined}
       punchingSystem={event.punching_system ?? undefined}
       discipline={event.races.length === 1 ? event.races[0].discipline : undefined}
+      nightOrDay={event.races.length === 1 ? event.races[0].night_or_day || undefined : undefined}
     />
   </div>
 
@@ -84,7 +94,7 @@ const externalLinkLabel = isEventor
 
       <EventMap event={event} />
 
-      <EventRaceTable event={event} />
+      {event.races.length > 1 && <EventRaceTable event={event} />}
 
       <EventDocuments event={event} />
 

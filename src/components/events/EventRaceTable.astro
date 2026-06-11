@@ -3,7 +3,7 @@
  * Race table for the event detail page.
  */
 import type { ScraperEvent } from '~/types/events';
-import { formatRaceDate } from '~/utils/events';
+import { formatRaceDate, getRaceTerminology } from '~/utils/events';
 import DisciplineBadge from './DisciplineBadge.astro';
 import { Icon } from 'astro-icon/components';
 
@@ -13,8 +13,7 @@ interface Props {
 
 const { event } = Astro.props;
 const raceCount = event.races.length;
-const raceTypePlural = 'Deltävlingar';
-const raceTypeSingular = 'Deltävling';
+const { singular: raceTypeSingular, plural: raceTypePlural } = getRaceTerminology(event);
 const raceHeadingText = raceCount === 1 ? raceTypeSingular : `${raceTypePlural} (${raceCount})`;
 ---
 

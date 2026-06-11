@@ -31,6 +31,13 @@ const isCanceled = event.status === 'Canceled';
     {event.name}
   </h1>
   {
+    event.races.length === 1 &&
+      event.races[0].name &&
+      event.races[0].name.toLowerCase() !== event.name.toLowerCase() && (
+        <p class="text-xl md:text-2xl text-muted font-heading font-semibold mt-1">{event.races[0].name}</p>
+      )
+  }
+  {
     event.types && event.types.length > 0 && (
       <div class="flex flex-wrap gap-1.5 mt-2">
         {event.types.map((type) => (
