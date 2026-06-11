@@ -7965,6 +7965,12 @@
       ],
       "documents": [
         {
+          "type": "Invitation",
+          "title": "Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57478/c275bd8c-81f3-475f-bb6b-3f4f34d47943/Inbjudan.Pdf",
+          "published_time": "2026-06-10"
+        },
+        {
           "type": "Other",
           "title": "ÖVIKSSERIEN 2026",
           "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57478/1c15625c-6a3c-4eb7-bfd6-61836d3e6eb9/-VIKSSERIEN-2026.pdf",
@@ -7992,6 +7998,12 @@
               "url": "/Entry?eventId=57478",
               "title": "Enter",
               "last_updated_at": "2026-06-10T04:08:24.511138+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=57478&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-06-11T06:54:32.401812+00:00"
             }
           ],
           "documents": [],
