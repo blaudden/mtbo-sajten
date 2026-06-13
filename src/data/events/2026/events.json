@@ -7967,8 +7967,8 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57478/c275bd8c-81f3-475f-bb6b-3f4f34d47943/Inbjudan.Pdf",
-          "published_time": "2026-06-10"
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57478/36fab2a2-dae1-4aee-9dbd-9f8f74e6148c/Inbjudan.Pdf",
+          "published_time": "2026-06-11"
         },
         {
           "type": "Other",
@@ -8915,23 +8915,60 @@
           ],
           "urls": [
             {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/192655",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-06-13T06:21:56.335530+00:00"
+            },
+            {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=58115&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-06-04T06:48:51.931916+00:00"
             },
             {
-              "type": "Livelox",
-              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/192655",
-              "title": "Map, courses and routes will be available in Livelox",
-              "last_updated_at": "2026-06-08T06:49:49.283507+00:00"
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=58115&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-06-13T06:21:56.335530+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=58115&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-06-13T06:21:56.335530+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "Lång": 7,
+            "Mellan": 4,
+            "Kort": 5
+          },
+          "result_counts": {
+            "Lång": 7,
+            "Mellan": 4,
+            "Kort": 5
+          },
+          "fingerprints": [
+            "06dd66b996caf315524a6f37da95941a5fb64f65300a759bbcbba0b3a8a1cfad",
+            "1422cf6b518f5ab25cb293ef4995567334381e0b1f65504fe1604352987d6833",
+            "39f4b9fdb594672e393b684adcd70d31a71fbb6a091bdd912a1c1c2d062dae4f",
+            "3f343b62ffdb4dd7a195c3b1f04d1e34bb56db1cd2e169be31ded9439a1b4470",
+            "68271db581c76ae55fd962a2fbc378686738685338dda43e4dac6099b7aabe35",
+            "74d875322384e60396db3f4f30a640b5c33591f607bbd4391126cd2897f75f5b",
+            "7eaec4b0e53dacd7b148e26b782d60248fbaac5bff7744a404fdae21b4516a78",
+            "881ba0653b2ddbb3f1feb4016494cba611aadbe024ac1475c1136c71422d1aec",
+            "a0fcc543bb6d79c7a6a65643c1572de106c126f5dcc52f8853cf6084a7d1ca16",
+            "a30691eba915ebb4e98cbfccbdc45a961a8c7982e7cb7cb63be35953bb5e8a2b",
+            "b4ec6dbda901c4f2e609b24223b3613a4fa101b1797eac26010a42a38b1b116d",
+            "ba573fe295690cc1352f175d7f0000a31e8fff450ad7417af8b6d50e8ff0bf96",
+            "bd024796426f6e88c7f301fefed8635d98b5cb712078edce0c034bddd202ce63",
+            "bd2b78236617fd742d73d75b541888d0e4a894559cb9870c451d3214590eb1fb",
+            "ca1dae3a0f8ef620f301abc5ea87a544e5c896b39888022944922125674ff995",
+            "f80bb954c7527dd5a8954a9bddaae66425b40ba96fde712bcf7638ecae5518a8"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -13890,8 +13927,8 @@
             {
               "type": "Livelox",
               "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/192115",
-              "title": "Map, courses and routes will be available in Livelox",
-              "last_updated_at": "2026-06-04T06:48:51.931956+00:00"
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-06-13T06:21:56.335647+00:00"
             }
           ],
           "documents": [],
