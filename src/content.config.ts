@@ -196,8 +196,48 @@ const eventCollection = defineCollection({
 
           if (data.events) {
             for (const event of data.events as ScraperEvent[]) {
+              // Helper to check if a URL pointing to a local .yaml file exists on disk.
+              // If the file was not imported/copied into the repository, we filter it out.
+              const shouldKeepUrl = (urlStr: string) => {
+                if (!urlStr) {
+                  // URL string is empty or undefined
+                  return false;
+                }
+
+                if (!urlStr.endsWith('.yaml')) {
+                  // URL does not end with .yaml
+                  return true;
+                }
+
+                if (!urlStr.startsWith('data/events/')) {
+                  // URL is not under data/events/
+                  return true;
+                }
+
+                const relativePath = urlStr.substring('data/events/'.length);
+                const absolutePath = path.join(process.cwd(), 'src', 'data', 'events', relativePath);
+
+                if (!fs.existsSync(absolutePath)) {
+                  // The referenced local YAML file does not exist on disk
+                  return false;
+                }
+
+                return true;
+              };
+
+              // Filter URLs at the event level
+              const filteredUrls = event.urls ? event.urls.filter((u) => shouldKeepUrl(u.url)) : undefined;
+
+              // Filter URLs at the race level
+              const filteredRaces = event.races.map((race) => ({
+                ...race,
+                urls: race.urls ? race.urls.filter((u) => shouldKeepUrl(u.url)) : undefined,
+              }));
+
               const enrichedEvent = {
                 ...event,
+                urls: filteredUrls,
+                races: filteredRaces,
                 year: parseInt(event.start_time.substring(0, 4), 10),
                 slug: event.id.toLowerCase().replace(/_/g, '-'),
                 countryCode: resolveCountryCode(event),
