@@ -13321,12 +13321,6 @@
           "urls": [
             {
               "type": "EntryList",
-              "url": "/Entry?eventId=59057",
-              "title": "Enter",
-              "last_updated_at": "2026-05-31T16:36:24.775236+00:00"
-            },
-            {
-              "type": "EntryList",
               "url": "/Events/Entries?eventId=59057&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-06-10T04:08:24.511266+00:00"
@@ -13829,7 +13823,7 @@
         }
       ],
       "documents": [],
-      "information": "Värmlandsserien mtbo deltävling 3   2026 0615\nArena: OK Älgens klubbstuga i Grums. Troligtvis tillgång till ombyte och toa.\nStart: Mellan 18-19\nKlasser DH 8km, DH 5 km, DH 3 km\nKarta: Mtbo Agnhammarskogen. Egenhändigt reviderad av arrangören.\nSkala: DH 8 km  1:10 000. DH 5 km  1:7 500. DH 3 km 1:7 500.\nAlla banor A4 storlek.\nTillåtet att köra på gult då jag ej lyckats få till orange färg.",
+      "information": "Värmlandsserien mtbo deltävling 3   2026 0615\nArena: OK Älgens klubbstuga i Grums. Troligtvis tillgång till ombyte och toa.\nStart: Mellan 18-19\nKlasser DH 8km, DH 5 km, DH 3 km\nKarta: Mtbo Agnhammarskogen. Egenhändigt reviderad av arrangören.\nSkala: DH 8 km  1:10 000. DH 5 km  1:7 500. DH 3 km 1:7 500.\nAlla banor A4 storlek.\nTillåtet att köra på gult då jag ej lyckats få till orange färg.\nOuppmärkta vindfällen kan finnas i skogen.",
       "region": "Värmland",
       "punching_system": "Sportident",
       "races": [
@@ -13844,15 +13838,15 @@
           "urls": [
             {
               "type": "EntryList",
-              "url": "/Entry?eventId=59268",
-              "title": "Enter",
-              "last_updated_at": "2026-05-20T18:50:27.702962+00:00"
-            },
-            {
-              "type": "EntryList",
               "url": "/Events/Entries?eventId=59268&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-06-06T05:58:35.834790+00:00"
+            },
+            {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/193417",
+              "title": "Map, courses and routes will be available in Livelox",
+              "last_updated_at": "2026-06-15T07:26:43.085551+00:00"
             }
           ],
           "documents": [],
