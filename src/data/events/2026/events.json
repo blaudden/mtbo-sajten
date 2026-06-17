@@ -3487,29 +3487,60 @@
         {
           "role": "Contact email",
           "name": "enc:GREDAl4YGhQTGRAeLRMPDkQfTREOHQ=="
+        },
+        {
+          "role": "Event director",
+          "name": "Ivan Serafini"
+        },
+        {
+          "role": "Course setter",
+          "name": "Maurizio Todeschini"
+        },
+        {
+          "role": "Course controller",
+          "name": "Nicola Fioretti"
         }
       ],
-      "classes": [],
+      "classes": [
+        "Men",
+        "Women"
+      ],
       "urls": [
         {
           "type": "Path",
           "url": "Events/Show/8916",
           "title": null,
           "last_updated_at": "2026-02-07T22:24:13.325040+00:00"
+        },
+        {
+          "type": "Website",
+          "url": "https://www.teamskyfriul.com/it/",
+          "title": null,
+          "last_updated_at": "2026-06-17T09:10:06.348275+00:00"
         }
       ],
-      "documents": [],
+      "documents": [
+        {
+          "type": "Bulletin",
+          "title": "Bulletin 1",
+          "url": "https://www.teamskyfriul.com/wp-content/uploads/2025/01/BULLETIN-1-OPAA-CUP-2026-WRE-MTB-O.pdf",
+          "published_time": null
+        }
+      ],
       "information": null,
       "region": null,
-      "punching_system": null,
+      "punching_system": "Sportident",
       "races": [
         {
           "race_number": 1,
           "name": "Coppa Italia Long",
-          "datetimez": "2026-09-27T00:00:00+02:00",
+          "datetimez": "2026-09-27T08:00:00+00:00",
           "discipline": "Other",
           "night_or_day": null,
-          "position": null,
+          "position": {
+            "lat": 46.3196158535435,
+            "lng": 13.0647467503781
+          },
           "areas": [],
           "urls": [],
           "documents": [],
@@ -6289,8 +6320,12 @@
       ],
       "officials": [
         {
-          "role": "Contact person",
+          "role": "Contact persons",
           "name": "Klaus Csúcs"
+        },
+        {
+          "role": "Contact persons",
+          "name": "Johan Höök"
         },
         {
           "role": "Contact phone number",
@@ -6302,14 +6337,52 @@
         },
         {
           "role": "Event director",
-          "name": "Klaus Csúcs"
+          "name": "Johan Höök"
+        },
+        {
+          "role": "Course setter",
+          "name": "Maffe Frost"
         },
         {
           "role": "Event controller",
           "name": "Magnus Blåudd"
         }
       ],
-      "classes": [],
+      "classes": [
+        "D10",
+        "D12",
+        "D14",
+        "D16",
+        "D17",
+        "D21",
+        "D40",
+        "D45",
+        "D50",
+        "D55",
+        "D60",
+        "D65",
+        "D70",
+        "D75",
+        "D80",
+        "H10",
+        "H12",
+        "H14",
+        "H16",
+        "H17",
+        "H21",
+        "H40",
+        "H45",
+        "H50",
+        "H55",
+        "H60",
+        "H65",
+        "H70",
+        "H75",
+        "H80",
+        "Öppen kort",
+        "Öppen lång",
+        "Öppen mellan"
+      ],
       "urls": [
         {
           "type": "Path",
@@ -6338,12 +6411,28 @@
         {
           "race_number": 1,
           "name": "MTBO, Publiktävling VM, lång",
-          "datetimez": "2026-08-28T00:00:00+02:00",
+          "datetimez": "2026-08-28T13:00:00+02:00",
           "discipline": "Long",
           "night_or_day": "day",
-          "position": null,
+          "position": {
+            "lat": 61.0088722412467,
+            "lng": 14.5212554252051
+          },
           "areas": [],
-          "urls": [],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Entry?eventId=56226",
+              "title": "Enter",
+              "last_updated_at": "2026-06-17T09:10:06.347739+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=56226&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-06-17T09:10:06.347739+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
@@ -6373,8 +6462,12 @@
       ],
       "officials": [
         {
-          "role": "Contact person",
+          "role": "Contact persons",
           "name": "Klaus Csúcs"
+        },
+        {
+          "role": "Contact persons",
+          "name": "Johan Höök"
         },
         {
           "role": "Contact phone number",
@@ -6386,14 +6479,52 @@
         },
         {
           "role": "Event director",
-          "name": "Klaus Csúcs"
+          "name": "Johan Höök"
+        },
+        {
+          "role": "Course setter",
+          "name": "Maffe Frost"
         },
         {
           "role": "Event controller",
           "name": "Magnus Blåudd"
         }
       ],
-      "classes": [],
+      "classes": [
+        "D10",
+        "D12",
+        "D14",
+        "D16",
+        "D18",
+        "D20",
+        "D21",
+        "D40",
+        "D45",
+        "D50",
+        "D55",
+        "D60",
+        "D65",
+        "D70",
+        "D75",
+        "H10",
+        "H12",
+        "H14",
+        "H16",
+        "H18",
+        "H20",
+        "H21",
+        "H40",
+        "H45",
+        "H50",
+        "H55",
+        "H60",
+        "H65",
+        "H70",
+        "H75",
+        "Öppen kort",
+        "Öppen lång",
+        "Öppen mellan"
+      ],
       "urls": [
         {
           "type": "Path",
@@ -6422,12 +6553,28 @@
         {
           "race_number": 1,
           "name": "MTBO, Publiktävling VM, medel",
-          "datetimez": "2026-08-29T00:00:00+02:00",
+          "datetimez": "2026-08-29T15:00:00+02:00",
           "discipline": "Middle",
           "night_or_day": "day",
-          "position": null,
+          "position": {
+            "lat": 61.0088698991595,
+            "lng": 14.5213629225575
+          },
           "areas": [],
-          "urls": [],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Entry?eventId=56227",
+              "title": "Enter",
+              "last_updated_at": "2026-06-17T09:10:06.347479+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=56227&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-06-17T09:10:06.347479+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
@@ -6457,8 +6604,12 @@
       ],
       "officials": [
         {
-          "role": "Contact person",
+          "role": "Contact persons",
           "name": "Klaus Csúcs"
+        },
+        {
+          "role": "Contact persons",
+          "name": "Johan Höök"
         },
         {
           "role": "Contact phone number",
@@ -6470,14 +6621,52 @@
         },
         {
           "role": "Event director",
-          "name": "Klaus Csúcs"
+          "name": "Johan Höök"
+        },
+        {
+          "role": "Course setter",
+          "name": "Maffe Frost"
         },
         {
           "role": "Event controller",
           "name": "Magnus Blåudd"
         }
       ],
-      "classes": [],
+      "classes": [
+        "D10",
+        "D12",
+        "D14",
+        "D16",
+        "D18",
+        "D20",
+        "D21",
+        "D40",
+        "D45",
+        "D50",
+        "D55",
+        "D60",
+        "D65",
+        "D70",
+        "D75",
+        "H10",
+        "H12",
+        "H14",
+        "H16",
+        "H18",
+        "H20",
+        "H21",
+        "H40",
+        "H45",
+        "H50",
+        "H55",
+        "H60",
+        "H65",
+        "H70",
+        "H75",
+        "Öppen kort",
+        "Öppen lång",
+        "Öppen mellan"
+      ],
       "urls": [
         {
           "type": "Path",
@@ -6506,12 +6695,28 @@
         {
           "race_number": 1,
           "name": "MTBO, Publiktävling VM, sprint",
-          "datetimez": "2026-08-30T00:00:00+02:00",
+          "datetimez": "2026-08-30T14:00:00+02:00",
           "discipline": "Sprint",
           "night_or_day": "day",
-          "position": null,
+          "position": {
+            "lat": 61.0089079355336,
+            "lng": 14.5213591599455
+          },
           "areas": [],
-          "urls": [],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Entry?eventId=56228",
+              "title": "Enter",
+              "last_updated_at": "2026-06-17T09:10:06.347609+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=56228&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-06-17T09:10:06.347609+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
@@ -6630,7 +6835,7 @@
           "published_time": "2026-04-28"
         },
         {
-          "type": "Bulletin",
+          "type": "Other",
           "title": "PM Boende",
           "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57105/bc1e990a-317a-4992-9ad7-dd926e4197b8/PM Boende.Pdf",
           "published_time": "2026-06-07"
@@ -7050,7 +7255,7 @@
           "published_time": "2026-04-28"
         },
         {
-          "type": "Bulletin",
+          "type": "Other",
           "title": "Boende PM",
           "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57106/70ed4a09-012a-44a0-8dde-e4c1a0d2f625/Boende PM.Pdf",
           "published_time": "2026-06-07"
@@ -7434,7 +7639,7 @@
           "published_time": "2026-04-28"
         },
         {
-          "type": "Bulletin",
+          "type": "Other",
           "title": "Boende PM",
           "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57107/3e0601d9-8da7-4acf-8e7e-c07cf14e340f/Boende PM.Pdf",
           "published_time": "2026-06-07"
@@ -8422,6 +8627,12 @@
           "url": "/Standings/View/Series/1606",
           "title": "Närkeserien 2026",
           "last_updated_at": "2026-06-10T04:08:24.511118+00:00"
+        },
+        {
+          "type": "Series",
+          "url": "/Standings/View/Series/1609",
+          "title": "VSMTBO 2026",
+          "last_updated_at": "2026-06-17T09:10:06.348127+00:00"
         }
       ],
       "documents": [
@@ -9759,8 +9970,8 @@
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58162/13a0cc3c-b347-4a38-9a55-671ce5532f88/PM.Pdf",
-          "published_time": "2026-06-01"
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58162/423c321c-dbcf-4043-aee2-bccdcadf8011/PM.Pdf",
+          "published_time": "2026-06-17"
         }
       ],
       "information": null,
@@ -9779,12 +9990,6 @@
           },
           "areas": [],
           "urls": [
-            {
-              "type": "EntryList",
-              "url": "/Entry?eventId=58162",
-              "title": "Enter",
-              "last_updated_at": "2026-04-12T19:43:08.816640+00:00"
-            },
             {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=58162&groupBy=EventClass",
@@ -13148,6 +13353,12 @@
           "url": "Events/Show/59028",
           "title": null,
           "last_updated_at": "2026-04-28T19:35:11.079810+00:00"
+        },
+        {
+          "type": "Series",
+          "url": "/Standings/View/Series/1609",
+          "title": "VSMTBO 2026",
+          "last_updated_at": "2026-06-17T09:10:06.348216+00:00"
         }
       ],
       "documents": [
@@ -13473,7 +13684,7 @@
           "published_time": "2026-05-18"
         },
         {
-          "type": "Bulletin",
+          "type": "Other",
           "title": "NYTT uppdaterat PM",
           "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/59069/06ded25c-55a0-42eb-b8f2-46ba864e0f38/NYTT-uppdaterat-PM.pdf",
           "published_time": "2026-05-18"
@@ -13820,6 +14031,12 @@
           "url": "Events/Show/59268",
           "title": null,
           "last_updated_at": "2026-05-20T18:50:27.702961+00:00"
+        },
+        {
+          "type": "Series",
+          "url": "/Standings/View/Series/1609",
+          "title": "VSMTBO 2026",
+          "last_updated_at": "2026-06-17T09:10:06.348082+00:00"
         }
       ],
       "documents": [],
@@ -13837,23 +14054,81 @@
           "areas": [],
           "urls": [
             {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/193417",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-06-17T09:10:06.348086+00:00"
+            },
+            {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=59268&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-06-06T05:58:35.834790+00:00"
             },
             {
-              "type": "Livelox",
-              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/193417",
-              "title": "Map, courses and routes will be available in Livelox",
-              "last_updated_at": "2026-06-15T07:26:43.085551+00:00"
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=59268&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-06-17T09:10:06.348086+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=59268&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-06-17T09:10:06.348086+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "Herrar 8 km": 14,
+            "Damer 8 km": 5,
+            "Herrar 5 km": 5,
+            "Damer 5 km": 3,
+            "Herrar 3 km": 2,
+            "Damer 3 km": 2
+          },
+          "result_counts": {
+            "Herrar 8 km": 14,
+            "Damer 8 km": 5,
+            "Herrar 5 km": 5,
+            "Damer 5 km": 3,
+            "Herrar 3 km": 2,
+            "Damer 3 km": 2
+          },
+          "fingerprints": [
+            "0761672688f369792df09b3f1c87d1602147903126163f52fca0dd3d5444473f",
+            "0c12c513a82f0eabefbc01b3dfa3c56a911322988c09fd749733341b153d7f41",
+            "0ccb3ef9587cdafab4cca3d7bdddc816fa6345e198162981d258d0f85947ac03",
+            "1f14d6b6177f54eda8c637291d654fe4b1bcedc62fe83b90efc5525399d5dac9",
+            "2065171c356b66d6be1bbcdfad9e1dace30671345c93b6528fcd18734f40b2cb",
+            "2dcd6dbc5d2a2e6211fc09afb2696524d453fce041aa0315d8fe82d7e1059e26",
+            "31cb1d892c4205d3aa8d58aca688094fe703419bb5cec6aa7e6776ffff4e5e6a",
+            "3a7d4a9c8b29646c9542f6efdcc75d5307b2df360551a6045d6a8e9101241f59",
+            "452cbd910af7c9fe3d3eeca9fe34d02308a3b5a89a69633c67c92b88128da856",
+            "476109e26fba416c52cfda89b4021b6f41f12700a312e9fbabb2d64ce537fd28",
+            "4b0bd80b886ce6a305bd66eabb8e450dd092b98048b9011e4c987cd8aff6d104",
+            "51e9a4bdc3599c04149067c1b482f20bef400c302101985c602868b447c0a8ca",
+            "5e6508c5c950ab410fb901e2edc0f9f1f586ffbb54cfac30a65202d59ca56a05",
+            "60256b6e26d7b2f9db1117d325c3c7647389aa39aef12fe50e8cb41ed1a4f9fb",
+            "6db04add4e02722bf9cbdfae1b6dd5123c5b3246acc3fc5aa0590351d8382acc",
+            "77b7a8785f275925aeee7a4e1b4368b6ac01a3ab50630237321fb1e62075a356",
+            "7aea3ed6783d9a0e583e12c5386a9437e1604f52fd93d5c4fbc879935d4d97b7",
+            "7bca59e045f91491ad0ecf56e7c6d26c965c7de5383ac87c492dc6e7b1a7784b",
+            "901ce25f832d80d4842147af9fd636e4f5f6c74b25bbc30d2c832d833d8410fd",
+            "927835126f5d64ff37450e8e2c0f875b4951fd6da8dea7fb9409f78f32a31cc0",
+            "a82929f542ae15937dae8b62599b9a82c9b06853ad9f447b3045974b13ded60f",
+            "b59dad9c5757b2d704f85f3be133856f8d3d4bef0e694aa37124bfe50cb32989",
+            "c0030a2165f968b7cde825e322251852affd9814f165a56bb898bddd6dda6a3a",
+            "caed1e23613048aa6f25fdd51a10b3d04969b6796e87768f41aef7a949a48ce2",
+            "d397d0fa611caa2c039b00215c2d1ddd0307cddba188bfffea1b2b1015847f5a",
+            "e1f6c20a1dbd3f14d80dda7883d4cefddef4dd27aeb0edd8575c4e0d842fa476",
+            "ebb1952188e17d9ab6c302610a3744d222d5d58484beb95b41167cd8803c2081",
+            "f1e2a08120cc801a81baf15836922a3d44e549d5a94c2946349d5c6c1a10a6f3",
+            "f67714ecc6cf000f47c7280efcc103c214e3c99138b8e3699def64424bef2f01",
+            "f6a64798863533804ea8b3deec9b242c3e5c72ef6a844d09b8bfe06b96057181",
+            "ff2389e2885e406c19d1bdf6d8b506a0ab9305e90f8e6dcb4840991b3d9ab48c"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -13923,13 +14198,51 @@
               "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/192115",
               "title": "Map, courses and routes in Livelox",
               "last_updated_at": "2026-06-13T06:21:56.335647+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=59343&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-06-17T09:10:06.348191+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=59343&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-06-17T09:10:06.348191+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=59343&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-06-17T09:10:06.348191+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "Kort 4,5 km": 1,
+            "Mellan 7,3 km": 6,
+            "Lång 11,3 km": 4
+          },
+          "result_counts": {
+            "Kort 4,5 km": 1,
+            "Mellan 7,3 km": 6,
+            "Lång 11,3 km": 4
+          },
+          "fingerprints": [
+            "687591c7aad1f7178a7d90298d4b6b097d39a172a0949d73a870c5d32ca773d7",
+            "7c33a3ca0a31c314987abc786d0f014e47120bada35336b37b7fab72c097d6d6",
+            "833f1ba1c18d3e56b51d5f4a174b05657fdf99fbcc0e69c1961d0112f4060e94",
+            "96bcd73f4ca29f2505553a415264211ee226351d54a7c5cc0f52686508d36f75",
+            "ac9b96708bb2791290506a37bab8466be0ecedd3f23ffc5f710c81afc9e16f11",
+            "c8cbf9c307c68a032e0b0d43423249ab551b5bdde31a1f0c781ed521ab3d6cd1",
+            "c9e233627bc2f4f6a752c163d7b2a5eed9e29d84117c4e471fd33203f6733665",
+            "d87ca3d4da38d5a252d06275794b37b54ebb53a07d16b22cf7e84873f7b350c3",
+            "e2172f6e3f35e00c5ac4267d6739398b8058053dadab59f7cfb21fa063d0b13e",
+            "e9caa297f283d2b31495eaa0950e349685326953a0b8f41c56a60fe381498336",
+            "fd8a2d6d5625e90564519b040f1aab21b0c26863e1903d0d5898bebeb6fdb1e4"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -14115,6 +14428,12 @@
           "url": "http://www.okfryksdalen.se",
           "title": null,
           "last_updated_at": "2026-06-03T04:33:24.649881+00:00"
+        },
+        {
+          "type": "Series",
+          "url": "/Standings/View/Series/1609",
+          "title": "VSMTBO 2026",
+          "last_updated_at": "2026-06-17T09:10:06.347539+00:00"
         }
       ],
       "documents": [],
@@ -14134,6 +14453,175 @@
           },
           "areas": [],
           "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_59614",
+      "name": "Värmlandsserien MTBO, deltävling 5",
+      "start_time": "2026-08-10",
+      "end_time": "2026-08-10",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Local"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "OK Tyr",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Magnus Stråle"
+        },
+        {
+          "role": "Contact phone number",
+          "name": "070-2115556"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:ABUFAVgATRAEEQgyChkDBkFdAB0M"
+        }
+      ],
+      "classes": [
+        "Kort utan tidtagning",
+        "Kortbana Dam",
+        "Kortbana Herr",
+        "Långbana Dam",
+        "Långbana Herr",
+        "Mellanbana Dam",
+        "Mellanbana Herr"
+      ],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/59614",
+          "title": null,
+          "last_updated_at": "2026-06-17T09:10:06.347682+00:00"
+        },
+        {
+          "type": "Series",
+          "url": "/Standings/View/Series/1609",
+          "title": "VSMTBO 2026",
+          "last_updated_at": "2026-06-17T09:10:06.347682+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "type": "Invitation",
+          "title": "Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/59614/1da1b8de-7583-42e2-854c-86444103b2de/Inbjudan.Pdf",
+          "published_time": "2026-06-12"
+        }
+      ],
+      "information": null,
+      "region": "Värmland",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "Värmlandsserien MTBO, deltävling 5",
+          "datetimez": "2026-08-10T18:00:00+02:00",
+          "discipline": "Middle",
+          "night_or_day": "day",
+          "position": {
+            "lat": 59.387950034853,
+            "lng": 13.3383268481089
+          },
+          "areas": [],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Entry?eventId=59614",
+              "title": "Enter",
+              "last_updated_at": "2026-06-17T09:10:06.347685+00:00"
+            }
+          ],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_59631",
+      "name": "MTBO-träning 16juni",
+      "start_time": "2026-06-16",
+      "end_time": "2026-06-16",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Club"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "Ålems OK",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Stefan Olsson"
+        },
+        {
+          "role": "Contact phone number",
+          "name": "070-2182110"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:HgAHCUwdTR0NAyUGCBgLDgMQDB8="
+        }
+      ],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/59631",
+          "title": null,
+          "last_updated_at": "2026-06-17T09:10:06.348115+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": "Småland",
+      "punching_system": "other",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "MTBO-träning 16juni",
+          "datetimez": "2026-06-16T16:00:00+02:00",
+          "discipline": "Long",
+          "night_or_day": "day",
+          "position": {
+            "lat": 56.9762321511733,
+            "lng": 16.3061955012625
+          },
+          "areas": [],
+          "urls": [
+            {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/193516",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-06-17T09:10:06.348117+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
