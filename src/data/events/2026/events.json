@@ -9972,6 +9972,12 @@
           "title": "PM",
           "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58162/423c321c-dbcf-4043-aee2-bccdcadf8011/PM.Pdf",
           "published_time": "2026-06-17"
+        },
+        {
+          "type": "ResultList",
+          "title": "Live resultat",
+          "url": "https://liveresultat.orientering.se/followfull.php?comp=37086&lang=sv",
+          "published_time": null
         }
       ],
       "information": null,
@@ -9991,17 +9997,75 @@
           "areas": [],
           "urls": [
             {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/193769",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-06-18T06:58:14.774262+00:00"
+            },
+            {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=58162&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-05-29T21:27:51.899465+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=58162&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-06-18T06:58:14.774262+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=58162&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-06-18T06:58:14.774262+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "Bana A": 2,
+            "Bana B": 8,
+            "Bana C": 7,
+            "Bana D": 12
+          },
+          "result_counts": {
+            "Bana A": 2,
+            "Bana B": 8,
+            "Bana C": 7,
+            "Bana D": 12
+          },
+          "fingerprints": [
+            "0890bf758710dd21c740aaa722c3a6172dd338e69a60dc00619950e9afc6adb9",
+            "09ce510f22d53223d0f1fa21a6acfe7cbdb6ddf3abdc2c24e4b63ad71d44be97",
+            "12b8810a47063aa859fb46bf162f319ce66238810a74b43e849d8d317579514f",
+            "1c887cd9a237c5008ecefc55800f137be772d7ffb5c67b416dfa9a6334d17167",
+            "1f141166d34b4047899c382f6d4266f9e14c6a5c95ede3ac0cc37bff6f371171",
+            "270fddaae6bcad1fa13cdb0b72985f55c0b57dd6e072f818ca9b74517c1b47a4",
+            "2a9ae75d9feae4c7422768abbee62d51513c13fa1aaa335cde311a81ac279f95",
+            "2cdcf8a50441103eed618a211ae6d3a5f9ddf424a83e93ccaf7626943eb8ca1b",
+            "32aaadf016937d6cfbc6177d6cb4e07fd7d3c15a8125abef8ad38d14f2d7034b",
+            "59ff05f08406416a0bdb6a47899ee8a104b99b04374ca755e7ea57724331871d",
+            "5b21ad6256ae943621fd324c4adcb77026fa03754f388b5fde7bbec1cece4a1a",
+            "6a4c8046375f8f4d51dca839ddec2a6d4ae383f056fbcf66b71fe1144c6f1cb7",
+            "71b6fbe7f50bcb31a7309805f4452630ac24c9cab0db97f65105dfd976da882f",
+            "736304e1e964ab66c74eddd4a214516685425b77b4ebe991739ad711ce3c52f9",
+            "77b98a51a170467baee0607f99430fb7932a09d7e22d2562b9eaeb06495f92ea",
+            "94f03fcf7be0db4cc001a262ea31ea330686876036233a4ab5cc90e97298bbfa",
+            "9ca9bf362f03284fc7cd2470b3b7f0062940a05fab66099e077b5f600aaa0c29",
+            "b2a65f91ee3ae06b162c0d57966e70d81f5561194405520dbe85275866308e4e",
+            "bd01bbdbf90e9e26737fac2608f116eac9f1dd5983d82d6635eed1b0b2b1b933",
+            "c298b611db7ebfd328df4e317e488c99785a065b4244f7cbbe4773685b39766e",
+            "c85cc5052891b5dabbd4f205f6ff35a71bfcd7a73f19eb3a5d9cba22d1f6b2dc",
+            "c9c46853cbd86cbc89b1172c623a35ab8b7f2a60cf3543a72d433c0137ceaf68",
+            "ce8632ec48325d435d9a864fabbbf1b69e010a95f023befe127ee23a18c25b48",
+            "d069aca574652aa5bf586dfceb3abc2f76b1b3c5b0ca5b16804706a7d26c3f28",
+            "d60863aca6fc9ad9da38e4afdd6180ec9a56c6c0f0ffa3eeb6d8568ccbb5698e",
+            "efb098a4f9fa026a77eecf5173534d3ebf2189fde8e8c935d4999a8285d7ed69",
+            "f549ca56daa0fae6cecf5482049ab64688c69e668f769df787b9de856be906a7",
+            "f6b4dca8d63f504a259521a014af5cd69389d6644f51b2f9c302b6828682935d",
+            "fdc4883d88912f0d947b8c20ed170bd89e17e898d41a2f377c0fbbbef6dbe4fb"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -13592,7 +13656,7 @@
         }
       ],
       "documents": [],
-      "information": "Samling och parkering på Rönnvägen 11 i Moheda.\nTräning öppen för alla, tidtagning om så önskas medtag egen SI-pinne.\n3 banor, ca 5, 8 och 12km\nKartställ finns att låna.\nHjälm är obligatoriskt.\nAnmälan går att göra på plats men är tacksam för föranmälan så kartorna räcker.",
+      "information": "Samling och parkering på Rönnvägen 11 i Moheda.\nTräning öppen för alla.\n3 banor, ca 5, 8 och 12km\nKartställ finns att låna.\nHjälm är obligatoriskt.\nAnmälan går att göra på plats men är tacksam för föranmälan så kartorna räcker.",
       "region": "Småland",
       "punching_system": "Sportident",
       "races": [
@@ -13613,6 +13677,12 @@
               "url": "/Entry?eventId=59058",
               "title": "Enter",
               "last_updated_at": "2026-05-31T16:36:24.774714+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=59058&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-06-18T06:58:14.774243+00:00"
             }
           ],
           "documents": [],
@@ -14622,6 +14692,70 @@
               "last_updated_at": "2026-06-17T09:10:06.348117+00:00"
             }
           ],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_59666",
+      "name": "MTBO",
+      "start_time": "2026-06-23",
+      "end_time": "2026-06-23",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Local"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "Forsa OK",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Per-Åke Blad"
+        },
+        {
+          "role": "Contact phone number",
+          "name": "0705828475"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:DxgDC0VLWzIGHQQbAVoBAEA="
+        }
+      ],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/59666",
+          "title": null,
+          "last_updated_at": "2026-06-18T06:58:14.774181+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": "Hälsingland",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "MTBO",
+          "datetimez": "2026-06-23T18:00:00+02:00",
+          "discipline": "Long",
+          "night_or_day": "day",
+          "position": null,
+          "areas": [],
+          "urls": [],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
