@@ -8172,8 +8172,8 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57478/36fab2a2-dae1-4aee-9dbd-9f8f74e6148c/Inbjudan.Pdf",
-          "published_time": "2026-06-11"
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57478/f5369bb7-7dad-42e7-a369-b1c147e6c003/Inbjudan.Pdf",
+          "published_time": "2026-06-18"
         },
         {
           "type": "Other",
@@ -14733,7 +14733,11 @@
           "name": "enc:DxgDC0VLWzIGHQQbAVoBAEA="
         }
       ],
-      "classes": [],
+      "classes": [
+        "10 km",
+        "3 km",
+        "6 km"
+      ],
       "urls": [
         {
           "type": "Path",
@@ -14753,9 +14757,19 @@
           "datetimez": "2026-06-23T18:00:00+02:00",
           "discipline": "Long",
           "night_or_day": "day",
-          "position": null,
+          "position": {
+            "lat": 61.7271160142407,
+            "lng": 17.1467981461248
+          },
           "areas": [],
-          "urls": [],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Entry?eventId=59666",
+              "title": "Enter",
+              "last_updated_at": "2026-06-20T06:26:54.477170+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
