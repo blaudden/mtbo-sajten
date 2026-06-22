@@ -13656,9 +13656,9 @@
         }
       ],
       "documents": [],
-      "information": "Samling och parkering på Rönnvägen 11 i Moheda.\nTräning öppen för alla.\n3 banor, ca 5, 8 och 12km\nKartställ finns att låna.\nHjälm är obligatoriskt.\nAnmälan går att göra på plats men är tacksam för föranmälan så kartorna räcker.",
+      "information": "Träning öppen för alla.\nSamling på Rönnvägen 11 i Moheda.\nParkering utmed gatan på lämpligt sätt.\nkort 5,2 km, 1 karta\nmellan 8,1 km, 2 karor\nlång 12,4 km, 3 kartor\nKartställ finns att låna.\nHjälm är obligatoriskt.\nAnmälan går att göra på plats men är tacksam för föranmälan så kartorna räcker.",
       "region": "Småland",
-      "punching_system": "Sportident",
+      "punching_system": "other",
       "races": [
         {
           "race_number": 1,
@@ -13672,12 +13672,6 @@
           },
           "areas": [],
           "urls": [
-            {
-              "type": "EntryList",
-              "url": "/Entry?eventId=59058",
-              "title": "Enter",
-              "last_updated_at": "2026-05-31T16:36:24.774714+00:00"
-            },
             {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=59058&groupBy=EventClass",
@@ -14768,6 +14762,12 @@
               "url": "/Entry?eventId=59666",
               "title": "Enter",
               "last_updated_at": "2026-06-20T06:26:54.477170+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=59666&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-06-22T07:30:26.928250+00:00"
             }
           ],
           "documents": [],
