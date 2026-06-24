@@ -4683,7 +4683,14 @@
               ]
             }
           ],
-          "urls": [],
+          "urls": [
+            {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/193836",
+              "title": "Map, courses and routes will be available in Livelox",
+              "last_updated_at": "2026-06-24T03:59:07.140841+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
@@ -4820,7 +4827,14 @@
               ]
             }
           ],
-          "urls": [],
+          "urls": [
+            {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/193837",
+              "title": "Map, courses and routes will be available in Livelox",
+              "last_updated_at": "2026-06-24T03:59:07.140843+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
@@ -4929,7 +4943,14 @@
               ]
             }
           ],
-          "urls": [],
+          "urls": [
+            {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/193838",
+              "title": "Map, courses and routes will be available in Livelox",
+              "last_updated_at": "2026-06-24T03:59:07.140845+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
@@ -5187,7 +5208,14 @@
               ]
             }
           ],
-          "urls": [],
+          "urls": [
+            {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/193840",
+              "title": "Map, courses and routes will be available in Livelox",
+              "last_updated_at": "2026-06-24T03:59:07.140849+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
@@ -6353,7 +6381,7 @@
         "D12",
         "D14",
         "D16",
-        "D17",
+        "D17-20",
         "D21",
         "D40",
         "D45",
@@ -6368,7 +6396,7 @@
         "H12",
         "H14",
         "H16",
-        "H17",
+        "H17-20",
         "H21",
         "H40",
         "H45",
@@ -6403,7 +6431,14 @@
           "last_updated_at": "2026-05-10T19:32:03.787299+00:00"
         }
       ],
-      "documents": [],
+      "documents": [
+        {
+          "type": "Invitation",
+          "title": "Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/56226/e93b935b-013e-4e53-a47e-096dc45c817f/Inbjudan.Pdf",
+          "published_time": "2026-06-22"
+        }
+      ],
       "information": null,
       "region": "Dalarna",
       "punching_system": "Sportident",
@@ -6495,8 +6530,7 @@
         "D12",
         "D14",
         "D16",
-        "D18",
-        "D20",
+        "D17-20",
         "D21",
         "D40",
         "D45",
@@ -6506,12 +6540,12 @@
         "D65",
         "D70",
         "D75",
+        "D80",
         "H10",
         "H12",
         "H14",
         "H16",
-        "H18",
-        "H20",
+        "H17-20",
         "H21",
         "H40",
         "H45",
@@ -6521,6 +6555,7 @@
         "H65",
         "H70",
         "H75",
+        "H80",
         "Öppen kort",
         "Öppen lång",
         "Öppen mellan"
@@ -6545,7 +6580,14 @@
           "last_updated_at": "2026-05-10T19:32:03.787188+00:00"
         }
       ],
-      "documents": [],
+      "documents": [
+        {
+          "type": "Invitation",
+          "title": "Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/56227/cbca41da-d7f0-4df9-9ede-c08d3e7bde04/Inbjudan.Pdf",
+          "published_time": "2026-06-22"
+        }
+      ],
       "information": null,
       "region": "Dalarna",
       "punching_system": "Sportident",
@@ -6637,8 +6679,7 @@
         "D12",
         "D14",
         "D16",
-        "D18",
-        "D20",
+        "D17-20",
         "D21",
         "D40",
         "D45",
@@ -6648,12 +6689,12 @@
         "D65",
         "D70",
         "D75",
+        "D80",
         "H10",
         "H12",
         "H14",
         "H16",
-        "H18",
-        "H20",
+        "H17-20",
         "H21",
         "H40",
         "H45",
@@ -6663,6 +6704,7 @@
         "H65",
         "H70",
         "H75",
+        "H80",
         "Öppen kort",
         "Öppen lång",
         "Öppen mellan"
@@ -6687,7 +6729,14 @@
           "last_updated_at": "2026-05-10T19:32:03.787306+00:00"
         }
       ],
-      "documents": [],
+      "documents": [
+        {
+          "type": "Invitation",
+          "title": "Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/56228/1e98a559-605b-43bc-97ff-8152c2fc138d/Inbjudan.Pdf",
+          "published_time": "2026-06-22"
+        }
+      ],
       "information": null,
       "region": "Dalarna",
       "punching_system": "Sportident",
@@ -7511,8 +7560,8 @@
             {
               "type": "EntryList",
               "url": "/Entry?eventId=57106",
-              "title": "Enter",
-              "last_updated_at": "2026-02-07T22:24:13.324678+00:00"
+              "title": "Enter and/or order services",
+              "last_updated_at": "2026-06-24T03:59:07.141026+00:00"
             },
             {
               "type": "EntryList",
@@ -8176,6 +8225,12 @@
           "published_time": "2026-06-18"
         },
         {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57478/f1afa274-92cf-454e-a52c-56e56acc8909/PM.Pdf",
+          "published_time": "2026-06-24"
+        },
+        {
           "type": "Other",
           "title": "ÖVIKSSERIEN 2026",
           "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57478/1c15625c-6a3c-4eb7-bfd6-61836d3e6eb9/-VIKSSERIEN-2026.pdf",
@@ -8200,22 +8255,74 @@
           "urls": [
             {
               "type": "EntryList",
-              "url": "/Entry?eventId=57478",
-              "title": "Enter",
-              "last_updated_at": "2026-06-10T04:08:24.511138+00:00"
-            },
-            {
-              "type": "EntryList",
               "url": "/Events/Entries?eventId=57478&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-06-11T06:54:32.401812+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=57478&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-06-24T03:59:07.140621+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
+          "start_counts": {
+            "D21": 2,
+            "H21": 5,
+            "H17-20": 1,
+            "H16": 1,
+            "D14": 2,
+            "H14": 2,
+            "D12": 3,
+            "H12": 4,
+            "D40": 6,
+            "H40": 2,
+            "H50": 9,
+            "TrailO Öppen Mellan": 1
+          },
           "result_counts": null,
-          "fingerprints": []
+          "fingerprints": [
+            "023256d2ddd7ad429308e366f1cc4061c8c64ca2f13b58e491eae73284ab3531",
+            "08e3fef80f1b213f1b60d00b54656d10f1b2c45d904aa7a21d3b85fabfac45da",
+            "11bdaeacec8408b6cfdbc4cd3aceebcf7658ac5e2df1d9af63dcce629c9afac8",
+            "179e8bdc3009f84d579b853e0d45a3fe7fe578df27ef42cad599690ff6e4bd4f",
+            "192d16b34678fb51ec39e7492e847e433968a0fa79daeb3b97a6dc30eaeb663e",
+            "1a5a7a2547d67f9d9e24e1623d561a423e05f014a05b3a7f7881064870d3ccca",
+            "27abcf3978aa4332762a16a940790218d9b74f2fc9604cc839bb910826c4c92d",
+            "289785ca3f5b0c8ebcc97a67e0217444cb830aff83a7a0e19636756316c97c1c",
+            "39a1590411d3edd005386a76265ed650a9b85e20b10bb4acd9ba10b1b57b2745",
+            "3f4c9693c42fd2ff88667f1f59dc8bc4a51366a3cf7e184771f76272a474647c",
+            "49c23ac3527c7069caa0b8111d1a89018f7fda994185c463e1b0cf3f01857436",
+            "590c13e22c1cb280fdca1533dde9b6c04417a7267943749ddd26b4c500e0321b",
+            "5e37237bb560703f675bc3c76a56c56ebddc288b0379a9bf119b8bf1e200a42b",
+            "6cd63ef85cb5d429a9981723c2fed99328afd1cb54bb0b5a02a8ef36acdb99a9",
+            "730f6554b333e2cb8ac158d47868847e70fbeb32a9e050d6d4a470f37fa017dc",
+            "791d8a10ee8d96256f62c55ff85688e71dcee4126b0f3bdd8443be6c850599b8",
+            "7a95e339e012163056e0d3dc6673f462222a122302a7568f58ad8fe6759f9524",
+            "7ac3dfe2f602334d55a0a350a2dcd44b1416f8350fecebd2210f03b7f9852ce0",
+            "7ebd0fa4ff0ed03c52f66f0ed2d724d9c3f99bdbfb65e73566f3146d6f8fd160",
+            "8fdb515589cdf18293b107d3c9a62f74f8f5b56a600e6a43e5935d078cfe3fc5",
+            "8fea730ab66bef0e7cec510fedc8a468f6e36b80d8fbdc55f20213f324e3b941",
+            "9b33a058503e821e38286f2e3950d3024122136aab3ea31f894abcde14867ba0",
+            "a62b339b6e8cb74234b214197f795a403c63c379d21d79c44234d64c1234f6c6",
+            "a7d5d7872e35409a5a20e6002fa7d9b8aaad9cd35423e542b6a0fb3da5f24660",
+            "b7ceb9db2490ccc080b9200c89c126fdb9086aa0c825720c5046d752865b9668",
+            "bc8dfe96b329b431185c1422211e30f13fc2279f47520d36fcd1402d5b11ae39",
+            "bf120e220b794edf4a210e16f4f74faa97078cf0555d2019e62cd532db614f15",
+            "c3422ef4b86d217cddb5be5417998ba2a701a848e4c6a9b34a6bb7b5198e5d0d",
+            "c4a5802936681506787eaadcbd6e86de3e9b0e2f02771f8804dbfca47d961c50",
+            "d9ec700e75005f2c50fd708d6caea014535ae0f77dd8b4f28c5382f8a6131de8",
+            "dc9b45659c7170092621aa967cacab14ba410eed987e209096241e0d833463aa",
+            "deb599283419e3af8a8786074d5ee4bafe5b18e0320c9ec6ff5638ce266cdc1d",
+            "e33612164ceba654340c673f51cb87f901d3ecbfa16f3c1fca30caad02a712d6",
+            "e4a77dbb4829d664cf293e838ee4ec5501a59835f1308784baaba537a4b0337d",
+            "ea12103f31b380d8ded41c3f6435c55ae8f5c3f1fc0d22104466b7f3ec137fe7",
+            "fbb6867d53596b140d076032db706c72ab3e011cf2f8fc5d9ac7cebcbcd89620",
+            "fcb921248804b1ac545dfbcc87f29a2f1b3b6eb539ee2a4d829c61b593ff8efa",
+            "ffc96f7d7c230f5d17369acda74aa08311e8daefda64b27a435c9d77d37f4de6"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -14728,9 +14835,9 @@
         }
       ],
       "classes": [
-        "10 km",
-        "3 km",
-        "6 km"
+        "kort",
+        "lång",
+        "mellan"
       ],
       "urls": [
         {
@@ -14758,16 +14865,125 @@
           "areas": [],
           "urls": [
             {
-              "type": "EntryList",
-              "url": "/Entry?eventId=59666",
-              "title": "Enter",
-              "last_updated_at": "2026-06-20T06:26:54.477170+00:00"
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/194312",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-06-24T03:59:07.140439+00:00"
             },
             {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=59666&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-06-22T07:30:26.928250+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=59666&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-06-24T03:59:07.140439+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=59666&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-06-24T03:59:07.140439+00:00"
+            }
+          ],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": {
+            "kort": 4,
+            "mellan": 5,
+            "lång": 5
+          },
+          "result_counts": {
+            "kort": 4,
+            "mellan": 5,
+            "lång": 5
+          },
+          "fingerprints": [
+            "045eec11ea37b0f7999f027d51c6a86be158c8340e01658fed416ae88fe10bd3",
+            "061270dfa15d782fe2b1719841c82332165c76877f7aa692b2058cf50a906ddd",
+            "2cf571d22b4d8faac412d026d91dd3bcb6c656089709cf3dc3a668de1e9da3dc",
+            "2f0af1d0ed881783fb0b196c35bc8cc22d005d8e771dd78750029541d2618111",
+            "486fd725c4e2cda69099b0892911e8750594e963f6b4bc603b1565b33483e5e9",
+            "53d2c3869a59083986e9c29dc8a7912b65c266e71587d33aaa0bf00127aa98b7",
+            "5a73dae71d06443a070b8880e307b94ec0bd333c07eeaa378654938c8b0cca1c",
+            "5a7b4b333a9f85ce8aac8cc6a6311122c4eb3101787ffa0c581c2221c99ad169",
+            "953238514bb3d880ed7eb314f100c1d9b789ec8ad5ceea387007995c1697751b",
+            "98749235ddf45a9433b450d37cd84847807e4bfcdb242868cdd39e2777de6847",
+            "9c568000f83d38b79843824b5001fc4b0cf053ea2d0bd20a30a895a4eec60aee",
+            "b427e02fbb6cd4e58206715ec5aaf84d36c1e1f617aee6388459fce90b126d7c",
+            "c10884b35ecd71570254e04c2853e40c3c0dc146dc11ae657533b65a348c775b",
+            "eeeda99c529386414092ba092cf0413cb899d33e70ca67d57a4aa3b55fe273d1"
+          ]
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_59702",
+      "name": "Tre toppar",
+      "start_time": "2026-07-09",
+      "end_time": "2026-07-09",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Local"
+      ],
+      "tags": [
+        "FootO"
+      ],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "Skogslöparna",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Eero Niemi"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:CBEQAG0dChcMGUsBCA=="
+        }
+      ],
+      "classes": [
+        "Lång"
+      ],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/59702",
+          "title": null,
+          "last_updated_at": "2026-06-24T03:59:07.140372+00:00"
+        }
+      ],
+      "documents": [],
+      "information": "Välkomna till ett sommaräventyr i Örnsköldsviks närområde! Tre bergstoppar ska bestigas! Totalt ca 24 km vägcykling till bergsfötterna och ca 3,5km \" skyrunning\". Individuellt eller kör gärna med någon.Det kan man bestämma strax innan start. Samling 13 på Bryggerivägen 5 i Järved för genomgång. Kartorna delas ut 10 min innan starten som sker kl 13.30. Man \"stämplar\" genom att vidröra flaggstång/ mast .Fika vid målgång!\nAlla välkomna , icke Skogslöpare 50 kr startavgift",
+      "region": "Ångermanland",
+      "punching_system": "other",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "Tre toppar",
+          "datetimez": "2026-07-09T13:00:00+02:00",
+          "discipline": "Long",
+          "night_or_day": "day",
+          "position": {
+            "lat": 63.2698514581672,
+            "lng": 18.7689081920157
+          },
+          "areas": [],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Entry?eventId=59702",
+              "title": "Enter",
+              "last_updated_at": "2026-06-24T03:59:07.140375+00:00"
             }
           ],
           "documents": [],
