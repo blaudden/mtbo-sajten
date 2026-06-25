@@ -8235,6 +8235,12 @@
           "title": "ÖVIKSSERIEN 2026",
           "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57478/1c15625c-6a3c-4eb7-bfd6-61836d3e6eb9/-VIKSSERIEN-2026.pdf",
           "published_time": "2026-03-31"
+        },
+        {
+          "type": "ResultList",
+          "title": "Liveresultat",
+          "url": "https://liveresultat.orientering.se/followfull.php?comp=37129&lang=sv",
+          "published_time": null
         }
       ],
       "information": null,
@@ -8254,10 +8260,22 @@
           "areas": [],
           "urls": [
             {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/194567",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-06-25T06:12:40.458018+00:00"
+            },
+            {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=57478&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-06-11T06:54:32.401812+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=57478&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-06-25T06:12:40.458018+00:00"
             },
             {
               "type": "StartList",
@@ -8271,18 +8289,35 @@
           "start_counts": {
             "D21": 2,
             "H21": 5,
-            "H17-20": 1,
             "H16": 1,
             "D14": 2,
             "H14": 2,
             "D12": 3,
-            "H12": 4,
+            "H12": 3,
             "D40": 6,
             "H40": 2,
             "H50": 9,
-            "TrailO Öppen Mellan": 1
+            "Öppen Kort": 1,
+            "Öppen Lång": 2,
+            "TrailO Öppen Mellan": 2,
+            "TrailO Öppen Lång": 2
           },
-          "result_counts": null,
+          "result_counts": {
+            "D21": 2,
+            "H21": 5,
+            "H16": 1,
+            "D14": 2,
+            "H14": 2,
+            "D12": 3,
+            "H12": 3,
+            "D40": 6,
+            "H40": 2,
+            "H50": 9,
+            "Öppen Kort": 1,
+            "Öppen Lång": 2,
+            "TrailO Öppen Mellan": 2,
+            "TrailO Öppen Lång": 2
+          },
           "fingerprints": [
             "023256d2ddd7ad429308e366f1cc4061c8c64ca2f13b58e491eae73284ab3531",
             "08e3fef80f1b213f1b60d00b54656d10f1b2c45d904aa7a21d3b85fabfac45da",
@@ -8290,6 +8325,7 @@
             "179e8bdc3009f84d579b853e0d45a3fe7fe578df27ef42cad599690ff6e4bd4f",
             "192d16b34678fb51ec39e7492e847e433968a0fa79daeb3b97a6dc30eaeb663e",
             "1a5a7a2547d67f9d9e24e1623d561a423e05f014a05b3a7f7881064870d3ccca",
+            "2184f83ea76a8796cd4ca1a0321d36b8b83ad04c88b8d0b2b144d13c77e353d6",
             "27abcf3978aa4332762a16a940790218d9b74f2fc9604cc839bb910826c4c92d",
             "289785ca3f5b0c8ebcc97a67e0217444cb830aff83a7a0e19636756316c97c1c",
             "39a1590411d3edd005386a76265ed650a9b85e20b10bb4acd9ba10b1b57b2745",
@@ -8308,9 +8344,12 @@
             "9b33a058503e821e38286f2e3950d3024122136aab3ea31f894abcde14867ba0",
             "a62b339b6e8cb74234b214197f795a403c63c379d21d79c44234d64c1234f6c6",
             "a7d5d7872e35409a5a20e6002fa7d9b8aaad9cd35423e542b6a0fb3da5f24660",
+            "af9ce7db79e299120c0d2957ba313297beed84199a39430286c0a66e1fa81335",
+            "b2ff0b864047a3525a089e46a97842dfbee10333b964f59436c25483d1e768cb",
             "b7ceb9db2490ccc080b9200c89c126fdb9086aa0c825720c5046d752865b9668",
             "bc8dfe96b329b431185c1422211e30f13fc2279f47520d36fcd1402d5b11ae39",
             "bf120e220b794edf4a210e16f4f74faa97078cf0555d2019e62cd532db614f15",
+            "bf9eb395f2be60e37c0493983be48412818c1b75b28ed8200f062ae0db48dcb9",
             "c3422ef4b86d217cddb5be5417998ba2a701a848e4c6a9b34a6bb7b5198e5d0d",
             "c4a5802936681506787eaadcbd6e86de3e9b0e2f02771f8804dbfca47d961c50",
             "d9ec700e75005f2c50fd708d6caea014535ae0f77dd8b4f28c5382f8a6131de8",
@@ -8320,7 +8359,7 @@
             "e4a77dbb4829d664cf293e838ee4ec5501a59835f1308784baaba537a4b0337d",
             "ea12103f31b380d8ded41c3f6435c55ae8f5c3f1fc0d22104466b7f3ec137fe7",
             "fbb6867d53596b140d076032db706c72ab3e011cf2f8fc5d9ac7cebcbcd89620",
-            "fcb921248804b1ac545dfbcc87f29a2f1b3b6eb539ee2a4d829c61b593ff8efa",
+            "fcf5c3932450ad60b3ae07b908c1b0ef63bf247d7fd9cdcb953afdafbbb1332a",
             "ffc96f7d7c230f5d17369acda74aa08311e8daefda64b27a435c9d77d37f4de6"
           ]
         }
@@ -14963,7 +15002,7 @@
         }
       ],
       "documents": [],
-      "information": "Välkomna till ett sommaräventyr i Örnsköldsviks närområde! Tre bergstoppar ska bestigas! Totalt ca 24 km vägcykling till bergsfötterna och ca 3,5km \" skyrunning\". Individuellt eller kör gärna med någon.Det kan man bestämma strax innan start. Samling 13 på Bryggerivägen 5 i Järved för genomgång. Kartorna delas ut 10 min innan starten som sker kl 13.30. Man \"stämplar\" genom att vidröra flaggstång/ mast .Fika vid målgång!\nAlla välkomna , icke Skogslöpare 50 kr startavgift",
+      "information": "Välkomna till ett sommaräventyr i Örnsköldsviks närområde! Tre bergstoppar ska bestigas! Totalt ca 24 km vägcykling till bergsfötterna (gärna cykellås) och ca 3,5km \" skyrunning\". Individuellt eller kör gärna med någon.Det kan man bestämma strax innan start. Samling 13 på Bryggerivägen 5 i Järved för genomgång. Kartorna delas ut 10 min innan starten som sker kl 13.30. Man \"stämplar\" genom att vidröra flaggstång/ mast .Fika vid målgång!\nAlla välkomna , icke Skogslöpare 50 kr startavgift",
       "region": "Ångermanland",
       "punching_system": "other",
       "races": [
