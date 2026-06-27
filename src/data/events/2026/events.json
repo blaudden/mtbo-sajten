@@ -8241,6 +8241,12 @@
           "title": "Liveresultat",
           "url": "https://liveresultat.orientering.se/followfull.php?comp=37129&lang=sv",
           "published_time": null
+        },
+        {
+          "type": "Other",
+          "title": "Artikel",
+          "url": "https://www.orientering.se/angermanland/",
+          "published_time": null
         }
       ],
       "information": null,
@@ -15023,6 +15029,12 @@
               "url": "/Entry?eventId=59702",
               "title": "Enter",
               "last_updated_at": "2026-06-24T03:59:07.140375+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=59702&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-06-27T05:57:24.921965+00:00"
             }
           ],
           "documents": [],
