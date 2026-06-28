@@ -8,12 +8,51 @@ tone_instructions: |
 
 reviews:
   profile: 'chill'
+  high_level_summary: false
+  changed_files_summary: false
+  sequence_diagrams: false
+  estimate_code_review_effort: false
+  poem: false
+  assess_linked_issues: false
+  related_issues: false
+  related_prs: false
+  suggested_labels: false
+  suggested_reviewers: false
+  in_progress_fortune: false
+  review_status: false
+  review_details: false
+  enable_prompt_for_ai_agents: false
   path_filters:
-    - '!public/**' # Ignore all assets, images, and static files
-    - '!src/data/**' # Ignore all data/JSON files (including events)
-    - '!**/*.lock' # Ignore lock files
+    - '!**' # Exclude all files by default
+    - '**/*.astro' # Review Astro components
+    - '**/*.ts' # Review TypeScript files
+    - '**/*.tsx' # Review TSX files
+    - '**/*.js' # Review JavaScript files
+    - '**/*.jsx' # Review JSX files
+    - '**/*.mjs' # Review ES modules (scripts/configs)
+    - '**/*.cjs' # Review CommonJS modules (scripts/configs)
+    - '!src/data/**' # Explicitly exclude data files
+    - '!public/**' # Explicitly exclude static assets
+    - '!node_modules/**' # Explicitly exclude dependencies
+    - '!dist/**' # Ensure build output is ignored
+    - '!.astro/**' # Ensure Astro internal cache is ignored
   path_instructions:
     - path: 'scripts/**'
-      instructions: 'These are build-time scripts. Focus on stability and data integrity.'
+      instructions: |
+        These are build-time scripts. Focus on stability, performance, and data integrity.
+        Verify that file/data modifications are safe.
     - path: 'src/components/**'
-      instructions: 'Ensure functional consistency and proper use of Astro components. Do not comment on formatting or CSS style issues handled by Prettier/Stylelint.'
+      instructions: |
+        Ensure functional consistency and proper use of Astro components.
+        Do not comment on formatting or CSS style issues handled by Prettier/Stylelint.
+    - path: 'src/pages/**'
+      instructions: |
+        Focus on Astro routing correctness and data fetching methods (static paths vs SSR).
+        Verify search engine optimization: proper heading structure (single H1), semantic HTML, and ensure all interactive elements have unique and descriptive IDs.
+    - path: 'src/layouts/**'
+      instructions: |
+        Verify structural integrity, semantic HTML layout structure, slot usage, and metadata configuration.
+    - path: 'src/utils/**'
+      instructions: |
+        Focus on business logic, error handling, performance, and testability.
+        Verify that all event dates/times are timezone-aware and formatted in Sweden's timezone (Europe/Stockholm) to prevent day shifts when writing, scheduling, or rendering posts.
