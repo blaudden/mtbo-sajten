@@ -22,6 +22,21 @@ const seenUrls = new Set<string>();
 function wrapEventorUrl(url: string): string {
   const eventorMatch = url.match(/eventor-[a-zA-Z0-9_-]+-storage\.[a-zA-Z0-9.-]+\/eventdocuments\/(\d+)\//i);
   if (eventorMatch) {
+    // Only wrap the URL for active or upcoming events (with a 1-month buffer after the end date)
+    // to completely eliminate serverless calls/crawls for older historical events.
+    const bufferDate = new Date();
+    bufferDate.setMonth(bufferDate.getMonth() - 1);
+    const stockholmBufferDate = new Intl.DateTimeFormat('sv-SE', {
+      timeZone: 'Europe/Stockholm',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+    }).format(bufferDate);
+
+    if (event.end_time < stockholmBufferDate) {
+      return url;
+    }
+
     const eventorUrl = resolveExternalUrl(event) || '';
     return `/api/resolve-eventor-storage?url=${encodeURIComponent(url)}&eventorUrl=${encodeURIComponent(eventorUrl)}`;
   }
