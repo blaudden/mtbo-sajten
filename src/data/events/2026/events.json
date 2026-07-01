@@ -135,6 +135,12 @@
           "title": "Bulletin 2",
           "url": "/Documents/Event/9629/Bulletin-2",
           "published_time": "2025-10-01"
+        },
+        {
+          "type": "Bulletin",
+          "title": "Bulletin 3",
+          "url": "/Documents/Event/10685/Bulletin-3",
+          "published_time": "2026-06-29"
         }
       ],
       "information": null,
@@ -727,6 +733,12 @@
           "title": "Bulletin 2",
           "url": "/Documents/Event/9630/Bulletin-2",
           "published_time": "2025-10-01"
+        },
+        {
+          "type": "Bulletin",
+          "title": "Bulletin 3",
+          "url": "/Documents/Event/10687/Bulletin-3",
+          "published_time": "2026-06-29"
         }
       ],
       "information": null,
@@ -2152,7 +2164,7 @@
           "type": "Bulletin",
           "title": "Bulletin 2",
           "url": "/Documents/Event/10322/Bulletin-2",
-          "published_time": "2026-04-02"
+          "published_time": "2026-06-24"
         }
       ],
       "information": "To complete your entry, please re-enter your details and pay at RaceSignUp,\nhttps://racesignup.co.uk/wmmtbo.\nPlease note that we understand you accept your complete responsibility to ride on the left hand side, both on the road and in the forest and to overtake on the right hand side. Cutting (off track riding) is allowed in the Middle and Mass start. Cutting and going the wrong direction on a one way track is forbidden in the Sprint and the Long and this will be strictly enforced by cameras and marshals.",
@@ -6874,14 +6886,14 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57105/09dc0d3b-ef74-4d18-a327-6f64da17a544/Inbjudan.pdf",
-          "published_time": "2026-04-28"
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57105/d1bfbccc-5546-42bc-88f0-9c95c31be44e/Inbjudan.Pdf",
+          "published_time": "2026-06-27"
         },
         {
           "type": "Invitation",
           "title": "Invitation",
-          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57105/4ebcfc65-709d-4068-817d-3f28496b70bd/Invitation.pdf",
-          "published_time": "2026-04-28"
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57105/b4b1cd1a-a51d-48e8-a0cb-e37c15d4a201/Invitation.Pdf",
+          "published_time": "2026-06-27"
         },
         {
           "type": "Other",
@@ -6890,7 +6902,7 @@
           "published_time": "2026-06-07"
         }
       ],
-      "information": "2026-05-24, 2026-06-07: Boende PM publicerat och uppdaterat med Husbilsparkering\n2026-05-12: Avlyst område utökat. Norbyvägen tillåten.\n2026-04-28: Inbjudan publicerad\n2026-03-25: Deltagande i Uppsala möte den 25–26 april är tillåtet, under förutsättning att inget försök till rekognosering av MTBO-terrängen görs.",
+      "information": "2026-06-27: Inbjudan uppdaterad med middag mm\n2026-05-24, 2026-06-07: Boende PM publicerat och uppdaterat med Husbilsparkering\n2026-05-12: Avlyst område utökat. Norbyvägen tillåten.\n2026-04-28: Inbjudan publicerad\n2026-03-25: Deltagande i Uppsala möte den 25–26 april är tillåtet, under förutsättning att inget försök till rekognosering av MTBO-terrängen görs.",
       "region": "Uppland",
       "punching_system": "Sportident",
       "races": [
@@ -7294,14 +7306,14 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57106/ace88788-40ae-4bcd-9fb3-6c19b17a3091/Inbjudan.pdf",
-          "published_time": "2026-04-28"
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57106/3571196d-5346-4030-ad58-cde799d8f65b/Inbjudan.Pdf",
+          "published_time": "2026-06-27"
         },
         {
           "type": "Invitation",
           "title": "Invitation",
-          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57106/a2fd809a-b441-49d7-9882-03ccb3d3a05b/Invitation.pdf",
-          "published_time": "2026-04-28"
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57106/4550ec56-4dab-47d5-be63-2b6aafff91e1/Invitation.Pdf",
+          "published_time": "2026-06-27"
         },
         {
           "type": "Other",
@@ -7310,7 +7322,7 @@
           "published_time": "2026-06-07"
         }
       ],
-      "information": "2026-06-07: Boende PM publicerat och uppdaterat med Husbilsparkering\n2026-04-28: Inbjudan publicerad",
+      "information": "2026-06-27: Inbjudan uppdaterad med middag mm\n2026-06-07: Boende PM publicerat och uppdaterat med Husbilsparkering\n2026-04-28: Inbjudan publicerad",
       "region": "Uppland",
       "punching_system": "Sportident",
       "races": [
@@ -7678,14 +7690,14 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57107/9831994a-a904-40d0-a15a-46965ba92231/Inbjudan.pdf",
-          "published_time": "2026-04-28"
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57107/6f9b5872-de1f-4d8b-8575-302c8a9884f5/Inbjudan.Pdf",
+          "published_time": "2026-06-27"
         },
         {
           "type": "Invitation",
           "title": "Invitation",
-          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57107/9ed84974-f345-4f6d-9b32-b42f3bf4103d/Invitation.pdf",
-          "published_time": "2026-04-28"
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57107/5cecfeb3-393b-4398-aadb-1cb532c685f6/Invitation.Pdf",
+          "published_time": "2026-06-27"
         },
         {
           "type": "Other",
@@ -7694,7 +7706,7 @@
           "published_time": "2026-06-07"
         }
       ],
-      "information": "2026-05-24, 2026-06-07: Boende PM publicerat och uppdaterat med Husbilsparkering\n2026-04-28: Inbjudan publicerad\n2026-03-25: Deltagande i Uppsala möte den 25–26 april är tillåtet, under förutsättning att inget försök till rekognosering av MTBO-terrängen görs.",
+      "information": "2026-06-27: Inbjudan uppdaterad med middag mm\n2026-05-24, 2026-06-07: Boende PM publicerat och uppdaterat med Husbilsparkering\n2026-04-28: Inbjudan publicerad\n2026-03-25: Deltagande i Uppsala möte den 25–26 april är tillåtet, under förutsättning att inget försök till rekognosering av MTBO-terrängen görs.",
       "region": "Uppland",
       "punching_system": "Sportident",
       "races": [
@@ -10715,7 +10727,15 @@
           "name": "Peter Wilhelmsson"
         }
       ],
-      "classes": [],
+      "classes": [
+        "D16",
+        "D17-40",
+        "D45",
+        "H16",
+        "H17-40",
+        "H45",
+        "Prova-på"
+      ],
       "urls": [
         {
           "type": "Path",
@@ -10735,8 +10755,86 @@
           "datetimez": "2026-09-26T00:00:00+02:00",
           "discipline": "Middle",
           "night_or_day": "day",
-          "position": null,
-          "areas": [],
+          "position": {
+            "lat": 56.2326111183902,
+            "lng": 15.6567839318364
+          },
+          "areas": [
+            {
+              "lat": 56.2326111183902,
+              "lng": 15.6567839318364,
+              "polygon": [
+                [
+                  56.21966867430859,
+                  15.640272894822791
+                ],
+                [
+                  56.21693059047732,
+                  15.664460171552413
+                ],
+                [
+                  56.21797753136755,
+                  15.682998917864285
+                ],
+                [
+                  56.23786395267268,
+                  15.697771984137212
+                ],
+                [
+                  56.244298916838005,
+                  15.70462671216462
+                ],
+                [
+                  56.25359293301304,
+                  15.70527846620561
+                ],
+                [
+                  56.25828846717988,
+                  15.703931302752205
+                ],
+                [
+                  56.262109557051446,
+                  15.695214089000872
+                ],
+                [
+                  56.26359766856589,
+                  15.682975620241518
+                ],
+                [
+                  56.26158669399487,
+                  15.665885215859278
+                ],
+                [
+                  56.25889182207027,
+                  15.659584931400534
+                ],
+                [
+                  56.25309567865273,
+                  15.645460992064939
+                ],
+                [
+                  56.25120484664271,
+                  15.641984976268184
+                ],
+                [
+                  56.24706078215792,
+                  15.625039402280482
+                ],
+                [
+                  56.24295650920672,
+                  15.626777408452304
+                ],
+                [
+                  56.23544915014193,
+                  15.628251675108359
+                ],
+                [
+                  56.21966867430859,
+                  15.640272894822791
+                ]
+              ]
+            }
+          ],
           "urls": [],
           "documents": [],
           "entry_counts": null,
@@ -13214,13 +13312,10 @@
         }
       ],
       "classes": [
-        "Korta",
-        "Långa",
-        "MTB Korta",
-        "MTB Långa",
-        "MTB Mellan",
-        "Mellan",
-        "Nybörjare"
+        "KORTA K",
+        "KORTA L",
+        "LÅNG",
+        "MELLAN"
       ],
       "urls": [
         {
@@ -13246,12 +13341,76 @@
             "lng": 16.0319382826236
           },
           "areas": [],
-          "urls": [],
+          "urls": [
+            {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/194983",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-07-01T04:16:33.779389+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=58928&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-07-01T04:16:33.779389+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=58928&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-07-01T04:16:33.779389+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=58928&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-07-01T04:16:33.779389+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "KORTA K": 9,
+            "KORTA L": 8,
+            "MELLAN": 11,
+            "LÅNG": 1
+          },
+          "result_counts": {
+            "KORTA K": 9,
+            "KORTA L": 8,
+            "MELLAN": 11,
+            "LÅNG": 1
+          },
+          "fingerprints": [
+            "08b60033cf5c5e9d7b1250e5bbb7ba186bb463a0d199806bc281931c660c6a50",
+            "215fba92b45aa5d486baec98156ec480c5fe62549c4b4263cfd29e2baf03b902",
+            "245fa846fe57901860860ebda874209cdfe12a311939fb1d143543438efcf059",
+            "2d3be98023fc9f5f7d4234e5a4f39f615ef0f89553c7f41f3a89299f43eeb273",
+            "3d98ea5698ab5ff301f2677dbbd287b5916258f355d5b1c82239ef458ea41030",
+            "41e480e36ed4889656416dcf43b171dbdb80518218b97262dfbba3f9a1db77a8",
+            "55a467b2ea25efd6916fd050503b02b78b4908421d0b2838200c475158305e35",
+            "56a73ea236fe211380f684eba417c61d333921210539175b129de63730dc9e10",
+            "641a7416dc8ff81b241cb241690da18ea5c201f0f8b78c4982b6f9b7951e686c",
+            "825f65d4f04d19d3491b8388cceec35fcf3f74b8e4bd8df3dfd925ae63c9edb1",
+            "83ec0369d0a925b5ccd50e2910abfb31f9da47ab776f0b1a0d5b7c86b52d357f",
+            "873017d06caac3e1fa367d15aaa799fd41683bb0ebef624bc86ca89aead28a25",
+            "97caaeb49c591a1ea2382ef3a1ab4a7e8e190f6614a6eff77af21e59bedb3f48",
+            "a401473be58b32aa29599a25c69511c8c6f91e224880b87d71e41d30f5e1e75d",
+            "a5d52b8f883fc865f1f2932ad657cc22dea8154cfcf5a565dc9be03708d3a0a2",
+            "aa85cb4fdef9be1b2960b6e9879723916c3bc66fc69b8881e89801788cbcbf06",
+            "b427e02fbb6cd4e58206715ec5aaf84d36c1e1f617aee6388459fce90b126d7c",
+            "bd66809f381a28ae2ca0256a940bb5ef6d0249db7e9bcf654492b562dc8d5163",
+            "c3b96299446cac573e54573b0e2fac33dd94e3a3cb2ea73116eceb4ee9907be2",
+            "c9ddab56d8227e8235b2ec26dff6743141aba4392b61f7a757d50c53d31d98fa",
+            "d45f7469ef151b2d569429862dd50cfdd4952e070d31ba509f9cb6aabe27a6d9",
+            "e2489fe437987de246ccb8291d2856dd6e52fa84605dc90b6405905137891780",
+            "e30752d971ee740611b541eb40e765c91a02eb9d309e4e009a515195db9c9e70",
+            "f4267bba6136906c4d4b812ca5fd06eb2385546bb1dfb6be9642abb2e8b3da0a",
+            "f47ace2308a2f46e31c4a6022a30b7abd107b2e2375addc1b6d620bef3a5dd9d",
+            "f80c7aee33ccf130aa1e57e6612b955a8a788388cb878d155873b769ab0bbfcd",
+            "fb5afe80b455d851e9107ab56e08cabb940dde64bbb0ef65828fea07147a5b84",
+            "fd0226897c15655386256af2ee248e024ca941abc98d1e2ed26ef8a663adfb78"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -14762,6 +14921,12 @@
               "url": "/Entry?eventId=59614",
               "title": "Enter",
               "last_updated_at": "2026-06-17T09:10:06.347685+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=59614&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-07-01T04:16:33.779237+00:00"
             }
           ],
           "documents": [],
@@ -15037,6 +15202,70 @@
               "last_updated_at": "2026-06-27T05:57:24.921965+00:00"
             }
           ],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_59747",
+      "name": "Mtbo närtävling",
+      "start_time": "2026-08-12",
+      "end_time": "2026-08-12",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Local"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "OK Mark",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Bo Herdersson"
+        },
+        {
+          "role": "Contact phone number",
+          "name": "0706587251"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:DxtMB0gBBxcTAxYdAzQWCkEaAlwCHwg="
+        }
+      ],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/59747",
+          "title": null,
+          "last_updated_at": "2026-07-01T04:16:33.779114+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": "Västergötland",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "Mtbo närtävling",
+          "datetimez": "2026-08-12T17:30:00+02:00",
+          "discipline": "Middle",
+          "night_or_day": "day",
+          "position": null,
+          "areas": [],
+          "urls": [],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
