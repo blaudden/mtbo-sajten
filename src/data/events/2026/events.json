@@ -5087,7 +5087,14 @@
               ]
             }
           ],
-          "urls": [],
+          "urls": [
+            {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/193839",
+              "title": "Map, courses and routes will be available in Livelox",
+              "last_updated_at": "2026-07-06T06:41:01.611098+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
