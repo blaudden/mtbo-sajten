@@ -8847,6 +8847,18 @@
               "url": "/Entry?eventId=57927",
               "title": "Enter and/or order services",
               "last_updated_at": "2026-05-20T18:50:27.703169+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=57927&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-07-08T03:00:58.463186+00:00"
+            },
+            {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/195563",
+              "title": "Map, courses and routes will be available in Livelox",
+              "last_updated_at": "2026-07-08T03:00:58.463186+00:00"
             }
           ],
           "documents": [],
@@ -12065,10 +12077,45 @@
           "discipline": "Middle",
           "night_or_day": "night",
           "position": {
-            "lat": 63.2826432269606,
-            "lng": 18.7707337999629
+            "lat": 63.2827001328784,
+            "lng": 18.7707330878655
           },
-          "areas": [],
+          "areas": [
+            {
+              "lat": 63.2827001328784,
+              "lng": 18.7707330878655,
+              "polygon": [
+                [
+                  63.29979876663461,
+                  18.739302642828555
+                ],
+                [
+                  63.28658978671814,
+                  18.732704697792737
+                ],
+                [
+                  63.2679791178829,
+                  18.76929329109938
+                ],
+                [
+                  63.268788524734816,
+                  18.7872877122784
+                ],
+                [
+                  63.2890163820837,
+                  18.804082470477578
+                ],
+                [
+                  63.30195476317874,
+                  18.74889966477266
+                ],
+                [
+                  63.29979876663461,
+                  18.739302642828555
+                ]
+              ]
+            }
+          ],
           "urls": [
             {
               "type": "EntryList",
@@ -13674,6 +13721,12 @@
               "url": "/Entry?eventId=58956",
               "title": "Enter",
               "last_updated_at": "2026-04-25T22:13:52.238551+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=58956&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-07-08T03:00:58.463437+00:00"
             }
           ],
           "documents": [],
@@ -15207,6 +15260,12 @@
               "url": "/Events/Entries?eventId=59702&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-06-27T05:57:24.921965+00:00"
+            },
+            {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/195446",
+              "title": "Map, courses and routes will be available in Livelox",
+              "last_updated_at": "2026-07-08T03:00:58.463650+00:00"
             }
           ],
           "documents": [],
