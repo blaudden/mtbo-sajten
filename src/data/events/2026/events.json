@@ -8822,8 +8822,8 @@
         {
           "type": "Invitation",
           "title": "Inbjudan hela Närkeserien i MTBO",
-          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57927/63d7faf6-ffb8-4a52-877b-1a28b83d1332/Inbjudan-hela-N-rkeserien-i-MTBO.pdf",
-          "published_time": "2026-03-09"
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57927/98ee653d-2600-4e02-bc71-16403ee31314/Inbjudan hela Närkeserien i MTBO.Pdf",
+          "published_time": "2026-07-10"
         }
       ],
       "information": null,
@@ -15232,7 +15232,20 @@
           "last_updated_at": "2026-06-24T03:59:07.140372+00:00"
         }
       ],
-      "documents": [],
+      "documents": [
+        {
+          "type": "ResultList",
+          "title": "Resultat",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/59702/5c1133a2-b438-41fd-90df-635cb48c54e4/Resultat .Pdf",
+          "published_time": "2026-07-09"
+        },
+        {
+          "type": "Other",
+          "title": "Foton",
+          "url": "https://photos.app.goo.gl/vwCDRJmvAPwQrXaE7",
+          "published_time": null
+        }
+      ],
       "information": "Välkomna till ett sommaräventyr i Örnsköldsviks närområde! Tre bergstoppar ska bestigas! Totalt ca 24 km vägcykling till bergsfötterna (gärna cykellås) och ca 3,5km \" skyrunning\". Individuellt eller kör gärna med någon.Det kan man bestämma strax innan start. Samling 13 på Bryggerivägen 5 i Järved för genomgång. Kartorna delas ut 10 min innan starten som sker kl 13.30. Man \"stämplar\" genom att vidröra flaggstång/ mast .Fika vid målgång!\nAlla välkomna , icke Skogslöpare 50 kr startavgift",
       "region": "Ångermanland",
       "punching_system": "other",
@@ -15258,8 +15271,8 @@
             {
               "type": "Livelox",
               "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/195446",
-              "title": "Map, courses and routes will be available in Livelox",
-              "last_updated_at": "2026-07-08T03:00:58.463650+00:00"
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-07-11T05:17:14.718397+00:00"
             }
           ],
           "documents": [],
