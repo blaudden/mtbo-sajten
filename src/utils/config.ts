@@ -1,5 +1,5 @@
 import fs from 'fs';
-import * as yaml from 'js-yaml';
+import yaml from 'js-yaml';
 import merge from 'lodash.merge';
 
 import type { MetaData } from '~/types';

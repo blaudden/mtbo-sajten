@@ -1,6 +1,6 @@
 import path from 'path';
 import fs from 'fs';
-import * as yaml from 'js-yaml';
+import yaml from 'js-yaml';
 import { fileURLToPath } from 'url';
 import { defineConfig, svgoOptimizer } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
