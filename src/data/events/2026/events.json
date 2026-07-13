@@ -4860,13 +4860,13 @@
           "discipline": "Middle",
           "night_or_day": "day",
           "position": {
-            "lat": 57.744290488963,
-            "lng": 11.9192503726385
+            "lat": 57.748726450084,
+            "lng": 11.9144022571276
           },
           "areas": [
             {
-              "lat": 57.744290488963,
-              "lng": 11.9192503726385,
+              "lat": 57.748726450084,
+              "lng": 11.9144022571276,
               "polygon": [
                 [
                   57.75620174137538,
@@ -4898,7 +4898,7 @@
                 ],
                 [
                   57.754156074262,
-                  11.906549737276366
+                  11.906549737276368
                 ],
                 [
                   57.754156074262,
@@ -8814,6 +8814,12 @@
           "published_time": "2026-06-07"
         },
         {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57927/c76a877c-416d-4b19-9d8c-2a4cafc0faff/PM.Pdf",
+          "published_time": "2026-07-11"
+        },
+        {
           "type": "Other",
           "title": "Kartnorm MTBO",
           "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57927/eca8649a-7576-4c4f-a3c2-bc6d443a0fac/Kartnorm-MTBO.pdf",
@@ -8842,12 +8848,6 @@
           },
           "areas": [],
           "urls": [
-            {
-              "type": "EntryList",
-              "url": "/Entry?eventId=57927",
-              "title": "Enter and/or order services",
-              "last_updated_at": "2026-05-20T18:50:27.703169+00:00"
-            },
             {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=57927&groupBy=EventClass",
