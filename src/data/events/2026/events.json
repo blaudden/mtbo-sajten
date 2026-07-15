@@ -2093,6 +2093,10 @@
           "country_code": "GBR"
         },
         {
+          "name": "GB MTBO",
+          "country_code": "GBR"
+        },
+        {
           "name": "Scottish Orienteering Association",
           "country_code": "GBR"
         }
@@ -3823,6 +3827,12 @@
               "url": "/Entry?eventId=8999",
               "title": "Enter",
               "last_updated_at": "2026-05-31T16:36:24.775926+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=8999&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-07-15T02:46:24.198330+00:00"
             }
           ],
           "documents": [],
@@ -3901,6 +3911,12 @@
               "url": "/Entry?eventId=9000",
               "title": "Enter",
               "last_updated_at": "2026-05-31T16:36:24.775864+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=9000&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-07-15T02:46:24.198347+00:00"
             }
           ],
           "documents": [],
@@ -3977,6 +3993,12 @@
               "url": "/Entry?eventId=9001",
               "title": "Enter",
               "last_updated_at": "2026-05-31T16:36:24.775978+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=9001&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-07-15T02:46:24.198362+00:00"
             }
           ],
           "documents": [],
@@ -5282,9 +5304,47 @@
         {
           "role": "Contact email",
           "name": "enc:Dh0RHERdDxsPFwAAGBAiCEASCh5PEwof"
+        },
+        {
+          "role": "Event director",
+          "name": "Cecilia Lingerud"
+        },
+        {
+          "role": "Course setter",
+          "name": "Lars Persson"
+        },
+        {
+          "role": "Event controller",
+          "name": "Linda Allwood"
+        },
+        {
+          "role": "Course controller",
+          "name": "Johan Wennermark"
         }
       ],
-      "classes": [],
+      "classes": [
+        "D12",
+        "D16",
+        "D17-20",
+        "D21",
+        "D40",
+        "D50",
+        "D60",
+        "D70",
+        "D80",
+        "H12",
+        "H16",
+        "H17-20",
+        "H21",
+        "H40",
+        "H50",
+        "H60",
+        "H70",
+        "H80",
+        "Öppen kort",
+        "Öppen lång",
+        "Öppen mellan"
+      ],
       "urls": [
         {
           "type": "Path",
@@ -5299,7 +5359,14 @@
           "last_updated_at": "2026-05-10T19:32:03.787291+00:00"
         }
       ],
-      "documents": [],
+      "documents": [
+        {
+          "type": "Invitation",
+          "title": "Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53809/a7b4e8a3-b860-49f3-9d52-f17ce00dd44e/Inbjudan.Pdf",
+          "published_time": "2026-07-13"
+        }
+      ],
       "information": null,
       "region": "Blekinge\nSkåne\nSmåland",
       "punching_system": "Sportident",
@@ -5310,9 +5377,78 @@
           "datetimez": "2026-09-19T00:00:00+02:00",
           "discipline": "Long",
           "night_or_day": "day",
-          "position": null,
-          "areas": [],
-          "urls": [],
+          "position": {
+            "lat": 56.2668299799288,
+            "lng": 14.7699081077027
+          },
+          "areas": [
+            {
+              "lat": 56.2668299799288,
+              "lng": 14.7699081077027,
+              "polygon": [
+                [
+                  56.25352647804107,
+                  14.76164697528012
+                ],
+                [
+                  56.26105031510957,
+                  14.76062470148433
+                ],
+                [
+                  56.26646915088284,
+                  14.769655382510631
+                ],
+                [
+                  56.27360041520424,
+                  14.748679040550211
+                ],
+                [
+                  56.27427243337476,
+                  14.736305401564072
+                ],
+                [
+                  56.27765437600041,
+                  14.731252955039896
+                ],
+                [
+                  56.2790565401792,
+                  14.719734367541646
+                ],
+                [
+                  56.27897430920868,
+                  14.700774480281071
+                ],
+                [
+                  56.25750597962326,
+                  14.702255721473309
+                ],
+                [
+                  56.25613125529574,
+                  14.720700827601659
+                ],
+                [
+                  56.25580473937654,
+                  14.726461314274562
+                ],
+                [
+                  56.249396552134016,
+                  14.74420908149849
+                ],
+                [
+                  56.25352647804107,
+                  14.76164697528012
+                ]
+              ]
+            }
+          ],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Entry?eventId=53809",
+              "title": "Enter and/or order services",
+              "last_updated_at": "2026-07-15T02:46:24.197692+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
@@ -5360,9 +5496,47 @@
         {
           "role": "Contact email",
           "name": "enc:Dh0RHERdDxsPFwAAGBAiCEASCh5PEwof"
+        },
+        {
+          "role": "Event director",
+          "name": "Cecilia Lingerud"
+        },
+        {
+          "role": "Course setter",
+          "name": "Lars Persson"
+        },
+        {
+          "role": "Event controller",
+          "name": "Linda Allwood"
+        },
+        {
+          "role": "Course controller",
+          "name": "Johan Wennermark"
         }
       ],
-      "classes": [],
+      "classes": [
+        "D12",
+        "D16",
+        "D17-20",
+        "D21",
+        "D40",
+        "D50",
+        "D60",
+        "D70",
+        "D80",
+        "H12",
+        "H16",
+        "H17-20",
+        "H21",
+        "H40",
+        "H50",
+        "H60",
+        "H70",
+        "H80",
+        "Öppen kort",
+        "Öppen lång",
+        "Öppen mellan"
+      ],
       "urls": [
         {
           "type": "Path",
@@ -5377,7 +5551,14 @@
           "last_updated_at": "2026-05-10T19:32:03.787283+00:00"
         }
       ],
-      "documents": [],
+      "documents": [
+        {
+          "type": "Invitation",
+          "title": "Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53810/da501522-0cb5-4d84-be66-11121fe11246/Inbjudan.Pdf",
+          "published_time": "2026-07-13"
+        }
+      ],
       "information": null,
       "region": "Blekinge\nSkåne\nSmåland",
       "punching_system": "Sportident",
@@ -5388,9 +5569,68 @@
           "datetimez": "2026-09-20T00:00:00+02:00",
           "discipline": "Middle",
           "night_or_day": "day",
-          "position": null,
-          "areas": [],
-          "urls": [],
+          "position": {
+            "lat": 56.2667749606121,
+            "lng": 14.7705625684993
+          },
+          "areas": [
+            {
+              "lat": 56.2667749606121,
+              "lng": 14.7705625684993,
+              "polygon": [
+                [
+                  56.266774960612054,
+                  14.770157414089192
+                ],
+                [
+                  56.265312477568784,
+                  14.767118756013465
+                ],
+                [
+                  56.28588293169244,
+                  14.76668226925038
+                ],
+                [
+                  56.28593315247301,
+                  14.806674384869241
+                ],
+                [
+                  56.262499853053356,
+                  14.807229042613015
+                ],
+                [
+                  56.25226015379289,
+                  14.797505336770701
+                ],
+                [
+                  56.251887546592656,
+                  14.756748584108832
+                ],
+                [
+                  56.26107473665755,
+                  14.756748584108832
+                ],
+                [
+                  56.266774960612054,
+                  14.770157414089192
+                ]
+              ]
+            }
+          ],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Entry?eventId=53810",
+              "title": "Enter and/or order services",
+              "last_updated_at": "2026-07-15T02:46:24.197629+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=53810&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-07-15T02:46:24.197629+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
@@ -8830,6 +9070,12 @@
           "title": "Inbjudan hela Närkeserien i MTBO",
           "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57927/98ee653d-2600-4e02-bc71-16403ee31314/Inbjudan hela Närkeserien i MTBO.Pdf",
           "published_time": "2026-07-10"
+        },
+        {
+          "type": "ResultList",
+          "title": "Liveresultat",
+          "url": "https://liveresultat.orientering.se/followfull.php?comp=37248&lang=sv",
+          "published_time": null
         }
       ],
       "information": null,
@@ -8849,23 +9095,86 @@
           "areas": [],
           "urls": [
             {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/195563",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-07-15T02:46:24.197854+00:00"
+            },
+            {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=57927&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-07-08T03:00:58.463186+00:00"
             },
             {
-              "type": "Livelox",
-              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/195563",
-              "title": "Map, courses and routes will be available in Livelox",
-              "last_updated_at": "2026-07-08T03:00:58.463186+00:00"
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=57927&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-07-15T02:46:24.197854+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=57927&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-07-15T02:46:24.197854+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "Herr 3 km": 2,
+            "Dam 5 km": 6,
+            "Herr 5 km": 6,
+            "Dam 8 km": 7,
+            "Herr 8 km": 18
+          },
+          "result_counts": {
+            "Herr 3 km": 2,
+            "Dam 5 km": 6,
+            "Herr 5 km": 6,
+            "Dam 8 km": 7,
+            "Herr 8 km": 18
+          },
+          "fingerprints": [
+            "0761672688f369792df09b3f1c87d1602147903126163f52fca0dd3d5444473f",
+            "08833132496ca0fed851a16c80f60e90d39f5672cd1c1dd8da4d213eedf768b6",
+            "0c12c513a82f0eabefbc01b3dfa3c56a911322988c09fd749733341b153d7f41",
+            "0ccb3ef9587cdafab4cca3d7bdddc816fa6345e198162981d258d0f85947ac03",
+            "132f8355a89bf7ce14576d80c7aa90258f53d058fd7fb8640459c923d4d6489c",
+            "140292fad1ca7f4616258834066ecccc20f10dee9a90cf23c1a844288fb41886",
+            "1999622c26ae26ad73da21659eb51368d52af6ec2ecc12690e259e7e6abff9bc",
+            "2dcd6dbc5d2a2e6211fc09afb2696524d453fce041aa0315d8fe82d7e1059e26",
+            "33dcd3ad458192012822d15395684ee2f9d979ee80356a97d543637449b13e94",
+            "36a018235970606571c24d667b0c7b54b6396511e68d293c3560187d477b9023",
+            "3a7d4a9c8b29646c9542f6efdcc75d5307b2df360551a6045d6a8e9101241f59",
+            "41ffba4b20aca38ffcce9a848d9a7e1684c36e7adbfa0a6c8b5c6d630f0f6472",
+            "476109e26fba416c52cfda89b4021b6f41f12700a312e9fbabb2d64ce537fd28",
+            "4d599a482e1227dcbd30bfb9c56dcb3d7c407e82a34ab77dd55acfa7245d1aa4",
+            "4dc5162905fbad69e84fc0e9cdc5568442bcbffa2b7e2546f3bf1ed7cabfb2c2",
+            "575aa783449ada8ce155d3e34ade7c4f707caa07cde2feb0730b10bb5e79ed06",
+            "59df5086ace207f11629c05138b3143ecbd1aaa2632e9fee2de3df775ea7939e",
+            "5d37d9d9bbbc79406250af6a1a8e1981fe6a1877e1343fdd32629fe74066a05b",
+            "5e6508c5c950ab410fb901e2edc0f9f1f586ffbb54cfac30a65202d59ca56a05",
+            "6bde9865de2a051a86a2e7d79a005a3ea68251d4524da26137616d98c2af1506",
+            "706f979b39005ff97bf6d32baf34053fa1834f453fc9c6b853a09765e828c61d",
+            "71d2dd3f8bc03875e6c57510255acebf0d06aef8bfe6cbc6c544570c754dd702",
+            "72cb9bc4417a980d7951c51a64451e30e879a8aed921c53d8e7348afd1fe9a7f",
+            "7bca59e045f91491ad0ecf56e7c6d26c965c7de5383ac87c492dc6e7b1a7784b",
+            "8cd9098e6374bfeaada1f0109b2e5907c8c1abc2b6d92e567453ae28b8834c0e",
+            "927835126f5d64ff37450e8e2c0f875b4951fd6da8dea7fb9409f78f32a31cc0",
+            "99993e1321493302a78195d71f404aa4b7216684cd36e9d5b272c1fd9d6e93bb",
+            "9da9b6a3abf3e39c9c61328ca27c5b453b328382415c153b6ee2ac2ce08934e5",
+            "a1baf0de033e9552ea9eef494324f5c3bb4b3021c4a98886e0ce216d9f739ae0",
+            "b4752070c136d3a99736cbae1cf138902a58c874c45b8a97793146e46f7e6706",
+            "b9ad215200ba7206effa6b23120df8680ae83f802fd05604904655aaf79fa125",
+            "d397d0fa611caa2c039b00215c2d1ddd0307cddba188bfffea1b2b1015847f5a",
+            "d502c04b3118e5f0788d09b8c0a758d0f14ef843a14bdda43a444d898f070146",
+            "d86b6e33504ac09a8b99f62365f37d0d011a162e520748054439256f1889066a",
+            "e1f6c20a1dbd3f14d80dda7883d4cefddef4dd27aeb0edd8575c4e0d842fa476",
+            "e7f2a5186b487a003f5a8448d5f753e75fc08296a614d6d0efa94d16bb3c3da2",
+            "ebe5e94caa1addc966003f34c5e15077d28bb7e7d89dbc745f20a7c0fd343d75",
+            "f67714ecc6cf000f47c7280efcc103c214e3c99138b8e3699def64424bef2f01"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -8926,6 +9235,12 @@
       ],
       "documents": [
         {
+          "type": "Invitation",
+          "title": "Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57928/f5b0f2af-a92f-4b54-8cc6-25ce8edef5a3/Inbjudan.Pdf",
+          "published_time": "2026-07-10"
+        },
+        {
           "type": "Other",
           "title": "Kartnorm MTBO",
           "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57928/7f30a3b3-bd67-41a5-b63c-98fae0028fe6/Kartnorm-MTBO.pdf",
@@ -8934,8 +9249,8 @@
         {
           "type": "Invitation",
           "title": "Inbjudan hela Närkeserien i MTBO",
-          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57928/3c560a3a-14b5-497e-8c0b-71995d435ec7/Inbjudan-hela-N-rkeserien-i-MTBO.pdf",
-          "published_time": "2026-03-09"
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57928/59c1b3d8-f775-43fb-a6e2-71ce96804faf/Inbjudan hela Närkeserien i MTBO.Pdf",
+          "published_time": "2026-07-10"
         }
       ],
       "information": "Plats meddelas senare.",
@@ -8953,7 +9268,20 @@
             "lng": 2.39404439333136
           },
           "areas": [],
-          "urls": [],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Entry?eventId=57928",
+              "title": "Enter and/or order services",
+              "last_updated_at": "2026-07-15T02:46:24.197835+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=57928&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-07-15T02:46:24.197835+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
@@ -9031,8 +9359,8 @@
         {
           "type": "Invitation",
           "title": "Inbjudan hela Närkeserien i MTBO",
-          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57929/6b984a3a-400a-4f31-b477-1322e1d2aeea/Inbjudan-hela-N-rkeserien-i-MTBO.pdf",
-          "published_time": "2026-03-09"
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57929/5b2290d4-8c28-4bea-b6dc-d2880bd92655/Inbjudan hela Närkeserien i MTBO.Pdf",
+          "published_time": "2026-07-10"
         }
       ],
       "information": "OBS!\nTidigarelagd start pga mörkret.",
