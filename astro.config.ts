@@ -1,12 +1,11 @@
 import path from 'path';
 import fs from 'fs';
-import yaml from 'js-yaml';
+import * as yaml from 'js-yaml';
 import { fileURLToPath } from 'url';
 import { defineConfig, svgoOptimizer } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 import mdx from '@astrojs/mdx';
-import compress from 'astro-compress';
 import icon from 'astro-icon';
 import tasks from './src/utils/tasks.mjs';
 import { SITE, APP_BLOG } from './src/utils/config.ts';
@@ -171,17 +170,7 @@ export default defineConfig({
         ],
       },
     }),
-
     tasks(),
-
-    compress({
-      CSS: true,
-      HTML: false,
-      Image: false,
-      JavaScript: true,
-      SVG: false,
-      Logger: 1,
-    }),
   ],
 
   markdown: {},
