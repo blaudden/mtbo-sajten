@@ -1,5 +1,5 @@
 ---
-import LeafletMapReact from '../react/LeafletMap';
+import LeafletMap from '../LeafletMap.astro';
 import { Icon } from 'astro-icon/components';
 import type { ScraperEvent, ScraperRace } from '~/types/events';
 
@@ -67,13 +67,7 @@ const polygonsString = JSON.stringify(polygons);
         Karta med arena & tävlingsområden
       </h2>
       <div class="border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden shadow-sm">
-        <LeafletMapReact
-          client:only="react"
-          markers={markersString}
-          polygons={polygonsString}
-          height="400px"
-          zoom={12}
-        />
+        <LeafletMap markers={markersString} polygons={polygonsString} height="400px" zoom={12} />
       </div>
     </div>
   )
