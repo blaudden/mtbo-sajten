@@ -1,0 +1,134 @@
+---
+interface Marker {
+  lat: number;
+  lng: number;
+  title?: string;
+  popup?: string;
+  color?: string;
+  icon?: string;
+}
+
+interface Polygon {
+  points: Array<{ lat: number; lng: number }>;
+  title?: string;
+  color?: string;
+}
+
+interface Props {
+  markers?: string | Marker[];
+  polygons?: string | Polygon[];
+  polylines?: string | unknown[];
+  height?: string;
+  zoom?: number;
+  center?: [number, number];
+}
+
+const { markers: rawMarkers = [], polygons: rawPolygons = [], height = '400px', zoom = 13, center } = Astro.props;
+
+// Parse markers if string
+const parsedMarkers: Marker[] =
+  typeof rawMarkers === 'string' ? (rawMarkers ? JSON.parse(rawMarkers) : []) : rawMarkers || [];
+
+// Parse polygons if string
+const parsedPolygons: Polygon[] =
+  typeof rawPolygons === 'string' ? (rawPolygons ? JSON.parse(rawPolygons) : []) : rawPolygons || [];
+
+const mapId = `leaflet-map-${Math.random().toString(36).substring(2, 9)}`;
+---
+
+<div
+  id={mapId}
+  class="leaflet-map-container"
+  style={`height: ${height}; width: 100%; z-index: 10;`}
+  data-markers={JSON.stringify(parsedMarkers)}
+  data-polygons={JSON.stringify(parsedPolygons)}
+  data-zoom={zoom}
+  data-center={center ? JSON.stringify(center) : ''}
+>
+</div>
+
+<script>
+  import L from 'leaflet';
+  import 'leaflet/dist/leaflet.css';
+
+  function initLeafletMaps() {
+    const mapContainers = document.querySelectorAll<HTMLElement>('.leaflet-map-container');
+
+    mapContainers.forEach((container) => {
+      if (container.dataset.initialized === 'true') return;
+      container.dataset.initialized = 'true';
+
+      const markersData = JSON.parse(container.dataset.markers || '[]');
+      const polygonsData = JSON.parse(container.dataset.polygons || '[]');
+      const defaultZoom = parseInt(container.dataset.zoom || '13', 10);
+      const customCenter = container.dataset.center ? JSON.parse(container.dataset.center) : null;
+
+      // Fix default marker asset paths in Leaflet
+      delete (L.Icon.Default.prototype as unknown as { _getIconUrl?: unknown })._getIconUrl;
+      L.Icon.Default.mergeOptions({
+        iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
+        iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
+        shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+      });
+
+      const bounds = L.latLngBounds([]);
+
+      // Create map
+      const map = L.map(container, {
+        scrollWheelZoom: false,
+      });
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 19,
+      }).addTo(map);
+
+      // Add markers
+      markersData.forEach((m: { lat: number; lng: number; title?: string; popup?: string }) => {
+        if (typeof m.lat === 'number' && typeof m.lng === 'number') {
+          const latLng: [number, number] = [m.lat, m.lng];
+          const marker = L.marker(latLng).addTo(map);
+          if (m.title || m.popup) {
+            marker.bindPopup(m.popup || m.title || '');
+          }
+          bounds.extend(latLng);
+        }
+      });
+
+      // Add polygons
+      polygonsData.forEach((p: { points: Array<{ lat: number; lng: number }>; title?: string; color?: string }) => {
+        if (p.points && Array.isArray(p.points)) {
+          const latLngs = p.points.map((pt) => [pt.lat, pt.lng] as [number, number]);
+          if (latLngs.length > 0) {
+            const polygon = L.polygon(latLngs, {
+              color: p.color || 'red',
+              fillColor: p.color || 'red',
+              fillOpacity: 0.35,
+            }).addTo(map);
+            if (p.title) {
+              polygon.bindPopup(p.title);
+            }
+            latLngs.forEach((pt) => bounds.extend(pt));
+          }
+        }
+      });
+
+      // Set view/center
+      if (customCenter && Array.isArray(customCenter) && customCenter.length >= 2) {
+        map.setView(customCenter as [number, number], defaultZoom);
+      } else if (bounds.isValid()) {
+        map.fitBounds(bounds, { padding: [30, 30] });
+      } else {
+        map.setView([60.0, 15.0], defaultZoom);
+      }
+    });
+  }
+
+  // Initialize on page load and view transitions
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initLeafletMaps);
+  } else {
+    initLeafletMaps();
+  }
+  document.addEventListener('astro:page-load', initLeafletMaps);
+</script>
