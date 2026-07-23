@@ -8,3 +8,5 @@ declare namespace App {
     lang?: string;
   }
 }
+
+declare module '@fontsource-variable/inter';
