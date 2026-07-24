@@ -4,7 +4,10 @@ import { Readable } from 'node:stream';
 import { finished } from 'node:stream/promises';
 import ytdl from '@distube/ytdl-core';
 import slugify from 'slugify';
-import ffmpeg from 'fluent-ffmpeg';
+import { execFile } from 'node:child_process';
+import { promisify } from 'node:util';
+
+const execFileAsync = promisify(execFile);
 
 const INFO_LOG = '\x1b[34m[INFO]\x1b[0m';
 const SUCCESS_LOG = '\x1b[32m[SUCCESS]\x1b[0m';
@@ -22,17 +25,18 @@ async function downloadFile(url: string, dest: string) {
 }
 
 async function extractFrame(videoUrl: string, timestamp: string, outputPath: string) {
-  return new Promise<void>((resolve, reject) => {
-    ffmpeg(videoUrl)
-      .screenshots({
-        timestamps: [timestamp],
-        filename: path.basename(outputPath),
-        folder: path.dirname(outputPath),
-        size: '1280x720', // Ensure decent quality
-      })
-      .on('end', () => resolve())
-      .on('error', (err) => reject(err));
-  });
+  await execFileAsync('ffmpeg', [
+    '-ss',
+    timestamp,
+    '-i',
+    videoUrl,
+    '-vframes',
+    '1',
+    '-s',
+    '1280x720',
+    '-y',
+    outputPath,
+  ]);
 }
 
 function escapeForDoubleQuotedString(input: string): string {
