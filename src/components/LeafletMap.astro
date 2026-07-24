@@ -168,27 +168,42 @@ if (rawCenter) {
       const minZoom = parseInt(this.dataset.minZoom || '3', 10);
       const customCenter = this.dataset.center ? JSON.parse(this.dataset.center) : null;
 
-      // Stagger markers sharing identical coordinates
+      // Group markers within a proximity radius (~200m / 0.003 deg) to prevent visual overlap
+      const PROXIMITY_THRESHOLD = 0.003;
+      const STAGGER_OFFSET = 0.0025; // ~140m separation for clear visual distinction
+
       const staggeredMarkers = [...markersData];
-      const sameLocationGroups: Record<string, number[]> = {};
+      const clusters: number[][] = [];
 
       staggeredMarkers.forEach((m, index) => {
         if (typeof m.lat !== 'number' || typeof m.lng !== 'number') return;
-        const key = `${m.lat.toFixed(5)},${m.lng.toFixed(5)}`;
-        if (!sameLocationGroups[key]) {
-          sameLocationGroups[key] = [];
+
+        let addedToCluster = false;
+        for (const cluster of clusters) {
+          const leader = staggeredMarkers[cluster[0]];
+          const dLat = Math.abs(m.lat - leader.lat);
+          const dLng = Math.abs(m.lng - leader.lng);
+          const dist = Math.sqrt(dLat * dLat + dLng * dLng);
+
+          if (dist < PROXIMITY_THRESHOLD) {
+            cluster.push(index);
+            addedToCluster = true;
+            break;
+          }
         }
-        sameLocationGroups[key].push(index);
+
+        if (!addedToCluster) {
+          clusters.push([index]);
+        }
       });
 
-      Object.values(sameLocationGroups).forEach((indices) => {
-        if (indices.length > 1) {
-          const offset = 0.0002;
-          indices.forEach((idx, i) => {
+      clusters.forEach((cluster) => {
+        if (cluster.length > 1) {
+          cluster.forEach((idx, i) => {
             if (i > 0) {
               staggeredMarkers[idx] = {
                 ...staggeredMarkers[idx],
-                lng: staggeredMarkers[idx].lng + offset * i,
+                lng: staggeredMarkers[idx].lng + STAGGER_OFFSET * i,
                 zIndexOffset: -1000 * i,
               };
             }
