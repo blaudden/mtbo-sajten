@@ -9,9 +9,7 @@ import mdx from '@astrojs/mdx';
 import icon from 'astro-icon';
 import tasks from './src/utils/tasks.mjs';
 import { SITE, APP_BLOG } from './src/utils/config.ts';
-import react from '@astrojs/react';
 import markdoc from '@astrojs/markdoc';
-import keystatic from '@keystatic/astro';
 import netlify from '@astrojs/netlify';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -152,8 +150,6 @@ export default defineConfig({
     }),
     mdx(),
     markdoc(),
-    react(),
-    ...(process.env.NODE_ENV === 'development' ? [keystatic()] : []),
     icon({
       include: {
         tabler: ['*'],

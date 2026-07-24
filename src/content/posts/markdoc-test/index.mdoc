@@ -40,43 +40,58 @@ Visa en YouTube video, använder astro-embed, https://astro-embed.netlify.app/
 
 ## Leaflet Map
 
-Visa en karta med markörer.
-
-**Note**: Edit this map via Keystatic admin (/keystatic) for the best experience. Each marker has individual fields for lat, lng, title, URL, color, and icon type.
+Visa en karta med markörer, områden (polygons) och spår/banor (polylines).
 
 **Available colors**: blue (default), red, green, orange, purple, grey
 **Available icons**: default (●), start (▶), finish (■), parking (P), info (i)
 
 {% LeafletMap
-   markers=[{lat: 59.163, lng: 18.130241, title: "Event Center", url: "https://eventor.orientering.se/Events/Show/54359", color: "red", icon: "info"}, {lat: 59.165, lng: 18.128, title: "Etapp 1 - Start", url: "https://eventor.orientering.se/Events/Show/54359", color: "green", icon: "start"}, {lat: 59.161, lng: 18.135, title: "Etapp 2", url: "https://eventor.orientering.se/Events/Show/54359", color: "blue", icon: "default"}, {lat: 59.168, lng: 18.132, title: "Etapp 3 - Finish", url: "https://eventor.orientering.se/Events/Show/54359", color: "orange", icon: "finish"}, {lat: 59.16, lng: 18.125, title: "Parking", url: "https://eventor.orientering.se/Events/Show/54359", color: "purple", icon: "parking"}]
+   markers=[
+     {lat: 59.163, lng: 18.130241, title: "Event Center", url: "https://eventor.orientering.se/Events/Show/54359", color: "red", icon: "info"},
+     {lat: 59.165, lng: 18.128, title: "Etapp 1 - Start", url: "https://eventor.orientering.se/Events/Show/54359", color: "green", icon: "start"},
+     {lat: 59.161, lng: 18.135, title: "Etapp 2", url: "https://eventor.orientering.se/Events/Show/54359", color: "blue", icon: "default"},
+     {lat: 59.168, lng: 18.132, title: "Etapp 3 - Finish", url: "https://eventor.orientering.se/Events/Show/54359", color: "orange", icon: "finish"},
+     {lat: 59.16, lng: 18.125, title: "Parking", url: "https://eventor.orientering.se/Events/Show/54359", color: "purple", icon: "parking"}
+   ]
    zoom=12
    height="400px" /%}
 
 ---
 
-## Test Map (Staggering, Polygons, Polylines)
+## Test Map (Markers, Polygons & Polylines)
 
 {% LeafletMap
    markers=[
-     { lat: 59.3293, lng: 18.0686, title: "Stockholm 1", url: "", color: "blue" },
-     { lat: 59.3293, lng: 18.0686, title: "Stockholm 2 (Staggered)", url: "", color: "red" }
+     { lat: 59.3293, lng: 18.0686, title: "Stockholm Central", url: "", color: "blue" },
+     { lat: 59.332, lng: 18.075, title: "Arena Start Point", url: "", color: "green" }
    ]
-polygons=[
-{
-points: "59.33,18.07; 59.34,18.08; 59.33,18.09",
-color: "green",
-title: "Test Polygon"
-}
-]
-polylines=[
-{
-points: "59.32,18.06; 59.31,18.05",
-color: "orange",
-width: 5,
-title: "Test Polyline"
-}
-]
-height="500px"
+   polygons=[
+     {
+       points: "59.33,18.07; 59.34,18.08; 59.335,18.09; 59.325,18.08",
+       color: "red",
+       title: "Embargo Area (String format)"
+     },
+     {
+       points: [{lat: 59.315, lng: 18.05}, {lat: 59.32, lng: 18.06}, {lat: 59.31, lng: 18.06}],
+       color: "purple",
+       title: "Embargo Area (Array format)"
+     }
+   ]
+   polylines=[
+     {
+       points: "59.3293,18.0686; 59.332,18.075; 59.335,18.085",
+       color: "orange",
+       width: 5,
+       title: "Race Track Course (String format)"
+     },
+     {
+       points: [{lat: 59.31, lng: 18.05}, {lat: 59.315, lng: 18.055}, {lat: 59.32, lng: 18.05}],
+       color: "blue",
+       width: 4,
+       title: "Warmup Track (Array format)"
+     }
+   ]
+   height="500px"
 /%}
 
 ---

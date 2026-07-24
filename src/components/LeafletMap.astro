@@ -1,0 +1,324 @@
+---
+import 'leaflet/dist/leaflet.css';
+
+type MarkerColor = 'blue' | 'red' | 'green' | 'orange' | 'purple' | 'grey';
+type MarkerIconType = 'default' | 'start' | 'finish' | 'parking' | 'info';
+
+interface Marker {
+  lat: number;
+  lng: number;
+  title?: string;
+  url?: string;
+  popup?: string;
+  color?: MarkerColor;
+  icon?: MarkerIconType;
+  zIndexOffset?: number;
+}
+
+interface Polygon {
+  points: Array<{ lat: number; lng: number }> | string;
+  title?: string;
+  color?: MarkerColor;
+}
+
+interface Polyline {
+  points: Array<{ lat: number; lng: number }> | string;
+  title?: string;
+  color?: MarkerColor;
+  width?: number;
+}
+
+interface Props {
+  markers?: string | Marker[];
+  polygons?: string | Polygon[];
+  polylines?: string | Polyline[];
+  height?: string;
+  zoom?: number;
+  minZoom?: number;
+  center?: [number, number] | { lat: number; lng: number } | string;
+}
+
+const {
+  markers: rawMarkers = [],
+  polygons: rawPolygons = [],
+  polylines: rawPolylines = [],
+  height = '400px',
+  zoom = 13,
+  minZoom = 3,
+  center: rawCenter,
+} = Astro.props;
+
+// Parse markers if string
+const parsedMarkers: Marker[] =
+  typeof rawMarkers === 'string' ? (rawMarkers ? JSON.parse(rawMarkers) : []) : rawMarkers || [];
+
+// Parse polygons if string
+const parsedPolygons: Polygon[] =
+  typeof rawPolygons === 'string' ? (rawPolygons ? JSON.parse(rawPolygons) : []) : rawPolygons || [];
+
+// Parse polylines if string
+const parsedPolylines: Polyline[] =
+  typeof rawPolylines === 'string' ? (rawPolylines ? JSON.parse(rawPolylines) : []) : rawPolylines || [];
+
+// Parse center if string or object
+let parsedCenter: [number, number] | null = null;
+if (rawCenter) {
+  if (typeof rawCenter === 'string') {
+    try {
+      const c = JSON.parse(rawCenter);
+      parsedCenter = [c.lat || c[0], c.lng || c[1]];
+    } catch {
+      parsedCenter = null;
+    }
+  } else if (Array.isArray(rawCenter)) {
+    parsedCenter = rawCenter;
+  } else if (typeof rawCenter === 'object') {
+    parsedCenter = [rawCenter.lat, rawCenter.lng];
+  }
+}
+---
+
+<leaflet-map
+  class="leaflet-map-container block overflow-hidden rounded-lg relative z-0 isolate"
+  style={`height: ${height}; width: 100%;`}
+  data-markers={JSON.stringify(parsedMarkers)}
+  data-polygons={JSON.stringify(parsedPolygons)}
+  data-polylines={JSON.stringify(parsedPolylines)}
+  data-zoom={zoom}
+  data-min-zoom={minZoom}
+  data-center={parsedCenter ? JSON.stringify(parsedCenter) : ''}
+>
+</leaflet-map>
+
+<script>
+  import L from 'leaflet';
+
+  type MarkerColor = 'blue' | 'red' | 'green' | 'orange' | 'purple' | 'grey';
+  type MarkerIconType = 'default' | 'start' | 'finish' | 'parking' | 'info';
+
+  const COLOR_MAP: Record<MarkerColor, string> = {
+    blue: '#3b82f6',
+    red: '#ef4444',
+    green: '#22c55e',
+    orange: '#f97316',
+    purple: '#a855f7',
+    grey: '#6b7280',
+  };
+
+  const ICON_SYMBOLS: Record<MarkerIconType, string> = {
+    default: '●',
+    start: '▶',
+    finish: '■',
+    parking: 'P',
+    info: 'i',
+  };
+
+  function createColoredIcon(color: MarkerColor = 'blue', iconType: MarkerIconType = 'default') {
+    const markerColor = COLOR_MAP[color] || COLOR_MAP.blue;
+    const symbol = ICON_SYMBOLS[iconType] || ICON_SYMBOLS.default;
+
+    const svgIcon = `
+      <svg width="25" height="41" viewBox="0 0 25 41" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.5 0C5.6 0 0 5.6 0 12.5c0 9.4 12.5 28.5 12.5 28.5S25 21.9 25 12.5C25 5.6 19.4 0 12.5 0z"
+              fill="${markerColor}" stroke="#fff" stroke-width="1.5"/>
+        <text x="12.5" y="16" font-size="12" font-weight="bold" text-anchor="middle" fill="white">${symbol}</text>
+      </svg>
+    `;
+
+    return L.icon({
+      iconUrl: 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgIcon),
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+      shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+      shadowSize: [41, 41],
+    });
+  }
+
+  class LeafletMapElement extends HTMLElement {
+    connectedCallback() {
+      if (this.dataset.initialized === 'true') return;
+      this.dataset.initialized = 'true';
+
+      const markersData: Array<{
+        lat: number;
+        lng: number;
+        title?: string;
+        url?: string;
+        popup?: string;
+        color?: MarkerColor;
+        icon?: MarkerIconType;
+        zIndexOffset?: number;
+      }> = JSON.parse(this.dataset.markers || '[]');
+
+      const polygonsData: Array<{
+        points: Array<{ lat: number; lng: number }> | string;
+        title?: string;
+        color?: MarkerColor;
+      }> = JSON.parse(this.dataset.polygons || '[]');
+
+      const polylinesData: Array<{
+        points: Array<{ lat: number; lng: number }> | string;
+        title?: string;
+        color?: MarkerColor;
+        width?: number;
+      }> = JSON.parse(this.dataset.polylines || '[]');
+
+      const defaultZoom = parseInt(this.dataset.zoom || '13', 10);
+      const minZoom = parseInt(this.dataset.minZoom || '3', 10);
+      const customCenter = this.dataset.center ? JSON.parse(this.dataset.center) : null;
+
+      // Group markers within a proximity radius (~200m / 0.003 deg) to prevent visual overlap
+      const PROXIMITY_THRESHOLD = 0.003;
+      const STAGGER_OFFSET = 0.0025; // ~140m separation for clear visual distinction
+
+      const staggeredMarkers = [...markersData];
+      const clusters: number[][] = [];
+
+      staggeredMarkers.forEach((m, index) => {
+        if (typeof m.lat !== 'number' || typeof m.lng !== 'number') return;
+
+        let addedToCluster = false;
+        for (const cluster of clusters) {
+          const leader = staggeredMarkers[cluster[0]];
+          const dLat = Math.abs(m.lat - leader.lat);
+          const dLng = Math.abs(m.lng - leader.lng);
+          const dist = Math.sqrt(dLat * dLat + dLng * dLng);
+
+          if (dist < PROXIMITY_THRESHOLD) {
+            cluster.push(index);
+            addedToCluster = true;
+            break;
+          }
+        }
+
+        if (!addedToCluster) {
+          clusters.push([index]);
+        }
+      });
+
+      clusters.forEach((cluster) => {
+        if (cluster.length > 1) {
+          cluster.forEach((idx, i) => {
+            if (i > 0) {
+              staggeredMarkers[idx] = {
+                ...staggeredMarkers[idx],
+                lng: staggeredMarkers[idx].lng + STAGGER_OFFSET * i,
+                zIndexOffset: -1000 * i,
+              };
+            }
+          });
+        }
+      });
+
+      // Point parsing helper
+      const parsePoints = (points: Array<{ lat: number; lng: number }> | string): [number, number][] => {
+        if (Array.isArray(points)) {
+          return points.map((pt) => [pt.lat, pt.lng] as [number, number]);
+        }
+        if (typeof points === 'string') {
+          const trimmed = points.trim();
+          if (trimmed.startsWith('[')) {
+            try {
+              const arr = JSON.parse(trimmed);
+              return arr.map((pt: { lat: number; lng: number }) => [pt.lat, pt.lng] as [number, number]);
+            } catch {
+              return [];
+            }
+          }
+          return trimmed
+            .split(';')
+            .map((p) => {
+              const [lat, lng] = p.trim().split(',').map(Number);
+              return !isNaN(lat) && !isNaN(lng) ? ([lat, lng] as [number, number]) : null;
+            })
+            .filter((pt): pt is [number, number] => pt !== null);
+        }
+        return [];
+      };
+
+      const bounds = L.latLngBounds([]);
+
+      // Create Leaflet map instance
+      const map = L.map(this, {
+        scrollWheelZoom: false,
+        minZoom,
+      });
+
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 19,
+      }).addTo(map);
+
+      // Add staggered markers
+      staggeredMarkers.forEach((m) => {
+        if (typeof m.lat === 'number' && typeof m.lng === 'number') {
+          const latLng: [number, number] = [m.lat, m.lng];
+          const icon = createColoredIcon(m.color, m.icon);
+          const marker = L.marker(latLng, { icon, zIndexOffset: m.zIndexOffset }).addTo(map);
+
+          if (m.title || m.url || m.popup) {
+            const popupContent = `
+              <div style="font-family: sans-serif;">
+                ${m.title ? `<h3 style="font-weight: bold; font-size: 14px; margin-bottom: 4px;">${m.title}</h3>` : ''}
+                ${m.url ? `<a href="${m.url}" target="_blank" rel="noopener noreferrer" style="color: #2563eb; text-decoration: underline; font-size: 12px;">More info</a>` : ''}
+              </div>
+            `;
+            marker.bindPopup(m.popup || popupContent);
+          }
+          bounds.extend(latLng);
+        }
+      });
+
+      // Add polygons
+      polygonsData.forEach((p) => {
+        const latLngs = parsePoints(p.points);
+        if (latLngs.length > 0) {
+          const hexColor = COLOR_MAP[p.color || 'red'] || COLOR_MAP.red;
+          const polygon = L.polygon(latLngs, {
+            color: hexColor,
+            fillColor: hexColor,
+            fillOpacity: 0.35,
+          }).addTo(map);
+          if (p.title) {
+            polygon.bindPopup(
+              `<div style="font-family: sans-serif; font-weight: bold; font-size: 14px;">${p.title}</div>`
+            );
+          }
+          latLngs.forEach((pt) => bounds.extend(pt));
+        }
+      });
+
+      // Add polylines
+      polylinesData.forEach((pl) => {
+        const latLngs = parsePoints(pl.points);
+        if (latLngs.length > 0) {
+          const hexColor = COLOR_MAP[pl.color || 'green'] || COLOR_MAP.green;
+          const polyline = L.polyline(latLngs, {
+            color: hexColor,
+            weight: pl.width || 3,
+          }).addTo(map);
+          if (pl.title) {
+            polyline.bindPopup(
+              `<div style="font-family: sans-serif; font-weight: bold; font-size: 14px;">${pl.title}</div>`
+            );
+          }
+          latLngs.forEach((pt) => bounds.extend(pt));
+        }
+      });
+
+      // Center and Zoom control matching previous MapController logic
+      if (customCenter && Array.isArray(customCenter) && customCenter.length >= 2) {
+        map.setView(customCenter as [number, number], defaultZoom);
+      } else if (bounds.isValid()) {
+        map.fitBounds(bounds, { padding: [50, 50], maxZoom: 15 });
+      } else {
+        map.setView([62.0, 15.0], defaultZoom);
+      }
+    }
+  }
+
+  if (!customElements.get('leaflet-map')) {
+    customElements.define('leaflet-map', LeafletMapElement);
+  }
+</script>
