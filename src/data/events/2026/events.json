@@ -4496,6 +4496,96 @@
       "entry_deadlines": []
     },
     {
+      "id": "NOR_24521",
+      "name": "O-triatlon",
+      "start_time": "2026-08-12",
+      "end_time": "2026-08-12",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Club"
+      ],
+      "tags": [
+        "FootO"
+      ],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "Larvik OK",
+          "country_code": "NOR"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Per Olav Gulbrandsen"
+        },
+        {
+          "role": "Contact phone number",
+          "name": "41300777"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:HRsFGkERERMPFBYXAzQFAkwaD1wCHwg="
+        },
+        {
+          "role": "Event director",
+          "name": "Per Olav Gulbrandsen"
+        },
+        {
+          "role": "Course setter",
+          "name": "Per Olav Gulbrandsen"
+        }
+      ],
+      "classes": [
+        "A -16",
+        "A 17-",
+        "C -12",
+        "C 13-",
+        "N"
+      ],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/24521",
+          "title": null,
+          "last_updated_at": "2026-07-29T02:55:34.787798+00:00"
+        }
+      ],
+      "documents": [],
+      "information": "Oppmøte kl. 18:00 på Jordetstranda. Fellesstarter fra 18:15.\nA-løype (løp-sykkel-vasseo)\nC-løype (løp-sykkel-vasseo)\nN-løype (løp-vasseo)",
+      "region": "Vestfold og Telemark",
+      "punching_system": "Emit",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "O-triatlon",
+          "datetimez": "2026-08-12T18:00:00+02:00",
+          "discipline": "Middle",
+          "night_or_day": "day",
+          "position": {
+            "lat": 59.0225998283179,
+            "lng": 10.0247948350411
+          },
+          "areas": [],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Entry?eventId=24521",
+              "title": "Enter",
+              "last_updated_at": "2026-07-29T02:55:34.787801+00:00"
+            }
+          ],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
       "id": "SWE_50597",
       "name": "MTBO, O-Ringen Göteborg",
       "start_time": "2026-07-20",
@@ -10672,6 +10762,150 @@
             "fcf5c3932450ad60b3ae07b908c1b0ef63bf247d7fd9cdcb953afdafbbb1332a",
             "ffc96f7d7c230f5d17369acda74aa08311e8daefda64b27a435c9d77d37f4de6"
           ]
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_57491",
+      "name": "Träningsorientering nr 7 - OK Kåre",
+      "start_time": "2026-08-12",
+      "end_time": "2026-08-12",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Club"
+      ],
+      "tags": [
+        "FootO"
+      ],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "OK Kåre",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Annika Engström"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:DBoMBkYSTRMKXgAcCgcWHUIeIxoOBAgTBBhMDEIe"
+        }
+      ],
+      "classes": [
+        "Blå",
+        "MTBO-Kort",
+        "MTBO-Lång",
+        "MTBO-Mellan",
+        "Orange",
+        "Violett",
+        "Vit"
+      ],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/57491",
+          "title": null,
+          "last_updated_at": "2026-07-29T02:55:34.787364+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "type": "Other",
+          "title": "Alla träningsorienteringar 2026",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57491/d7c3886a-6662-4902-9788-89397568ee8f/Alla-tr-ningsorienteringar-2026.pdf",
+          "published_time": "2026-01-29"
+        }
+      ],
+      "information": "Välkomna till Lugnetterrängen!\nSamling vid Sjulsarvsparkeringen.\nDenna gång erbjuds också 3 MTBO-banor - Kort, Mellan och Lång. Obligatoriskt med egen hjälm o cykel, men kartställ finns att låna.",
+      "region": "Dalarna",
+      "punching_system": "other",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "Träningsorientering nr 7 - OK Kåre",
+          "datetimez": "2026-08-12T18:00:00+02:00",
+          "discipline": "Long",
+          "night_or_day": "day",
+          "position": {
+            "lat": 60.6257146055557,
+            "lng": 15.6708781932576
+          },
+          "areas": [
+            {
+              "lat": 60.6257146055557,
+              "lng": 15.6708781932576,
+              "polygon": [
+                [
+                  60.625782967448174,
+                  15.669913727680022
+                ],
+                [
+                  60.63031843495838,
+                  15.660608519752088
+                ],
+                [
+                  60.634282881722584,
+                  15.665784543043042
+                ],
+                [
+                  60.63485326591268,
+                  15.680033142266714
+                ],
+                [
+                  60.63448251805505,
+                  15.68846598953045
+                ],
+                [
+                  60.63317060437467,
+                  15.689133115327706
+                ],
+                [
+                  60.630404003685754,
+                  15.686283393353177
+                ],
+                [
+                  60.62920602083807,
+                  15.683724462703788
+                ],
+                [
+                  60.62732338643778,
+                  15.683317358043288
+                ],
+                [
+                  60.62427100405779,
+                  15.675873190103594
+                ],
+                [
+                  60.625782967448174,
+                  15.669913727680022
+                ]
+              ]
+            }
+          ],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Entry?eventId=57491",
+              "title": "Enter",
+              "last_updated_at": "2026-07-29T02:55:34.787367+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=57491&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-07-29T02:55:34.787367+00:00"
+            }
+          ],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
         }
       ],
       "entry_deadlines": []
@@ -17248,7 +17482,14 @@
           "name": "enc:BxsKAUMKExMGHxYQAhgiCEASCh5PEwof"
         }
       ],
-      "classes": [],
+      "classes": [
+        "Herrar 3 km",
+        "Herrar 5 km",
+        "Herrar 8 km",
+        "Kvinnor 3 km",
+        "Kvinnor 5 km",
+        "Kvinnor 8 km"
+      ],
       "urls": [
         {
           "type": "Path",
@@ -17270,7 +17511,7 @@
         }
       ],
       "documents": [],
-      "information": "Exakt plats kan komma att ändras",
+      "information": "Exakt plats för samling kan komma att ändras. Men någonstans i Gräsmark city.",
       "region": "Värmland",
       "punching_system": "Sportident",
       "races": [
@@ -17285,7 +17526,14 @@
             "lng": 12.9130075536954
           },
           "areas": [],
-          "urls": [],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Entry?eventId=59458",
+              "title": "Enter",
+              "last_updated_at": "2026-07-29T02:55:34.787254+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
@@ -17385,6 +17633,12 @@
               "url": "/Events/Entries?eventId=59614&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-07-01T04:16:33.779237+00:00"
+            },
+            {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/196959",
+              "title": "Map, courses and routes will be available in Livelox",
+              "last_updated_at": "2026-07-29T02:55:34.787381+00:00"
             }
           ],
           "documents": [],
@@ -17960,6 +18214,186 @@
             "f3e5758cac4a1bada66ff655ded5d1732d56796efdc9d097a4a8386cc5a02e51",
             "f812a2ccf1cc50e5dac5b4591541ca0594bd898926be219faf5a5d54d20b6772"
           ]
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_59927",
+      "name": "Ungdomsserie och Motionsorientering samt MTBO",
+      "start_time": "2026-09-09",
+      "end_time": "2026-09-09",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Local"
+      ],
+      "tags": [
+        "FootO"
+      ],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "Alvesta SOK",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Stefan Bengtsson"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:BBoEAG0SDwQEAxETHhsJQU4cDg=="
+        },
+        {
+          "role": "Course setters",
+          "name": "Stefan Bengtsson"
+        },
+        {
+          "role": "Course setters",
+          "name": "Stephan Östergren"
+        }
+      ],
+      "classes": [
+        "5 km",
+        "5km",
+        "Gul 4 km",
+        "Inskolning 2 km",
+        "MTBO Lätt 3",
+        "MTBO Medelsvår 6km",
+        "MTBO Svår 10km",
+        "Orange 3 km",
+        "Orange 5 km",
+        "UD Gul 2",
+        "UD Orange 3 km",
+        "UD Orange 5 km",
+        "UD Vit 2 km",
+        "UH Gul 2",
+        "UH Orange 3 km",
+        "UH Orange 5 km",
+        "UH Vit 2 km",
+        "Vit 2 km"
+      ],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/59927",
+          "title": null,
+          "last_updated_at": "2026-07-29T02:55:34.787172+00:00"
+        },
+        {
+          "type": "Website",
+          "url": "https://www.alvestasok.com/",
+          "title": null,
+          "last_updated_at": "2026-07-29T02:55:34.787172+00:00"
+        }
+      ],
+      "documents": [],
+      "information": "Välkomna till Motionsorientering och Ungdomsserie samt MTBO vid  Hanaslöv i Alvesta.\nVi arrangerar skogsorientering samtidigt med mountainbikeorientering vid samma tävlingsplats. Banor för fot-orientering respektive cykel-orientering kommer naturligtvis förläggas på olika delar av området.\nAnmälan till Ungdomsserie görs innan tävling.\nAnmälan till Motionsklasser och MTBO-klasser görs innan tävling eller på tävlingsplatsen.\nFri minutstart mellan kl 17:00 och 18:30 för både Ungdomsserie, Motionsklasser och MTBO-klasser.\nLiveresultat kommer att presenteras på:\nhttps://liveresultat.orientering.se/index.php",
+      "region": "Småland",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "Ungdomsserie och Motionsorientering samt MTBO",
+          "datetimez": "2026-09-09T17:00:00+02:00",
+          "discipline": "Middle",
+          "night_or_day": "day",
+          "position": {
+            "lat": 56.9317677218948,
+            "lng": 14.5959849432604
+          },
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_59991",
+      "name": "MTBO-träning Stångtjärn, Falun",
+      "start_time": "2026-08-05",
+      "end_time": "2026-08-05",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Club"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "OK Kåre",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact phone number",
+          "name": "070-6955917"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:HgAHCUwdTRdPGgoaDBoRHEIdTQELMAIfDB0OQU4cDg=="
+        },
+        {
+          "role": "Event director",
+          "name": "Stefan Johansson"
+        },
+        {
+          "role": "Course setter",
+          "name": "Stefan Johansson"
+        }
+      ],
+      "classes": [
+        "Kort",
+        "Lång",
+        "Mellan"
+      ],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/59991",
+          "title": null,
+          "last_updated_at": "2026-07-29T02:55:34.787439+00:00"
+        }
+      ],
+      "documents": [],
+      "information": "Välkomna till Stångtjärn på MTBO-träning!\n3 banor med många kontroller, så idag blir det mycket kartträning.\nAnmäl senast måndag innan, så är du garanterad karta.\nCyklister som inte är med i OK Kåre betalar 40 kr, swish till OK Kåres nr: 1233999018.\nAlla är välkomna!",
+      "region": "Dalarna",
+      "punching_system": "other",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "MTBO-träning Stångtjärn, Falun",
+          "datetimez": "2026-08-05T18:00:00+02:00",
+          "discipline": "Middle",
+          "night_or_day": "day",
+          "position": {
+            "lat": 60.6323852044859,
+            "lng": 15.5506349472477
+          },
+          "areas": [],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Entry?eventId=59991",
+              "title": "Enter",
+              "last_updated_at": "2026-07-29T02:55:34.787442+00:00"
+            }
+          ],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
         }
       ],
       "entry_deadlines": []
