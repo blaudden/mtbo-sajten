@@ -4574,6 +4574,12 @@
               "url": "/Entry?eventId=24521",
               "title": "Enter",
               "last_updated_at": "2026-07-29T02:55:34.787801+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=24521&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-08-01T05:32:21.591698+00:00"
             }
           ],
           "documents": [],
@@ -9570,8 +9576,8 @@
             {
               "type": "EntryList",
               "url": "/Entry?eventId=57105",
-              "title": "Enter",
-              "last_updated_at": "2026-02-07T22:24:13.324743+00:00"
+              "title": "Enter and/or order services",
+              "last_updated_at": "2026-08-01T05:32:21.591344+00:00"
             },
             {
               "type": "EntryList",
@@ -14323,7 +14329,11 @@
           "name": "enc:KRUUBkldCBgEHAkDGx0RG20UDhMIHEsRAhk="
         }
       ],
-      "classes": [],
+      "classes": [
+        "Kort",
+        "Lång",
+        "Medel"
+      ],
       "urls": [
         {
           "type": "Path",
@@ -14350,9 +14360,50 @@
           "datetimez": "2026-08-10T18:00:00+02:00",
           "discipline": "Long",
           "night_or_day": "day",
-          "position": null,
-          "areas": [],
-          "urls": [],
+          "position": {
+            "lat": 63.3017260794178,
+            "lng": 18.2583541048863
+          },
+          "areas": [
+            {
+              "lat": 63.3017260794178,
+              "lng": 18.2583541048863,
+              "polygon": [
+                [
+                  63.3180597485632,
+                  18.212816312275873
+                ],
+                [
+                  63.31035615338604,
+                  18.281623090676305
+                ],
+                [
+                  63.297194676035616,
+                  18.325181466916536
+                ],
+                [
+                  63.28194755898366,
+                  18.27121534268296
+                ],
+                [
+                  63.31018300986972,
+                  18.205685089303365
+                ],
+                [
+                  63.3180597485632,
+                  18.212816312275873
+                ]
+              ]
+            }
+          ],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Entry?eventId=58354",
+              "title": "Enter",
+              "last_updated_at": "2026-08-01T05:32:21.591414+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
