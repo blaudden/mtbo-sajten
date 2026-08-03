@@ -10272,8 +10272,8 @@
             {
               "type": "EntryList",
               "url": "/Entry?eventId=57107",
-              "title": "Enter",
-              "last_updated_at": "2026-02-07T22:24:13.324726+00:00"
+              "title": "Enter and/or order services",
+              "last_updated_at": "2026-08-03T05:47:55.521907+00:00"
             },
             {
               "type": "EntryList",
@@ -11562,15 +11562,15 @@
           "urls": [
             {
               "type": "EntryList",
-              "url": "/Entry?eventId=57928",
-              "title": "Enter and/or order services",
-              "last_updated_at": "2026-07-15T02:46:24.197835+00:00"
-            },
-            {
-              "type": "EntryList",
               "url": "/Events/Entries?eventId=57928&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-07-15T02:46:24.197835+00:00"
+            },
+            {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/197443",
+              "title": "Map, courses and routes will be available in Livelox",
+              "last_updated_at": "2026-08-03T05:47:55.521735+00:00"
             }
           ],
           "documents": [],
@@ -14402,6 +14402,12 @@
               "url": "/Entry?eventId=58354",
               "title": "Enter",
               "last_updated_at": "2026-08-01T05:32:21.591414+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=58354&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-08-03T05:47:55.521822+00:00"
             }
           ],
           "documents": [],
@@ -18444,6 +18450,12 @@
               "url": "/Entry?eventId=59991",
               "title": "Enter",
               "last_updated_at": "2026-07-29T02:55:34.787442+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=59991&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-08-03T05:47:55.521704+00:00"
             }
           ],
           "documents": [],
