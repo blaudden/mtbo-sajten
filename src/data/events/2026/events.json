@@ -4458,6 +4458,14 @@
         {
           "role": "Contact person",
           "name": "Endre Klokk Leite"
+        },
+        {
+          "role": "Event directors",
+          "name": "Håkon Klerud Johannessen"
+        },
+        {
+          "role": "Event directors",
+          "name": "Kjetil Okkenhaug"
         }
       ],
       "classes": [],
@@ -4552,7 +4560,14 @@
           "last_updated_at": "2026-07-29T02:55:34.787798+00:00"
         }
       ],
-      "documents": [],
+      "documents": [
+        {
+          "type": "Invitation",
+          "title": "Innbydelse",
+          "url": "https://eventor-norway-storage.orientering.se/eventdocuments/24521/212795cd-7556-4160-b9a6-4b6e3bf98cd1/Innbydelse.Pdf",
+          "published_time": "2026-08-04"
+        }
+      ],
       "information": "Oppmøte kl. 18:00 på Jordetstranda. Fellesstarter fra 18:15.\nA-løype (løp-sykkel-vasseo)\nC-løype (løp-sykkel-vasseo)\nN-løype (løp-vasseo)",
       "region": "Vestfold og Telemark",
       "punching_system": "Emit",
@@ -11561,23 +11576,92 @@
           "areas": [],
           "urls": [
             {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/197443",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-08-05T02:49:23.633937+00:00"
+            },
+            {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=57928&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-07-15T02:46:24.197835+00:00"
             },
             {
-              "type": "Livelox",
-              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/197443",
-              "title": "Map, courses and routes will be available in Livelox",
-              "last_updated_at": "2026-08-03T05:47:55.521735+00:00"
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=57928&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-08-05T02:49:23.633937+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=57928&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-08-05T02:49:23.633937+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "Dam 3 km": 1,
+            "Herr 3 km": 2,
+            "Dam 5 km": 5,
+            "Herr 5 km": 7,
+            "Dam 8 km": 7,
+            "Herr 8 km": 21
+          },
+          "result_counts": {
+            "Dam 3 km": 1,
+            "Herr 3 km": 2,
+            "Dam 5 km": 5,
+            "Herr 5 km": 7,
+            "Dam 8 km": 7,
+            "Herr 8 km": 21
+          },
+          "fingerprints": [
+            "06d7dd216fa8aded66be84a183f0a892aafe46547d032b0ce27ff16f889235e7",
+            "09e73190fb46a642a5f46b7821a83a744f23e8c6c0b54e92eab6aaac22d0bf73",
+            "0a4a09f70d6b3478fc4fd5d867ef99af4a6b226b57aeebf7e2fd7452e4305bf6",
+            "14146e45825e631f845c71a532514d1fa3f3750e1a6c826d69aed0254f3bb7fa",
+            "14d820195ec8098f5ecc0f6d834a2cfded6c9b02696b65cfc531624bfb9519aa",
+            "1999622c26ae26ad73da21659eb51368d52af6ec2ecc12690e259e7e6abff9bc",
+            "1bde460c125ec816550424030b954b2b7996f9f1b2b4eeea7db72916e6110e43",
+            "23a5018d505907a23ff0dc5daa9b14c8f5786174ddd1dde67b720ccb8010c362",
+            "26c178bf2b53c3eaed5208bd28941f35b4977ccd69379e2a15fc4ba4ec9eccd9",
+            "26f05fc707020a8397777734f0243da107aaa95832e162746b09fedd8d24cd0c",
+            "2dcd6dbc5d2a2e6211fc09afb2696524d453fce041aa0315d8fe82d7e1059e26",
+            "2e9640d4190faf415d009a4ba2edb33850c627b3547be51516afffa5de8d0458",
+            "36a018235970606571c24d667b0c7b54b6396511e68d293c3560187d477b9023",
+            "41ffba4b20aca38ffcce9a848d9a7e1684c36e7adbfa0a6c8b5c6d630f0f6472",
+            "46e4ca39a37f89495071013095a7462a6d9f5021e269b2d415d3dcc2d49109b8",
+            "4d599a482e1227dcbd30bfb9c56dcb3d7c407e82a34ab77dd55acfa7245d1aa4",
+            "4d882bc19d8a32398de023f0a3b9ff8ec10340ac4ebe81d922247324084bcc82",
+            "552ff1762cc52f67206dda12dcaa87e370099c7bd7e4434db50c9bb5b60b809b",
+            "5710f334b2ed05de3121a88800abfcf1491a45c06ac3143cf887c28cbd252ded",
+            "575aa783449ada8ce155d3e34ade7c4f707caa07cde2feb0730b10bb5e79ed06",
+            "59df5086ace207f11629c05138b3143ecbd1aaa2632e9fee2de3df775ea7939e",
+            "5bd889c560e8df8b094a6329e677f2e972e393d2171db028bd600f91b12682af",
+            "5d37d9d9bbbc79406250af6a1a8e1981fe6a1877e1343fdd32629fe74066a05b",
+            "647e5f91b595cfa142646b838c51618fd1c168e64084e23bc50134fef36040f9",
+            "6bab0471203b7b6d0b74482c159bec7e19138432085d889c244bd288c4a13a00",
+            "6bde9865de2a051a86a2e7d79a005a3ea68251d4524da26137616d98c2af1506",
+            "706f979b39005ff97bf6d32baf34053fa1834f453fc9c6b853a09765e828c61d",
+            "71f32dea94a832d2517940f7c2fe32745d401f44bb6551618f6632c5a8134e44",
+            "7483a9390092f4a7e0341fdd6b78ef34016150813deec8c0205227747928a2ab",
+            "92a9f679fa8d0b00d8f65defcfce144d9631794834a4a09e6326474247908484",
+            "9da9b6a3abf3e39c9c61328ca27c5b453b328382415c153b6ee2ac2ce08934e5",
+            "9edee48b9b612d9726d0f481be25d7252410c46bfe634c8fc0d32cffa7275f5b",
+            "b4752070c136d3a99736cbae1cf138902a58c874c45b8a97793146e46f7e6706",
+            "c4b77b335bac7635f305987511948d1f71115a71c4d40fdc222d428e8f85f520",
+            "cf70a2dc001cd3e15289794ab4b3d0a71f890dd4dfab1d7541d9dfb272c4feb6",
+            "d4100d9346700e258ec112e4fb1208ed0775ff3895c89ded94a77cacafd34326",
+            "d9f55803b938c401a2458c898bbb40bc1c6a833d3452cd1f6196b7a5f0a433f2",
+            "ddccc8840629aaa141ed38331543ac15c0c8106ebbc5f3f5028d61845ab7cf5d",
+            "e689581c1b51d3859619de267eb7947008d2453c3735fac34a349b45e34a26c3",
+            "e709bdd119d97c0195596c71caa5e499a07586db3bf0e523f457c8d955eaacad",
+            "fd232ff4d3affe39a8df1bc2ef5b0f1902f5d2b07c49efcdfc7d5bc43dbcf13a",
+            "ff9daed1c16ef58c2d95b9f0c79d965f7353f41061b3409023c10fc235b94d4a"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -12002,8 +12086,8 @@
     {
       "id": "SWE_58116",
       "name": "MTBO Gotland 4",
-      "start_time": "2026-08-19",
-      "end_time": "2026-08-19",
+      "start_time": "2026-08-18",
+      "end_time": "2026-08-18",
       "status": "Sanctioned",
       "original_status": "Active",
       "types": [
@@ -12048,7 +12132,7 @@
         {
           "race_number": 1,
           "name": "MTBO Gotland 4",
-          "datetimez": "2026-08-19T17:00:00+02:00",
+          "datetimez": "2026-08-18T17:00:00+02:00",
           "discipline": "Long",
           "night_or_day": "day",
           "position": null,
@@ -16954,7 +17038,14 @@
           "last_updated_at": "2026-05-10T19:32:03.787216+00:00"
         }
       ],
-      "documents": [],
+      "documents": [
+        {
+          "type": "Invitation",
+          "title": "Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/59189/43165443-91b9-4c03-ac61-be46ce708120/Inbjudan.Pdf",
+          "published_time": "2026-08-03"
+        }
+      ],
       "information": "Vi behöver tyvärr flytta till  måndagen 10 augusti.",
       "region": "Stockholm",
       "punching_system": "Sportident",
@@ -16965,7 +17056,10 @@
           "datetimez": "2026-08-10T17:00:00+02:00",
           "discipline": "Middle",
           "night_or_day": "day",
-          "position": null,
+          "position": {
+            "lat": 59.4341899133163,
+            "lng": 18.3093845031274
+          },
           "areas": [],
           "urls": [
             {
@@ -17573,8 +17667,15 @@
           "last_updated_at": "2026-06-17T09:10:06.347539+00:00"
         }
       ],
-      "documents": [],
-      "information": "Exakt plats för samling kan komma att ändras. Men någonstans i Gräsmark city.",
+      "documents": [
+        {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/59458/b1f2ac88-fbd3-46e9-86e8-0fa6c82570ae/PM.Pdf",
+          "published_time": "2026-08-03"
+        }
+      ],
+      "information": "Samling vid badplatsen i Gräsmark, se skiss i PM. Anmäl gärna innan, men det är möjligt att anmäla sig på plats.",
       "region": "Värmland",
       "punching_system": "Sportident",
       "races": [
@@ -17585,8 +17686,8 @@
           "discipline": "Middle",
           "night_or_day": "day",
           "position": {
-            "lat": 59.9457404543771,
-            "lng": 12.9130075536954
+            "lat": 59.9506121723442,
+            "lng": 12.9180779547338
           },
           "areas": [],
           "urls": [
@@ -18135,6 +18236,14 @@
         {
           "role": "Course setter",
           "name": "Maths Carlsson"
+        },
+        {
+          "role": "Event controller",
+          "name": "Peter Asp"
+        },
+        {
+          "role": "Course controller",
+          "name": "Maths Carlsson"
         }
       ],
       "classes": [
@@ -18447,15 +18556,89 @@
           "urls": [
             {
               "type": "EntryList",
-              "url": "/Entry?eventId=59991",
-              "title": "Enter",
-              "last_updated_at": "2026-07-29T02:55:34.787442+00:00"
-            },
-            {
-              "type": "EntryList",
               "url": "/Events/Entries?eventId=59991&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-08-03T05:47:55.521704+00:00"
+            }
+          ],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_60017",
+      "name": "MTBO-träning OK Kåre",
+      "start_time": "2026-08-19",
+      "end_time": "2026-08-19",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Club"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "OK Kåre",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Göran Andersson"
+        },
+        {
+          "role": "Course setter",
+          "name": "Göran Andersson"
+        }
+      ],
+      "classes": [
+        "Kort",
+        "Lång",
+        "Mellan"
+      ],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/60017",
+          "title": null,
+          "last_updated_at": "2026-08-05T02:49:23.633846+00:00"
+        }
+      ],
+      "documents": [],
+      "information": "Välkommen på MTBO-träning på Jungfruberget!\nFinns 3 banor att välja mellan. Obligatoriskt med hjälm och cykel. Kartställ finns att låna, skicka ett meddelande innan!\nÅkare från andra klubbar är välkomna, swishar 40 kr till OK Kåre 1233999018.",
+      "region": "Dalarna",
+      "punching_system": "other",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "MTBO-träning OK Kåre",
+          "datetimez": "2026-08-19T18:00:00+02:00",
+          "discipline": "Long",
+          "night_or_day": "day",
+          "position": {
+            "lat": 60.6213878129791,
+            "lng": 15.6485747306909
+          },
+          "areas": [],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Entry?eventId=60017",
+              "title": "Enter",
+              "last_updated_at": "2026-08-05T02:49:23.633849+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=60017&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-08-05T02:49:23.633849+00:00"
             }
           ],
           "documents": [],
