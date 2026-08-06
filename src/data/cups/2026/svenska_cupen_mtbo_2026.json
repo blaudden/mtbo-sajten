@@ -1,0 +1,226 @@
+{
+  "id": "1539",
+  "name": "Svenska cupen MTBO 2026",
+  "year": 2026,
+  "url": "https://eventor.orientering.se/Standings/View/Series/1539",
+  "classes": {
+    "H21": [
+      {
+        "rank": 1,
+        "name": "Rasmus Nordgren",
+        "club": "OK Kåre",
+        "points": 110.0
+      },
+      {
+        "rank": 2,
+        "name": "Miika Nurmi",
+        "club": "IFK Göteborg Orientering",
+        "points": 105.0
+      },
+      {
+        "rank": 3,
+        "name": "Jussi Laurila",
+        "club": "Jalasjärven Jalas, FIN",
+        "points": 95.0
+      },
+      {
+        "rank": 4,
+        "name": "Jon Hansson",
+        "club": "OK Kåre",
+        "points": 76.0
+      },
+      {
+        "rank": 5,
+        "name": "Erik Holmberg",
+        "club": "IKHP Huskvarna Idrottsklubb",
+        "points": 73.0
+      },
+      {
+        "rank": 6,
+        "name": "Patrik Svedberg",
+        "club": "Gävle OK",
+        "points": 69.0
+      },
+      {
+        "rank": 7,
+        "name": "Julius Juodišius",
+        "club": "OK Fortūna, LTU",
+        "points": 30.0
+      },
+      {
+        "rank": 8,
+        "name": "Andrii Grytsan",
+        "club": "Långhundra IF",
+        "points": 28.0
+      }
+    ],
+    "D21": [
+      {
+        "rank": 1,
+        "name": "Gabriella Gustafsson",
+        "club": "IKHP Huskvarna Idrottsklubb",
+        "points": 120.0
+      },
+      {
+        "rank": 2,
+        "name": "Cæcilie Rueløkke Christoffersen",
+        "club": "OK Øst Birkerød, DEN",
+        "points": 100.0
+      },
+      {
+        "rank": 3,
+        "name": "Karin E Gustafsson",
+        "club": "Garphyttans IF",
+        "points": 75.0
+      },
+      {
+        "rank": 3,
+        "name": "Cecilia Thomasson",
+        "club": "Östersunds OK",
+        "points": 75.0
+      },
+      {
+        "rank": 5,
+        "name": "Ella Palm",
+        "club": "IKHP Huskvarna Idrottsklubb",
+        "points": 73.0
+      },
+      {
+        "rank": 6,
+        "name": "Ingrid Stengård",
+        "club": "Fältjägarnas IF",
+        "points": 72.0
+      },
+      {
+        "rank": 7,
+        "name": "Eva Gustafsson",
+        "club": "Garphyttans IF",
+        "points": 53.0
+      },
+      {
+        "rank": 8,
+        "name": "Åsa Wallinder",
+        "club": "Västerås SOK",
+        "points": 52.0
+      },
+      {
+        "rank": 9,
+        "name": "Yrsa Röjgård",
+        "club": "OK Kolmården",
+        "points": 40.0
+      },
+      {
+        "rank": 10,
+        "name": "Emelie Holmström",
+        "club": "Järla Orientering",
+        "points": 33.0
+      },
+      {
+        "rank": 11,
+        "name": "Mia Eronn",
+        "club": "Linköpings OK",
+        "points": 28.0
+      },
+      {
+        "rank": 12,
+        "name": "Sonia Rodiére",
+        "club": "IFK Lidingö SOK",
+        "points": 27.0
+      },
+      {
+        "rank": 13,
+        "name": "Sara Forsgren",
+        "club": "OK Nolaskogsarna",
+        "points": 26.0
+      },
+      {
+        "rank": 14,
+        "name": "Karolina Mickeviciute Juodisiene",
+        "club": "OK Fortūna, LTU",
+        "points": 25.0
+      }
+    ],
+    "H17-20": [
+      {
+        "rank": 1,
+        "name": "Melvin Löfgren",
+        "club": "OK Kåre",
+        "points": 110.0
+      },
+      {
+        "rank": 2,
+        "name": "Gustav Eggöy Markhester",
+        "club": "IFK Mora OK",
+        "points": 90.0
+      },
+      {
+        "rank": 3,
+        "name": "Hampus Karlsson",
+        "club": "OK Bävern",
+        "points": 76.0
+      },
+      {
+        "rank": 4,
+        "name": "Joel Holmgård",
+        "club": "Kils OK",
+        "points": 60.0
+      },
+      {
+        "rank": 5,
+        "name": "Axel Gräfnings",
+        "club": "Grycksbo IF OK",
+        "points": 50.0
+      },
+      {
+        "rank": 6,
+        "name": "Olle Hamberg",
+        "club": "Östersunds OK",
+        "points": 40.0
+      }
+    ],
+    "D17-20": [
+      {
+        "rank": 1,
+        "name": "Signe Feil",
+        "club": "Sundsvalls OK",
+        "points": 120.0
+      },
+      {
+        "rank": 2,
+        "name": "Emilia Jakobsson",
+        "club": "Nybro OK",
+        "points": 95.0
+      },
+      {
+        "rank": 3,
+        "name": "Julia Jennische Péclard",
+        "club": "OK Kåre",
+        "points": 78.0
+      },
+      {
+        "rank": 4,
+        "name": "Hennie Löfgren",
+        "club": "Stora Tuna OK",
+        "points": 76.0
+      },
+      {
+        "rank": 4,
+        "name": "Greta Brandin",
+        "club": "OK Kåre",
+        "points": 76.0
+      },
+      {
+        "rank": 6,
+        "name": "Linnea Lundstedt",
+        "club": "Sjövalla FK",
+        "points": 63.0
+      },
+      {
+        "rank": 7,
+        "name": "Moa Pilvinge",
+        "club": "OK Kolmården",
+        "points": 50.0
+      }
+    ]
+  }
+}

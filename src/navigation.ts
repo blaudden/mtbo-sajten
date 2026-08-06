@@ -19,6 +19,13 @@ export const headerData = {
       ],
     },
     {
+      text: 'Svenska Cupen',
+      links: [
+        { text: 'Svenska Cupen MTBO', href: getPermalink('/svenska-cupen-mtbo') },
+        { text: 'Seedningsordning', href: getPermalink('/svenska-cupen/seedning') },
+      ],
+    },
+    {
       text: 'Om sajten',
       href: getPermalink('about', 'page'),
     },
