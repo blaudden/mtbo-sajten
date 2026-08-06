@@ -1,6 +1,6 @@
 {
   "year": 2026,
-  "generated_at": "2026-08-06T20:35:35.723243+00:00",
+  "generated_at": "2026-08-06T20:46:09.826828+00:00",
   "current_cup_url": "https://eventor.orientering.se/Standings/View/Series/1539",
   "previous_cup_url": "https://eventor.orientering.se/Standings/View/Series/1418",
   "classes": {
@@ -592,7 +592,7 @@
         "seed_val": 3,
         "current_rank": null,
         "previous_rank": 3,
-        "is_seeded": false
+        "is_seeded": true
       },
       {
         "seed_rank": 6,
@@ -601,7 +601,7 @@
         "seed_val": 4,
         "current_rank": 5,
         "previous_rank": 4,
-        "is_seeded": false
+        "is_seeded": true
       },
       {
         "seed_rank": 7,
@@ -610,7 +610,7 @@
         "seed_val": 5,
         "current_rank": null,
         "previous_rank": 5,
-        "is_seeded": false
+        "is_seeded": true
       },
       {
         "seed_rank": 8,
@@ -619,7 +619,7 @@
         "seed_val": 6,
         "current_rank": 6,
         "previous_rank": null,
-        "is_seeded": false
+        "is_seeded": true
       },
       {
         "seed_rank": 9,
@@ -729,7 +729,7 @@
         "seed_val": 5,
         "current_rank": null,
         "previous_rank": 5,
-        "is_seeded": false
+        "is_seeded": true
       },
       {
         "seed_rank": 8,
@@ -738,7 +738,7 @@
         "seed_val": 6,
         "current_rank": 6,
         "previous_rank": null,
-        "is_seeded": false
+        "is_seeded": true
       },
       {
         "seed_rank": 9,

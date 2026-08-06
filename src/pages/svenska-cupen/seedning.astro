@@ -36,8 +36,8 @@ const metadata = {
         Seedning tillämpas vid värdetävlingar i Svenska Cupen MTBO enligt tävlingsreglerna. Seedningsnumret fastställs
         som det lägsta värdet av cyklistens slutplacering i föregående års cup ({prevYear}) och aktuella ställning i
         årets cup ({activeYear}). Vid samma seedningsnummer gälls årets placering i första hand. Den seedade gruppen
-        utgörs av de högst seedade cyklisterna (maximalt 8 cyklister och högst 1/3 av klassens startfält) som startar
-        sist i klassen.
+        utgörs av de upp till 8 högst seedade cyklisterna som startar sist i klassen. Vid en enskild tävling begränsas
+        den seedade gruppen i startfältet till maximalt 8 cyklister och högst 1/3 av tävlingens faktiska startfält.
       </p>
     </div>
 
@@ -131,7 +131,8 @@ const metadata = {
               <li>
                 Identifiera de seedade cyklisterna enligt tabellen ovan (märkta med <strong
                   class="text-gray-900 dark:text-white">Seedad grupp</strong
-                >).
+                >). Vid tävlingar med färre startande begränsas antalet seedade cyklister till högst 1/3 av tävlingens
+                startfält (dock maximalt 8).
               </li>
               <li>
                 Sortera de seedade cyklisterna efter seedningsnummer (från sista seedningsnummer till högsta
