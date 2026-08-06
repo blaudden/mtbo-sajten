@@ -1,6 +1,9 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import { Icon } from 'astro-icon/components';
+import HeroText from '~/components/widgets/HeroText.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Headline from '~/components/ui/Headline.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
 import type { SeedingOrder } from '~/types/cups';
 import seedingDataRaw from '~/data/cups/seeding_order.json';
 
@@ -17,30 +20,30 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <section class="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
-    <div class="mb-8">
-      <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-        Seedningsordning {activeYear}
-      </h1>
-      <p class="mt-2 text-lg text-gray-600 dark:text-slate-400">
-        Aktuell seedning för värdetävlingar i Svenska Cupen MTBO
-      </p>
-    </div>
+  <!-- Page Hero Title -->
+  <HeroText
+    tagline="Svenska Cupen MTBO"
+    title={`Seedningsordning ${activeYear}`}
+    subtitle="Aktuell seedning för Svenska Cupen MTBO"
+  />
 
-    <!-- Rule Explanation Callout -->
-    <div
-      class="mb-8 rounded-lg border border-blue-200 bg-blue-50 p-4 text-blue-900 dark:border-blue-800/50 dark:bg-blue-950/40 dark:text-blue-200"
-    >
-      <h2 class="text-base font-semibold">Värdetävlingar (Nivå 1)</h2>
-      <p class="mt-1 text-sm leading-relaxed">
-        Seedning tillämpas vid värdetävlingar i Svenska Cupen MTBO enligt tävlingsreglerna. Seedningsnumret fastställs
-        som det lägsta värdet av cyklistens slutplacering i föregående års cup ({prevYear}) och aktuella ställning i
-        årets cup ({activeYear}). Vid samma seedningsnummer gälls årets placering i första hand. Den seedade gruppen
-        utgörs av de upp till 8 högst seedade cyklisterna som startar sist i klassen. Vid en enskild tävling begränsas
-        den seedade gruppen i startfältet till maximalt 8 cyklister och högst 1/3 av tävlingens faktiska startfält.
-      </p>
+  <!-- Rule Explanation Callout -->
+  <WidgetWrapper containerClass="py-0 md:py-0 lg:py-0 max-w-5xl mx-auto mb-12">
+    <div class="rounded-xl border border-primary-500/30 bg-primary-50/50 p-6 dark:bg-slate-800/80">
+      <Headline
+        title="Så säger reglerna"
+        subtitle={`Seedning tillämpas vid Svenska Cupen MTBO och SM. Seedningsnumret fastställs som det lägsta värdet av cyklistens slutplacering i föregående års cup (${prevYear}) och aktuella ställning i årets cup (${activeYear}). Vid samma seedningsnummer gälls årets placering i första hand. Den seedade gruppen utgörs av de upp till 8 högst seedade cyklisterna som startar sist i klassen. Vid en enskild tävling begränsas den seedade gruppen i startfältet till maximalt 8 cyklister och högst 1/3 av tävlingens faktiska startfält.`}
+        classes={{
+          container: 'text-left mb-0 md:mb-0',
+          title: 'text-xl md:text-2xl text-primary font-bold mb-2 font-heading',
+          subtitle: 'text-base text-default dark:text-slate-300',
+        }}
+      />
     </div>
+  </WidgetWrapper>
 
+  <!-- Seeding Tables per Class -->
+  <WidgetWrapper containerClass="py-0 md:py-0 lg:py-0 max-w-5xl mx-auto">
     {
       activeSeeding ? (
         <div class="space-y-12">
@@ -52,7 +55,7 @@ const metadata = {
                 class="rounded-xl border border-gray-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900"
               >
                 <div class="mb-4 flex items-center justify-between">
-                  <h2 class="text-xl font-bold text-gray-900 dark:text-white">Klass {cls}</h2>
+                  <h2 class="text-xl font-bold text-gray-900 dark:text-white font-heading">Klass {cls}</h2>
                   <span class="inline-flex items-center rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-800 dark:bg-slate-800 dark:text-slate-200">
                     {entries.length} deltagare
                   </span>
@@ -110,38 +113,32 @@ const metadata = {
         </div>
       )
     }
+  </WidgetWrapper>
 
-    <!-- Advice for Organisers Card -->
-    <div class="mt-12">
-      <div class="rounded-xl border border-primary-500/30 bg-gray-50 p-6 shadow-sm dark:bg-slate-900">
-        <div class="flex items-start space-x-4">
-          <div class="rounded-lg bg-primary-500/10 p-3 text-primary-600 dark:text-primary-400">
-            <Icon name="tabler:settings" class="h-6 w-6" />
-          </div>
-          <div class="space-y-2">
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-              Rekommendation för arrangörer (Lottning i tidtagningsprogram)
-            </h3>
-            <p class="text-sm text-gray-600 dark:text-slate-300">
-              För att tillämpa seedning i OLA, MeOS eller motsvarande tidtagningsprogram utan komplicerad
-              regelkonfiguration:
-            </p>
-            <ol class="list-decimal space-y-1 pl-5 text-sm text-gray-600 dark:text-slate-300">
-              <li>
-                Identifiera de seedade cyklisterna i klassen enligt tabellen ovan (märkta med <strong
-                  class="text-gray-900 dark:text-white">Seedad grupp</strong
-                >).
-              </li>
-              <li>Lotta hela klassen slumpmässigt i tidtagningsprogrammet som vanligt.</li>
-              <li>
-                Byt starttider så att de seedade cyklisterna placeras i klassens sista startplatser med bibehållen
-                inbördes lottad ordning. De oseedade cyklisterna startar i de tidigare startplatserna, också med
-                bibehållen inbördes lottad ordning.
-              </li>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- Organiser Guide Widget -->
+  <Steps2
+    id="arrangor-guide"
+    tagline="Arrangörsguide"
+    title="Rekommendation för arrangörer"
+    subtitle="Så tillämpar du seedning vid lottning i OLA, MeOS eller motsvarande tidtagningsprogram utan komplicerade inställningar"
+    items={[
+      {
+        title: 'Identifiera de seedade cyklisterna',
+        description:
+          'Identifiera de seedade cyklisterna i klassen enligt tabellen ovan (märkta med <strong>Seedad grupp</strong>).',
+        icon: 'tabler:user-check',
+      },
+      {
+        title: 'Slumpmässig lottning i tidtagningsprogrammet',
+        description: 'Lotta hela klassen slumpmässigt i tidtagningsprogrammet som vanligt.',
+        icon: 'tabler:dice',
+      },
+      {
+        title: 'Byt starttider för de två grupperna',
+        description:
+          'Byt starttider så att de seedade cyklisterna placeras i klassens sista startplatser med bibehållen inbördes lottad ordning. De oseedade cyklisterna startar i de tidigare startplatserna, också med bibehållen inbördes lottad ordning.',
+        icon: 'tabler:arrows-exchange',
+      },
+    ]}
+  />
 </Layout>
