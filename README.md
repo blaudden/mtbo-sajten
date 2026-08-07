@@ -4,6 +4,8 @@ This repository contains the source code for the Swedish MTBO community site **M
 
 The site is built using [Astro](https://astro.build/) based on the [Astrowind](https://github.com/onwidget/astrowind) template which is a free and open-source template to make websites using **[Astro 5.0](https://astro.build/) + [Tailwind CSS](https://tailwindcss.com/)**.
 
+- For UI components and widgets selection guide, see [components.md](docs/components.md).
+
 [![License](https://img.shields.io/github/license/blaudden/mtbo-sajten?style=flat-square&color=dddddd&labelColor=000000)](https://github.com/blaudden/mtbo-sajten/blob/main/LICENSE.md)
 [![Maintained](https://img.shields.io/badge/maintained%3F-yes-brightgreen.svg?style=flat-square)](https://github.com/blaudden)
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/blaudden/mtbo-sajten#contributing)

@@ -1,0 +1,466 @@
+{
+  "id": "1418",
+  "name": "Svenska Cupen MTBO 2025",
+  "year": 2025,
+  "url": "https://eventor.orientering.se/Standings/View/Series/1418",
+  "classes": {
+    "H21": [
+      {
+        "rank": 1,
+        "name": "Rasmus Nordgren",
+        "club": "OK Kåre",
+        "points": 550.0
+      },
+      {
+        "rank": 2,
+        "name": "Patrik Svedberg",
+        "club": "Gävle OK",
+        "points": 386.0
+      },
+      {
+        "rank": 3,
+        "name": "Hampus Larsson",
+        "club": "FK Göingarna",
+        "points": 305.0
+      },
+      {
+        "rank": 4,
+        "name": "Erik Holmberg",
+        "club": "IKHP Huskvarna Idrottsklubb",
+        "points": 293.0
+      },
+      {
+        "rank": 5,
+        "name": "Joakim Skärlén",
+        "club": "Haninge SOK",
+        "points": 281.0
+      },
+      {
+        "rank": 6,
+        "name": "Oliver Friis",
+        "club": "Navet MTBO",
+        "points": 185.0
+      },
+      {
+        "rank": 7,
+        "name": "Thomas Jansson",
+        "club": "Garphyttans IF",
+        "points": 183.0
+      },
+      {
+        "rank": 8,
+        "name": "Sverre Röjgård",
+        "club": "OK Kolmården",
+        "points": 180.0
+      },
+      {
+        "rank": 9,
+        "name": "Sebastian Svärd",
+        "club": "Haninge SOK",
+        "points": 178.0
+      },
+      {
+        "rank": 10,
+        "name": "Bjarne Hoffmann",
+        "club": "Navet MTBO",
+        "points": 120.0
+      },
+      {
+        "rank": 11,
+        "name": "Jon Hansson",
+        "club": "OK Kåre",
+        "points": 95.0
+      },
+      {
+        "rank": 12,
+        "name": "Gustav Ohlin",
+        "club": "Bredaryds SOK",
+        "points": 90.0
+      },
+      {
+        "rank": 13,
+        "name": "Gustav Johnsson",
+        "club": "IFK Mora OK",
+        "points": 72.0
+      },
+      {
+        "rank": 14,
+        "name": "Jacob Enberg",
+        "club": "Halmstad OK",
+        "points": 71.0
+      },
+      {
+        "rank": 15,
+        "name": "Klaus Csúcs",
+        "club": "IFK Mora OK",
+        "points": 70.0
+      },
+      {
+        "rank": 16,
+        "name": "Jonny Engel",
+        "club": "OK Ravinen",
+        "points": 65.0
+      },
+      {
+        "rank": 17,
+        "name": "Marcus Wehlin",
+        "club": "Garphyttans IF",
+        "points": 60.0
+      },
+      {
+        "rank": 18,
+        "name": "Anton Ryzhov",
+        "club": "ESV Dresden, GER",
+        "points": 56.0
+      },
+      {
+        "rank": 19,
+        "name": "Viktor Löfgren",
+        "club": "Södertälje-Nykvarn OF",
+        "points": 54.0
+      },
+      {
+        "rank": 20,
+        "name": "Torbjörn Blom",
+        "club": "Valbo AIF",
+        "points": 52.0
+      },
+      {
+        "rank": 21,
+        "name": "Daniel Andersson",
+        "club": "OK Löftan",
+        "points": 51.0
+      },
+      {
+        "rank": 22,
+        "name": "Noah Tristan Hoffmann",
+        "club": "DANISH NATIONAL TEAM",
+        "points": 45.0
+      },
+      {
+        "rank": 23,
+        "name": "Marius E. Aamodt",
+        "club": "Oppsal Orientering, NOR",
+        "points": 40.0
+      },
+      {
+        "rank": 24,
+        "name": "Benjamin Seipel",
+        "club": "Hestra IF",
+        "points": 36.0
+      },
+      {
+        "rank": 24,
+        "name": "David Hansson",
+        "club": "OK Räven",
+        "points": 36.0
+      },
+      {
+        "rank": 26,
+        "name": "Johan MacLassen",
+        "club": "Danish National Team",
+        "points": 33.0
+      },
+      {
+        "rank": 26,
+        "name": "Jonas Fransson",
+        "club": "Lerums SOK",
+        "points": 33.0
+      },
+      {
+        "rank": 28,
+        "name": "Henrik Olsson",
+        "club": "OK Renen",
+        "points": 27.0
+      },
+      {
+        "rank": 29,
+        "name": "Lars Ericsson",
+        "club": "Nybro OK",
+        "points": 26.0
+      },
+      {
+        "rank": 30,
+        "name": "Magnus Blåudd",
+        "club": "OK Rodhen",
+        "points": 25.0
+      }
+    ],
+    "D21": [
+      {
+        "rank": 1,
+        "name": "Gabriella Gustafsson",
+        "club": "IKHP Huskvarna Idrottsklubb",
+        "points": 475.0
+      },
+      {
+        "rank": 2,
+        "name": "Cæcilie Rueløkke Christoffersen",
+        "club": "OK Øst Birkerød, DEN",
+        "points": 402.0
+      },
+      {
+        "rank": 3,
+        "name": "Elvira Larsson",
+        "club": "Ryda SK",
+        "points": 390.0
+      },
+      {
+        "rank": 4,
+        "name": "Karin E Gustafsson",
+        "club": "Garphyttans IF",
+        "points": 374.0
+      },
+      {
+        "rank": 5,
+        "name": "Mia Eronn",
+        "club": "Linköpings OK",
+        "points": 321.0
+      },
+      {
+        "rank": 6,
+        "name": "Ingrid Stengård",
+        "club": "Fältjägarnas IF",
+        "points": 242.0
+      },
+      {
+        "rank": 7,
+        "name": "Nikoline Splittorff",
+        "club": "FIF Hillerød",
+        "points": 205.0
+      },
+      {
+        "rank": 8,
+        "name": "Eva Gustafsson",
+        "club": "Garphyttans IF",
+        "points": 150.0
+      },
+      {
+        "rank": 9,
+        "name": "Ella Palm",
+        "club": "IKHP Huskvarna Idrottsklubb",
+        "points": 116.0
+      },
+      {
+        "rank": 10,
+        "name": "Camilla Søgaard",
+        "club": "DANISH NATIONAL TEAM",
+        "points": 105.0
+      },
+      {
+        "rank": 11,
+        "name": "Sara Forsgren",
+        "club": "OK Nolaskogsarna",
+        "points": 98.0
+      },
+      {
+        "rank": 12,
+        "name": "Laura Csúcs-Fenyvesi",
+        "club": "IFK Mora OK",
+        "points": 91.0
+      },
+      {
+        "rank": 13,
+        "name": "Emelie Holmström",
+        "club": "Järla Orientering",
+        "points": 90.0
+      },
+      {
+        "rank": 14,
+        "name": "Helena Svensson",
+        "club": "FK Herkules",
+        "points": 72.0
+      },
+      {
+        "rank": 14,
+        "name": "Tilda Palm",
+        "club": "IKHP Huskvarna Idrottsklubb",
+        "points": 72.0
+      },
+      {
+        "rank": 16,
+        "name": "Anke Dannowski",
+        "club": "ESV Dresden MTBO",
+        "points": 54.0
+      },
+      {
+        "rank": 17,
+        "name": "Irma Shmidt",
+        "club": "SV IHW Alex 78 Berlin",
+        "points": 52.0
+      },
+      {
+        "rank": 18,
+        "name": "Elsa Forsgren",
+        "club": "Västerbergslagens OL",
+        "points": 33.0
+      },
+      {
+        "rank": 18,
+        "name": "Matilda Asp",
+        "club": "IFK Göteborg Orientering",
+        "points": 33.0
+      },
+      {
+        "rank": 20,
+        "name": "Chiara Magni",
+        "club": "Asd Nirvana Verde",
+        "points": 28.0
+      },
+      {
+        "rank": 21,
+        "name": "Linnea Gustafsson",
+        "club": "OK Gynge",
+        "points": 26.0
+      }
+    ],
+    "H17-20": [
+      {
+        "rank": 1,
+        "name": "Melvin Löfgren",
+        "club": "OK Kåre",
+        "points": 520.0
+      },
+      {
+        "rank": 2,
+        "name": "Joel Holmgård",
+        "club": "Kils OK",
+        "points": 490.0
+      },
+      {
+        "rank": 3,
+        "name": "Arvid Svensson",
+        "club": "Björkfors GOIF",
+        "points": 430.0
+      },
+      {
+        "rank": 4,
+        "name": "Axel Gräfnings",
+        "club": "Grycksbo IF OK",
+        "points": 400.0
+      },
+      {
+        "rank": 5,
+        "name": "Hugo Hallberg",
+        "club": "IK Ymer",
+        "points": 228.0
+      },
+      {
+        "rank": 6,
+        "name": "Elias Nyqvist",
+        "club": "OK Landehof",
+        "points": 80.0
+      },
+      {
+        "rank": 7,
+        "name": "Kristoffer Markussen",
+        "club": "DANISH NATIONAL TEAM",
+        "points": 72.0
+      },
+      {
+        "rank": 8,
+        "name": "Karl Forsgren",
+        "club": "Västerbergslagens OL",
+        "points": 66.0
+      },
+      {
+        "rank": 9,
+        "name": "Peter Lindvall",
+        "club": "Haninge SOK",
+        "points": 58.0
+      },
+      {
+        "rank": 10,
+        "name": "Ville Elgesjö",
+        "club": "Domnarvets GOIF",
+        "points": 36.0
+      }
+    ],
+    "D17-20": [
+      {
+        "rank": 1,
+        "name": "Emilia Jakobsson",
+        "club": "Nybro OK",
+        "points": 480.0
+      },
+      {
+        "rank": 2,
+        "name": "Emilia Lundstedt",
+        "club": "Sjövalla FK",
+        "points": 446.0
+      },
+      {
+        "rank": 3,
+        "name": "Hennie Löfgren",
+        "club": "Stora Tuna OK",
+        "points": 383.0
+      },
+      {
+        "rank": 4,
+        "name": "Signe Feil",
+        "club": "Sundsvalls OK",
+        "points": 310.0
+      },
+      {
+        "rank": 5,
+        "name": "Ellen Forsgren",
+        "club": "Västerbergslagens OL",
+        "points": 280.0
+      },
+      {
+        "rank": 6,
+        "name": "Emma Karlsson",
+        "club": "OK Landehof",
+        "points": 150.0
+      },
+      {
+        "rank": 7,
+        "name": "Miri Brunstedt Nørgaard",
+        "club": "Danish National Team",
+        "points": 120.0
+      },
+      {
+        "rank": 8,
+        "name": "Minna Palm",
+        "club": "IKHP Huskvarna Idrottsklubb",
+        "points": 110.0
+      },
+      {
+        "rank": 9,
+        "name": "Sara Ljungqvist",
+        "club": "Lunds OK",
+        "points": 64.0
+      },
+      {
+        "rank": 10,
+        "name": "Sara Ohlin",
+        "club": "Bredaryds SOK",
+        "points": 50.0
+      },
+      {
+        "rank": 10,
+        "name": "Elin Johansson",
+        "club": "IFK Göteborg Orientering",
+        "points": 50.0
+      },
+      {
+        "rank": 12,
+        "name": "Sofie Okkels",
+        "club": "Danish National Team",
+        "points": 45.0
+      },
+      {
+        "rank": 13,
+        "name": "Irma Berg",
+        "club": "Domnarvets GOIF",
+        "points": 36.0
+      },
+      {
+        "rank": 14,
+        "name": "Elin Doering",
+        "club": "Garphyttans IF",
+        "points": 33.0
+      }
+    ]
+  }
+}
