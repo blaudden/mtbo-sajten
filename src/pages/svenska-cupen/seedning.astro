@@ -4,12 +4,24 @@ import HeroText from '~/components/widgets/HeroText.astro';
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import Headline from '~/components/ui/Headline.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
+import { Icon } from 'astro-icon/components';
 import type { SeedingOrder } from '~/types/cups';
 import seedingDataRaw from '~/data/cups/seeding_order.json';
 
 const activeSeeding = seedingDataRaw as SeedingOrder;
 const activeYear = activeSeeding.year ?? new Date().getFullYear();
 const prevYear = activeYear - 1;
+
+const formattedGeneratedAt = activeSeeding.generated_at
+  ? new Date(activeSeeding.generated_at).toLocaleDateString('sv-SE', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      timeZone: 'Europe/Stockholm',
+    })
+  : null;
 
 const targetClasses = Object.keys(activeSeeding.classes);
 
@@ -27,12 +39,58 @@ const metadata = {
     subtitle="Aktuell seedning för Svenska Cupen MTBO"
   />
 
+  <!-- Provenance Metadata & Eventor Links -->
+  <WidgetWrapper containerClass="py-0 md:py-0 lg:py-0 max-w-5xl mx-auto mb-8">
+    <div
+      class="flex flex-wrap items-center justify-between gap-4 rounded-xl border border-gray-200 bg-white p-4 text-sm dark:border-slate-800 dark:bg-slate-900 shadow-sm"
+    >
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="font-semibold text-gray-700 dark:text-slate-300">Underlag i Eventor:</span>
+        {
+          activeSeeding.current_cup_url && (
+            <a
+              href={activeSeeding.current_cup_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1 font-medium text-primary hover:underline"
+            >
+              <span>Svenska Cupen {activeYear}</span>
+              <Icon name="tabler:external-link" class="h-4 w-4" />
+            </a>
+          )
+        }
+        {
+          activeSeeding.previous_cup_url && (
+            <a
+              href={activeSeeding.previous_cup_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1 font-medium text-primary hover:underline"
+            >
+              <span>Svenska Cupen {prevYear}</span>
+              <Icon name="tabler:external-link" class="h-4 w-4" />
+            </a>
+          )
+        }
+      </div>
+
+      {
+        formattedGeneratedAt && (
+          <div class="flex items-center gap-1.5 text-xs text-gray-500 dark:text-slate-400">
+            <Icon name="tabler:clock" class="h-4 w-4 text-gray-400 dark:text-slate-500" />
+            <span>Beräknad: {formattedGeneratedAt}</span>
+          </div>
+        )
+      }
+    </div>
+  </WidgetWrapper>
+
   <!-- Rule Explanation Callout -->
   <WidgetWrapper containerClass="py-0 md:py-0 lg:py-0 max-w-5xl mx-auto mb-12">
     <div class="rounded-xl border border-primary-500/30 bg-primary-50/50 p-6 dark:bg-slate-800/80">
       <Headline
         title="Så säger reglerna"
-        subtitle={`Seedning tillämpas vid Svenska Cupen MTBO och SM. Seedningsnumret fastställs som det lägsta värdet av cyklistens slutplacering i föregående års cup (${prevYear}) och aktuella ställning i årets cup (${activeYear}). Vid samma seedningsnummer gälls årets placering i första hand. Den seedade gruppen utgörs av de upp till 8 högst seedade cyklisterna som startar sist i klassen. Vid en enskild tävling begränsas den seedade gruppen i startfältet till maximalt 8 cyklister och högst 1/3 av tävlingens faktiska startfält.`}
+        subtitle={`Seedning tillämpas vid Svenska Cupen MTBO. Seedningsnumret fastställs som det lägsta värdet av cyklistens slutplacering i föregående års cup (${prevYear}) och aktuell ställning i årets cup (${activeYear}). Vid samma seedningsnummer gäller årets placering i första hand. Den seedade gruppen utgörs av de 8 högst seedade cyklisterna som lottas att starta sist i klassen. Vid en enskild tävling begränsas den seedade gruppen i startfältet till maximalt 8 cyklister dock högst 1/3 av antalet anmälda.`}
         classes={{
           container: 'text-left mb-0 md:mb-0',
           title: 'text-xl md:text-2xl text-primary font-bold mb-2 font-heading',
@@ -90,12 +148,10 @@ const metadata = {
                             {entry.previous_rank ?? '-'}
                           </td>
                           <td class="px-4 py-3 text-right">
-                            {entry.is_seeded ? (
+                            {entry.is_seeded && (
                               <span class="inline-flex items-center rounded-md bg-amber-100 px-2.5 py-0.5 text-xs font-semibold text-amber-800 dark:bg-amber-900/40 dark:text-amber-300">
                                 Seedad grupp
                               </span>
-                            ) : (
-                              <span class="text-xs text-gray-400 dark:text-slate-500">Fri lottning</span>
                             )}
                           </td>
                         </tr>
@@ -120,23 +176,24 @@ const metadata = {
     id="arrangor-guide"
     tagline="Arrangörsguide"
     title="Rekommendation för arrangörer"
-    subtitle="Så tillämpar du seedning vid lottning i OLA, MeOS eller motsvarande tidtagningsprogram utan komplicerade inställningar"
+    subtitle="Så tillämpar du på ett enkelt sätt seedning vid lottning i OLA, MeOS eller motsvarande tidtagningsprogram utan komplicerade inställningar. Här går vi igenom hur du skapar en startlista med seedade deltagare placerade på slutet av startlistan. "
     items={[
       {
         title: 'Identifiera de seedade cyklisterna',
         description:
-          'Identifiera de seedade cyklisterna i klassen enligt tabellen ovan (märkta med <span class="inline-flex items-center rounded-md bg-amber-100 px-2.5 py-0.5 text-xs font-semibold text-amber-800 dark:bg-amber-900/40 dark:text-amber-300">Seedad grupp</span>).',
+          'Identifiera de seedade cyklisterna i klassen enligt tabellen ovan (märkta med <span class="inline-flex items-center rounded-md bg-amber-100 px-2.5 py-0.5 text-xs font-semibold text-amber-800 dark:bg-amber-900/40 dark:text-amber-300">Seedad grupp</span>). Tänk på att begränsa antalet vid färre anmälda än 24.',
         icon: 'tabler:user-check',
       },
       {
-        title: 'Slumpmässig lottning i tidtagningsprogrammet',
-        description: 'Lotta hela klassen slumpmässigt i tidtagningsprogrammet som vanligt.',
+        title: 'Lotta startlistan',
+        description:
+          'Lottning görs som vanligt i tidtagningsprogrammet så att hela klassen får starttider i slumpmässig ordning.',
         icon: 'tabler:dice',
       },
       {
-        title: 'Byt starttider för de två grupperna',
+        title: 'Flytta dom seedade',
         description:
-          'Byt starttider så att de seedade cyklisterna placeras i klassens sista startplatser med bibehållen inbördes lottad ordning. De oseedade cyklisterna startar i de tidigare startplatserna, också med bibehållen inbördes lottad ordning.',
+          'Byt starttider så att de seedade cyklisterna placeras i klassens sista startplatser med bibehållen inbördes lottad ordning. De oseedade cyklisterna hamnar då i de tidigare startplatserna, också dem med bibehållen inbördes lottad ordning.',
         icon: 'tabler:arrows-exchange',
       },
     ]}
