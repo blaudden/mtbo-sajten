@@ -6,7 +6,7 @@ import Headline from '~/components/ui/Headline.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import { Icon } from 'astro-icon/components';
 import type { SeedingOrder } from '~/types/cups';
-import seedingDataRaw from '~/data/cups/seeding_order.json';
+import seedingDataRaw from '~/data/cups/svenska_cupen_seeding_order.json';
 
 const activeSeeding = seedingDataRaw as SeedingOrder;
 const activeYear = activeSeeding.year ?? new Date().getFullYear();
@@ -150,7 +150,7 @@ const metadata = {
                           <td class="px-4 py-3 text-right">
                             {entry.is_seeded && (
                               <span class="inline-flex items-center rounded-md bg-amber-100 px-2.5 py-0.5 text-xs font-semibold text-amber-800 dark:bg-amber-900/40 dark:text-amber-300">
-                                Seedad grupp
+                                Seedad
                               </span>
                             )}
                           </td>
@@ -181,7 +181,7 @@ const metadata = {
       {
         title: 'Identifiera de seedade cyklisterna',
         description:
-          'Identifiera de seedade cyklisterna i klassen enligt tabellen ovan (märkta med <span class="inline-flex items-center rounded-md bg-amber-100 px-2.5 py-0.5 text-xs font-semibold text-amber-800 dark:bg-amber-900/40 dark:text-amber-300">Seedad grupp</span>). Tänk på att begränsa antalet vid färre anmälda än 24.',
+          'Identifiera de seedade cyklisterna i klassen enligt tabellen ovan (märkta med <span class="inline-flex items-center rounded-md bg-amber-100 px-2.5 py-0.5 text-xs font-semibold text-amber-800 dark:bg-amber-900/40 dark:text-amber-300">Seedad</span>). Tänk på att begränsa antalet vid färre anmälda än 24.',
         icon: 'tabler:user-check',
       },
       {
