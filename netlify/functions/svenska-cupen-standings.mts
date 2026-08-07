@@ -14,5 +14,5 @@ export default async () => {
 };
 
 export const config: Config = {
-  path: '/svenska-cupen/standings',
+  path: '/api/svenska-cupen-standings',
 };
