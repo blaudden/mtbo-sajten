@@ -70,29 +70,6 @@ const isSvenskaCupen =
 <article class="event-detail max-w-4xl mx-auto">
   <EventHeader event={event} countryCode={countryCode} statusLabel={statusLabel} statusColor={statusColor} />
 
-  {
-    isSvenskaCupen && (
-      <div class="mb-6 rounded-lg border border-primary-500/30 bg-primary-950/20 p-4 text-surface-200">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center space-x-3">
-            <span class="inline-flex items-center rounded-md bg-primary-500/20 px-2.5 py-1 text-xs font-semibold text-primary-300">
-              Svenska Cupen
-            </span>
-            <span class="text-sm font-medium text-white">
-              Denna tävling ingår i Svenska Cupen MTBO (Värdetävling, Nivå 1)
-            </span>
-          </div>
-          <a
-            href="/svenska-cupen/seedning"
-            class="inline-flex items-center text-xs font-semibold text-primary-400 hover:text-primary-300 hover:underline"
-          >
-            Visa seedningsordning &rarr;
-          </a>
-        </div>
-      </div>
-    )
-  }
-
   <div class="mb-6">
     <EventInfoGrid
       dateRange={dateRange}
@@ -128,8 +105,44 @@ const isSvenskaCupen =
       <EventLinks event={event} />
     </div>
 
-    {/* Right Column (Sidebar): Sticky CTA & Deadlines */}
+    {/* Right Column (Sidebar): Sticky CTA, Svenska Cupen Card & Deadlines */}
     <div class="lg:col-span-4 lg:sticky lg:top-24 space-y-6">
+      {
+        isSvenskaCupen && (
+          <div class="p-5 bg-gradient-to-br from-amber-500/10 via-primary-500/10 to-transparent border border-amber-500/30 dark:border-amber-500/40 rounded-2xl space-y-4 shadow-sm">
+            <div class="flex items-start gap-3">
+              <div class="rounded-xl bg-amber-500/20 p-2.5 text-amber-600 dark:text-amber-400 shrink-0">
+                <Icon name="tabler:trophy" class="w-6 h-6" />
+              </div>
+              <div class="space-y-1">
+                <h3 class="font-bold text-base text-default">Svenska Cupen MTBO</h3>
+                <p class="text-sm text-muted">
+                  Denna tävling ingår i Svenska Cupen. Samla poäng i den totala cuptabellen!
+                </p>
+              </div>
+            </div>
+
+            <div class="space-y-2 pt-1">
+              <a
+                href="/svenska-cupen-mtbo"
+                class="w-full btn btn-primary py-2.5 px-4 text-sm font-medium inline-flex items-center justify-center gap-2 rounded-xl transition-all shadow-sm shadow-primary/10 hover:shadow-md hover:shadow-primary/20"
+              >
+                <Icon name="tabler:trophy" class="w-4 h-4" />
+                Visa cupställning
+              </a>
+
+              <a
+                href="/svenska-cupen/seedning"
+                class="w-full py-2 px-4 text-xs font-medium inline-flex items-center justify-center gap-1.5 rounded-xl border border-gray-200 dark:border-slate-800 text-gray-700 dark:text-slate-300 hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors"
+              >
+                <Icon name="tabler:list-numbers" class="w-4 h-4 text-gray-500 dark:text-slate-400" />
+                Visa seedningsordning
+              </a>
+            </div>
+          </div>
+        )
+      }
+
       {
         externalUrl && (
           <div class="p-5 bg-blue-50/50 dark:bg-blue-950/10 border border-blue-100 dark:border-blue-900/30 rounded-2xl space-y-4 shadow-sm">
