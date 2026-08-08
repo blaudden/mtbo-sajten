@@ -12122,6 +12122,12 @@
           "url": "Events/Show/58116",
           "title": null,
           "last_updated_at": "2026-05-29T21:27:51.898931+00:00"
+        },
+        {
+          "type": "Series",
+          "url": "/Standings/View/Series/1605",
+          "title": "MtbO cupen Gotland 2026",
+          "last_updated_at": "2026-08-08T03:37:14.161727+00:00"
         }
       ],
       "documents": [],
@@ -18153,6 +18159,12 @@
           "title": "Inbjudan",
           "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/59747/9de7f562-2d2a-4f59-9dc7-b94cad1c41d6/Inbjudan.Pdf",
           "published_time": "2026-07-20"
+        },
+        {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/59747/0e44b9db-f89d-444a-959f-7942c21b49be/PM.Pdf",
+          "published_time": "2026-08-06"
         }
       ],
       "information": null,
