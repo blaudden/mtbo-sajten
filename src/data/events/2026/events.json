@@ -9303,16 +9303,34 @@
           "title": "PM Boende",
           "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57105/bc1e990a-317a-4992-9ad7-dd926e4197b8/PM Boende.Pdf",
           "published_time": "2026-06-07"
+        },
+        {
+          "type": "Bulletin",
+          "title": "Mat PM, Food Bulletin",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57105/bb931eda-bee1-4c94-b9e3-d2557f75d3a0/Mat PM, Food Bulletin.Pdf",
+          "published_time": "2026-08-08"
+        },
+        {
+          "type": "Other",
+          "title": "Kartprov",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57105/27ac3b8a-8b47-4686-93c8-2e2f63290fe9/Kartprov.Pdf",
+          "published_time": "2026-08-08"
+        },
+        {
+          "type": "Other",
+          "title": "Läs mer om helgen/Read about the weekend",
+          "url": "https://www.mountainbikeorientering.se/getready-mtbosm26",
+          "published_time": null
         }
       ],
-      "information": "2026-06-27: Inbjudan uppdaterad med middag mm\n2026-05-24, 2026-06-07: Boende PM publicerat och uppdaterat med Husbilsparkering\n2026-05-12: Avlyst område utökat. Norbyvägen tillåten.\n2026-04-28: Inbjudan publicerad\n2026-03-25: Deltagande i Uppsala möte den 25–26 april är tillåtet, under förutsättning att inget försök till rekognosering av MTBO-terrängen görs.",
+      "information": "2026-08-08: Mat PM, Food Bulletin publicerad\n2026-06-27: Inbjudan uppdaterad med middag mm\n2026-05-24, 2026-06-07: Boende PM publicerat och uppdaterat med Husbilsparkering\n2026-05-12: Avlyst område utökat. Norbyvägen tillåten.\n2026-04-28: Inbjudan publicerad\n2026-03-25: Deltagande i Uppsala möte den 25–26 april är tillåtet, under förutsättning att inget försök till rekognosering av MTBO-terrängen görs.",
       "region": "Uppland",
       "punching_system": "Sportident",
       "races": [
         {
           "race_number": 1,
           "name": "MTBO, SM/JSM/USM/VSM, Svenska cupen, #3, medel",
-          "datetimez": "2026-08-15T00:00:00+02:00",
+          "datetimez": "2026-08-15T10:00:00+02:00",
           "discipline": "Middle",
           "night_or_day": "day",
           "position": {
@@ -9643,7 +9661,7 @@
         },
         {
           "role": "Course setter",
-          "name": "Lars Pontén"
+          "name": "Magnus Blåudd"
         },
         {
           "role": "Event controller",
@@ -9723,9 +9741,27 @@
           "title": "Boende PM",
           "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57106/70ed4a09-012a-44a0-8dde-e4c1a0d2f625/Boende PM.Pdf",
           "published_time": "2026-06-07"
+        },
+        {
+          "type": "Bulletin",
+          "title": "Mat PM, Food Bulletin",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57106/8feb76d0-94af-4557-8b17-ad8d68a67cbd/Mat PM, Food Bulletin.Pdf",
+          "published_time": "2026-08-08"
+        },
+        {
+          "type": "Other",
+          "title": "Kartprov",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57106/7a044cf4-bb2d-428b-bd4e-e62c14421f1e/Kartprov.Pdf",
+          "published_time": "2026-08-08"
+        },
+        {
+          "type": "Other",
+          "title": "Läs mer om helgen/Read about the weekend",
+          "url": "https://www.mountainbikeorientering.se/getready-mtbosm26",
+          "published_time": null
         }
       ],
-      "information": "2026-06-27: Inbjudan uppdaterad med middag mm\n2026-06-07: Boende PM publicerat och uppdaterat med Husbilsparkering\n2026-04-28: Inbjudan publicerad",
+      "information": "2026-08-08: Mat PM, Food Bulletin publicerad\n2026-06-27: Inbjudan uppdaterad med middag mm\n2026-06-07: Boende PM publicerat och uppdaterat med Husbilsparkering\n2026-04-28: Inbjudan publicerad",
       "region": "Uppland",
       "punching_system": "Sportident",
       "races": [
@@ -10027,7 +10063,7 @@
         },
         {
           "role": "Course setter",
-          "name": "Lars Pontén"
+          "name": "Torbjörn Johansson"
         },
         {
           "role": "Event controller",
@@ -10107,9 +10143,27 @@
           "title": "Boende PM",
           "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57107/3e0601d9-8da7-4acf-8e7e-c07cf14e340f/Boende PM.Pdf",
           "published_time": "2026-06-07"
+        },
+        {
+          "type": "Bulletin",
+          "title": "Mat PM, Food Bulletin",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57107/dbb854ac-2013-4f6b-937b-96f29504286a/Mat PM, Food Bulletin.Pdf",
+          "published_time": "2026-08-08"
+        },
+        {
+          "type": "Other",
+          "title": "Kartprov",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/57107/ded6dc3f-fc1e-4365-94fb-ac4b9d0780a9/Kartprov.Pdf",
+          "published_time": "2026-08-08"
+        },
+        {
+          "type": "Other",
+          "title": "Läs mer om helgen/Read about the weekend",
+          "url": "https://www.mountainbikeorientering.se/getready-mtbosm26",
+          "published_time": null
         }
       ],
-      "information": "2026-06-27: Inbjudan uppdaterad med middag mm\n2026-05-24, 2026-06-07: Boende PM publicerat och uppdaterat med Husbilsparkering\n2026-04-28: Inbjudan publicerad\n2026-03-25: Deltagande i Uppsala möte den 25–26 april är tillåtet, under förutsättning att inget försök till rekognosering av MTBO-terrängen görs.",
+      "information": "2026-08-08: Mat PM, Food Bulletin publicerad\n2026-06-27: Inbjudan uppdaterad med middag mm\n2026-05-24, 2026-06-07: Boende PM publicerat och uppdaterat med Husbilsparkering\n2026-04-28: Inbjudan publicerad\n2026-03-25: Deltagande i Uppsala möte den 25–26 april är tillåtet, under förutsättning att inget försök till rekognosering av MTBO-terrängen görs.",
       "region": "Uppland",
       "punching_system": "Sportident",
       "races": [
@@ -10909,12 +10963,6 @@
             }
           ],
           "urls": [
-            {
-              "type": "EntryList",
-              "url": "/Entry?eventId=57491",
-              "title": "Enter",
-              "last_updated_at": "2026-07-29T02:55:34.787367+00:00"
-            },
             {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=57491&groupBy=EventClass",
@@ -14440,7 +14488,7 @@
           "published_time": "2026-04-02"
         }
       ],
-      "information": null,
+      "information": "Öviksserien MtbO 2026 Kom och prova på MtbO (mountainbikeorientering). Tre banor, kort, mellan, lång. Kartställ finns att låna. Start mellan kl 18-19. Samling vis skidstugan i Sidensjö.",
       "region": "Ångermanland",
       "punching_system": "Sportident",
       "races": [
@@ -14487,12 +14535,6 @@
             }
           ],
           "urls": [
-            {
-              "type": "EntryList",
-              "url": "/Entry?eventId=58354",
-              "title": "Enter",
-              "last_updated_at": "2026-08-01T05:32:21.591414+00:00"
-            },
             {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=58354&groupBy=EventClass",
@@ -17048,8 +17090,14 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/59189/43165443-91b9-4c03-ac61-be46ce708120/Inbjudan.Pdf",
-          "published_time": "2026-08-03"
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/59189/579c273d-4afc-4fe9-b3e0-0dd1c22a1987/Inbjudan.Other",
+          "published_time": "2026-08-09"
+        },
+        {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/59189/0e66ebc1-c2bb-4547-bd3c-0ef56556a1cf/PM.Pdf",
+          "published_time": "2026-08-09"
         }
       ],
       "information": "Vi behöver tyvärr flytta till  måndagen 10 augusti.",
@@ -17068,12 +17116,6 @@
           },
           "areas": [],
           "urls": [
-            {
-              "type": "EntryList",
-              "url": "/Entry?eventId=59189",
-              "title": "Enter",
-              "last_updated_at": "2026-07-22T02:56:07.795469+00:00"
-            },
             {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=59189&groupBy=EventClass",
@@ -17702,6 +17744,12 @@
               "url": "/Entry?eventId=59458",
               "title": "Enter",
               "last_updated_at": "2026-07-29T02:55:34.787254+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=59458&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-08-10T04:01:08.828412+00:00"
             }
           ],
           "documents": [],
@@ -17792,12 +17840,6 @@
           },
           "areas": [],
           "urls": [
-            {
-              "type": "EntryList",
-              "url": "/Entry?eventId=59614",
-              "title": "Enter",
-              "last_updated_at": "2026-06-17T09:10:06.347685+00:00"
-            },
             {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=59614&groupBy=EventClass",
