@@ -42,23 +42,13 @@ export const findImage = async (
   }
 
   const images = await fetchLocalImages();
-  // Normalize key to match what regular imports look like if needed,
-  // but importantly convert to the key format used in _images
-  // referencing the glob: import.meta.glob('~/assets/images/...')
+  const cleanImagePath = imagePath.split('?')[0];
 
-  // If path starts with src/, replace it with ~/.
-  // The glob keys in Vite might actually use /src/ if imported differently,
-  // but here the glob pattern is `~/assets/images/...`.
-  // Vite usually normalizes import.meta.glob keys to be relative to project root or match the pattern specific structure.
-  // Let's check how `images` keys look.
-  // The existing code does: const key = imagePath.replace('~/', '/src/');
-  // This suggests the keys in `images` map are like `/src/assets/images/...`
-
-  let key = imagePath;
-  if (imagePath.startsWith('~/')) {
-    key = imagePath.replace('~/', '/src/');
-  } else if (imagePath.startsWith('src/')) {
-    key = '/' + imagePath;
+  let key = cleanImagePath;
+  if (cleanImagePath.startsWith('~/')) {
+    key = cleanImagePath.replace('~/', '/src/');
+  } else if (cleanImagePath.startsWith('src/')) {
+    key = '/' + cleanImagePath;
   }
 
   if (!images || typeof images[key] !== 'function') {
@@ -93,18 +83,15 @@ export const adaptOpenGraphImages = async (
         }
 
         // Logic to resolve the PHYSICAL file path for Sharp
-        // calculate key same way as findImage
         const imagePath = image.url;
         if (typeof imagePath === 'string' && imagePath.startsWith('~/assets/images')) {
-          const key = imagePath.replace('~/', '/src/');
+          const [cleanPath, query] = imagePath.split('?');
+          const key = cleanPath.replace('~/', '/src/');
           const inputPath = path.join(process.cwd(), key);
 
           if (fs.existsSync(inputPath)) {
             try {
               // Determine output filename from slug
-              // e.g. / -> home.jpg
-              // /mtbo-oringen -> mtbo-oringen.jpg
-              // /blog/my-post -> blog-my-post.jpg (flattened)
               let slug = pathname.replace(/^\/|\/$/g, '').replace(/\//g, '-');
               if (!slug) slug = 'home';
               const filename = `${slug}.jpg`;
@@ -123,8 +110,9 @@ export const adaptOpenGraphImages = async (
                 .toFormat('jpeg', { quality: 90 })
                 .toFile(outputPath);
 
+              const searchSuffix = query ? `?${query}` : '';
               return {
-                url: String(new URL(`/og-images/${filename}`, astroSite)),
+                url: String(new URL(`/og-images/${filename}${searchSuffix}`, astroSite)),
                 width: 1200,
                 height: 630,
               };
