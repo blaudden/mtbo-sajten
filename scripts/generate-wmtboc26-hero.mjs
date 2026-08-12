@@ -15,7 +15,7 @@ import sharp from 'sharp';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = path.resolve(__dirname, '..');
-const TEMPLATE_PATH = path.join(PROJECT_ROOT, 'src', 'assets', 'images', 'hero-template.png');
+const TEMPLATE_PATH = path.join(PROJECT_ROOT, 'src', 'assets', 'images', 'wmtboc26-hero-template.png');
 
 function parseArgs() {
   const args = process.argv.slice(2);
