@@ -125,6 +125,12 @@
           "published_time": null
         },
         {
+          "type": "Other",
+          "title": "Banquet entry form",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSdHi5nk-K3PKCoLe0ZHPsESnEgW-cVjOVTMFpWlzGJYo7c5PQ/viewform",
+          "published_time": null
+        },
+        {
           "type": "Bulletin",
           "title": "Bulletin 1",
           "url": "/Documents/Event/8726/Bulletin-1",
@@ -143,7 +149,7 @@
           "published_time": "2026-07-16"
         }
       ],
-      "information": "16/7 We updated Bulletin 3 with clarification regarding possibility of biking on the Vasaloppet track only during official Vasaloppet races 7th and 8th of August.",
+      "information": "10/8 Upon request, colour-blind competitors can receive, in addition to the map with the standard course overprint in purple, a map with the course overprint in blue. This costs 5 € per competition, and the request must be submitted to\n[email protected]\nno later than 16th of August.\n6/8 Banquet entry form published - latest date for entry is 15th of August\n16/7 We updated Bulletin 3 with clarification regarding possibility of biking on the Vasaloppet track only during official Vasaloppet races 7th and 8th of August.",
       "region": null,
       "punching_system": null,
       "races": [
@@ -723,6 +729,12 @@
           "published_time": null
         },
         {
+          "type": "Other",
+          "title": "Banquet entry form",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSdHi5nk-K3PKCoLe0ZHPsESnEgW-cVjOVTMFpWlzGJYo7c5PQ/viewform",
+          "published_time": null
+        },
+        {
           "type": "Bulletin",
           "title": "Bulletin 1",
           "url": "/Documents/Event/8728/Bulletin-1",
@@ -741,7 +753,7 @@
           "published_time": "2026-07-16"
         }
       ],
-      "information": "16/7 We updated Bulletin 3 with clarification regarding possibility of biking on the Vasaloppet track only during official Vasaloppet races 7th and 8th of August.",
+      "information": "10/8 Upon request, colour-blind competitors can receive, in addition to the map with the standard course overprint in purple, a map with the course overprint in blue. This costs 5 € per competition, and the request must be submitted to\n[email protected]\nno later than 16th of August.\n6/8 Banquet entry form published - latest date for entry is 15th of August\n16/7 We updated Bulletin 3 with clarification regarding possibility of biking on the Vasaloppet track only during official Vasaloppet races 7th and 8th of August.",
       "region": null,
       "punching_system": null,
       "races": [
@@ -4566,9 +4578,15 @@
           "title": "Innbydelse",
           "url": "https://eventor-norway-storage.orientering.se/eventdocuments/24521/212795cd-7556-4160-b9a6-4b6e3bf98cd1/Innbydelse.Pdf",
           "published_time": "2026-08-04"
+        },
+        {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "https://eventor-norway-storage.orientering.se/eventdocuments/24521/91bfe049-1f66-4bde-a87d-20586b16e94a/PM.Pdf",
+          "published_time": "2026-08-11"
         }
       ],
-      "information": "Oppmøte kl. 18:00 på Jordetstranda. Fellesstarter fra 18:15.\nA-løype (løp-sykkel-vasseo)\nC-løype (løp-sykkel-vasseo)\nN-løype (løp-vasseo)",
+      "information": "Oppmøte kl. 18:00 på Jordetstranda. Fellesstarter fra 18:15.\nA-løype (løp-sykkel-vasseo)\nC-løype (løp-sykkel-vasseo)\nN-løype (løp-vasseo)\n11.08 - PM er lagt ut.",
       "region": "Vestfold og Telemark",
       "punching_system": "Emit",
       "races": [
@@ -4586,15 +4604,15 @@
           "urls": [
             {
               "type": "EntryList",
-              "url": "/Entry?eventId=24521",
-              "title": "Enter",
-              "last_updated_at": "2026-07-29T02:55:34.787801+00:00"
-            },
-            {
-              "type": "EntryList",
               "url": "/Events/Entries?eventId=24521&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-08-01T05:32:21.591698+00:00"
+            },
+            {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/198240",
+              "title": "Map, courses and routes will be available in Livelox",
+              "last_updated_at": "2026-08-12T02:13:24.449184+00:00"
             }
           ],
           "documents": [],
@@ -11813,6 +11831,12 @@
               "url": "/Entry?eventId=57929",
               "title": "Enter and/or order services",
               "last_updated_at": "2026-07-22T02:56:07.795638+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=57929&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-08-12T02:13:24.448504+00:00"
             }
           ],
           "documents": [],
@@ -14536,17 +14560,53 @@
           ],
           "urls": [
             {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/198190",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-08-12T02:13:24.449091+00:00"
+            },
+            {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=58354&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-08-03T05:47:55.521822+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=58354&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-08-12T02:13:24.449091+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=58354&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-08-12T02:13:24.449091+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "Medel": 3,
+            "Lång": 8
+          },
+          "result_counts": {
+            "Medel": 3,
+            "Lång": 8
+          },
+          "fingerprints": [
+            "192d16b34678fb51ec39e7492e847e433968a0fa79daeb3b97a6dc30eaeb663e",
+            "3f4c9693c42fd2ff88667f1f59dc8bc4a51366a3cf7e184771f76272a474647c",
+            "5f7a3ce70820c1dedc0dcaa08879c2a4a10c0ce0a25dc5ab731ee547d822d187",
+            "657082a4a9b4240b31b82f13b2f85f12d31fdd6c7d86f28bd755dea816c7f01e",
+            "730f6554b333e2cb8ac158d47868847e70fbeb32a9e050d6d4a470f37fa017dc",
+            "a62b339b6e8cb74234b214197f795a403c63c379d21d79c44234d64c1234f6c6",
+            "a767e24581b650f150fd8fd849375b6e3f3ec97edf17ef2167301b1a4bcc1f6c",
+            "b36a2fc7717401916d6fe02564a4e08f86f51502eb039df20f6db44f94363b0b",
+            "dc9b45659c7170092621aa967cacab14ba410eed987e209096241e0d833463aa",
+            "e33612164ceba654340c673f51cb87f901d3ecbfa16f3c1fca30caad02a712d6",
+            "ea12103f31b380d8ded41c3f6435c55ae8f5c3f1fc0d22104466b7f3ec137fe7"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -17098,6 +17158,18 @@
           "title": "PM",
           "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/59189/0e66ebc1-c2bb-4547-bd3c-0ef56556a1cf/PM.Pdf",
           "published_time": "2026-08-09"
+        },
+        {
+          "type": "ResultList",
+          "title": "Liveresultat",
+          "url": "https://liveresultat.orientering.se/followfull.php?comp=37400&lang=sv",
+          "published_time": null
+        },
+        {
+          "type": "Other",
+          "title": "Livelox",
+          "url": "https://www.livelox.com/Events/Show/198175/ABCD-cup-MTBO-",
+          "published_time": null
         }
       ],
       "information": "Vi behöver tyvärr flytta till  måndagen 10 augusti.",
@@ -17121,13 +17193,73 @@
               "url": "/Events/Entries?eventId=59189&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-07-22T02:56:07.795469+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=59189&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-08-12T02:13:24.449131+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=59189&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-08-12T02:13:24.449131+00:00"
+            },
+            {
+              "type": "Livelox",
+              "url": "https://www.livelox.com/Events/Show/198175/ABCD-cup-MTBO-",
+              "title": "",
+              "last_updated_at": "2026-08-12T02:13:24.449131+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "MTBO Lång": 17,
+            "MTBO Mellan": 10,
+            "MTBO Kort": 6
+          },
+          "result_counts": {
+            "MTBO Lång": 17,
+            "MTBO Mellan": 10,
+            "MTBO Kort": 6
+          },
+          "fingerprints": [
+            "054fca0d09efb39c74643d8347a658e2555a872cd47a789dcf93f06196fe01c7",
+            "15b5043c6296cd51e2262c182c7d94200d1b5a26abc38f2a459e07e08185e142",
+            "179e8bdc3009f84d579b853e0d45a3fe7fe578df27ef42cad599690ff6e4bd4f",
+            "1ab8dc5b2eb043c5484aef48b40f68078f5e52c87e817d798d8f476a12aff16b",
+            "1b5f033022231cd4e95ab283b0358e4e3b5569c7731d511e3a5e4c3808778e10",
+            "249e09e9812237717f608163d2ef6e6db0ed5f25bf2dcf8f9c8a5051327aa85e",
+            "35becb310f3b0aef85c11492a1e0f0633ba32b4c68dc1fb78c8f7f69e41d2a05",
+            "3a7cf5f935e75b4aa9a41223744898b73473ef5e801c04fd8b5ab0133be869e5",
+            "3cd58ffc1c512d3a9e72b491f8841f4d8fb33affac6571308b9262d43de279a2",
+            "406e3160deb01949173b39caaa3a23736a3a9b078c324c70a1edf1a2c34cb551",
+            "458ca8b151a0ad1cb2eb39c211762e8b5c9b613dadbb6e66ee579acb5b08ee87",
+            "49ac9c6946da4e9c6885013074b0244e2ac01f9f1502afca38ba9b750faa9fea",
+            "585d4094cb86e61808fc5e3acf04404ff5573164a99bcc474967758cf0088198",
+            "66f4bb3e00509ecc0a1ec8147dfa699b624d36e9dca9e0ff5936d32785ca30d6",
+            "6c5bde3bdb1cde203fb38c17edaa165b26d65219f2c11eba451234acc97a0d16",
+            "6c89d1fe224863b902a9fcbd8f93e6b30d0f89f559eac85843ecd9467c72f676",
+            "6ea09aff26c0f183be3807d8faf920046aea7174f6f8bc9d25a4467324635653",
+            "74352a59cd6da6e26065cd2382e1e941e01c460ca16b4839393c5a5a579a3421",
+            "7df9ebdb504ef3a2887535eededfb2bcd443885b1ee8aba8bbeb2c450941483b",
+            "80841a11290f7a9812cf25d43b75264c6c881b5b6cab73c5db67d22e822c57d3",
+            "8381dfafc4321fb7a7e89cd4868fee9d465c4bba695853b0583d8002e155ac22",
+            "a3a0ddec48fb0a52c090b75553f14065d6fcb7a79b9d130059cbadc5ed85cd4f",
+            "af3aa778f1c1989aae8d4d37af4bc38808af881a03e36b2944cf6714dc87e576",
+            "b386a1a562f4936e5bc5a9050ed34b5e57816aed85786a8be05b98363c8e6e69",
+            "c1ae68b9717874c548179f4aff5b3e7c697a6505aab855b511afab88099f300b",
+            "c4640c69e6d0c7cd6c9fd9a4d81d00070b3b27ce742dd44cda49573f1b26d494",
+            "e01ebe33396a6639448c066b65644066b3dc5110d0dd8669f25d6b3c67c03c11",
+            "e27fbdf64b69c8841014c197ef63c8c431bc012505e9253df3cca7317911cedf",
+            "ed8f471a5f428134782ba573739d853d5d7790cdaaa76f317867a3edddb3f9f7",
+            "ef4c50b2b19ae1a02358b7b6a877a6facec0ac690888d2a2cb91eed9090bdb59",
+            "f70436db5bdc91132a9ee8e1ba50949d6c99c0b4c675e6829fc4507205d57fb2",
+            "fc9047202b58ec7f54f8741d37c04be65b9324122d8e274cde9d70105036eb67",
+            "fe95c8f05d573be4f3f2b744e65bd0aac10dc1a4827c8042e1d89a8b11139c7f"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -17841,23 +17973,123 @@
           "areas": [],
           "urls": [
             {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/196959",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-08-12T02:13:24.448993+00:00"
+            },
+            {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=59614&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-07-01T04:16:33.779237+00:00"
             },
             {
-              "type": "Livelox",
-              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/196959",
-              "title": "Map, courses and routes will be available in Livelox",
-              "last_updated_at": "2026-07-29T02:55:34.787381+00:00"
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=59614&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-08-12T02:13:24.448993+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=59614&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-08-12T02:13:24.448993+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "Kortbana Dam": 4,
+            "Kortbana Herr": 6,
+            "Mellanbana Dam": 12,
+            "Mellanbana Herr": 7,
+            "Långbana Dam": 12,
+            "Långbana Herr": 26,
+            "Kort utan tidtagning": 4
+          },
+          "result_counts": {
+            "Kortbana Dam": 4,
+            "Kortbana Herr": 6,
+            "Mellanbana Dam": 12,
+            "Mellanbana Herr": 7,
+            "Långbana Dam": 12,
+            "Långbana Herr": 26,
+            "Kort utan tidtagning": 4
+          },
+          "fingerprints": [
+            "0761672688f369792df09b3f1c87d1602147903126163f52fca0dd3d5444473f",
+            "0c12c513a82f0eabefbc01b3dfa3c56a911322988c09fd749733341b153d7f41",
+            "0ccb3ef9587cdafab4cca3d7bdddc816fa6345e198162981d258d0f85947ac03",
+            "0eb66051624f01fc5427cb6ad54dd8c16b88246d3549fa42f2cb1eb2b835db34",
+            "133e8b20ff6ced6fa2feedacc84d9b15cd01a1ad9821474cb3eb705dbfa51e2e",
+            "142651e5d1dbde907afcf7e5269305caa94ae4c42d38651674e7e61d0da59e4e",
+            "17a1a6b8bc9481e2b2e862cd865d149c19ab806b0c1f137bba78fbbb2eda1109",
+            "1bcf6cc93148fc8da7be347d4d60ffe0f1e0ae3b6d2d4848a27a5921edde5938",
+            "1c8a91660fe681ea85e058c61509b5da6aaa716f14283c966fd609b6cce0782f",
+            "1f14d6b6177f54eda8c637291d654fe4b1bcedc62fe83b90efc5525399d5dac9",
+            "2065171c356b66d6be1bbcdfad9e1dace30671345c93b6528fcd18734f40b2cb",
+            "2a00cc0cbd2b303e9c4c4b891a3d005cbf01a25fb254ee7eee88143afd6d3ce0",
+            "2c56c96765f867f87f837df1140084e448a2b3bceddc29782257674fa763018b",
+            "2dcd6dbc5d2a2e6211fc09afb2696524d453fce041aa0315d8fe82d7e1059e26",
+            "30d31787da7e57ea172b30390248d720bd96658344977dd5d6578b9759736f91",
+            "3a0e5a41d7220f6f811418849ce616a560d4dca96e9dfdffbccf8f00fd0fd5c6",
+            "3a7d4a9c8b29646c9542f6efdcc75d5307b2df360551a6045d6a8e9101241f59",
+            "3e5df9257e7890da39204262ee542ee2043590b036e6821f10939ae4aec03723",
+            "46e4ca39a37f89495071013095a7462a6d9f5021e269b2d415d3dcc2d49109b8",
+            "476109e26fba416c52cfda89b4021b6f41f12700a312e9fbabb2d64ce537fd28",
+            "47df77a35b40164e77060510d20b76ab8bd4cf0f41819bef00cd0a62ab3d3f16",
+            "4b0bd80b886ce6a305bd66eabb8e450dd092b98048b9011e4c987cd8aff6d104",
+            "4e89f9ad165dfb2be9b8b14f2a5d34b3aded1bae8b310696c48f95289df888e4",
+            "51e9a4bdc3599c04149067c1b482f20bef400c302101985c602868b447c0a8ca",
+            "5259ed43087ede0db2f7157d6ca3676532e135a7ee604241f6215b0a5661657b",
+            "53d41cb79d5f33cee834027f6408d4455735f14a57f7eff32d6d52d96a07689f",
+            "5450c213d8b17d8e0aaed12502b30a8022e396e1b4bfe9d6aa40853a99f6f655",
+            "575aa783449ada8ce155d3e34ade7c4f707caa07cde2feb0730b10bb5e79ed06",
+            "588508ed63f27335bf793c26a6c51687821f3ab64c6880f66cba8db6edf1300d",
+            "58b10fe3a87022361015a7988f277ef1f4e8ed8200680ec9636c68501e41fc75",
+            "5e35ab6a6b12cb49e4698664af3799f5369bdcfee06a1d6daa5b1375edc8e770",
+            "5e6508c5c950ab410fb901e2edc0f9f1f586ffbb54cfac30a65202d59ca56a05",
+            "60256b6e26d7b2f9db1117d325c3c7647389aa39aef12fe50e8cb41ed1a4f9fb",
+            "641b42395395b0ea2138eaa486735d4a79033100cc532e7d6868a8fe9ee398f6",
+            "706f979b39005ff97bf6d32baf34053fa1834f453fc9c6b853a09765e828c61d",
+            "77b7a8785f275925aeee7a4e1b4368b6ac01a3ab50630237321fb1e62075a356",
+            "7bca59e045f91491ad0ecf56e7c6d26c965c7de5383ac87c492dc6e7b1a7784b",
+            "7f2ca67b9b4bc47abbe6e6ff373ab4463f943921bdb875e9bd414ed4e44a024e",
+            "810e90b018570b01dc9cea599758841d9ccee3c8b1b160fd8dbf4da997561654",
+            "901ce25f832d80d4842147af9fd636e4f5f6c74b25bbc30d2c832d833d8410fd",
+            "927835126f5d64ff37450e8e2c0f875b4951fd6da8dea7fb9409f78f32a31cc0",
+            "9be571b58d8f2b7f05210772d68cb77b44c6f1fe8557f20d7b24f8a21048358f",
+            "9e028862e55d712430c3aa276d5621922224bb80c93be57eaf9a4afc922bcc39",
+            "a1ad103cdcc45cd299e3933588a5b6fa8ad801ef7a878b8f628c7785a4a1b259",
+            "a2d6ef524fa0beca60f463dc774913aa3b5c15c7a9cd7bc02b2d51acd90ed1e9",
+            "a3fded3fdef6aa4144b8fa7a084db71b2d5d4ebd2b0e8c9d893778bc6098c513",
+            "a588a2697634daa5be4a8b48ac383e0bce07ab429cc86601535e23093ae0e554",
+            "a82929f542ae15937dae8b62599b9a82c9b06853ad9f447b3045974b13ded60f",
+            "a98c9433b793192fc83b47c41a7ff02d1848919d7abdedfbe5236c45c2528711",
+            "b1bc02b1997eecbb00562ec0dc9ac0de4f20aca78c0b1e4dcdf3d0ec6c712333",
+            "b59dad9c5757b2d704f85f3be133856f8d3d4bef0e694aa37124bfe50cb32989",
+            "b97c77263625a76d731fe4b3eb06757e93f68f5e40ab99c3896a7ca5a4cf3faf",
+            "c42f9244f2f22fc6ae2b1396f33a0c5b104b49f9078f2bc6af8ea68802e40643",
+            "c922a4b13c08d180fd4f61acd084c5753731777e246f7a81da28c26e467fd90c",
+            "c9c96c38d2b7cb954238a1f7655d2b86e2139c4a5661387c92d04d7cfbdd0823",
+            "ca9f3612116b8cd3d148b52b3c010f74f79d81b082d8bc31d3e30d9615876db4",
+            "cfd9b94a090a48166c8d85fdcfbe22c852b49395bb699d1c20294035b0641e48",
+            "d397d0fa611caa2c039b00215c2d1ddd0307cddba188bfffea1b2b1015847f5a",
+            "d6588f2372a6593d6748d7a7987c6f1c2f9eedd87e5e2cf8ba6a6826d0772846",
+            "d86b6e33504ac09a8b99f62365f37d0d011a162e520748054439256f1889066a",
+            "dce0418f6f721651f2fefca1ea4b1e123e3e0d7466d28e92b81a16e14aeccd50",
+            "e1f6c20a1dbd3f14d80dda7883d4cefddef4dd27aeb0edd8575c4e0d842fa476",
+            "ed710eee02a726be354f5933a43469db905b58d36c479b9357eaab32b9bf9017",
+            "f1e2a08120cc801a81baf15836922a3d44e549d5a94c2946349d5c6c1a10a6f3",
+            "f24802c056f68be999e0210aabf368dfe085bca3e2f85457cdd5fc84a43c4cb8",
+            "f67714ecc6cf000f47c7280efcc103c214e3c99138b8e3699def64424bef2f01",
+            "f6a64798863533804ea8b3deec9b242c3e5c72ef6a844d09b8bfe06b96057181",
+            "fa4181e95cece643ff2852f889da6612fa1d6bcb1fbdd8d94e9318407d72f949",
+            "fb72d5f01314af3fd5b29145ba1b35c4236c5214ac604d084b51e7b800f2b9a4",
+            "fc506881c4e051b8b858d9242a79c790357ad8114554c78b14d5123d02284880",
+            "ff2389e2885e406c19d1bdf6d8b506a0ab9305e90f8e6dcb4840991b3d9ab48c"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -18224,15 +18456,15 @@
           "urls": [
             {
               "type": "EntryList",
-              "url": "/Entry?eventId=59747",
-              "title": "Enter",
-              "last_updated_at": "2026-07-22T02:56:07.795267+00:00"
-            },
-            {
-              "type": "EntryList",
               "url": "/Events/Entries?eventId=59747&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-07-22T02:56:07.795267+00:00"
+            },
+            {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/198165",
+              "title": "Map, courses and routes will be available in Livelox",
+              "last_updated_at": "2026-08-12T02:13:24.448721+00:00"
             }
           ],
           "documents": [],
@@ -18474,6 +18706,10 @@
           "name": "enc:BBoEAG0SDwQEAxETHhsJQU4cDg=="
         },
         {
+          "role": "Event director",
+          "name": "Håkan Bengtsson"
+        },
+        {
           "role": "Course setters",
           "name": "Stefan Bengtsson"
         },
@@ -18483,15 +18719,16 @@
         }
       ],
       "classes": [
+        "* Entry in advance is not possible.",
         "5 km",
-        "5km",
-        "Gul 4 km",
+        "5km*",
+        "Gul 4 km*",
         "Inskolning 2 km",
         "MTBO Lätt 3",
-        "MTBO Medelsvår 6km",
-        "MTBO Svår 10km",
-        "Orange 3 km",
-        "Orange 5 km",
+        "MTBO Medelsvår 6km*",
+        "MTBO Svår 10km*",
+        "Orange 3 km*",
+        "Orange 5 km*",
         "UD Gul 2",
         "UD Orange 3 km",
         "UD Orange 5 km",
@@ -18500,7 +18737,7 @@
         "UH Orange 3 km",
         "UH Orange 5 km",
         "UH Vit 2 km",
-        "Vit 2 km"
+        "Vit 2 km*"
       ],
       "urls": [
         {
@@ -18517,7 +18754,7 @@
         }
       ],
       "documents": [],
-      "information": "Välkomna till Motionsorientering och Ungdomsserie samt MTBO vid  Hanaslöv i Alvesta.\nVi arrangerar skogsorientering samtidigt med mountainbikeorientering vid samma tävlingsplats. Banor för fot-orientering respektive cykel-orientering kommer naturligtvis förläggas på olika delar av området.\nAnmälan till Ungdomsserie görs innan tävling.\nAnmälan till Motionsklasser och MTBO-klasser görs innan tävling eller på tävlingsplatsen.\nFri minutstart mellan kl 17:00 och 18:30 för både Ungdomsserie, Motionsklasser och MTBO-klasser.\nLiveresultat kommer att presenteras på:\nhttps://liveresultat.orientering.se/index.php",
+      "information": "Välkomna till Motionsorientering och Ungdomsserie samt MTBO vid  Hanaslöv i Alvesta.\nVi arrangerar skogsorientering samtidigt med mountainbikeorientering vid samma tävlingsplats. Banor för fot-orientering respektive cykel-orientering kommer naturligtvis förläggas på olika delar av området.\nAnmälan till Ungdomsserie görs innan tävling via Eventor.\nAnmälan till Motionsklasser och MTBO-klasser görs enbart på tävlingsplatsen.\nFri minutstart mellan kl 17:00 och 18:30 för både Ungdomsserie, Motionsklasser och MTBO-klasser.\nLiveresultat kommer att presenteras på:\nhttps://liveresultat.orientering.se/index.php",
       "region": "Småland",
       "punching_system": "Sportident",
       "races": [
@@ -18693,6 +18930,100 @@
               "url": "/Events/Entries?eventId=60017&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-08-05T02:49:23.633849+00:00"
+            }
+          ],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_60085",
+      "name": "IFK Lidingö ABCD-cupen",
+      "start_time": "2026-08-26",
+      "end_time": "2026-08-26",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Local"
+      ],
+      "tags": [
+        "FootO"
+      ],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "IFK Lidingö SOK",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Anders Stjerndahl"
+        },
+        {
+          "role": "Contact phone number",
+          "name": "0705481650"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:DBoGCl8ATQEVGgAAAxADB0EzFxcNGQRcDhsP"
+        }
+      ],
+      "classes": [
+        "Kort",
+        "Lång",
+        "Mellan",
+        "Prova på"
+      ],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/60085",
+          "title": null,
+          "last_updated_at": "2026-08-12T02:13:24.448609+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "type": "Invitation",
+          "title": "Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/60085/3c571ccd-03e0-4d7c-baac-ab9fb8b10782/Inbjudan.Pdf",
+          "published_time": "2026-08-05"
+        }
+      ],
+      "information": null,
+      "region": "Stockholm",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "IFK Lidingö ABCD-cupen",
+          "datetimez": "2026-08-26T17:30:00+02:00",
+          "discipline": "Middle",
+          "night_or_day": "day",
+          "position": {
+            "lat": 59.3798066468432,
+            "lng": 18.1541516304016
+          },
+          "areas": [],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Entry?eventId=60085",
+              "title": "Enter",
+              "last_updated_at": "2026-08-12T02:13:24.448612+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=60085&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-08-12T02:13:24.448612+00:00"
             }
           ],
           "documents": [],
