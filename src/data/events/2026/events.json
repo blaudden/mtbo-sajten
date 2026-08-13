@@ -4586,7 +4586,7 @@
           "published_time": "2026-08-11"
         }
       ],
-      "information": "Oppmøte kl. 18:00 på Jordetstranda. Fellesstarter fra 18:15.\nA-løype (løp-sykkel-vasseo)\nC-løype (løp-sykkel-vasseo)\nN-løype (løp-vasseo)\n11.08 - PM er lagt ut.",
+      "information": "Oppmøte kl. 18:00 på Jordetstranda. Fellesstarter fra 18:15.\nA-løype (løp-sykkel-vasseo)\nC-løype (løp-sykkel-vasseo)\nN-løype (løp-vasseo)\n11.08 - PM er lagt ut.\nNB! Målestokk blir 1:4500 på løp og sykkel.",
       "region": "Vestfold og Telemark",
       "punching_system": "Emit",
       "races": [
@@ -4603,23 +4603,93 @@
           "areas": [],
           "urls": [
             {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/198240",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-08-13T04:16:25.589446+00:00"
+            },
+            {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=24521&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-08-01T05:32:21.591698+00:00"
             },
             {
-              "type": "Livelox",
-              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/198240",
-              "title": "Map, courses and routes will be available in Livelox",
-              "last_updated_at": "2026-08-12T02:13:24.449184+00:00"
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=24521&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-08-13T04:16:25.589446+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=24521&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-08-13T04:16:25.589446+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "A 17-": 18,
+            "A -16": 19,
+            "C 13-": 3,
+            "C -12": 2,
+            "N": 3
+          },
+          "result_counts": {
+            "A 17-": 18,
+            "A -16": 19,
+            "C 13-": 3,
+            "C -12": 2,
+            "N": 3
+          },
+          "fingerprints": [
+            "0231e751749356cfa87d82a08b32067825225457f0d72bdc2c44ed5d4e0b898a",
+            "08460341a248ec74995fa3a99430b16c17415ddf6b3575089ed04479f439de9f",
+            "0ae7f1cd05c5530fabae36c25c439568702eadc52624a61c4ce6d5b84856d3b6",
+            "0d3103422212b9beb16cf62e875b15629c7f8709080cf131d238dcaab9b8554e",
+            "0dd51e4fcd1386b585ef7ca06c9aefc0e5fef06a7335740ab7153a0d774b9c29",
+            "1099203ccf971d70b1d99e2eeb80ca1d3bbc4d5a608e92e3a7544806294a49b9",
+            "1d69492e626aaf344312e455d32ca7d62c79a3d3f9a9105c3330c9e90cd1c26d",
+            "283e9d845f9084531b072ed0576a2811aeb77182220a00b891c4537e99b21111",
+            "2afb4cdd12261f1514ac1080e17c63da9fea2e9927b22895d8f682e14df9a23a",
+            "327d7021343802b18748f70c9ba1326d8899a096cf2920cadcd3e4e64a566c0d",
+            "391dd590ffacd6600c0965659067de839beb7adf79a7f3abade1144fb3516f63",
+            "3a01b0957f1baee7607c353a51a7245ecf9ffcbe2cac9141e5722989cda9325e",
+            "3ebfd117ac0dcc4e76df79a2fbe0eb98ebc270dd703a91c42e2807ff6127b274",
+            "416713588caac7163f7f88ef486f185ddf794f61ec76fd4f9f096028beacc4c3",
+            "4737bb07639b11f5df9d36ef073998b4d21c590f8bd9b60f11fa86769d139698",
+            "4d30358c43bd2104dc605e2502045d38d8c61c43d0785759e4449515e7f2a2d6",
+            "4dfa4b6f5b9c3255853768d30031f7917f35259d31af4f4f79afb36ca69446d7",
+            "4e764cb9b0ac05bcee5dc21cbde37e3c4a1ae950c40c7031e7723756e5706a5e",
+            "4fa69b9238cdabf73ef56e6858d09b94b1cf7cb74886c24e4cbf1b4e1794709d",
+            "4fb9f621702366420a8cf6a5496009d4cd272198e0e2c920c5bbffea12c0270b",
+            "513487e1f85c8314e78f056d80b63713c432ac3847930c7c0c8c8e4a691e473f",
+            "52f79a3f4d20954e738c8f933e82a89cd14a6d831bf766484e83e50792c16e2b",
+            "56eac8829e79ca8a94619736e8a3fe6d286310bae6b15703f1f16b83a78220e8",
+            "5ddd62d7d8770caf954b2dc345e120e8bd4955542ee281b3eca9163687bfb762",
+            "5fcccf043b74d6964da47a35ac2ddcc149edabdaaec90cd3f94aef64e957758e",
+            "633723b75acd9090cf32146b9ec1d9a20aadde03cacd0052ce734b6919995085",
+            "6ec1233076fa6123ae0c9cbb34c02f7faadf68e4c680c6f225060b1b3fad8c68",
+            "8bd5c4d56ee0e048d869dda2446ac81f785d937b0a3fd1024eefab4c868f2ce4",
+            "8e0c1745e1f64b957de86de071d36cdb1107d444c0b95f185759c33a7fcc6bcf",
+            "9b9e0d3bafa7fe0d9373df3ebb5fcaf8d979216c1b600b37b8ccb8d842babf7f",
+            "9c40519d8bc649e2f696e9c2969ba320cea916f15ec785359ccc506b91db77b8",
+            "a01fb1c6270c9face20dba40b7b30e26b6d130478ce71d8c3a4b1337df7976ad",
+            "afad32fb875f28fa6ebcd6b7126f169e4bffd59439f7d5a206ffdb52eb9e6db3",
+            "b18fe7fc3328fe11f9a3348c7f0fb5e144404f627a61c822e56d42665ecfac26",
+            "b591983fe2a0eceb8d3d46dbeaaf807e757f4d9d032d609f86d7cb43bc988eec",
+            "b5e887d9c7971551b3573f41a569f1732137951b61d4f43f59f407e76f0c3748",
+            "b6c28002bcaf739dfaf2f0f57501b6cb6c5ae3096806ac42d0656263713a4e0e",
+            "b7fedf9db3c2d06f60df90a378877f542635b4af33803739bb0d1c06293eb3c2",
+            "c9a3de72336582ba144e654376a564aa16c4169a716259ac2c590cac683dcead",
+            "d1697245e817107a19b2329886f83f6a13db69cd74f5f9b64caa951ca864e4af",
+            "d28fc824b05b24da55042caafeb6b042246174e2f76888d8d70bd5b5e77a23f3",
+            "d6a642bcde27486c782f329aad6578ba73a5f793309e5a07c20f675d75c2901b",
+            "dd886231fb28f77066e2dc92357c46daa1267c434d6993db41d08e5493979673",
+            "e7f5293a20a5e615e194db99157e835b5d5e932427bc4dbf8361688fe3001207",
+            "f8e041b7f1f5990f41cf464198f44f491ffb22392633184a167f6119f6b235c3"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -9626,12 +9696,6 @@
           "urls": [
             {
               "type": "EntryList",
-              "url": "/Entry?eventId=57105",
-              "title": "Enter and/or order services",
-              "last_updated_at": "2026-08-01T05:32:21.591344+00:00"
-            },
-            {
-              "type": "EntryList",
               "url": "/Events/Entries?eventId=57105&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-02-07T22:24:13.324743+00:00"
@@ -10028,12 +10092,6 @@
           "urls": [
             {
               "type": "EntryList",
-              "url": "/Entry?eventId=57106",
-              "title": "Enter and/or order services",
-              "last_updated_at": "2026-06-24T03:59:07.141026+00:00"
-            },
-            {
-              "type": "EntryList",
               "url": "/Events/Entries?eventId=57106&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-02-07T22:24:13.324678+00:00"
@@ -10356,12 +10414,6 @@
             }
           ],
           "urls": [
-            {
-              "type": "EntryList",
-              "url": "/Entry?eventId=57107",
-              "title": "Enter and/or order services",
-              "last_updated_at": "2026-08-03T05:47:55.521907+00:00"
-            },
             {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=57107&groupBy=EventClass",
@@ -18455,23 +18507,82 @@
           "areas": [],
           "urls": [
             {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/198165",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-08-13T04:16:25.589114+00:00"
+            },
+            {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=59747&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-07-22T02:56:07.795267+00:00"
             },
             {
-              "type": "Livelox",
-              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/198165",
-              "title": "Map, courses and routes will be available in Livelox",
-              "last_updated_at": "2026-08-12T02:13:24.448721+00:00"
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=59747&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-08-13T04:16:25.589114+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=59747&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-08-13T04:16:25.589114+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "Bana 1 10,3 km": 19,
+            "Bana 2 7,3 km": 17,
+            "Bana 3 3,9 km": 2
+          },
+          "result_counts": {
+            "Bana 1 10,3 km": 19,
+            "Bana 2 7,3 km": 17,
+            "Bana 3 3,9 km": 2
+          },
+          "fingerprints": [
+            "0287f36a53a1d2822003f5a575e8776b81bc95e6552116a29f302d00cad46aa6",
+            "037d297ec4af63f27d810220d119eb38ee00375c2cc2c1d382721e9e9f452b52",
+            "04cacf80dc97ead762aac4a441ffae84b24d6027d84c2c72030fd0489d7756bc",
+            "0735c2c2532b481a9d2ed84a17b50fe433f6deb95074ff741766ca2371bc76a1",
+            "094ef4b2c5340796ffe324c4373bfa63bbca4205c0b773281ff07323771fdd8c",
+            "0baca0235a6b7ee3234855836abc35fbee6129dc735d717523083283707d5a25",
+            "10fac6c3dd8030e9d15ac1997f6746ebf332a94c8dad7f3f848e372858dd3d51",
+            "1322d7bd847bbe6d035396761bdc44d25d789f0b67fe26a8b98bef9f33b46c09",
+            "146bac935a88fd54ba47abe8d4c93b1aee2db38aee41a2ccd88e80b78bd6787f",
+            "1490f766490f1d5258983231068d6b593f469e6c4d49575314682c3927beab3b",
+            "1a929c52dba7a5c1635d3dc6c7d5b100e7ac835840e955b86f2ca661c7b10b8e",
+            "1caa9b4966fd56a05745e1741a6f5ad398f9f074fd1d8e98c5545c80ff9d5256",
+            "224c25bff1b3824787906e5b075e6ec3a984debd30d5d02b1070e99f7533814c",
+            "3910f3cd3e4ba6cf8e2b01dcc996fd3ddaa64094dd7ede3402878676c59639e8",
+            "3a24049626fdef556834ca9408f6729e0698b064ee7ca082bbd2bce8a946abde",
+            "3bfa7a2ab5427eb9c60e1923cd418db794818fbcf199fc68f228bca280877f79",
+            "3f7da1ef7fcc8456bae734c5e67486c84aafeba0918d4633e0bf0f1fb627bdd0",
+            "459f81a9ca617e688a9aaa1a39028e86d9e36f3870080429856085f5451da252",
+            "481b8fd3535d5e17329cc5c7f17634e5cca81e91cde4a001e7243fb15c805e9e",
+            "4ad725ec993465b8e9756d9426a400ba9e321103f0af5dfd0b6ee575445d49ba",
+            "4eeb661aee10a4f6ccf32ac2e3814f2b7fc6839e96caee6153ce9b52f15509c8",
+            "51d24af7ac88786f0a1254044f7b4db81d02ec2f3007c61936f840cf5a4b32cf",
+            "537d231d316fde1db3786d9c9db0f34d3893d507eeb3cbdc67cd167aab7cd240",
+            "5623922492b9e008a363f1db4824b0361a825f7565377fc6d4e2f98915ea9aec",
+            "58258db840f14e6c4eb2fee9902d497850184aecc7a89465de29eb89f2623846",
+            "60be943bae36acd272c511fec83bea438dd51a887fbac4d6625d142bded2d8f4",
+            "645fa75df9dea038626b82dcd4dca4f5308452e1815805c44f87d385bfdf059a",
+            "6b7c8f07ce03ff4bfa9c14017a86a043fb6dca894fb281504cf7dfd99b686e00",
+            "7ff402d4c65138eacfceca69c79fb22f99cac8b9875d1b406b791fccb7fbf959",
+            "80a66689e2aeeaffec874dc02d1f18c6f347601c97ba17ba8ab95447b1040060",
+            "87d7f70228a35246be984b942cc51c3e52723627619b7f6d4b625dd9fe8aae2e",
+            "8a5a8df1f81b5071db7a2c82fc2f5875af3d436d565824dd3f0cce199c6e2d80",
+            "97bd5b32f1c98946df52ed5193ec7aeb44ac181b90e765528c596a11e8d19353",
+            "a94be5d131c38ac28d0dc9fa93eb2d7a6f2c39fa3cf2dbe949ab73134079bc2f",
+            "b3bd6be03f19bd9c66dcc2750813b493535420ff0513d6972fa31e916bfbcc73",
+            "d62597c565572994f9e38b9fbb2ba1e26a1ee1bc181ed131290c5b96afcc889e",
+            "ec656351a7041699965b9798c7992045d72dcecac857a7914b99c73867fcbda2",
+            "fcfa9e398735249dedce0bf340303248c5deb0ecd68a87fffb3cea5fd60ccb77"
+          ]
         }
       ],
       "entry_deadlines": []
