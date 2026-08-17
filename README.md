@@ -4,6 +4,8 @@ This repository contains the source code for the Swedish MTBO community site **M
 
 The site is built using [Astro](https://astro.build/) based on the [Astrowind](https://github.com/onwidget/astrowind) template which is a free and open-source template to make websites using **[Astro 5.0](https://astro.build/) + [Tailwind CSS](https://tailwindcss.com/)**.
 
+- For UI components and widgets selection guide, see [components.md](docs/components.md).
+
 [![License](https://img.shields.io/github/license/blaudden/mtbo-sajten?style=flat-square&color=dddddd&labelColor=000000)](https://github.com/blaudden/mtbo-sajten/blob/main/LICENSE.md)
 [![Maintained](https://img.shields.io/badge/maintained%3F-yes-brightgreen.svg?style=flat-square)](https://github.com/blaudden)
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/blaudden/mtbo-sajten#contributing)
@@ -25,18 +27,19 @@ To set up the commit hooks after cloning the repository, run:
 
 All commands are run from the root of the project, from a terminal:
 
-| Command                   | Action                                                            |
-| :------------------------ | :---------------------------------------------------------------- |
-| `npm install`             | Installs dependencies                                             |
-| `npm run dev`             | Starts local dev server at `localhost:4321`                       |
-| `npm run build`           | Build your production site to `./dist/`                           |
-| `npm run preview`         | Preview your build locally, before deploying                      |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check`                  |
-| `npm run astro -- --help` | Get help using the Astro CLI                                      |
-| `npm run check`           | Run code quality checks (Astro, ESLint, Prettier)                 |
-| `npm run test`            | Run all verification tests (OG, Meta, Hreflang, Links)            |
-| `npm run optimize-images` | Optimize large source images (>2MB) to prevent performance issues |
-| `npm run submit:indexnow` | Submit updated URLs to IndexNow (requires build first)            |
+| Command                   | Action                                                              |
+| :------------------------ | :------------------------------------------------------------------ |
+| `npm install`             | Installs dependencies                                               |
+| `npm run dev`             | Starts local dev server at `localhost:4321`                         |
+| `npm run build`           | Build your production site to `./dist/`                             |
+| `npm run preview`         | Preview your build locally, before deploying                        |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check`                    |
+| `npm run astro -- --help` | Get help using the Astro CLI                                        |
+| `npm run check`           | Run code quality checks (Astro, ESLint, Prettier)                   |
+| `npm run test`            | Run all verification tests (OG, Meta, Hreflang, Links)              |
+| `npm run optimize-images` | Optimize large source images (>800KB) to prevent performance issues |
+| `npm run validate:images` | Validate hero image aspect ratios (16:9 target)                     |
+| `npm run submit:indexnow` | Submit updated URLs to IndexNow (requires build first)              |
 
 ## Contributing
 

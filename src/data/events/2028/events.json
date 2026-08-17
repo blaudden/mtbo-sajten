@@ -1,0 +1,137 @@
+{
+  "schema_version": "2.0",
+  "meta": {
+    "sources": [
+      {
+        "country_code": "SWE",
+        "name": "Swedish Eventor",
+        "url": "https://eventor.orientering.se"
+      },
+      {
+        "country_code": "IOF",
+        "name": "IOF Eventor",
+        "url": "https://eventor.orienteering.org"
+      },
+      {
+        "country_code": "NOR",
+        "name": "Norwegian Eventor",
+        "url": "https://eventor.orientering.no"
+      },
+      {
+        "country_code": "MAN",
+        "name": "Manual Events",
+        "url": ""
+      }
+    ]
+  },
+  "events": [
+    {
+      "id": "IOF_9017",
+      "name": "(Preliminary Dates) - MTB Orienteering World Cup round 1 and U23 World MTB Orienteering Championships 2028",
+      "start_time": "2028-05-18",
+      "end_time": "2028-05-18",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "World Cup"
+      ],
+      "tags": [],
+      "form": null,
+      "organisers": [
+        {
+          "name": "Lithuania",
+          "country_code": "LTU"
+        }
+      ],
+      "officials": [],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/9017",
+          "title": null,
+          "last_updated_at": "2026-08-05T02:50:54.016912+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": null,
+      "punching_system": null,
+      "races": [
+        {
+          "race_number": 1,
+          "name": "(Preliminary Dates) - MTB Orienteering World Cup round 1 and U23 World MTB Orienteering Championships 2028",
+          "datetimez": "2028-05-18T21:00:00+00:00",
+          "discipline": "Other",
+          "night_or_day": null,
+          "position": {
+            "lat": 54.8861792596868,
+            "lng": 23.9737947132466
+          },
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "IOF_9046",
+      "name": "(Preliminary Dates) - World Masters MTB Orienteering Championships 2028",
+      "start_time": "2028-08-01",
+      "end_time": "2028-08-01",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "World Masters"
+      ],
+      "tags": [],
+      "form": null,
+      "organisers": [
+        {
+          "name": "Finland",
+          "country_code": "FIN"
+        }
+      ],
+      "officials": [],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/9046",
+          "title": null,
+          "last_updated_at": "2026-08-05T02:50:54.016934+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": null,
+      "punching_system": null,
+      "races": [
+        {
+          "race_number": 1,
+          "name": "(Preliminary Dates) - World Masters MTB Orienteering Championships 2028",
+          "datetimez": "2028-08-01T21:00:00+00:00",
+          "discipline": "Other",
+          "night_or_day": null,
+          "position": {
+            "lat": 62.7654074401714,
+            "lng": 29.8467279115375
+          },
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    }
+  ]
+}

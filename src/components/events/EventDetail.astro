@@ -61,6 +61,10 @@ const isEventor = externalUrl?.toLowerCase().includes('eventor');
 const externalLinkLabel = isEventor
   ? 'Visa på Eventor'
   : externalUrl?.replace(/^https?:\/\/(www\.)?/, '').split('/')[0] || 'Webbplats';
+
+const isSvenskaCupen =
+  event.name.toLowerCase().includes('svenska cupen') ||
+  event.races.some((r) => r.name?.toLowerCase().includes('svenska cupen'));
 ---
 
 <article class="event-detail max-w-4xl mx-auto">
@@ -101,8 +105,56 @@ const externalLinkLabel = isEventor
       <EventLinks event={event} />
     </div>
 
-    {/* Right Column (Sidebar): Sticky CTA & Deadlines */}
+    {/* Right Column (Sidebar): Sticky CTA, Svenska Cupen Card & Deadlines */}
     <div class="lg:col-span-4 lg:sticky lg:top-24 space-y-6">
+      {
+        isSvenskaCupen && (
+          <div class="p-5 bg-gradient-to-br from-amber-500/10 via-primary-500/10 to-transparent border border-amber-500/30 dark:border-amber-500/40 rounded-2xl space-y-4 shadow-sm">
+            <div class="flex items-start gap-3">
+              <div class="rounded-xl bg-amber-500/20 p-2.5 text-amber-600 dark:text-amber-400 shrink-0">
+                <Icon name="tabler:trophy" class="w-6 h-6" />
+              </div>
+              <div class="space-y-1">
+                <h3 class="font-bold text-base text-default">Svenska Cupen MTBO</h3>
+                <p class="text-sm text-muted">
+                  Denna tävling ingår i Svenska Cupen – Sveriges nationella tävlingsserie i MTBO.
+                </p>
+              </div>
+            </div>
+
+            <div class="space-y-2 pt-1">
+              <a
+                href="/svenska-cupen-mtbo"
+                class="w-full btn btn-primary py-2.5 px-4 text-sm font-medium inline-flex items-center justify-center gap-2 rounded-xl transition-all shadow-sm shadow-primary/10 hover:shadow-md hover:shadow-primary/20"
+              >
+                <Icon name="tabler:calendar" class="w-4 h-4" />
+                Se programmet
+              </a>
+
+              <div class="grid grid-cols-2 gap-2 pt-1">
+                <a
+                  href="/api/svenska-cupen-standings"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="py-2 px-2.5 text-xs font-medium inline-flex items-center justify-center gap-1 rounded-xl border border-gray-200 dark:border-slate-800 text-gray-700 dark:text-slate-300 hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors text-center"
+                >
+                  <Icon name="tabler:trophy" class="w-3.5 h-3.5 text-gray-500 dark:text-slate-400 shrink-0" />
+                  <span>Cupställning</span>
+                </a>
+
+                <a
+                  href="/svenska-cupen/seedning"
+                  class="py-2 px-2.5 text-xs font-medium inline-flex items-center justify-center gap-1 rounded-xl border border-gray-200 dark:border-slate-800 text-gray-700 dark:text-slate-300 hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors text-center"
+                >
+                  <Icon name="tabler:list-numbers" class="w-3.5 h-3.5 text-gray-500 dark:text-slate-400 shrink-0" />
+                  <span>Seedning</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        )
+      }
+
       {
         externalUrl && (
           <div class="p-5 bg-blue-50/50 dark:bg-blue-950/10 border border-blue-100 dark:border-blue-900/30 rounded-2xl space-y-4 shadow-sm">
