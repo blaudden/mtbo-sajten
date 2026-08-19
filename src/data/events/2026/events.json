@@ -8938,23 +8938,23 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/56226/e93b935b-013e-4e53-a47e-096dc45c817f/Inbjudan.Pdf",
-          "published_time": "2026-06-22"
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/56226/ebe272c0-c03d-45c3-9f60-ca7b386c412f/Inbjudan.Pdf",
+          "published_time": "2026-08-17"
         }
       ],
-      "information": null,
+      "information": "17/8 På grund av yttre omständigheter flyttas den första starten till kl. 15.30. Se den uppdaterade inbjudan för mer information.\n17/8 Due to external circumstances, the first start has been moved to 15:30. Please see the updated invitation for more information.",
       "region": "Dalarna",
       "punching_system": "Sportident",
       "races": [
         {
           "race_number": 1,
           "name": "MTBO, Publiktävling VM, lång",
-          "datetimez": "2026-08-28T13:00:00+02:00",
+          "datetimez": "2026-08-28T15:30:00+02:00",
           "discipline": "Long",
           "night_or_day": "day",
           "position": {
-            "lat": 61.0088722412467,
-            "lng": 14.5212554252051
+            "lat": 61.0069878652756,
+            "lng": 14.501162557489
           },
           "areas": [],
           "urls": [
@@ -9087,8 +9087,8 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/56227/cbca41da-d7f0-4df9-9ede-c08d3e7bde04/Inbjudan.Pdf",
-          "published_time": "2026-06-22"
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/56227/1531c78e-b49f-46a3-b081-4c966aee0b8b/Inbjudan.Pdf",
+          "published_time": "2026-08-17"
         }
       ],
       "information": null,
@@ -9102,8 +9102,8 @@
           "discipline": "Middle",
           "night_or_day": "day",
           "position": {
-            "lat": 61.0088698991595,
-            "lng": 14.5213629225575
+            "lat": 60.9788676902306,
+            "lng": 14.5183357139732
           },
           "areas": [],
           "urls": [
@@ -9236,11 +9236,11 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/56228/1e98a559-605b-43bc-97ff-8152c2fc138d/Inbjudan.Pdf",
-          "published_time": "2026-06-22"
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/56228/673ec98d-eb23-4c24-a956-5e3b5248f160/Inbjudan.Pdf",
+          "published_time": "2026-08-17"
         }
       ],
-      "information": null,
+      "information": "Tävlingen ingår i Dalacupen 2026 för ungdomar i HD14 och HD16!",
       "region": "Dalarna",
       "punching_system": "Sportident",
       "races": [
@@ -13360,12 +13360,53 @@
             "lng": 18.1322732733916
           },
           "areas": [],
-          "urls": [],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=58116&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-08-19T01:28:17.838850+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=58116&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-08-19T01:28:17.838850+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=58116&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-08-19T01:28:17.838850+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "Kort": 2,
+            "Mellan": 6,
+            "Lång": 5
+          },
+          "result_counts": {
+            "Kort": 2,
+            "Mellan": 6,
+            "Lång": 5
+          },
+          "fingerprints": [
+            "109d1c4016cd81d6940c0ee28aa47c3f68c311f0df309b49b29147e561d5a7d8",
+            "4f28e038b2f3fd1f22b6056f8c67c1fc24105039e5a19395ec002cfd903d6999",
+            "6e949525dafbb0f6ecf1c346939a40a64eeee7a459e8ef66a1f0045a32c0dca7",
+            "770295953f9be197b5fca8d61ac61cc86c42ef0b6dc94a8bc157f0945de163d7",
+            "97068f866d01b00ebddbcc6423803f50e63043fe858936eeaa0f8bfd2778326e",
+            "98f7c7bf70cc3c23ecb7f5de06044d21d18eac2a6f415cb2e6bb40cd0dc24889",
+            "a12c5ee1f5c7d36abb21719f7cc232f09d79bc595a868c7b6ece27a12125ddbc",
+            "a3b229b5d17639eb144c764f86a9fff1c13e6dbd8f281d8db101448acf03d7d6",
+            "a40329a226f780314ae7b920d777baf0314a77554d3e291b0f1d6d7a3936e537",
+            "d681d495168f9fdfa56d1eb1c822af27f3784168284c89886a6726478564e353",
+            "e2172f6e3f35e00c5ac4267d6739398b8058053dadab59f7cfb21fa063d0b13e",
+            "e2c0888cd64b1bd89292c727d25cdfa3573d8c82afe19ba84215a253122488bc",
+            "ff579115ff3c2e130c1bc3ffbaadd55a0668fcab0c1586ebbcf0b8eba17f03c3"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -17718,6 +17759,18 @@
           "title": "Inbjudan",
           "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58956/e298d991-3c9f-483d-9a63-37221ba02b6b/Inbjudan.pdf",
           "published_time": "2026-04-26"
+        },
+        {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58956/708c4f5c-02ad-4ddc-a754-ba6b35213794/PM.Pdf",
+          "published_time": "2026-08-18"
+        },
+        {
+          "type": "Other",
+          "title": "Banlängder",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58956/d11d43f6-9359-4e12-b466-1e91a2adfb03/Banlängder.Pdf",
+          "published_time": "2026-08-18"
         }
       ],
       "information": null,
@@ -17747,6 +17800,12 @@
               "url": "/Events/Entries?eventId=58956&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-07-08T03:00:58.463437+00:00"
+            },
+            {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/199181",
+              "title": "Map, courses and routes will be available in Livelox",
+              "last_updated_at": "2026-08-19T01:28:17.838929+00:00"
             }
           ],
           "documents": [],
@@ -19027,6 +19086,12 @@
               "url": "/Events/Entries?eventId=59458&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-08-10T04:01:08.828412+00:00"
+            },
+            {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/199199",
+              "title": "Map, courses and routes will be available in Livelox",
+              "last_updated_at": "2026-08-19T01:28:17.838806+00:00"
             }
           ],
           "documents": [],
@@ -19925,12 +19990,11 @@
       "classes": [
         "* Entry in advance is not possible.",
         "5 km",
-        "5km*",
         "Gul 4 km*",
         "Inskolning 2 km",
-        "MTBO Lätt 3",
-        "MTBO Medelsvår 6km*",
-        "MTBO Svår 10km*",
+        "MTBO Lätt 4km*",
+        "MTBO Medelsvår 11km*",
+        "MTBO Medelsvår 8km*",
         "Orange 3 km*",
         "Orange 5 km*",
         "UD Gul 2",
@@ -20107,7 +20171,7 @@
         }
       ],
       "documents": [],
-      "information": "Välkommen på MTBO-träning på Jungfruberget!\nFinns 3 banor att välja mellan. Obligatoriskt med hjälm och cykel. Kartställ finns att låna, skicka ett meddelande innan!\nÅkare från andra klubbar är välkomna, swishar 40 kr till OK Kåre 1233999018.",
+      "information": "Välkommen på MTBO-träning på Jungfruberget!\nFinns 3 banor att välja mellan. Obligatoriskt med hjälm och cykel. Kartställ finns att låna, skicka ett meddelande innan!\nÅkare från andra klubbar är välkomna, swishar 40 kr till OK Kåre 1233999018.\nSamling norra delen av Lugnets stora parkering. Start mellan kl 17:30-18:00. Långa 11,6km, mellan 7,8km, korta 4,2km.",
       "region": "Dalarna",
       "punching_system": "other",
       "races": [
@@ -20123,12 +20187,6 @@
           },
           "areas": [],
           "urls": [
-            {
-              "type": "EntryList",
-              "url": "/Entry?eventId=60017",
-              "title": "Enter",
-              "last_updated_at": "2026-08-05T02:49:23.633849+00:00"
-            },
             {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=60017&groupBy=EventClass",
@@ -20228,6 +20286,93 @@
               "url": "/Events/Entries?eventId=60085&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-08-12T02:13:24.448612+00:00"
+            }
+          ],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_60240",
+      "name": "Östgötaserien MTBO",
+      "start_time": "2026-09-02",
+      "end_time": "2026-09-02",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Local"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "NAIS Orienteringsklubb",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Thomas Petersson"
+        },
+        {
+          "role": "Contact phone number",
+          "name": "0706987251"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:GRwNAkwAVUMRFREXHwcRAEMzBB8AGQlcDhsP"
+        }
+      ],
+      "classes": [
+        "Korta damer",
+        "Korta herrar",
+        "Långa damer",
+        "Långa herrar",
+        "Mellan damer",
+        "Mellan herrar"
+      ],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/60240",
+          "title": null,
+          "last_updated_at": "2026-08-19T01:28:17.838787+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": "Östergötland",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "Östgötaserien MTBO",
+          "datetimez": "2026-09-02T16:30:00+02:00",
+          "discipline": "Long",
+          "night_or_day": "day",
+          "position": {
+            "lat": 58.8064373596636,
+            "lng": 15.5594089864965
+          },
+          "areas": [],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Entry?eventId=60240",
+              "title": "Enter",
+              "last_updated_at": "2026-08-19T01:28:17.838790+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=60240&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-08-19T01:28:17.838790+00:00"
             }
           ],
           "documents": [],
