@@ -133,19 +133,19 @@
         {
           "type": "Bulletin",
           "title": "Bulletin 1",
-          "url": "/Documents/Event/8726/Bulletin-1",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8277/bbcaa0e7-f01b-4cc3-a5f9-74e5dbb8ba89/Bulletin-1.pdf",
           "published_time": "2025-02-26"
         },
         {
           "type": "Bulletin",
           "title": "Bulletin 2",
-          "url": "/Documents/Event/9629/Bulletin-2",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8277/f425d10b-c7d5-413f-8d36-68c8ad60966d/Bulletin-2.pdf",
           "published_time": "2025-10-01"
         },
         {
           "type": "Bulletin",
           "title": "Bulletin 3",
-          "url": "/Documents/Event/10685/Bulletin-3",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8277/1804ce0c-765f-4ae2-90e1-5809cecf3834/Bulletin-3.pdf",
           "published_time": "2026-07-16"
         }
       ],
@@ -737,19 +737,19 @@
         {
           "type": "Bulletin",
           "title": "Bulletin 1",
-          "url": "/Documents/Event/8728/Bulletin-1",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8278/ca10bfa2-ba4e-4d56-9b2f-f0eaa6978cd3/Bulletin-1.pdf",
           "published_time": "2025-02-26"
         },
         {
           "type": "Bulletin",
           "title": "Bulletin 2",
-          "url": "/Documents/Event/9630/Bulletin-2",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8278/5cba35a1-fc5c-4ad9-abe3-5202891e5424/Bulletin-2.pdf",
           "published_time": "2025-10-01"
         },
         {
           "type": "Bulletin",
           "title": "Bulletin 3",
-          "url": "/Documents/Event/10687/Bulletin-3",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8278/e65507fb-68da-4a2e-ade4-a730fa60f9cf/Bulletin-3.pdf",
           "published_time": "2026-07-16"
         }
       ],
@@ -17763,8 +17763,8 @@
         {
           "type": "Bulletin",
           "title": "PM",
-          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58956/708c4f5c-02ad-4ddc-a754-ba6b35213794/PM.Pdf",
-          "published_time": "2026-08-18"
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58956/1332fe19-52f0-4b54-95b7-a552706bced8/PM.Pdf",
+          "published_time": "2026-08-19"
         },
         {
           "type": "Other",
@@ -20345,7 +20345,14 @@
           "last_updated_at": "2026-08-19T01:28:17.838787+00:00"
         }
       ],
-      "documents": [],
+      "documents": [
+        {
+          "type": "Invitation",
+          "title": "Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/60240/283375de-1b8c-4d36-aee0-99e6010340fc/Inbjudan.Docx",
+          "published_time": "2026-08-19"
+        }
+      ],
       "information": null,
       "region": "Östergötland",
       "punching_system": "Sportident",
