@@ -2173,13 +2173,13 @@
         {
           "type": "Bulletin",
           "title": "Bulletin 1",
-          "url": "/Documents/Event/9725/Bulletin-1",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8794/789a8d0b-47ef-436a-a9e3-0a5b80b600d2/Bulletin-1.pdf",
           "published_time": "2026-04-01"
         },
         {
           "type": "Bulletin",
           "title": "Bulletin 2",
-          "url": "/Documents/Event/10322/Bulletin-2",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8794/79510b9a-66f8-492b-9d2f-4f6fe09f191b/Bulletin-2.pdf",
           "published_time": "2026-06-24"
         }
       ],
@@ -2999,7 +2999,7 @@
         {
           "type": "Other",
           "title": "Battle of the Legends - info for Middle and Sprint events",
-          "url": "/Documents/Event/10249/Battle-of-the-Legends---info-for-Middle-and-Sprint-events",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8885/8c412c2b-1970-4d26-80fa-4bfe1ce53ff2/Battle-of-the-Legends---info-for-Middle-and-Sprint-events.pdf",
           "published_time": "2026-03-18"
         },
         {
@@ -17790,10 +17790,10 @@
           "areas": [],
           "urls": [
             {
-              "type": "EntryList",
-              "url": "/Entry?eventId=58956",
-              "title": "Enter",
-              "last_updated_at": "2026-04-25T22:13:52.238551+00:00"
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/199181",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-08-21T17:54:34.850369+00:00"
             },
             {
               "type": "EntryList",
@@ -17802,17 +17802,48 @@
               "last_updated_at": "2026-07-08T03:00:58.463437+00:00"
             },
             {
-              "type": "Livelox",
-              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/199181",
-              "title": "Map, courses and routes will be available in Livelox",
-              "last_updated_at": "2026-08-19T01:28:17.838929+00:00"
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=58956&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-08-21T17:54:34.850369+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=58956&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-08-21T17:54:34.850369+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "Kort": 2,
+            "Mellan": 5,
+            "Lång": 9
+          },
+          "result_counts": {
+            "Kort": 2,
+            "Mellan": 5,
+            "Lång": 9
+          },
+          "fingerprints": [
+            "042173b9aa097dfc62fec7b214f3bddd862dbe5c5f42a28136a812a59f02d78f",
+            "11e82ae933d4b961ae97b24c6cee4024fe42db8d4dc88b3eac0177b212db36b7",
+            "150e8b158fe16f38ce0305d330999eb03d84c32e27c000e152a82a4372d3c432",
+            "2b41c980871549af0940a4755fdde24812930e24b1e6c5c0bf0a9b4cef04891a",
+            "2e4b7eba73eeb489abb53ca1757a45ecb185fed9aa8cf0ae2332371a83d12140",
+            "31781c13d956cae656b876c22ffd1f7615a3a4e8f4c53d25e4df6ace351afdad",
+            "68271db581c76ae55fd962a2fbc378686738685338dda43e4dac6099b7aabe35",
+            "72ded3e848d0a8fcfce1cd0eb1aa4e6618b4ccb57e504bd66f24b07783b2dfb8",
+            "77254658abb94f89eab1c1849ec44583228cce42c7c295203cdf24d4b41ab91f",
+            "80723f7a550cbb3d4adfcf29f3458cd117478c053b907857454ea8fafcfe1f23",
+            "83cb3572051950852e843ebc9187057d610b4a2904800d13ad56dfbff97c76db",
+            "b548103ce92235ffffdc566bc05ee395b3f4f0494556a5ea0f5d8537bb3f08b4",
+            "bd7d861e754ff6b93bba0e4c46e0607aac174ed1ba676b0ab3aee70915d4b557",
+            "bffa5e1fd0e517be43484d0990fa89811c288599064edf89975840281cb9c88b",
+            "c3af6eb4c25b35915c79eaa21beccb5f1edb9c4063cc2492b0a973aa9635de44",
+            "f80bb954c7527dd5a8954a9bddaae66425b40ba96fde712bcf7638ecae5518a8"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -20382,6 +20413,86 @@
               "last_updated_at": "2026-08-19T01:28:17.838790+00:00"
             }
           ],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_60269",
+      "name": "MTBO-Cupen #5",
+      "start_time": "2026-09-09",
+      "end_time": "2026-09-09",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Local"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "Gotlands Bro OK",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Kurt Löfgren"
+        },
+        {
+          "role": "Contact phone number",
+          "name": "0727107697"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:Dx0QCEQHFxNPGA8XHwAKCkMzFxcNGQRcDhsP"
+        }
+      ],
+      "classes": [
+        "3 km",
+        "5 km",
+        "Kort 4",
+        "Lång 11",
+        "Mellan 7"
+      ],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/60269",
+          "title": null,
+          "last_updated_at": "2026-08-21T17:58:32.051670+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/60269/cd11e485-1b29-4c3a-9e43-130a42c951de/PM.Pdf",
+          "published_time": "2026-08-21"
+        }
+      ],
+      "information": null,
+      "region": "Gotland",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "MTBO-Cupen #5",
+          "datetimez": "2026-09-09T16:30:00+02:00",
+          "discipline": "Long",
+          "night_or_day": "day",
+          "position": {
+            "lat": 57.6926743773122,
+            "lng": 18.3521832757965
+          },
+          "areas": [],
+          "urls": [],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,

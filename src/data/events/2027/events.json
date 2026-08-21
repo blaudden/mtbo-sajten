@@ -211,7 +211,7 @@
         {
           "type": "Bulletin",
           "title": "Bulletin 1",
-          "url": "/Documents/Event/10342/Bulletin-1",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8961/eb4e6cf1-3204-40cf-b7fb-e70b1a29f3de/Bulletin-1.pdf",
           "published_time": "2026-04-09"
         }
       ],
@@ -344,7 +344,7 @@
         {
           "type": "Bulletin",
           "title": "Bulletin 1",
-          "url": "/Documents/Event/10341/Bulletin-1",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8962/3c23af61-cb19-4666-a40a-93d417b4a95f/Bulletin-1.pdf",
           "published_time": "2026-04-09"
         }
       ],
@@ -631,7 +631,7 @@
     },
     {
       "id": "SWE_57010",
-      "name": "MTBO, Karlskrona SOK, lång",
+      "name": "MTBO, Svenska cupen, Karlskrona, lång",
       "start_time": "2027-05-15",
       "end_time": "2027-05-15",
       "status": "Sanctioned",
@@ -676,6 +676,12 @@
           "url": "Events/Show/57010",
           "title": null,
           "last_updated_at": "2026-02-07T19:49:12.021065+00:00"
+        },
+        {
+          "type": "Series",
+          "url": "/Standings/View/Series/1618",
+          "title": "Svenska cupen MTBO 2027",
+          "last_updated_at": "2026-08-21T17:59:33.796537+00:00"
         }
       ],
       "documents": [],
@@ -685,7 +691,7 @@
       "races": [
         {
           "race_number": 1,
-          "name": "MTBO, Karlskrona SOK, lång",
+          "name": "MTBO, Svenska cupen, Karlskrona, lång",
           "datetimez": "2027-05-15T00:00:00+02:00",
           "discipline": "Long",
           "night_or_day": "day",
@@ -745,7 +751,7 @@
     },
     {
       "id": "SWE_57011",
-      "name": "MTBO, Karlskrona SOK, sprint",
+      "name": "MTBO, Svenska cupen, Karlskrona, sprint",
       "start_time": "2027-05-16",
       "end_time": "2027-05-16",
       "status": "Sanctioned",
@@ -790,6 +796,12 @@
           "url": "Events/Show/57011",
           "title": null,
           "last_updated_at": "2026-02-07T19:49:12.021039+00:00"
+        },
+        {
+          "type": "Series",
+          "url": "/Standings/View/Series/1618",
+          "title": "Svenska cupen MTBO 2027",
+          "last_updated_at": "2026-08-21T17:59:33.796421+00:00"
         }
       ],
       "documents": [],
@@ -799,7 +811,7 @@
       "races": [
         {
           "race_number": 1,
-          "name": "MTBO, Karlskrona SOK, sprint",
+          "name": "MTBO, Svenska cupen, Karlskrona, sprint",
           "datetimez": "2027-05-16T00:00:00+02:00",
           "discipline": "Sprint",
           "night_or_day": "day",
@@ -863,7 +875,7 @@
     },
     {
       "id": "SWE_57942",
-      "name": "MTBO, Traneträffen, sprint",
+      "name": "MTBO, Svenska cupen, Traneträffen, sprint",
       "start_time": "2027-08-21",
       "end_time": "2027-08-21",
       "status": "Sanctioned",
@@ -910,6 +922,12 @@
           "url": "http://oktranan.se",
           "title": null,
           "last_updated_at": "2026-03-17T17:37:47.268435+00:00"
+        },
+        {
+          "type": "Series",
+          "url": "/Standings/View/Series/1618",
+          "title": "Svenska cupen MTBO 2027",
+          "last_updated_at": "2026-08-21T17:59:33.796508+00:00"
         }
       ],
       "documents": [],
@@ -919,7 +937,7 @@
       "races": [
         {
           "race_number": 1,
-          "name": "MTBO, Traneträffen, sprint",
+          "name": "MTBO, Svenska cupen, Traneträffen, sprint",
           "datetimez": "2027-08-21T00:00:00+02:00",
           "discipline": "Sprint",
           "night_or_day": "day",
@@ -937,7 +955,7 @@
     },
     {
       "id": "SWE_57943",
-      "name": "MTBO, Traneträffen, medel",
+      "name": "MTBO, Svenska cupen, Traneträffen, medel",
       "start_time": "2027-08-22",
       "end_time": "2027-08-22",
       "status": "Sanctioned",
@@ -978,6 +996,12 @@
           "url": "Events/Show/57943",
           "title": null,
           "last_updated_at": "2026-03-17T17:37:47.268420+00:00"
+        },
+        {
+          "type": "Series",
+          "url": "/Standings/View/Series/1618",
+          "title": "Svenska cupen MTBO 2027",
+          "last_updated_at": "2026-08-21T17:59:33.796445+00:00"
         }
       ],
       "documents": [],
@@ -987,7 +1011,7 @@
       "races": [
         {
           "race_number": 1,
-          "name": "MTBO, Traneträffen, medel",
+          "name": "MTBO, Svenska cupen, Traneträffen, medel",
           "datetimez": "2027-08-22T00:00:00+02:00",
           "discipline": "Long",
           "night_or_day": "day",
@@ -1270,7 +1294,7 @@
     },
     {
       "id": "SWE_58993",
-      "name": "MTBO, Sätervurpan, sprint",
+      "name": "MTBO, Svenska cupen, Sätervurpan, sprint",
       "start_time": "2027-08-14",
       "end_time": "2027-08-14",
       "status": "Sanctioned",
@@ -1309,6 +1333,12 @@
           "url": "http://www.saterbygden.se",
           "title": null,
           "last_updated_at": "2026-04-28T19:36:13.777242+00:00"
+        },
+        {
+          "type": "Series",
+          "url": "/Standings/View/Series/1618",
+          "title": "Svenska cupen MTBO 2027",
+          "last_updated_at": "2026-08-21T17:59:33.796524+00:00"
         }
       ],
       "documents": [],
@@ -1318,7 +1348,7 @@
       "races": [
         {
           "race_number": 1,
-          "name": "MTBO, Sätervurpan, sprint",
+          "name": "MTBO, Svenska cupen, Sätervurpan, sprint",
           "datetimez": "2027-08-14T00:00:00+02:00",
           "discipline": "Sprint",
           "night_or_day": "day",
@@ -1336,7 +1366,7 @@
     },
     {
       "id": "SWE_58994",
-      "name": "MTBO, Sätervurpan, medel",
+      "name": "MTBO, Svenska cupen, Sätervurpan, medel",
       "start_time": "2027-08-15",
       "end_time": "2027-08-15",
       "status": "Sanctioned",
@@ -1375,6 +1405,12 @@
           "url": "http://www.saterbygden.se",
           "title": null,
           "last_updated_at": "2026-04-28T19:36:13.777226+00:00"
+        },
+        {
+          "type": "Series",
+          "url": "/Standings/View/Series/1618",
+          "title": "Svenska cupen MTBO 2027",
+          "last_updated_at": "2026-08-21T17:59:33.796372+00:00"
         }
       ],
       "documents": [],
@@ -1384,7 +1420,7 @@
       "races": [
         {
           "race_number": 1,
-          "name": "MTBO, Sätervurpan, medel",
+          "name": "MTBO, Svenska cupen, Sätervurpan, medel",
           "datetimez": "2027-08-15T00:00:00+02:00",
           "discipline": "Middle",
           "night_or_day": "day",

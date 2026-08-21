@@ -1,6 +1,6 @@
 {
   "year": 2026,
-  "generated_at": "2026-08-06T20:46:09.826828+00:00",
+  "generated_at": "2026-08-21T18:00:05.802335+00:00",
   "current_cup_url": "https://eventor.orientering.se/Standings/View/Series/1539",
   "previous_cup_url": "https://eventor.orientering.se/Standings/View/Series/1418",
   "classes": {
@@ -16,8 +16,8 @@
       },
       {
         "seed_rank": 2,
-        "name": "Miika Nurmi",
-        "club": "IFK Göteborg Orientering",
+        "name": "Armel Berthaud",
+        "club": "MTBO Collective, FRA",
         "seed_val": 2,
         "current_rank": 2,
         "previous_rank": null,
@@ -28,14 +28,14 @@
         "name": "Patrik Svedberg",
         "club": "Gävle OK",
         "seed_val": 2,
-        "current_rank": 6,
+        "current_rank": 18,
         "previous_rank": 2,
         "is_seeded": true
       },
       {
         "seed_rank": 4,
-        "name": "Jussi Laurila",
-        "club": "Jalasjärven Jalas, FIN",
+        "name": "Hannes Hnilica",
+        "club": "MTBO Team Austria, AUT",
         "seed_val": 3,
         "current_rank": 3,
         "previous_rank": null,
@@ -46,7 +46,7 @@
         "name": "Hampus Larsson",
         "club": "FK Göingarna",
         "seed_val": 3,
-        "current_rank": null,
+        "current_rank": 11,
         "previous_rank": 3,
         "is_seeded": true
       },
@@ -73,12 +73,21 @@
         "name": "Joakim Skärlén",
         "club": "Haninge SOK",
         "seed_val": 5,
-        "current_rank": null,
+        "current_rank": 28,
         "previous_rank": 5,
         "is_seeded": true
       },
       {
         "seed_rank": 9,
+        "name": "Marcus Wehlin",
+        "club": "Garphyttans IF",
+        "seed_val": 6,
+        "current_rank": 6,
+        "previous_rank": 17,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 10,
         "name": "Oliver Friis",
         "club": "Navet MTBO",
         "seed_val": 6,
@@ -87,34 +96,34 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 10,
-        "name": "Julius Juodišius",
-        "club": "OK Fortūna, LTU",
+        "seed_rank": 11,
+        "name": "Vojtech Stransky",
+        "club": "Sportcentrum Jicin, CZE",
         "seed_val": 7,
         "current_rank": 7,
         "previous_rank": null,
         "is_seeded": false
       },
       {
-        "seed_rank": 11,
+        "seed_rank": 12,
         "name": "Thomas Jansson",
         "club": "Garphyttans IF",
         "seed_val": 7,
-        "current_rank": null,
+        "current_rank": 26,
         "previous_rank": 7,
         "is_seeded": false
       },
       {
-        "seed_rank": 12,
-        "name": "Andrii Grytsan",
-        "club": "Långhundra IF",
+        "seed_rank": 13,
+        "name": "Antoine Lesquer",
+        "club": "MTBO Collective, FRA",
         "seed_val": 8,
         "current_rank": 8,
         "previous_rank": null,
         "is_seeded": false
       },
       {
-        "seed_rank": 13,
+        "seed_rank": 14,
         "name": "Sverre Röjgård",
         "club": "OK Kolmården",
         "seed_val": 8,
@@ -123,16 +132,34 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 14,
+        "seed_rank": 15,
+        "name": "Miika Nurmi",
+        "club": "IFK Göteborg Orientering",
+        "seed_val": 9,
+        "current_rank": 9,
+        "previous_rank": null,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 16,
         "name": "Sebastian Svärd",
         "club": "Haninge SOK",
         "seed_val": 9,
-        "current_rank": null,
+        "current_rank": 22,
         "previous_rank": 9,
         "is_seeded": false
       },
       {
-        "seed_rank": 15,
+        "seed_rank": 17,
+        "name": "Jérémi Pourre",
+        "club": "MTBO Collective, FRA",
+        "seed_val": 10,
+        "current_rank": 10,
+        "previous_rank": null,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 18,
         "name": "Bjarne Hoffmann",
         "club": "Navet MTBO",
         "seed_val": 10,
@@ -141,7 +168,16 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 16,
+        "seed_rank": 19,
+        "name": "Jussi Laurila",
+        "club": "Jalasjärven Jalas, FIN",
+        "seed_val": 12,
+        "current_rank": 12,
+        "previous_rank": null,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 20,
         "name": "Gustav Ohlin",
         "club": "Bredaryds SOK",
         "seed_val": 12,
@@ -150,7 +186,16 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 17,
+        "seed_rank": 21,
+        "name": "Joel Ernstsson",
+        "club": "Finspångs SOK",
+        "seed_val": 13,
+        "current_rank": 13,
+        "previous_rank": null,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 22,
         "name": "Gustav Johnsson",
         "club": "IFK Mora OK",
         "seed_val": 13,
@@ -159,7 +204,16 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 18,
+        "seed_rank": 23,
+        "name": "Vojtěch Ludvík",
+        "club": "TJ Stadion Nový Bor, CZE",
+        "seed_val": 14,
+        "current_rank": 14,
+        "previous_rank": null,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 24,
         "name": "Jacob Enberg",
         "club": "Halmstad OK",
         "seed_val": 14,
@@ -168,7 +222,16 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 19,
+        "seed_rank": 25,
+        "name": "Paul Debray",
+        "club": "MTBO Collective, FRA",
+        "seed_val": 15,
+        "current_rank": 15,
+        "previous_rank": null,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 26,
         "name": "Klaus Csúcs",
         "club": "IFK Mora OK",
         "seed_val": 15,
@@ -177,7 +240,16 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 20,
+        "seed_rank": 27,
+        "name": "Daniel Marques",
+        "club": "COC Portugal",
+        "seed_val": 16,
+        "current_rank": 16,
+        "previous_rank": null,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 28,
         "name": "Jonny Engel",
         "club": "OK Ravinen",
         "seed_val": 16,
@@ -186,16 +258,16 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 21,
-        "name": "Marcus Wehlin",
-        "club": "Garphyttans IF",
+        "seed_rank": 29,
+        "name": "Joâo Ferreira",
+        "club": "CAB, POR",
         "seed_val": 17,
-        "current_rank": null,
-        "previous_rank": 17,
+        "current_rank": 17,
+        "previous_rank": null,
         "is_seeded": false
       },
       {
-        "seed_rank": 22,
+        "seed_rank": 30,
         "name": "Anton Ryzhov",
         "club": "ESV Dresden, GER",
         "seed_val": 18,
@@ -204,7 +276,16 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 23,
+        "seed_rank": 31,
+        "name": "Jan Vacek",
+        "club": "Sporticus team, CZE",
+        "seed_val": 19,
+        "current_rank": 19,
+        "previous_rank": null,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 32,
         "name": "Viktor Löfgren",
         "club": "Södertälje-Nykvarn OF",
         "seed_val": 19,
@@ -213,7 +294,16 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 24,
+        "seed_rank": 33,
+        "name": "Arvid Svensson",
+        "club": "Björkfors GOIF",
+        "seed_val": 20,
+        "current_rank": 20,
+        "previous_rank": null,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 34,
         "name": "Torbjörn Blom",
         "club": "Valbo AIF",
         "seed_val": 20,
@@ -222,7 +312,16 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 25,
+        "seed_rank": 35,
+        "name": "Augustin Leclere",
+        "club": "MTBO Collective, FRA",
+        "seed_val": 21,
+        "current_rank": 21,
+        "previous_rank": null,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 36,
         "name": "Daniel Andersson",
         "club": "OK Löftan",
         "seed_val": 21,
@@ -231,7 +330,7 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 26,
+        "seed_rank": 37,
         "name": "Noah Tristan Hoffmann",
         "club": "DANISH NATIONAL TEAM",
         "seed_val": 22,
@@ -240,7 +339,16 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 27,
+        "seed_rank": 38,
+        "name": "Hiro Ayano",
+        "club": "Wiener Schulcup, AUT",
+        "seed_val": 23,
+        "current_rank": 23,
+        "previous_rank": null,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 39,
         "name": "Marius E. Aamodt",
         "club": "Oppsal Orientering, NOR",
         "seed_val": 23,
@@ -249,7 +357,16 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 28,
+        "seed_rank": 40,
+        "name": "Fábio Gonçalves",
+        "club": "CRCG Entroncamento, POR",
+        "seed_val": 24,
+        "current_rank": 24,
+        "previous_rank": null,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 41,
         "name": "Benjamin Seipel",
         "club": "Hestra IF",
         "seed_val": 24,
@@ -258,7 +375,7 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 29,
+        "seed_rank": 42,
         "name": "David Hansson",
         "club": "OK Räven",
         "seed_val": 24,
@@ -267,7 +384,16 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 30,
+        "seed_rank": 43,
+        "name": "Xoel Chamorro García",
+        "club": "Malungs OK Skogsmårdarna",
+        "seed_val": 25,
+        "current_rank": 25,
+        "previous_rank": null,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 44,
         "name": "Johan MacLassen",
         "club": "Danish National Team",
         "seed_val": 26,
@@ -276,7 +402,7 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 31,
+        "seed_rank": 45,
         "name": "Jonas Fransson",
         "club": "Lerums SOK",
         "seed_val": 26,
@@ -285,7 +411,16 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 32,
+        "seed_rank": 46,
+        "name": "Pierre Martinez",
+        "club": "MTBO Collective, FRA",
+        "seed_val": 27,
+        "current_rank": 27,
+        "previous_rank": null,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 47,
         "name": "Henrik Olsson",
         "club": "OK Renen",
         "seed_val": 28,
@@ -294,7 +429,16 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 33,
+        "seed_rank": 48,
+        "name": "Julius Juodišius",
+        "club": "OK Fortūna, LTU",
+        "seed_val": 29,
+        "current_rank": 29,
+        "previous_rank": null,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 49,
         "name": "Lars Ericsson",
         "club": "Nybro OK",
         "seed_val": 29,
@@ -303,7 +447,16 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 34,
+        "seed_rank": 50,
+        "name": "Andrii Grytsan",
+        "club": "Långhundra IF",
+        "seed_val": 30,
+        "current_rank": 30,
+        "previous_rank": null,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 51,
         "name": "Magnus Blåudd",
         "club": "OK Rodhen",
         "seed_val": 30,
@@ -324,29 +477,29 @@
       },
       {
         "seed_rank": 2,
-        "name": "Cæcilie Rueløkke Christoffersen",
-        "club": "OK Øst Birkerød, DEN",
+        "name": "Cecilia Thomasson",
+        "club": "Östersunds OK",
         "seed_val": 2,
         "current_rank": 2,
-        "previous_rank": 2,
+        "previous_rank": null,
         "is_seeded": true
       },
       {
         "seed_rank": 3,
+        "name": "Cæcilie Rueløkke Christoffersen",
+        "club": "OK Øst Birkerød, DEN",
+        "seed_val": 2,
+        "current_rank": 10,
+        "previous_rank": 2,
+        "is_seeded": true
+      },
+      {
+        "seed_rank": 4,
         "name": "Karin E Gustafsson",
         "club": "Garphyttans IF",
         "seed_val": 3,
         "current_rank": 3,
         "previous_rank": 4,
-        "is_seeded": true
-      },
-      {
-        "seed_rank": 4,
-        "name": "Cecilia Thomasson",
-        "club": "Östersunds OK",
-        "seed_val": 3,
-        "current_rank": 3,
-        "previous_rank": null,
         "is_seeded": true
       },
       {
@@ -360,6 +513,15 @@
       },
       {
         "seed_rank": 6,
+        "name": "Ingrid Stengård",
+        "club": "Fältjägarnas IF",
+        "seed_val": 4,
+        "current_rank": 4,
+        "previous_rank": 6,
+        "is_seeded": true
+      },
+      {
+        "seed_rank": 7,
         "name": "Ella Palm",
         "club": "IKHP Huskvarna Idrottsklubb",
         "seed_val": 5,
@@ -368,34 +530,34 @@
         "is_seeded": true
       },
       {
-        "seed_rank": 7,
+        "seed_rank": 8,
         "name": "Mia Eronn",
         "club": "Linköpings OK",
         "seed_val": 5,
-        "current_rank": 11,
+        "current_rank": 12,
         "previous_rank": 5,
         "is_seeded": true
       },
       {
-        "seed_rank": 8,
-        "name": "Ingrid Stengård",
-        "club": "Fältjägarnas IF",
+        "seed_rank": 9,
+        "name": "Sara Forsgren",
+        "club": "OK Nolaskogsarna",
         "seed_val": 6,
         "current_rank": 6,
-        "previous_rank": 6,
-        "is_seeded": true
-      },
-      {
-        "seed_rank": 9,
-        "name": "Eva Gustafsson",
-        "club": "Garphyttans IF",
-        "seed_val": 7,
-        "current_rank": 7,
-        "previous_rank": 8,
+        "previous_rank": 11,
         "is_seeded": false
       },
       {
         "seed_rank": 10,
+        "name": "Jana Hnilica",
+        "club": "MTBO Team Austria, AUT",
+        "seed_val": 7,
+        "current_rank": 7,
+        "previous_rank": null,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 11,
         "name": "Nikoline Splittorff",
         "club": "FIF Hillerød",
         "seed_val": 7,
@@ -404,34 +566,34 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 11,
-        "name": "Åsa Wallinder",
-        "club": "Västerås SOK",
+        "seed_rank": 12,
+        "name": "Eva Lundin",
+        "club": "Garphyttans IF",
         "seed_val": 8,
         "current_rank": 8,
         "previous_rank": null,
         "is_seeded": false
       },
       {
-        "seed_rank": 12,
-        "name": "Yrsa Röjgård",
-        "club": "OK Kolmården",
+        "seed_rank": 13,
+        "name": "Eva Gustafsson",
+        "club": "Garphyttans IF",
+        "seed_val": 8,
+        "current_rank": null,
+        "previous_rank": 8,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 14,
+        "name": "Anna Tiderman",
+        "club": "Haninge SOK",
         "seed_val": 9,
         "current_rank": 9,
         "previous_rank": null,
         "is_seeded": false
       },
       {
-        "seed_rank": 13,
-        "name": "Emelie Holmström",
-        "club": "Järla Orientering",
-        "seed_val": 10,
-        "current_rank": 10,
-        "previous_rank": 13,
-        "is_seeded": false
-      },
-      {
-        "seed_rank": 14,
+        "seed_rank": 15,
         "name": "Camilla Søgaard",
         "club": "DANISH NATIONAL TEAM",
         "seed_val": 10,
@@ -440,21 +602,12 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 15,
-        "name": "Sara Forsgren",
-        "club": "OK Nolaskogsarna",
-        "seed_val": 11,
-        "current_rank": 13,
-        "previous_rank": 11,
-        "is_seeded": false
-      },
-      {
         "seed_rank": 16,
-        "name": "Sonia Rodiére",
-        "club": "IFK Lidingö SOK",
-        "seed_val": 12,
-        "current_rank": 12,
-        "previous_rank": null,
+        "name": "Emelie Holmström",
+        "club": "Järla Orientering",
+        "seed_val": 11,
+        "current_rank": 11,
+        "previous_rank": 13,
         "is_seeded": false
       },
       {
@@ -462,21 +615,30 @@
         "name": "Laura Csúcs-Fenyvesi",
         "club": "IFK Mora OK",
         "seed_val": 12,
-        "current_rank": null,
+        "current_rank": 16,
         "previous_rank": 12,
         "is_seeded": false
       },
       {
         "seed_rank": 18,
-        "name": "Karolina Mickeviciute Juodisiene",
-        "club": "OK Fortūna, LTU",
+        "name": "Ida Ernstsson",
+        "club": "Finspångs SOK",
+        "seed_val": 13,
+        "current_rank": 13,
+        "previous_rank": null,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 19,
+        "name": "Marisa Costa",
+        "club": "Wiener Schulcup, AUT",
         "seed_val": 14,
         "current_rank": 14,
         "previous_rank": null,
         "is_seeded": false
       },
       {
-        "seed_rank": 19,
+        "seed_rank": 20,
         "name": "Helena Svensson",
         "club": "FK Herkules",
         "seed_val": 14,
@@ -485,7 +647,7 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 20,
+        "seed_rank": 21,
         "name": "Tilda Palm",
         "club": "IKHP Huskvarna Idrottsklubb",
         "seed_val": 14,
@@ -494,7 +656,16 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 21,
+        "seed_rank": 22,
+        "name": "Nadia Larsson",
+        "club": "Fredrikshofs IF Skid & OK",
+        "seed_val": 15,
+        "current_rank": 15,
+        "previous_rank": null,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 23,
         "name": "Anke Dannowski",
         "club": "ESV Dresden MTBO",
         "seed_val": 16,
@@ -503,7 +674,16 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 22,
+        "seed_rank": 24,
+        "name": "Constance Devillers",
+        "club": "MTBO Collective, FRA",
+        "seed_val": 17,
+        "current_rank": 17,
+        "previous_rank": null,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 25,
         "name": "Irma Shmidt",
         "club": "SV IHW Alex 78 Berlin",
         "seed_val": 17,
@@ -512,16 +692,25 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 23,
+        "seed_rank": 26,
+        "name": "Emma Doubkova",
+        "club": "Sporticus team, CZE",
+        "seed_val": 18,
+        "current_rank": 18,
+        "previous_rank": null,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 27,
         "name": "Elsa Forsgren",
         "club": "Västerbergslagens OL",
         "seed_val": 18,
-        "current_rank": null,
+        "current_rank": 27,
         "previous_rank": 18,
         "is_seeded": false
       },
       {
-        "seed_rank": 24,
+        "seed_rank": 28,
         "name": "Matilda Asp",
         "club": "IFK Göteborg Orientering",
         "seed_val": 18,
@@ -530,7 +719,25 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 25,
+        "seed_rank": 29,
+        "name": "Åsa Wallinder",
+        "club": "Västerås SOK",
+        "seed_val": 19,
+        "current_rank": 19,
+        "previous_rank": null,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 30,
+        "name": "Valerie Kamererová",
+        "club": "TJ Stadion Nový Bor, CZE",
+        "seed_val": 20,
+        "current_rank": 20,
+        "previous_rank": null,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 31,
         "name": "Chiara Magni",
         "club": "Asd Nirvana Verde",
         "seed_val": 20,
@@ -539,54 +746,99 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 26,
+        "seed_rank": 32,
+        "name": "Maria Andersson",
+        "club": "OK Kåre",
+        "seed_val": 21,
+        "current_rank": 21,
+        "previous_rank": null,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 33,
         "name": "Linnea Gustafsson",
         "club": "OK Gynge",
         "seed_val": 21,
         "current_rank": null,
         "previous_rank": 21,
         "is_seeded": false
+      },
+      {
+        "seed_rank": 34,
+        "name": "Yrsa Röjgård",
+        "club": "OK Kolmården",
+        "seed_val": 22,
+        "current_rank": 22,
+        "previous_rank": null,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 35,
+        "name": "Jennie Börjesson Eriksson",
+        "club": "Malungs OK Skogsmårdarna",
+        "seed_val": 23,
+        "current_rank": 23,
+        "previous_rank": null,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 36,
+        "name": "Natasha Thackray",
+        "club": "Bibbulmun Orienteers, AUS",
+        "seed_val": 24,
+        "current_rank": 24,
+        "previous_rank": null,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 37,
+        "name": "Sonia Rodiére",
+        "club": "IFK Lidingö SOK",
+        "seed_val": 25,
+        "current_rank": 25,
+        "previous_rank": null,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 38,
+        "name": "Karolina Mickeviciute Juodisiene",
+        "club": "OK Fortūna, LTU",
+        "seed_val": 26,
+        "current_rank": 26,
+        "previous_rank": null,
+        "is_seeded": false
       }
     ],
     "H17-20": [
       {
         "seed_rank": 1,
-        "name": "Melvin Löfgren",
-        "club": "OK Kåre",
-        "seed_val": 1,
-        "current_rank": 1,
-        "previous_rank": 1,
-        "is_seeded": true
-      },
-      {
-        "seed_rank": 2,
-        "name": "Gustav Eggöy Markhester",
-        "club": "IFK Mora OK",
-        "seed_val": 2,
-        "current_rank": 2,
-        "previous_rank": null,
-        "is_seeded": true
-      },
-      {
-        "seed_rank": 3,
         "name": "Joel Holmgård",
         "club": "Kils OK",
-        "seed_val": 2,
-        "current_rank": 4,
+        "seed_val": 1,
+        "current_rank": 1,
         "previous_rank": 2,
         "is_seeded": true
       },
       {
-        "seed_rank": 4,
-        "name": "Hampus Karlsson",
-        "club": "OK Bävern",
+        "seed_rank": 2,
+        "name": "Melvin Löfgren",
+        "club": "OK Kåre",
+        "seed_val": 1,
+        "current_rank": 2,
+        "previous_rank": 1,
+        "is_seeded": true
+      },
+      {
+        "seed_rank": 3,
+        "name": "Gustav Eggöy Markhester",
+        "club": "IFK Mora OK",
         "seed_val": 3,
         "current_rank": 3,
         "previous_rank": null,
         "is_seeded": true
       },
       {
-        "seed_rank": 5,
+        "seed_rank": 4,
         "name": "Arvid Svensson",
         "club": "Björkfors GOIF",
         "seed_val": 3,
@@ -595,12 +847,21 @@
         "is_seeded": true
       },
       {
-        "seed_rank": 6,
+        "seed_rank": 5,
         "name": "Axel Gräfnings",
         "club": "Grycksbo IF OK",
         "seed_val": 4,
-        "current_rank": 5,
+        "current_rank": 4,
         "previous_rank": 4,
+        "is_seeded": true
+      },
+      {
+        "seed_rank": 6,
+        "name": "Adrians Poreiters",
+        "club": "Kekavas NSS, LAT",
+        "seed_val": 5,
+        "current_rank": 5,
+        "previous_rank": null,
         "is_seeded": true
       },
       {
@@ -614,8 +875,8 @@
       },
       {
         "seed_rank": 8,
-        "name": "Olle Hamberg",
-        "club": "Östersunds OK",
+        "name": "Diogo Virginia",
+        "club": "BTT LOULÉ Portugal",
         "seed_val": 6,
         "current_rank": 6,
         "previous_rank": null,
@@ -632,6 +893,15 @@
       },
       {
         "seed_rank": 10,
+        "name": "Herman Eng",
+        "club": "IFK Göteborg Orientering",
+        "seed_val": 7,
+        "current_rank": 7,
+        "previous_rank": null,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 11,
         "name": "Kristoffer Markussen",
         "club": "DANISH NATIONAL TEAM",
         "seed_val": 7,
@@ -640,7 +910,16 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 11,
+        "seed_rank": 12,
+        "name": "Marts Poreiters",
+        "club": "Kekavas NSS, LAT",
+        "seed_val": 8,
+        "current_rank": 8,
+        "previous_rank": null,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 13,
         "name": "Karl Forsgren",
         "club": "Västerbergslagens OL",
         "seed_val": 8,
@@ -649,7 +928,16 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 12,
+        "seed_rank": 14,
+        "name": "David Marques",
+        "club": "COC Portugal",
+        "seed_val": 9,
+        "current_rank": 9,
+        "previous_rank": null,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 15,
         "name": "Peter Lindvall",
         "club": "Haninge SOK",
         "seed_val": 9,
@@ -658,12 +946,39 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 13,
+        "seed_rank": 16,
+        "name": "Hampus Karlsson",
+        "club": "OK Bävern",
+        "seed_val": 10,
+        "current_rank": 10,
+        "previous_rank": null,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 17,
         "name": "Ville Elgesjö",
         "club": "Domnarvets GOIF",
         "seed_val": 10,
         "current_rank": null,
         "previous_rank": 10,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 18,
+        "name": "Oskar Eklöv",
+        "club": "Tumba-Mälarhöjden OK",
+        "seed_val": 11,
+        "current_rank": 11,
+        "previous_rank": null,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 19,
+        "name": "Olle Hamberg",
+        "club": "Östersunds OK",
+        "seed_val": 12,
+        "current_rank": 12,
+        "previous_rank": null,
         "is_seeded": false
       }
     ],
@@ -697,28 +1012,28 @@
       },
       {
         "seed_rank": 4,
-        "name": "Julia Jennische Péclard",
-        "club": "OK Kåre",
+        "name": "Hennie Löfgren",
+        "club": "Stora Tuna OK",
         "seed_val": 3,
         "current_rank": 3,
-        "previous_rank": null,
+        "previous_rank": 3,
         "is_seeded": true
       },
       {
         "seed_rank": 5,
-        "name": "Hennie Löfgren",
-        "club": "Stora Tuna OK",
-        "seed_val": 3,
+        "name": "Julia Jennische Péclard",
+        "club": "OK Kåre",
+        "seed_val": 4,
         "current_rank": 4,
-        "previous_rank": 3,
+        "previous_rank": null,
         "is_seeded": true
       },
       {
         "seed_rank": 6,
         "name": "Greta Brandin",
         "club": "OK Kåre",
-        "seed_val": 4,
-        "current_rank": 4,
+        "seed_val": 5,
+        "current_rank": 5,
         "previous_rank": null,
         "is_seeded": true
       },
@@ -727,44 +1042,44 @@
         "name": "Ellen Forsgren",
         "club": "Västerbergslagens OL",
         "seed_val": 5,
-        "current_rank": null,
+        "current_rank": 6,
         "previous_rank": 5,
         "is_seeded": true
       },
       {
         "seed_rank": 8,
-        "name": "Linnea Lundstedt",
-        "club": "Sjövalla FK",
-        "seed_val": 6,
-        "current_rank": 6,
-        "previous_rank": null,
-        "is_seeded": true
-      },
-      {
-        "seed_rank": 9,
         "name": "Emma Karlsson",
         "club": "OK Landehof",
         "seed_val": 6,
         "current_rank": null,
         "previous_rank": 6,
-        "is_seeded": false
+        "is_seeded": true
       },
       {
-        "seed_rank": 10,
-        "name": "Moa Pilvinge",
-        "club": "OK Kolmården",
+        "seed_rank": 9,
+        "name": "Linnea Lundstedt",
+        "club": "Sjövalla FK",
         "seed_val": 7,
         "current_rank": 7,
         "previous_rank": null,
         "is_seeded": false
       },
       {
-        "seed_rank": 11,
+        "seed_rank": 10,
         "name": "Miri Brunstedt Nørgaard",
         "club": "Danish National Team",
         "seed_val": 7,
         "current_rank": null,
         "previous_rank": 7,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 11,
+        "name": "Moa Pilvinge",
+        "club": "OK Kolmården",
+        "seed_val": 8,
+        "current_rank": 8,
+        "previous_rank": null,
         "is_seeded": false
       },
       {
@@ -778,6 +1093,15 @@
       },
       {
         "seed_rank": 13,
+        "name": "Emilia Grybäck",
+        "club": "IF Thor",
+        "seed_val": 9,
+        "current_rank": 9,
+        "previous_rank": null,
+        "is_seeded": false
+      },
+      {
+        "seed_rank": 14,
         "name": "Sara Ljungqvist",
         "club": "Lunds OK",
         "seed_val": 9,
@@ -786,7 +1110,7 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 14,
+        "seed_rank": 15,
         "name": "Elin Johansson",
         "club": "IFK Göteborg Orientering",
         "seed_val": 10,
@@ -795,7 +1119,7 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 15,
+        "seed_rank": 16,
         "name": "Sara Ohlin",
         "club": "Bredaryds SOK",
         "seed_val": 10,
@@ -804,7 +1128,7 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 16,
+        "seed_rank": 17,
         "name": "Sofie Okkels",
         "club": "Danish National Team",
         "seed_val": 12,
@@ -813,7 +1137,7 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 17,
+        "seed_rank": 18,
         "name": "Irma Berg",
         "club": "Domnarvets GOIF",
         "seed_val": 13,
@@ -822,7 +1146,7 @@
         "is_seeded": false
       },
       {
-        "seed_rank": 18,
+        "seed_rank": 19,
         "name": "Elin Doering",
         "club": "Garphyttans IF",
         "seed_val": 14,
