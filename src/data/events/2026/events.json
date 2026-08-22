@@ -147,6 +147,12 @@
           "title": "Bulletin 3",
           "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8277/1804ce0c-765f-4ae2-90e1-5809cecf3834/Bulletin-3.pdf",
           "published_time": "2026-07-16"
+        },
+        {
+          "type": "Bulletin",
+          "title": "Bulletin 4",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8277/8ebb120e-9ebf-4999-85aa-8c643da20356/Bulletin 4.Pdf",
+          "published_time": "2026-08-21"
         }
       ],
       "information": "10/8 Upon request, colour-blind competitors can receive, in addition to the map with the standard course overprint in purple, a map with the course overprint in blue. This costs 5 € per competition, and the request must be submitted to\n[email protected]\nno later than 16th of August.\n6/8 Banquet entry form published - latest date for entry is 15th of August\n16/7 We updated Bulletin 3 with clarification regarding possibility of biking on the Vasaloppet track only during official Vasaloppet races 7th and 8th of August.",
@@ -589,7 +595,7 @@
         {
           "race_number": 2,
           "name": "Long",
-          "datetimez": "2026-08-27T10:00:00+02:00",
+          "datetimez": "2026-08-27T08:00:00+02:00",
           "discipline": "Long",
           "night_or_day": null,
           "position": null,
@@ -751,6 +757,12 @@
           "title": "Bulletin 3",
           "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8278/e65507fb-68da-4a2e-ade4-a730fa60f9cf/Bulletin-3.pdf",
           "published_time": "2026-07-16"
+        },
+        {
+          "type": "Bulletin",
+          "title": "Bulletin 4",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8278/8f56affb-0242-4dff-af93-2f5749b75457/Bulletin 4.Pdf",
+          "published_time": "2026-08-21"
         }
       ],
       "information": "10/8 Upon request, colour-blind competitors can receive, in addition to the map with the standard course overprint in purple, a map with the course overprint in blue. This costs 5 € per competition, and the request must be submitted to\n[email protected]\nno later than 16th of August.\n6/8 Banquet entry form published - latest date for entry is 15th of August\n16/7 We updated Bulletin 3 with clarification regarding possibility of biking on the Vasaloppet track only during official Vasaloppet races 7th and 8th of August.",
@@ -1217,7 +1229,7 @@
         {
           "race_number": 2,
           "name": "Long",
-          "datetimez": "2026-08-27T10:00:00+02:00",
+          "datetimez": "2026-08-27T08:00:00+02:00",
           "discipline": "Long",
           "night_or_day": null,
           "position": null,
@@ -19106,12 +19118,6 @@
           },
           "areas": [],
           "urls": [
-            {
-              "type": "EntryList",
-              "url": "/Entry?eventId=59458",
-              "title": "Enter",
-              "last_updated_at": "2026-07-29T02:55:34.787254+00:00"
-            },
             {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=59458&groupBy=EventClass",
