@@ -20314,12 +20314,6 @@
           "urls": [
             {
               "type": "EntryList",
-              "url": "/Entry?eventId=60085",
-              "title": "Enter",
-              "last_updated_at": "2026-08-12T02:13:24.448612+00:00"
-            },
-            {
-              "type": "EntryList",
               "url": "/Events/Entries?eventId=60085&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-08-12T02:13:24.448612+00:00"
@@ -20499,6 +20493,90 @@
           },
           "areas": [],
           "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_60271",
+      "name": "MTBO-träning Källviken",
+      "start_time": "2026-08-26",
+      "end_time": "2026-08-26",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Local"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "OK Kåre",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Annika Engström"
+        },
+        {
+          "role": "Contact phone number",
+          "name": "070-3146421"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:DBoMBkYSTRMKXgAcCgcWHUIeIxoOBAgTBBhMDEIe"
+        }
+      ],
+      "classes": [
+        "Kort",
+        "Lång",
+        "Mellan"
+      ],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/60271",
+          "title": null,
+          "last_updated_at": "2026-08-24T03:07:34.357614+00:00"
+        }
+      ],
+      "documents": [],
+      "information": "Välkommen på MTBO-träning i Källviken-Galgberget!\n3 banor av sprintkaraktär i bostadsområde och lite i skog.\nKort=1 bana, Mellan=2 banor, Lång=3 banor.\nAlla är välkomna, även du som inte är med i OK Kåre. Kartställ finns att låna - skicka meddelande innan.\nIcke-kåreiter swishar 40 kr till 1233999018.",
+      "region": "Dalarna",
+      "punching_system": "other",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "MTBO-träning Källviken",
+          "datetimez": "2026-08-26T18:00:00+02:00",
+          "discipline": "Sprint",
+          "night_or_day": "day",
+          "position": {
+            "lat": 60.5716992653996,
+            "lng": 15.627397023374
+          },
+          "areas": [],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Entry?eventId=60271",
+              "title": "Enter",
+              "last_updated_at": "2026-08-24T03:07:34.357616+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=60271&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-08-24T03:07:34.357616+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
