@@ -34,10 +34,14 @@ const getLinkType = (href: string) => {
 
     if (hostname.endsWith('livelox.com')) return 'livelox';
 
-    // Specific Eventor Checks
+    // Specific Eventor & Live Checks
     if (hostname === 'eventor.orientering.se') return 'eventor-swe';
-    if (hostname === 'eventor.orienteering.org') return 'eventor-iof';
+    if (hostname === 'liveresultat.orientering.se') return 'liveresultat';
+    if (hostname === 'eventor.orienteering.org' || hostname === 'eventor.orienteering.sport') return 'eventor-iof';
+    if (hostname === 'live.orienteering.sport' || (hostname === 'orienteering.sport' && pathname.includes('/live')))
+      return 'eventor-iof';
     if (hostname === 'eventor.orientering.no') return 'eventor-nor';
+    if (hostname.endsWith('youtube.com') || hostname.endsWith('youtu.be')) return 'youtube';
 
     // Catch-all for other external links
     if (isAbsolute && (url.protocol === 'http:' || url.protocol === 'https:')) return 'external';
@@ -57,6 +61,8 @@ const isExternal = href.startsWith('http');
 const icons = {
   pdf: 'tabler:file-type-pdf',
   external: 'tabler:external-link',
+  liveresultat: 'tabler:activity',
+  youtube: 'tabler:brand-youtube-filled',
 };
 
 // Map types to images if they use images instead of keys
@@ -73,6 +79,8 @@ const suffixMap: Record<string, { sv: string; en: string }> = {
   'eventor-swe': { sv: ' (Eventor)', en: ' (SWE Eventor)' },
   'eventor-iof': { sv: ' (IOF Eventor)', en: ' (IOF Eventor)' },
   'eventor-nor': { sv: ' (NOR Eventor)', en: ' (NOR Eventor)' },
+  liveresultat: { sv: ' (LiveResultat)', en: ' (LiveResultat)' },
+  youtube: { sv: ' (YouTube)', en: ' (YouTube)' },
   external: { sv: '', en: '' },
 };
 
