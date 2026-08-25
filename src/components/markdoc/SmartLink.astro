@@ -65,6 +65,11 @@ const icons = {
   youtube: 'tabler:brand-youtube-filled',
 };
 
+const iconColors: Record<string, string> = {
+  liveresultat: 'text-red-600 dark:text-red-500',
+  youtube: 'text-red-600 dark:text-red-500',
+};
+
 // Map types to images if they use images instead of keys
 const imageMap: Record<string, ImageMetadata> = {
   livelox: liveloxIcon,
@@ -110,7 +115,10 @@ const rel = isResource || isExternal ? 'noopener noreferrer' : undefined;
           {imageMap[type] ? (
             <Image src={imageMap[type]} alt={type} class="w-5 h-5 object-contain" />
           ) : (
-            <Icon name={icons[type as keyof typeof icons] || 'tabler:link'} class="w-5 h-5" />
+            <Icon
+              name={icons[type as keyof typeof icons] || 'tabler:link'}
+              class={`w-5 h-5 ${iconColors[type] || ''}`}
+            />
           )}
         </span>
 
