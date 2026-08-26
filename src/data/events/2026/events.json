@@ -131,6 +131,12 @@
           "published_time": null
         },
         {
+          "type": "Other",
+          "title": "Presentation TOM Middle distance",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8277/0482cdcd-e230-4056-842c-bcdf917edbcf/Presentation TOM Middle distance.Pdf",
+          "published_time": "2026-08-25"
+        },
+        {
           "type": "Bulletin",
           "title": "Bulletin 1",
           "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8277/bbcaa0e7-f01b-4cc3-a5f9-74e5dbb8ba89/Bulletin-1.pdf",
@@ -585,12 +591,155 @@
               ]
             }
           ],
-          "urls": [],
+          "urls": [
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=8775&groupBy=EventClass",
+              "title": "StartList",
+              "last_updated_at": "2026-08-26T01:30:56.245954+00:00"
+            },
+            {
+              "type": "LocalStartList",
+              "url": "data/events/2026/IOF_8277_startlist_1.yaml",
+              "title": null,
+              "last_updated_at": "2026-08-26T01:30:38.106898+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
           "result_counts": null,
-          "fingerprints": []
+          "fingerprints": [
+            "01a01a78506a5792e2ad6468c48b8e07d343a6d3167f262c6606849c2c3265c8",
+            "026aec34ff6751a1e2e6bc16f5075ed4ad0c97ed32a049b7b6e1bbd9873b578d",
+            "0380ad83c5edc6c17c70268400d5a9e34428e4708b10042de05c6e781c9dbffa",
+            "06a886b370a0125577f5bee9465c1664a58c8b345f163d05d6091d830c736e67",
+            "071f191cd932ac38dc9c07e887a3d0dec025f2cb5ea4704c6e190da2cdc00254",
+            "0b6db1b895efc87fa98925f02535bc373991552e6f8a80ad26a305df545265c1",
+            "0bfea5c6cb3d71dbc2ed248bfd93800927946383e7078a29e665c80bdddda1f2",
+            "0ce242203e06e04b4264516485fc2f76d874a09fdc285708dba300a80c7d7f9a",
+            "0d4000402f36d0be2739d366d33b6df0df57479d0aecd3124eff887532594256",
+            "111dba04af0012e8c0f26a0aaaae5984d7bad77b9ace2a19460d792211ea7db6",
+            "12788cca708d5ad65d63a610e78e277e02a9be1ad42b2f5930474c76dba9fc12",
+            "12cc7f63f5966df19fb60785df0ed965c76b94e4775580f338e5703c20973295",
+            "13ca14039d33c0f72ed37d9ac56462ecfcc35c20ba5e8b2bf42a9d728132092b",
+            "17b3ca5f3b41d14579e1fd2972a2e2f66da61fe833ac744636b696319f8d159b",
+            "1b748834e75b385e3bcf05e94b0505047330bbac3935c7252eebf82af50c911e",
+            "1c22e84992f21521908ec9a580bee3d4cd01eca22701ad0c00be02f427448283",
+            "1c41aae6b44f33f5004524b00436426cfec69a3f5b3694dc8a78b682083712a7",
+            "1c5a057d39861f18985d3706c9077b3c892094623adb1716492163c9d400077b",
+            "1ee968377c1f6ca7ff6c7829d92864a21f3ce7ce2af869a01134caa9e029d33d",
+            "1eee5192a28c321cf78ceeda85c9d0e5663b288c4f405ccf1a368c66f69b418d",
+            "20a294d4b7c686e1b53adc1fd53a934faae210872e69893cb3e11feb339f0f27",
+            "2990ed6b95ccee489a32e25c65d72dc42c7f058e349428bc648a4360ceddc727",
+            "2f1dec99eca750bbe811ac81f52b66deba56fce0a86e5f00e4f049493aa1b374",
+            "3349ba8e29b13b550d3da50b99389ff1067e577f708449c13de822c31d896edf",
+            "353a936d1f8950e94e6c77a028b08ae199e0923ff5fa4e365d3ea29f2412692e",
+            "3680721d77b5259a9a9cbf536be103802c2785deade74bd0270bd47b20c07f61",
+            "378d85401662b5e85b3479df3baec6617b8e3510fe7937e558442b582ec69ad1",
+            "381c8b080ffec5e1fa2de7a9b8923ee4fabfefe6e1dea089311e212e6acdf905",
+            "399ceb63225d5d4675289c540ca678c4c49a5ecdd4c7d1233d3abcdbcc84cb9d",
+            "3af17896892101a816a9217422660cb51bbdeae031ba5b9f07ef0eebd2afaba2",
+            "3af2d25dd8f12465a955cc1517bb1cef1daacaedaf14b382c80bc159f45ec96e",
+            "3be50f24e050c9e4630186976cef5806c38dc7fe7347f2e145f4e6da760bd518",
+            "3da4e428ea85bf521fd3162c3e9507e453606b2b4fb67e3f0b74593481bd5427",
+            "407de68a6112a77ba54cd01a31fcd37fd6776baa0e0ade4cf549117c19913758",
+            "435b46703579da9e0b2f6a8dfbb050925f3e41276427755d099c69d6124feadb",
+            "44e3ffd3145e78e74f9259d8d882d071fb1cd9a0b82c6cf99a1d1e75cbc140d5",
+            "479e1dd562eaeb06585e3a67fc08945d2ae4787c3ab633815ca51e72d9d2daf2",
+            "47a971cab1a94b80dcdb7f37b6d1aedbf47044fdda7427eb9b1c0a8019022e37",
+            "47c32c48670ef25e818192e4b5c7f2f9ad73c6c7d084ddf2c009a2ba856451e3",
+            "48ea63c7192fb0c242525efb1fa751960e2fa783ed81614a3fe6d22807639127",
+            "4a02a37b04b8751ac87aecba4da97a9a9fb633945c571554332ed8edd4823566",
+            "4cc18cc24cbdaa147900ea2821e018b73610706998446a189cd942e566af27ab",
+            "4e035fd0f7979469d5b13fa0c1236af7525420d2224a2d1a9756e88e4b6932d7",
+            "511af00b6b5e1758d45c66ce57888abdbb04b0609937a849356730a175492943",
+            "51ea6903dbaf6846e3ccf67965b9b8381830171ef0b22b19b2b3c5c24bc04020",
+            "52b5ec0193d344e180e3ae15bf23849cc4d07239e9814acca1dac8ecfa8b730f",
+            "53c79415608c1dfeccc5c984da7bb0617c03baba1503e5d5f6277ee721c42086",
+            "5ceac3bf1361823d43dd31282e24460ffb2c473583b084993b0240c1ba86d030",
+            "65af1402b4584a09150fffd59282d4df3c77384a4673b2e0d7f7a533517c8089",
+            "6642227b8bb6898439cc599f8f2b693d6f20ce703d10421b846c26d1ce658236",
+            "666ff0705d87a8e31407b08b4384309e019a39f8f626601a881e22926f03d78b",
+            "66f399db8262cec5d6e9f760643b9009b9b74a2e1f8c1111a9cb4e23ac0aa454",
+            "6781c5a429c8d63e61c2810a554ce8859fafb6d394640d3bfd1d063b992e53a3",
+            "6aa34c9e3424979adfc72e4224e7b7fb9251d741d7d519ab10f41a3efaea8c7a",
+            "6eefbd20ea96b8bfe6c3ac11ed4acf4dbd261e193d2219e79b01e5214c916520",
+            "72ebf726e334450d59bb7f04b5a30216fe6881a3921e2c4012005ea754105974",
+            "73f658372af2408cea4a087edd77c56d42f46508834270691bf080178dd04a06",
+            "7b2bc09481ce448787b31f4671a38d19748f9955adb3ee2ff224837f79961d47",
+            "7b7625742055fdbe9abf84fe88ae7f42b60eeb09a799d74d89afef52e6228e6b",
+            "7db7fa069d28818dbe4311968a0f76a870902f4f62d863be84f3007632eee42e",
+            "812149ca6c77594df0a41ddfa79304b673bf225455af9929ead11c39e1400f08",
+            "81bc86b700f16004da1b9eae33c381aeac8e6fa14f26efc608d8ea0ac4a9376c",
+            "85e2737b3b23fa975b4794fc7ab8218dd0e15e4b4edc4f7e3a2328541ab26fe6",
+            "87ca524e50b86587d7b434d6afce09d3cce6711c6ed818dedc69916e57b72797",
+            "88be37af37b4b17240e2f1a93c90e773573c84e522b65e4a7f87fde0896cd725",
+            "89441040c984def072cfaa3a37a8a542ac7cf03228cda96e797fde5cb038a01f",
+            "89dd0c6f5bfece20593de2ad285565941cc5f7793e19690023dfb1310ac4a6d6",
+            "8a513f48bdfa710c9841e63c343686a0d4d3199ba6ecad92a063692364b4e493",
+            "8a918b7724a7618eed030c82cbe1d42f9e6a18ff571e1db0650fae406092e58e",
+            "8ac03c2bf18acefeea24948354b6e07c617945f93f08abd83b84246081a27f0f",
+            "8bf4e15fa0e130d5467df6a339dea48afe9fff25b692afa0aec8cd80e8977df1",
+            "8dbdc1faf0230f30eeede4e9136b7ec94483d112867721682d8d5414311e25e1",
+            "8dd51c1b789652ac0423ef70fee0271eafd1055dd97f6ca67436c2f3e270d60d",
+            "9077762c9c3d0dbad683c0164af43e53f759487c5ce9fe3250a75b6f1c73e4b3",
+            "93887f3a706bc0de389a8e72b90c17201ed85f7da9ef453307ed0e2a9c5c6a64",
+            "957cf57646e6158622dc4cd70a857166ab22df66e4cb7bdcb23f17ea2007258f",
+            "96ba3dba7f7bd51d458c073cee42fc655196786a2ce7fbdc76087cbd8fb06a7e",
+            "97513693a43dcb142de0b0d4065ee2d02cc88cc714bafa96207a95b350e1e9c4",
+            "9dbc40d2e809c26af1978e12fe11f356ae1236fc1098c9d3d70e159a55258d43",
+            "a0fde1561fadbc641e86f7e0978b9bf698bcf95824cd65b59611840307a12aac",
+            "a1ee882acbaa0ca49284905a6b71a8644847bf6219240a2c6c54a3913f819408",
+            "a68dda17d7fd34a72c359929d05d471d59b4c97f75b967236d86c52c16d43569",
+            "a6ba8d4bd75f154ba36eaa30d634217bee9a6ea7b2806de80591df7311305de1",
+            "a6c662d8c131d13d4b10951ad45db2f5b16e4a52342292d5e7f2bea63fff6d77",
+            "aa6049cdb690c69e7755d7c922e63916ce05e344927dcc53659bb3cc7edeb984",
+            "aab304b9bbc7befb69e04e6d78866e8f51c1bf60c2520df4f25045871aaeade5",
+            "ab4887954dc939e00b5c42e0dfae779c4196ff50c2a0776f94700e0fe98c85af",
+            "af0c9a8a6e9a5ec7dd816b11f20bfe8881af9be07fe9c88f51f7867dc5eaebf2",
+            "b03dce1ca6b75978ab6aaf8a8e62e128fc5b95e239e3c55bedddb0ac2f6ea41e",
+            "b1064abd2cf3661e0df9ad40b6e3a1765d38cb90d9b2daeeab55471dafc100a9",
+            "b18f55962348e6b02d140138bf98c1523b47c825b0efe16df0a34f7decf03d25",
+            "b2ba6d933a664a531cddf9778840ae11f4d83f67a35edf7ee0811291a18c3f71",
+            "b32d22c9aaa208b19e81e26e0c4f622b1cb12952045ccab570005034f5c27648",
+            "b3acadc192dc08d5d4fd7f5410da0c85f8c207b9c009df7d1a8becbe1ae28e33",
+            "b4ccb12d421d7596dcc7c86cc92f1334d58c5d402cb8f8088180096d8f5b51fa",
+            "b6d7efef68a8a45bf452d01c197167a95f7c2681d31fbc909d5cfeeeb5010051",
+            "b87ff237005990de1777f30f0bf9a3be98c97994364000db89462d1683e447ba",
+            "bb1498eb3e6d07abb4a47d91681edbf861dc68e9c8473ad7fb2d967d5cc5aaaa",
+            "bb2e487607ada9e8bae0ec46f755a54e7e4f32787c68ae9a600d46a41a2a0dac",
+            "bdc233eb7508cb9e0a8c6406f09f9840a979c072211207940c04219b82ddcfe5",
+            "beb0cbbb5abe6be26db756c39cf4b41bea02e6f0fc8d9ea90d074b9e5dd49a2a",
+            "c306006e1d70c6600a73cd81baca35a7d0686e9d683327d56d988076830a0c3d",
+            "c6ba202e04bfeb02f4a0abd7864204e049f3195691e6e5c243974908b01a6026",
+            "ca333ffaf445e444c86afeb7a3441018f08533c6f0d737c1675d10ec05cfb0da",
+            "ca6390a5a2951db072b0bb16702f415800daf613d695ebf09bc703fed41be8ba",
+            "cbbc0b74ee20fe75b228cbc5108cf9575cc49d00bc3f58e335a18cc75f58fe57",
+            "cc6caad1490849242f08b2876156efc366dc94c3589c680c7e67f23ffa9b5f06",
+            "cd5a0cdaac2c829522e66555766a3451b9f3de6f5fad82893031ef3c6c7d4df7",
+            "ceaee63050e440fe03f3bcc2efd02cc61fc612509263b855eaac01f52fb10e3f",
+            "cf98a9918402ad387b632d4f3d8a50db3b2bf3eec739c6f603b4b9070d936b51",
+            "d09a9dcb1e90a9f7c976cfcda7dace2c625e6023faa343adbc9889e626b9d3a7",
+            "d43412ee9d13c278a2b5da5e0bc7388efb4c29a12ec834dddba29d1c535f398b",
+            "d5d77aea07119db1a1f095e8832ab37b93ba5ddab041c0f2748d72a2399b35c0",
+            "d6dbe638b8d8951f2bcb5f1c9ba45c2e4e605de1005d7ee557c1ace1d45f71e7",
+            "d70296170450d2c8845025ebc645b0df80f202d3d59fcb269af2549ab8d98a6b",
+            "d79d1e701d510897e5f9ea392782c328ea9e47a51cc95d2316432b94eb3169d3",
+            "d8ff61bab99250e477f0829303a46d433171e2b53e21b898e2e1fc5b528a8753",
+            "d9331a1e875935a195426b99a19e56e154b09607c5dc8870b796ae04685398a0",
+            "df110be694f8d47f4a807dfe29661ef415b4f37aa9a7ee81eee36eb3d474bf34",
+            "e27c3cf7da6ab02a0a598bb64d684ee1297d46265e67c95bd1ad488b0c83ee94",
+            "e2d2d0704d70fe035f88afc3d37a4e8c12e3b7212e1b63c1f28a6ed33806e851",
+            "e701157a9e1c1a43ee6367d19a9cbcab5ac0d1355261b6c9687af1a158478a6a",
+            "e9ee9532ec4edafabff039a63013e98dd51544a7763aa857830269dcf262cf76",
+            "eb13e8cafe22ab3a26ea2a89b98d9198bce95a887c2d931cf4ffa64325959e7e",
+            "ed0a355c327d6652292426098420f35593c0067b92b59da5c78767c618bb6521",
+            "f1d535c874d4dd76f5c501d2200ccc615bbf238a222648cab7193325753d5d60",
+            "f88fb080fdbe807b7e0fff6f6521231a77040d16e1b1ba52b3285c1d26f44bd5",
+            "fb4a99af57f1be03d136bbbdd154f38216ad0ef984c5772590c111e278eb71d4",
+            "fd7e8cc4e04980dcd97da2c3121ac3c48be1d5dbb09e3f7ea678e04bee70326a"
+          ]
         },
         {
           "race_number": 2,
@@ -739,6 +888,12 @@
           "title": "Banquet entry form",
           "url": "https://docs.google.com/forms/d/e/1FAIpQLSdHi5nk-K3PKCoLe0ZHPsESnEgW-cVjOVTMFpWlzGJYo7c5PQ/viewform",
           "published_time": null
+        },
+        {
+          "type": "Other",
+          "title": "Presentation TOM Middle distance",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8278/165b2a8e-bd7e-4d74-bc40-9834c5d3eec2/Presentation TOM Middle distance.Pdf",
+          "published_time": "2026-08-25"
         },
         {
           "type": "Bulletin",
@@ -1219,12 +1374,101 @@
               ]
             }
           ],
-          "urls": [],
+          "urls": [
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=8779&groupBy=EventClass",
+              "title": "StartList",
+              "last_updated_at": "2026-08-26T01:30:56.245913+00:00"
+            },
+            {
+              "type": "LocalStartList",
+              "url": "data/events/2026/IOF_8278_startlist_1.yaml",
+              "title": null,
+              "last_updated_at": "2026-08-26T01:30:33.300623+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
           "result_counts": null,
-          "fingerprints": []
+          "fingerprints": [
+            "00f0c05e827601ee6ff7c611535d3540e0e3c9c8efaf89db957bf611bc25018f",
+            "0162544ef6ab8d569347dadd42fab9fd0e3c39c3dfa2d4598f4d871f8258788e",
+            "02155ed029bd379b6dbf6452d702ade63671942fe7c5feecea1f10573817e3e7",
+            "068153617fa1c7cbd9da275557790b5716bb96591e2d632f7fd60d6e1fe070f4",
+            "07339d67e5884d3491978f5fee28692a603d4256bb5c7cd3a69ad77073743562",
+            "0a1c065bf639f1cd09703659d417d2702460729930ed24ebc01a8383ca5071c3",
+            "0a225065c8070b65caa5589961d1015e24a26229fdaec6acaba2025ee9568403",
+            "198c1ed0b3513bd36592b2bc89a9b219dd841210679650090e38a030ad3b378f",
+            "1a362a18d2ebe9467b427348f385091a7409c7be15cad24fdca23135b5853277",
+            "1b46dc3aef94f8fe4c09b42ffe3fb4815fa005b42efaaaac9410b76ded2609a5",
+            "1f0fc38aec15b1da1d89451c758385a76b381cda95fa16f152eae4293d746792",
+            "1f37d81303cb7534fff263f9f2b845d6e67fcba4bf29bb71359ddccc6cd237f3",
+            "2149cf96eb084111b9f14b569e9d492f1929d864d9da4709c177e450a456a1f3",
+            "276b29b1e9d4ce0660e0f7f4b1a6944a4fbc04a44b99ea4f27e0116c4fb69ebd",
+            "2f221e9baeeff69191ae314cb2db733bf256e829ad46b98ca60ddccb5229fa9a",
+            "37fe3c3846579255f045b8a0a99457199807f427ed673ca22b20b169dbeaa7c4",
+            "38426507487adad7641e89a7e6f48d815c1755ed75a089242a0064fe8e2286ca",
+            "3895f1771f253852653cd3b1316b33b111235b36a86cad5348a3060b7057b2ba",
+            "3a315ddd7da55ecef65a00855c4b9771ecb206dbfcafa2fe21e3dcedd4b1783d",
+            "3aff4856a69794d4fb008b4d48e69020fd0bd501815cd1944def8acae3d35aa8",
+            "3fa5fa4866619ece06039b14ad753d762afa4b21bf47f85ec51220f1e349465f",
+            "4481ca5e84f45a5c4d810fd5897ba35de103639f49e7b7cdb901c773d18f2eab",
+            "4743e82f565044b4b2f3a72c55d5444198f26b8bd79f3879fc1febb0ca93d61a",
+            "484816421f37b160cd7e9b7a4ce60155a017a245a65bc489211279891a023b25",
+            "4e5f0be7f4c62d2852faa58c0e423339710aedfdb353f450ecf6284e1a71409b",
+            "5116731447642900533d4e6248e6fc61cf5780c7c7d9afaed6ed1e4707ec2d7b",
+            "52446c4f6e64394aff0b500809f58944e057907f8b801111576e914d8ae13163",
+            "574a003cd8895420e77dd42a768d93931bce56669a8ac74ba95f5348c2631302",
+            "58513ecc161bd4ddf322146e3d85dbbc9886b893dc6f8be7e0764f834a82afff",
+            "5941444d650bd7851cad3b7950560a2c7bbb85895138aa3be94c44e499624bdb",
+            "5e7e7aee74e6ae8463b6431fbb1cb472912a302b3e085a80a0390a0352fdf97a",
+            "5ec78fb8bafd11b0a87d4018035a27ad4266d3d47d05dc30c4450fe39ce5f60c",
+            "617887a3f48272dabc3885809dad20aa0f1105f7c30e53997f3d8ab27c1e9ba0",
+            "63cc91e4046b1cd9320bb200b7cb50702d1d7dc0cb68133e212c58f364fdeba5",
+            "644d4192af1014c0c145c6e93c9de3e8a477311e4e211acb269480fd7b448995",
+            "6f53e8299025decba6c9d52fad8da94fac32bae83584e1745fd026f2b81550f6",
+            "72867e37df6820c67b2ae037b6c92b699c8e4439181cc4d37581f5e538e6ce80",
+            "733ce1efc61016946b331e93d1cf0345ddc1f44ff61ba6cdc28348bcd77a22eb",
+            "7543e1034a8ea4d0e2c367f7fe3feebec8038b46169633fe9e69c51ded6d6cd0",
+            "75ba9af440eb2d0f37dfc85c79d6240109c92e6721a41206ba4b518b0d2514a3",
+            "780550274e8d6d00a644d5e49c32f7f7e5de515f39b4363bce281a10e0adc9d1",
+            "7e7812aff060d035afe1859f0d1b03ab7e29c038430398d24312287df87976a7",
+            "858933429e5b1cfd5a0b9785ff70eb88bb77dd2d48c95ac990b8121ae4837b55",
+            "861859181f66a94ec2a065e160925a02f2148acc63ba3489c40c6d9a83badd29",
+            "8e912cc929e75a522c80ff0476895a9bedbfe0119433605b734282fb28427ab4",
+            "9153fb4959070989ba1d8ca6c58836e4f95ed64c849574f942c40f7bc928f7a8",
+            "91706b9284c16ab87d3b44b2edb0643914fa7a77ed6ea689d50d9faeab16546f",
+            "96772431a6d7c6d835c667062129709508374747cf84a62b7f90845e9a2baa98",
+            "995801edd76acfc05b78759b7fb35a389a2d36bcedaea510b867189a27571ece",
+            "9b9ceac5cea836bb2300117af167d31d938716d836cb30f39021330f3360659a",
+            "9ccaa3b8af10c7df12f35f1cebee771aa367c494fd145b5680132804a7a9e86a",
+            "a066fedf5b2a53b10a042aec0acdc8fc59a541b578b71cf6231f336256fc87bf",
+            "a6459c002d2d94584131e875fef897a29c9f1289104f3610eb82ebf9ca4e96bf",
+            "a9f9fe9f450f8cc09f2ce769d3c3dd42a85d18fe62681cb8dbfc01512488a066",
+            "aec940003b3694635b2df01321e68886dc26269e54104aef6fc45a0b1605bd20",
+            "b65fbb81b2fa19b4fc623a903935ad9fa58c27df1856ba7f5a11bec12472769b",
+            "b6d63ea84a014a9e551e4ab4ee6a34c5737c735630f854b8731207c44592bcf7",
+            "bf49a159266141088084ccf825cb3570d6fab1568534cdd5287dc94a043b5bed",
+            "c183472ba1053c0f2b8362cee33e0f7a967ae0f0a5b4d5f82da58ba953fd93f3",
+            "c57437b8bb07ea74dd460a70af0f0025ec2a1685028e7ed9a6eec51500dbad01",
+            "c66f4cc4a49731043d8efb2efbda66459fdfadc925d1a08c7b67def04a4e80b9",
+            "cd2c862acd8f424a45d70421828efb77beea928a102f43acc6384098f14ae536",
+            "cf7d3473e1b94abfc83613c251e2795de91f5902cd7825acdcefbade0a40f027",
+            "d1c43424beb91a66d0e3a4318f8b28c18c9f22cb95d64e8f478b7fa943763aa6",
+            "d466108fd0adc61026ac6495769cf54f80ca84da39b6081390589e534bb89ec6",
+            "d498d9f58553c8ea789379df86b48d2a511ae6e9df8de575fe3ff00b85725268",
+            "d778ce6b75abf78bb0d7fde10f66bc9465cfd38e02fe3d0686c98f070e7849f5",
+            "ddd6d671d99140b8f84a51f911d99025ed07c417833d1e08eb0d4c5d524c83da",
+            "e179b44866306edb5212fcf55cb4df910028560e3b2701c6a78d51bee51273cb",
+            "e1ca96b5e0716108d2c067c5b6d5400695b5b96f34357683fe09b7737afe118a",
+            "e37bd886c723a22b2f268266c96e6a70b8077413a062fb0c5fed862b968e68d8",
+            "e4e59330ad9b5c6b42bd68c59f8255f6a1f9b6385e50bdef913a4354f56edcc1",
+            "e9c027baf2ad0b78fc1436884f1fa246d94fcfded66e9c40a7eaa6ff874e3940",
+            "f80e1429dac2ed833101919a1765833b14bdfe4d15b91d87671e38064db1f5fd",
+            "feb656335b6cb7f8c82a011c96e7a8c4700bd0bb854813b2497d0101a8b1e064"
+          ]
         },
         {
           "race_number": 2,
@@ -7615,6 +7859,12 @@
           "title": "Inbjudan",
           "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53809/a7b4e8a3-b860-49f3-9d52-f17ce00dd44e/Inbjudan.Pdf",
           "published_time": "2026-07-13"
+        },
+        {
+          "type": "ResultList",
+          "title": "Liveresultat",
+          "url": "https://liveresultat.orientering.se/followfull.php?comp=37566&lang=sv",
+          "published_time": null
         }
       ],
       "information": null,
@@ -7813,6 +8063,12 @@
           "title": "Inbjudan",
           "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53810/da501522-0cb5-4d84-be66-11121fe11246/Inbjudan.Pdf",
           "published_time": "2026-07-13"
+        },
+        {
+          "type": "ResultList",
+          "title": "Liveresultat",
+          "url": "https://liveresultat.orientering.se/followfull.php?comp=37567&lang=sv",
+          "published_time": null
         }
       ],
       "information": null,
@@ -8952,9 +9208,21 @@
           "title": "Inbjudan",
           "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/56226/ebe272c0-c03d-45c3-9f60-ca7b386c412f/Inbjudan.Pdf",
           "published_time": "2026-08-17"
+        },
+        {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/56226/701d0644-4836-4542-be03-bebebcd9938d/PM.Pdf",
+          "published_time": "2026-08-25"
+        },
+        {
+          "type": "Other",
+          "title": "Vägbeskrivning från tävlingscentrum till arenan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/56226/150b8ea6-802b-4f57-9401-00c7ba21e341/Vägbeskrivning från tävlingscentrum till arenan.Png",
+          "published_time": "2026-08-24"
         }
       ],
-      "information": "17/8 På grund av yttre omständigheter flyttas den första starten till kl. 15.30. Se den uppdaterade inbjudan för mer information.\n17/8 Due to external circumstances, the first start has been moved to 15:30. Please see the updated invitation for more information.",
+      "information": null,
       "region": "Dalarna",
       "punching_system": "Sportident",
       "races": [
@@ -8972,15 +9240,15 @@
           "urls": [
             {
               "type": "EntryList",
-              "url": "/Entry?eventId=56226",
-              "title": "Enter",
-              "last_updated_at": "2026-06-17T09:10:06.347739+00:00"
-            },
-            {
-              "type": "EntryList",
               "url": "/Events/Entries?eventId=56226&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-06-17T09:10:06.347739+00:00"
+            },
+            {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/200031",
+              "title": "Map, courses and routes will be available in Livelox",
+              "last_updated_at": "2026-08-26T01:30:56.245611+00:00"
             }
           ],
           "documents": [],
@@ -9101,6 +9369,18 @@
           "title": "Inbjudan",
           "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/56227/1531c78e-b49f-46a3-b081-4c966aee0b8b/Inbjudan.Pdf",
           "published_time": "2026-08-17"
+        },
+        {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/56227/c6c0fb89-f539-4bcd-903c-8a46d001d6d9/PM.Pdf",
+          "published_time": "2026-08-25"
+        },
+        {
+          "type": "Other",
+          "title": "Vägbeskrivning från tävlingscentrum till arenan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/56227/dadfb540-f73d-46a6-9555-047c7033fce0/Vägbeskrivning från tävlingscentrum till arenan.Png",
+          "published_time": "2026-08-24"
         }
       ],
       "information": null,
@@ -9121,15 +9401,15 @@
           "urls": [
             {
               "type": "EntryList",
-              "url": "/Entry?eventId=56227",
-              "title": "Enter",
-              "last_updated_at": "2026-06-17T09:10:06.347479+00:00"
-            },
-            {
-              "type": "EntryList",
               "url": "/Events/Entries?eventId=56227&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-06-17T09:10:06.347479+00:00"
+            },
+            {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/200044",
+              "title": "Map, courses and routes will be available in Livelox",
+              "last_updated_at": "2026-08-26T01:30:56.245725+00:00"
             }
           ],
           "documents": [],
@@ -9250,9 +9530,15 @@
           "title": "Inbjudan",
           "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/56228/673ec98d-eb23-4c24-a956-5e3b5248f160/Inbjudan.Pdf",
           "published_time": "2026-08-17"
+        },
+        {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/56228/69f687a6-896e-4885-9722-b9cc1586dcd0/PM.Pdf",
+          "published_time": "2026-08-25"
         }
       ],
-      "information": "Tävlingen ingår i Dalacupen 2026 för ungdomar i HD14 och HD16!",
+      "information": null,
       "region": "Dalarna",
       "punching_system": "Sportident",
       "races": [
@@ -9270,15 +9556,15 @@
           "urls": [
             {
               "type": "EntryList",
-              "url": "/Entry?eventId=56228",
-              "title": "Enter",
-              "last_updated_at": "2026-06-17T09:10:06.347609+00:00"
-            },
-            {
-              "type": "EntryList",
               "url": "/Events/Entries?eventId=56228&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-06-17T09:10:06.347609+00:00"
+            },
+            {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/200049",
+              "title": "Map, courses and routes will be available in Livelox",
+              "last_updated_at": "2026-08-26T01:30:56.245492+00:00"
             }
           ],
           "documents": [],
@@ -19119,23 +19405,81 @@
           "areas": [],
           "urls": [
             {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/199199",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-08-26T01:30:56.245760+00:00"
+            },
+            {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=59458&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-08-10T04:01:08.828412+00:00"
             },
             {
-              "type": "Livelox",
-              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/199199",
-              "title": "Map, courses and routes will be available in Livelox",
-              "last_updated_at": "2026-08-19T01:28:17.838806+00:00"
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=59458&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-08-26T01:30:56.245760+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=59458&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-08-26T01:30:56.245760+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "Kvinnor 8 km": 5,
+            "Herrar 8 km": 13,
+            "Kvinnor 5 km": 2,
+            "Herrar 5 km": 7,
+            "Kvinnor 3 km": 1,
+            "Herrar 3 km": 3
+          },
+          "result_counts": {
+            "Kvinnor 8 km": 5,
+            "Herrar 8 km": 13,
+            "Kvinnor 5 km": 2,
+            "Herrar 5 km": 7,
+            "Kvinnor 3 km": 1,
+            "Herrar 3 km": 3
+          },
+          "fingerprints": [
+            "0761672688f369792df09b3f1c87d1602147903126163f52fca0dd3d5444473f",
+            "0c12c513a82f0eabefbc01b3dfa3c56a911322988c09fd749733341b153d7f41",
+            "0ccb3ef9587cdafab4cca3d7bdddc816fa6345e198162981d258d0f85947ac03",
+            "0eb66051624f01fc5427cb6ad54dd8c16b88246d3549fa42f2cb1eb2b835db34",
+            "1f14d6b6177f54eda8c637291d654fe4b1bcedc62fe83b90efc5525399d5dac9",
+            "2dcd6dbc5d2a2e6211fc09afb2696524d453fce041aa0315d8fe82d7e1059e26",
+            "3476a19a7f735d13f749f26af4d9e7347cd50119474b073891fc83c9aea0166b",
+            "3a7d4a9c8b29646c9542f6efdcc75d5307b2df360551a6045d6a8e9101241f59",
+            "476109e26fba416c52cfda89b4021b6f41f12700a312e9fbabb2d64ce537fd28",
+            "4f6810830a80c4bccdae773f94a047c0fe68eae724bdae8487aac996197f5118",
+            "6db04add4e02722bf9cbdfae1b6dd5123c5b3246acc3fc5aa0590351d8382acc",
+            "810e90b018570b01dc9cea599758841d9ccee3c8b1b160fd8dbf4da997561654",
+            "901ce25f832d80d4842147af9fd636e4f5f6c74b25bbc30d2c832d833d8410fd",
+            "927835126f5d64ff37450e8e2c0f875b4951fd6da8dea7fb9409f78f32a31cc0",
+            "a7a6e0608934293c1767893ce7601de65bc4df69063a8b635246dbcca8cdf8c6",
+            "a82929f542ae15937dae8b62599b9a82c9b06853ad9f447b3045974b13ded60f",
+            "a98c9433b793192fc83b47c41a7ff02d1848919d7abdedfbe5236c45c2528711",
+            "b02835fbd72bc05e92c3175034fc78e96d646d50551cf4c7d48e84a13a72ef8d",
+            "b4752070c136d3a99736cbae1cf138902a58c874c45b8a97793146e46f7e6706",
+            "b59dad9c5757b2d704f85f3be133856f8d3d4bef0e694aa37124bfe50cb32989",
+            "c0030a2165f968b7cde825e322251852affd9814f165a56bb898bddd6dda6a3a",
+            "ca9f3612116b8cd3d148b52b3c010f74f79d81b082d8bc31d3e30d9615876db4",
+            "d397d0fa611caa2c039b00215c2d1ddd0307cddba188bfffea1b2b1015847f5a",
+            "e1f6c20a1dbd3f14d80dda7883d4cefddef4dd27aeb0edd8575c4e0d842fa476",
+            "ed710eee02a726be354f5933a43469db905b58d36c479b9357eaab32b9bf9017",
+            "f1e2a08120cc801a81baf15836922a3d44e549d5a94c2946349d5c6c1a10a6f3",
+            "f24802c056f68be999e0210aabf368dfe085bca3e2f85457cdd5fc84a43c4cb8",
+            "f67714ecc6cf000f47c7280efcc103c214e3c99138b8e3699def64424bef2f01",
+            "f6a64798863533804ea8b3deec9b242c3e5c72ef6a844d09b8bfe06b96057181",
+            "fa4181e95cece643ff2852f889da6612fa1d6bcb1fbdd8d94e9318407d72f949",
+            "ff2389e2885e406c19d1bdf6d8b506a0ab9305e90f8e6dcb4840991b3d9ab48c"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -20294,6 +20638,12 @@
           "title": "Inbjudan",
           "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/60085/3c571ccd-03e0-4d7c-baac-ab9fb8b10782/Inbjudan.Pdf",
           "published_time": "2026-08-05"
+        },
+        {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/60085/c4272587-1acf-4a46-a9ba-c8fd3cbd3088/PM.Pdf",
+          "published_time": "2026-08-24"
         }
       ],
       "information": null,
@@ -20548,7 +20898,7 @@
         }
       ],
       "documents": [],
-      "information": "Välkommen på MTBO-träning i Källviken-Galgberget!\n3 banor av sprintkaraktär i bostadsområde och lite i skog.\nKort=1 bana, Mellan=2 banor, Lång=3 banor.\nAlla är välkomna, även du som inte är med i OK Kåre. Kartställ finns att låna - skicka meddelande innan.\nIcke-kåreiter swishar 40 kr till 1233999018.",
+      "information": "Träningen ställs in, för få anmälda.\nTräningssugna rekommenderas åka banor i Mora på fredag, lördag och söndag.",
       "region": "Dalarna",
       "punching_system": "other",
       "races": [
@@ -20566,15 +20916,166 @@
           "urls": [
             {
               "type": "EntryList",
-              "url": "/Entry?eventId=60271",
-              "title": "Enter",
-              "last_updated_at": "2026-08-24T03:07:34.357616+00:00"
-            },
-            {
-              "type": "EntryList",
               "url": "/Events/Entries?eventId=60271&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-08-24T03:07:34.357616+00:00"
+            }
+          ],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_60277",
+      "name": "Smålandskustens närträning MTB-O",
+      "start_time": "2026-09-10",
+      "end_time": "2026-09-10",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Local"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "Nybro OK",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Jakob Jakobsson"
+        },
+        {
+          "role": "Contact phone number",
+          "name": "0725263209"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:BxUJAE9dCRMKHwcBHhsML0IGFx4OHw5cDhsP"
+        }
+      ],
+      "classes": [
+        "Kort",
+        "Lång",
+        "Mellan"
+      ],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/60277",
+          "title": null,
+          "last_updated_at": "2026-08-26T01:30:56.245653+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": "Småland",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "Smålandskustens närträning MTB-O",
+          "datetimez": "2026-09-10T18:00:00+02:00",
+          "discipline": "Long",
+          "night_or_day": "day",
+          "position": {
+            "lat": 56.7237918246236,
+            "lng": 15.9303662719145
+          },
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_60293",
+      "name": "Östgötaserien MTBO LOK",
+      "start_time": "2026-10-03",
+      "end_time": "2026-10-03",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Local"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "Linköpings OK",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Bertil Eronn"
+        },
+        {
+          "role": "Contact phone number",
+          "name": "0721994571"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:DxEQG0QfTRcTHwscLRMPDkQfTREOHQ=="
+        },
+        {
+          "role": "Event director",
+          "name": "Bertil Eronn"
+        },
+        {
+          "role": "Course setter",
+          "name": "Martin Jareland"
+        }
+      ],
+      "classes": [
+        "Kort Dam",
+        "Kort Herr",
+        "Lång Dam",
+        "Lång Herr",
+        "Mellan Dam",
+        "Mellan Herr"
+      ],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/60293",
+          "title": null,
+          "last_updated_at": "2026-08-26T01:30:56.245475+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": "Östergötland",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "Östgötaserien MTBO LOK",
+          "datetimez": "2026-10-03T11:00:00+02:00",
+          "discipline": "Middle",
+          "night_or_day": "day",
+          "position": null,
+          "areas": [],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Entry?eventId=60293",
+              "title": "Enter",
+              "last_updated_at": "2026-08-26T01:30:56.245477+00:00"
             }
           ],
           "documents": [],
