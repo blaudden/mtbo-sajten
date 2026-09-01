@@ -132,6 +132,112 @@
         }
       ],
       "entry_deadlines": []
+    },
+    {
+      "id": "IOF_9092",
+      "name": "CX80 World MTB Orienteering Championships 2028",
+      "start_time": "2028-09-23",
+      "end_time": "2028-09-23",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "World Championships"
+      ],
+      "tags": [],
+      "form": null,
+      "organisers": [
+        {
+          "name": "Portugal",
+          "country_code": "PRT"
+        }
+      ],
+      "officials": [],
+      "classes": [
+        "Men",
+        "Team Officials",
+        "Women"
+      ],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/9092",
+          "title": null,
+          "last_updated_at": "2026-08-21T18:00:03.150090+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": null,
+      "punching_system": null,
+      "races": [
+        {
+          "race_number": 1,
+          "name": "CX80 World MTB Orienteering Championships 2028",
+          "datetimez": "2028-09-23T23:00:00+00:00",
+          "discipline": "Other",
+          "night_or_day": null,
+          "position": null,
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "IOF_9093",
+      "name": "Junior World MTB Orienteering Championships 2028",
+      "start_time": "2028-09-23",
+      "end_time": "2028-09-23",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Junior World Championships"
+      ],
+      "tags": [],
+      "form": null,
+      "organisers": [
+        {
+          "name": "Portugal",
+          "country_code": "PRT"
+        }
+      ],
+      "officials": [],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/9093",
+          "title": null,
+          "last_updated_at": "2026-08-21T18:00:03.150070+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": null,
+      "punching_system": null,
+      "races": [
+        {
+          "race_number": 1,
+          "name": "Junior World MTB Orienteering Championships 2028",
+          "datetimez": "2028-09-23T23:00:00+00:00",
+          "discipline": "Other",
+          "night_or_day": null,
+          "position": null,
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
     }
   ]
 }

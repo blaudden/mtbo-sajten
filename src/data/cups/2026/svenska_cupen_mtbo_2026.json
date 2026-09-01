@@ -9,46 +9,178 @@
         "rank": 1,
         "name": "Rasmus Nordgren",
         "club": "OK Kåre",
-        "points": 110.0
+        "points": 215.0
       },
       {
         "rank": 2,
-        "name": "Miika Nurmi",
-        "club": "IFK Göteborg Orientering",
-        "points": 105.0
+        "name": "Armel Berthaud",
+        "club": "MTBO Collective, FRA",
+        "points": 158.0
       },
       {
         "rank": 3,
-        "name": "Jussi Laurila",
-        "club": "Jalasjärven Jalas, FIN",
-        "points": 95.0
+        "name": "Hannes Hnilica",
+        "club": "MTBO Team Austria, AUT",
+        "points": 150.0
       },
       {
         "rank": 4,
         "name": "Jon Hansson",
         "club": "OK Kåre",
-        "points": 76.0
+        "points": 132.0
       },
       {
         "rank": 5,
         "name": "Erik Holmberg",
         "club": "IKHP Huskvarna Idrottsklubb",
-        "points": 73.0
+        "points": 129.0
       },
       {
         "rank": 6,
+        "name": "Marcus Wehlin",
+        "club": "Garphyttans IF",
+        "points": 122.0
+      },
+      {
+        "rank": 7,
+        "name": "Vojtech Stransky",
+        "club": "Sportcentrum Jicin, CZE",
+        "points": 115.0
+      },
+      {
+        "rank": 8,
+        "name": "Antoine Lesquer",
+        "club": "MTBO Collective, FRA",
+        "points": 108.0
+      },
+      {
+        "rank": 9,
+        "name": "Miika Nurmi",
+        "club": "IFK Göteborg Orientering",
+        "points": 105.0
+      },
+      {
+        "rank": 10,
+        "name": "Jérémi Pourre",
+        "club": "MTBO Collective, FRA",
+        "points": 99.0
+      },
+      {
+        "rank": 11,
+        "name": "Hampus Larsson",
+        "club": "FK Göingarna",
+        "points": 98.0
+      },
+      {
+        "rank": 12,
+        "name": "Jussi Laurila",
+        "club": "Jalasjärven Jalas, FIN",
+        "points": 95.0
+      },
+      {
+        "rank": 13,
+        "name": "Joel Ernstsson",
+        "club": "Finspångs SOK",
+        "points": 89.0
+      },
+      {
+        "rank": 14,
+        "name": "Vojtěch Ludvík",
+        "club": "TJ Stadion Nový Bor, CZE",
+        "points": 88.0
+      },
+      {
+        "rank": 15,
+        "name": "Paul Debray",
+        "club": "MTBO Collective, FRA",
+        "points": 81.0
+      },
+      {
+        "rank": 16,
+        "name": "Daniel Marques",
+        "club": "COC Portugal",
+        "points": 78.0
+      },
+      {
+        "rank": 17,
+        "name": "Joâo Ferreira",
+        "club": "CAB, POR",
+        "points": 70.0
+      },
+      {
+        "rank": 18,
         "name": "Patrik Svedberg",
         "club": "Gävle OK",
         "points": 69.0
       },
       {
-        "rank": 7,
+        "rank": 19,
+        "name": "Jan Vacek",
+        "club": "Sporticus team, CZE",
+        "points": 65.0
+      },
+      {
+        "rank": 20,
+        "name": "Arvid Svensson",
+        "club": "Björkfors GOIF",
+        "points": 65.0
+      },
+      {
+        "rank": 21,
+        "name": "Augustin Leclere",
+        "club": "MTBO Collective, FRA",
+        "points": 64.0
+      },
+      {
+        "rank": 22,
+        "name": "Sebastian Svärd",
+        "club": "Haninge SOK",
+        "points": 62.0
+      },
+      {
+        "rank": 23,
+        "name": "Hiro Ayano",
+        "club": "Wiener Schulcup, AUT",
+        "points": 59.0
+      },
+      {
+        "rank": 24,
+        "name": "Fábio Gonçalves",
+        "club": "CRCG Entroncamento, POR",
+        "points": 54.0
+      },
+      {
+        "rank": 25,
+        "name": "Xoel Chamorro García",
+        "club": "Malungs OK Skogsmårdarna",
+        "points": 51.0
+      },
+      {
+        "rank": 26,
+        "name": "Thomas Jansson",
+        "club": "Garphyttans IF",
+        "points": 46.0
+      },
+      {
+        "rank": 27,
+        "name": "Pierre Martinez",
+        "club": "MTBO Collective, FRA",
+        "points": 43.0
+      },
+      {
+        "rank": 28,
+        "name": "Joakim Skärlén",
+        "club": "Haninge SOK",
+        "points": 33.0
+      },
+      {
+        "rank": 29,
         "name": "Julius Juodišius",
         "club": "OK Fortūna, LTU",
         "points": 30.0
       },
       {
-        "rank": 8,
+        "rank": 30,
         "name": "Andrii Grytsan",
         "club": "Långhundra IF",
         "points": 28.0
@@ -59,120 +191,234 @@
         "rank": 1,
         "name": "Gabriella Gustafsson",
         "club": "IKHP Huskvarna Idrottsklubb",
-        "points": 120.0
+        "points": 240.0
       },
       {
         "rank": 2,
-        "name": "Cæcilie Rueløkke Christoffersen",
-        "club": "OK Øst Birkerød, DEN",
-        "points": 100.0
+        "name": "Cecilia Thomasson",
+        "club": "Östersunds OK",
+        "points": 185.0
       },
       {
         "rank": 3,
         "name": "Karin E Gustafsson",
         "club": "Garphyttans IF",
-        "points": 75.0
+        "points": 181.0
       },
       {
-        "rank": 3,
-        "name": "Cecilia Thomasson",
-        "club": "Östersunds OK",
-        "points": 75.0
+        "rank": 4,
+        "name": "Ingrid Stengård",
+        "club": "Fältjägarnas IF",
+        "points": 151.0
       },
       {
         "rank": 5,
         "name": "Ella Palm",
         "club": "IKHP Huskvarna Idrottsklubb",
-        "points": 73.0
+        "points": 143.0
       },
       {
         "rank": 6,
-        "name": "Ingrid Stengård",
-        "club": "Fältjägarnas IF",
-        "points": 72.0
+        "name": "Sara Forsgren",
+        "club": "OK Nolaskogsarna",
+        "points": 136.0
       },
       {
         "rank": 7,
-        "name": "Eva Gustafsson",
-        "club": "Garphyttans IF",
-        "points": 53.0
+        "name": "Jana Hnilica",
+        "club": "MTBO Team Austria, AUT",
+        "points": 114.0
       },
       {
         "rank": 8,
+        "name": "Eva Lundin",
+        "club": "Garphyttans IF",
+        "points": 106.0
+      },
+      {
+        "rank": 9,
+        "name": "Anna Tiderman",
+        "club": "Haninge SOK",
+        "points": 101.0
+      },
+      {
+        "rank": 10,
+        "name": "Cæcilie Rueløkke Christoffersen",
+        "club": "OK Øst Birkerød, DEN",
+        "points": 100.0
+      },
+      {
+        "rank": 11,
+        "name": "Emelie Holmström",
+        "club": "Järla Orientering",
+        "points": 94.0
+      },
+      {
+        "rank": 12,
+        "name": "Mia Eronn",
+        "club": "Linköpings OK",
+        "points": 90.0
+      },
+      {
+        "rank": 13,
+        "name": "Ida Ernstsson",
+        "club": "Finspångs SOK",
+        "points": 89.0
+      },
+      {
+        "rank": 14,
+        "name": "Marisa Costa",
+        "club": "Wiener Schulcup, AUT",
+        "points": 73.0
+      },
+      {
+        "rank": 15,
+        "name": "Nadia Larsson",
+        "club": "Fredrikshofs IF Skid & OK",
+        "points": 69.0
+      },
+      {
+        "rank": 16,
+        "name": "Laura Csúcs-Fenyvesi",
+        "club": "IFK Mora OK",
+        "points": 69.0
+      },
+      {
+        "rank": 17,
+        "name": "Constance Devillers",
+        "club": "MTBO Collective, FRA",
+        "points": 66.0
+      },
+      {
+        "rank": 18,
+        "name": "Emma Doubkova",
+        "club": "Sporticus team, CZE",
+        "points": 57.0
+      },
+      {
+        "rank": 19,
         "name": "Åsa Wallinder",
         "club": "Västerås SOK",
         "points": 52.0
       },
       {
-        "rank": 9,
+        "rank": 20,
+        "name": "Valerie Kamererová",
+        "club": "TJ Stadion Nový Bor, CZE",
+        "points": 51.0
+      },
+      {
+        "rank": 21,
+        "name": "Maria Andersson",
+        "club": "OK Kåre",
+        "points": 43.0
+      },
+      {
+        "rank": 22,
         "name": "Yrsa Röjgård",
         "club": "OK Kolmården",
         "points": 40.0
       },
       {
-        "rank": 10,
-        "name": "Emelie Holmström",
-        "club": "Järla Orientering",
-        "points": 33.0
+        "rank": 23,
+        "name": "Jennie Börjesson Eriksson",
+        "club": "Malungs OK Skogsmårdarna",
+        "points": 39.0
       },
       {
-        "rank": 11,
-        "name": "Mia Eronn",
-        "club": "Linköpings OK",
-        "points": 28.0
+        "rank": 24,
+        "name": "Natasha Thackray",
+        "club": "Bibbulmun Orienteers, AUS",
+        "points": 34.0
       },
       {
-        "rank": 12,
+        "rank": 25,
         "name": "Sonia Rodiére",
         "club": "IFK Lidingö SOK",
         "points": 27.0
       },
       {
-        "rank": 13,
-        "name": "Sara Forsgren",
-        "club": "OK Nolaskogsarna",
-        "points": 26.0
-      },
-      {
-        "rank": 14,
+        "rank": 26,
         "name": "Karolina Mickeviciute Juodisiene",
         "club": "OK Fortūna, LTU",
         "points": 25.0
+      },
+      {
+        "rank": 27,
+        "name": "Elsa Forsgren",
+        "club": "Västerbergslagens OL",
+        "points": 15.0
       }
     ],
     "H17-20": [
       {
         "rank": 1,
-        "name": "Melvin Löfgren",
-        "club": "OK Kåre",
-        "points": 110.0
+        "name": "Joel Holmgård",
+        "club": "Kils OK",
+        "points": 240.0
       },
       {
         "rank": 2,
-        "name": "Gustav Eggöy Markhester",
-        "club": "IFK Mora OK",
-        "points": 90.0
+        "name": "Melvin Löfgren",
+        "club": "OK Kåre",
+        "points": 230.0
       },
       {
         "rank": 3,
+        "name": "Gustav Eggöy Markhester",
+        "club": "IFK Mora OK",
+        "points": 176.0
+      },
+      {
+        "rank": 4,
+        "name": "Axel Gräfnings",
+        "club": "Grycksbo IF OK",
+        "points": 150.0
+      },
+      {
+        "rank": 5,
+        "name": "Adrians Poreiters",
+        "club": "Kekavas NSS, LAT",
+        "points": 115.0
+      },
+      {
+        "rank": 6,
+        "name": "Diogo Virginia",
+        "club": "BTT LOULÉ Portugal",
+        "points": 111.0
+      },
+      {
+        "rank": 7,
+        "name": "Herman Eng",
+        "club": "IFK Göteborg Orientering",
+        "points": 101.0
+      },
+      {
+        "rank": 8,
+        "name": "Marts Poreiters",
+        "club": "Kekavas NSS, LAT",
+        "points": 91.0
+      },
+      {
+        "rank": 9,
+        "name": "David Marques",
+        "club": "COC Portugal",
+        "points": 85.0
+      },
+      {
+        "rank": 10,
         "name": "Hampus Karlsson",
         "club": "OK Bävern",
         "points": 76.0
       },
       {
-        "rank": 4,
-        "name": "Joel Holmgård",
-        "club": "Kils OK",
-        "points": 60.0
+        "rank": 11,
+        "name": "Oskar Eklöv",
+        "club": "Tumba-Mälarhöjden OK",
+        "points": 67.0
       },
       {
-        "rank": 5,
-        "name": "Axel Gräfnings",
-        "club": "Grycksbo IF OK",
-        "points": 50.0
-      },
-      {
-        "rank": 6,
+        "rank": 12,
         "name": "Olle Hamberg",
         "club": "Östersunds OK",
         "points": 40.0
@@ -183,43 +429,55 @@
         "rank": 1,
         "name": "Signe Feil",
         "club": "Sundsvalls OK",
-        "points": 120.0
+        "points": 250.0
       },
       {
         "rank": 2,
         "name": "Emilia Jakobsson",
         "club": "Nybro OK",
-        "points": 95.0
+        "points": 210.0
       },
       {
         "rank": 3,
-        "name": "Julia Jennische Péclard",
-        "club": "OK Kåre",
-        "points": 78.0
-      },
-      {
-        "rank": 4,
         "name": "Hennie Löfgren",
         "club": "Stora Tuna OK",
-        "points": 76.0
+        "points": 180.0
       },
       {
         "rank": 4,
+        "name": "Julia Jennische Péclard",
+        "club": "OK Kåre",
+        "points": 171.0
+      },
+      {
+        "rank": 5,
         "name": "Greta Brandin",
         "club": "OK Kåre",
-        "points": 76.0
+        "points": 157.0
       },
       {
         "rank": 6,
+        "name": "Ellen Forsgren",
+        "club": "Västerbergslagens OL",
+        "points": 109.0
+      },
+      {
+        "rank": 7,
         "name": "Linnea Lundstedt",
         "club": "Sjövalla FK",
         "points": 63.0
       },
       {
-        "rank": 7,
+        "rank": 8,
         "name": "Moa Pilvinge",
         "club": "OK Kolmården",
         "points": 50.0
+      },
+      {
+        "rank": 9,
+        "name": "Emilia Grybäck",
+        "club": "IF Thor",
+        "points": 33.0
       }
     ]
   }

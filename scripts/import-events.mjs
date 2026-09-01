@@ -25,6 +25,7 @@ import sharp from 'sharp';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = path.resolve(__dirname, '..');
 const DEST_DIR = path.join(PROJECT_ROOT, 'src', 'data', 'events');
+const CUPS_DEST_DIR = path.join(PROJECT_ROOT, 'src', 'data', 'cups');
 const OG_DEST_DIR = path.join(PROJECT_ROOT, 'public', 'og-images', 'events');
 const IMAGES_DIR = path.join(PROJECT_ROOT, 'src', 'assets', 'images');
 
@@ -209,6 +210,14 @@ async function importData(scraperRoot) {
     console.log(`✓ Copied ${year}/events.json (${data.events.length} events)`);
   }
 
+  // Copy cup standings and seeding data if present
+  const srcCupsDir = path.join(scraperRoot, 'data', 'cups');
+  if (fs.existsSync(srcCupsDir)) {
+    fs.mkdirSync(CUPS_DEST_DIR, { recursive: true });
+    fs.cpSync(srcCupsDir, CUPS_DEST_DIR, { recursive: true });
+    console.log(`✓ Copied cups data to ${CUPS_DEST_DIR}`);
+  }
+
   console.log(`\nDone! Imported ${years.length} years, ${totalEvents} total events.`);
   console.log(`Destination: ${DEST_DIR}`);
 }
@@ -232,7 +241,7 @@ try {
   if (shouldCommit) {
     console.log('\nCommitting changes...');
     try {
-      execFileSync('git', ['add', DEST_DIR], { stdio: 'inherit' });
+      execFileSync('git', ['add', DEST_DIR, CUPS_DEST_DIR], { stdio: 'inherit' });
       execSync('git commit -m "chore: import events from scraper"', { stdio: 'inherit' });
       console.log('✓ Committed changes');
     } catch {

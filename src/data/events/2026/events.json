@@ -131,25 +131,55 @@
           "published_time": null
         },
         {
+          "type": "Other",
+          "title": "Presentation TOM Middle distance",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8277/0482cdcd-e230-4056-842c-bcdf917edbcf/Presentation TOM Middle distance.Pdf",
+          "published_time": "2026-08-25"
+        },
+        {
+          "type": "Other",
+          "title": "Presentation TOM Long distance",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8277/eb1e8799-4b15-4f49-9b53-add08a6c8e4e/Presentation TOM Long distance.Pdf",
+          "published_time": "2026-08-26"
+        },
+        {
+          "type": "Other",
+          "title": "Middle distance photos by Lukas Faltejsek",
+          "url": "https://www.flickr.com/photos/147099814@N07/albums/72177720335333597/with/55493009229",
+          "published_time": null
+        },
+        {
+          "type": "Other",
+          "title": "Presentation TOM Sprint",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8277/a36e21c7-840b-4fbb-8797-e3a63420e02d/Presentation TOM Sprint.Pdf",
+          "published_time": "2026-08-28"
+        },
+        {
           "type": "Bulletin",
           "title": "Bulletin 1",
-          "url": "/Documents/Event/8726/Bulletin-1",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8277/bbcaa0e7-f01b-4cc3-a5f9-74e5dbb8ba89/Bulletin-1.pdf",
           "published_time": "2025-02-26"
         },
         {
           "type": "Bulletin",
           "title": "Bulletin 2",
-          "url": "/Documents/Event/9629/Bulletin-2",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8277/f425d10b-c7d5-413f-8d36-68c8ad60966d/Bulletin-2.pdf",
           "published_time": "2025-10-01"
         },
         {
           "type": "Bulletin",
           "title": "Bulletin 3",
-          "url": "/Documents/Event/10685/Bulletin-3",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8277/1804ce0c-765f-4ae2-90e1-5809cecf3834/Bulletin-3.pdf",
           "published_time": "2026-07-16"
+        },
+        {
+          "type": "Bulletin",
+          "title": "Bulletin 4",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8277/8ebb120e-9ebf-4999-85aa-8c643da20356/Bulletin 4.Pdf",
+          "published_time": "2026-08-21"
         }
       ],
-      "information": "10/8 Upon request, colour-blind competitors can receive, in addition to the map with the standard course overprint in purple, a map with the course overprint in blue. This costs 5 € per competition, and the request must be submitted to\n[email protected]\nno later than 16th of August.\n6/8 Banquet entry form published - latest date for entry is 15th of August\n16/7 We updated Bulletin 3 with clarification regarding possibility of biking on the Vasaloppet track only during official Vasaloppet races 7th and 8th of August.",
+      "information": "27/8 Some clarification about orange embargoed area. You are free to do anything you want in the area as long as you do it without a map. Starting Satuday 00:01, parts of the area are totally embargoed, see bulletin 4.",
       "region": null,
       "punching_system": null,
       "races": [
@@ -579,27 +609,314 @@
               ]
             }
           ],
-          "urls": [],
+          "urls": [
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=8775&groupBy=EventClass",
+              "title": "StartList",
+              "last_updated_at": "2026-08-26T01:30:56.245954+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/Show/8775",
+              "title": "ResultList",
+              "last_updated_at": "2026-08-27T12:38:15.778647+00:00"
+            },
+            {
+              "type": "LocalStartList",
+              "url": "data/events/2026/IOF_8277_startlist_1.yaml",
+              "title": null,
+              "last_updated_at": "2026-08-26T01:30:38.106898+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
           "result_counts": null,
-          "fingerprints": []
+          "fingerprints": [
+            "01a01a78506a5792e2ad6468c48b8e07d343a6d3167f262c6606849c2c3265c8",
+            "026aec34ff6751a1e2e6bc16f5075ed4ad0c97ed32a049b7b6e1bbd9873b578d",
+            "0380ad83c5edc6c17c70268400d5a9e34428e4708b10042de05c6e781c9dbffa",
+            "06a886b370a0125577f5bee9465c1664a58c8b345f163d05d6091d830c736e67",
+            "071f191cd932ac38dc9c07e887a3d0dec025f2cb5ea4704c6e190da2cdc00254",
+            "0b6db1b895efc87fa98925f02535bc373991552e6f8a80ad26a305df545265c1",
+            "0bfea5c6cb3d71dbc2ed248bfd93800927946383e7078a29e665c80bdddda1f2",
+            "0ce242203e06e04b4264516485fc2f76d874a09fdc285708dba300a80c7d7f9a",
+            "0d4000402f36d0be2739d366d33b6df0df57479d0aecd3124eff887532594256",
+            "111dba04af0012e8c0f26a0aaaae5984d7bad77b9ace2a19460d792211ea7db6",
+            "12788cca708d5ad65d63a610e78e277e02a9be1ad42b2f5930474c76dba9fc12",
+            "12cc7f63f5966df19fb60785df0ed965c76b94e4775580f338e5703c20973295",
+            "13ca14039d33c0f72ed37d9ac56462ecfcc35c20ba5e8b2bf42a9d728132092b",
+            "17b3ca5f3b41d14579e1fd2972a2e2f66da61fe833ac744636b696319f8d159b",
+            "1b748834e75b385e3bcf05e94b0505047330bbac3935c7252eebf82af50c911e",
+            "1c22e84992f21521908ec9a580bee3d4cd01eca22701ad0c00be02f427448283",
+            "1c41aae6b44f33f5004524b00436426cfec69a3f5b3694dc8a78b682083712a7",
+            "1c5a057d39861f18985d3706c9077b3c892094623adb1716492163c9d400077b",
+            "1ee968377c1f6ca7ff6c7829d92864a21f3ce7ce2af869a01134caa9e029d33d",
+            "1eee5192a28c321cf78ceeda85c9d0e5663b288c4f405ccf1a368c66f69b418d",
+            "20a294d4b7c686e1b53adc1fd53a934faae210872e69893cb3e11feb339f0f27",
+            "2990ed6b95ccee489a32e25c65d72dc42c7f058e349428bc648a4360ceddc727",
+            "2f1dec99eca750bbe811ac81f52b66deba56fce0a86e5f00e4f049493aa1b374",
+            "3349ba8e29b13b550d3da50b99389ff1067e577f708449c13de822c31d896edf",
+            "353a936d1f8950e94e6c77a028b08ae199e0923ff5fa4e365d3ea29f2412692e",
+            "3680721d77b5259a9a9cbf536be103802c2785deade74bd0270bd47b20c07f61",
+            "378d85401662b5e85b3479df3baec6617b8e3510fe7937e558442b582ec69ad1",
+            "381c8b080ffec5e1fa2de7a9b8923ee4fabfefe6e1dea089311e212e6acdf905",
+            "399ceb63225d5d4675289c540ca678c4c49a5ecdd4c7d1233d3abcdbcc84cb9d",
+            "3af17896892101a816a9217422660cb51bbdeae031ba5b9f07ef0eebd2afaba2",
+            "3af2d25dd8f12465a955cc1517bb1cef1daacaedaf14b382c80bc159f45ec96e",
+            "3be50f24e050c9e4630186976cef5806c38dc7fe7347f2e145f4e6da760bd518",
+            "3da4e428ea85bf521fd3162c3e9507e453606b2b4fb67e3f0b74593481bd5427",
+            "407de68a6112a77ba54cd01a31fcd37fd6776baa0e0ade4cf549117c19913758",
+            "435b46703579da9e0b2f6a8dfbb050925f3e41276427755d099c69d6124feadb",
+            "44e3ffd3145e78e74f9259d8d882d071fb1cd9a0b82c6cf99a1d1e75cbc140d5",
+            "479e1dd562eaeb06585e3a67fc08945d2ae4787c3ab633815ca51e72d9d2daf2",
+            "47a971cab1a94b80dcdb7f37b6d1aedbf47044fdda7427eb9b1c0a8019022e37",
+            "47c32c48670ef25e818192e4b5c7f2f9ad73c6c7d084ddf2c009a2ba856451e3",
+            "48ea63c7192fb0c242525efb1fa751960e2fa783ed81614a3fe6d22807639127",
+            "4a02a37b04b8751ac87aecba4da97a9a9fb633945c571554332ed8edd4823566",
+            "4cc18cc24cbdaa147900ea2821e018b73610706998446a189cd942e566af27ab",
+            "4e035fd0f7979469d5b13fa0c1236af7525420d2224a2d1a9756e88e4b6932d7",
+            "511af00b6b5e1758d45c66ce57888abdbb04b0609937a849356730a175492943",
+            "51ea6903dbaf6846e3ccf67965b9b8381830171ef0b22b19b2b3c5c24bc04020",
+            "52b5ec0193d344e180e3ae15bf23849cc4d07239e9814acca1dac8ecfa8b730f",
+            "53c79415608c1dfeccc5c984da7bb0617c03baba1503e5d5f6277ee721c42086",
+            "5ceac3bf1361823d43dd31282e24460ffb2c473583b084993b0240c1ba86d030",
+            "65af1402b4584a09150fffd59282d4df3c77384a4673b2e0d7f7a533517c8089",
+            "6642227b8bb6898439cc599f8f2b693d6f20ce703d10421b846c26d1ce658236",
+            "666ff0705d87a8e31407b08b4384309e019a39f8f626601a881e22926f03d78b",
+            "66f399db8262cec5d6e9f760643b9009b9b74a2e1f8c1111a9cb4e23ac0aa454",
+            "6781c5a429c8d63e61c2810a554ce8859fafb6d394640d3bfd1d063b992e53a3",
+            "6aa34c9e3424979adfc72e4224e7b7fb9251d741d7d519ab10f41a3efaea8c7a",
+            "6eefbd20ea96b8bfe6c3ac11ed4acf4dbd261e193d2219e79b01e5214c916520",
+            "72ebf726e334450d59bb7f04b5a30216fe6881a3921e2c4012005ea754105974",
+            "73f658372af2408cea4a087edd77c56d42f46508834270691bf080178dd04a06",
+            "7b2bc09481ce448787b31f4671a38d19748f9955adb3ee2ff224837f79961d47",
+            "7b7625742055fdbe9abf84fe88ae7f42b60eeb09a799d74d89afef52e6228e6b",
+            "7db7fa069d28818dbe4311968a0f76a870902f4f62d863be84f3007632eee42e",
+            "812149ca6c77594df0a41ddfa79304b673bf225455af9929ead11c39e1400f08",
+            "81bc86b700f16004da1b9eae33c381aeac8e6fa14f26efc608d8ea0ac4a9376c",
+            "85e2737b3b23fa975b4794fc7ab8218dd0e15e4b4edc4f7e3a2328541ab26fe6",
+            "87ca524e50b86587d7b434d6afce09d3cce6711c6ed818dedc69916e57b72797",
+            "88be37af37b4b17240e2f1a93c90e773573c84e522b65e4a7f87fde0896cd725",
+            "89441040c984def072cfaa3a37a8a542ac7cf03228cda96e797fde5cb038a01f",
+            "89dd0c6f5bfece20593de2ad285565941cc5f7793e19690023dfb1310ac4a6d6",
+            "8a513f48bdfa710c9841e63c343686a0d4d3199ba6ecad92a063692364b4e493",
+            "8a918b7724a7618eed030c82cbe1d42f9e6a18ff571e1db0650fae406092e58e",
+            "8ac03c2bf18acefeea24948354b6e07c617945f93f08abd83b84246081a27f0f",
+            "8bf4e15fa0e130d5467df6a339dea48afe9fff25b692afa0aec8cd80e8977df1",
+            "8dbdc1faf0230f30eeede4e9136b7ec94483d112867721682d8d5414311e25e1",
+            "8dd51c1b789652ac0423ef70fee0271eafd1055dd97f6ca67436c2f3e270d60d",
+            "9077762c9c3d0dbad683c0164af43e53f759487c5ce9fe3250a75b6f1c73e4b3",
+            "93887f3a706bc0de389a8e72b90c17201ed85f7da9ef453307ed0e2a9c5c6a64",
+            "957cf57646e6158622dc4cd70a857166ab22df66e4cb7bdcb23f17ea2007258f",
+            "96ba3dba7f7bd51d458c073cee42fc655196786a2ce7fbdc76087cbd8fb06a7e",
+            "97513693a43dcb142de0b0d4065ee2d02cc88cc714bafa96207a95b350e1e9c4",
+            "9dbc40d2e809c26af1978e12fe11f356ae1236fc1098c9d3d70e159a55258d43",
+            "a0fde1561fadbc641e86f7e0978b9bf698bcf95824cd65b59611840307a12aac",
+            "a1ee882acbaa0ca49284905a6b71a8644847bf6219240a2c6c54a3913f819408",
+            "a68dda17d7fd34a72c359929d05d471d59b4c97f75b967236d86c52c16d43569",
+            "a6ba8d4bd75f154ba36eaa30d634217bee9a6ea7b2806de80591df7311305de1",
+            "a6c662d8c131d13d4b10951ad45db2f5b16e4a52342292d5e7f2bea63fff6d77",
+            "aa6049cdb690c69e7755d7c922e63916ce05e344927dcc53659bb3cc7edeb984",
+            "aab304b9bbc7befb69e04e6d78866e8f51c1bf60c2520df4f25045871aaeade5",
+            "ab4887954dc939e00b5c42e0dfae779c4196ff50c2a0776f94700e0fe98c85af",
+            "af0c9a8a6e9a5ec7dd816b11f20bfe8881af9be07fe9c88f51f7867dc5eaebf2",
+            "b03dce1ca6b75978ab6aaf8a8e62e128fc5b95e239e3c55bedddb0ac2f6ea41e",
+            "b1064abd2cf3661e0df9ad40b6e3a1765d38cb90d9b2daeeab55471dafc100a9",
+            "b18f55962348e6b02d140138bf98c1523b47c825b0efe16df0a34f7decf03d25",
+            "b2ba6d933a664a531cddf9778840ae11f4d83f67a35edf7ee0811291a18c3f71",
+            "b32d22c9aaa208b19e81e26e0c4f622b1cb12952045ccab570005034f5c27648",
+            "b3acadc192dc08d5d4fd7f5410da0c85f8c207b9c009df7d1a8becbe1ae28e33",
+            "b4ccb12d421d7596dcc7c86cc92f1334d58c5d402cb8f8088180096d8f5b51fa",
+            "b6d7efef68a8a45bf452d01c197167a95f7c2681d31fbc909d5cfeeeb5010051",
+            "b87ff237005990de1777f30f0bf9a3be98c97994364000db89462d1683e447ba",
+            "bb1498eb3e6d07abb4a47d91681edbf861dc68e9c8473ad7fb2d967d5cc5aaaa",
+            "bb2e487607ada9e8bae0ec46f755a54e7e4f32787c68ae9a600d46a41a2a0dac",
+            "bdc233eb7508cb9e0a8c6406f09f9840a979c072211207940c04219b82ddcfe5",
+            "beb0cbbb5abe6be26db756c39cf4b41bea02e6f0fc8d9ea90d074b9e5dd49a2a",
+            "c306006e1d70c6600a73cd81baca35a7d0686e9d683327d56d988076830a0c3d",
+            "c6ba202e04bfeb02f4a0abd7864204e049f3195691e6e5c243974908b01a6026",
+            "ca333ffaf445e444c86afeb7a3441018f08533c6f0d737c1675d10ec05cfb0da",
+            "ca6390a5a2951db072b0bb16702f415800daf613d695ebf09bc703fed41be8ba",
+            "cbbc0b74ee20fe75b228cbc5108cf9575cc49d00bc3f58e335a18cc75f58fe57",
+            "cc6caad1490849242f08b2876156efc366dc94c3589c680c7e67f23ffa9b5f06",
+            "cd5a0cdaac2c829522e66555766a3451b9f3de6f5fad82893031ef3c6c7d4df7",
+            "ceaee63050e440fe03f3bcc2efd02cc61fc612509263b855eaac01f52fb10e3f",
+            "cf98a9918402ad387b632d4f3d8a50db3b2bf3eec739c6f603b4b9070d936b51",
+            "d09a9dcb1e90a9f7c976cfcda7dace2c625e6023faa343adbc9889e626b9d3a7",
+            "d43412ee9d13c278a2b5da5e0bc7388efb4c29a12ec834dddba29d1c535f398b",
+            "d5d77aea07119db1a1f095e8832ab37b93ba5ddab041c0f2748d72a2399b35c0",
+            "d6dbe638b8d8951f2bcb5f1c9ba45c2e4e605de1005d7ee557c1ace1d45f71e7",
+            "d70296170450d2c8845025ebc645b0df80f202d3d59fcb269af2549ab8d98a6b",
+            "d79d1e701d510897e5f9ea392782c328ea9e47a51cc95d2316432b94eb3169d3",
+            "d8ff61bab99250e477f0829303a46d433171e2b53e21b898e2e1fc5b528a8753",
+            "d9331a1e875935a195426b99a19e56e154b09607c5dc8870b796ae04685398a0",
+            "df110be694f8d47f4a807dfe29661ef415b4f37aa9a7ee81eee36eb3d474bf34",
+            "e27c3cf7da6ab02a0a598bb64d684ee1297d46265e67c95bd1ad488b0c83ee94",
+            "e2d2d0704d70fe035f88afc3d37a4e8c12e3b7212e1b63c1f28a6ed33806e851",
+            "e701157a9e1c1a43ee6367d19a9cbcab5ac0d1355261b6c9687af1a158478a6a",
+            "e9ee9532ec4edafabff039a63013e98dd51544a7763aa857830269dcf262cf76",
+            "eb13e8cafe22ab3a26ea2a89b98d9198bce95a887c2d931cf4ffa64325959e7e",
+            "ed0a355c327d6652292426098420f35593c0067b92b59da5c78767c618bb6521",
+            "f1d535c874d4dd76f5c501d2200ccc615bbf238a222648cab7193325753d5d60",
+            "f88fb080fdbe807b7e0fff6f6521231a77040d16e1b1ba52b3285c1d26f44bd5",
+            "fb4a99af57f1be03d136bbbdd154f38216ad0ef984c5772590c111e278eb71d4",
+            "fd7e8cc4e04980dcd97da2c3121ac3c48be1d5dbb09e3f7ea678e04bee70326a"
+          ]
         },
         {
           "race_number": 2,
           "name": "Long",
-          "datetimez": "2026-08-27T10:00:00+02:00",
+          "datetimez": "2026-08-27T08:00:00+02:00",
           "discipline": "Long",
           "night_or_day": null,
           "position": null,
           "areas": [],
-          "urls": [],
+          "urls": [
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=8776&groupBy=EventClass",
+              "title": "StartList",
+              "last_updated_at": "2026-08-27T12:38:15.778651+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/Show/8776",
+              "title": "ResultList",
+              "last_updated_at": "2026-08-29T08:47:31.542768+00:00"
+            },
+            {
+              "type": "LocalStartList",
+              "url": "data/events/2026/IOF_8277_startlist_2.yaml",
+              "title": null,
+              "last_updated_at": "2026-08-27T12:38:15.699598+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
           "result_counts": null,
-          "fingerprints": []
+          "fingerprints": [
+            "01a01a78506a5792e2ad6468c48b8e07d343a6d3167f262c6606849c2c3265c8",
+            "026aec34ff6751a1e2e6bc16f5075ed4ad0c97ed32a049b7b6e1bbd9873b578d",
+            "0380ad83c5edc6c17c70268400d5a9e34428e4708b10042de05c6e781c9dbffa",
+            "06a886b370a0125577f5bee9465c1664a58c8b345f163d05d6091d830c736e67",
+            "071f191cd932ac38dc9c07e887a3d0dec025f2cb5ea4704c6e190da2cdc00254",
+            "0b6db1b895efc87fa98925f02535bc373991552e6f8a80ad26a305df545265c1",
+            "0bfea5c6cb3d71dbc2ed248bfd93800927946383e7078a29e665c80bdddda1f2",
+            "0ce242203e06e04b4264516485fc2f76d874a09fdc285708dba300a80c7d7f9a",
+            "0d4000402f36d0be2739d366d33b6df0df57479d0aecd3124eff887532594256",
+            "111dba04af0012e8c0f26a0aaaae5984d7bad77b9ace2a19460d792211ea7db6",
+            "12788cca708d5ad65d63a610e78e277e02a9be1ad42b2f5930474c76dba9fc12",
+            "12cc7f63f5966df19fb60785df0ed965c76b94e4775580f338e5703c20973295",
+            "13ca14039d33c0f72ed37d9ac56462ecfcc35c20ba5e8b2bf42a9d728132092b",
+            "17b3ca5f3b41d14579e1fd2972a2e2f66da61fe833ac744636b696319f8d159b",
+            "1b748834e75b385e3bcf05e94b0505047330bbac3935c7252eebf82af50c911e",
+            "1c22e84992f21521908ec9a580bee3d4cd01eca22701ad0c00be02f427448283",
+            "1c41aae6b44f33f5004524b00436426cfec69a3f5b3694dc8a78b682083712a7",
+            "1c5a057d39861f18985d3706c9077b3c892094623adb1716492163c9d400077b",
+            "1eee5192a28c321cf78ceeda85c9d0e5663b288c4f405ccf1a368c66f69b418d",
+            "20a294d4b7c686e1b53adc1fd53a934faae210872e69893cb3e11feb339f0f27",
+            "2990ed6b95ccee489a32e25c65d72dc42c7f058e349428bc648a4360ceddc727",
+            "2f1dec99eca750bbe811ac81f52b66deba56fce0a86e5f00e4f049493aa1b374",
+            "3349ba8e29b13b550d3da50b99389ff1067e577f708449c13de822c31d896edf",
+            "353a936d1f8950e94e6c77a028b08ae199e0923ff5fa4e365d3ea29f2412692e",
+            "3680721d77b5259a9a9cbf536be103802c2785deade74bd0270bd47b20c07f61",
+            "378d85401662b5e85b3479df3baec6617b8e3510fe7937e558442b582ec69ad1",
+            "381c8b080ffec5e1fa2de7a9b8923ee4fabfefe6e1dea089311e212e6acdf905",
+            "399ceb63225d5d4675289c540ca678c4c49a5ecdd4c7d1233d3abcdbcc84cb9d",
+            "3af17896892101a816a9217422660cb51bbdeae031ba5b9f07ef0eebd2afaba2",
+            "3af2d25dd8f12465a955cc1517bb1cef1daacaedaf14b382c80bc159f45ec96e",
+            "3be50f24e050c9e4630186976cef5806c38dc7fe7347f2e145f4e6da760bd518",
+            "3da4e428ea85bf521fd3162c3e9507e453606b2b4fb67e3f0b74593481bd5427",
+            "407de68a6112a77ba54cd01a31fcd37fd6776baa0e0ade4cf549117c19913758",
+            "435b46703579da9e0b2f6a8dfbb050925f3e41276427755d099c69d6124feadb",
+            "44e3ffd3145e78e74f9259d8d882d071fb1cd9a0b82c6cf99a1d1e75cbc140d5",
+            "479e1dd562eaeb06585e3a67fc08945d2ae4787c3ab633815ca51e72d9d2daf2",
+            "47a971cab1a94b80dcdb7f37b6d1aedbf47044fdda7427eb9b1c0a8019022e37",
+            "47c32c48670ef25e818192e4b5c7f2f9ad73c6c7d084ddf2c009a2ba856451e3",
+            "4a02a37b04b8751ac87aecba4da97a9a9fb633945c571554332ed8edd4823566",
+            "4cc18cc24cbdaa147900ea2821e018b73610706998446a189cd942e566af27ab",
+            "4e035fd0f7979469d5b13fa0c1236af7525420d2224a2d1a9756e88e4b6932d7",
+            "511af00b6b5e1758d45c66ce57888abdbb04b0609937a849356730a175492943",
+            "51ea6903dbaf6846e3ccf67965b9b8381830171ef0b22b19b2b3c5c24bc04020",
+            "52b5ec0193d344e180e3ae15bf23849cc4d07239e9814acca1dac8ecfa8b730f",
+            "53c79415608c1dfeccc5c984da7bb0617c03baba1503e5d5f6277ee721c42086",
+            "65af1402b4584a09150fffd59282d4df3c77384a4673b2e0d7f7a533517c8089",
+            "6642227b8bb6898439cc599f8f2b693d6f20ce703d10421b846c26d1ce658236",
+            "666ff0705d87a8e31407b08b4384309e019a39f8f626601a881e22926f03d78b",
+            "66f399db8262cec5d6e9f760643b9009b9b74a2e1f8c1111a9cb4e23ac0aa454",
+            "6781c5a429c8d63e61c2810a554ce8859fafb6d394640d3bfd1d063b992e53a3",
+            "6aa34c9e3424979adfc72e4224e7b7fb9251d741d7d519ab10f41a3efaea8c7a",
+            "6eefbd20ea96b8bfe6c3ac11ed4acf4dbd261e193d2219e79b01e5214c916520",
+            "72ebf726e334450d59bb7f04b5a30216fe6881a3921e2c4012005ea754105974",
+            "73f658372af2408cea4a087edd77c56d42f46508834270691bf080178dd04a06",
+            "7b2bc09481ce448787b31f4671a38d19748f9955adb3ee2ff224837f79961d47",
+            "7b7625742055fdbe9abf84fe88ae7f42b60eeb09a799d74d89afef52e6228e6b",
+            "7db7fa069d28818dbe4311968a0f76a870902f4f62d863be84f3007632eee42e",
+            "812149ca6c77594df0a41ddfa79304b673bf225455af9929ead11c39e1400f08",
+            "81bc86b700f16004da1b9eae33c381aeac8e6fa14f26efc608d8ea0ac4a9376c",
+            "85e2737b3b23fa975b4794fc7ab8218dd0e15e4b4edc4f7e3a2328541ab26fe6",
+            "87ca524e50b86587d7b434d6afce09d3cce6711c6ed818dedc69916e57b72797",
+            "88be37af37b4b17240e2f1a93c90e773573c84e522b65e4a7f87fde0896cd725",
+            "89441040c984def072cfaa3a37a8a542ac7cf03228cda96e797fde5cb038a01f",
+            "89dd0c6f5bfece20593de2ad285565941cc5f7793e19690023dfb1310ac4a6d6",
+            "8a513f48bdfa710c9841e63c343686a0d4d3199ba6ecad92a063692364b4e493",
+            "8a918b7724a7618eed030c82cbe1d42f9e6a18ff571e1db0650fae406092e58e",
+            "8ac03c2bf18acefeea24948354b6e07c617945f93f08abd83b84246081a27f0f",
+            "8bf4e15fa0e130d5467df6a339dea48afe9fff25b692afa0aec8cd80e8977df1",
+            "8dbdc1faf0230f30eeede4e9136b7ec94483d112867721682d8d5414311e25e1",
+            "8dd51c1b789652ac0423ef70fee0271eafd1055dd97f6ca67436c2f3e270d60d",
+            "957cf57646e6158622dc4cd70a857166ab22df66e4cb7bdcb23f17ea2007258f",
+            "96ba3dba7f7bd51d458c073cee42fc655196786a2ce7fbdc76087cbd8fb06a7e",
+            "97513693a43dcb142de0b0d4065ee2d02cc88cc714bafa96207a95b350e1e9c4",
+            "9dbc40d2e809c26af1978e12fe11f356ae1236fc1098c9d3d70e159a55258d43",
+            "a0fde1561fadbc641e86f7e0978b9bf698bcf95824cd65b59611840307a12aac",
+            "a1ee882acbaa0ca49284905a6b71a8644847bf6219240a2c6c54a3913f819408",
+            "a68dda17d7fd34a72c359929d05d471d59b4c97f75b967236d86c52c16d43569",
+            "a6ba8d4bd75f154ba36eaa30d634217bee9a6ea7b2806de80591df7311305de1",
+            "a6c662d8c131d13d4b10951ad45db2f5b16e4a52342292d5e7f2bea63fff6d77",
+            "aa6049cdb690c69e7755d7c922e63916ce05e344927dcc53659bb3cc7edeb984",
+            "aab304b9bbc7befb69e04e6d78866e8f51c1bf60c2520df4f25045871aaeade5",
+            "ab4887954dc939e00b5c42e0dfae779c4196ff50c2a0776f94700e0fe98c85af",
+            "af0c9a8a6e9a5ec7dd816b11f20bfe8881af9be07fe9c88f51f7867dc5eaebf2",
+            "b03dce1ca6b75978ab6aaf8a8e62e128fc5b95e239e3c55bedddb0ac2f6ea41e",
+            "b1064abd2cf3661e0df9ad40b6e3a1765d38cb90d9b2daeeab55471dafc100a9",
+            "b18f55962348e6b02d140138bf98c1523b47c825b0efe16df0a34f7decf03d25",
+            "b32d22c9aaa208b19e81e26e0c4f622b1cb12952045ccab570005034f5c27648",
+            "b3acadc192dc08d5d4fd7f5410da0c85f8c207b9c009df7d1a8becbe1ae28e33",
+            "b4ccb12d421d7596dcc7c86cc92f1334d58c5d402cb8f8088180096d8f5b51fa",
+            "b6d7efef68a8a45bf452d01c197167a95f7c2681d31fbc909d5cfeeeb5010051",
+            "b87ff237005990de1777f30f0bf9a3be98c97994364000db89462d1683e447ba",
+            "bb1498eb3e6d07abb4a47d91681edbf861dc68e9c8473ad7fb2d967d5cc5aaaa",
+            "bb2e487607ada9e8bae0ec46f755a54e7e4f32787c68ae9a600d46a41a2a0dac",
+            "bcfb9c3fb30437339666dad551b7e5cbbbbef30d99b3f86aa69fa638210c40e7",
+            "bdc233eb7508cb9e0a8c6406f09f9840a979c072211207940c04219b82ddcfe5",
+            "c306006e1d70c6600a73cd81baca35a7d0686e9d683327d56d988076830a0c3d",
+            "c6ba202e04bfeb02f4a0abd7864204e049f3195691e6e5c243974908b01a6026",
+            "ca6390a5a2951db072b0bb16702f415800daf613d695ebf09bc703fed41be8ba",
+            "cbbc0b74ee20fe75b228cbc5108cf9575cc49d00bc3f58e335a18cc75f58fe57",
+            "cd5a0cdaac2c829522e66555766a3451b9f3de6f5fad82893031ef3c6c7d4df7",
+            "ceaee63050e440fe03f3bcc2efd02cc61fc612509263b855eaac01f52fb10e3f",
+            "cf98a9918402ad387b632d4f3d8a50db3b2bf3eec739c6f603b4b9070d936b51",
+            "d09a9dcb1e90a9f7c976cfcda7dace2c625e6023faa343adbc9889e626b9d3a7",
+            "d43412ee9d13c278a2b5da5e0bc7388efb4c29a12ec834dddba29d1c535f398b",
+            "d5d77aea07119db1a1f095e8832ab37b93ba5ddab041c0f2748d72a2399b35c0",
+            "d6dbe638b8d8951f2bcb5f1c9ba45c2e4e605de1005d7ee557c1ace1d45f71e7",
+            "d70296170450d2c8845025ebc645b0df80f202d3d59fcb269af2549ab8d98a6b",
+            "d79d1e701d510897e5f9ea392782c328ea9e47a51cc95d2316432b94eb3169d3",
+            "d9331a1e875935a195426b99a19e56e154b09607c5dc8870b796ae04685398a0",
+            "df110be694f8d47f4a807dfe29661ef415b4f37aa9a7ee81eee36eb3d474bf34",
+            "e27c3cf7da6ab02a0a598bb64d684ee1297d46265e67c95bd1ad488b0c83ee94",
+            "e701157a9e1c1a43ee6367d19a9cbcab5ac0d1355261b6c9687af1a158478a6a",
+            "e9ee9532ec4edafabff039a63013e98dd51544a7763aa857830269dcf262cf76",
+            "eb13e8cafe22ab3a26ea2a89b98d9198bce95a887c2d931cf4ffa64325959e7e",
+            "f1d535c874d4dd76f5c501d2200ccc615bbf238a222648cab7193325753d5d60",
+            "f88fb080fdbe807b7e0fff6f6521231a77040d16e1b1ba52b3285c1d26f44bd5",
+            "fb4a99af57f1be03d136bbbdd154f38216ad0ef984c5772590c111e278eb71d4",
+            "fd7e8cc4e04980dcd97da2c3121ac3c48be1d5dbb09e3f7ea678e04bee70326a"
+          ]
         },
         {
           "race_number": 3,
@@ -609,12 +926,153 @@
           "night_or_day": null,
           "position": null,
           "areas": [],
-          "urls": [],
+          "urls": [
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=8777&groupBy=EventClass",
+              "title": "StartList",
+              "last_updated_at": "2026-08-29T08:47:31.542771+00:00"
+            },
+            {
+              "type": "LocalStartList",
+              "url": "data/events/2026/IOF_8277_startlist_3.yaml",
+              "title": null,
+              "last_updated_at": "2026-08-29T08:47:31.461358+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
           "result_counts": null,
-          "fingerprints": []
+          "fingerprints": [
+            "01a01a78506a5792e2ad6468c48b8e07d343a6d3167f262c6606849c2c3265c8",
+            "0380ad83c5edc6c17c70268400d5a9e34428e4708b10042de05c6e781c9dbffa",
+            "06a886b370a0125577f5bee9465c1664a58c8b345f163d05d6091d830c736e67",
+            "071f191cd932ac38dc9c07e887a3d0dec025f2cb5ea4704c6e190da2cdc00254",
+            "0b6db1b895efc87fa98925f02535bc373991552e6f8a80ad26a305df545265c1",
+            "0bfea5c6cb3d71dbc2ed248bfd93800927946383e7078a29e665c80bdddda1f2",
+            "0ce242203e06e04b4264516485fc2f76d874a09fdc285708dba300a80c7d7f9a",
+            "0d4000402f36d0be2739d366d33b6df0df57479d0aecd3124eff887532594256",
+            "111dba04af0012e8c0f26a0aaaae5984d7bad77b9ace2a19460d792211ea7db6",
+            "12788cca708d5ad65d63a610e78e277e02a9be1ad42b2f5930474c76dba9fc12",
+            "12cc7f63f5966df19fb60785df0ed965c76b94e4775580f338e5703c20973295",
+            "13ca14039d33c0f72ed37d9ac56462ecfcc35c20ba5e8b2bf42a9d728132092b",
+            "17b3ca5f3b41d14579e1fd2972a2e2f66da61fe833ac744636b696319f8d159b",
+            "1b748834e75b385e3bcf05e94b0505047330bbac3935c7252eebf82af50c911e",
+            "1c22e84992f21521908ec9a580bee3d4cd01eca22701ad0c00be02f427448283",
+            "1c41aae6b44f33f5004524b00436426cfec69a3f5b3694dc8a78b682083712a7",
+            "1c5a057d39861f18985d3706c9077b3c892094623adb1716492163c9d400077b",
+            "1ee968377c1f6ca7ff6c7829d92864a21f3ce7ce2af869a01134caa9e029d33d",
+            "1eee5192a28c321cf78ceeda85c9d0e5663b288c4f405ccf1a368c66f69b418d",
+            "20a294d4b7c686e1b53adc1fd53a934faae210872e69893cb3e11feb339f0f27",
+            "2990ed6b95ccee489a32e25c65d72dc42c7f058e349428bc648a4360ceddc727",
+            "2f1dec99eca750bbe811ac81f52b66deba56fce0a86e5f00e4f049493aa1b374",
+            "3349ba8e29b13b550d3da50b99389ff1067e577f708449c13de822c31d896edf",
+            "353a936d1f8950e94e6c77a028b08ae199e0923ff5fa4e365d3ea29f2412692e",
+            "3680721d77b5259a9a9cbf536be103802c2785deade74bd0270bd47b20c07f61",
+            "378d85401662b5e85b3479df3baec6617b8e3510fe7937e558442b582ec69ad1",
+            "381c8b080ffec5e1fa2de7a9b8923ee4fabfefe6e1dea089311e212e6acdf905",
+            "399ceb63225d5d4675289c540ca678c4c49a5ecdd4c7d1233d3abcdbcc84cb9d",
+            "3af17896892101a816a9217422660cb51bbdeae031ba5b9f07ef0eebd2afaba2",
+            "3af2d25dd8f12465a955cc1517bb1cef1daacaedaf14b382c80bc159f45ec96e",
+            "3be50f24e050c9e4630186976cef5806c38dc7fe7347f2e145f4e6da760bd518",
+            "3da4e428ea85bf521fd3162c3e9507e453606b2b4fb67e3f0b74593481bd5427",
+            "407de68a6112a77ba54cd01a31fcd37fd6776baa0e0ade4cf549117c19913758",
+            "435b46703579da9e0b2f6a8dfbb050925f3e41276427755d099c69d6124feadb",
+            "44e3ffd3145e78e74f9259d8d882d071fb1cd9a0b82c6cf99a1d1e75cbc140d5",
+            "479e1dd562eaeb06585e3a67fc08945d2ae4787c3ab633815ca51e72d9d2daf2",
+            "47a971cab1a94b80dcdb7f37b6d1aedbf47044fdda7427eb9b1c0a8019022e37",
+            "47c32c48670ef25e818192e4b5c7f2f9ad73c6c7d084ddf2c009a2ba856451e3",
+            "48ea63c7192fb0c242525efb1fa751960e2fa783ed81614a3fe6d22807639127",
+            "4a02a37b04b8751ac87aecba4da97a9a9fb633945c571554332ed8edd4823566",
+            "4cc18cc24cbdaa147900ea2821e018b73610706998446a189cd942e566af27ab",
+            "4e035fd0f7979469d5b13fa0c1236af7525420d2224a2d1a9756e88e4b6932d7",
+            "511af00b6b5e1758d45c66ce57888abdbb04b0609937a849356730a175492943",
+            "51ea6903dbaf6846e3ccf67965b9b8381830171ef0b22b19b2b3c5c24bc04020",
+            "52b5ec0193d344e180e3ae15bf23849cc4d07239e9814acca1dac8ecfa8b730f",
+            "53c79415608c1dfeccc5c984da7bb0617c03baba1503e5d5f6277ee721c42086",
+            "5ceac3bf1361823d43dd31282e24460ffb2c473583b084993b0240c1ba86d030",
+            "65af1402b4584a09150fffd59282d4df3c77384a4673b2e0d7f7a533517c8089",
+            "6642227b8bb6898439cc599f8f2b693d6f20ce703d10421b846c26d1ce658236",
+            "666ff0705d87a8e31407b08b4384309e019a39f8f626601a881e22926f03d78b",
+            "66f399db8262cec5d6e9f760643b9009b9b74a2e1f8c1111a9cb4e23ac0aa454",
+            "6781c5a429c8d63e61c2810a554ce8859fafb6d394640d3bfd1d063b992e53a3",
+            "6aa34c9e3424979adfc72e4224e7b7fb9251d741d7d519ab10f41a3efaea8c7a",
+            "6eefbd20ea96b8bfe6c3ac11ed4acf4dbd261e193d2219e79b01e5214c916520",
+            "72ebf726e334450d59bb7f04b5a30216fe6881a3921e2c4012005ea754105974",
+            "73f658372af2408cea4a087edd77c56d42f46508834270691bf080178dd04a06",
+            "7b2bc09481ce448787b31f4671a38d19748f9955adb3ee2ff224837f79961d47",
+            "7b7625742055fdbe9abf84fe88ae7f42b60eeb09a799d74d89afef52e6228e6b",
+            "7db7fa069d28818dbe4311968a0f76a870902f4f62d863be84f3007632eee42e",
+            "812149ca6c77594df0a41ddfa79304b673bf225455af9929ead11c39e1400f08",
+            "81bc86b700f16004da1b9eae33c381aeac8e6fa14f26efc608d8ea0ac4a9376c",
+            "85e2737b3b23fa975b4794fc7ab8218dd0e15e4b4edc4f7e3a2328541ab26fe6",
+            "87ca524e50b86587d7b434d6afce09d3cce6711c6ed818dedc69916e57b72797",
+            "88be37af37b4b17240e2f1a93c90e773573c84e522b65e4a7f87fde0896cd725",
+            "89441040c984def072cfaa3a37a8a542ac7cf03228cda96e797fde5cb038a01f",
+            "89dd0c6f5bfece20593de2ad285565941cc5f7793e19690023dfb1310ac4a6d6",
+            "8a513f48bdfa710c9841e63c343686a0d4d3199ba6ecad92a063692364b4e493",
+            "8a918b7724a7618eed030c82cbe1d42f9e6a18ff571e1db0650fae406092e58e",
+            "8ac03c2bf18acefeea24948354b6e07c617945f93f08abd83b84246081a27f0f",
+            "8bf4e15fa0e130d5467df6a339dea48afe9fff25b692afa0aec8cd80e8977df1",
+            "8dbdc1faf0230f30eeede4e9136b7ec94483d112867721682d8d5414311e25e1",
+            "8dd51c1b789652ac0423ef70fee0271eafd1055dd97f6ca67436c2f3e270d60d",
+            "9077762c9c3d0dbad683c0164af43e53f759487c5ce9fe3250a75b6f1c73e4b3",
+            "93887f3a706bc0de389a8e72b90c17201ed85f7da9ef453307ed0e2a9c5c6a64",
+            "957cf57646e6158622dc4cd70a857166ab22df66e4cb7bdcb23f17ea2007258f",
+            "96ba3dba7f7bd51d458c073cee42fc655196786a2ce7fbdc76087cbd8fb06a7e",
+            "97513693a43dcb142de0b0d4065ee2d02cc88cc714bafa96207a95b350e1e9c4",
+            "9dbc40d2e809c26af1978e12fe11f356ae1236fc1098c9d3d70e159a55258d43",
+            "a0fde1561fadbc641e86f7e0978b9bf698bcf95824cd65b59611840307a12aac",
+            "a1ee882acbaa0ca49284905a6b71a8644847bf6219240a2c6c54a3913f819408",
+            "a68dda17d7fd34a72c359929d05d471d59b4c97f75b967236d86c52c16d43569",
+            "a6ba8d4bd75f154ba36eaa30d634217bee9a6ea7b2806de80591df7311305de1",
+            "a6c662d8c131d13d4b10951ad45db2f5b16e4a52342292d5e7f2bea63fff6d77",
+            "aa6049cdb690c69e7755d7c922e63916ce05e344927dcc53659bb3cc7edeb984",
+            "aab304b9bbc7befb69e04e6d78866e8f51c1bf60c2520df4f25045871aaeade5",
+            "ab4887954dc939e00b5c42e0dfae779c4196ff50c2a0776f94700e0fe98c85af",
+            "af0c9a8a6e9a5ec7dd816b11f20bfe8881af9be07fe9c88f51f7867dc5eaebf2",
+            "b03dce1ca6b75978ab6aaf8a8e62e128fc5b95e239e3c55bedddb0ac2f6ea41e",
+            "b1064abd2cf3661e0df9ad40b6e3a1765d38cb90d9b2daeeab55471dafc100a9",
+            "b18f55962348e6b02d140138bf98c1523b47c825b0efe16df0a34f7decf03d25",
+            "b2ba6d933a664a531cddf9778840ae11f4d83f67a35edf7ee0811291a18c3f71",
+            "b32d22c9aaa208b19e81e26e0c4f622b1cb12952045ccab570005034f5c27648",
+            "b3acadc192dc08d5d4fd7f5410da0c85f8c207b9c009df7d1a8becbe1ae28e33",
+            "b4ccb12d421d7596dcc7c86cc92f1334d58c5d402cb8f8088180096d8f5b51fa",
+            "b6d7efef68a8a45bf452d01c197167a95f7c2681d31fbc909d5cfeeeb5010051",
+            "b87ff237005990de1777f30f0bf9a3be98c97994364000db89462d1683e447ba",
+            "bb1498eb3e6d07abb4a47d91681edbf861dc68e9c8473ad7fb2d967d5cc5aaaa",
+            "bb2e487607ada9e8bae0ec46f755a54e7e4f32787c68ae9a600d46a41a2a0dac",
+            "bcfb9c3fb30437339666dad551b7e5cbbbbef30d99b3f86aa69fa638210c40e7",
+            "bdc233eb7508cb9e0a8c6406f09f9840a979c072211207940c04219b82ddcfe5",
+            "c306006e1d70c6600a73cd81baca35a7d0686e9d683327d56d988076830a0c3d",
+            "c6ba202e04bfeb02f4a0abd7864204e049f3195691e6e5c243974908b01a6026",
+            "ca333ffaf445e444c86afeb7a3441018f08533c6f0d737c1675d10ec05cfb0da",
+            "ca6390a5a2951db072b0bb16702f415800daf613d695ebf09bc703fed41be8ba",
+            "cbbc0b74ee20fe75b228cbc5108cf9575cc49d00bc3f58e335a18cc75f58fe57",
+            "cc6caad1490849242f08b2876156efc366dc94c3589c680c7e67f23ffa9b5f06",
+            "cd5a0cdaac2c829522e66555766a3451b9f3de6f5fad82893031ef3c6c7d4df7",
+            "ceaee63050e440fe03f3bcc2efd02cc61fc612509263b855eaac01f52fb10e3f",
+            "cf98a9918402ad387b632d4f3d8a50db3b2bf3eec739c6f603b4b9070d936b51",
+            "d09a9dcb1e90a9f7c976cfcda7dace2c625e6023faa343adbc9889e626b9d3a7",
+            "d43412ee9d13c278a2b5da5e0bc7388efb4c29a12ec834dddba29d1c535f398b",
+            "d6dbe638b8d8951f2bcb5f1c9ba45c2e4e605de1005d7ee557c1ace1d45f71e7",
+            "d70296170450d2c8845025ebc645b0df80f202d3d59fcb269af2549ab8d98a6b",
+            "d79d1e701d510897e5f9ea392782c328ea9e47a51cc95d2316432b94eb3169d3",
+            "d8ff61bab99250e477f0829303a46d433171e2b53e21b898e2e1fc5b528a8753",
+            "d9331a1e875935a195426b99a19e56e154b09607c5dc8870b796ae04685398a0",
+            "df110be694f8d47f4a807dfe29661ef415b4f37aa9a7ee81eee36eb3d474bf34",
+            "e27c3cf7da6ab02a0a598bb64d684ee1297d46265e67c95bd1ad488b0c83ee94",
+            "e2d2d0704d70fe035f88afc3d37a4e8c12e3b7212e1b63c1f28a6ed33806e851",
+            "e701157a9e1c1a43ee6367d19a9cbcab5ac0d1355261b6c9687af1a158478a6a",
+            "e9ee9532ec4edafabff039a63013e98dd51544a7763aa857830269dcf262cf76",
+            "eb13e8cafe22ab3a26ea2a89b98d9198bce95a887c2d931cf4ffa64325959e7e",
+            "ed0a355c327d6652292426098420f35593c0067b92b59da5c78767c618bb6521",
+            "f1d535c874d4dd76f5c501d2200ccc615bbf238a222648cab7193325753d5d60",
+            "f88fb080fdbe807b7e0fff6f6521231a77040d16e1b1ba52b3285c1d26f44bd5",
+            "fb4a99af57f1be03d136bbbdd154f38216ad0ef984c5772590c111e278eb71d4",
+            "fd7e8cc4e04980dcd97da2c3121ac3c48be1d5dbb09e3f7ea678e04bee70326a"
+          ]
         },
         {
           "race_number": 4,
@@ -735,25 +1193,55 @@
           "published_time": null
         },
         {
+          "type": "Other",
+          "title": "Presentation TOM Middle distance",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8278/165b2a8e-bd7e-4d74-bc40-9834c5d3eec2/Presentation TOM Middle distance.Pdf",
+          "published_time": "2026-08-25"
+        },
+        {
+          "type": "Other",
+          "title": "Presentation TOM Long distance",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8278/58ed5bfb-540f-436e-9cbb-9113d11ed30e/Presentation TOM Long distance.Pdf",
+          "published_time": "2026-08-26"
+        },
+        {
+          "type": "Other",
+          "title": "Middle distance photos by Lukas Faltejsek",
+          "url": "https://www.flickr.com/photos/147099814@N07/albums/72177720335333597/with/55493009229",
+          "published_time": null
+        },
+        {
+          "type": "Other",
+          "title": "Presentation TOM Sprint",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8278/fdb696b9-23fd-4845-abb0-423644da4c29/Presentation TOM Sprint.Pdf",
+          "published_time": "2026-08-28"
+        },
+        {
           "type": "Bulletin",
           "title": "Bulletin 1",
-          "url": "/Documents/Event/8728/Bulletin-1",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8278/ca10bfa2-ba4e-4d56-9b2f-f0eaa6978cd3/Bulletin-1.pdf",
           "published_time": "2025-02-26"
         },
         {
           "type": "Bulletin",
           "title": "Bulletin 2",
-          "url": "/Documents/Event/9630/Bulletin-2",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8278/5cba35a1-fc5c-4ad9-abe3-5202891e5424/Bulletin-2.pdf",
           "published_time": "2025-10-01"
         },
         {
           "type": "Bulletin",
           "title": "Bulletin 3",
-          "url": "/Documents/Event/10687/Bulletin-3",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8278/e65507fb-68da-4a2e-ade4-a730fa60f9cf/Bulletin-3.pdf",
           "published_time": "2026-07-16"
+        },
+        {
+          "type": "Bulletin",
+          "title": "Bulletin 4",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8278/8f56affb-0242-4dff-af93-2f5749b75457/Bulletin 4.Pdf",
+          "published_time": "2026-08-21"
         }
       ],
-      "information": "10/8 Upon request, colour-blind competitors can receive, in addition to the map with the standard course overprint in purple, a map with the course overprint in blue. This costs 5 € per competition, and the request must be submitted to\n[email protected]\nno later than 16th of August.\n6/8 Banquet entry form published - latest date for entry is 15th of August\n16/7 We updated Bulletin 3 with clarification regarding possibility of biking on the Vasaloppet track only during official Vasaloppet races 7th and 8th of August.",
+      "information": "27/8 Some clarification about orange embargoed area. You are free to do anything you want in the area as long as you do it without a map. Starting Satuday 00:01, parts of the area are totally embargoed, see bulletin 4.",
       "region": null,
       "punching_system": null,
       "races": [
@@ -1207,27 +1695,217 @@
               ]
             }
           ],
-          "urls": [],
+          "urls": [
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=8779&groupBy=EventClass",
+              "title": "StartList",
+              "last_updated_at": "2026-08-26T01:30:56.245913+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=8779&groupBy=EventClass",
+              "title": "ResultList",
+              "last_updated_at": "2026-08-27T12:38:15.778592+00:00"
+            },
+            {
+              "type": "LocalStartList",
+              "url": "data/events/2026/IOF_8278_startlist_1.yaml",
+              "title": null,
+              "last_updated_at": "2026-08-26T01:30:33.300623+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
           "result_counts": null,
-          "fingerprints": []
+          "fingerprints": [
+            "00f0c05e827601ee6ff7c611535d3540e0e3c9c8efaf89db957bf611bc25018f",
+            "0162544ef6ab8d569347dadd42fab9fd0e3c39c3dfa2d4598f4d871f8258788e",
+            "02155ed029bd379b6dbf6452d702ade63671942fe7c5feecea1f10573817e3e7",
+            "068153617fa1c7cbd9da275557790b5716bb96591e2d632f7fd60d6e1fe070f4",
+            "07339d67e5884d3491978f5fee28692a603d4256bb5c7cd3a69ad77073743562",
+            "0a1c065bf639f1cd09703659d417d2702460729930ed24ebc01a8383ca5071c3",
+            "0a225065c8070b65caa5589961d1015e24a26229fdaec6acaba2025ee9568403",
+            "198c1ed0b3513bd36592b2bc89a9b219dd841210679650090e38a030ad3b378f",
+            "1a362a18d2ebe9467b427348f385091a7409c7be15cad24fdca23135b5853277",
+            "1b46dc3aef94f8fe4c09b42ffe3fb4815fa005b42efaaaac9410b76ded2609a5",
+            "1f0fc38aec15b1da1d89451c758385a76b381cda95fa16f152eae4293d746792",
+            "1f37d81303cb7534fff263f9f2b845d6e67fcba4bf29bb71359ddccc6cd237f3",
+            "2149cf96eb084111b9f14b569e9d492f1929d864d9da4709c177e450a456a1f3",
+            "276b29b1e9d4ce0660e0f7f4b1a6944a4fbc04a44b99ea4f27e0116c4fb69ebd",
+            "2f221e9baeeff69191ae314cb2db733bf256e829ad46b98ca60ddccb5229fa9a",
+            "37fe3c3846579255f045b8a0a99457199807f427ed673ca22b20b169dbeaa7c4",
+            "38426507487adad7641e89a7e6f48d815c1755ed75a089242a0064fe8e2286ca",
+            "3895f1771f253852653cd3b1316b33b111235b36a86cad5348a3060b7057b2ba",
+            "3a315ddd7da55ecef65a00855c4b9771ecb206dbfcafa2fe21e3dcedd4b1783d",
+            "3aff4856a69794d4fb008b4d48e69020fd0bd501815cd1944def8acae3d35aa8",
+            "3fa5fa4866619ece06039b14ad753d762afa4b21bf47f85ec51220f1e349465f",
+            "4481ca5e84f45a5c4d810fd5897ba35de103639f49e7b7cdb901c773d18f2eab",
+            "4743e82f565044b4b2f3a72c55d5444198f26b8bd79f3879fc1febb0ca93d61a",
+            "484816421f37b160cd7e9b7a4ce60155a017a245a65bc489211279891a023b25",
+            "4e5f0be7f4c62d2852faa58c0e423339710aedfdb353f450ecf6284e1a71409b",
+            "5116731447642900533d4e6248e6fc61cf5780c7c7d9afaed6ed1e4707ec2d7b",
+            "52446c4f6e64394aff0b500809f58944e057907f8b801111576e914d8ae13163",
+            "574a003cd8895420e77dd42a768d93931bce56669a8ac74ba95f5348c2631302",
+            "58513ecc161bd4ddf322146e3d85dbbc9886b893dc6f8be7e0764f834a82afff",
+            "5941444d650bd7851cad3b7950560a2c7bbb85895138aa3be94c44e499624bdb",
+            "5e7e7aee74e6ae8463b6431fbb1cb472912a302b3e085a80a0390a0352fdf97a",
+            "5ec78fb8bafd11b0a87d4018035a27ad4266d3d47d05dc30c4450fe39ce5f60c",
+            "617887a3f48272dabc3885809dad20aa0f1105f7c30e53997f3d8ab27c1e9ba0",
+            "63cc91e4046b1cd9320bb200b7cb50702d1d7dc0cb68133e212c58f364fdeba5",
+            "644d4192af1014c0c145c6e93c9de3e8a477311e4e211acb269480fd7b448995",
+            "6f53e8299025decba6c9d52fad8da94fac32bae83584e1745fd026f2b81550f6",
+            "72867e37df6820c67b2ae037b6c92b699c8e4439181cc4d37581f5e538e6ce80",
+            "733ce1efc61016946b331e93d1cf0345ddc1f44ff61ba6cdc28348bcd77a22eb",
+            "7543e1034a8ea4d0e2c367f7fe3feebec8038b46169633fe9e69c51ded6d6cd0",
+            "75ba9af440eb2d0f37dfc85c79d6240109c92e6721a41206ba4b518b0d2514a3",
+            "780550274e8d6d00a644d5e49c32f7f7e5de515f39b4363bce281a10e0adc9d1",
+            "7e7812aff060d035afe1859f0d1b03ab7e29c038430398d24312287df87976a7",
+            "858933429e5b1cfd5a0b9785ff70eb88bb77dd2d48c95ac990b8121ae4837b55",
+            "861859181f66a94ec2a065e160925a02f2148acc63ba3489c40c6d9a83badd29",
+            "8e912cc929e75a522c80ff0476895a9bedbfe0119433605b734282fb28427ab4",
+            "9153fb4959070989ba1d8ca6c58836e4f95ed64c849574f942c40f7bc928f7a8",
+            "91706b9284c16ab87d3b44b2edb0643914fa7a77ed6ea689d50d9faeab16546f",
+            "96772431a6d7c6d835c667062129709508374747cf84a62b7f90845e9a2baa98",
+            "995801edd76acfc05b78759b7fb35a389a2d36bcedaea510b867189a27571ece",
+            "9b9ceac5cea836bb2300117af167d31d938716d836cb30f39021330f3360659a",
+            "9ccaa3b8af10c7df12f35f1cebee771aa367c494fd145b5680132804a7a9e86a",
+            "a066fedf5b2a53b10a042aec0acdc8fc59a541b578b71cf6231f336256fc87bf",
+            "a6459c002d2d94584131e875fef897a29c9f1289104f3610eb82ebf9ca4e96bf",
+            "a9f9fe9f450f8cc09f2ce769d3c3dd42a85d18fe62681cb8dbfc01512488a066",
+            "aec940003b3694635b2df01321e68886dc26269e54104aef6fc45a0b1605bd20",
+            "b65fbb81b2fa19b4fc623a903935ad9fa58c27df1856ba7f5a11bec12472769b",
+            "b6d63ea84a014a9e551e4ab4ee6a34c5737c735630f854b8731207c44592bcf7",
+            "bf49a159266141088084ccf825cb3570d6fab1568534cdd5287dc94a043b5bed",
+            "c183472ba1053c0f2b8362cee33e0f7a967ae0f0a5b4d5f82da58ba953fd93f3",
+            "c57437b8bb07ea74dd460a70af0f0025ec2a1685028e7ed9a6eec51500dbad01",
+            "c66f4cc4a49731043d8efb2efbda66459fdfadc925d1a08c7b67def04a4e80b9",
+            "cd2c862acd8f424a45d70421828efb77beea928a102f43acc6384098f14ae536",
+            "cf7d3473e1b94abfc83613c251e2795de91f5902cd7825acdcefbade0a40f027",
+            "d1c43424beb91a66d0e3a4318f8b28c18c9f22cb95d64e8f478b7fa943763aa6",
+            "d466108fd0adc61026ac6495769cf54f80ca84da39b6081390589e534bb89ec6",
+            "d498d9f58553c8ea789379df86b48d2a511ae6e9df8de575fe3ff00b85725268",
+            "d778ce6b75abf78bb0d7fde10f66bc9465cfd38e02fe3d0686c98f070e7849f5",
+            "ddd6d671d99140b8f84a51f911d99025ed07c417833d1e08eb0d4c5d524c83da",
+            "e179b44866306edb5212fcf55cb4df910028560e3b2701c6a78d51bee51273cb",
+            "e1ca96b5e0716108d2c067c5b6d5400695b5b96f34357683fe09b7737afe118a",
+            "e37bd886c723a22b2f268266c96e6a70b8077413a062fb0c5fed862b968e68d8",
+            "e4e59330ad9b5c6b42bd68c59f8255f6a1f9b6385e50bdef913a4354f56edcc1",
+            "e9c027baf2ad0b78fc1436884f1fa246d94fcfded66e9c40a7eaa6ff874e3940",
+            "f80e1429dac2ed833101919a1765833b14bdfe4d15b91d87671e38064db1f5fd",
+            "feb656335b6cb7f8c82a011c96e7a8c4700bd0bb854813b2497d0101a8b1e064"
+          ]
         },
         {
           "race_number": 2,
           "name": "Long",
-          "datetimez": "2026-08-27T10:00:00+02:00",
+          "datetimez": "2026-08-27T08:00:00+02:00",
           "discipline": "Long",
           "night_or_day": null,
           "position": null,
           "areas": [],
-          "urls": [],
+          "urls": [
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=8780&groupBy=EventClass",
+              "title": "StartList",
+              "last_updated_at": "2026-08-27T12:38:15.778596+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=8780&groupBy=EventClass",
+              "title": "ResultList",
+              "last_updated_at": "2026-08-29T08:47:31.542711+00:00"
+            },
+            {
+              "type": "LocalStartList",
+              "url": "data/events/2026/IOF_8278_startlist_2.yaml",
+              "title": null,
+              "last_updated_at": "2026-08-27T12:38:09.127642+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
           "result_counts": null,
-          "fingerprints": []
+          "fingerprints": [
+            "00f0c05e827601ee6ff7c611535d3540e0e3c9c8efaf89db957bf611bc25018f",
+            "0162544ef6ab8d569347dadd42fab9fd0e3c39c3dfa2d4598f4d871f8258788e",
+            "02155ed029bd379b6dbf6452d702ade63671942fe7c5feecea1f10573817e3e7",
+            "068153617fa1c7cbd9da275557790b5716bb96591e2d632f7fd60d6e1fe070f4",
+            "07339d67e5884d3491978f5fee28692a603d4256bb5c7cd3a69ad77073743562",
+            "0a1c065bf639f1cd09703659d417d2702460729930ed24ebc01a8383ca5071c3",
+            "0a225065c8070b65caa5589961d1015e24a26229fdaec6acaba2025ee9568403",
+            "198c1ed0b3513bd36592b2bc89a9b219dd841210679650090e38a030ad3b378f",
+            "1a362a18d2ebe9467b427348f385091a7409c7be15cad24fdca23135b5853277",
+            "1b46dc3aef94f8fe4c09b42ffe3fb4815fa005b42efaaaac9410b76ded2609a5",
+            "1f0fc38aec15b1da1d89451c758385a76b381cda95fa16f152eae4293d746792",
+            "1f37d81303cb7534fff263f9f2b845d6e67fcba4bf29bb71359ddccc6cd237f3",
+            "2149cf96eb084111b9f14b569e9d492f1929d864d9da4709c177e450a456a1f3",
+            "276b29b1e9d4ce0660e0f7f4b1a6944a4fbc04a44b99ea4f27e0116c4fb69ebd",
+            "2f221e9baeeff69191ae314cb2db733bf256e829ad46b98ca60ddccb5229fa9a",
+            "37fe3c3846579255f045b8a0a99457199807f427ed673ca22b20b169dbeaa7c4",
+            "38426507487adad7641e89a7e6f48d815c1755ed75a089242a0064fe8e2286ca",
+            "3895f1771f253852653cd3b1316b33b111235b36a86cad5348a3060b7057b2ba",
+            "3a315ddd7da55ecef65a00855c4b9771ecb206dbfcafa2fe21e3dcedd4b1783d",
+            "3aff4856a69794d4fb008b4d48e69020fd0bd501815cd1944def8acae3d35aa8",
+            "3fa5fa4866619ece06039b14ad753d762afa4b21bf47f85ec51220f1e349465f",
+            "4481ca5e84f45a5c4d810fd5897ba35de103639f49e7b7cdb901c773d18f2eab",
+            "4743e82f565044b4b2f3a72c55d5444198f26b8bd79f3879fc1febb0ca93d61a",
+            "484816421f37b160cd7e9b7a4ce60155a017a245a65bc489211279891a023b25",
+            "4e5f0be7f4c62d2852faa58c0e423339710aedfdb353f450ecf6284e1a71409b",
+            "5116731447642900533d4e6248e6fc61cf5780c7c7d9afaed6ed1e4707ec2d7b",
+            "52446c4f6e64394aff0b500809f58944e057907f8b801111576e914d8ae13163",
+            "574a003cd8895420e77dd42a768d93931bce56669a8ac74ba95f5348c2631302",
+            "58513ecc161bd4ddf322146e3d85dbbc9886b893dc6f8be7e0764f834a82afff",
+            "5941444d650bd7851cad3b7950560a2c7bbb85895138aa3be94c44e499624bdb",
+            "5e7e7aee74e6ae8463b6431fbb1cb472912a302b3e085a80a0390a0352fdf97a",
+            "5ec78fb8bafd11b0a87d4018035a27ad4266d3d47d05dc30c4450fe39ce5f60c",
+            "617887a3f48272dabc3885809dad20aa0f1105f7c30e53997f3d8ab27c1e9ba0",
+            "63cc91e4046b1cd9320bb200b7cb50702d1d7dc0cb68133e212c58f364fdeba5",
+            "644d4192af1014c0c145c6e93c9de3e8a477311e4e211acb269480fd7b448995",
+            "6f53e8299025decba6c9d52fad8da94fac32bae83584e1745fd026f2b81550f6",
+            "72867e37df6820c67b2ae037b6c92b699c8e4439181cc4d37581f5e538e6ce80",
+            "733ce1efc61016946b331e93d1cf0345ddc1f44ff61ba6cdc28348bcd77a22eb",
+            "7543e1034a8ea4d0e2c367f7fe3feebec8038b46169633fe9e69c51ded6d6cd0",
+            "75ba9af440eb2d0f37dfc85c79d6240109c92e6721a41206ba4b518b0d2514a3",
+            "780550274e8d6d00a644d5e49c32f7f7e5de515f39b4363bce281a10e0adc9d1",
+            "7e7812aff060d035afe1859f0d1b03ab7e29c038430398d24312287df87976a7",
+            "858933429e5b1cfd5a0b9785ff70eb88bb77dd2d48c95ac990b8121ae4837b55",
+            "861859181f66a94ec2a065e160925a02f2148acc63ba3489c40c6d9a83badd29",
+            "8e912cc929e75a522c80ff0476895a9bedbfe0119433605b734282fb28427ab4",
+            "9153fb4959070989ba1d8ca6c58836e4f95ed64c849574f942c40f7bc928f7a8",
+            "91706b9284c16ab87d3b44b2edb0643914fa7a77ed6ea689d50d9faeab16546f",
+            "96772431a6d7c6d835c667062129709508374747cf84a62b7f90845e9a2baa98",
+            "995801edd76acfc05b78759b7fb35a389a2d36bcedaea510b867189a27571ece",
+            "9b9ceac5cea836bb2300117af167d31d938716d836cb30f39021330f3360659a",
+            "9ccaa3b8af10c7df12f35f1cebee771aa367c494fd145b5680132804a7a9e86a",
+            "a066fedf5b2a53b10a042aec0acdc8fc59a541b578b71cf6231f336256fc87bf",
+            "a6459c002d2d94584131e875fef897a29c9f1289104f3610eb82ebf9ca4e96bf",
+            "a9f9fe9f450f8cc09f2ce769d3c3dd42a85d18fe62681cb8dbfc01512488a066",
+            "aec940003b3694635b2df01321e68886dc26269e54104aef6fc45a0b1605bd20",
+            "b65fbb81b2fa19b4fc623a903935ad9fa58c27df1856ba7f5a11bec12472769b",
+            "b6d63ea84a014a9e551e4ab4ee6a34c5737c735630f854b8731207c44592bcf7",
+            "bf49a159266141088084ccf825cb3570d6fab1568534cdd5287dc94a043b5bed",
+            "c183472ba1053c0f2b8362cee33e0f7a967ae0f0a5b4d5f82da58ba953fd93f3",
+            "c57437b8bb07ea74dd460a70af0f0025ec2a1685028e7ed9a6eec51500dbad01",
+            "c66f4cc4a49731043d8efb2efbda66459fdfadc925d1a08c7b67def04a4e80b9",
+            "cd2c862acd8f424a45d70421828efb77beea928a102f43acc6384098f14ae536",
+            "cf7d3473e1b94abfc83613c251e2795de91f5902cd7825acdcefbade0a40f027",
+            "d1c43424beb91a66d0e3a4318f8b28c18c9f22cb95d64e8f478b7fa943763aa6",
+            "d466108fd0adc61026ac6495769cf54f80ca84da39b6081390589e534bb89ec6",
+            "d498d9f58553c8ea789379df86b48d2a511ae6e9df8de575fe3ff00b85725268",
+            "d778ce6b75abf78bb0d7fde10f66bc9465cfd38e02fe3d0686c98f070e7849f5",
+            "ddd6d671d99140b8f84a51f911d99025ed07c417833d1e08eb0d4c5d524c83da",
+            "e179b44866306edb5212fcf55cb4df910028560e3b2701c6a78d51bee51273cb",
+            "e1ca96b5e0716108d2c067c5b6d5400695b5b96f34357683fe09b7737afe118a",
+            "e37bd886c723a22b2f268266c96e6a70b8077413a062fb0c5fed862b968e68d8",
+            "e4e59330ad9b5c6b42bd68c59f8255f6a1f9b6385e50bdef913a4354f56edcc1",
+            "e9c027baf2ad0b78fc1436884f1fa246d94fcfded66e9c40a7eaa6ff874e3940",
+            "f80e1429dac2ed833101919a1765833b14bdfe4d15b91d87671e38064db1f5fd",
+            "feb656335b6cb7f8c82a011c96e7a8c4700bd0bb854813b2497d0101a8b1e064"
+          ]
         },
         {
           "race_number": 3,
@@ -1237,12 +1915,101 @@
           "night_or_day": null,
           "position": null,
           "areas": [],
-          "urls": [],
+          "urls": [
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=8781&groupBy=EventClass",
+              "title": "StartList",
+              "last_updated_at": "2026-08-29T08:47:31.542715+00:00"
+            },
+            {
+              "type": "LocalStartList",
+              "url": "data/events/2026/IOF_8278_startlist_3.yaml",
+              "title": null,
+              "last_updated_at": "2026-08-29T08:47:23.195818+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
           "result_counts": null,
-          "fingerprints": []
+          "fingerprints": [
+            "00f0c05e827601ee6ff7c611535d3540e0e3c9c8efaf89db957bf611bc25018f",
+            "0162544ef6ab8d569347dadd42fab9fd0e3c39c3dfa2d4598f4d871f8258788e",
+            "02155ed029bd379b6dbf6452d702ade63671942fe7c5feecea1f10573817e3e7",
+            "068153617fa1c7cbd9da275557790b5716bb96591e2d632f7fd60d6e1fe070f4",
+            "07339d67e5884d3491978f5fee28692a603d4256bb5c7cd3a69ad77073743562",
+            "0a1c065bf639f1cd09703659d417d2702460729930ed24ebc01a8383ca5071c3",
+            "0a225065c8070b65caa5589961d1015e24a26229fdaec6acaba2025ee9568403",
+            "198c1ed0b3513bd36592b2bc89a9b219dd841210679650090e38a030ad3b378f",
+            "1a362a18d2ebe9467b427348f385091a7409c7be15cad24fdca23135b5853277",
+            "1b46dc3aef94f8fe4c09b42ffe3fb4815fa005b42efaaaac9410b76ded2609a5",
+            "1f0fc38aec15b1da1d89451c758385a76b381cda95fa16f152eae4293d746792",
+            "1f37d81303cb7534fff263f9f2b845d6e67fcba4bf29bb71359ddccc6cd237f3",
+            "2149cf96eb084111b9f14b569e9d492f1929d864d9da4709c177e450a456a1f3",
+            "276b29b1e9d4ce0660e0f7f4b1a6944a4fbc04a44b99ea4f27e0116c4fb69ebd",
+            "2f221e9baeeff69191ae314cb2db733bf256e829ad46b98ca60ddccb5229fa9a",
+            "37fe3c3846579255f045b8a0a99457199807f427ed673ca22b20b169dbeaa7c4",
+            "38426507487adad7641e89a7e6f48d815c1755ed75a089242a0064fe8e2286ca",
+            "3895f1771f253852653cd3b1316b33b111235b36a86cad5348a3060b7057b2ba",
+            "3a315ddd7da55ecef65a00855c4b9771ecb206dbfcafa2fe21e3dcedd4b1783d",
+            "3aff4856a69794d4fb008b4d48e69020fd0bd501815cd1944def8acae3d35aa8",
+            "3fa5fa4866619ece06039b14ad753d762afa4b21bf47f85ec51220f1e349465f",
+            "4481ca5e84f45a5c4d810fd5897ba35de103639f49e7b7cdb901c773d18f2eab",
+            "4743e82f565044b4b2f3a72c55d5444198f26b8bd79f3879fc1febb0ca93d61a",
+            "484816421f37b160cd7e9b7a4ce60155a017a245a65bc489211279891a023b25",
+            "4e5f0be7f4c62d2852faa58c0e423339710aedfdb353f450ecf6284e1a71409b",
+            "5116731447642900533d4e6248e6fc61cf5780c7c7d9afaed6ed1e4707ec2d7b",
+            "52446c4f6e64394aff0b500809f58944e057907f8b801111576e914d8ae13163",
+            "574a003cd8895420e77dd42a768d93931bce56669a8ac74ba95f5348c2631302",
+            "58513ecc161bd4ddf322146e3d85dbbc9886b893dc6f8be7e0764f834a82afff",
+            "5941444d650bd7851cad3b7950560a2c7bbb85895138aa3be94c44e499624bdb",
+            "5e7e7aee74e6ae8463b6431fbb1cb472912a302b3e085a80a0390a0352fdf97a",
+            "5ec78fb8bafd11b0a87d4018035a27ad4266d3d47d05dc30c4450fe39ce5f60c",
+            "617887a3f48272dabc3885809dad20aa0f1105f7c30e53997f3d8ab27c1e9ba0",
+            "63cc91e4046b1cd9320bb200b7cb50702d1d7dc0cb68133e212c58f364fdeba5",
+            "644d4192af1014c0c145c6e93c9de3e8a477311e4e211acb269480fd7b448995",
+            "6f53e8299025decba6c9d52fad8da94fac32bae83584e1745fd026f2b81550f6",
+            "72867e37df6820c67b2ae037b6c92b699c8e4439181cc4d37581f5e538e6ce80",
+            "733ce1efc61016946b331e93d1cf0345ddc1f44ff61ba6cdc28348bcd77a22eb",
+            "7543e1034a8ea4d0e2c367f7fe3feebec8038b46169633fe9e69c51ded6d6cd0",
+            "75ba9af440eb2d0f37dfc85c79d6240109c92e6721a41206ba4b518b0d2514a3",
+            "780550274e8d6d00a644d5e49c32f7f7e5de515f39b4363bce281a10e0adc9d1",
+            "7e7812aff060d035afe1859f0d1b03ab7e29c038430398d24312287df87976a7",
+            "858933429e5b1cfd5a0b9785ff70eb88bb77dd2d48c95ac990b8121ae4837b55",
+            "861859181f66a94ec2a065e160925a02f2148acc63ba3489c40c6d9a83badd29",
+            "8e912cc929e75a522c80ff0476895a9bedbfe0119433605b734282fb28427ab4",
+            "9153fb4959070989ba1d8ca6c58836e4f95ed64c849574f942c40f7bc928f7a8",
+            "91706b9284c16ab87d3b44b2edb0643914fa7a77ed6ea689d50d9faeab16546f",
+            "96772431a6d7c6d835c667062129709508374747cf84a62b7f90845e9a2baa98",
+            "995801edd76acfc05b78759b7fb35a389a2d36bcedaea510b867189a27571ece",
+            "9b9ceac5cea836bb2300117af167d31d938716d836cb30f39021330f3360659a",
+            "9ccaa3b8af10c7df12f35f1cebee771aa367c494fd145b5680132804a7a9e86a",
+            "a066fedf5b2a53b10a042aec0acdc8fc59a541b578b71cf6231f336256fc87bf",
+            "a6459c002d2d94584131e875fef897a29c9f1289104f3610eb82ebf9ca4e96bf",
+            "a9f9fe9f450f8cc09f2ce769d3c3dd42a85d18fe62681cb8dbfc01512488a066",
+            "aec940003b3694635b2df01321e68886dc26269e54104aef6fc45a0b1605bd20",
+            "b65fbb81b2fa19b4fc623a903935ad9fa58c27df1856ba7f5a11bec12472769b",
+            "b6d63ea84a014a9e551e4ab4ee6a34c5737c735630f854b8731207c44592bcf7",
+            "bf49a159266141088084ccf825cb3570d6fab1568534cdd5287dc94a043b5bed",
+            "c183472ba1053c0f2b8362cee33e0f7a967ae0f0a5b4d5f82da58ba953fd93f3",
+            "c57437b8bb07ea74dd460a70af0f0025ec2a1685028e7ed9a6eec51500dbad01",
+            "c66f4cc4a49731043d8efb2efbda66459fdfadc925d1a08c7b67def04a4e80b9",
+            "cd2c862acd8f424a45d70421828efb77beea928a102f43acc6384098f14ae536",
+            "cf7d3473e1b94abfc83613c251e2795de91f5902cd7825acdcefbade0a40f027",
+            "d1c43424beb91a66d0e3a4318f8b28c18c9f22cb95d64e8f478b7fa943763aa6",
+            "d466108fd0adc61026ac6495769cf54f80ca84da39b6081390589e534bb89ec6",
+            "d498d9f58553c8ea789379df86b48d2a511ae6e9df8de575fe3ff00b85725268",
+            "d778ce6b75abf78bb0d7fde10f66bc9465cfd38e02fe3d0686c98f070e7849f5",
+            "ddd6d671d99140b8f84a51f911d99025ed07c417833d1e08eb0d4c5d524c83da",
+            "e179b44866306edb5212fcf55cb4df910028560e3b2701c6a78d51bee51273cb",
+            "e1ca96b5e0716108d2c067c5b6d5400695b5b96f34357683fe09b7737afe118a",
+            "e37bd886c723a22b2f268266c96e6a70b8077413a062fb0c5fed862b968e68d8",
+            "e4e59330ad9b5c6b42bd68c59f8255f6a1f9b6385e50bdef913a4354f56edcc1",
+            "e9c027baf2ad0b78fc1436884f1fa246d94fcfded66e9c40a7eaa6ff874e3940",
+            "f80e1429dac2ed833101919a1765833b14bdfe4d15b91d87671e38064db1f5fd",
+            "feb656335b6cb7f8c82a011c96e7a8c4700bd0bb854813b2497d0101a8b1e064"
+          ]
         },
         {
           "race_number": 4,
@@ -2173,13 +2940,13 @@
         {
           "type": "Bulletin",
           "title": "Bulletin 1",
-          "url": "/Documents/Event/9725/Bulletin-1",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8794/789a8d0b-47ef-436a-a9e3-0a5b80b600d2/Bulletin-1.pdf",
           "published_time": "2026-04-01"
         },
         {
           "type": "Bulletin",
           "title": "Bulletin 2",
-          "url": "/Documents/Event/10322/Bulletin-2",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8794/79510b9a-66f8-492b-9d2f-4f6fe09f191b/Bulletin-2.pdf",
           "published_time": "2026-06-24"
         }
       ],
@@ -2999,7 +3766,7 @@
         {
           "type": "Other",
           "title": "Battle of the Legends - info for Middle and Sprint events",
-          "url": "/Documents/Event/10249/Battle-of-the-Legends---info-for-Middle-and-Sprint-events",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8885/8c412c2b-1970-4d26-80fa-4bfe1ce53ff2/Battle-of-the-Legends---info-for-Middle-and-Sprint-events.pdf",
           "published_time": "2026-03-18"
         },
         {
@@ -7603,6 +8370,12 @@
           "title": "Inbjudan",
           "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53809/a7b4e8a3-b860-49f3-9d52-f17ce00dd44e/Inbjudan.Pdf",
           "published_time": "2026-07-13"
+        },
+        {
+          "type": "ResultList",
+          "title": "Liveresultat",
+          "url": "https://liveresultat.orientering.se/followfull.php?comp=37566&lang=sv",
+          "published_time": null
         }
       ],
       "information": null,
@@ -7801,6 +8574,12 @@
           "title": "Inbjudan",
           "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/53810/da501522-0cb5-4d84-be66-11121fe11246/Inbjudan.Pdf",
           "published_time": "2026-07-13"
+        },
+        {
+          "type": "ResultList",
+          "title": "Liveresultat",
+          "url": "https://liveresultat.orientering.se/followfull.php?comp=37567&lang=sv",
+          "published_time": null
         }
       ],
       "information": null,
@@ -8938,8 +9717,26 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/56226/e93b935b-013e-4e53-a47e-096dc45c817f/Inbjudan.Pdf",
-          "published_time": "2026-06-22"
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/56226/ebe272c0-c03d-45c3-9f60-ca7b386c412f/Inbjudan.Pdf",
+          "published_time": "2026-08-17"
+        },
+        {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/56226/701d0644-4836-4542-be03-bebebcd9938d/PM.Pdf",
+          "published_time": "2026-08-25"
+        },
+        {
+          "type": "Other",
+          "title": "Vägbeskrivning från tävlingscentrum till arenan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/56226/150b8ea6-802b-4f57-9401-00c7ba21e341/Vägbeskrivning från tävlingscentrum till arenan.Png",
+          "published_time": "2026-08-24"
+        },
+        {
+          "type": "ResultList",
+          "title": "Liveresultat",
+          "url": "https://liveresultat.orientering.se/followfull.php?comp=37620&lang=sv",
+          "published_time": null
         }
       ],
       "information": null,
@@ -8949,33 +9746,293 @@
         {
           "race_number": 1,
           "name": "MTBO, Publiktävling VM, lång",
-          "datetimez": "2026-08-28T13:00:00+02:00",
+          "datetimez": "2026-08-28T15:30:00+02:00",
           "discipline": "Long",
           "night_or_day": "day",
           "position": {
-            "lat": 61.0088722412467,
-            "lng": 14.5212554252051
+            "lat": 61.0069878652756,
+            "lng": 14.501162557489
           },
           "areas": [],
           "urls": [
             {
-              "type": "EntryList",
-              "url": "/Entry?eventId=56226",
-              "title": "Enter",
-              "last_updated_at": "2026-06-17T09:10:06.347739+00:00"
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/200031",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-08-29T08:47:31.542471+00:00"
             },
             {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=56226&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-06-17T09:10:06.347739+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=56226&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-08-29T08:47:31.542471+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=56226&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-08-27T12:38:15.778312+00:00"
+            },
+            {
+              "type": "LocalStartList",
+              "url": "data/events/2026/SWE_56226_startlist_1.yaml",
+              "title": null,
+              "last_updated_at": "2026-08-29T08:46:38.228430+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "D21": 8,
+            "H21": 12,
+            "D17-20": 2,
+            "D16": 2,
+            "H16": 2,
+            "D12": 1,
+            "H12": 1,
+            "H10": 3,
+            "D40": 2,
+            "H40": 3,
+            "D45": 4,
+            "H45": 8,
+            "D50": 8,
+            "H50": 10,
+            "D55": 9,
+            "H55": 16,
+            "D60": 7,
+            "H60": 16,
+            "D65": 6,
+            "H65": 9,
+            "H70": 8,
+            "H75": 9,
+            "Öppen kort": 14,
+            "Öppen mellan": 23,
+            "Öppen lång": 6
+          },
+          "result_counts": {
+            "D21": 8,
+            "H21": 12,
+            "D17-20": 2,
+            "D16": 2,
+            "H16": 2,
+            "D12": 1,
+            "H12": 1,
+            "H10": 3,
+            "D40": 2,
+            "H40": 3,
+            "D45": 4,
+            "H45": 8,
+            "D50": 8,
+            "H50": 10,
+            "D55": 9,
+            "H55": 16,
+            "D60": 7,
+            "H60": 16,
+            "D65": 6,
+            "H65": 9,
+            "H70": 8,
+            "H75": 9,
+            "Öppen kort": 14,
+            "Öppen mellan": 23,
+            "Öppen lång": 6
+          },
+          "fingerprints": [
+            "023e1993ed5a6b87a28f09e3c6449708e1113f4c74bfb72411c462f8227ab0f3",
+            "026d40e207d7e3a2b7b354f967607cc08b87082e5dc0973e647afc74df584880",
+            "0376bc7fda4bce1c429399ccb6705bae6196dcbdf3e966bad689316a5e5cbb9a",
+            "03b45e032c88689650216c55eccc5289de8e166d3ba33961b24f2e07ef06ddf2",
+            "054fca0d09efb39c74643d8347a658e2555a872cd47a789dcf93f06196fe01c7",
+            "058887bd754a0940243dd933f11af3de3fbdaa707014ee9c268001c825528e61",
+            "067de2e23e72092bd6f7135908dd606d761aaf0ae74ce47ac9cade109e7fd56a",
+            "0795029ba0523be3cfa5fccb48db46debff741a322d08a182eac32871bbcd584",
+            "082c869dbb809d98be395aa93c3419c6d2dc51eba33f4c244bf85c6d61ed678b",
+            "0890bf758710dd21c740aaa722c3a6172dd338e69a60dc00619950e9afc6adb9",
+            "0b1526a5aa7a0636670c0c09546043a96c30153b0115528a16c66ea8e7fd394e",
+            "0ddfb50f7a850b8c4e466948f6ff8a50821ee75132c70a131a9ea444f748b06a",
+            "0fa06759929d817f8eaffacc03b0d75412ebaee349b3d2f34b4037c0760294c3",
+            "11ad0603a31e2b4e2b6d27f9aeb744a743f4b87bfe173590cff178baab4cacc8",
+            "11f3b9070d86297c0bfc8096874cd5d82138c4ba6544e489cd79329fe2cd0cca",
+            "124103c6097234e419a9f96aeebb7476c6e26d0aaf36b7f1b6b5f5b59e720c1a",
+            "13e56e7255edd774aefc32b1ec70d15cf54642d18cf939467df457864ce1815a",
+            "146bac935a88fd54ba47abe8d4c93b1aee2db38aee41a2ccd88e80b78bd6787f",
+            "15b5043c6296cd51e2262c182c7d94200d1b5a26abc38f2a459e07e08185e142",
+            "17224cb48800ff039b418772dc503dfadcdc91e1c265f0a00fde7b476b88ecd2",
+            "1bde460c125ec816550424030b954b2b7996f9f1b2b4eeea7db72916e6110e43",
+            "1c887cd9a237c5008ecefc55800f137be772d7ffb5c67b416dfa9a6334d17167",
+            "1caa9b4966fd56a05745e1741a6f5ad398f9f074fd1d8e98c5545c80ff9d5256",
+            "1dd993d53f879a43ad1e96453cc7f0dab49d10ec05cb7c6cc8a5d5a0d47f2a16",
+            "1eaebbaf307605c6fbf30cf3cfdd754b12eba83f96660510fe14c6e40f5de5a9",
+            "1f5c63866bd64be69627e9a7008a1c11e1c160ca68129470623dd544b7467463",
+            "224c25bff1b3824787906e5b075e6ec3a984debd30d5d02b1070e99f7533814c",
+            "22c9ced9755c9fd3cf7879adf7ddd4f3f295a1b8e3b09070169bc0f36239d901",
+            "238743e0c44b3cbdf69a8641fcbaeb7acc1acae96416bcd86e9b12a730136bd5",
+            "27636339ad4c0766651996990cd0c59cd37d4ef5bead3b809d77d4fd506d0a92",
+            "28156df815b2059ff176846cbe7305c11502e591ca19f88d454bac7103ec7062",
+            "2ab5d19a8ede0ce221da5489dca124a06152a598bfea0b4ad12b16e54a278d2c",
+            "2bc21178020087449580226b458b791795a481ae6d9a9373b31125deb78bbdec",
+            "2c56c96765f867f87f837df1140084e448a2b3bceddc29782257674fa763018b",
+            "2e4ae66a71bc0db7c618db80b55f5e356819cd290284eecef49c9e04b3bdd471",
+            "2eeb018f587e3aa523cc109a0e3ec80e9d47dbb4f43d54dc4d336f68ff92976d",
+            "30274db6d725ce1d89944d6f3ee402a9d36529445f3c8da90911afba2dd57d2e",
+            "308764f6c2056173151f53a6dcd59160d778d72996642fda76b21552a48fdf2b",
+            "32aaadf016937d6cfbc6177d6cb4e07fd7d3c15a8125abef8ad38d14f2d7034b",
+            "338086d8ff91f685940e4c6865a83cf844df33b7c2e390a02b52a9f4e4d42bc6",
+            "35570709e91dffc5b13aa9045f5cd8b6f832ad9ac7824f72c3c00e59a7bc6370",
+            "357eb57a53dfa069665292ab4f7bdfca389a49ebef50d323c944974b0a517078",
+            "3614745ad0ea74dc7760a1a281d61e43d467be2e247e2d3a8e2ed9b5425a3fa8",
+            "36b01359a6913885734af6a9583a1a88e530602bd080e16fce617263006b6702",
+            "37f99eedce7ddeca965c6f1ece1c1b41c8013c941b29ede147a6da277c180f05",
+            "381ecdfc1d593fe39e638abd8af05abfa3d988ee23d010b0c055ca9c7e76f640",
+            "38e586a290aae715b88507dff1f685164542d29f9b0c1f895d4714dc9958881f",
+            "3a7cf5f935e75b4aa9a41223744898b73473ef5e801c04fd8b5ab0133be869e5",
+            "3a7d4a9c8b29646c9542f6efdcc75d5307b2df360551a6045d6a8e9101241f59",
+            "3cd58ffc1c512d3a9e72b491f8841f4d8fb33affac6571308b9262d43de279a2",
+            "3e24510184038339d7de4588961c420e640924c3ca409568b9e9e7f10bf9de3c",
+            "3ec078f67422af81a439712894d659da8c23da4b3051bcc45152b37a738f75a8",
+            "437367278577c8847241fa4f00d8fb567dcef43fc3d92646e28af376cad818a9",
+            "43b752a31887e65c9a155697fcebe9a7370aee93238a3c91e157455357b3abd6",
+            "459f81a9ca617e688a9aaa1a39028e86d9e36f3870080429856085f5451da252",
+            "45a036d9ae03589b4af8277c45915d9602bbe6c8e287b73977f46f5010522ad7",
+            "46e4ca39a37f89495071013095a7462a6d9f5021e269b2d415d3dcc2d49109b8",
+            "48b708c000f15e9b64dd6c75d1951b9eb44fb4a6ac7d3bd8d8d1f06a91c65d8c",
+            "4b352eb0f806529b531cad311bda6fce06ef88202ab5af127a107cf9dfcccea5",
+            "51c497a27455330b20159489212657007de0656bb2612040246989a37d166373",
+            "524b8a74c243b147289786959f33ac7c55263cd30476f8258c7669a57c64527f",
+            "5450c213d8b17d8e0aaed12502b30a8022e396e1b4bfe9d6aa40853a99f6f655",
+            "54a96569971659ea9d6461df3fab0c44ea2b2fb50b8ff82a69a5920f25391819",
+            "54de0949cd745f2c2d3d033a0125e27ab0e9a6afd154aeb4d58fd290435aa8ce",
+            "558a3316a45c18df5f0e946170966b36607d553126c88fd8fc47bb1bf6275633",
+            "5623922492b9e008a363f1db4824b0361a825f7565377fc6d4e2f98915ea9aec",
+            "571e91b051dac416297d0772784e1cd115c0c96e9a06b9aef8c843cb364ae769",
+            "575aa783449ada8ce155d3e34ade7c4f707caa07cde2feb0730b10bb5e79ed06",
+            "590c13e22c1cb280fdca1533dde9b6c04417a7267943749ddd26b4c500e0321b",
+            "59ca7f72167097095f1967fbe0b09101a3314512b403f4c1050af885c8f11a77",
+            "59e0962e0e0d25a7e26de2c3c3168240a09d52a1f1bbd81792d9edf48d217a95",
+            "5cc31a42efb87028c59ff42ed7133a2524a22678feee8e1c3dcf9c7bfc8af41e",
+            "5f7a3ce70820c1dedc0dcaa08879c2a4a10c0ce0a25dc5ab731ee547d822d187",
+            "609bdf63bedecd9497fd340192793cf7cb1a81f51c340da40ec2ebec399aa2ba",
+            "63cff2d5e5526ef7d6d700a7c04ccc021e706932b06e4155ecf7dedcc24b668b",
+            "66f4bb3e00509ecc0a1ec8147dfa699b624d36e9dca9e0ff5936d32785ca30d6",
+            "684501e3de1d8aeadfc42e566cf1a6ae223aea5a592b7fa9cec3a9b886413b89",
+            "6a4c8046375f8f4d51dca839ddec2a6d4ae383f056fbcf66b71fe1144c6f1cb7",
+            "6bde9865de2a051a86a2e7d79a005a3ea68251d4524da26137616d98c2af1506",
+            "6c109597ffb89b60049259678d89160153bfdee35d3ff4b198ba33672cdbfde5",
+            "6cbb9943bb32e52f4155b732a3460592ecd0fa97a6d2481d7078444abd8339e3",
+            "6ccb269b9540847a4f8859fd77e0b3df27e86f922724bc2b7ee34fef8bb2b71d",
+            "6d1a29156a51e36dc278ba51ced89a8d6964458b64741832fbef65bf97540424",
+            "6d2196b62681c4688bdbca9f8e4adb43478afdcff44fc30dc7369ab1b186cbaa",
+            "6dad57cb73ffb1378ecfb22d240edbb0858dcb6176973c9e815e4150f1473ba8",
+            "6db9b9d858d2e072b7f7aa3f7a1cb590ec1462520dc4d1b7bea5464bbf5c1e53",
+            "6ec4a40c311bc80fdd7b0468b431a52968f50551e9de3402a18c0663025666a8",
+            "6ed5bc4acb4da974ff756e97a66f5ccf8bedf436fb07fd2801ffe1b0f8d0993a",
+            "6fd8fdb9f9f95bc085576bf0c4a91f8f4ef4339942d070907752bdc799948d7e",
+            "71bd33550a18a882fe0b0104c24910a668b785f04d24d983231b87853048aea1",
+            "71ed2f150c51bd23302f9ee2c6d14fc82c197113d780c2274bd5bf55742af8d8",
+            "75f798ee96907c7e398650817ce85798cc0fcf715b34c4a52b4e1faff14b8642",
+            "77b98a51a170467baee0607f99430fb7932a09d7e22d2562b9eaeb06495f92ea",
+            "78d4af58aff477873e5f48fb3ae256eadb8c48fe6961808ebe90056b35738d20",
+            "7a338362e64470cbc94fd4352efd156f2fb44e589606575ac89c39d0f873a755",
+            "8008b0e8a82ec67de9e9f4dc1955ca42db6b41c0b04f4a2ae6dd81150c85b029",
+            "8061a2022ecca2636d74fe4645d14054fc5e4ea4c43ff34f6130d8336465460a",
+            "808d18301e5fe30f287deaebcfecae85980e75a9fbfd906f6d2b7ee97e76d98b",
+            "80a66689e2aeeaffec874dc02d1f18c6f347601c97ba17ba8ab95447b1040060",
+            "810e90b018570b01dc9cea599758841d9ccee3c8b1b160fd8dbf4da997561654",
+            "8719392655e2d16aa40a372c293c7a7f7415775ebd0b8bbd95c2f0f6302c3130",
+            "8786ad2be4b6b83fe32a4f9f8acb45483db41ba3ccc10a47055f16c5b0413253",
+            "87d7f70228a35246be984b942cc51c3e52723627619b7f6d4b625dd9fe8aae2e",
+            "894c1cbd890cb7101997e1129b4f7e4403d5b17d9d9e172daf78dbd861851728",
+            "8979e3ef3a41ade41fbc8296a4149f43eda8e67bc4c3e9de330f7ee94afdbaf7",
+            "8a03a4547b53db679891c2483d0633157b275468b5c455e0ce5f958f0718a24b",
+            "8a5a8df1f81b5071db7a2c82fc2f5875af3d436d565824dd3f0cce199c6e2d80",
+            "8abcc6e508ef1339e358ae6ac1c595c0fc6abe18c91827a76fcd8135e1695cb2",
+            "8b4595560ddc14f5a747f8797d6c12beaeafde8a045eebf3b1cc049644aa5a3d",
+            "8f2f789a823f81f693baa4e8b2aff488d54c9f80fdb247b8c3d561b5e2bf0056",
+            "8f8a2db4cfedecce4f65b565431adf48c7b21c59e3ba7afa38859ca2ddda5d4d",
+            "8ffda690df5bd9930bfeba1fd19ee2c3fcdd0514b190f8bfb2c8b73d74fde106",
+            "90235cd83084e3704ac22d615c3f1c9a846bdaef857334e3355faf0623e1c147",
+            "92caa9bac56f8c8ef72b7e4b9215375913caf48b6d924c4da62acb05e33f4aa0",
+            "94d2b1d3bfecc8fbfa5091ca0df6da5fe7119030ba793dd1b28f6ea6b7d53119",
+            "94f03fcf7be0db4cc001a262ea31ea330686876036233a4ab5cc90e97298bbfa",
+            "9522bee7496c4c20fd1c8600d60024368de777b7cad864151bf93ca2eb35a43d",
+            "96940b923a129927a64a02794b5f353499cba65dc9ae81510bceed5330d60ef7",
+            "9b6d1dc8de5ec89ca1ee2a2b11a05f349ff93c8536dddfa9bdca00c16d550412",
+            "9ca9bf362f03284fc7cd2470b3b7f0062940a05fab66099e077b5f600aaa0c29",
+            "9ec104a49483e8f4763649d0abeb660f003e90f87c6b6e371a55d197e56f7ddb",
+            "a15bab33315a373f4dd8003258e633b2516924a18853b90940ad4c05f7547533",
+            "a2df6751dd46cc24ed7f5cba7a243d7663de5e6b3d974784b2b39ed0ba1ee3cc",
+            "a412025e901187c585373374ae4275301d627be5895dc37fe657997ca5a085cf",
+            "a46019a1efeb24eca2b136e7df2fc96f80a4904f6fb08e7f660c13c205d833bd",
+            "a461f36d16b6fb3b23b448710f40f4eb4dad77e3eb8e86aa041df534ce9aab65",
+            "a62b339b6e8cb74234b214197f795a403c63c379d21d79c44234d64c1234f6c6",
+            "a74aeb4742c0b168d763d6a48fcec88bd7a151171202ce41d648c72eb4bfefd6",
+            "a7bbbad2c0d2232ff539b9e36aa58ef1a74a0e393cd0f07cf51086265b38df2d",
+            "a97b9ca8f1eff65954c41690dae9dc7070cb66222238ea2d37af00f7df4ecd44",
+            "a98c9433b793192fc83b47c41a7ff02d1848919d7abdedfbe5236c45c2528711",
+            "a9dc188b6ff2b5b1c95e6d0ccfd7e9927e229bbeba81b45b5967e084cff9f49c",
+            "ab034d197ebf12fa992156c717e58110cd37e94b244d205ed69b6f1a15305d07",
+            "ab1334202faad77ff52148862cf1cae4c1d848f452069f1130a0bae40bc39cac",
+            "abc817abe38ce7ea9311004306072e9a6f652b03021aac18d71dbc10bc5a96b7",
+            "afe35a01c9ba6e43fb0998855ffa160c70cbbca09d5d02df01b49812e18023b5",
+            "b156ab3f20e94dfe448c63bdfbaad9032d64042f8c7964463785778d267c681e",
+            "b2a65f91ee3ae06b162c0d57966e70d81f5561194405520dbe85275866308e4e",
+            "b40afa4eda524d8a223aa7f3e918380c3de7a7b7475579d6a4b51912b7ae2dd0",
+            "b4752070c136d3a99736cbae1cf138902a58c874c45b8a97793146e46f7e6706",
+            "b4f6168248c22cc8813244995563138196166547a2fabbb354df5b10609a092a",
+            "b6822cae8b8911d7ae007015ff6eb64609c69184bb139acac82348250152d30e",
+            "b6ce920984ee7db33464e031fcbe3d537866d29ef5b5388a86cc8d55b230c4bc",
+            "b859fab4cc6bbd148ae6101fbc6e32784fa5ac17a6211dee7472b72d9d578225",
+            "bcb159aa6aeb5eede5385df0eb5b2ea541ffef8235519bba25261278f39d8c4e",
+            "bd0065f464295737c647d829b1e0fb544bf22d9dfb1f05a0c659c533bcaa99d4",
+            "bd01bbdbf90e9e26737fac2608f116eac9f1dd5983d82d6635eed1b0b2b1b933",
+            "bd2c7000faf591e1ebcc4847d589274011a57df03fe7265d2dc5e464294eff9a",
+            "beb25fb40a855530d02706cf4fb1bbafb88894c528c15f5eadd50db2535624de",
+            "c73abc8fac4d79aab7225f27ab4f8839ee74b6a7d8cecb7b349691dde8cf8566",
+            "c81b96a2fc735e02b48492aad3515123a7959688f11c647c94b1cbaec696b340",
+            "c85cc5052891b5dabbd4f205f6ff35a71bfcd7a73f19eb3a5d9cba22d1f6b2dc",
+            "ca1dae3a0f8ef620f301abc5ea87a544e5c896b39888022944922125674ff995",
+            "cb90049283ae321c80f90d27ef272bc63fca273f96a2e27d4ad9bb275303e2c5",
+            "ce1c872b484916e6ba33f5c2d3be25afe34d022220547e010705184f4b6826a4",
+            "cf3bcd95c782a4b866644c176331e8c17abae09e320b50cd2897da14643415d7",
+            "cfd9b94a090a48166c8d85fdcfbe22c852b49395bb699d1c20294035b0641e48",
+            "d053d987845885ccea2437e5e89951dcd2061836370ef2c4f28bc41cc1c4ccd9",
+            "d12af3227367b5b5fd33930f51899216df918e73480b4b00350cd1ac9f91d601",
+            "d4100d9346700e258ec112e4fb1208ed0775ff3895c89ded94a77cacafd34326",
+            "d58d8c077f7cfc4cddb05752ecd2cafc1d838e4dde8c315a3065406c89d590a8",
+            "d60863aca6fc9ad9da38e4afdd6180ec9a56c6c0f0ffa3eeb6d8568ccbb5698e",
+            "d801de2703bd2e1329044cd29e60626d297018693a984e82b18cce7b71e8ad95",
+            "d83a92fa02c13262431d6473d2a69633f920415b42b6f93a0ad6d23d6cdf235c",
+            "d86b6e33504ac09a8b99f62365f37d0d011a162e520748054439256f1889066a",
+            "d9ba488c8250631242742ee727b39b84415654a65be89eebef61be5117b59cc2",
+            "db4cbe881f1b45235c4aeb00f214588e115113911e6f38bd55b8ce23dde42e43",
+            "dce0418f6f721651f2fefca1ea4b1e123e3e0d7466d28e92b81a16e14aeccd50",
+            "de28157881cb4a3edb3ea28f3ac7c4eab2645dcb0c9cbace8b6914f51ff5c44c",
+            "dfce9407551485c4ad4588502af669ff61417d71fcc74e6fea6f621c1cb3e937",
+            "e0105ab48c314bf12de2be099e921ab7adbe019d0ad7efaae180f84b37354ebc",
+            "e0edd5c8f0ce0f2c90d0d77f8a70059755ce31d6d8e6a269f615c0cb2c2f5b2b",
+            "e1ae60a80587acd3cb984fe0a5786ca65cef1c4569ed8540a320d428ec48c5a8",
+            "e34c791d9d1f9d085f0661dd85fad07e71380c7cd497975e9e2ce2c5b3dfde45",
+            "e4c54e8d1286f2eb5a9fa0b0525ccfe6bd6da54f6fbc8ba9a892d7be201d4c48",
+            "e5b2b3d2b56733f5cb66cf7293cd0af68ad9b4292718762025344507f4692da3",
+            "e769628735c3eae00a219a748549fbfcdeb9806ef52a845ec1877de5d69bd415",
+            "e775c15e83a6447326ea573ed37e964c37fe11cbc7d52c7793e58c277d0fea81",
+            "e79b77459275c1f42b6ee0829159946666cede8f9c259a22cedda39cd1e617ab",
+            "e9fcc97f3d4852b80129eaf0adcb3b2c13411c475598c6174919674b7a4f636c",
+            "ebde3f65c19015b562f14e80003f9f1b771f46f0a23d408e6c414bfaf2ec27f4",
+            "ed710eee02a726be354f5933a43469db905b58d36c479b9357eaab32b9bf9017",
+            "ef4960e9aec8d538c1f2fdf55d9a026386a14c6f9b5ef78a8360be5d91e7e930",
+            "f04680060fa3315835510d5484d55efe1d5092db409be626b8b67522ff015b12",
+            "f0fc8a1a455053e6b858a94688bcc298ff66c64cc642b316deb3050851ff8eec",
+            "f6b4dca8d63f504a259521a014af5cd69389d6644f51b2f9c302b6828682935d",
+            "fcac7f994c0127f5f5973e87b8279e2db4a6c6431bbe9cb2370e9914a89fdeef",
+            "fd232ff4d3affe39a8df1bc2ef5b0f1902f5d2b07c49efcdfc7d5bc43dbcf13a",
+            "fe7a3eb13e612a9dc5c4ef8b455a83820f001459dcf92eb9553d0a01b0dbcaa8"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -9087,8 +10144,26 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/56227/cbca41da-d7f0-4df9-9ede-c08d3e7bde04/Inbjudan.Pdf",
-          "published_time": "2026-06-22"
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/56227/1531c78e-b49f-46a3-b081-4c966aee0b8b/Inbjudan.Pdf",
+          "published_time": "2026-08-17"
+        },
+        {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/56227/c6c0fb89-f539-4bcd-903c-8a46d001d6d9/PM.Pdf",
+          "published_time": "2026-08-25"
+        },
+        {
+          "type": "Other",
+          "title": "Vägbeskrivning från tävlingscentrum till arenan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/56227/dadfb540-f73d-46a6-9555-047c7033fce0/Vägbeskrivning från tävlingscentrum till arenan.Png",
+          "published_time": "2026-08-24"
+        },
+        {
+          "type": "ResultList",
+          "title": "Liveresultat",
+          "url": "https://liveresultat.orientering.se/followfull.php?comp=37579&lang=sv",
+          "published_time": null
         }
       ],
       "information": null,
@@ -9102,29 +10177,256 @@
           "discipline": "Middle",
           "night_or_day": "day",
           "position": {
-            "lat": 61.0088698991595,
-            "lng": 14.5213629225575
+            "lat": 60.9788676902306,
+            "lng": 14.5183357139732
           },
           "areas": [],
           "urls": [
             {
-              "type": "EntryList",
-              "url": "/Entry?eventId=56227",
-              "title": "Enter",
-              "last_updated_at": "2026-06-17T09:10:06.347479+00:00"
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/200044",
+              "title": "Map, courses and routes will be available in Livelox",
+              "last_updated_at": "2026-08-26T01:30:56.245725+00:00"
             },
             {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=56227&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-06-17T09:10:06.347479+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=56227&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-08-27T12:38:15.778419+00:00"
+            },
+            {
+              "type": "LocalStartList",
+              "url": "data/events/2026/SWE_56227_startlist_1.yaml",
+              "title": null,
+              "last_updated_at": "2026-08-29T08:47:09.218363+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
+          "start_counts": {
+            "D21": 13,
+            "H21": 11,
+            "D17-20": 2,
+            "H17-20": 2,
+            "D16": 2,
+            "H16": 2,
+            "H14": 1,
+            "D12": 2,
+            "H12": 1,
+            "H10": 3,
+            "D40": 1,
+            "H40": 3,
+            "D45": 7,
+            "H45": 10,
+            "D50": 9,
+            "H50": 15,
+            "D55": 9,
+            "H55": 21,
+            "D60": 7,
+            "H60": 20,
+            "D65": 7,
+            "H65": 11,
+            "H70": 8,
+            "H75": 8,
+            "Öppen kort": 1,
+            "Öppen mellan": 7,
+            "Öppen lång": 3
+          },
           "result_counts": null,
-          "fingerprints": []
+          "fingerprints": [
+            "023e1993ed5a6b87a28f09e3c6449708e1113f4c74bfb72411c462f8227ab0f3",
+            "0376bc7fda4bce1c429399ccb6705bae6196dcbdf3e966bad689316a5e5cbb9a",
+            "03b45e032c88689650216c55eccc5289de8e166d3ba33961b24f2e07ef06ddf2",
+            "054fca0d09efb39c74643d8347a658e2555a872cd47a789dcf93f06196fe01c7",
+            "058887bd754a0940243dd933f11af3de3fbdaa707014ee9c268001c825528e61",
+            "067de2e23e72092bd6f7135908dd606d761aaf0ae74ce47ac9cade109e7fd56a",
+            "082c869dbb809d98be395aa93c3419c6d2dc51eba33f4c244bf85c6d61ed678b",
+            "098cb065d82d39371fe264ab849f053764469335daeee48853fd212553cf95ed",
+            "0ddfb50f7a850b8c4e466948f6ff8a50821ee75132c70a131a9ea444f748b06a",
+            "11ad0603a31e2b4e2b6d27f9aeb744a743f4b87bfe173590cff178baab4cacc8",
+            "11f3b9070d86297c0bfc8096874cd5d82138c4ba6544e489cd79329fe2cd0cca",
+            "124103c6097234e419a9f96aeebb7476c6e26d0aaf36b7f1b6b5f5b59e720c1a",
+            "146bac935a88fd54ba47abe8d4c93b1aee2db38aee41a2ccd88e80b78bd6787f",
+            "15b5043c6296cd51e2262c182c7d94200d1b5a26abc38f2a459e07e08185e142",
+            "17224cb48800ff039b418772dc503dfadcdc91e1c265f0a00fde7b476b88ecd2",
+            "1b67d9216f9c917cd281b152cebd933ebb1bb42cfb4dd95637655f68f0b0570f",
+            "1bde460c125ec816550424030b954b2b7996f9f1b2b4eeea7db72916e6110e43",
+            "1c887cd9a237c5008ecefc55800f137be772d7ffb5c67b416dfa9a6334d17167",
+            "1caa9b4966fd56a05745e1741a6f5ad398f9f074fd1d8e98c5545c80ff9d5256",
+            "1dd993d53f879a43ad1e96453cc7f0dab49d10ec05cb7c6cc8a5d5a0d47f2a16",
+            "1eaebbaf307605c6fbf30cf3cfdd754b12eba83f96660510fe14c6e40f5de5a9",
+            "1f5c63866bd64be69627e9a7008a1c11e1c160ca68129470623dd544b7467463",
+            "224c25bff1b3824787906e5b075e6ec3a984debd30d5d02b1070e99f7533814c",
+            "22c9ced9755c9fd3cf7879adf7ddd4f3f295a1b8e3b09070169bc0f36239d901",
+            "238743e0c44b3cbdf69a8641fcbaeb7acc1acae96416bcd86e9b12a730136bd5",
+            "27636339ad4c0766651996990cd0c59cd37d4ef5bead3b809d77d4fd506d0a92",
+            "28156df815b2059ff176846cbe7305c11502e591ca19f88d454bac7103ec7062",
+            "2ab5d19a8ede0ce221da5489dca124a06152a598bfea0b4ad12b16e54a278d2c",
+            "2e4ae66a71bc0db7c618db80b55f5e356819cd290284eecef49c9e04b3bdd471",
+            "2e4b7eba73eeb489abb53ca1757a45ecb185fed9aa8cf0ae2332371a83d12140",
+            "2eeb018f587e3aa523cc109a0e3ec80e9d47dbb4f43d54dc4d336f68ff92976d",
+            "30274db6d725ce1d89944d6f3ee402a9d36529445f3c8da90911afba2dd57d2e",
+            "308764f6c2056173151f53a6dcd59160d778d72996642fda76b21552a48fdf2b",
+            "30f05c0c808753d273e4032b97db5c20cfb47ae3657229fb5cd4b678a9c6ed97",
+            "32aaadf016937d6cfbc6177d6cb4e07fd7d3c15a8125abef8ad38d14f2d7034b",
+            "35570709e91dffc5b13aa9045f5cd8b6f832ad9ac7824f72c3c00e59a7bc6370",
+            "357eb57a53dfa069665292ab4f7bdfca389a49ebef50d323c944974b0a517078",
+            "3614745ad0ea74dc7760a1a281d61e43d467be2e247e2d3a8e2ed9b5425a3fa8",
+            "36b01359a6913885734af6a9583a1a88e530602bd080e16fce617263006b6702",
+            "37a1e04f81dec90af1dd8f10c3d0dea56c2a07f2ca3d2e0878fd5e76d947fb26",
+            "37f99eedce7ddeca965c6f1ece1c1b41c8013c941b29ede147a6da277c180f05",
+            "381ecdfc1d593fe39e638abd8af05abfa3d988ee23d010b0c055ca9c7e76f640",
+            "38e586a290aae715b88507dff1f685164542d29f9b0c1f895d4714dc9958881f",
+            "3955ef4c8888a4c2d3f1fb5a384cccf80eca627a49be873ae141b69931cb8782",
+            "39baf996bb2379f5e103eb6c9e99b6d69be3682bfcfe7da43c851fd9c12e3edf",
+            "3a7cf5f935e75b4aa9a41223744898b73473ef5e801c04fd8b5ab0133be869e5",
+            "3a7d4a9c8b29646c9542f6efdcc75d5307b2df360551a6045d6a8e9101241f59",
+            "3cd58ffc1c512d3a9e72b491f8841f4d8fb33affac6571308b9262d43de279a2",
+            "3df795e3f7aad4d697c295c898dabb269ee5f14979751738e89dfcb472e339d9",
+            "3e24510184038339d7de4588961c420e640924c3ca409568b9e9e7f10bf9de3c",
+            "3ec078f67422af81a439712894d659da8c23da4b3051bcc45152b37a738f75a8",
+            "3f57581413a3eadd944f11cdfc66dedb3427ad863d8ee6ed6b3289fda262c4f7",
+            "435e37fc007c832d9626357e9a98648abef9a713930cc7566aa01c57b8b5f748",
+            "44660e05ea8917a47213b773396d9b22c56758681818f22111eca251b742a3a8",
+            "459f81a9ca617e688a9aaa1a39028e86d9e36f3870080429856085f5451da252",
+            "46e4ca39a37f89495071013095a7462a6d9f5021e269b2d415d3dcc2d49109b8",
+            "476109e26fba416c52cfda89b4021b6f41f12700a312e9fbabb2d64ce537fd28",
+            "48b708c000f15e9b64dd6c75d1951b9eb44fb4a6ac7d3bd8d8d1f06a91c65d8c",
+            "499eb8d0718cdac93166903a282d17db43ca14aee1471a06b81959e9106a94a7",
+            "49ff9b67799ab39c1993a7abe501ba46f795f66962706b964c90ce810e070fca",
+            "4a48e420549328332caf3944ec2249265122275e7bb7feaa04ad48342b6401c6",
+            "4b352eb0f806529b531cad311bda6fce06ef88202ab5af127a107cf9dfcccea5",
+            "51c497a27455330b20159489212657007de0656bb2612040246989a37d166373",
+            "542030d207af70da02f339fb033c8601c9ef1a7d258680319b05ce939b8a20b7",
+            "544a259f29502f1d0bb5df5cb3ff7ed4bb369fc2cc96a54638333470e42ac92e",
+            "5450c213d8b17d8e0aaed12502b30a8022e396e1b4bfe9d6aa40853a99f6f655",
+            "54a96569971659ea9d6461df3fab0c44ea2b2fb50b8ff82a69a5920f25391819",
+            "5623922492b9e008a363f1db4824b0361a825f7565377fc6d4e2f98915ea9aec",
+            "571e91b051dac416297d0772784e1cd115c0c96e9a06b9aef8c843cb364ae769",
+            "575aa783449ada8ce155d3e34ade7c4f707caa07cde2feb0730b10bb5e79ed06",
+            "58329db0d43c6690767501f656e682057f3913e1a7ff7287bf5e2371b7cd9b1e",
+            "590c13e22c1cb280fdca1533dde9b6c04417a7267943749ddd26b4c500e0321b",
+            "59ca7f72167097095f1967fbe0b09101a3314512b403f4c1050af885c8f11a77",
+            "59e0962e0e0d25a7e26de2c3c3168240a09d52a1f1bbd81792d9edf48d217a95",
+            "5cc31a42efb87028c59ff42ed7133a2524a22678feee8e1c3dcf9c7bfc8af41e",
+            "5f7a3ce70820c1dedc0dcaa08879c2a4a10c0ce0a25dc5ab731ee547d822d187",
+            "63cff2d5e5526ef7d6d700a7c04ccc021e706932b06e4155ecf7dedcc24b668b",
+            "66f4bb3e00509ecc0a1ec8147dfa699b624d36e9dca9e0ff5936d32785ca30d6",
+            "684501e3de1d8aeadfc42e566cf1a6ae223aea5a592b7fa9cec3a9b886413b89",
+            "6a4c8046375f8f4d51dca839ddec2a6d4ae383f056fbcf66b71fe1144c6f1cb7",
+            "6bde9865de2a051a86a2e7d79a005a3ea68251d4524da26137616d98c2af1506",
+            "6c109597ffb89b60049259678d89160153bfdee35d3ff4b198ba33672cdbfde5",
+            "6ccb269b9540847a4f8859fd77e0b3df27e86f922724bc2b7ee34fef8bb2b71d",
+            "6d2196b62681c4688bdbca9f8e4adb43478afdcff44fc30dc7369ab1b186cbaa",
+            "6dad57cb73ffb1378ecfb22d240edbb0858dcb6176973c9e815e4150f1473ba8",
+            "6db9b9d858d2e072b7f7aa3f7a1cb590ec1462520dc4d1b7bea5464bbf5c1e53",
+            "6ec4a40c311bc80fdd7b0468b431a52968f50551e9de3402a18c0663025666a8",
+            "6ed5bc4acb4da974ff756e97a66f5ccf8bedf436fb07fd2801ffe1b0f8d0993a",
+            "6f22c2ab6a3817e2d361c477c680ba6d3e42004a42ab91dfb136279081fc21ff",
+            "6fd8fdb9f9f95bc085576bf0c4a91f8f4ef4339942d070907752bdc799948d7e",
+            "71bd33550a18a882fe0b0104c24910a668b785f04d24d983231b87853048aea1",
+            "71ed2f150c51bd23302f9ee2c6d14fc82c197113d780c2274bd5bf55742af8d8",
+            "75f798ee96907c7e398650817ce85798cc0fcf715b34c4a52b4e1faff14b8642",
+            "78d4af58aff477873e5f48fb3ae256eadb8c48fe6961808ebe90056b35738d20",
+            "7acc33e8099a68a73142028b38fab530e7d2250eb55ca2d3468420c53ee3aecc",
+            "7c449e44b8e45cfca42dfb34ece6175fb305d00051953a7cd8a10a134ed522d3",
+            "7da60378061dd94eb5d5492f1a53488c4bf3f6b5d3d502780cb82b7b9fba7df0",
+            "8008b0e8a82ec67de9e9f4dc1955ca42db6b41c0b04f4a2ae6dd81150c85b029",
+            "808d18301e5fe30f287deaebcfecae85980e75a9fbfd906f6d2b7ee97e76d98b",
+            "80a66689e2aeeaffec874dc02d1f18c6f347601c97ba17ba8ab95447b1040060",
+            "810e90b018570b01dc9cea599758841d9ccee3c8b1b160fd8dbf4da997561654",
+            "8381dfafc4321fb7a7e89cd4868fee9d465c4bba695853b0583d8002e155ac22",
+            "8786ad2be4b6b83fe32a4f9f8acb45483db41ba3ccc10a47055f16c5b0413253",
+            "87d7f70228a35246be984b942cc51c3e52723627619b7f6d4b625dd9fe8aae2e",
+            "894c1cbd890cb7101997e1129b4f7e4403d5b17d9d9e172daf78dbd861851728",
+            "8979e3ef3a41ade41fbc8296a4149f43eda8e67bc4c3e9de330f7ee94afdbaf7",
+            "8a03a4547b53db679891c2483d0633157b275468b5c455e0ce5f958f0718a24b",
+            "8a5a8df1f81b5071db7a2c82fc2f5875af3d436d565824dd3f0cce199c6e2d80",
+            "8b4595560ddc14f5a747f8797d6c12beaeafde8a045eebf3b1cc049644aa5a3d",
+            "8d18fb0667f4bb2246a84ec4fd5c0b19eae0d4f02bf2d4c0e910be609d2bfab8",
+            "8e5b9c7771f2e3493c31a1bcb7ccf3006372c188a769f7d0125a8ae4ac4694e8",
+            "8f2f789a823f81f693baa4e8b2aff488d54c9f80fdb247b8c3d561b5e2bf0056",
+            "8ffda690df5bd9930bfeba1fd19ee2c3fcdd0514b190f8bfb2c8b73d74fde106",
+            "927835126f5d64ff37450e8e2c0f875b4951fd6da8dea7fb9409f78f32a31cc0",
+            "94d2b1d3bfecc8fbfa5091ca0df6da5fe7119030ba793dd1b28f6ea6b7d53119",
+            "94f03fcf7be0db4cc001a262ea31ea330686876036233a4ab5cc90e97298bbfa",
+            "9522bee7496c4c20fd1c8600d60024368de777b7cad864151bf93ca2eb35a43d",
+            "9629dcdf5f9643cc7277580fd1c6ca5a1236d8d2fae8d52a62353ad0953dd2ec",
+            "96940b923a129927a64a02794b5f353499cba65dc9ae81510bceed5330d60ef7",
+            "9b6d1dc8de5ec89ca1ee2a2b11a05f349ff93c8536dddfa9bdca00c16d550412",
+            "9ca9bf362f03284fc7cd2470b3b7f0062940a05fab66099e077b5f600aaa0c29",
+            "9ec104a49483e8f4763649d0abeb660f003e90f87c6b6e371a55d197e56f7ddb",
+            "a15bab33315a373f4dd8003258e633b2516924a18853b90940ad4c05f7547533",
+            "a412025e901187c585373374ae4275301d627be5895dc37fe657997ca5a085cf",
+            "a46019a1efeb24eca2b136e7df2fc96f80a4904f6fb08e7f660c13c205d833bd",
+            "a74aeb4742c0b168d763d6a48fcec88bd7a151171202ce41d648c72eb4bfefd6",
+            "a7bbbad2c0d2232ff539b9e36aa58ef1a74a0e393cd0f07cf51086265b38df2d",
+            "a97b9ca8f1eff65954c41690dae9dc7070cb66222238ea2d37af00f7df4ecd44",
+            "a98c9433b793192fc83b47c41a7ff02d1848919d7abdedfbe5236c45c2528711",
+            "a9dc188b6ff2b5b1c95e6d0ccfd7e9927e229bbeba81b45b5967e084cff9f49c",
+            "ab034d197ebf12fa992156c717e58110cd37e94b244d205ed69b6f1a15305d07",
+            "ab1334202faad77ff52148862cf1cae4c1d848f452069f1130a0bae40bc39cac",
+            "abc817abe38ce7ea9311004306072e9a6f652b03021aac18d71dbc10bc5a96b7",
+            "afe35a01c9ba6e43fb0998855ffa160c70cbbca09d5d02df01b49812e18023b5",
+            "b156ab3f20e94dfe448c63bdfbaad9032d64042f8c7964463785778d267c681e",
+            "b2a65f91ee3ae06b162c0d57966e70d81f5561194405520dbe85275866308e4e",
+            "b4f6168248c22cc8813244995563138196166547a2fabbb354df5b10609a092a",
+            "b6822cae8b8911d7ae007015ff6eb64609c69184bb139acac82348250152d30e",
+            "b6ce920984ee7db33464e031fcbe3d537866d29ef5b5388a86cc8d55b230c4bc",
+            "b859fab4cc6bbd148ae6101fbc6e32784fa5ac17a6211dee7472b72d9d578225",
+            "bcb159aa6aeb5eede5385df0eb5b2ea541ffef8235519bba25261278f39d8c4e",
+            "bd01bbdbf90e9e26737fac2608f116eac9f1dd5983d82d6635eed1b0b2b1b933",
+            "beb25fb40a855530d02706cf4fb1bbafb88894c528c15f5eadd50db2535624de",
+            "c6aada86d42e186cd21c2b19c9957d783aa2b98094299dc95f379145edaa5a43",
+            "c7f9226867fea6ab146d7d3a51a5b2125bb407244d2deb55fdd5f1152796f009",
+            "c81b96a2fc735e02b48492aad3515123a7959688f11c647c94b1cbaec696b340",
+            "ca0ae911743cd14cbd38f38291df0f76944fcf165484bf5a2ab501f98ed2dcc5",
+            "ca1dae3a0f8ef620f301abc5ea87a544e5c896b39888022944922125674ff995",
+            "cc880aea962de6a4c683df9581e1bc65362922918259c7ffa84fc1d015b9f799",
+            "ce1c872b484916e6ba33f5c2d3be25afe34d022220547e010705184f4b6826a4",
+            "cf3bcd95c782a4b866644c176331e8c17abae09e320b50cd2897da14643415d7",
+            "d053d987845885ccea2437e5e89951dcd2061836370ef2c4f28bc41cc1c4ccd9",
+            "d069aca574652aa5bf586dfceb3abc2f76b1b3c5b0ca5b16804706a7d26c3f28",
+            "d12af3227367b5b5fd33930f51899216df918e73480b4b00350cd1ac9f91d601",
+            "d31a60aaca7521e3124fcc5490852320c44ef855d370b36a4355d340d310d0ea",
+            "d4100d9346700e258ec112e4fb1208ed0775ff3895c89ded94a77cacafd34326",
+            "d41a28850ff4362ae1cea6bc115c5398c1f1b85bca980a66d0657da3644e46da",
+            "d58d8c077f7cfc4cddb05752ecd2cafc1d838e4dde8c315a3065406c89d590a8",
+            "d60863aca6fc9ad9da38e4afdd6180ec9a56c6c0f0ffa3eeb6d8568ccbb5698e",
+            "d801de2703bd2e1329044cd29e60626d297018693a984e82b18cce7b71e8ad95",
+            "d83a92fa02c13262431d6473d2a69633f920415b42b6f93a0ad6d23d6cdf235c",
+            "d86b6e33504ac09a8b99f62365f37d0d011a162e520748054439256f1889066a",
+            "d9ba488c8250631242742ee727b39b84415654a65be89eebef61be5117b59cc2",
+            "dce0418f6f721651f2fefca1ea4b1e123e3e0d7466d28e92b81a16e14aeccd50",
+            "e0105ab48c314bf12de2be099e921ab7adbe019d0ad7efaae180f84b37354ebc",
+            "e0edd5c8f0ce0f2c90d0d77f8a70059755ce31d6d8e6a269f615c0cb2c2f5b2b",
+            "e1ae60a80587acd3cb984fe0a5786ca65cef1c4569ed8540a320d428ec48c5a8",
+            "e1f6c20a1dbd3f14d80dda7883d4cefddef4dd27aeb0edd8575c4e0d842fa476",
+            "e27caa4fe9977c784fb32d8027fccacb640f23efb97f9fcbcdb91c5d574c416b",
+            "e34c791d9d1f9d085f0661dd85fad07e71380c7cd497975e9e2ce2c5b3dfde45",
+            "e3eb4fb5f07e64267ab3fd6f880671e86cb0eae61f0066072cdea926bf14b62c",
+            "e5b2b3d2b56733f5cb66cf7293cd0af68ad9b4292718762025344507f4692da3",
+            "e769628735c3eae00a219a748549fbfcdeb9806ef52a845ec1877de5d69bd415",
+            "e80abe1d49054c031ebd65577eb18994d5dceca3d09d06f3576c60d22935f008",
+            "e9fcc97f3d4852b80129eaf0adcb3b2c13411c475598c6174919674b7a4f636c",
+            "ebb4d7f56f060bff70336e5764a50441ff79a7a890fd2af905bc2c6fe0b46d11",
+            "ec5832658dfe9f7c9754e1f44cc085acf992b9783443091185dcd55b6037b26c",
+            "ec61018fcf7403b750bdc8b292828bc4d140d1fcb090d79299f2588aa9e807d9",
+            "ed710eee02a726be354f5933a43469db905b58d36c479b9357eaab32b9bf9017",
+            "ef4960e9aec8d538c1f2fdf55d9a026386a14c6f9b5ef78a8360be5d91e7e930",
+            "f04680060fa3315835510d5484d55efe1d5092db409be626b8b67522ff015b12",
+            "f549ca56daa0fae6cecf5482049ab64688c69e668f769df787b9de856be906a7",
+            "f6b4dca8d63f504a259521a014af5cd69389d6644f51b2f9c302b6828682935d",
+            "f863f9aec464c5945811fc9b5ea9b4762d3179be41b0d9fb546d7305ec5f4609",
+            "fd232ff4d3affe39a8df1bc2ef5b0f1902f5d2b07c49efcdfc7d5bc43dbcf13a",
+            "fe7a3eb13e612a9dc5c4ef8b455a83820f001459dcf92eb9553d0a01b0dbcaa8"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -9236,8 +10538,20 @@
         {
           "type": "Invitation",
           "title": "Inbjudan",
-          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/56228/1e98a559-605b-43bc-97ff-8152c2fc138d/Inbjudan.Pdf",
-          "published_time": "2026-06-22"
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/56228/673ec98d-eb23-4c24-a956-5e3b5248f160/Inbjudan.Pdf",
+          "published_time": "2026-08-17"
+        },
+        {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/56228/69f687a6-896e-4885-9722-b9cc1586dcd0/PM.Pdf",
+          "published_time": "2026-08-25"
+        },
+        {
+          "type": "ResultList",
+          "title": "Liveresultat",
+          "url": "https://liveresultat.orientering.se/followfull.php?comp=37580&lang=sv",
+          "published_time": null
         }
       ],
       "information": null,
@@ -9257,23 +10571,235 @@
           "areas": [],
           "urls": [
             {
-              "type": "EntryList",
-              "url": "/Entry?eventId=56228",
-              "title": "Enter",
-              "last_updated_at": "2026-06-17T09:10:06.347609+00:00"
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/200049",
+              "title": "Map, courses and routes will be available in Livelox",
+              "last_updated_at": "2026-08-26T01:30:56.245492+00:00"
             },
             {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=56228&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-06-17T09:10:06.347609+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=56228&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-08-27T12:38:15.778375+00:00"
+            },
+            {
+              "type": "LocalStartList",
+              "url": "data/events/2026/SWE_56228_startlist_1.yaml",
+              "title": null,
+              "last_updated_at": "2026-08-29T08:46:43.859124+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
+          "start_counts": {
+            "D21": 13,
+            "H21": 8,
+            "D17-20": 2,
+            "H17-20": 1,
+            "D16": 8,
+            "H16": 5,
+            "H14": 4,
+            "D12": 2,
+            "H12": 1,
+            "H10": 3,
+            "H40": 2,
+            "D45": 6,
+            "H45": 8,
+            "D50": 10,
+            "H50": 13,
+            "D55": 6,
+            "H55": 17,
+            "D60": 8,
+            "H60": 15,
+            "D65": 6,
+            "H65": 9,
+            "D70": 1,
+            "H70": 8,
+            "H75": 8,
+            "Öppen mellan": 6,
+            "Öppen lång": 2
+          },
           "result_counts": null,
-          "fingerprints": []
+          "fingerprints": [
+            "00af963a33a1d58a42e24e7423f1e6314e39c1ed07e93216b1a080c2ce3d2acc",
+            "023e1993ed5a6b87a28f09e3c6449708e1113f4c74bfb72411c462f8227ab0f3",
+            "026d40e207d7e3a2b7b354f967607cc08b87082e5dc0973e647afc74df584880",
+            "0376bc7fda4bce1c429399ccb6705bae6196dcbdf3e966bad689316a5e5cbb9a",
+            "03b45e032c88689650216c55eccc5289de8e166d3ba33961b24f2e07ef06ddf2",
+            "054fca0d09efb39c74643d8347a658e2555a872cd47a789dcf93f06196fe01c7",
+            "058887bd754a0940243dd933f11af3de3fbdaa707014ee9c268001c825528e61",
+            "067de2e23e72092bd6f7135908dd606d761aaf0ae74ce47ac9cade109e7fd56a",
+            "082c869dbb809d98be395aa93c3419c6d2dc51eba33f4c244bf85c6d61ed678b",
+            "098cb065d82d39371fe264ab849f053764469335daeee48853fd212553cf95ed",
+            "0b07ddbd8e0da9d15cb52ad6dd2addefa77c8f135e6b2f6f8abc84e60fa8f1e9",
+            "0ddfb50f7a850b8c4e466948f6ff8a50821ee75132c70a131a9ea444f748b06a",
+            "11ad0603a31e2b4e2b6d27f9aeb744a743f4b87bfe173590cff178baab4cacc8",
+            "11f3b9070d86297c0bfc8096874cd5d82138c4ba6544e489cd79329fe2cd0cca",
+            "124103c6097234e419a9f96aeebb7476c6e26d0aaf36b7f1b6b5f5b59e720c1a",
+            "13e56e7255edd774aefc32b1ec70d15cf54642d18cf939467df457864ce1815a",
+            "146bac935a88fd54ba47abe8d4c93b1aee2db38aee41a2ccd88e80b78bd6787f",
+            "15b5043c6296cd51e2262c182c7d94200d1b5a26abc38f2a459e07e08185e142",
+            "17224cb48800ff039b418772dc503dfadcdc91e1c265f0a00fde7b476b88ecd2",
+            "1b67d9216f9c917cd281b152cebd933ebb1bb42cfb4dd95637655f68f0b0570f",
+            "1bde460c125ec816550424030b954b2b7996f9f1b2b4eeea7db72916e6110e43",
+            "1c887cd9a237c5008ecefc55800f137be772d7ffb5c67b416dfa9a6334d17167",
+            "1caa9b4966fd56a05745e1741a6f5ad398f9f074fd1d8e98c5545c80ff9d5256",
+            "1dd993d53f879a43ad1e96453cc7f0dab49d10ec05cb7c6cc8a5d5a0d47f2a16",
+            "1eaebbaf307605c6fbf30cf3cfdd754b12eba83f96660510fe14c6e40f5de5a9",
+            "1f5c63866bd64be69627e9a7008a1c11e1c160ca68129470623dd544b7467463",
+            "224c25bff1b3824787906e5b075e6ec3a984debd30d5d02b1070e99f7533814c",
+            "22c9ced9755c9fd3cf7879adf7ddd4f3f295a1b8e3b09070169bc0f36239d901",
+            "238743e0c44b3cbdf69a8641fcbaeb7acc1acae96416bcd86e9b12a730136bd5",
+            "27636339ad4c0766651996990cd0c59cd37d4ef5bead3b809d77d4fd506d0a92",
+            "28156df815b2059ff176846cbe7305c11502e591ca19f88d454bac7103ec7062",
+            "292c87a75e9619a581f39cb9575ab1fea8f801e1ef1d9daa8aaca2e8130edc9b",
+            "2bc21178020087449580226b458b791795a481ae6d9a9373b31125deb78bbdec",
+            "2e4ae66a71bc0db7c618db80b55f5e356819cd290284eecef49c9e04b3bdd471",
+            "30274db6d725ce1d89944d6f3ee402a9d36529445f3c8da90911afba2dd57d2e",
+            "308764f6c2056173151f53a6dcd59160d778d72996642fda76b21552a48fdf2b",
+            "30f05c0c808753d273e4032b97db5c20cfb47ae3657229fb5cd4b678a9c6ed97",
+            "32aaadf016937d6cfbc6177d6cb4e07fd7d3c15a8125abef8ad38d14f2d7034b",
+            "357eb57a53dfa069665292ab4f7bdfca389a49ebef50d323c944974b0a517078",
+            "36b01359a6913885734af6a9583a1a88e530602bd080e16fce617263006b6702",
+            "381ecdfc1d593fe39e638abd8af05abfa3d988ee23d010b0c055ca9c7e76f640",
+            "38e586a290aae715b88507dff1f685164542d29f9b0c1f895d4714dc9958881f",
+            "3955ef4c8888a4c2d3f1fb5a384cccf80eca627a49be873ae141b69931cb8782",
+            "3a7cf5f935e75b4aa9a41223744898b73473ef5e801c04fd8b5ab0133be869e5",
+            "3a7d4a9c8b29646c9542f6efdcc75d5307b2df360551a6045d6a8e9101241f59",
+            "3cd58ffc1c512d3a9e72b491f8841f4d8fb33affac6571308b9262d43de279a2",
+            "3df795e3f7aad4d697c295c898dabb269ee5f14979751738e89dfcb472e339d9",
+            "3ec078f67422af81a439712894d659da8c23da4b3051bcc45152b37a738f75a8",
+            "3f57581413a3eadd944f11cdfc66dedb3427ad863d8ee6ed6b3289fda262c4f7",
+            "435e37fc007c832d9626357e9a98648abef9a713930cc7566aa01c57b8b5f748",
+            "44660e05ea8917a47213b773396d9b22c56758681818f22111eca251b742a3a8",
+            "459f81a9ca617e688a9aaa1a39028e86d9e36f3870080429856085f5451da252",
+            "476109e26fba416c52cfda89b4021b6f41f12700a312e9fbabb2d64ce537fd28",
+            "4967617e83b0849a26bfa77214f6b2639028549a3473663f5438731f75462c28",
+            "499eb8d0718cdac93166903a282d17db43ca14aee1471a06b81959e9106a94a7",
+            "506dea4cdf2c7561b37366ef4dfb16b4817d287ce087f7abe920d29403d120c6",
+            "51c497a27455330b20159489212657007de0656bb2612040246989a37d166373",
+            "544a259f29502f1d0bb5df5cb3ff7ed4bb369fc2cc96a54638333470e42ac92e",
+            "54a96569971659ea9d6461df3fab0c44ea2b2fb50b8ff82a69a5920f25391819",
+            "5623922492b9e008a363f1db4824b0361a825f7565377fc6d4e2f98915ea9aec",
+            "571e91b051dac416297d0772784e1cd115c0c96e9a06b9aef8c843cb364ae769",
+            "575aa783449ada8ce155d3e34ade7c4f707caa07cde2feb0730b10bb5e79ed06",
+            "58329db0d43c6690767501f656e682057f3913e1a7ff7287bf5e2371b7cd9b1e",
+            "590c13e22c1cb280fdca1533dde9b6c04417a7267943749ddd26b4c500e0321b",
+            "59b578343814f3c21570cf23d1fe3c51d95fc8cfa9d01b8a2d3eaef8323e5878",
+            "59ca7f72167097095f1967fbe0b09101a3314512b403f4c1050af885c8f11a77",
+            "5b21ad6256ae943621fd324c4adcb77026fa03754f388b5fde7bbec1cece4a1a",
+            "5f7a3ce70820c1dedc0dcaa08879c2a4a10c0ce0a25dc5ab731ee547d822d187",
+            "66a1eb288fe408cd16f955660380650230cf404773d71b409591ba572f5a13e2",
+            "66f4bb3e00509ecc0a1ec8147dfa699b624d36e9dca9e0ff5936d32785ca30d6",
+            "6a4c8046375f8f4d51dca839ddec2a6d4ae383f056fbcf66b71fe1144c6f1cb7",
+            "6bde9865de2a051a86a2e7d79a005a3ea68251d4524da26137616d98c2af1506",
+            "6c109597ffb89b60049259678d89160153bfdee35d3ff4b198ba33672cdbfde5",
+            "6ccb269b9540847a4f8859fd77e0b3df27e86f922724bc2b7ee34fef8bb2b71d",
+            "6d2196b62681c4688bdbca9f8e4adb43478afdcff44fc30dc7369ab1b186cbaa",
+            "6dad57cb73ffb1378ecfb22d240edbb0858dcb6176973c9e815e4150f1473ba8",
+            "6db9b9d858d2e072b7f7aa3f7a1cb590ec1462520dc4d1b7bea5464bbf5c1e53",
+            "6ec4a40c311bc80fdd7b0468b431a52968f50551e9de3402a18c0663025666a8",
+            "6ed5bc4acb4da974ff756e97a66f5ccf8bedf436fb07fd2801ffe1b0f8d0993a",
+            "71bd33550a18a882fe0b0104c24910a668b785f04d24d983231b87853048aea1",
+            "71ed2f150c51bd23302f9ee2c6d14fc82c197113d780c2274bd5bf55742af8d8",
+            "736304e1e964ab66c74eddd4a214516685425b77b4ebe991739ad711ce3c52f9",
+            "739cfafa9d1765c7a079614807d4035b8851af114ff0b99385ca502a4c373a2d",
+            "7c449e44b8e45cfca42dfb34ece6175fb305d00051953a7cd8a10a134ed522d3",
+            "808d18301e5fe30f287deaebcfecae85980e75a9fbfd906f6d2b7ee97e76d98b",
+            "80a66689e2aeeaffec874dc02d1f18c6f347601c97ba17ba8ab95447b1040060",
+            "810e90b018570b01dc9cea599758841d9ccee3c8b1b160fd8dbf4da997561654",
+            "8381dfafc4321fb7a7e89cd4868fee9d465c4bba695853b0583d8002e155ac22",
+            "87d7f70228a35246be984b942cc51c3e52723627619b7f6d4b625dd9fe8aae2e",
+            "894c1cbd890cb7101997e1129b4f7e4403d5b17d9d9e172daf78dbd861851728",
+            "8979e3ef3a41ade41fbc8296a4149f43eda8e67bc4c3e9de330f7ee94afdbaf7",
+            "8a5a8df1f81b5071db7a2c82fc2f5875af3d436d565824dd3f0cce199c6e2d80",
+            "8b4595560ddc14f5a747f8797d6c12beaeafde8a045eebf3b1cc049644aa5a3d",
+            "8f2f789a823f81f693baa4e8b2aff488d54c9f80fdb247b8c3d561b5e2bf0056",
+            "8ffda690df5bd9930bfeba1fd19ee2c3fcdd0514b190f8bfb2c8b73d74fde106",
+            "927835126f5d64ff37450e8e2c0f875b4951fd6da8dea7fb9409f78f32a31cc0",
+            "94d2b1d3bfecc8fbfa5091ca0df6da5fe7119030ba793dd1b28f6ea6b7d53119",
+            "9522bee7496c4c20fd1c8600d60024368de777b7cad864151bf93ca2eb35a43d",
+            "9629dcdf5f9643cc7277580fd1c6ca5a1236d8d2fae8d52a62353ad0953dd2ec",
+            "96940b923a129927a64a02794b5f353499cba65dc9ae81510bceed5330d60ef7",
+            "9b6d1dc8de5ec89ca1ee2a2b11a05f349ff93c8536dddfa9bdca00c16d550412",
+            "9ca9bf362f03284fc7cd2470b3b7f0062940a05fab66099e077b5f600aaa0c29",
+            "9ec104a49483e8f4763649d0abeb660f003e90f87c6b6e371a55d197e56f7ddb",
+            "a0bb28eb3aef4cc0a293a5f125e31b91a2a401d10e50af39580504489f378c90",
+            "a412025e901187c585373374ae4275301d627be5895dc37fe657997ca5a085cf",
+            "a46019a1efeb24eca2b136e7df2fc96f80a4904f6fb08e7f660c13c205d833bd",
+            "a74aeb4742c0b168d763d6a48fcec88bd7a151171202ce41d648c72eb4bfefd6",
+            "a7bbbad2c0d2232ff539b9e36aa58ef1a74a0e393cd0f07cf51086265b38df2d",
+            "a97b9ca8f1eff65954c41690dae9dc7070cb66222238ea2d37af00f7df4ecd44",
+            "a98c9433b793192fc83b47c41a7ff02d1848919d7abdedfbe5236c45c2528711",
+            "a9dc188b6ff2b5b1c95e6d0ccfd7e9927e229bbeba81b45b5967e084cff9f49c",
+            "ab034d197ebf12fa992156c717e58110cd37e94b244d205ed69b6f1a15305d07",
+            "ab1334202faad77ff52148862cf1cae4c1d848f452069f1130a0bae40bc39cac",
+            "abc817abe38ce7ea9311004306072e9a6f652b03021aac18d71dbc10bc5a96b7",
+            "afe35a01c9ba6e43fb0998855ffa160c70cbbca09d5d02df01b49812e18023b5",
+            "b156ab3f20e94dfe448c63bdfbaad9032d64042f8c7964463785778d267c681e",
+            "b2a65f91ee3ae06b162c0d57966e70d81f5561194405520dbe85275866308e4e",
+            "b4f6168248c22cc8813244995563138196166547a2fabbb354df5b10609a092a",
+            "b6ce920984ee7db33464e031fcbe3d537866d29ef5b5388a86cc8d55b230c4bc",
+            "b859fab4cc6bbd148ae6101fbc6e32784fa5ac17a6211dee7472b72d9d578225",
+            "bd01bbdbf90e9e26737fac2608f116eac9f1dd5983d82d6635eed1b0b2b1b933",
+            "be08b369d47b8a21b57b442ab8772d220cfce67cb6ed17148c3f34bc0d0cdc73",
+            "beb25fb40a855530d02706cf4fb1bbafb88894c528c15f5eadd50db2535624de",
+            "bfbb6f5ef33fe37e279482c557f4a332564f632edb4832eae2fe0f05127e9042",
+            "c6aada86d42e186cd21c2b19c9957d783aa2b98094299dc95f379145edaa5a43",
+            "c7f9226867fea6ab146d7d3a51a5b2125bb407244d2deb55fdd5f1152796f009",
+            "c81b96a2fc735e02b48492aad3515123a7959688f11c647c94b1cbaec696b340",
+            "ca0ae911743cd14cbd38f38291df0f76944fcf165484bf5a2ab501f98ed2dcc5",
+            "ca1dae3a0f8ef620f301abc5ea87a544e5c896b39888022944922125674ff995",
+            "ce1c872b484916e6ba33f5c2d3be25afe34d022220547e010705184f4b6826a4",
+            "ce8632ec48325d435d9a864fabbbf1b69e010a95f023befe127ee23a18c25b48",
+            "cf3bcd95c782a4b866644c176331e8c17abae09e320b50cd2897da14643415d7",
+            "d053d987845885ccea2437e5e89951dcd2061836370ef2c4f28bc41cc1c4ccd9",
+            "d069aca574652aa5bf586dfceb3abc2f76b1b3c5b0ca5b16804706a7d26c3f28",
+            "d31a60aaca7521e3124fcc5490852320c44ef855d370b36a4355d340d310d0ea",
+            "d3c7162c13c3b7e91aea59ee0d9debe163e9b691e09fce8a549e0bb8b9cbe93b",
+            "d4100d9346700e258ec112e4fb1208ed0775ff3895c89ded94a77cacafd34326",
+            "d41a28850ff4362ae1cea6bc115c5398c1f1b85bca980a66d0657da3644e46da",
+            "d50ade9798c92286209c66cb4ee95782b5f120183f21ad5ad2c50683c28b44e2",
+            "d58d8c077f7cfc4cddb05752ecd2cafc1d838e4dde8c315a3065406c89d590a8",
+            "d60863aca6fc9ad9da38e4afdd6180ec9a56c6c0f0ffa3eeb6d8568ccbb5698e",
+            "d83a92fa02c13262431d6473d2a69633f920415b42b6f93a0ad6d23d6cdf235c",
+            "d86b6e33504ac09a8b99f62365f37d0d011a162e520748054439256f1889066a",
+            "d9ba488c8250631242742ee727b39b84415654a65be89eebef61be5117b59cc2",
+            "dc731711d8d7facf878fede16a313bf63661dbcab894b4bc81c73afaf80b6a11",
+            "dce0418f6f721651f2fefca1ea4b1e123e3e0d7466d28e92b81a16e14aeccd50",
+            "de28157881cb4a3edb3ea28f3ac7c4eab2645dcb0c9cbace8b6914f51ff5c44c",
+            "e0105ab48c314bf12de2be099e921ab7adbe019d0ad7efaae180f84b37354ebc",
+            "e0edd5c8f0ce0f2c90d0d77f8a70059755ce31d6d8e6a269f615c0cb2c2f5b2b",
+            "e1247ed100b07130c6ac7063160db39d32b939d3064690e2b7c090bc2071db2a",
+            "e1ae60a80587acd3cb984fe0a5786ca65cef1c4569ed8540a320d428ec48c5a8",
+            "e1f6c20a1dbd3f14d80dda7883d4cefddef4dd27aeb0edd8575c4e0d842fa476",
+            "e27caa4fe9977c784fb32d8027fccacb640f23efb97f9fcbcdb91c5d574c416b",
+            "e34c791d9d1f9d085f0661dd85fad07e71380c7cd497975e9e2ce2c5b3dfde45",
+            "e3eb4fb5f07e64267ab3fd6f880671e86cb0eae61f0066072cdea926bf14b62c",
+            "e769628735c3eae00a219a748549fbfcdeb9806ef52a845ec1877de5d69bd415",
+            "e80abe1d49054c031ebd65577eb18994d5dceca3d09d06f3576c60d22935f008",
+            "e9fcc97f3d4852b80129eaf0adcb3b2c13411c475598c6174919674b7a4f636c",
+            "ebb4d7f56f060bff70336e5764a50441ff79a7a890fd2af905bc2c6fe0b46d11",
+            "ec61018fcf7403b750bdc8b292828bc4d140d1fcb090d79299f2588aa9e807d9",
+            "ed710eee02a726be354f5933a43469db905b58d36c479b9357eaab32b9bf9017",
+            "ed9569d82c2240a570fc42b3046f29fe58617045ce980481d2dfa8797fa63584",
+            "ef8e033cead753e77f06dbc8d8fd85a2d039e1a2072053145558239e3c412134",
+            "f04680060fa3315835510d5484d55efe1d5092db409be626b8b67522ff015b12",
+            "f534400e7e97bfc9e07ac30b447cddfc31c6ee754b4ef5450b4c5ddc75736277",
+            "f539422fe319d989a1b8b36795c9b7a5fad55608ec32fe9fe680a69e100328df",
+            "f64df70205d8ced19edd322b90c0ecd9a437ba55939dc349c07939ca3f9af8db",
+            "f6b4dca8d63f504a259521a014af5cd69389d6644f51b2f9c302b6828682935d",
+            "f863f9aec464c5945811fc9b5ea9b4762d3179be41b0d9fb546d7305ec5f4609",
+            "fb7e9971a6d714014609af25ccd22767e86c02b97e8b9efc535a2fcd3e0a8ce6",
+            "fd232ff4d3affe39a8df1bc2ef5b0f1902f5d2b07c49efcdfc7d5bc43dbcf13a",
+            "fe7a3eb13e612a9dc5c4ef8b455a83820f001459dcf92eb9553d0a01b0dbcaa8"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -13360,12 +14886,53 @@
             "lng": 18.1322732733916
           },
           "areas": [],
-          "urls": [],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=58116&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-08-19T01:28:17.838850+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=58116&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-08-19T01:28:17.838850+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=58116&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-08-19T01:28:17.838850+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "Kort": 2,
+            "Mellan": 6,
+            "Lång": 5
+          },
+          "result_counts": {
+            "Kort": 2,
+            "Mellan": 6,
+            "Lång": 5
+          },
+          "fingerprints": [
+            "109d1c4016cd81d6940c0ee28aa47c3f68c311f0df309b49b29147e561d5a7d8",
+            "4f28e038b2f3fd1f22b6056f8c67c1fc24105039e5a19395ec002cfd903d6999",
+            "6e949525dafbb0f6ecf1c346939a40a64eeee7a459e8ef66a1f0045a32c0dca7",
+            "770295953f9be197b5fca8d61ac61cc86c42ef0b6dc94a8bc157f0945de163d7",
+            "97068f866d01b00ebddbcc6423803f50e63043fe858936eeaa0f8bfd2778326e",
+            "98f7c7bf70cc3c23ecb7f5de06044d21d18eac2a6f415cb2e6bb40cd0dc24889",
+            "a12c5ee1f5c7d36abb21719f7cc232f09d79bc595a868c7b6ece27a12125ddbc",
+            "a3b229b5d17639eb144c764f86a9fff1c13e6dbd8f281d8db101448acf03d7d6",
+            "a40329a226f780314ae7b920d777baf0314a77554d3e291b0f1d6d7a3936e537",
+            "d681d495168f9fdfa56d1eb1c822af27f3784168284c89886a6726478564e353",
+            "e2172f6e3f35e00c5ac4267d6739398b8058053dadab59f7cfb21fa063d0b13e",
+            "e2c0888cd64b1bd89292c727d25cdfa3573d8c82afe19ba84215a253122488bc",
+            "ff579115ff3c2e130c1bc3ffbaadd55a0668fcab0c1586ebbcf0b8eba17f03c3"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -17718,6 +19285,18 @@
           "title": "Inbjudan",
           "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58956/e298d991-3c9f-483d-9a63-37221ba02b6b/Inbjudan.pdf",
           "published_time": "2026-04-26"
+        },
+        {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58956/1332fe19-52f0-4b54-95b7-a552706bced8/PM.Pdf",
+          "published_time": "2026-08-19"
+        },
+        {
+          "type": "Other",
+          "title": "Banlängder",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/58956/d11d43f6-9359-4e12-b466-1e91a2adfb03/Banlängder.Pdf",
+          "published_time": "2026-08-18"
         }
       ],
       "information": null,
@@ -17737,23 +19316,60 @@
           "areas": [],
           "urls": [
             {
-              "type": "EntryList",
-              "url": "/Entry?eventId=58956",
-              "title": "Enter",
-              "last_updated_at": "2026-04-25T22:13:52.238551+00:00"
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/199181",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-08-21T17:54:34.850369+00:00"
             },
             {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=58956&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-07-08T03:00:58.463437+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=58956&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-08-21T17:54:34.850369+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=58956&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-08-21T17:54:34.850369+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "Kort": 2,
+            "Mellan": 5,
+            "Lång": 9
+          },
+          "result_counts": {
+            "Kort": 2,
+            "Mellan": 5,
+            "Lång": 9
+          },
+          "fingerprints": [
+            "042173b9aa097dfc62fec7b214f3bddd862dbe5c5f42a28136a812a59f02d78f",
+            "11e82ae933d4b961ae97b24c6cee4024fe42db8d4dc88b3eac0177b212db36b7",
+            "150e8b158fe16f38ce0305d330999eb03d84c32e27c000e152a82a4372d3c432",
+            "2b41c980871549af0940a4755fdde24812930e24b1e6c5c0bf0a9b4cef04891a",
+            "2e4b7eba73eeb489abb53ca1757a45ecb185fed9aa8cf0ae2332371a83d12140",
+            "31781c13d956cae656b876c22ffd1f7615a3a4e8f4c53d25e4df6ace351afdad",
+            "68271db581c76ae55fd962a2fbc378686738685338dda43e4dac6099b7aabe35",
+            "72ded3e848d0a8fcfce1cd0eb1aa4e6618b4ccb57e504bd66f24b07783b2dfb8",
+            "77254658abb94f89eab1c1849ec44583228cce42c7c295203cdf24d4b41ab91f",
+            "80723f7a550cbb3d4adfcf29f3458cd117478c053b907857454ea8fafcfe1f23",
+            "83cb3572051950852e843ebc9187057d610b4a2904800d13ad56dfbff97c76db",
+            "b548103ce92235ffffdc566bc05ee395b3f4f0494556a5ea0f5d8537bb3f08b4",
+            "bd7d861e754ff6b93bba0e4c46e0607aac174ed1ba676b0ab3aee70915d4b557",
+            "bffa5e1fd0e517be43484d0990fa89811c288599064edf89975840281cb9c88b",
+            "c3af6eb4c25b35915c79eaa21beccb5f1edb9c4063cc2492b0a973aa9635de44",
+            "f80bb954c7527dd5a8954a9bddaae66425b40ba96fde712bcf7638ecae5518a8"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -19017,23 +20633,81 @@
           "areas": [],
           "urls": [
             {
-              "type": "EntryList",
-              "url": "/Entry?eventId=59458",
-              "title": "Enter",
-              "last_updated_at": "2026-07-29T02:55:34.787254+00:00"
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/199199",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-08-26T01:30:56.245760+00:00"
             },
             {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=59458&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-08-10T04:01:08.828412+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=59458&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-08-26T01:30:56.245760+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=59458&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-08-26T01:30:56.245760+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "Kvinnor 8 km": 5,
+            "Herrar 8 km": 13,
+            "Kvinnor 5 km": 2,
+            "Herrar 5 km": 7,
+            "Kvinnor 3 km": 1,
+            "Herrar 3 km": 3
+          },
+          "result_counts": {
+            "Kvinnor 8 km": 5,
+            "Herrar 8 km": 13,
+            "Kvinnor 5 km": 2,
+            "Herrar 5 km": 7,
+            "Kvinnor 3 km": 1,
+            "Herrar 3 km": 3
+          },
+          "fingerprints": [
+            "0761672688f369792df09b3f1c87d1602147903126163f52fca0dd3d5444473f",
+            "0c12c513a82f0eabefbc01b3dfa3c56a911322988c09fd749733341b153d7f41",
+            "0ccb3ef9587cdafab4cca3d7bdddc816fa6345e198162981d258d0f85947ac03",
+            "0eb66051624f01fc5427cb6ad54dd8c16b88246d3549fa42f2cb1eb2b835db34",
+            "1f14d6b6177f54eda8c637291d654fe4b1bcedc62fe83b90efc5525399d5dac9",
+            "2dcd6dbc5d2a2e6211fc09afb2696524d453fce041aa0315d8fe82d7e1059e26",
+            "3476a19a7f735d13f749f26af4d9e7347cd50119474b073891fc83c9aea0166b",
+            "3a7d4a9c8b29646c9542f6efdcc75d5307b2df360551a6045d6a8e9101241f59",
+            "476109e26fba416c52cfda89b4021b6f41f12700a312e9fbabb2d64ce537fd28",
+            "4f6810830a80c4bccdae773f94a047c0fe68eae724bdae8487aac996197f5118",
+            "6db04add4e02722bf9cbdfae1b6dd5123c5b3246acc3fc5aa0590351d8382acc",
+            "810e90b018570b01dc9cea599758841d9ccee3c8b1b160fd8dbf4da997561654",
+            "901ce25f832d80d4842147af9fd636e4f5f6c74b25bbc30d2c832d833d8410fd",
+            "927835126f5d64ff37450e8e2c0f875b4951fd6da8dea7fb9409f78f32a31cc0",
+            "a7a6e0608934293c1767893ce7601de65bc4df69063a8b635246dbcca8cdf8c6",
+            "a82929f542ae15937dae8b62599b9a82c9b06853ad9f447b3045974b13ded60f",
+            "a98c9433b793192fc83b47c41a7ff02d1848919d7abdedfbe5236c45c2528711",
+            "b02835fbd72bc05e92c3175034fc78e96d646d50551cf4c7d48e84a13a72ef8d",
+            "b4752070c136d3a99736cbae1cf138902a58c874c45b8a97793146e46f7e6706",
+            "b59dad9c5757b2d704f85f3be133856f8d3d4bef0e694aa37124bfe50cb32989",
+            "c0030a2165f968b7cde825e322251852affd9814f165a56bb898bddd6dda6a3a",
+            "ca9f3612116b8cd3d148b52b3c010f74f79d81b082d8bc31d3e30d9615876db4",
+            "d397d0fa611caa2c039b00215c2d1ddd0307cddba188bfffea1b2b1015847f5a",
+            "e1f6c20a1dbd3f14d80dda7883d4cefddef4dd27aeb0edd8575c4e0d842fa476",
+            "ed710eee02a726be354f5933a43469db905b58d36c479b9357eaab32b9bf9017",
+            "f1e2a08120cc801a81baf15836922a3d44e549d5a94c2946349d5c6c1a10a6f3",
+            "f24802c056f68be999e0210aabf368dfe085bca3e2f85457cdd5fc84a43c4cb8",
+            "f67714ecc6cf000f47c7280efcc103c214e3c99138b8e3699def64424bef2f01",
+            "f6a64798863533804ea8b3deec9b242c3e5c72ef6a844d09b8bfe06b96057181",
+            "fa4181e95cece643ff2852f889da6612fa1d6bcb1fbdd8d94e9318407d72f949",
+            "ff2389e2885e406c19d1bdf6d8b506a0ab9305e90f8e6dcb4840991b3d9ab48c"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -19923,16 +21597,14 @@
         }
       ],
       "classes": [
-        "* Entry in advance is not possible.",
         "5 km",
-        "5km*",
-        "Gul 4 km*",
+        "Gul 4 km",
         "Inskolning 2 km",
-        "MTBO Lätt 3",
-        "MTBO Medelsvår 6km*",
-        "MTBO Svår 10km*",
-        "Orange 3 km*",
-        "Orange 5 km*",
+        "MTBO Lätt 4km",
+        "MTBO Medelsvår 11km",
+        "MTBO Medelsvår 8km",
+        "Orange 3 km",
+        "Orange 5 km",
         "UD Gul 2",
         "UD Orange 3 km",
         "UD Orange 5 km",
@@ -19941,7 +21613,7 @@
         "UH Orange 3 km",
         "UH Orange 5 km",
         "UH Vit 2 km",
-        "Vit 2 km*"
+        "Vit 2 km"
       ],
       "urls": [
         {
@@ -19957,7 +21629,20 @@
           "last_updated_at": "2026-07-29T02:55:34.787172+00:00"
         }
       ],
-      "documents": [],
+      "documents": [
+        {
+          "type": "Invitation",
+          "title": "Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/59927/e2b4ff6e-de81-4009-8788-aa8cdb04de32/Inbjudan.Pdf",
+          "published_time": "2026-08-26"
+        },
+        {
+          "type": "Invitation",
+          "title": "Inbjudan Avslutning Ungdomsserie",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/59927/d5bcdc6d-16a5-4513-be50-6e8fa815efe7/Inbjudan Avslutning Ungdomsserie.Pdf",
+          "published_time": "2026-08-26"
+        }
+      ],
       "information": "Välkomna till Motionsorientering och Ungdomsserie samt MTBO vid  Hanaslöv i Alvesta.\nVi arrangerar skogsorientering samtidigt med mountainbikeorientering vid samma tävlingsplats. Banor för fot-orientering respektive cykel-orientering kommer naturligtvis förläggas på olika delar av området.\nAnmälan till Ungdomsserie görs innan tävling via Eventor.\nAnmälan till Motionsklasser och MTBO-klasser görs enbart på tävlingsplatsen.\nFri minutstart mellan kl 17:00 och 18:30 för både Ungdomsserie, Motionsklasser och MTBO-klasser.\nLiveresultat kommer att presenteras på:\nhttps://liveresultat.orientering.se/index.php",
       "region": "Småland",
       "punching_system": "Sportident",
@@ -19973,7 +21658,20 @@
             "lng": 14.5959849432604
           },
           "areas": [],
-          "urls": [],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Entry?eventId=59927",
+              "title": "Enter and/or order services",
+              "last_updated_at": "2026-08-27T12:38:15.778505+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=59927&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-08-27T12:38:15.778505+00:00"
+            }
+          ],
           "documents": [],
           "entry_counts": null,
           "start_counts": null,
@@ -20107,7 +21805,7 @@
         }
       ],
       "documents": [],
-      "information": "Välkommen på MTBO-träning på Jungfruberget!\nFinns 3 banor att välja mellan. Obligatoriskt med hjälm och cykel. Kartställ finns att låna, skicka ett meddelande innan!\nÅkare från andra klubbar är välkomna, swishar 40 kr till OK Kåre 1233999018.",
+      "information": "Välkommen på MTBO-träning på Jungfruberget!\nFinns 3 banor att välja mellan. Obligatoriskt med hjälm och cykel. Kartställ finns att låna, skicka ett meddelande innan!\nÅkare från andra klubbar är välkomna, swishar 40 kr till OK Kåre 1233999018.\nSamling norra delen av Lugnets stora parkering. Start mellan kl 17:30-18:00. Långa 11,6km, mellan 7,8km, korta 4,2km.",
       "region": "Dalarna",
       "punching_system": "other",
       "races": [
@@ -20123,12 +21821,6 @@
           },
           "areas": [],
           "urls": [
-            {
-              "type": "EntryList",
-              "url": "/Entry?eventId=60017",
-              "title": "Enter",
-              "last_updated_at": "2026-08-05T02:49:23.633849+00:00"
-            },
             {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=60017&groupBy=EventClass",
@@ -20199,6 +21891,12 @@
           "title": "Inbjudan",
           "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/60085/3c571ccd-03e0-4d7c-baac-ab9fb8b10782/Inbjudan.Pdf",
           "published_time": "2026-08-05"
+        },
+        {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/60085/c4272587-1acf-4a46-a9ba-c8fd3cbd3088/PM.Pdf",
+          "published_time": "2026-08-24"
         }
       ],
       "information": null,
@@ -20218,16 +21916,483 @@
           "areas": [],
           "urls": [
             {
-              "type": "EntryList",
-              "url": "/Entry?eventId=60085",
-              "title": "Enter",
-              "last_updated_at": "2026-08-12T02:13:24.448612+00:00"
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/200186",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-08-27T12:38:15.778446+00:00"
             },
             {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=60085&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-08-12T02:13:24.448612+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=60085&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-08-27T12:38:15.778446+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=60085&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-08-27T12:38:15.778446+00:00"
+            }
+          ],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": {
+            "Prova på": 1,
+            "Kort": 2,
+            "Mellan": 6,
+            "Lång": 14
+          },
+          "result_counts": {
+            "Prova på": 1,
+            "Kort": 2,
+            "Mellan": 6,
+            "Lång": 14
+          },
+          "fingerprints": [
+            "054fca0d09efb39c74643d8347a658e2555a872cd47a789dcf93f06196fe01c7",
+            "0f08b64003e6a904096356320e2cac0d89033d4e9788005bc111c2a1af963c29",
+            "15b5043c6296cd51e2262c182c7d94200d1b5a26abc38f2a459e07e08185e142",
+            "3a2a8b635d39bcf3bfe6d18171e05711e449b5c0feb6c4c9520e32e04ab80e3a",
+            "406e3160deb01949173b39caaa3a23736a3a9b078c324c70a1edf1a2c34cb551",
+            "49fc615d50ada672287e23b934c5846607a8c0c7d797ea249bbb64034dbb403a",
+            "4b4c441da7f51057cd6b3efa6c3af3d2646177a56798eef82b7fe7337806cafa",
+            "585d4094cb86e61808fc5e3acf04404ff5573164a99bcc474967758cf0088198",
+            "6c5bde3bdb1cde203fb38c17edaa165b26d65219f2c11eba451234acc97a0d16",
+            "6fe10c58582e898d865b8acd0e917498d1f386578a5067b244b5d75f2c461a63",
+            "736304e1e964ab66c74eddd4a214516685425b77b4ebe991739ad711ce3c52f9",
+            "8381dfafc4321fb7a7e89cd4868fee9d465c4bba695853b0583d8002e155ac22",
+            "8d5ca7c4d956f549380e55bf4b4ff12a2026c55b1fe33c774f32ff64e50fa522",
+            "a98c9433b793192fc83b47c41a7ff02d1848919d7abdedfbe5236c45c2528711",
+            "ab8d0fddca62cb25560b77298a66759ff8e9c121db361e525e9665753f471934",
+            "cf3bcd95c782a4b866644c176331e8c17abae09e320b50cd2897da14643415d7",
+            "e0105ab48c314bf12de2be099e921ab7adbe019d0ad7efaae180f84b37354ebc",
+            "e01ebe33396a6639448c066b65644066b3dc5110d0dd8669f25d6b3c67c03c11",
+            "e906c2038bbfa037622a52ccdc68ba20db6f444bc99ac393d14b3d6943404955",
+            "ed710eee02a726be354f5933a43469db905b58d36c479b9357eaab32b9bf9017",
+            "f70436db5bdc91132a9ee8e1ba50949d6c99c0b4c675e6829fc4507205d57fb2",
+            "f7163372626171edd365c206549008f1e4dad484c85760945a96a08deef1488a",
+            "fc15d496596d260aa64a2c4179d8386ed93d7e2bd18ca8f44115f918ea307566"
+          ]
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_60240",
+      "name": "Östgötaserien MTBO",
+      "start_time": "2026-09-02",
+      "end_time": "2026-09-02",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Local"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "NAIS Orienteringsklubb",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Thomas Petersson"
+        },
+        {
+          "role": "Contact phone number",
+          "name": "0706987251"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:GRwNAkwAVUMRFREXHwcRAEMzBB8AGQlcDhsP"
+        }
+      ],
+      "classes": [
+        "Korta damer",
+        "Korta herrar",
+        "Långa damer",
+        "Långa herrar",
+        "Mellan damer",
+        "Mellan herrar"
+      ],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/60240",
+          "title": null,
+          "last_updated_at": "2026-08-19T01:28:17.838787+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "type": "Invitation",
+          "title": "Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/60240/283375de-1b8c-4d36-aee0-99e6010340fc/Inbjudan.Docx",
+          "published_time": "2026-08-19"
+        },
+        {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/60240/19c1438b-7708-4c3e-b02c-f9b25946ec1c/PM.Pdf",
+          "published_time": "2026-08-27"
+        }
+      ],
+      "information": null,
+      "region": "Östergötland",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "Östgötaserien MTBO",
+          "datetimez": "2026-09-02T16:30:00+02:00",
+          "discipline": "Long",
+          "night_or_day": "day",
+          "position": {
+            "lat": 58.8064373596636,
+            "lng": 15.5594089864965
+          },
+          "areas": [],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Entry?eventId=60240",
+              "title": "Enter",
+              "last_updated_at": "2026-08-19T01:28:17.838790+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=60240&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-08-19T01:28:17.838790+00:00"
+            },
+            {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/200336",
+              "title": "Map, courses and routes will be available in Livelox",
+              "last_updated_at": "2026-08-27T12:38:15.778525+00:00"
+            }
+          ],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_60269",
+      "name": "MTBO-Cupen #5",
+      "start_time": "2026-09-09",
+      "end_time": "2026-09-09",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Local"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "Gotlands Bro OK",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Kurt Löfgren"
+        },
+        {
+          "role": "Contact phone number",
+          "name": "0727107697"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:Dx0QCEQHFxNPGA8XHwAKCkMzFxcNGQRcDhsP"
+        }
+      ],
+      "classes": [
+        "3 km",
+        "5 km",
+        "Kort 4",
+        "Lång 11",
+        "Mellan 7"
+      ],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/60269",
+          "title": null,
+          "last_updated_at": "2026-08-21T17:58:32.051670+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/60269/cd11e485-1b29-4c3a-9e43-130a42c951de/PM.Pdf",
+          "published_time": "2026-08-21"
+        }
+      ],
+      "information": null,
+      "region": "Gotland",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "MTBO-Cupen #5",
+          "datetimez": "2026-09-09T16:30:00+02:00",
+          "discipline": "Long",
+          "night_or_day": "day",
+          "position": {
+            "lat": 57.6926743773122,
+            "lng": 18.3521832757965
+          },
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_60271",
+      "name": "MTBO-träning Källviken",
+      "start_time": "2026-08-26",
+      "end_time": "2026-08-26",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Local"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "OK Kåre",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Annika Engström"
+        },
+        {
+          "role": "Contact phone number",
+          "name": "070-3146421"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:DBoMBkYSTRMKXgAcCgcWHUIeIxoOBAgTBBhMDEIe"
+        }
+      ],
+      "classes": [
+        "Kort",
+        "Lång",
+        "Mellan"
+      ],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/60271",
+          "title": null,
+          "last_updated_at": "2026-08-24T03:07:34.357614+00:00"
+        }
+      ],
+      "documents": [],
+      "information": "Träningen ställs in, för få anmälda.\nTräningssugna rekommenderas åka banor i Mora på fredag, lördag och söndag.",
+      "region": "Dalarna",
+      "punching_system": "other",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "MTBO-träning Källviken",
+          "datetimez": "2026-08-26T18:00:00+02:00",
+          "discipline": "Sprint",
+          "night_or_day": "day",
+          "position": {
+            "lat": 60.5716992653996,
+            "lng": 15.627397023374
+          },
+          "areas": [],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=60271&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-08-24T03:07:34.357616+00:00"
+            }
+          ],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_60277",
+      "name": "Smålandskustens närträning MTB-O",
+      "start_time": "2026-09-10",
+      "end_time": "2026-09-10",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Local"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "Nybro OK",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Jakob Jakobsson"
+        },
+        {
+          "role": "Contact phone number",
+          "name": "0725263209"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:BxUJAE9dCRMKHwcBHhsML0IGFx4OHw5cDhsP"
+        }
+      ],
+      "classes": [
+        "Kort",
+        "Lång",
+        "Mellan"
+      ],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/60277",
+          "title": null,
+          "last_updated_at": "2026-08-26T01:30:56.245653+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": "Småland",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "Smålandskustens närträning MTB-O",
+          "datetimez": "2026-09-10T18:00:00+02:00",
+          "discipline": "Long",
+          "night_or_day": "day",
+          "position": {
+            "lat": 56.7237918246236,
+            "lng": 15.9303662719145
+          },
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_60293",
+      "name": "Östgötaserien MTBO LOK",
+      "start_time": "2026-10-03",
+      "end_time": "2026-10-03",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Local"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "Linköpings OK",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Bertil Eronn"
+        },
+        {
+          "role": "Contact phone number",
+          "name": "0721994571"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:DxEQG0QfTRcTHwscLRMPDkQfTREOHQ=="
+        },
+        {
+          "role": "Event director",
+          "name": "Bertil Eronn"
+        },
+        {
+          "role": "Course setter",
+          "name": "Martin Jareland"
+        }
+      ],
+      "classes": [
+        "Kort Dam",
+        "Kort Herr",
+        "Lång Dam",
+        "Lång Herr",
+        "Mellan Dam",
+        "Mellan Herr"
+      ],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/60293",
+          "title": null,
+          "last_updated_at": "2026-08-26T01:30:56.245475+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": "Östergötland",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "Östgötaserien MTBO LOK",
+          "datetimez": "2026-10-03T11:00:00+02:00",
+          "discipline": "Middle",
+          "night_or_day": "day",
+          "position": null,
+          "areas": [],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Entry?eventId=60293",
+              "title": "Enter",
+              "last_updated_at": "2026-08-26T01:30:56.245477+00:00"
             }
           ],
           "documents": [],
