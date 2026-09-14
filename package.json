@@ -55,7 +55,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
-    "@astrojs/mdx": "^7.0.2",
+    "@astrojs/mdx": "^8.0.0",
     "@distube/ytdl-core": "^4.16.12",
     "@eslint/js": "^10.0.1",
     "@iconify-json/flat-color-icons": "^1.2.3",
@@ -86,7 +86,7 @@
     "tailwind-merge": "^3.6.0",
     "tailwindcss": "^4.2.4",
     "tsx": "^4.23.1",
-    "typescript": "^6.0.3",
+    "typescript": "^7.0.2",
     "typescript-eslint": "^8.65.0"
   },
   "lint-staged": {
