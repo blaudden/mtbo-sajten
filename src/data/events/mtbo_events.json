@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "last_scraped_at": "2026-09-21T07:46:59.410491+00:00",
+  "last_scraped_at": "2026-09-23T03:59:28.203844+00:00",
   "data_root": "data/events",
   "partitions": {
     "2010": {
