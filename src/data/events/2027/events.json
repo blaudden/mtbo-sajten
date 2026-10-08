@@ -192,7 +192,11 @@
           "name": "Jiri Putik"
         }
       ],
-      "classes": [],
+      "classes": [
+        "Men",
+        "Team Officials",
+        "Women"
+      ],
       "urls": [
         {
           "type": "Path",
@@ -207,6 +211,24 @@
           "title": "Embargoed areas",
           "url": "https://www.google.com/maps/d/viewer?mid=1onFzsYE2YyYt0eIyf3M2yXPX80M_HKI&usp=sharing",
           "published_time": null
+        },
+        {
+          "type": "Bulletin",
+          "title": "Bulletin 1_revised",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8961/3073a1f0-d8dd-4ca2-8eea-5096a770d35a/Bulletin 1_revised.Pdf",
+          "published_time": "2026-08-28"
+        },
+        {
+          "type": "Other",
+          "title": "Accomodation booking status",
+          "url": "https://docs.google.com/spreadsheets/d/1i5_dvtIERaZ2f3ctZ_eFddcpwNXQ2MpgnWD2tHTVFjU/edit?usp=sharing",
+          "published_time": null
+        },
+        {
+          "type": "Other",
+          "title": "Accommodation form",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8961/625aa614-68c0-4d23-95b1-8c9f3d97a9ce/Accommodation form.Xls",
+          "published_time": "2026-09-17"
         },
         {
           "type": "Bulletin",
@@ -325,7 +347,13 @@
           "name": "Jiri Putik"
         }
       ],
-      "classes": [],
+      "classes": [
+        "Men 17",
+        "Men 20",
+        "Team Officials",
+        "Women 17",
+        "Women 20"
+      ],
       "urls": [
         {
           "type": "Path",
@@ -340,6 +368,24 @@
           "title": "Embargoed areas",
           "url": "https://www.google.com/maps/d/viewer?mid=1onFzsYE2YyYt0eIyf3M2yXPX80M_HKI&usp=sharing",
           "published_time": null
+        },
+        {
+          "type": "Bulletin",
+          "title": "Bulletin 1_revised",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8962/b13db33c-5def-46ce-9779-6f6bb1a27fd0/Bulletin 1_revised.Pdf",
+          "published_time": "2026-08-28"
+        },
+        {
+          "type": "Other",
+          "title": "Accomodation booking status",
+          "url": "https://docs.google.com/spreadsheets/d/1i5_dvtIERaZ2f3ctZ_eFddcpwNXQ2MpgnWD2tHTVFjU/edit?usp=sharing",
+          "published_time": null
+        },
+        {
+          "type": "Other",
+          "title": "Accommodation form",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8962/903e48df-78b2-4316-8435-d6b7849863a5/Accommodation form.Xls",
+          "published_time": "2026-09-17"
         },
         {
           "type": "Bulletin",
@@ -387,9 +433,9 @@
         },
         {
           "race_number": 3,
-          "name": "Middle",
+          "name": "Relay",
           "datetimez": "2027-05-07T10:00:00+02:00",
-          "discipline": "Middle",
+          "discipline": "Relay",
           "night_or_day": null,
           "position": null,
           "areas": [],
@@ -402,9 +448,9 @@
         },
         {
           "race_number": 4,
-          "name": "Relay",
+          "name": "Middle",
           "datetimez": "2027-05-08T10:00:00+02:00",
-          "discipline": "Relay",
+          "discipline": "Middle",
           "night_or_day": null,
           "position": null,
           "areas": [],
@@ -1084,10 +1130,85 @@
           "discipline": "Sprint",
           "night_or_day": "day",
           "position": {
-            "lat": 57.4957430732791,
-            "lng": 15.0214412840075
+            "lat": 57.4958667563029,
+            "lng": 15.0214924149144
           },
-          "areas": [],
+          "areas": [
+            {
+              "lat": 57.4958667563029,
+              "lng": 15.0214924149144,
+              "polygon": [
+                [
+                  57.496162735878045,
+                  15.018689137778807
+                ],
+                [
+                  57.49773188342107,
+                  15.017312479881207
+                ],
+                [
+                  57.50158011772939,
+                  15.011069164635137
+                ],
+                [
+                  57.49882739886553,
+                  15.00456053457205
+                ],
+                [
+                  57.498213648202324,
+                  15.003315990404205
+                ],
+                [
+                  57.49730203140609,
+                  15.003854171750195
+                ],
+                [
+                  57.49322841207103,
+                  15.008595594477796
+                ],
+                [
+                  57.49348485681858,
+                  15.016325369521578
+                ],
+                [
+                  57.49240304849749,
+                  15.017663216737265
+                ],
+                [
+                  57.489626996344384,
+                  15.019542355929048
+                ],
+                [
+                  57.490212342781575,
+                  15.028142414891269
+                ],
+                [
+                  57.4914152882084,
+                  15.031248483431636
+                ],
+                [
+                  57.49533069610604,
+                  15.033600539967019
+                ],
+                [
+                  57.49672111419423,
+                  15.033038090986638
+                ],
+                [
+                  57.49789263682618,
+                  15.026224371355054
+                ],
+                [
+                  57.497901425361476,
+                  15.021802951698897
+                ],
+                [
+                  57.496162735878045,
+                  15.018689137778807
+                ]
+              ]
+            }
+          ],
           "urls": [],
           "documents": [],
           "entry_counts": null,
@@ -1154,8 +1275,74 @@
           "datetimez": "2027-05-23T00:00:00+02:00",
           "discipline": "Middle",
           "night_or_day": "day",
-          "position": null,
-          "areas": [],
+          "position": {
+            "lat": 57.4959383739984,
+            "lng": 15.0215279496496
+          },
+          "areas": [
+            {
+              "lat": 57.4959383739984,
+              "lng": 15.0215279496496,
+              "polygon": [
+                [
+                  57.49587444337277,
+                  15.018791525496747
+                ],
+                [
+                  57.48976313339804,
+                  15.022521542503453
+                ],
+                [
+                  57.48176046459611,
+                  15.031437714103324
+                ],
+                [
+                  57.48362534748628,
+                  15.048490402416425
+                ],
+                [
+                  57.485995832325614,
+                  15.061045331853641
+                ],
+                [
+                  57.489059146610856,
+                  15.079107826780334
+                ],
+                [
+                  57.496338699065944,
+                  15.07460346810346
+                ],
+                [
+                  57.502673070291166,
+                  15.058462321159613
+                ],
+                [
+                  57.506579042317185,
+                  15.048206154423996
+                ],
+                [
+                  57.503635913465956,
+                  15.041939925255452
+                ],
+                [
+                  57.499371755835995,
+                  15.040854663867718
+                ],
+                [
+                  57.50048442153587,
+                  15.030043548701531
+                ],
+                [
+                  57.497844109268385,
+                  15.021841172241588
+                ],
+                [
+                  57.49587444337277,
+                  15.018791525496747
+                ]
+              ]
+            }
+          ],
           "urls": [],
           "documents": [],
           "entry_counts": null,
@@ -1352,8 +1539,54 @@
           "datetimez": "2027-08-14T00:00:00+02:00",
           "discipline": "Sprint",
           "night_or_day": "day",
-          "position": null,
-          "areas": [],
+          "position": {
+            "lat": 60.3962932075298,
+            "lng": 15.5910329978339
+          },
+          "areas": [
+            {
+              "lat": 60.3962932075298,
+              "lng": 15.5910329978339,
+              "polygon": [
+                [
+                  60.39099042297158,
+                  15.626334277060689
+                ],
+                [
+                  60.37859598998031,
+                  15.612509990979685
+                ],
+                [
+                  60.378888822131074,
+                  15.584663962922175
+                ],
+                [
+                  60.3853305552432,
+                  15.552078164672942
+                ],
+                [
+                  60.396941976891526,
+                  15.557212899692447
+                ],
+                [
+                  60.408061638906986,
+                  15.529564347419234
+                ],
+                [
+                  60.41225491468418,
+                  15.538056402807644
+                ],
+                [
+                  60.412157399888116,
+                  15.558595329626467
+                ],
+                [
+                  60.39099042297158,
+                  15.626334277060689
+                ]
+              ]
+            }
+          ],
           "urls": [],
           "documents": [],
           "entry_counts": null,
@@ -1424,8 +1657,58 @@
           "datetimez": "2027-08-15T00:00:00+02:00",
           "discipline": "Middle",
           "night_or_day": "day",
-          "position": null,
-          "areas": [],
+          "position": {
+            "lat": 60.3962995196373,
+            "lng": 15.5910601822346
+          },
+          "areas": [
+            {
+              "lat": 60.3962995196373,
+              "lng": 15.5910601822346,
+              "polygon": [
+                [
+                  60.39090021587299,
+                  15.626444768726223
+                ],
+                [
+                  60.37850497785658,
+                  15.612589553151166
+                ],
+                [
+                  60.37744230955164,
+                  15.59085117437665
+                ],
+                [
+                  60.385588549580035,
+                  15.551913218099388
+                ],
+                [
+                  60.39680104977131,
+                  15.557646406226223
+                ],
+                [
+                  60.40706595614412,
+                  15.53089148456017
+                ],
+                [
+                  60.41284591531348,
+                  15.538774634637376
+                ],
+                [
+                  60.41485096649998,
+                  15.550957682370834
+                ],
+                [
+                  60.39503091578953,
+                  15.618083863906984
+                ],
+                [
+                  60.39090021587299,
+                  15.626444768726223
+                ]
+              ]
+            }
+          ],
           "urls": [],
           "documents": [],
           "entry_counts": null,
@@ -1812,6 +2095,678 @@
                 [
                   59.20291167030763,
                   17.899276570533004
+                ]
+              ]
+            }
+          ],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_60618",
+      "name": "MTBO, DM, medel, Ångermanland",
+      "start_time": "2027-06-02",
+      "end_time": "2027-06-02",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Championship"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "OK Nolaskogsarna",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact email",
+          "name": "enc:JhsMG0wYFzIOGwsdARURBEIUEBMTHgRcHhE="
+        }
+      ],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/60618",
+          "title": null,
+          "last_updated_at": "2026-10-08T21:02:41.480791+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": "Ångermanland",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "MTBO, DM, medel, Ångermanland",
+          "datetimez": "2027-06-02T00:00:00+02:00",
+          "discipline": "Long",
+          "night_or_day": "day",
+          "position": null,
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_60818",
+      "name": "MTBO Camp, medel",
+      "start_time": "2027-04-15",
+      "end_time": "2027-04-15",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "National"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "Lunds OK",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Malin Ågren"
+        },
+        {
+          "role": "Contact phone number",
+          "name": "0768-955969"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:ABUOBkNdAhUTFQtFXzQFAkwaD1wCHwg="
+        },
+        {
+          "role": "Event director",
+          "name": "Daniel Östvall"
+        },
+        {
+          "role": "Course setter",
+          "name": "Nils Pistora"
+        }
+      ],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/60818",
+          "title": null,
+          "last_updated_at": "2026-10-08T21:02:41.480616+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": "Skåne",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "MTBO Camp, medel",
+          "datetimez": "2027-04-15T00:00:00+02:00",
+          "discipline": "Middle",
+          "night_or_day": "day",
+          "position": {
+            "lat": 55.6251238213671,
+            "lng": 13.7208014915914
+          },
+          "areas": [
+            {
+              "lat": 55.6251238213671,
+              "lng": 13.7208014915914,
+              "polygon": [
+                [
+                  55.62672228640798,
+                  13.715459429982626
+                ],
+                [
+                  55.61476256652551,
+                  13.709223669635444
+                ],
+                [
+                  55.611483629047626,
+                  13.729758678699357
+                ],
+                [
+                  55.62059110915189,
+                  13.736101950529598
+                ],
+                [
+                  55.613426733804545,
+                  13.77577429066859
+                ],
+                [
+                  55.61943761109109,
+                  13.773624028197055
+                ],
+                [
+                  55.62805766382965,
+                  13.749326063909262
+                ],
+                [
+                  55.62672228640798,
+                  13.715459429982626
+                ]
+              ]
+            }
+          ],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_60819",
+      "name": "MTBO Camp, medel, natt",
+      "start_time": "2027-04-14",
+      "end_time": "2027-04-14",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "National"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "Lunds OK",
+          "country_code": "SWE"
+        },
+        {
+          "name": "OK Pan-Kristianstad",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Malin Ågren"
+        },
+        {
+          "role": "Contact phone number",
+          "name": "0768-955969"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:ABUOBkNdAhUTFQtFXzQFAkwaD1wCHwg="
+        },
+        {
+          "role": "Event director",
+          "name": "Britt-Marie Svensson"
+        },
+        {
+          "role": "Course setter",
+          "name": "Max Svensson"
+        }
+      ],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/60819",
+          "title": null,
+          "last_updated_at": "2026-10-08T21:02:41.480664+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": "Skåne",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "MTBO Camp, medel, natt",
+          "datetimez": "2027-04-14T19:00:00+02:00",
+          "discipline": "Middle",
+          "night_or_day": "night",
+          "position": {
+            "lat": 55.9448911989713,
+            "lng": 14.3220806117913
+          },
+          "areas": [
+            {
+              "lat": 55.9448911989713,
+              "lng": 14.3220806117913,
+              "polygon": [
+                [
+                  55.93959076181525,
+                  14.32142616368224
+                ],
+                [
+                  55.94839708639552,
+                  14.32747443013972
+                ],
+                [
+                  55.965834468435474,
+                  14.286951040260147
+                ],
+                [
+                  55.94738107048906,
+                  14.253080757327185
+                ],
+                [
+                  55.937558247690276,
+                  14.26336280338321
+                ],
+                [
+                  55.93959076181525,
+                  14.32142616368224
+                ]
+              ]
+            }
+          ],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_60820",
+      "name": "MTBO Camp, ultralång",
+      "start_time": "2027-04-16",
+      "end_time": "2027-04-16",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "National"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "Lunds OK",
+          "country_code": "SWE"
+        },
+        {
+          "name": "OK Pan-Kristianstad",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Malin Ågren"
+        },
+        {
+          "role": "Contact phone number",
+          "name": "0768-955969"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:ABUOBkNdAhUTFQtFXzQFAkwaD1wCHwg="
+        },
+        {
+          "role": "Event directors",
+          "name": "Magnus Wallenborg"
+        },
+        {
+          "role": "Event directors",
+          "name": "Sanna Wallenborg"
+        },
+        {
+          "role": "Course setter",
+          "name": "Johan Svärd"
+        }
+      ],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/60820",
+          "title": null,
+          "last_updated_at": "2026-10-08T21:02:41.480630+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": "Skåne",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "MTBO Camp, ultralång",
+          "datetimez": "2027-04-16T10:00:00+02:00",
+          "discipline": "Long",
+          "night_or_day": "day",
+          "position": {
+            "lat": 55.9440929431436,
+            "lng": 14.3225674161664
+          },
+          "areas": [
+            {
+              "lat": 55.9440929431436,
+              "lng": 14.3225674161664,
+              "polygon": [
+                [
+                  55.93278718949932,
+                  14.335687728062355
+                ],
+                [
+                  55.797603158097985,
+                  14.224465828591939
+                ],
+                [
+                  55.823628200603565,
+                  14.17548338906434
+                ],
+                [
+                  55.99650810125624,
+                  14.27740816142867
+                ],
+                [
+                  55.93278718949932,
+                  14.335687728062355
+                ]
+              ]
+            }
+          ],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_60823",
+      "name": "MTBO Camp, Svenska Cupen, lång",
+      "start_time": "2027-04-17",
+      "end_time": "2027-04-17",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "National"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "BroSö OK",
+          "country_code": "SWE"
+        },
+        {
+          "name": "Hässleholms OK",
+          "country_code": "SWE"
+        },
+        {
+          "name": "Lunds OK",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Malin Ågren"
+        },
+        {
+          "role": "Contact phone number",
+          "name": "0768-955969"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:ABUOBkNdAhUTFQtFXzQFAkwaD1wCHwg="
+        },
+        {
+          "role": "Event directors",
+          "name": "Patrik Gunnarsson"
+        },
+        {
+          "role": "Event directors",
+          "name": "Maria Helmersson"
+        },
+        {
+          "role": "Event directors",
+          "name": "Nils Helmersson"
+        },
+        {
+          "role": "Course setter",
+          "name": "Patrik Gunnarsson"
+        },
+        {
+          "role": "Event controller",
+          "name": "Stefan Kollberg"
+        }
+      ],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/60823",
+          "title": null,
+          "last_updated_at": "2026-10-08T21:02:41.480678+00:00"
+        },
+        {
+          "type": "Series",
+          "url": "/Standings/View/Series/1618",
+          "title": "Svenska cupen MTBO 2027",
+          "last_updated_at": "2026-10-08T21:02:41.480678+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": "Blekinge\nSkåne",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "MTBO Camp, Svenska Cupen, lång",
+          "datetimez": "2027-04-17T10:00:00+02:00",
+          "discipline": "Long",
+          "night_or_day": "day",
+          "position": {
+            "lat": 56.0612015267261,
+            "lng": 14.5805539545546
+          },
+          "areas": [
+            {
+              "lat": 56.0612015267261,
+              "lng": 14.5805539545546,
+              "polygon": [
+                [
+                  56.1650321672827,
+                  14.602714620585573
+                ],
+                [
+                  56.08412695913452,
+                  14.616843634118041
+                ],
+                [
+                  56.051796898500896,
+                  14.595656482422113
+                ],
+                [
+                  56.06224704155795,
+                  14.543038969647814
+                ],
+                [
+                  56.123716699704374,
+                  14.500295217310308
+                ],
+                [
+                  56.17348708388721,
+                  14.540911343099978
+                ],
+                [
+                  56.1650321672827,
+                  14.602714620585573
+                ]
+              ]
+            }
+          ],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_60824",
+      "name": "MTBO Camp, Svenska Cupen, medel",
+      "start_time": "2027-04-18",
+      "end_time": "2027-04-18",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "National"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "Härlövs IF",
+          "country_code": "SWE"
+        },
+        {
+          "name": "Hässleholms OK",
+          "country_code": "SWE"
+        },
+        {
+          "name": "Lunds OK",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Malin Ågren"
+        },
+        {
+          "role": "Contact phone number",
+          "name": "0768-955969"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:ABUOBkNdAhUTFQtFXzQFAkwaD1wCHwg="
+        },
+        {
+          "role": "Event directors",
+          "name": "Björn Nilsson"
+        },
+        {
+          "role": "Event directors",
+          "name": "Carina Rydlund"
+        },
+        {
+          "role": "Course setters",
+          "name": "Björn Nilsson"
+        },
+        {
+          "role": "Course setters",
+          "name": "Carina Rydlund"
+        },
+        {
+          "role": "Event controller",
+          "name": "Stefan Kollberg"
+        }
+      ],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/60824",
+          "title": null,
+          "last_updated_at": "2026-10-08T21:02:41.480646+00:00"
+        },
+        {
+          "type": "Website",
+          "url": "http://mtbocamp.dk",
+          "title": null,
+          "last_updated_at": "2026-10-08T21:02:41.480646+00:00"
+        },
+        {
+          "type": "Series",
+          "url": "/Standings/View/Series/1618",
+          "title": "Svenska cupen MTBO 2027",
+          "last_updated_at": "2026-10-08T21:02:41.480646+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": "Skåne",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "MTBO Camp, Svenska Cupen, medel",
+          "datetimez": "2027-04-18T10:00:00+02:00",
+          "discipline": "Middle",
+          "night_or_day": "day",
+          "position": {
+            "lat": 56.0358502819409,
+            "lng": 13.9947787245289
+          },
+          "areas": [
+            {
+              "lat": 56.0358502819409,
+              "lng": 13.9947787245289,
+              "polygon": [
+                [
+                  56.05076146253202,
+                  13.957991108378113
+                ],
+                [
+                  56.04543602775743,
+                  14.006681985689196
+                ],
+                [
+                  56.03126906175157,
+                  14.037925311658151
+                ],
+                [
+                  56.03206255018458,
+                  14.037722436033878
+                ],
+                [
+                  56.02072546550943,
+                  14.051518179703855
+                ],
+                [
+                  56.00859109694184,
+                  14.043808797632568
+                ],
+                [
+                  56.02163255393131,
+                  13.952716249276506
+                ],
+                [
+                  56.05076146253202,
+                  13.957991108378113
                 ]
               ]
             }

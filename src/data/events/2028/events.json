@@ -43,7 +43,24 @@
           "country_code": "LTU"
         }
       ],
-      "officials": [],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Vytenis Benetis"
+        },
+        {
+          "role": "Contact phone number",
+          "name": "+37065773970"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:Gw0WCkMaEDIMBAcdQxgW"
+        },
+        {
+          "role": "Event director",
+          "name": "Vytenis Benetis"
+        }
+      ],
       "classes": [],
       "urls": [
         {
@@ -53,7 +70,68 @@
           "last_updated_at": "2026-08-05T02:50:54.016912+00:00"
         }
       ],
-      "documents": [],
+      "documents": [
+        {
+          "type": "EmbargoMap",
+          "title": "Embargoed areas - Google Maps",
+          "url": "https://www.google.com/maps/d/viewer?mid=1ME0XxboWKt57k5948ynbuDOsSP6fPLw",
+          "published_time": null
+        },
+        {
+          "type": "EmbargoMap",
+          "title": "Embargoed Areas - MTBO World Cup 2028 and U23 WMTBOC 2028 - v1.0",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/9017/b9c1bd55-c743-4edc-89b2-4e0f7f6e71a6/Embargoed Areas - MTBO World Cup 2028 and U23 WMTBOC 2028 - v1.0.Pdf",
+          "published_time": "2026-10-03"
+        },
+        {
+          "type": "Other",
+          "title": "Old maps: Lampėdžiai (LOSF database)",
+          "url": "https://dbsportas.lt/en/zmlp?loc=54.908132/23.828140/15/OSM",
+          "published_time": null
+        },
+        {
+          "type": "Other",
+          "title": "Old maps: Kačerginė (LOSF database)",
+          "url": "https://dbsportas.lt/en/zmlp?loc=54.923301/23.737811/14/OSM",
+          "published_time": null
+        },
+        {
+          "type": "Other",
+          "title": "Old maps: Kleboniškis (LOSF database)",
+          "url": "https://dbsportas.lt/en/zmlp?loc=54.939779/24.008310/13/OSM",
+          "published_time": null
+        },
+        {
+          "type": "Other",
+          "title": "Old maps: Kleboniškis West (2016)",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/9017/064a1672-21c1-4f17-9a4f-e24a1252b26f/Old maps: Kleboniškis West (2016).Jpeg",
+          "published_time": "2026-10-03"
+        },
+        {
+          "type": "Other",
+          "title": "Old maps: Kleboniškis East (2016)",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/9017/7e76c277-00ed-4809-b60f-c013494a55b0/Old maps: Kleboniškis East (2016) .Jpeg",
+          "published_time": "2026-10-03"
+        },
+        {
+          "type": "Other",
+          "title": "Old maps: Lampėdžiai (2016)",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/9017/8e25a444-2f4c-4c92-90a7-a77d00adb1ce/Old maps: Lampėdžiai (2016).Jpeg",
+          "published_time": "2026-10-03"
+        },
+        {
+          "type": "Other",
+          "title": "Old maps: Kačerginė East (2016)",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/9017/dfb46896-6cde-4698-8d1f-c32f56b6b9ca/Old maps: Kačerginė East (2016).Jpeg",
+          "published_time": "2026-10-03"
+        },
+        {
+          "type": "Other",
+          "title": "Old maps: Kačerginė Full (2022)",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/9017/6b1f5cd1-f9cd-414e-883a-efa7c7f88adc/Old maps: Kačerginė Full (2022).Png",
+          "published_time": "2026-10-04"
+        }
+      ],
       "information": null,
       "region": null,
       "punching_system": null,
@@ -65,10 +143,77 @@
           "discipline": "Other",
           "night_or_day": null,
           "position": {
-            "lat": 54.8861792596868,
-            "lng": 23.9737947132466
+            "lat": 54.899727661351,
+            "lng": 23.9341887239711
           },
-          "areas": [],
+          "areas": [
+            {
+              "lat": 54.899727661351,
+              "lng": 23.9341887239711,
+              "polygon": [
+                [
+                  54.93982154363971,
+                  23.914970680721023
+                ],
+                [
+                  54.954434247752886,
+                  23.92178573072608
+                ],
+                [
+                  54.9609560579014,
+                  23.940413610332367
+                ],
+                [
+                  54.95730395623923,
+                  23.956315424181145
+                ],
+                [
+                  54.9518252141589,
+                  23.97630631378844
+                ],
+                [
+                  54.956782200331844,
+                  23.99447981859816
+                ],
+                [
+                  54.96565109002637,
+                  24.001749243399786
+                ],
+                [
+                  54.97869001745681,
+                  24.03037252205424
+                ],
+                [
+                  54.96669436474005,
+                  24.04763736878178
+                ],
+                [
+                  54.963704771037186,
+                  24.048860508295373
+                ],
+                [
+                  54.93639585430958,
+                  23.988736705803632
+                ],
+                [
+                  54.934276285535105,
+                  23.976711945305286
+                ],
+                [
+                  54.935218332089306,
+                  23.96905982123509
+                ],
+                [
+                  54.93705436616071,
+                  23.924134923902084
+                ],
+                [
+                  54.93982154363971,
+                  23.914970680721023
+                ]
+              ]
+            }
+          ],
           "urls": [],
           "documents": [],
           "entry_counts": null,
@@ -135,13 +280,14 @@
     },
     {
       "id": "IOF_9092",
-      "name": "CX80 World MTB Orienteering Championships 2028",
-      "start_time": "2028-09-23",
-      "end_time": "2028-09-23",
+      "name": "CX80 World MTB Orienteering Championships 2028 and MTB Orienteering World Cup round 3 2028",
+      "start_time": "2028-09-16",
+      "end_time": "2028-09-16",
       "status": "Sanctioned",
       "original_status": "Active",
       "types": [
-        "World Championships"
+        "World Championships",
+        "World Cup"
       ],
       "tags": [],
       "form": null,
@@ -172,8 +318,8 @@
       "races": [
         {
           "race_number": 1,
-          "name": "CX80 World MTB Orienteering Championships 2028",
-          "datetimez": "2028-09-23T23:00:00+00:00",
+          "name": "CX80 World MTB Orienteering Championships 2028 and MTB Orienteering World Cup round 3 2028",
+          "datetimez": "2028-09-16T23:00:00+00:00",
           "discipline": "Other",
           "night_or_day": null,
           "position": null,
@@ -191,8 +337,8 @@
     {
       "id": "IOF_9093",
       "name": "Junior World MTB Orienteering Championships 2028",
-      "start_time": "2028-09-23",
-      "end_time": "2028-09-23",
+      "start_time": "2028-09-16",
+      "end_time": "2028-09-16",
       "status": "Sanctioned",
       "original_status": "Active",
       "types": [
@@ -224,7 +370,7 @@
         {
           "race_number": 1,
           "name": "Junior World MTB Orienteering Championships 2028",
-          "datetimez": "2028-09-23T23:00:00+00:00",
+          "datetimez": "2028-09-16T23:00:00+00:00",
           "discipline": "Other",
           "night_or_day": null,
           "position": null,
