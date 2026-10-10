@@ -46,6 +46,15 @@ export default defineMarkdocConfig({
         compact: { type: 'Boolean' },
       },
     },
+    EventCard: {
+      render: component('./src/components/markdoc/EventCardTag.astro'),
+      attributes: {
+        slug: { type: 'String' },
+        id: { type: 'String' },
+        ids: { type: Array },
+        title: { type: 'String' },
+      },
+    },
     CarouselImageGrid: {
       render: component('./src/components/markdoc/CarouselImageGrid.astro'),
       attributes: {

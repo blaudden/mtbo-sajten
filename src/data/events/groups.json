@@ -1,0 +1,92 @@
+[
+  {
+    "slug": "mtbo-camp-skaane-2027",
+    "name": "MTBO Camp Skåne 2027",
+    "subtitle": "Träningsläger och Svenska Cupen deltävling 1 & 2",
+    "start_date": "2027-04-14",
+    "end_date": "2027-04-18",
+    "organisers": [
+      "Lunds OK",
+      "OK Pan-Kristianstad",
+      "BroSö OK",
+      "Hässleholms OK",
+      "Härlövs IF"
+    ],
+    "region": "Skåne",
+    "website": "http://mtbocamp.dk",
+    "description": "Fem dagar med träning och tävlingar i härlig skånsk terräng med gemenskap och teknikpass. Helgen avslutas med årets två första deltävlingar i Svenska Cupen (långdistans lördag och medeldistans söndag).",
+    "event_ids": [
+      "SWE_60819",
+      "SWE_60818",
+      "SWE_60820",
+      "SWE_60823",
+      "SWE_60824"
+    ]
+  },
+  {
+    "slug": "svenska-cupen-karlskrona-2027",
+    "name": "Svenska Cupen Karlskrona 2027",
+    "subtitle": "Deltävling 3 & 4 i Svenska Cupen MTBO",
+    "start_date": "2027-05-15",
+    "end_date": "2027-05-16",
+    "organisers": [
+      "Karlskrona SOK"
+    ],
+    "region": "Blekinge",
+    "description": "Vårens cuphelg i Blekinge med långdistans på lördagen och intensiv sprint på söndagen.",
+    "event_ids": [
+      "SWE_57010",
+      "SWE_57011"
+    ]
+  },
+  {
+    "slug": "dm-sprint-medel-syd-2027",
+    "name": "MTBO DM Sprint & Medel 2027",
+    "subtitle": "Distriktsmästerskap för Småland, Blekinge och Skåne",
+    "start_date": "2027-05-22",
+    "end_date": "2027-05-23",
+    "organisers": [
+      "OK Bävern"
+    ],
+    "region": "Småland",
+    "description": "Dubbla DM-distanser hos OK Bävern med sprint lördag 22 maj och medeldistans söndag 23 maj.",
+    "event_ids": [
+      "SWE_58263",
+      "SWE_58264"
+    ]
+  },
+  {
+    "slug": "svenska-cupen-saetervurpan-2027",
+    "name": "Svenska Cupen Sätervurpan 2027",
+    "subtitle": "Deltävling 5 & 6 i Svenska Cupen MTBO",
+    "start_date": "2027-08-14",
+    "end_date": "2027-08-15",
+    "organisers": [
+      "Säterbygdens OK"
+    ],
+    "region": "Dalarna",
+    "website": "http://www.saterbygden.se",
+    "description": "Sätervurpan bjuder in till cupfest i klassiska Säterdalen och Dalaterrängen med sprint på lördagen och medeldistans på söndagen.",
+    "event_ids": [
+      "SWE_58993",
+      "SWE_58994"
+    ]
+  },
+  {
+    "slug": "svenska-cupen-tranetraeffen-2027",
+    "name": "Svenska Cupen Traneträffen 2027",
+    "subtitle": "Deltävling 7 & 8 i Svenska Cupen MTBO",
+    "start_date": "2027-08-21",
+    "end_date": "2027-08-22",
+    "organisers": [
+      "OK Tranan"
+    ],
+    "region": "Västergötland",
+    "website": "http://oktranan.se",
+    "description": "Cupavslutning och helgarrangemang hos OK Tranan med sprint på lördagen och medeldistans på söndagen.",
+    "event_ids": [
+      "SWE_57942",
+      "SWE_57943"
+    ]
+  }
+]
