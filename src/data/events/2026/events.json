@@ -3886,6 +3886,12 @@
               "last_updated_at": "2026-10-08T21:01:09.590650+00:00"
             },
             {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=8885&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-10-10T08:15:48.983880+00:00"
+            },
+            {
               "type": "StartList",
               "url": "/Events/StartList?eventId=8885&groupBy=EventClass",
               "title": "Start list",
@@ -3895,10 +3901,13 @@
           "documents": [],
           "entry_counts": null,
           "start_counts": {
-            "M21": 13,
+            "M21": 12,
             "W21": 11
           },
-          "result_counts": null,
+          "result_counts": {
+            "M21": 12,
+            "W21": 11
+          },
           "fingerprints": []
         }
       ],
@@ -24166,6 +24175,137 @@
               "url": "/Events/Entries?eventId=60695&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-10-08T21:01:09.590454+00:00"
+            }
+          ],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_60870",
+      "name": "ABCD MTBO Haninge SOK",
+      "start_time": "2026-10-24",
+      "end_time": "2026-10-24",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Club"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "Haninge SOK",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Joakim Skärlén"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:BxsDBEQeTQEKERceCBoiB0wdChwGFRYdBloBAEA="
+        },
+        {
+          "role": "Event directors",
+          "name": "Anja Hartley"
+        },
+        {
+          "role": "Event directors",
+          "name": "Emil Libérth"
+        },
+        {
+          "role": "Course setter",
+          "name": "Joakim Skärlén"
+        },
+        {
+          "role": "Event controller",
+          "name": "Joakim Skärlén"
+        },
+        {
+          "role": "Course controller",
+          "name": "Ulrika Andersson"
+        }
+      ],
+      "classes": [
+        "MTBO KORT",
+        "MTBO Lång",
+        "MTBO Medel"
+      ],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/60870",
+          "title": null,
+          "last_updated_at": "2026-10-10T08:15:48.983745+00:00"
+        }
+      ],
+      "documents": [],
+      "information": "3banor kommer erbjudas Kort Mellan Lång, arrangemanget går i samband med Haningestafetten så det finns en välsorterad marka och dusch.",
+      "region": "Stockholm",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "ABCD MTBO Haninge SOK",
+          "datetimez": "2026-10-24T10:00:00+02:00",
+          "discipline": "Middle",
+          "night_or_day": "day",
+          "position": {
+            "lat": 59.1614831324807,
+            "lng": 18.1305705016415
+          },
+          "areas": [
+            {
+              "lat": 59.1614831324807,
+              "lng": 18.1305705016415,
+              "polygon": [
+                [
+                  59.166425463498854,
+                  18.13317950903519
+                ],
+                [
+                  59.167239426697336,
+                  18.12183596882657
+                ],
+                [
+                  59.16066903627768,
+                  18.11287457782561
+                ],
+                [
+                  59.15473715517072,
+                  18.127280869061387
+                ],
+                [
+                  59.154330027224375,
+                  18.12977644541481
+                ],
+                [
+                  59.166425463498854,
+                  18.13317950903519
+                ]
+              ]
+            }
+          ],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Entry?eventId=60870",
+              "title": "Enter",
+              "last_updated_at": "2026-10-10T08:15:48.983748+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=60870&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-10-10T08:15:48.983748+00:00"
             }
           ],
           "documents": [],
