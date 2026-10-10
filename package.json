@@ -31,6 +31,7 @@
     "validate:links": "node tests/check-links.mjs",
     "optimize-images": "node scripts/optimize-images.mjs",
     "validate:images": "node scripts/validate-images.mjs",
+    "process-images": "node scripts/process-post-images.mjs",
     "submit:indexnow": "node scripts/submit-indexnow.js",
     "import:events": "node scripts/import-events.mjs",
     "generate:og": "node scripts/generate-og-image.mjs",

@@ -143,3 +143,17 @@ export interface RaceWithEvent {
 
 /** Page type for the catch-all route */
 export type EventPageType = 'landing' | 'year' | 'detail';
+
+/** Grouped multi-day competition or weekend event package */
+export interface EventGroup {
+  slug: string;
+  name: string;
+  subtitle?: string;
+  start_date: string;
+  end_date: string;
+  organisers?: string[];
+  region?: string;
+  website?: string;
+  description?: string;
+  event_ids: string[];
+}
