@@ -4,11 +4,9 @@ export const prerender = true;
 import Layout from '~/layouts/PageLayout.astro';
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import EventDetail from '~/components/events/EventDetail.astro';
-import EventGroupDetail from '~/components/events/EventGroupDetail.astro';
 import { Icon } from 'astro-icon/components';
 
 import type { MetaData } from '~/types';
-import type { EventGroup, ScraperEvent } from '~/types/events';
 import {
   loadAllEvents,
   getEventBySlug,
@@ -16,17 +14,12 @@ import {
   formatEventDateRange,
   countryCodeToName,
 } from '~/utils/events';
-import {
-  loadAllEventGroups,
-  getEventGroupBySlug,
-  getEventGroupByEventId,
-  getEventsForGroup,
-} from '~/utils/eventGroups';
+import { loadAllEventGroups } from '~/utils/eventGroups';
 import { generateEventJsonLd } from '~/utils/jsonLd';
 
 export async function getStaticPaths() {
   const allEvents = await loadAllEvents();
-  const allGroups = await loadAllEventGroups();
+  const allGroups = loadAllEventGroups();
 
   const eventPaths = allEvents.map((event) => ({
     params: { slug: event.slug },
@@ -40,23 +33,20 @@ export async function getStaticPaths() {
 }
 
 const { slug } = Astro.params;
+
 const event = await getEventBySlug(slug);
-let group: EventGroup | undefined = undefined;
-let groupEvents: ScraperEvent[] = [];
-let parentGroup: EventGroup | undefined = undefined;
 
 let metadata: MetaData = {};
 let jsonLd: Record<string, unknown> | null = null;
 
 if (event) {
-  parentGroup = await getEventGroupByEventId(event.id);
   const country = resolveCountryCode(event);
   const countryName = countryCodeToName(country);
   const dateRange = formatEventDateRange(event.start_time, event.end_time);
 
   metadata = {
     title: `${event.name} | MTBO Tävlingskalender`,
-    description: `${event.name} (${dateRange}) — Information, anmälningslänkar, klasser, karta och program för detta MTBO-event (mountainbikeorientering) i ${countryName}.`,
+    description: `${event.name} (${dateRange}) — Information, tävlingar, klasser och karta för detta MTBO-evenemang i ${countryName}.`,
     openGraph: {
       type: 'website',
       images: [{ url: new URL(`/og-images/events/${event.slug}.jpg`, Astro.site).toString() }],
@@ -64,17 +54,6 @@ if (event) {
   };
 
   jsonLd = generateEventJsonLd(event);
-} else {
-  group = await getEventGroupBySlug(slug);
-  if (group) {
-    groupEvents = await getEventsForGroup(group);
-    const dateRange = formatEventDateRange(group.start_date, group.end_date);
-
-    metadata = {
-      title: `${group.name} | MTBO Tävlingskalender`,
-      description: `${group.name} (${dateRange}) — Helgarrangemang och tävlingspaket för mountainbikeorientering med ${groupEvents.length} tävlingar i ${group.region || 'Sverige'}.`,
-    };
-  }
 }
 ---
 
@@ -95,9 +74,7 @@ if (event) {
 
     {
       event ? (
-        <EventDetail event={event} parentGroup={parentGroup} />
-      ) : group ? (
-        <EventGroupDetail group={group} events={groupEvents} />
+        <EventDetail event={event} />
       ) : (
         <div class="text-center py-12">
           <Icon name="tabler:alert-circle" class="w-12 h-12 mx-auto mb-3 text-gray-300" />

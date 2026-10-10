@@ -1,6 +1,6 @@
 ---
 /**
- * Markdoc component for embedding events or weekend packages directly into articles.
+ * Markdoc component for embedding events directly into articles.
  */
 import type { EventGroup, ScraperEvent } from '~/types/events';
 import {
@@ -31,7 +31,7 @@ let multipleEvents: ScraperEvent[] = [];
 
 if (slug) {
   // Check if slug matches an event group
-  group = await getEventGroupBySlug(slug);
+  group = getEventGroupBySlug(slug);
   if (group) {
     groupEvents = await getEventsForGroup(group);
   } else {
@@ -55,12 +55,9 @@ if (slug) {
     <div class="my-6 not-prose rounded-xl border border-blue-200/80 dark:border-blue-900/50 bg-gradient-to-br from-blue-50/70 via-white to-indigo-50/50 dark:from-slate-800 dark:via-slate-800 dark:to-slate-900/80 p-5 shadow-sm hover:shadow-md transition-shadow">
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
         <div class="flex flex-wrap items-center gap-2">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20">
-            Helgpaket
-          </span>
           {group.name.toLowerCase().includes('svenska cupen') && (
             <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300 border border-amber-300 dark:border-amber-700/50">
-              Svenska Cupen
+              Svenska Cupen MTBO
             </span>
           )}
         </div>
@@ -92,7 +89,10 @@ if (slug) {
               <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-3 py-1.5 px-3 rounded-lg bg-white/80 dark:bg-slate-700/50 border border-gray-100 dark:border-slate-600/50 text-xs">
                 <div class="flex items-center gap-2">
                   <span class="font-medium text-gray-500 dark:text-gray-400 w-16">{raceDate}</span>
-                  <a href={`/events/${ev.slug}`} class="font-semibold text-gray-900 dark:text-white hover:text-primary">
+                  <a
+                    href={`/events/${group?.slug ?? ev.slug}`}
+                    class="font-semibold text-gray-900 dark:text-white hover:text-primary"
+                  >
                     {ev.name}
                   </a>
                 </div>
@@ -116,7 +116,7 @@ if (slug) {
           href={`/events/${group.slug}`}
           class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary text-white hover:bg-primary/90 font-medium transition-colors"
         >
-          Visa helgarrangemanget ({groupEvents.length} tävlingar) →
+          Visa tävlingar i kalendern →
         </a>
       </div>
     </div>
