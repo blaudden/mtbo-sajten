@@ -3755,6 +3755,12 @@
               "last_updated_at": "2026-10-08T21:01:09.590692+00:00"
             },
             {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=8884&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-10-12T08:51:41.610181+00:00"
+            },
+            {
               "type": "StartList",
               "url": "/Events/StartList?eventId=8884&groupBy=EventClass",
               "title": "Start list",
@@ -3764,10 +3770,13 @@
           "documents": [],
           "entry_counts": null,
           "start_counts": {
-            "M21": 11,
-            "W21": 10
+            "M21": 10,
+            "W21": 9
           },
-          "result_counts": null,
+          "result_counts": {
+            "M21": 10,
+            "W21": 9
+          },
           "fingerprints": []
         }
       ],
