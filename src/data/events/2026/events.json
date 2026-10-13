@@ -18658,7 +18658,7 @@
           "published_time": "2026-04-02"
         }
       ],
-      "information": "Välkommen till årets sista deltävling i Ö-viksserien. Samling 18:15 vid OKN's klubbstuga. Gemensam start 18:30. Fika, dusch och bastu efteråt.\nBanlängder läggs upp inom kort.",
+      "information": "Välkommen till årets sista deltävling i Ö-viksserien. Samling 18:15 vid OKN's klubbstuga. Gemensam start 18:30. Fika, dusch och bastu efteråt.\nBanlängder:\nKort 3,4 km\nMellan 4,5 km\nLång 5,2 km",
       "region": "Ångermanland",
       "punching_system": "other",
       "races": [
@@ -18676,15 +18676,15 @@
           "urls": [
             {
               "type": "EntryList",
-              "url": "/Entry?eventId=58597",
-              "title": "Enter",
-              "last_updated_at": "2026-10-08T21:01:09.590286+00:00"
-            },
-            {
-              "type": "EntryList",
               "url": "/Events/Entries?eventId=58597&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-10-08T21:01:09.590286+00:00"
+            },
+            {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/205828",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-10-13T18:59:55.821530+00:00"
             }
           ],
           "documents": [],

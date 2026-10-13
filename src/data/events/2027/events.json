@@ -235,6 +235,12 @@
           "title": "Bulletin 1",
           "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8961/eb4e6cf1-3204-40cf-b7fb-e70b1a29f3de/Bulletin-1.pdf",
           "published_time": "2026-04-09"
+        },
+        {
+          "type": "Bulletin",
+          "title": "Bulletin 2",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8961/b377e385-af7b-4d10-abe9-f21884bd9087/Bulletin 2.Pdf",
+          "published_time": "2026-10-09"
         }
       ],
       "information": null,
@@ -392,6 +398,12 @@
           "title": "Bulletin 1",
           "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8962/3c23af61-cb19-4666-a40a-93d417b4a95f/Bulletin-1.pdf",
           "published_time": "2026-04-09"
+        },
+        {
+          "type": "Bulletin",
+          "title": "Bulletin 2",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8962/3fa40ffd-a57d-47b4-ace2-a15ae7651549/Bulletin 2.Pdf",
+          "published_time": "2026-10-09"
         }
       ],
       "information": null,
@@ -2767,6 +2779,302 @@
                 [
                   56.05076146253202,
                   13.957991108378113
+                ]
+              ]
+            }
+          ],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_60899",
+      "name": "OK Kåre, Medel",
+      "start_time": "2027-05-29",
+      "end_time": "2027-05-29",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Local"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "OK Kåre",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Steven Hale"
+        },
+        {
+          "role": "Contact phone number",
+          "name": "0768444030"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:CBgDBwMdBgQEBBYyChkDBkFdAB0M"
+        }
+      ],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/60899",
+          "title": null,
+          "last_updated_at": "2026-10-13T19:01:24.316285+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": "Dalarna",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "OK Kåre, Medel",
+          "datetimez": "2027-05-29T00:00:00+02:00",
+          "discipline": "Middle",
+          "night_or_day": "day",
+          "position": {
+            "lat": 60.6149377349306,
+            "lng": 15.7029880241305
+          },
+          "areas": [
+            {
+              "lat": 60.6149377349306,
+              "lng": 15.7029880241305,
+              "polygon": [
+                [
+                  60.60235676475233,
+                  15.67897116288657
+                ],
+                [
+                  60.60454753003796,
+                  15.673821321577977
+                ],
+                [
+                  60.60640113838238,
+                  15.67399298295493
+                ],
+                [
+                  60.60817039250355,
+                  15.661633363814305
+                ],
+                [
+                  60.613309104462786,
+                  15.65717016801353
+                ],
+                [
+                  60.6144041340244,
+                  15.670731416792828
+                ],
+                [
+                  60.61634140298281,
+                  15.675022951216654
+                ],
+                [
+                  60.61979450698925,
+                  15.675194612593605
+                ],
+                [
+                  60.623752488604225,
+                  15.67639624223228
+                ],
+                [
+                  60.62526818273625,
+                  15.672104707808451
+                ],
+                [
+                  60.62956840433432,
+                  15.658484920981179
+                ],
+                [
+                  60.63130983954346,
+                  15.6595057630097
+                ],
+                [
+                  60.63284545952911,
+                  15.660406000398783
+                ],
+                [
+                  60.63464769792154,
+                  15.659069597325669
+                ],
+                [
+                  60.63862621984575,
+                  15.659065677361811
+                ],
+                [
+                  60.64422449530386,
+                  15.665746815903576
+                ],
+                [
+                  60.64849090186431,
+                  15.691759881577736
+                ],
+                [
+                  60.652258376580335,
+                  15.723900140023368
+                ],
+                [
+                  60.64396548829322,
+                  15.750518412662109
+                ],
+                [
+                  60.639283951896346,
+                  15.75245498309377
+                ],
+                [
+                  60.62874458850257,
+                  15.764757568661866
+                ],
+                [
+                  60.62386011291642,
+                  15.766268042270056
+                ],
+                [
+                  60.61570438416291,
+                  15.762984311010717
+                ],
+                [
+                  60.612985349674545,
+                  15.738561559769368
+                ],
+                [
+                  60.613771634568764,
+                  15.724426388758049
+                ],
+                [
+                  60.6044100085397,
+                  15.70753089447402
+                ],
+                [
+                  60.60263809911859,
+                  15.701355251352965
+                ],
+                [
+                  60.60208401601835,
+                  15.69478778883428
+                ],
+                [
+                  60.60163066822608,
+                  15.68565491126924
+                ],
+                [
+                  60.60235676475233,
+                  15.67897116288657
+                ]
+              ]
+            }
+          ],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": []
+    },
+    {
+      "id": "SWE_60900",
+      "name": "OK Kåre, Masstart",
+      "start_time": "2027-05-30",
+      "end_time": "2027-05-30",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Local"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "OK Kåre",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Steven Hale"
+        },
+        {
+          "role": "Contact phone number",
+          "name": "0768444030"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:CBgDBwMdBgQEBBYyChkDBkFdAB0M"
+        }
+      ],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/60900",
+          "title": null,
+          "last_updated_at": "2026-10-13T19:01:24.316298+00:00"
+        }
+      ],
+      "documents": [],
+      "information": "Masstart",
+      "region": "Dalarna",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "OK Kåre, Masstart",
+          "datetimez": "2027-05-30T00:00:00+02:00",
+          "discipline": "Long",
+          "night_or_day": "day",
+          "position": {
+            "lat": 60.6155535116728,
+            "lng": 15.7034676167209
+          },
+          "areas": [
+            {
+              "lat": 60.6155535116728,
+              "lng": 15.7034676167209,
+              "polygon": [
+                [
+                  60.61480301176675,
+                  15.702577783105813
+                ],
+                [
+                  60.6152376682557,
+                  15.702465040704082
+                ],
+                [
+                  60.61511122333559,
+                  15.702175131671074
+                ],
+                [
+                  60.615032088213724,
+                  15.702278515147562
+                ],
+                [
+                  60.61498074363425,
+                  15.702345592448554
+                ],
+                [
+                  60.614929686216215,
+                  15.702412294491904
+                ],
+                [
+                  60.61480301176675,
+                  15.702577783105813
                 ]
               ]
             }
