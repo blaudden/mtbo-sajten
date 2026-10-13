@@ -2795,13 +2795,13 @@
     },
     {
       "id": "SWE_60899",
-      "name": "OK Kåre, Medel",
+      "name": "MTBO, SM/JSM/USM/VSM, Svenska cupen, Falun, Medel",
       "start_time": "2027-05-29",
       "end_time": "2027-05-29",
       "status": "Sanctioned",
       "original_status": "Active",
       "types": [
-        "Local"
+        "National"
       ],
       "tags": [],
       "form": "Individual",
@@ -2823,6 +2823,10 @@
         {
           "role": "Contact email",
           "name": "enc:CBgDBwMdBgQEBBYyChkDBkFdAB0M"
+        },
+        {
+          "role": "Event controller",
+          "name": "Patrik Svedberg"
         }
       ],
       "classes": [],
@@ -2841,7 +2845,7 @@
       "races": [
         {
           "race_number": 1,
-          "name": "OK Kåre, Medel",
+          "name": "MTBO, SM/JSM/USM/VSM, Svenska cupen, Falun, Medel",
           "datetimez": "2027-05-29T00:00:00+02:00",
           "discipline": "Middle",
           "night_or_day": "day",
@@ -2989,13 +2993,13 @@
     },
     {
       "id": "SWE_60900",
-      "name": "OK Kåre, Masstart",
+      "name": "MTBO, SM/JSM/USM/VSM, Svenska cupen, Masstart",
       "start_time": "2027-05-30",
       "end_time": "2027-05-30",
       "status": "Sanctioned",
       "original_status": "Active",
       "types": [
-        "Local"
+        "National"
       ],
       "tags": [],
       "form": "Individual",
@@ -3017,6 +3021,10 @@
         {
           "role": "Contact email",
           "name": "enc:CBgDBwMdBgQEBBYyChkDBkFdAB0M"
+        },
+        {
+          "role": "Event controller",
+          "name": "Patrik Svedberg"
         }
       ],
       "classes": [],
@@ -3035,7 +3043,7 @@
       "races": [
         {
           "race_number": 1,
-          "name": "OK Kåre, Masstart",
+          "name": "MTBO, SM/JSM/USM/VSM, Svenska cupen, Masstart",
           "datetimez": "2027-05-30T00:00:00+02:00",
           "discipline": "Long",
           "night_or_day": "day",
