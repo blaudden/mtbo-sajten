@@ -46,11 +46,22 @@ export async function getEventsForGroup(group: EventGroup): Promise<ScraperEvent
 /**
  * Unifies an EventGroup and its sub-events into a single cohesive ScraperEvent
  * so it renders seamlessly across standard event templates (EventDetail, EventRaceTable, etc.).
+ * When activeSlug matches an individual sub-event, id, slug, and urls are preserved for that specific
+ * Eventor race while displaying the unified arrangement across all other page sections.
  */
-export function groupToUnifiedEvent(group: EventGroup, events: ScraperEvent[]): ScraperEvent {
+export function groupToUnifiedEvent(group: EventGroup, events: ScraperEvent[], activeSlug?: string): ScraperEvent {
+  const currentChildEvent = activeSlug
+    ? events.find(
+        (e) =>
+          e.slug.toLowerCase() === activeSlug.toLowerCase() ||
+          e.id.toLowerCase().replace(/_/g, '-') === activeSlug.toLowerCase() ||
+          e.id.toLowerCase() === activeSlug.toLowerCase()
+      )
+    : undefined;
+
   const firstEvent = events[0];
 
-  // Combine all races in chronological order
+  // Combine all races in chronological order, attaching event URLs to races that lack them
   const allRaces: ScraperRace[] = [];
   let raceNumber = 1;
   for (const ev of events) {
@@ -59,6 +70,7 @@ export function groupToUnifiedEvent(group: EventGroup, events: ScraperEvent[]): 
         ...r,
         race_number: raceNumber++,
         name: r.name || ev.name,
+        urls: r.urls && r.urls.length > 0 ? r.urls : ev.urls,
       });
     }
   }
@@ -74,6 +86,14 @@ export function groupToUnifiedEvent(group: EventGroup, events: ScraperEvent[]): 
   // Combine URLs: include all URLs from all events, de-duplicating by URL
   const seenUrls = new Set<string>();
   const allUrls: ScraperUrl[] = [];
+  if (group.website) {
+    seenUrls.add(group.website);
+    allUrls.push({
+      type: 'Website',
+      url: group.website,
+      title: group.name,
+    });
+  }
   for (const ev of events) {
     if (ev.urls) {
       for (const u of ev.urls) {
@@ -97,8 +117,8 @@ export function groupToUnifiedEvent(group: EventGroup, events: ScraperEvent[]): 
   const status = events.some((e) => e.status === 'Sanctioned') ? 'Sanctioned' : firstEvent?.status || 'Planned';
 
   return {
-    id: group.slug.toUpperCase().replace(/-/g, '_'),
-    slug: group.slug,
+    id: currentChildEvent ? currentChildEvent.id : group.slug.toUpperCase().replace(/-/g, '_'),
+    slug: currentChildEvent ? currentChildEvent.slug : group.slug,
     name: group.name,
     start_time: group.start_date,
     end_time: group.end_date,
@@ -111,14 +131,14 @@ export function groupToUnifiedEvent(group: EventGroup, events: ScraperEvent[]): 
     officials: events.flatMap((e) => e.officials || []),
     classes: allClasses,
     documents: allDocuments,
-    urls: allUrls,
+    urls: currentChildEvent ? currentChildEvent.urls : allUrls,
     information: infoParts.length > 0 ? infoParts.join('\n\n') : null,
     region: group.region || firstEvent?.region || null,
     punching_system: firstEvent?.punching_system || null,
     races: allRaces,
     entry_deadlines: allDeadlines,
     year: parseInt(group.start_date.substring(0, 4), 10),
-    countryCode: firstEvent?.countryCode || 'SWE',
+    countryCode: currentChildEvent?.countryCode || firstEvent?.countryCode || 'SWE',
     isFeatured: true,
   };
 }

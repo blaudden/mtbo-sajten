@@ -1,5 +1,6 @@
 import type { ScraperEvent, ScraperRace } from '~/types/events';
 import { resolveCountryCode, getOrganiserName, resolveExternalUrl } from './events';
+import { getEventGroupByEventId } from './eventGroups';
 import { SITE } from '~/utils/config';
 
 /**
@@ -113,14 +114,20 @@ function getEndOfTheDay(dateStr: string): string {
  */
 function resolveRaceExternalUrl(race: ScraperRace, parentExternalUrl: string | null): string | null {
   const pathUrl = race.urls?.find((u) => u.type === 'Path');
-  if (pathUrl && parentExternalUrl) {
-    try {
-      const urlObj = new URL(parentExternalUrl);
-      return `${urlObj.origin}/${pathUrl.url}`;
-    } catch {
-      // ignore
+  if (pathUrl) {
+    if (pathUrl.url.startsWith('http://') || pathUrl.url.startsWith('https://')) {
+      return pathUrl.url;
     }
+    const baseUrl = 'https://eventor.orientering.se';
+    const cleanPath = pathUrl.url.startsWith('/') ? pathUrl.url.substring(1) : pathUrl.url;
+    return `${baseUrl}/${cleanPath}`;
   }
+
+  const websiteUrl = race.urls?.find((u) => u.type === 'Website');
+  if (websiteUrl) {
+    return websiteUrl.url;
+  }
+
   return parentExternalUrl;
 }
 
@@ -133,24 +140,36 @@ export function generateEventJsonLd(event: ScraperEvent): Record<string, unknown
   const organiser = getOrganiserName(event);
   const externalUrl = resolveExternalUrl(event);
 
-  // Compute start/end dates of parent event spanning all races
+  const parentGroup = getEventGroupByEventId(event.id);
+  const isChildOfGroup = Boolean(parentGroup && parentGroup.slug !== event.slug);
+
+  // Compute start/end dates of event spanning all races (or specific race if child route)
   let parentStartRaw = event.start_time;
   let parentEndRaw = event.end_time || event.start_time;
 
-  const raceDates = event.races
-    .map((r) => r.datetimez)
-    .filter(Boolean)
-    .map((d) => new Date(d));
+  if (isChildOfGroup) {
+    const cleanId = event.id.replace(/^[A-Z]+_/, '');
+    const matchingRace = event.races.find((r) => r.urls?.some((u) => u.type === 'Path' && u.url.includes(cleanId)));
+    if (matchingRace) {
+      parentStartRaw = matchingRace.datetimez;
+      parentEndRaw = matchingRace.datetimez;
+    }
+  } else {
+    const raceDates = event.races
+      .map((r) => r.datetimez)
+      .filter(Boolean)
+      .map((d) => new Date(d));
 
-  if (raceDates.length > 0) {
-    const minTime = Math.min(...raceDates.map((d) => d.getTime()));
-    const maxTime = Math.max(...raceDates.map((d) => d.getTime()));
+    if (raceDates.length > 0) {
+      const minTime = Math.min(...raceDates.map((d) => d.getTime()));
+      const maxTime = Math.max(...raceDates.map((d) => d.getTime()));
 
-    const earliestRace = event.races.find((r) => new Date(r.datetimez).getTime() === minTime);
-    const latestRace = event.races.find((r) => new Date(r.datetimez).getTime() === maxTime);
+      const earliestRace = event.races.find((r) => new Date(r.datetimez).getTime() === minTime);
+      const latestRace = event.races.find((r) => new Date(r.datetimez).getTime() === maxTime);
 
-    if (earliestRace) parentStartRaw = earliestRace.datetimez;
-    if (latestRace) parentEndRaw = latestRace.datetimez;
+      if (earliestRace) parentStartRaw = earliestRace.datetimez;
+      if (latestRace) parentEndRaw = latestRace.datetimez;
+    }
   }
 
   const startDate = formatJsonLdDate(parentStartRaw);
@@ -291,8 +310,8 @@ export function generateEventJsonLd(event: ScraperEvent): Record<string, unknown
   }
   ld.location = location;
 
-  // Map individual races/deltävlingar inside subEvent array (only for multi-race events)
-  if (event.races && event.races.length > 1) {
+  // Map individual races/deltävlingar inside subEvent array (only for grouped arrangements or genuine multi-race events, not single-race child pages of a group)
+  if (event.races && event.races.length > 1 && !isChildOfGroup) {
     ld.subEvent = event.races.map((race) => {
       const raceStart = formatJsonLdDate(race.datetimez);
       const raceEnd = raceStart;
