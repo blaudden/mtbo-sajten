@@ -24256,7 +24256,14 @@
           "last_updated_at": "2026-10-10T08:15:48.983745+00:00"
         }
       ],
-      "documents": [],
+      "documents": [
+        {
+          "type": "Invitation",
+          "title": "Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/60870/5145463d-2356-429f-9e2e-0a4496796764/Inbjudan.Pdf",
+          "published_time": "2026-10-14"
+        }
+      ],
       "information": "3banor kommer erbjudas Kort Mellan Lång, arrangemanget går i samband med Haningestafetten så det finns en välsorterad marka och dusch.",
       "region": "Stockholm",
       "punching_system": "Sportident",
