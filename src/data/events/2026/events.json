@@ -5821,8 +5821,27 @@
           "last_updated_at": "2026-10-08T21:01:09.590587+00:00"
         }
       ],
-      "documents": [],
-      "information": "Samlingsplass, start og mål ved Ekholtbruket Golfklubb. Parkering på anviste plasser ved hhv. Ekholt\nbarneskole / Ekholt Arena og ved Ekholt kirke. 150-250 meter å gå/sykle til samlingsplass.\nVanlig EMIT brikke benyttes\nInnbydelse kommer",
+      "documents": [
+        {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "https://eventor-norway-storage.orientering.se/eventdocuments/24841/54329fec-6ad7-43e8-ba11-61e13c12b7f1/PM.Pdf",
+          "published_time": "2026-10-16"
+        },
+        {
+          "type": "ResultList",
+          "title": "Liveresultater",
+          "url": "https://o-total.live/live.html?raceId=11163",
+          "published_time": null
+        },
+        {
+          "type": "Other",
+          "title": "Endring av brikkenummer",
+          "url": "https://o-total.no/s/hkrma5",
+          "published_time": null
+        }
+      ],
+      "information": "Samlingsplass, start og mål ved Ekholtbruket Golfklubb. Parkering på anviste plasser ved hhv. Ekholt\nbarneskole / Ekholt Arena og ved Ekholt kirke. 150-250 meter å gå/sykle til samlingsplass.\nVanlig EMIT brikke benyttes\nPM lagt ut",
       "region": "Østfold",
       "punching_system": "Emit",
       "races": [
