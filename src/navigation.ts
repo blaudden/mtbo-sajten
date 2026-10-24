@@ -9,11 +9,10 @@ export const headerData = {
     {
       text: 'Tävlingar',
       links: [
-        { text: 'Tävlingsprogram 2026', href: getPermalink('/mtbo-program') },
-        { text: 'VM i Sverige 2026', href: getPermalink('/wmtboc26') },
-        { text: 'SM i Uppsala 2026', href: getPermalink('/svenska-maesterskapen-mtbo') },
-        { text: 'Haninge 2026', href: getPermalink('/svenska-cupen-haninge-2026') },
-        { text: 'O-Ringen 2026', href: getPermalink('/mtbo-oringen') },
+        { text: 'Tävlingsprogram 2027', href: getPermalink('/mtbo-program') },
+        { text: 'Tävlingskalender', href: getPermalink('/events') },
+        { text: 'Svenska Cupen 2027', href: getPermalink('/svenska-cupen-mtbo') },
+        { text: 'O-Ringen Stockholm 2027', href: getPermalink('/mtbo-oringen') },
         { text: 'Eventor', href: getPermalink('/eventor') },
       ],
     },
@@ -21,7 +20,7 @@ export const headerData = {
       text: 'Svenska Cupen',
       links: [
         { text: 'Om Svenska Cupen', href: getPermalink('/svenska-cupen') },
-        { text: 'Svenska Cupen 2026', href: getPermalink('/svenska-cupen-mtbo') },
+        { text: 'Svenska Cupen 2027', href: getPermalink('/svenska-cupen-mtbo') },
         { text: 'Seedningsordning', href: getPermalink('/svenska-cupen/seedning') },
       ],
     },
@@ -39,18 +38,17 @@ export const footerData = {
       links: [
         { text: 'Om Svenska Cupen', href: getPermalink('/svenska-cupen') },
         { text: 'O-Ringen', href: getPermalink('/oringen') },
+        { text: 'Tävlingskalender', href: getPermalink('/events') },
         { text: 'Eventor', href: getPermalink('/eventor') },
       ],
     },
     {
       title: 'Tävlingar',
       links: [
-        { text: 'Tävlingsprogram 2026', href: getPermalink('/mtbo-program') },
-        { text: 'Svenska Cupen 2026', href: getPermalink('/svenska-cupen-mtbo') },
-        { text: 'WMTBOC 2026', href: getPermalink('/wmtboc26') },
-        { text: 'SM i Uppsala 2026', href: getPermalink('/svenska-maesterskapen-mtbo') },
-        { text: 'Haninge 2026', href: getPermalink('/svenska-cupen-haninge-2026') },
-        { text: 'O-Ringen 2026', href: getPermalink('/mtbo-oringen') },
+        { text: 'Tävlingsprogram 2027', href: getPermalink('/mtbo-program') },
+        { text: 'Svenska Cupen 2027', href: getPermalink('/svenska-cupen-mtbo') },
+        { text: 'O-Ringen 2027', href: getPermalink('/mtbo-oringen') },
+        { text: 'Säsongssummering 2026', href: getPermalink('/mtbo-sasongen-2026-sammanfattning') },
       ],
     },
     {
@@ -82,5 +80,5 @@ export const footerData = {
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/blaudden/mtbo-sajten' },
   ],
-  footNote: `© <a class="text-primary hover:underline dark:text-muted" href="https://www.mountainbikeorientering.se/">mountainbikeorientering.se</a> 2023-2025`,
+  footNote: `© <a class="text-primary hover:underline dark:text-muted" href="https://www.mountainbikeorientering.se/">mountainbikeorientering.se</a> 2023-2026`,
 };

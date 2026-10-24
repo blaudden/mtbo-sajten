@@ -6,6 +6,8 @@ import type { ScraperEvent, ScraperUmbrellaIndex, RaceWithEvent, ScraperRace } f
 import fs from 'node:fs';
 import path from 'node:path';
 import { getCollection, getEntry, type CollectionEntry } from 'astro:content';
+import { getEventGroupBySlug, getEventsForGroup, groupToUnifiedEvent, getEventGroupByEventId } from './eventGroups';
+import { SITE } from '~/utils/config';
 
 // --- Configuration ---
 
@@ -91,15 +93,35 @@ export function slugToEventId(slug: string): string {
   return slug.toUpperCase().replace(/-/g, '_');
 }
 
-/** Get the source code from an event id: "SWE_54359" → "SWE" */
+/** Get the source code from an event id: "SWE_54359" → "SWE" with safe fallbacks */
 export function getEventSource(event: ScraperEvent): string {
   const underscoreIdx = event.id.indexOf('_');
-  return underscoreIdx > 0 ? event.id.substring(0, underscoreIdx) : event.id;
+  const candidate = underscoreIdx > 0 ? event.id.substring(0, underscoreIdx) : event.id;
+  const sources = getSourceUrls();
+  if (sources[candidate]) {
+    return candidate;
+  }
+  if (event.countryCode && sources[event.countryCode]) {
+    return event.countryCode;
+  }
+  return 'SWE';
 }
 
-/** Find an event by slug across all loaded data */
+/** Find an event by slug across all loaded data (supporting both individual event slugs and group slugs) */
 export async function getEventBySlug(slug: string): Promise<ScraperEvent | undefined> {
+  const group = getEventGroupBySlug(slug);
+  if (group) {
+    const events = await getEventsForGroup(group);
+    return groupToUnifiedEvent(group, events, slug);
+  }
+
   const eventId = slugToEventId(slug);
+  const parentGroup = getEventGroupByEventId(eventId);
+  if (parentGroup) {
+    const events = await getEventsForGroup(parentGroup);
+    return groupToUnifiedEvent(parentGroup, events, slug);
+  }
+
   const entry = (await getEntry('events', eventId)) as CollectionEntry<'events'> | undefined;
   return entry ? (entry.data as unknown as ScraperEvent) : undefined;
 }
@@ -124,13 +146,24 @@ export function getOrganiserName(event: ScraperEvent): string {
 
 /** Build the external Eventor URL for this event */
 export function resolveExternalUrl(event: ScraperEvent): string | null {
+  const group = getEventGroupBySlug(event.slug);
+  if (group) {
+    return group.website || `${SITE.site || 'https://www.mountainbikeorientering.se'}/events/${group.slug}`;
+  }
+
   const source = getEventSource(event);
   const baseUrl = getSourceUrls()[source];
 
   // Find the Path URL
   const pathUrl = event.urls?.find((u) => u.type === 'Path');
-  if (pathUrl && baseUrl) {
-    return `${baseUrl}/${pathUrl.url}`;
+  if (pathUrl) {
+    if (pathUrl.url.startsWith('http://') || pathUrl.url.startsWith('https://')) {
+      return pathUrl.url;
+    }
+    if (baseUrl) {
+      const cleanPath = pathUrl.url.startsWith('/') ? pathUrl.url.substring(1) : pathUrl.url;
+      return `${baseUrl}/${cleanPath}`;
+    }
   }
 
   // Fall back to Website URL
@@ -141,7 +174,14 @@ export function resolveExternalUrl(event: ScraperEvent): string | null {
 
   // For MAN events, try the first available URL
   if (event.urls && event.urls.length > 0) {
-    return event.urls[0].url;
+    const firstUrl = event.urls[0].url;
+    if (firstUrl.startsWith('http://') || firstUrl.startsWith('https://')) {
+      return firstUrl;
+    }
+    if (baseUrl) {
+      const cleanPath = firstUrl.startsWith('/') ? firstUrl.substring(1) : firstUrl;
+      return `${baseUrl}/${cleanPath}`;
+    }
   }
 
   return null;
@@ -155,9 +195,7 @@ export function resolveRelativeUrl(url: string, event: ScraperEvent): string {
   if (!url || url.startsWith('http')) return url;
 
   const source = getEventSource(event);
-  const baseUrl = getSourceUrls()[source];
-
-  if (!baseUrl) return url;
+  const baseUrl = getSourceUrls()[source] || 'https://eventor.orientering.se';
 
   const path = url.startsWith('/') ? url : `/${url}`;
   return `${baseUrl}${path}`;
@@ -446,7 +484,8 @@ export function buildRaceRows(events: ScraperEvent[]): RaceWithEvent[] {
   const rows: RaceWithEvent[] = [];
 
   for (const event of events) {
-    const slug = eventToSlug(event);
+    const parentGroup = getEventGroupByEventId(event.id);
+    const slug = parentGroup ? parentGroup.slug : eventToSlug(event);
     const countryCode = resolveCountryCode(event);
     const organiser = getOrganiserName(event);
     const externalUrl = resolveExternalUrl(event);
@@ -605,12 +644,12 @@ export function getSmartIconInfo(urlStr: string, title?: string, docType?: strin
 
 /**
  * Resolves the Swedish singular and plural terminology for event races.
- * - Sweden (SWE) and Norway (NOR) multi-race events use "Etapp" / "Etapper".
- * - Other/IOF events use "Tävling" / "Tävlingar".
+ * - Only multi-stage events like O-Ringen use "Etapp" / "Etapper".
+ * - All other multi-race events (e.g. championships, camps, cup weekends) use "Tävling" / "Tävlingar".
  */
 export function getRaceTerminology(event: ScraperEvent): { singular: string; plural: string } {
-  const country = resolveCountryCode(event);
-  if (country === 'SWE' || country === 'NOR') {
+  const name = event.name.toLowerCase();
+  if (name.includes('o-ringen')) {
     return { singular: 'Etapp', plural: 'Etapper' };
   }
   return { singular: 'Tävling', plural: 'Tävlingar' };

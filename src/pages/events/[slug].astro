@@ -14,16 +14,26 @@ import {
   formatEventDateRange,
   countryCodeToName,
 } from '~/utils/events';
+import { loadAllEventGroups } from '~/utils/eventGroups';
 import { generateEventJsonLd } from '~/utils/jsonLd';
 
 export async function getStaticPaths() {
   const allEvents = await loadAllEvents();
-  return allEvents.map((event) => ({
+  const allGroups = loadAllEventGroups();
+
+  const eventPaths = allEvents.map((event) => ({
     params: { slug: event.slug },
   }));
+
+  const groupPaths = allGroups.map((group) => ({
+    params: { slug: group.slug },
+  }));
+
+  return [...eventPaths, ...groupPaths];
 }
 
 const { slug } = Astro.params;
+
 const event = await getEventBySlug(slug);
 
 let metadata: MetaData = {};
@@ -36,7 +46,7 @@ if (event) {
 
   metadata = {
     title: `${event.name} | MTBO Tävlingskalender`,
-    description: `${event.name} (${dateRange}) — Information, anmälningslänkar, klasser, karta och program för detta MTBO-event (mountainbikeorientering) i ${countryName}.`,
+    description: `${event.name} (${dateRange}) — Information, tävlingar, klasser och karta för detta MTBO-evenemang i ${countryName}.`,
     openGraph: {
       type: 'website',
       images: [{ url: new URL(`/og-images/events/${event.slug}.jpg`, Astro.site).toString() }],
