@@ -4,7 +4,13 @@
  * Optionally shows country filter buttons.
  */
 import type { RaceWithEvent } from '~/types/events';
-import { getCountriesFromRaces, formatRaceDate, getRaceDisplayName, getRaceTimeStatus } from '~/utils/events';
+import {
+  getCountriesFromRaces,
+  formatRaceDate,
+  formatEventDateRange,
+  getRaceDisplayName,
+  getRaceTimeStatus,
+} from '~/utils/events';
 import EventRaceRow from './EventRaceRow.astro';
 import EventCountryFilter from './EventCountryFilter.astro';
 import CountryFlag from './CountryFlag.astro';
@@ -86,7 +92,11 @@ const hasFeatured = races.some((r) => r.isFeatured);
         <div class="md:hidden space-y-3">
           {races.map((race) => {
             const { race: r, event, slug, countryCode, organiser, externalUrl } = race;
-            const dateStr = formatRaceDate(r.datetimez, { includeTime: false });
+            const isMultiDaySpan = event.start_time !== event.end_time && event.races.length === 1;
+            const dateStr = isMultiDaySpan
+              ? formatEventDateRange(event.start_time, event.end_time, { includeYear: false })
+              : formatRaceDate(r.datetimez, { includeTime: false });
+            const isPreliminary = Boolean(event.is_date_preliminary);
             const raceName = getRaceDisplayName(r, event);
             const detailUrl = `/events/${slug}`;
             const isCanceled = event.status === 'Canceled';
@@ -127,9 +137,14 @@ const hasFeatured = races.some((r) => r.isFeatured);
                     >
                       {raceName}
                     </a>
-                    <div class="text-xs text-muted dark:text-slate-400 mt-1">
-                      {dateStr}
-                      {organiser && <span class="ml-2">· {organiser}</span>}
+                    <div class="text-xs text-muted dark:text-slate-400 mt-1 flex flex-wrap items-center gap-1.5">
+                      <span>{dateStr}</span>
+                      {isPreliminary && (
+                        <span class="px-1.5 py-0.5 text-[10px] font-semibold rounded bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300">
+                          Prel.
+                        </span>
+                      )}
+                      {organiser && <span>· {organiser}</span>}
                     </div>
                   </div>
                   {externalUrl && (

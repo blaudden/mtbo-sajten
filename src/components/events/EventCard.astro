@@ -36,7 +36,16 @@ const disciplines = [...new Set(event.races.map((r) => r.discipline))];
         {event.name}
       </h3>
       {isCanceled && <span class="text-xs text-red-500 font-medium uppercase">Inställd</span>}
-      <p class="text-xs text-muted dark:text-slate-400 mt-1">{dateRange}</p>
+      <p class="text-xs text-muted dark:text-slate-400 mt-1 flex items-center gap-1.5">
+        <span>{dateRange}</span>
+        {
+          event.is_date_preliminary && (
+            <span class="px-1.5 py-0.5 text-[10px] font-semibold rounded bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300">
+              Prel.
+            </span>
+          )
+        }
+      </p>
       {organiser && <p class="text-xs text-muted dark:text-slate-500 mt-0.5 truncate">{organiser}</p>}
       <div class="flex items-center gap-1.5 mt-2">
         {disciplines.map((d) => <DisciplineBadge discipline={d} />)}

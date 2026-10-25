@@ -124,6 +124,7 @@ const eventSchema = z.object({
       })
     )
     .optional(),
+  is_date_preliminary: z.boolean().optional(),
 
   // Pre-computed fields
   year: z.number(),

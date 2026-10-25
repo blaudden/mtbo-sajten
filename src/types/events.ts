@@ -81,6 +81,7 @@ export interface ScraperEvent {
   punching_system?: string | null;
   races: ScraperRace[];
   entry_deadlines?: ScraperEntryDeadline[];
+  is_date_preliminary?: boolean;
 
   // --- Pre-computed fields for build optimization ---
   /** Pre-calculated year: 2026 */

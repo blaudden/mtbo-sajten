@@ -8,6 +8,7 @@ import { translateDiscipline } from '~/utils/events';
 
 interface Props {
   dateRange: string;
+  isDatePreliminary?: boolean;
   organiserName?: string;
   region?: string;
   punchingSystem?: string;
@@ -15,13 +16,28 @@ interface Props {
   nightOrDay?: string;
 }
 
-const { dateRange, organiserName, region, punchingSystem, discipline, nightOrDay } = Astro.props;
+const {
+  dateRange,
+  isDatePreliminary = false,
+  organiserName,
+  region,
+  punchingSystem,
+  discipline,
+  nightOrDay,
+} = Astro.props;
 ---
 
 <div class="flex flex-col md:flex-row md:items-center gap-x-4 gap-y-2 text-sm text-muted dark:text-slate-400">
-  <span class="flex items-center gap-1.5">
+  <span class="flex items-center gap-1.5 flex-wrap">
     <Icon name="tabler:calendar" class="w-4 h-4" />
-    {dateRange}
+    <span>{dateRange}</span>
+    {
+      isDatePreliminary && (
+        <span class="px-1.5 py-0.5 text-xs font-semibold rounded bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300">
+          Prel.
+        </span>
+      )
+    }
   </span>
   {
     organiserName && (

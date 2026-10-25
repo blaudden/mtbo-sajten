@@ -29,10 +29,11 @@ interface Props {
 const { event } = Astro.props;
 const countryCode = resolveCountryCode(event);
 const organiserName = getOrganiserName(event);
+const isMultiDaySpan = event.start_time !== event.end_time;
 const dateRange =
-  event.races.length === 1
-    ? formatRaceDate(event.races[0].datetimez, { includeYear: true, includeTime: true })
-    : formatEventDateRange(event.start_time, event.end_time);
+  isMultiDaySpan || event.races.length === 0
+    ? formatEventDateRange(event.start_time, event.end_time)
+    : formatRaceDate(event.races[0].datetimez, { includeYear: true, includeTime: true });
 const externalUrl = resolveExternalUrl(event);
 
 // Status badge styling
@@ -73,6 +74,7 @@ const isSvenskaCupen =
   <div class="mb-6">
     <EventInfoGrid
       dateRange={dateRange}
+      isDatePreliminary={Boolean(event.is_date_preliminary)}
       organiserName={organiserName}
       region={event.region ?? undefined}
       punchingSystem={event.punching_system ?? undefined}
