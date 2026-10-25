@@ -23,6 +23,7 @@ export default defineMarkdocConfig({
       render: component('./src/components/widgets/Carousel.astro'),
       attributes: {
         images: { type: Array },
+        captions: { type: Array },
         id: { type: 'String' },
       },
     },
@@ -43,6 +44,15 @@ export default defineMarkdocConfig({
         category: { type: 'String' },
         excludeSlug: { type: 'String' },
         compact: { type: 'Boolean' },
+      },
+    },
+    EventCard: {
+      render: component('./src/components/markdoc/EventCardTag.astro'),
+      attributes: {
+        slug: { type: 'String' },
+        id: { type: 'String' },
+        ids: { type: Array },
+        title: { type: 'String' },
       },
     },
     CarouselImageGrid: {

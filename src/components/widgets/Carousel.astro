@@ -1,171 +1,233 @@
 ---
 import Image from '~/components/common/Image.astro';
 
-interface ImageProps {
+interface ImageObject {
   src: string;
   alt?: string;
+  caption?: string;
 }
 
 export interface Props {
-  images?: ImageProps[];
+  images?: (string | ImageObject)[];
+  captions?: string[];
   id?: string;
 }
 
-const { images = [], id = `carousel-${Math.random().toString(36).slice(2, 9)}` } = Astro.props;
+const { images = [], captions = [], id = `carousel-${Math.random().toString(36).slice(2, 9)}` } = Astro.props;
+
+const normalizedImages = images.map((item, index) => {
+  if (typeof item === 'string') {
+    return {
+      src: item,
+      alt: captions[index] || '',
+    };
+  }
+  return {
+    src: item.src,
+    alt: item.alt || item.caption || captions[index] || '',
+  };
+});
 ---
 
-<div id={id} class="relative w-full overflow-hidden rounded-lg shadow-xl group">
-  <!-- Carousel Wrapper -->
-  <div class="carousel-track flex transition-transform duration-500 ease-out h-[300px] sm:h-[400px] md:h-[500px]">
+<div
+  id={id}
+  class="instagram-carousel relative w-full max-w-4xl mx-auto my-8 rounded-xl overflow-hidden shadow-lg border border-gray-200/80 dark:border-slate-800 bg-neutral-950 group select-none"
+>
+  <!-- Slide Counter Badge (Instagram Style) -->
+  <div
+    class="carousel-counter absolute top-3 right-3 z-30 px-2.5 py-1 text-xs font-medium tracking-wide text-white bg-black/60 backdrop-blur-md rounded-full shadow-sm pointer-events-none"
+  >
+    1 / {normalizedImages.length}
+  </div>
+
+  <!-- Carousel Scroll Track -->
+  <div class="carousel-track flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar aspect-[3/2] w-full">
     {
-      images.map((image, index) => (
-        <div class="carousel-item min-w-full h-full relative">
-          <div class="absolute inset-0 bg-gray-200 dark:bg-slate-800 flex items-center justify-center">
-            {/* Placeholder generic if no src, or actual image */}
-            {image.src ? (
-              <Image
-                src={image.src}
-                class="w-full h-full object-cover"
-                widths={[400, 900]}
-                width={900}
-                sizes="(max-width: 900px) 100vw, 900px"
-                alt={image.alt || `Slide ${index + 1}`}
-                aspectRatio="16:9"
-                loading={index === 0 ? 'eager' : 'lazy'}
-              />
-            ) : (
-              <span class="text-gray-400 font-bold text-xl">{image.alt || `Image ${index + 1}`}</span>
-            )}
-          </div>
-          <div class="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/60 to-transparent p-4">
-            <p class="text-white text-sm font-medium drop-shadow-md">{image.alt}</p>
-          </div>
+      normalizedImages.map((image, index) => (
+        <div class="carousel-slide min-w-full w-full snap-center snap-always shrink-0 relative aspect-[3/2] flex items-center justify-center bg-neutral-950">
+          <Image
+            src={image.src}
+            class="w-full h-full object-cover select-none pointer-events-none"
+            widths={[600, 900, 1400]}
+            width={1200}
+            sizes="(max-width: 900px) 100vw, 900px"
+            alt={image.alt || `Bild ${index + 1}`}
+            aspectRatio="3:2"
+            loading={index === 0 ? 'eager' : 'lazy'}
+          />
+          {image.alt && (
+            <div class="absolute bottom-0 inset-x-0 bg-linear-to-t from-black/80 via-black/30 to-transparent pt-8 pb-3 px-4 pointer-events-none">
+              <p class="text-white/95 text-xs sm:text-sm font-medium drop-shadow-md line-clamp-2">{image.alt}</p>
+            </div>
+          )}
         </div>
       ))
     }
   </div>
 
-  <!-- Controls -->
+  <!-- Previous Button -->
   <button
-    class="carousel-prev absolute top-1/2 left-4 -translate-y-1/2 z-10 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 focus:opacity-100"
-    aria-label="Previous slide"
+    type="button"
+    class="carousel-prev absolute left-3 top-1/2 -translate-y-1/2 z-30 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-black/50 hover:bg-black/80 text-white flex items-center justify-center backdrop-blur-md transition-all shadow-md opacity-0 group-hover:opacity-100 focus:opacity-100 disabled:pointer-events-none disabled:opacity-0"
+    aria-label="Föregående bild"
   >
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-    </svg>
-  </button>
-  <button
-    class="carousel-next absolute top-1/2 right-4 -translate-y-1/2 z-10 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 focus:opacity-100"
-    aria-label="Next slide"
-  >
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path>
     </svg>
   </button>
 
-  <!-- Indicators -->
-  <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+  <!-- Next Button -->
+  <button
+    type="button"
+    class="carousel-next absolute right-3 top-1/2 -translate-y-1/2 z-30 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-black/50 hover:bg-black/80 text-white flex items-center justify-center backdrop-blur-md transition-all shadow-md opacity-0 group-hover:opacity-100 focus:opacity-100 disabled:pointer-events-none disabled:opacity-0"
+    aria-label="Nästa bild"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
+    </svg>
+  </button>
+
+  <!-- Dot Indicators -->
+  <div
+    class="carousel-dots absolute bottom-3 left-1/2 -translate-x-1/2 z-30 flex items-center gap-1.5 px-2 py-1 bg-black/40 backdrop-blur-md rounded-full"
+  >
     {
-      images.map((_, index) => (
+      normalizedImages.map((_, index) => (
         <button
-          class="carousel-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white transition-all"
-          aria-label={`Go to slide ${index + 1}`}
+          type="button"
+          class={`carousel-dot rounded-full transition-all duration-300 ${
+            index === 0 ? 'w-4 h-1.5 bg-white' : 'w-1.5 h-1.5 bg-white/40 hover:bg-white/70'
+          }`}
+          data-index={index}
+          aria-label={`Gå till bild ${index + 1}`}
         />
       ))
     }
   </div>
 </div>
 
+<style>
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+</style>
+
 <script is:inline>
-  // Simple Carousel Logic
   (function () {
-    function setupCarousel(carouselId) {
+    function setupInstagramCarousel(carouselId) {
       const carousel = document.getElementById(carouselId);
       if (!carousel) return;
 
       const track = carousel.querySelector('.carousel-track');
-      const items = carousel.querySelectorAll('.carousel-item');
+      const slides = carousel.querySelectorAll('.carousel-slide');
       const prevBtn = carousel.querySelector('.carousel-prev');
       const nextBtn = carousel.querySelector('.carousel-next');
       const dots = carousel.querySelectorAll('.carousel-dot');
+      const counter = carousel.querySelector('.carousel-counter');
 
-      if (!track || !items.length) return;
+      if (!track || slides.length <= 1) {
+        if (prevBtn) prevBtn.style.display = 'none';
+        if (nextBtn) nextBtn.style.display = 'none';
+        const dotsWrapper = carousel.querySelector('.carousel-dots');
+        if (dotsWrapper) dotsWrapper.style.display = 'none';
+        if (counter) counter.style.display = 'none';
+        return;
+      }
 
+      const total = slides.length;
       let currentIndex = 0;
-      const totalItems = items.length;
 
-      function updateCarousel() {
-        const translateX = -(currentIndex * 100);
-        track.style.transform = `translateX(${translateX}%)`;
+      function updateUI(index) {
+        currentIndex = index;
+
+        if (counter) {
+          counter.textContent = `${index + 1} / ${total}`;
+        }
+
+        if (prevBtn) {
+          prevBtn.disabled = index === 0;
+          prevBtn.style.display = index === 0 ? 'none' : 'flex';
+        }
+        if (nextBtn) {
+          nextBtn.disabled = index === total - 1;
+          nextBtn.style.display = index === total - 1 ? 'none' : 'flex';
+        }
 
         dots.forEach((dot, idx) => {
-          if (idx === currentIndex) {
-            dot.classList.add('bg-white', 'scale-125');
-            dot.classList.remove('bg-white/50');
+          if (idx === index) {
+            dot.className = 'carousel-dot rounded-full transition-all duration-300 w-4 h-1.5 bg-white';
           } else {
-            dot.classList.remove('bg-white', 'scale-125');
-            dot.classList.add('bg-white/50');
+            dot.className =
+              'carousel-dot rounded-full transition-all duration-300 w-1.5 h-1.5 bg-white/40 hover:bg-white/70';
           }
         });
       }
 
-      // Auto advance
-      let interval = setInterval(() => {
-        currentIndex = (currentIndex + 1) % totalItems;
-        updateCarousel();
-      }, 5000);
-
-      const resetTimer = () => {
-        clearInterval(interval);
-        interval = setInterval(() => {
-          currentIndex = (currentIndex + 1) % totalItems;
-          updateCarousel();
-        }, 5000);
-      };
-
-      if (nextBtn) {
-        nextBtn.addEventListener('click', (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          currentIndex = (currentIndex + 1) % totalItems;
-          updateCarousel();
-          resetTimer();
+      function scrollToSlide(index) {
+        const slide = slides[index];
+        if (!slide) return;
+        track.scrollTo({
+          left: slide.offsetLeft,
+          behavior: 'smooth',
         });
       }
 
       if (prevBtn) {
         prevBtn.addEventListener('click', (e) => {
           e.preventDefault();
-          e.stopPropagation();
-          currentIndex = (currentIndex - 1 + totalItems) % totalItems;
-          updateCarousel();
-          resetTimer();
+          if (currentIndex > 0) scrollToSlide(currentIndex - 1);
         });
       }
 
-      dots.forEach((dot, index) => {
+      if (nextBtn) {
+        nextBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          if (currentIndex < total - 1) scrollToSlide(currentIndex + 1);
+        });
+      }
+
+      dots.forEach((dot, idx) => {
         dot.addEventListener('click', (e) => {
           e.preventDefault();
-          e.stopPropagation();
-          currentIndex = index;
-          updateCarousel();
-          resetTimer();
+          scrollToSlide(idx);
         });
       });
 
-      // Initialize
-      updateCarousel();
+      let isScrolling = false;
+      track.addEventListener(
+        'scroll',
+        () => {
+          if (!isScrolling) {
+            window.requestAnimationFrame(() => {
+              const slideWidth = track.clientWidth;
+              if (slideWidth > 0) {
+                const activeIndex = Math.round(track.scrollLeft / slideWidth);
+                if (activeIndex !== currentIndex && activeIndex >= 0 && activeIndex < total) {
+                  updateUI(activeIndex);
+                }
+              }
+              isScrolling = false;
+            });
+            isScrolling = true;
+          }
+        },
+        { passive: true }
+      );
+
+      updateUI(0);
     }
 
     function init() {
-      const carousels = document.querySelectorAll('[id^="carousel"]');
-      carousels.forEach((c) => setupCarousel(c.id));
+      const carousels = document.querySelectorAll('.instagram-carousel');
+      carousels.forEach((c) => setupInstagramCarousel(c.id));
     }
 
-    // Run on immediate execution
     init();
-
-    // Run on Astro page swaps
     document.addEventListener('astro:page-load', init);
   })();
 </script>
