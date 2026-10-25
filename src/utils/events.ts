@@ -228,16 +228,18 @@ export function getRaceDisplayName(race: ScraperRace, event: ScraperEvent): stri
  * Single-day: "26 aug 2026"
  * Multi-day: "25–30 aug 2026"
  */
-export function formatEventDateRange(startTime: string, endTime: string): string {
-  // Use T12:00:00Z and UTC formatting to avoid any timezone boundary shifts
-  const start = new Date(startTime.includes('T') ? startTime : startTime + 'T12:00:00Z');
-  const end = new Date(endTime.includes('T') ? endTime : endTime + 'T12:00:00Z');
-  const formatOpts: Intl.DateTimeFormatOptions = { timeZone: 'UTC' };
+export function formatEventDateRange(startTime: string, endTime: string, options?: { includeYear?: boolean }): string {
+  const includeYear = options?.includeYear ?? true;
+  // Interpret and format timestamps in Europe/Stockholm per Datetime & Location rules
+  const start = new Date(startTime.includes('T') ? startTime : `${startTime}T12:00:00Z`);
+  const end = new Date(endTime.includes('T') ? endTime : `${endTime}T12:00:00Z`);
+  const formatOpts: Intl.DateTimeFormatOptions = { timeZone: 'Europe/Stockholm' };
 
   const startDay = start.toLocaleDateString('sv-SE', { day: 'numeric', ...formatOpts });
   const endDay = end.toLocaleDateString('sv-SE', { day: 'numeric', ...formatOpts });
 
-  const formatMonth = (d: Date) => d.toLocaleDateString('sv-SE', { month: 'long', ...formatOpts });
+  const formatMonth = (d: Date) =>
+    d.toLocaleDateString('sv-SE', { month: includeYear ? 'long' : 'short', ...formatOpts });
   const formatYear = (d: Date) => d.toLocaleDateString('sv-SE', { year: 'numeric', ...formatOpts });
 
   const startMonth = formatMonth(start);
@@ -246,7 +248,7 @@ export function formatEventDateRange(startTime: string, endTime: string): string
   const endYear = formatYear(end);
 
   if (startTime.split('T')[0] === endTime.split('T')[0]) {
-    return `${startDay} ${startMonth} ${startYear}`;
+    return includeYear ? `${startDay} ${startMonth} ${startYear}` : `${startDay} ${startMonth}`;
   }
 
   if (startYear !== endYear) {
@@ -254,10 +256,12 @@ export function formatEventDateRange(startTime: string, endTime: string): string
   }
 
   if (startMonth === endMonth) {
-    return `${startDay}–${endDay} ${startMonth} ${startYear}`;
+    return includeYear ? `${startDay}–${endDay} ${startMonth} ${startYear}` : `${startDay}–${endDay} ${startMonth}`;
   }
 
-  return `${startDay} ${startMonth} – ${endDay} ${endMonth} ${startYear}`;
+  return includeYear
+    ? `${startDay} ${startMonth} – ${endDay} ${endMonth} ${startYear}`
+    : `${startDay} ${startMonth} – ${endDay} ${endMonth}`;
 }
 
 // --- Status helpers ---
