@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "last_scraped_at": "2026-10-24T07:05:36.121222+00:00",
+  "last_scraped_at": "2026-10-25T12:10:49.306263+00:00",
   "data_root": "data/events",
   "partitions": {
     "2010": {
@@ -21,12 +21,12 @@
     "2026": {
       "path": "data/events/2026/events.json",
       "count": 113,
-      "last_updated_at": "2026-10-17T06:45:17.839497+00:00"
+      "last_updated_at": "2026-10-25T12:10:49.306263+00:00"
     },
     "2027": {
       "path": "data/events/2027/events.json",
       "count": 25,
-      "last_updated_at": "2026-10-14T04:12:16.478280+00:00"
+      "last_updated_at": "2026-10-25T12:10:49.306263+00:00"
     },
     "2012": {
       "path": "data/events/2012/events.json",
@@ -105,7 +105,7 @@
       "name": "IOF Eventor",
       "url": "https://eventor.orienteering.org",
       "count": 425,
-      "last_updated_at": "2026-10-13T19:01:24.316133+00:00"
+      "last_updated_at": "2026-10-25T12:10:49.306263+00:00"
     },
     "MAN": {
       "country_code": "MAN",
@@ -119,14 +119,14 @@
       "name": "Swedish Eventor",
       "url": "https://eventor.orientering.se",
       "count": 1263,
-      "last_updated_at": "2026-10-15T07:09:36.988272+00:00"
+      "last_updated_at": "2026-10-25T12:10:49.306263+00:00"
     },
     "NOR": {
       "country_code": "NOR",
       "name": "Norwegian Eventor",
       "url": "https://eventor.orientering.no",
       "count": 81,
-      "last_updated_at": "2026-10-17T06:45:17.839497+00:00"
+      "last_updated_at": "2026-10-25T12:10:49.306263+00:00"
     }
   }
 }

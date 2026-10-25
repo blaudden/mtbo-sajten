@@ -70,7 +70,14 @@
           "last_updated_at": "2026-02-07T19:49:12.021127+00:00"
         }
       ],
-      "documents": [],
+      "documents": [
+        {
+          "type": "EmbargoMap",
+          "title": "Embargo areas",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8559/90242076-57b2-4ad7-979e-6db90b4b14ac/Embargo areas.Pdf",
+          "published_time": "2026-10-25"
+        }
+      ],
       "information": null,
       "region": null,
       "punching_system": null,
@@ -124,7 +131,14 @@
           "last_updated_at": "2026-02-07T19:49:12.021116+00:00"
         }
       ],
-      "documents": [],
+      "documents": [
+        {
+          "type": "EmbargoMap",
+          "title": "Embargo areas",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8560/595b439e-35ae-4b34-b4c1-488e021f2ab9/Embargo areas.Pdf",
+          "published_time": "2026-10-25"
+        }
+      ],
       "information": null,
       "region": null,
       "punching_system": null,
@@ -495,8 +509,33 @@
           "country_code": "PRT"
         }
       ],
-      "officials": [],
-      "classes": [],
+      "officials": [
+        {
+          "role": "Contact persons",
+          "name": "Augusto Almeida"
+        },
+        {
+          "role": "Contact persons",
+          "name": "Andre Mora"
+        },
+        {
+          "role": "Event director",
+          "name": "Augusto Almeida"
+        },
+        {
+          "role": "Course setter",
+          "name": "Alexandre Reis"
+        },
+        {
+          "role": "Event controller",
+          "name": "Jose Oliveira"
+        }
+      ],
+      "classes": [
+        "Men",
+        "Team Officials",
+        "Women"
+      ],
       "urls": [
         {
           "type": "Path",
@@ -505,7 +544,20 @@
           "last_updated_at": "2026-02-07T19:49:12.021083+00:00"
         }
       ],
-      "documents": [],
+      "documents": [
+        {
+          "type": "EmbargoMap",
+          "title": "Embargoed Areas",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8963/b38d8c98-b2d8-44d4-afb1-e2541a082979/Embargoed Areas.Pdf",
+          "published_time": "2026-10-22"
+        },
+        {
+          "type": "EmbargoMap",
+          "title": "Embargoed areas on Google Maps",
+          "url": "https://www.google.com/maps/d/u/0/edit?mid=1ruHNW4ITD_Nj7TfECyUMAwTMoBWVNkw&usp=sharing",
+          "published_time": null
+        }
+      ],
       "information": null,
       "region": null,
       "punching_system": null,
@@ -579,7 +631,24 @@
           "country_code": "PRT"
         }
       ],
-      "officials": [],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Augusto Almeida"
+        },
+        {
+          "role": "Event director",
+          "name": "Augusto Almeida"
+        },
+        {
+          "role": "Course setter",
+          "name": "Alexandre Reis"
+        },
+        {
+          "role": "Event controller",
+          "name": "Jose Oliveira"
+        }
+      ],
       "classes": [
         "M35",
         "M40",
@@ -612,7 +681,20 @@
           "last_updated_at": "2026-02-11T17:44:13.739229+00:00"
         }
       ],
-      "documents": [],
+      "documents": [
+        {
+          "type": "EmbargoMap",
+          "title": "Embargoed Areas",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8972/da600836-ad73-471b-9ce3-c67f139a853a/Embargoed Areas.Pdf",
+          "published_time": "2026-10-22"
+        },
+        {
+          "type": "EmbargoMap",
+          "title": "Embargoed areas on Google Maps",
+          "url": "https://www.google.com/maps/d/u/0/edit?mid=1ruHNW4ITD_Nj7TfECyUMAwTMoBWVNkw&usp=sharing",
+          "published_time": null
+        }
+      ],
       "information": null,
       "region": null,
       "punching_system": "Sportident",
@@ -1087,13 +1169,13 @@
     },
     {
       "id": "SWE_58263",
-      "name": "MTBO, DM, sprint, Småland+Blekinge+Skåne",
+      "name": "MTBO, DM, sprint, Småland + Blekinge + Skåne",
       "start_time": "2027-05-22",
       "end_time": "2027-05-22",
       "status": "Sanctioned",
       "original_status": "Active",
       "types": [
-        "Regional"
+        "Championship"
       ],
       "tags": [],
       "form": "Individual",
@@ -1137,7 +1219,7 @@
       "races": [
         {
           "race_number": 1,
-          "name": "MTBO, DM, sprint, Småland+Blekinge+Skåne",
+          "name": "MTBO, DM, sprint, Småland + Blekinge + Skåne",
           "datetimez": "2027-05-22T00:00:00+02:00",
           "discipline": "Sprint",
           "night_or_day": "day",
@@ -1233,13 +1315,13 @@
     },
     {
       "id": "SWE_58264",
-      "name": "MTBO, DM, medel, Småland+Blekinge+Skåne",
+      "name": "MTBO, DM, medel, Småland + Blekinge + Skåne",
       "start_time": "2027-05-23",
       "end_time": "2027-05-23",
       "status": "Sanctioned",
       "original_status": "Active",
       "types": [
-        "Regional"
+        "Championship"
       ],
       "tags": [],
       "form": "Individual",
@@ -1283,7 +1365,7 @@
       "races": [
         {
           "race_number": 1,
-          "name": "MTBO, DM, medel, Småland+Blekinge+Skåne",
+          "name": "MTBO, DM, medel, Småland + Blekinge + Skåne",
           "datetimez": "2027-05-23T00:00:00+02:00",
           "discipline": "Middle",
           "night_or_day": "day",
@@ -2217,7 +2299,33 @@
           "name": "Nils Pistora"
         }
       ],
-      "classes": [],
+      "classes": [
+        "D12",
+        "D16",
+        "D17-20",
+        "D21",
+        "D45",
+        "D50",
+        "D55",
+        "D60",
+        "D65",
+        "D70",
+        "H14",
+        "H16",
+        "H17-20",
+        "H21",
+        "H40",
+        "H45",
+        "H50",
+        "H55",
+        "H60",
+        "H65",
+        "H70",
+        "H75",
+        "Öppen Kort",
+        "Öppen Lång",
+        "Öppen Mellan"
+      ],
       "urls": [
         {
           "type": "Path",
@@ -2795,13 +2903,13 @@
     },
     {
       "id": "SWE_60899",
-      "name": "MTBO, SM/JSM/USM/VSM, Svenska cupen, Medel",
+      "name": "MTBO, SM/JSM/USM/VSM, Svenska cupen, medel",
       "start_time": "2027-05-29",
       "end_time": "2027-05-29",
       "status": "Sanctioned",
       "original_status": "Active",
       "types": [
-        "National"
+        "Championship"
       ],
       "tags": [],
       "form": "Individual",
@@ -2851,7 +2959,7 @@
       "races": [
         {
           "race_number": 1,
-          "name": "MTBO, SM/JSM/USM/VSM, Svenska cupen, Medel",
+          "name": "MTBO, SM/JSM/USM/VSM, Svenska cupen, medel",
           "datetimez": "2027-05-29T00:00:00+02:00",
           "discipline": "Middle",
           "night_or_day": "day",
@@ -2999,13 +3107,13 @@
     },
     {
       "id": "SWE_60900",
-      "name": "MTBO, SM/JSM/USM/VSM, Svenska cupen, Masstart",
+      "name": "MTBO, SM/JSM/USM/VSM, Svenska cupen, masstart",
       "start_time": "2027-05-30",
       "end_time": "2027-05-30",
       "status": "Sanctioned",
       "original_status": "Active",
       "types": [
-        "National"
+        "Championship"
       ],
       "tags": [],
       "form": "Individual",
@@ -3055,7 +3163,7 @@
       "races": [
         {
           "race_number": 1,
-          "name": "MTBO, SM/JSM/USM/VSM, Svenska cupen, Masstart",
+          "name": "MTBO, SM/JSM/USM/VSM, Svenska cupen, masstart",
           "datetimez": "2027-05-30T00:00:00+02:00",
           "discipline": "Long",
           "night_or_day": "day",

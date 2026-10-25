@@ -5839,9 +5839,15 @@
           "title": "Endring av brikkenummer",
           "url": "https://o-total.no/s/hkrma5",
           "published_time": null
+        },
+        {
+          "type": "Other",
+          "title": "Livelox",
+          "url": "https://www.livelox.com/Events/Show/206921/G-rretrakket-2026",
+          "published_time": null
         }
       ],
-      "information": "Samlingsplass, start og mål ved Ekholtbruket Golfklubb. Parkering på anviste plasser ved hhv. Ekholt\nbarneskole / Ekholt Arena og ved Ekholt kirke. 150-250 meter å gå/sykle til samlingsplass.\nVanlig EMIT brikke benyttes\nPM lagt ut",
+      "information": "Samlingsplass, start og mål ved Ekholtbruket Golfklubb. Parkering på anviste plasser ved hhv. Ekholt\nbarneskole / Ekholt Arena og ved Ekholt kirke. 150-250 meter å gå/sykle til samlingsplass.\nVanlig EMIT brikke benyttes.\nNB! Gjør oppmerksom på at kart (vannfast A3) ikke er iht. MTB-O standard.\n16.10: PM lagt ut\n23.10: Startlister lagt ut. 2 minutter startintervall, opprop 2 minutter før start, kart fås 1 minutt før start.",
       "region": "Østfold",
       "punching_system": "Emit",
       "races": [
@@ -5851,27 +5857,180 @@
           "datetimez": "2026-10-24T12:00:00+02:00",
           "discipline": "Long",
           "night_or_day": "day",
-          "position": null,
-          "areas": [],
-          "urls": [
+          "position": {
+            "lat": 59.4083442657837,
+            "lng": 10.6828223027653
+          },
+          "areas": [
             {
-              "type": "EntryList",
-              "url": "/Entry?eventId=24841",
-              "title": "Enter",
-              "last_updated_at": "2026-10-08T21:01:09.590589+00:00"
-            },
+              "lat": 59.4083442657837,
+              "lng": 10.6828223027653,
+              "polygon": [
+                [
+                  59.427082441680824,
+                  10.66005035180987
+                ],
+                [
+                  59.387655484675804,
+                  10.647959644177217
+                ],
+                [
+                  59.37212932075087,
+                  10.653711061992267
+                ],
+                [
+                  59.3303650534624,
+                  10.66131614838778
+                ],
+                [
+                  59.31275806367,
+                  10.672243880631454
+                ],
+                [
+                  59.30101497494948,
+                  10.68144624786573
+                ],
+                [
+                  59.305712685798994,
+                  10.69985087263407
+                ],
+                [
+                  59.33623202350421,
+                  10.730333600969267
+                ],
+                [
+                  59.34766972226538,
+                  10.744137014695413
+                ],
+                [
+                  59.3503320451685,
+                  10.750236411222424
+                ],
+                [
+                  59.38115781963566,
+                  10.759436869617913
+                ],
+                [
+                  59.38983703413692,
+                  10.7402686419789
+                ],
+                [
+                  59.39458733128896,
+                  10.732207056614886
+                ],
+                [
+                  59.396016902146954,
+                  10.731029519829933
+                ],
+                [
+                  59.399751948259336,
+                  10.72586648123605
+                ],
+                [
+                  59.40632209889557,
+                  10.70808924929135
+                ],
+                [
+                  59.41530037489011,
+                  10.705422445818117
+                ],
+                [
+                  59.420881862756744,
+                  10.710975460166717
+                ],
+                [
+                  59.428391307854895,
+                  10.708537552058377
+                ],
+                [
+                  59.42908016359482,
+                  10.694181007202435
+                ],
+                [
+                  59.427082441680824,
+                  10.66005035180987
+                ]
+              ]
+            }
+          ],
+          "urls": [
             {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=24841&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-10-08T21:01:09.590589+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=24841&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-10-25T12:10:49.306791+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=24841&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-10-25T12:10:49.306791+00:00"
+            },
+            {
+              "type": "Livelox",
+              "url": "https://www.livelox.com/Events/Show/206921/G-rretrakket-2026",
+              "title": "",
+              "last_updated_at": "2026-10-25T12:10:49.306791+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "Kort": 9,
+            "Lang": 27,
+            "Lang_EL-sykkel": 2
+          },
+          "result_counts": {
+            "Kort": 9,
+            "Lang": 27,
+            "Lang_EL-sykkel": 2
+          },
+          "fingerprints": [
+            "080e67472be7677516c14c3353d7d4c47852a617e597836cc39a85868f555682",
+            "09d9c3838b0f9bf4308bf93cca7a93055538715b4d19bfdc26c1b72cb771c523",
+            "1bea35d67172b275e4b8ab7c64d8bc1f01026d0ae6c52e54bbdf5c62f154bc59",
+            "1d96ef13f5fb1f5a6aa57bb6417ea6e3f172f2453076af74af6dfcf165fb88a5",
+            "2952c09904eb5e8b08d38bebcde5bdd7bca27a3447bf81e3424b7b60345ed3af",
+            "2b2d2b763e9977ac558dc9960defa8e353e36a0d6fdc7950b97d2b8e849372ff",
+            "2bba5580fc68d9e4c8270d9817a78047b766e4c1eb2e2bcc99c803dca71b8eb7",
+            "2eeb018f587e3aa523cc109a0e3ec80e9d47dbb4f43d54dc4d336f68ff92976d",
+            "32347a76eb688f1e4dc5d79561e87a0a693948332bfd5a748bdb83200b7fb58f",
+            "3614745ad0ea74dc7760a1a281d61e43d467be2e247e2d3a8e2ed9b5425a3fa8",
+            "3aa5b3d4cbc8697877cae6bbda2b257a2cfbf87225b8d32fa09012ec584f0c66",
+            "450542cb1789cec9bb1676de8baf959128628dd295a085750d4187bbe0d52a5b",
+            "458cea3aae134b30d57e568f02051887057a4922974fed60fdafcd8ff8d0d0a8",
+            "543fd2bb689827d7a531f329c287a75b2229b0a26bac7cd229b29aafb5cc0e8d",
+            "5ac7ed28ba17968708fa48eb3f4ed9360c315a40798a30a307b6589f2c159c8e",
+            "5fe3177d0f7ea35645714b7a0b88fc93bd001f04113cfb1b5e35e796d1fb9429",
+            "69ce847b21a5c1ca7c1daa58f73891228f634b0850fd9e0fbf3b5a50a7b4d90f",
+            "7a0a50caa20e23cd808de1b5a2b0ca9a07953f1b81aabecd89645ec88673d857",
+            "8457ea26657f804279db1e35e987b218a5e52a919f5a93b40d941257675292d4",
+            "90f3fd8409d3b32f35cbb6d5edd456e63dc0111bfbdb034d6502bf339233c498",
+            "91b279a108fee96d51179ab863bd9d8dcb6b768d0d18dd010a35cdcc3773989b",
+            "92de482a21725a4784c4a0360cd29c777fedcd985e0cf8b5bcf01e5d16171173",
+            "9ec104a49483e8f4763649d0abeb660f003e90f87c6b6e371a55d197e56f7ddb",
+            "a571d7ca31d339ff01f4237375ba4b96d183efc186a83970f9179836a7eed6a4",
+            "b112d9e389f4b18917a56923cc4895e4167215613489ff9e8f82e707060ed31c",
+            "b87ab92376325bd2b57ddf3de0c50cf8040ef9ba239d4cce4e71a4d2bbc36232",
+            "c4ec2098b41c7202b4c8d12523a985ae2f01fb4c0e61182e49d567d59e50656a",
+            "c7d392d6502125e188823a8a9567ab761c5b42ba36befe460e371070d5459f64",
+            "c84309703bba1783e493f3d3d51aac0b94d1f477622af51d958bff7bf573d867",
+            "ccccd34b0a20ac2d600d16c130ff9a4597c42aeef4fb6504bc7c0f61cd2e8066",
+            "cd518239b1f6d96747e8f65a7b8141fb9ca58fadf8a15e708da31b5a819e3927",
+            "d0661615035854cbd10d49a6256d58f96f4096f4d9113163bb65713feca1679d",
+            "d6cb095a4eec46e1e3283356330c55aec941d19821c6b5cab3f607e59bc80f9c",
+            "e1890341dfc337ea6c776b6da44cdbaf3feb37231782e27264b31838a569e9c9",
+            "e78fd3965d4860931ed20b1e8a7463bd8b676ffac9ca64d3e0f3ed685d84bded",
+            "e9666029e97f1102682360a1f97c821326165fc0903b6924a6dff5464f7631f4",
+            "ea3139461db6307975b34f9a28e80e27fcec566c4499d5804c9334390edae396",
+            "fa0d0997ca15b81ed166b5ece93f0ed8fc868dc756660134a1a9e8e5b1e58648"
+          ]
         }
       ],
       "entry_deadlines": []
@@ -24145,7 +24304,7 @@
         }
       ],
       "documents": [],
-      "information": "Välkomna på en klassiker. BarmarksSkido! Dvs skidorientering fast utan skidor! Man får endast springa på de på kartan grönmarkerade spåren (stigar) samt \"pistade\" ytor ( skog). Tre banor 3 km-6 km- 9 km. Bra träning inför vinterns stora arrangemang i Umeå i mars.VeteranVM, Världscup samt nationell tävling för yngre! Pannlampa på och masstart 18.15. Övriga klubbar också välkomna. Vill man hellre cykla så får man ju det.\nVi ses",
+      "information": "Välkomna på en klassiker. BarmarksSkido! Dvs skidorientering fast utan skidor! Man får endast springa på de på kartan grönmarkerade spåren (stigar) samt \"pistade\" ytor ( skog). Tre banor 2,5 km-4 km- 6 km. Bra träning inför vinterns stora arrangemang i Umeå i mars.VeteranVM, Världscup samt nationell tävling för yngre! Pannlampa på och masstart 18.15. Övriga klubbar också välkomna. Vill man hellre cykla så får man ju det.\nVi ses",
       "region": "Ångermanland",
       "punching_system": "Sportident",
       "races": [
@@ -24331,23 +24490,53 @@
           ],
           "urls": [
             {
-              "type": "EntryList",
-              "url": "/Entry?eventId=60870",
-              "title": "Enter",
-              "last_updated_at": "2026-10-10T08:15:48.983748+00:00"
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/206947",
+              "title": "Map, courses and routes in Livelox",
+              "last_updated_at": "2026-10-25T12:10:49.306427+00:00"
             },
             {
               "type": "EntryList",
               "url": "/Events/Entries?eventId=60870&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-10-10T08:15:48.983748+00:00"
+            },
+            {
+              "type": "ResultList",
+              "url": "/Events/ResultList?eventId=60870&groupBy=EventClass",
+              "title": "Result list",
+              "last_updated_at": "2026-10-25T12:10:49.306427+00:00"
+            },
+            {
+              "type": "StartList",
+              "url": "/Events/StartList?eventId=60870&groupBy=EventClass",
+              "title": "Start list",
+              "last_updated_at": "2026-10-25T12:10:49.306427+00:00"
             }
           ],
           "documents": [],
           "entry_counts": null,
-          "start_counts": null,
-          "result_counts": null,
-          "fingerprints": []
+          "start_counts": {
+            "MTBO Lång": 8,
+            "MTBO Medel": 3
+          },
+          "result_counts": {
+            "MTBO Lång": 8,
+            "MTBO Medel": 3
+          },
+          "fingerprints": [
+            "42fb8ab8afdfd9636d9b8288d14525677108aaa7b033c3496dc0b8054e93936f",
+            "458ca8b151a0ad1cb2eb39c211762e8b5c9b613dadbb6e66ee579acb5b08ee87",
+            "585d4094cb86e61808fc5e3acf04404ff5573164a99bcc474967758cf0088198",
+            "6d2196b62681c4688bdbca9f8e4adb43478afdcff44fc30dc7369ab1b186cbaa",
+            "6fe10c58582e898d865b8acd0e917498d1f386578a5067b244b5d75f2c461a63",
+            "764fbe85365368a3a1504717a4a7223a9ccdc81d2189e87eba5d73d2bf4001a8",
+            "88880fe7ea08fa140f21d235e98ce91bf11e2d62250d68730f58d8bcd2af6681",
+            "d4f08c5c8388b4d566079d5f8e8e0483d0dd3980d6f66324135cff70380ea459",
+            "e01ebe33396a6639448c066b65644066b3dc5110d0dd8669f25d6b3c67c03c11",
+            "e56fa549ef049fd47e4853cde49ac9c16c6a835a71ba3a2c325adfe810b85d72",
+            "f57ba00f1da7c31a955f9d3a11c9914aed240600383a6e3c594f351bbc8fc186"
+          ]
         }
       ],
       "entry_deadlines": []
