@@ -28,8 +28,8 @@
     {
       "id": "IOF_9017",
       "name": "(Preliminary Dates) - MTB Orienteering World Cup round 1 and U23 World MTB Orienteering Championships 2028",
-      "start_time": "2028-05-18",
-      "end_time": "2028-05-18",
+      "start_time": "2028-05-19",
+      "end_time": "2028-05-21",
       "status": "Sanctioned",
       "original_status": "Active",
       "types": [
@@ -139,7 +139,7 @@
         {
           "race_number": 1,
           "name": "(Preliminary Dates) - MTB Orienteering World Cup round 1 and U23 World MTB Orienteering Championships 2028",
-          "datetimez": "2028-05-18T21:00:00+00:00",
+          "datetimez": "2028-05-19T00:00:00+03:00",
           "discipline": "Other",
           "night_or_day": null,
           "position": {
@@ -222,13 +222,14 @@
           "fingerprints": []
         }
       ],
-      "entry_deadlines": []
+      "entry_deadlines": [],
+      "is_date_preliminary": true
     },
     {
       "id": "IOF_9046",
       "name": "(Preliminary Dates) - World Masters MTB Orienteering Championships 2028",
-      "start_time": "2028-08-01",
-      "end_time": "2028-08-01",
+      "start_time": "2028-08-02",
+      "end_time": "2028-08-08",
       "status": "Sanctioned",
       "original_status": "Active",
       "types": [
@@ -260,7 +261,7 @@
         {
           "race_number": 1,
           "name": "(Preliminary Dates) - World Masters MTB Orienteering Championships 2028",
-          "datetimez": "2028-08-01T21:00:00+00:00",
+          "datetimez": "2028-08-02T00:00:00+03:00",
           "discipline": "Other",
           "night_or_day": null,
           "position": {
@@ -276,13 +277,14 @@
           "fingerprints": []
         }
       ],
-      "entry_deadlines": []
+      "entry_deadlines": [],
+      "is_date_preliminary": true
     },
     {
       "id": "IOF_9092",
       "name": "CX80 World MTB Orienteering Championships 2028 and MTB Orienteering World Cup round 3 2028",
-      "start_time": "2028-09-16",
-      "end_time": "2028-09-16",
+      "start_time": "2028-09-17",
+      "end_time": "2028-09-23",
       "status": "Sanctioned",
       "original_status": "Active",
       "types": [
@@ -319,7 +321,7 @@
         {
           "race_number": 1,
           "name": "CX80 World MTB Orienteering Championships 2028 and MTB Orienteering World Cup round 3 2028",
-          "datetimez": "2028-09-16T23:00:00+00:00",
+          "datetimez": "2028-09-17T00:00:00+01:00",
           "discipline": "Other",
           "night_or_day": null,
           "position": null,
@@ -332,13 +334,14 @@
           "fingerprints": []
         }
       ],
-      "entry_deadlines": []
+      "entry_deadlines": [],
+      "is_date_preliminary": true
     },
     {
       "id": "IOF_9093",
       "name": "Junior World MTB Orienteering Championships 2028",
-      "start_time": "2028-09-16",
-      "end_time": "2028-09-16",
+      "start_time": "2028-09-17",
+      "end_time": "2028-09-23",
       "status": "Sanctioned",
       "original_status": "Active",
       "types": [
@@ -370,7 +373,7 @@
         {
           "race_number": 1,
           "name": "Junior World MTB Orienteering Championships 2028",
-          "datetimez": "2028-09-16T23:00:00+00:00",
+          "datetimez": "2028-09-17T00:00:00+01:00",
           "discipline": "Other",
           "night_or_day": null,
           "position": null,
@@ -383,7 +386,8 @@
           "fingerprints": []
         }
       ],
-      "entry_deadlines": []
+      "entry_deadlines": [],
+      "is_date_preliminary": true
     }
   ]
 }

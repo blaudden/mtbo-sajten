@@ -28,8 +28,8 @@
     {
       "id": "IOF_8559",
       "name": "CX80 World MTB Orienteering Championships 2027",
-      "start_time": "2027-06-09",
-      "end_time": "2027-06-09",
+      "start_time": "2027-06-10",
+      "end_time": "2027-06-16",
       "status": "Sanctioned",
       "original_status": "Active",
       "types": [
@@ -85,7 +85,7 @@
         {
           "race_number": 1,
           "name": "CX80 World MTB Orienteering Championships 2027",
-          "datetimez": "2027-06-09T21:00:00+00:00",
+          "datetimez": "2027-06-10T00:00:00+03:00",
           "discipline": "Other",
           "night_or_day": null,
           "position": {
@@ -101,13 +101,14 @@
           "fingerprints": []
         }
       ],
-      "entry_deadlines": []
+      "entry_deadlines": [],
+      "is_date_preliminary": true
     },
     {
       "id": "IOF_8560",
       "name": "Junior World MTB Orienteering Championships 2027",
-      "start_time": "2027-06-09",
-      "end_time": "2027-06-09",
+      "start_time": "2027-06-10",
+      "end_time": "2027-06-16",
       "status": "Sanctioned",
       "original_status": "Active",
       "types": [
@@ -146,7 +147,7 @@
         {
           "race_number": 1,
           "name": "Junior World MTB Orienteering Championships 2027",
-          "datetimez": "2027-06-09T22:00:00+00:00",
+          "datetimez": "2027-06-10T00:00:00+03:00",
           "discipline": "Other",
           "night_or_day": null,
           "position": {
@@ -162,7 +163,8 @@
           "fingerprints": []
         }
       ],
-      "entry_deadlines": []
+      "entry_deadlines": [],
+      "is_date_preliminary": true
     },
     {
       "id": "IOF_8961",
@@ -325,7 +327,8 @@
           "fingerprints": []
         }
       ],
-      "entry_deadlines": []
+      "entry_deadlines": [],
+      "is_date_preliminary": false
     },
     {
       "id": "IOF_8962",
@@ -488,13 +491,14 @@
           "fingerprints": []
         }
       ],
-      "entry_deadlines": []
+      "entry_deadlines": [],
+      "is_date_preliminary": false
     },
     {
       "id": "IOF_8963",
       "name": "MTB Orienteering World Cup round 3 and U23 World MTB Orienteering Championships 2027",
-      "start_time": "2027-09-23",
-      "end_time": "2027-09-25",
+      "start_time": "2027-09-20",
+      "end_time": "2027-09-24",
       "status": "Sanctioned",
       "original_status": "Active",
       "types": [
@@ -611,7 +615,8 @@
           "fingerprints": []
         }
       ],
-      "entry_deadlines": []
+      "entry_deadlines": [],
+      "is_date_preliminary": true
     },
     {
       "id": "IOF_8972",
@@ -767,7 +772,8 @@
           "fingerprints": []
         }
       ],
-      "entry_deadlines": []
+      "entry_deadlines": [],
+      "is_date_preliminary": false
     },
     {
       "id": "SWE_57010",
@@ -887,7 +893,8 @@
           "fingerprints": []
         }
       ],
-      "entry_deadlines": []
+      "entry_deadlines": [],
+      "is_date_preliminary": false
     },
     {
       "id": "SWE_57011",
@@ -1011,7 +1018,8 @@
           "fingerprints": []
         }
       ],
-      "entry_deadlines": []
+      "entry_deadlines": [],
+      "is_date_preliminary": false
     },
     {
       "id": "SWE_57942",
@@ -1091,7 +1099,8 @@
           "fingerprints": []
         }
       ],
-      "entry_deadlines": []
+      "entry_deadlines": [],
+      "is_date_preliminary": false
     },
     {
       "id": "SWE_57943",
@@ -1165,7 +1174,8 @@
           "fingerprints": []
         }
       ],
-      "entry_deadlines": []
+      "entry_deadlines": [],
+      "is_date_preliminary": false
     },
     {
       "id": "SWE_58263",
@@ -1311,7 +1321,8 @@
           "fingerprints": []
         }
       ],
-      "entry_deadlines": []
+      "entry_deadlines": [],
+      "is_date_preliminary": false
     },
     {
       "id": "SWE_58264",
@@ -1445,7 +1456,8 @@
           "fingerprints": []
         }
       ],
-      "entry_deadlines": []
+      "entry_deadlines": [],
+      "is_date_preliminary": false
     },
     {
       "id": "SWE_58284",
@@ -1509,7 +1521,8 @@
           "fingerprints": []
         }
       ],
-      "entry_deadlines": []
+      "entry_deadlines": [],
+      "is_date_preliminary": false
     },
     {
       "id": "SWE_58952",
@@ -1571,7 +1584,8 @@
           "fingerprints": []
         }
       ],
-      "entry_deadlines": []
+      "entry_deadlines": [],
+      "is_date_preliminary": false
     },
     {
       "id": "SWE_58993",
@@ -1689,7 +1703,8 @@
           "fingerprints": []
         }
       ],
-      "entry_deadlines": []
+      "entry_deadlines": [],
+      "is_date_preliminary": false
     },
     {
       "id": "SWE_58994",
@@ -1811,7 +1826,8 @@
           "fingerprints": []
         }
       ],
-      "entry_deadlines": []
+      "entry_deadlines": [],
+      "is_date_preliminary": false
     },
     {
       "id": "SWE_59350",
@@ -2201,7 +2217,8 @@
           "fingerprints": []
         }
       ],
-      "entry_deadlines": []
+      "entry_deadlines": [],
+      "is_date_preliminary": false
     },
     {
       "id": "SWE_60618",
@@ -2257,7 +2274,8 @@
           "fingerprints": []
         }
       ],
-      "entry_deadlines": []
+      "entry_deadlines": [],
+      "is_date_preliminary": false
     },
     {
       "id": "SWE_60818",
@@ -2397,7 +2415,8 @@
           "fingerprints": []
         }
       ],
-      "entry_deadlines": []
+      "entry_deadlines": [],
+      "is_date_preliminary": false
     },
     {
       "id": "SWE_60819",
@@ -2507,7 +2526,8 @@
           "fingerprints": []
         }
       ],
-      "entry_deadlines": []
+      "entry_deadlines": [],
+      "is_date_preliminary": false
     },
     {
       "id": "SWE_60820",
@@ -2617,7 +2637,8 @@
           "fingerprints": []
         }
       ],
-      "entry_deadlines": []
+      "entry_deadlines": [],
+      "is_date_preliminary": false
     },
     {
       "id": "SWE_60823",
@@ -2753,7 +2774,8 @@
           "fingerprints": []
         }
       ],
-      "entry_deadlines": []
+      "entry_deadlines": [],
+      "is_date_preliminary": false
     },
     {
       "id": "SWE_60824",
@@ -2899,7 +2921,8 @@
           "fingerprints": []
         }
       ],
-      "entry_deadlines": []
+      "entry_deadlines": [],
+      "is_date_preliminary": false
     },
     {
       "id": "SWE_60899",
@@ -3103,7 +3126,8 @@
           "fingerprints": []
         }
       ],
-      "entry_deadlines": []
+      "entry_deadlines": [],
+      "is_date_preliminary": false
     },
     {
       "id": "SWE_60900",
@@ -3311,7 +3335,8 @@
           "fingerprints": []
         }
       ],
-      "entry_deadlines": []
+      "entry_deadlines": [],
+      "is_date_preliminary": false
     }
   ]
 }
