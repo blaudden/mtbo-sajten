@@ -24313,7 +24313,14 @@
           "last_updated_at": "2026-10-08T21:01:09.590452+00:00"
         }
       ],
-      "documents": [],
+      "documents": [
+        {
+          "type": "Other",
+          "title": "ÖVIKSSERIEN 2027",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/60695/6c4f6792-3d86-4f0b-87f5-7fdb0f00088d/ÖVIKSSERIEN 2027.Pdf",
+          "published_time": "2026-10-26"
+        }
+      ],
       "information": "Välkomna på en klassiker. BarmarksSkido! Dvs skidorientering fast utan skidor! Man får endast springa på de på kartan grönmarkerade spåren (stigar) samt \"pistade\" ytor ( skog). Tre banor 2,5 km-4 km- 6 km. Bra träning inför vinterns stora arrangemang i Umeå i mars.VeteranVM, Världscup samt nationell tävling för yngre! Pannlampa på och masstart 18.15. Övriga klubbar också välkomna. Vill man hellre cykla så får man ju det.\nVi ses",
       "region": "Ångermanland",
       "punching_system": "Sportident",

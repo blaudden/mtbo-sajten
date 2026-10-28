@@ -74,8 +74,8 @@
         {
           "type": "EmbargoMap",
           "title": "Embargo areas",
-          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8559/90242076-57b2-4ad7-979e-6db90b4b14ac/Embargo areas.Pdf",
-          "published_time": "2026-10-25"
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8559/7dbc6d6d-8ee6-4011-a8e8-d72b01e87c82/Embargo areas.Pdf",
+          "published_time": "2026-10-27"
         }
       ],
       "information": null,
@@ -136,8 +136,8 @@
         {
           "type": "EmbargoMap",
           "title": "Embargo areas",
-          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8560/595b439e-35ae-4b34-b4c1-488e021f2ab9/Embargo areas.Pdf",
-          "published_time": "2026-10-25"
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8560/8e45743a-e0f0-43f3-befe-0739ba0dec3d/Embargo areas.Pdf",
+          "published_time": "2026-10-27"
         }
       ],
       "information": null,
@@ -560,6 +560,12 @@
           "title": "Embargoed areas on Google Maps",
           "url": "https://www.google.com/maps/d/u/0/edit?mid=1ruHNW4ITD_Nj7TfECyUMAwTMoBWVNkw&usp=sharing",
           "published_time": null
+        },
+        {
+          "type": "Bulletin",
+          "title": "Bulletin 2",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8963/4c540ca0-6f77-4adf-88ae-1851ded021f7/Bulletin 2.Pdf",
+          "published_time": "2026-10-27"
         }
       ],
       "information": null,
@@ -698,6 +704,12 @@
           "title": "Embargoed areas on Google Maps",
           "url": "https://www.google.com/maps/d/u/0/edit?mid=1ruHNW4ITD_Nj7TfECyUMAwTMoBWVNkw&usp=sharing",
           "published_time": null
+        },
+        {
+          "type": "Bulletin",
+          "title": "Bulletin 2",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8972/b9ead083-0aa0-4382-ab5d-f956499c3a72/Bulletin 2.Pdf",
+          "published_time": "2026-10-27"
         }
       ],
       "information": null,
@@ -1023,13 +1035,13 @@
     },
     {
       "id": "SWE_57942",
-      "name": "MTBO, Svenska cupen, Traneträffen, sprint",
+      "name": "MTBO, SM/JSM/USM/VSM, Svenska cupen, sprint",
       "start_time": "2027-08-21",
       "end_time": "2027-08-21",
       "status": "Sanctioned",
       "original_status": "Active",
       "types": [
-        "National"
+        "Championship"
       ],
       "tags": [],
       "form": "Individual",
@@ -1085,7 +1097,7 @@
       "races": [
         {
           "race_number": 1,
-          "name": "MTBO, Svenska cupen, Traneträffen, sprint",
+          "name": "MTBO, SM/JSM/USM/VSM, Svenska cupen, sprint",
           "datetimez": "2027-08-21T00:00:00+02:00",
           "discipline": "Sprint",
           "night_or_day": "day",
@@ -1104,13 +1116,13 @@
     },
     {
       "id": "SWE_57943",
-      "name": "MTBO, Svenska cupen, Traneträffen, medel",
+      "name": "MTBO, SM/JSM/USM/VSM, Svenska cupen, lång",
       "start_time": "2027-08-22",
       "end_time": "2027-08-22",
       "status": "Sanctioned",
       "original_status": "Active",
       "types": [
-        "National"
+        "Championship"
       ],
       "tags": [],
       "form": "Individual",
@@ -1160,7 +1172,7 @@
       "races": [
         {
           "race_number": 1,
-          "name": "MTBO, Svenska cupen, Traneträffen, medel",
+          "name": "MTBO, SM/JSM/USM/VSM, Svenska cupen, lång",
           "datetimez": "2027-08-22T00:00:00+02:00",
           "discipline": "Long",
           "night_or_day": "day",
@@ -2642,7 +2654,7 @@
     },
     {
       "id": "SWE_60823",
-      "name": "MTBO Camp, Svenska Cupen, lång",
+      "name": "MTBO Camp, Svenska cupen, lång",
       "start_time": "2027-04-17",
       "end_time": "2027-04-17",
       "status": "Sanctioned",
@@ -2722,7 +2734,7 @@
       "races": [
         {
           "race_number": 1,
-          "name": "MTBO Camp, Svenska Cupen, lång",
+          "name": "MTBO Camp, Svenska cupen, lång",
           "datetimez": "2027-04-17T10:00:00+02:00",
           "discipline": "Long",
           "night_or_day": "day",
@@ -2779,7 +2791,7 @@
     },
     {
       "id": "SWE_60824",
-      "name": "MTBO Camp, Svenska Cupen, medel",
+      "name": "MTBO Camp, Svenska cupen, medel",
       "start_time": "2027-04-18",
       "end_time": "2027-04-18",
       "status": "Sanctioned",
@@ -2865,7 +2877,7 @@
       "races": [
         {
           "race_number": 1,
-          "name": "MTBO Camp, Svenska Cupen, medel",
+          "name": "MTBO Camp, Svenska cupen, medel",
           "datetimez": "2027-04-18T10:00:00+02:00",
           "discipline": "Middle",
           "night_or_day": "day",
