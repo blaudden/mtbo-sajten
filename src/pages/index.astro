@@ -5,8 +5,7 @@ import HeroFullSpeed from '~/components/widgets/HeroFullSpeed.astro';
 import Features from '~/components/widgets/Features.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FeaturedItem from '~/components/widgets/FeaturedItem.astro';
-import wmtbocLogo from '~/assets/images/wmtboc26-logo-transparent.png';
-import wmtbocImage from '~/assets/images/posts/wmtboc26/image.png';
+import season2026Hero from '~/assets/images/posts/mtbo-sasongen-2026-sammanfattning/hero.jpg';
 ---
 
 <Layout>
@@ -31,18 +30,16 @@ import wmtbocImage from '~/assets/images/posts/wmtboc26/image.png';
   </HeroFullSpeed>
 
   <FeaturedItem
-    title="VM i Sverige 2026"
-    excerpt={`Världsmästerskapen och Junior-VM i mountainbikeorientering avgörs i Mora den 24–30 augusti 2026.
-Här på mountainbikeorientering.se samlar vi allt du behöver veta för att heja, följa loppen eller själv delta i publiktävlingarna. Hitta praktisk information, program, banor, anmälningar och boende på ett och samma ställe.
-Observera att all information på VM-sidorna presenteras på engelska.`}
+    title="MTBO-säsongen 2026 – Året då Sverige höll flaggan högt"
+    excerpt={`Säsongen 2026 är i mål. Från vårens premiär i Svenska Cupen i Haninge via O-Ringen i Göteborg och SM i Uppsala byggde hela säsongen upp mot VM och junior-VM på hemmaplan i Mora.
+Läs vår sammanfattning av tävlingsåret, de svenska VM-medaljerna och vinnarna i Svenska Cupen 2026 – samt en första blick mot tävlingsprogrammet 2027.`}
     image={{
-      src: wmtbocImage,
-      alt: 'WMTBOC 2026 will be organized in Mora, Sweden. Experience high level mtb orieentering, as a spectator or participant.',
+      src: season2026Hero,
+      alt: 'Svenska MTBO-cyklister och medaljörer under säsongen 2026 med VM på hemmaplan i Mora.',
     }}
-    link="/wmtboc26"
-    linkLabel="Till den officiella VM-sajten"
-    isPrimaryGlowing={true}
-    animatedLogo={wmtbocLogo}
+    link="/mtbo-sasongen-2026-sammanfattning"
+    linkLabel="Läs sammanfattningen av 2026"
+    isPrimaryGlowing={false}
     ><Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-100 dark:bg-transparent"></div>
     </Fragment>
