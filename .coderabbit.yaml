@@ -23,7 +23,6 @@ reviews:
   review_details: false
   enable_prompt_for_ai_agents: false
   path_filters:
-    - '!**' # Exclude all files by default
     - '**/*.astro' # Review Astro components
     - '**/*.ts' # Review TypeScript files
     - '**/*.tsx' # Review TSX files
