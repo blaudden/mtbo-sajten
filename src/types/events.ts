@@ -165,7 +165,7 @@ export interface EventAugmentationLocaleContent {
     cta_label?: string;
     cta_url?: string;
   };
-  /** Optional per-race location or stage notes keyed by race_number (1-indexed) or event_id */
+  /** Optional per-race location or stage notes keyed by the 1-indexed position in the combined, date-sorted race list */
   race_notes?: Record<string, string>;
 }
 

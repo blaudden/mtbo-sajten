@@ -81,7 +81,12 @@ function verifyEventGroups() {
           console.error(`❌ [FAIL] Missing built HTML page for augmented slug "${slug}" at ${htmlFile}.`);
           failed = true;
         } else {
-          const html = readFileSync(htmlFile, 'utf-8').replace(/&amp;/g, '&');
+          const html = readFileSync(htmlFile, 'utf-8')
+            .replace(/&#39;/g, "'")
+            .replace(/&quot;/g, '"')
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>')
+            .replace(/&amp;/g, '&');
           if (!html.includes(aug.content.sv.title)) {
             console.error(`❌ [FAIL] Built page ${htmlFile} does not contain Swedish title "${aug.content.sv.title}".`);
             failed = true;

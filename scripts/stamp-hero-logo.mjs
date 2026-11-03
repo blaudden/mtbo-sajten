@@ -80,10 +80,16 @@ async function main() {
     .resize(CANVAS_WIDTH, CANVAS_HEIGHT, { fit: 'cover', position })
     .composite([{ input: logoBuffer, left, top }]);
 
-  if (outputPath.toLowerCase().endsWith('.png')) {
+  const lowerOut = outputPath.toLowerCase();
+  if (lowerOut.endsWith('.png')) {
     pipeline = pipeline.png({ compressionLevel: 9 });
-  } else {
+  } else if (lowerOut.endsWith('.jpg') || lowerOut.endsWith('.jpeg')) {
     pipeline = pipeline.jpeg({ quality: 90, mozjpeg: true });
+  } else if (lowerOut.endsWith('.webp')) {
+    pipeline = pipeline.webp({ quality: 90 });
+  } else {
+    console.error(`ERROR: Unsupported output extension for ${outputPath}. Use .png, .jpg, .jpeg, or .webp`);
+    process.exit(1);
   }
 
   await pipeline.toFile(outputPath);

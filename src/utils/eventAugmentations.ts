@@ -195,12 +195,12 @@ export async function buildAugmentedEvent(
 
   for (const ev of childEvents) {
     const extUrl = resolveExternalUrl(ev);
-    if (extUrl && !seenUrls.has(extUrl) && (!isSingleEvent || !aug.website)) {
+    if (extUrl && !seenUrls.has(extUrl) && !isSingleEvent) {
       seenUrls.add(extUrl);
       urls.push({
-        type: isSingleEvent ? 'Path' : 'Series',
+        type: 'Series',
         url: extUrl,
-        title: isSingleEvent ? 'Eventor' : `Eventor: ${ev.name}`,
+        title: `Eventor: ${ev.name}`,
       });
     }
     for (const u of ev.urls || []) {

@@ -17,14 +17,18 @@ const { images = [], captions = [], id = `carousel-${Math.random().toString(36).
 
 const normalizedImages = images.map((item, index) => {
   if (typeof item === 'string') {
+    const caption = captions[index] || '';
     return {
       src: item,
-      alt: captions[index] || '',
+      alt: caption,
+      caption,
     };
   }
+  const caption = item.caption || captions[index] || '';
   return {
     src: item.src,
-    alt: item.alt || item.caption || captions[index] || '',
+    alt: item.alt || caption || '',
+    caption,
   };
 });
 ---
@@ -55,9 +59,9 @@ const normalizedImages = images.map((item, index) => {
             aspectRatio="3:2"
             loading={index === 0 ? 'eager' : 'lazy'}
           />
-          {image.alt && (
+          {image.caption && (
             <div class="absolute bottom-0 inset-x-0 bg-linear-to-t from-black/80 via-black/30 to-transparent pt-8 pb-3 px-4 pointer-events-none">
-              <p class="text-white/95 text-xs sm:text-sm font-medium drop-shadow-md line-clamp-2">{image.alt}</p>
+              <p class="text-white/95 text-xs sm:text-sm font-medium drop-shadow-md line-clamp-2">{image.caption}</p>
             </div>
           )}
         </div>
