@@ -1,0 +1,270 @@
+{
+  "augmentations": [
+    {
+      "slug": "mtbo-camp-skane-2027",
+      "aliases": ["mtbo-camp-skaane-2027"],
+      "event_ids": ["SWE_60819", "SWE_60818", "SWE_60820", "SWE_60823", "SWE_60824"],
+      "start_date": "2027-04-14",
+      "end_date": "2027-04-18",
+      "organisers": ["Lunds OK", "OK Pan-Kristianstad", "BroSö OK", "Hässleholms OK", "Härlövs IF"],
+      "region": "Skåne",
+      "website": "http://mtbocamp.dk",
+      "content": {
+        "sv": {
+          "title": "MTBO Camp & Svenska Cupen #1–2 i Skåne",
+          "subtitle": "Säsongspremiär med fem dagars tävlingar i nordöstra Skåne",
+          "paragraphs": [
+            "Svenska MTBO-säsongen 2027 inleds i nordöstra Skåne i samband med dansk-svenska MTBO Camp. Under fem dagar från onsdag 14 april till söndag 18 april erbjuds totalt fem tävlingar i snabba och stigrika skånska bok- och tallskogar kring Kristianstad och Hässleholm.",
+            "Onsdagen bjuder på nattorientering (medeldistans), följt av medeldistans på torsdagen och ultralång distans på fredagen. Till helgen den 17–18 april ansluter Svenska Cupen med årets två första deltävlingar: långdistans på lördagen och medeldistans på söndagen."
+          ],
+          "race_notes": {
+            "1": "Natt-medel (Lunds OK & OK Pan-Kristianstad)",
+            "2": "Medeldistans (Lunds OK)",
+            "3": "Ultralång distans (Lunds OK & OK Pan-Kristianstad)",
+            "4": "Svenska Cupen #1 — Långdistans (BroSö OK, Hässleholms OK, Lunds OK)",
+            "5": "Svenska Cupen #2 — Medeldistans (Härlövs IF, Hässleholms OK, Lunds OK)"
+          }
+        },
+        "en": {
+          "title": "MTBO Camp & Swedish Cup #1–2 in Skåne",
+          "subtitle": "Season opener with five days of competition in north-eastern Skåne",
+          "paragraphs": [
+            "The 2027 Swedish MTBO season opens in north-eastern Skåne together with the Danish-Swedish MTBO Camp. Across five days from Wednesday 14 April to Sunday 18 April, five competitions are held in fast, trail-rich beech and pine forests around Kristianstad and Hässleholm.",
+            "Wednesday starts with a night middle distance, followed by a middle distance on Thursday and an ultra-long distance on Friday. On the weekend of 17–18 April, the Swedish Cup kicks off with its first two rounds of the year: long distance on Saturday and middle distance on Sunday."
+          ],
+          "race_notes": {
+            "1": "Night middle distance (Lunds OK & OK Pan-Kristianstad)",
+            "2": "Middle distance (Lunds OK)",
+            "3": "Ultra-long distance (Lunds OK & OK Pan-Kristianstad)",
+            "4": "Swedish Cup #1 — Long distance (BroSö OK, Hässleholms OK, Lunds OK)",
+            "5": "Swedish Cup #2 — Middle distance (Härlövs IF, Hässleholms OK, Lunds OK)"
+          }
+        }
+      }
+    },
+    {
+      "slug": "svenska-cupen-karlskrona-2027",
+      "event_ids": ["SWE_57010", "SWE_57011"],
+      "start_date": "2027-05-15",
+      "end_date": "2027-05-16",
+      "organisers": ["Karlskrona SOK"],
+      "region": "Blekinge",
+      "content": {
+        "sv": {
+          "title": "Svenska Cupen #3–4 i Karlskrona",
+          "subtitle": "Långdistans och sprint i Blekinge med Karlskrona SOK",
+          "paragraphs": [
+            "I mitten av maj fortsätter Svenska Cupen i Blekinge när Karlskrona SOK arrangerar en dubbeltävlingshelg den 15–16 maj. Helgen inleds med långdistans på lördagen och avslutas med sprint på söndagen.",
+            "Terrängen kring Karlskrona bjuder på kuperade kustnära skogspartier och detaljrika sprintmiljöer som ställer höga krav på både vägval och kartläsning i hög fart."
+          ],
+          "race_notes": {
+            "1": "Svenska Cupen #3 — Långdistans",
+            "2": "Svenska Cupen #4 — Sprint"
+          }
+        },
+        "en": {
+          "title": "Swedish Cup #3–4 in Karlskrona",
+          "subtitle": "Long distance and sprint in Blekinge hosted by Karlskrona SOK",
+          "paragraphs": [
+            "In mid-May the Swedish Cup continues in Blekinge as Karlskrona SOK hosts a double competition weekend on 15–16 May. The weekend features a long distance on Saturday followed by a sprint on Sunday.",
+            "The terrain around Karlskrona offers coastal forest sections and intricate sprint areas that demand sharp route choices and map reading at speed."
+          ],
+          "race_notes": {
+            "1": "Swedish Cup #3 — Long distance",
+            "2": "Swedish Cup #4 — Sprint"
+          }
+        }
+      }
+    },
+    {
+      "slug": "dm-sprint-medel-syd-2027",
+      "event_ids": ["SWE_58263", "SWE_58264"],
+      "start_date": "2027-05-22",
+      "end_date": "2027-05-23",
+      "organisers": ["OK Bävern"],
+      "region": "Småland",
+      "content": {
+        "sv": {
+          "title": "DM Sprint & Medel (Småland, Blekinge, Skåne)",
+          "subtitle": "Distriktsmästerskap och tävlingshelg med OK Bävern",
+          "paragraphs": [
+            "Helgen den 22–23 maj arrangerar OK Bävern distriktsmästerskap i MTBO för Småland, Blekinge och Skåne med öppna klasser för alla. Lördagen bjuder på sprint och söndagen på medeldistans."
+          ],
+          "race_notes": {
+            "1": "DM Sprint",
+            "2": "DM Medeldistans"
+          }
+        },
+        "en": {
+          "title": "District Championships Sprint & Middle (Småland, Blekinge, Skåne)",
+          "subtitle": "Regional championship weekend hosted by OK Bävern",
+          "paragraphs": [
+            "On 22–23 May, OK Bävern organises the regional MTBO championships for Småland, Blekinge and Skåne, open to all entrants, with a sprint on Saturday and a middle distance on Sunday."
+          ],
+          "race_notes": {
+            "1": "District Championship Sprint",
+            "2": "District Championship Middle distance"
+          }
+        }
+      }
+    },
+    {
+      "slug": "sm-mtbo-falun-2027",
+      "event_ids": ["SWE_60899", "SWE_60900"],
+      "start_date": "2027-05-29",
+      "end_date": "2027-05-30",
+      "organisers": ["OK Kåre"],
+      "region": "Dalarna (Falun)",
+      "content": {
+        "sv": {
+          "title": "SM i MTBO — Helg 1 i Falun (Medel & Masstart)",
+          "subtitle": "Svenska mästerskapen och Svenska Cupen #5–6 hos OK Kåre",
+          "paragraphs": [
+            "Svenska mästerskapen i MTBO 2027 är uppdelade på två helger. Den första SM-helgen avgörs i Falun den 29–30 maj med OK Kåre som arrangör, där tävlingarna samtidigt utgör deltävling 5 och 6 i Svenska Cupen.",
+            "På lördagen den 29 maj står SM i medeldistans på programmet och på söndagen den 30 maj avgörs SM i masstart (SM, JSM, USM och VSM). OK Kåre har lång erfarenhet av stora MTBO-arrangemang i Falun, bland annat från VM 2022, med fina och tekniskt utmanande stigsystem kring Lugnet."
+          ],
+          "race_notes": {
+            "1": "SM Medeldistans & Svenska Cupen #5",
+            "2": "SM Masstart & Svenska Cupen #6"
+          }
+        },
+        "en": {
+          "title": "Swedish MTBO Championships — Weekend 1 in Falun (Middle & Mass Start)",
+          "subtitle": "Swedish Championships and Swedish Cup #5–6 hosted by OK Kåre",
+          "paragraphs": [
+            "The 2027 Swedish MTBO Championships are split across two weekends. The first championship weekend takes place in Falun on 29–30 May, hosted by OK Kåre, and also counts as rounds 5 and 6 of the Swedish Cup.",
+            "Saturday 29 May features the Swedish Middle Distance Championship, followed on Sunday 30 May by the Mass Start Championship (Senior, Junior, Youth and Masters). OK Kåre brings extensive championship experience from WMTBOC 2022 in Falun, offering technical trail networks around Lugnet."
+          ],
+          "race_notes": {
+            "1": "Swedish Championship Middle distance & Swedish Cup #5",
+            "2": "Swedish Championship Mass start & Swedish Cup #6"
+          }
+        }
+      }
+    },
+    {
+      "slug": "swe-59350",
+      "aliases": ["oringen-stockholm-2027"],
+      "event_ids": ["SWE_59350"],
+      "start_date": "2027-07-26",
+      "end_date": "2027-07-28",
+      "organisers": ["Svensk Orientering Events", "Tullinge SK"],
+      "region": "Stockholm (Lidingö & Tullinge)",
+      "website": "https://www.oringen.se",
+      "content": {
+        "sv": {
+          "title": "MTBO vid O-Ringen Stockholm 2027",
+          "subtitle": "Tre etapper MTBO på Lidingö och vid Brantbrink i Tullinge den 26–28 juli",
+          "paragraphs": [
+            "Under O-Ringen i Stockholm 2027 avgörs MTBO som en treetapperstävling måndag till onsdag den 26–28 juli. Den första etappen (medeldistans) måndagen den 26 juli cyklas på Lidingö i ett kuperat och stigrikt friluftsområde.",
+            "Etapp 2 (sprint) tisdagen den 27 juli och etapp 3 (långdistans) onsdagen den 28 juli har gemensam arena vid Brantbrink i Tullinge, som är Tullinge SK:s klubbstuga. Här väntar omväxlande Södertörnsterräng med snabba stigar, motionsspår och vägval på åsarna söder om Stockholm."
+          ],
+          "registration_info": {
+            "title": "Så anmäler du dig till MTBO på O-Ringen",
+            "paragraphs": [
+              "Du kan anmäla dig antingen till en 3-dagars tävlingsklass (DH10 till DH85) eller cykla valfria etapper i en öppen klass med fri starttid. I öppna klasser kan du anmäla dig direkt via mobilen fram till start och hämta ut nummerlapp och SIAC-pinne i Deltagarservice på arenan.",
+              "På O-Ringen används beröringsfri stämpling med SportIdent Air+ (SIAC), som kan hyras i samband med bokningen om du inte har en egen."
+            ],
+            "cta_label": "Boka på O-Ringens webbplats",
+            "cta_url": "https://www.oringen.se"
+          },
+          "race_notes": {
+            "1": "Lidingö, Stockholm",
+            "2": "Brantbrink (Tullinge SK), Tullinge",
+            "3": "Brantbrink (Tullinge SK), Tullinge"
+          }
+        },
+        "en": {
+          "title": "MTBO at O-Ringen Stockholm 2027",
+          "subtitle": "Three MTBO stages on Lidingö and at Brantbrink in Tullinge, 26–28 July",
+          "paragraphs": [
+            "At O-Ringen Stockholm 2027, MTBO is held as a three-stage event from Monday to Wednesday, 26–28 July. Stage 1 (middle distance) on Monday 26 July takes place on Lidingö in a hilly, trail-dense recreational forest area.",
+            "Stage 2 (sprint) on Tuesday 27 July and Stage 3 (long distance) on Wednesday 28 July share the same arena at Brantbrink in Tullinge, the clubhouse of Tullinge SK. Riders can look forward to varied Södertörn terrain with fast singletrack, forest tracks and route-choice legs south of Stockholm."
+          ],
+          "registration_info": {
+            "title": "How to enter MTBO at O-Ringen",
+            "paragraphs": [
+              "You can either enter a 3-day competition class (W/M10 to W/M85) or ride individual stages in an Open class with a flexible start window. For Open classes you can register online on your phone right up until the start and pick up your number bib and SIAC card at Competitor Service at the arena.",
+              "O-Ringen uses contactless punching with SportIdent Air+ (SIAC), which is available to rent when booking if you do not own one."
+            ],
+            "cta_label": "Book at O-Ringen.se",
+            "cta_url": "https://www.oringen.se"
+          },
+          "race_notes": {
+            "1": "Lidingö, Stockholm",
+            "2": "Brantbrink (Tullinge SK), Tullinge",
+            "3": "Brantbrink (Tullinge SK), Tullinge"
+          }
+        }
+      }
+    },
+    {
+      "slug": "svenska-cupen-satervurpan-2027",
+      "event_ids": ["SWE_58993", "SWE_58994"],
+      "start_date": "2027-08-14",
+      "end_date": "2027-08-15",
+      "organisers": ["Säterbygdens OK"],
+      "region": "Dalarna (Säter)",
+      "content": {
+        "sv": {
+          "title": "Svenska Cupen #7–8 — Sätervurpan",
+          "subtitle": "Sprint och medeldistans i Säter med Säterbygdens OK",
+          "paragraphs": [
+            "Efter sommaruppehållet startar höstsäsongen i Svenska Cupen i Dalarna den 14–15 augusti när Säterbygdens OK bjuder in till Sätervurpan. Lördagen avgörs som sprint och söndagen som medeldistans.",
+            "Säter och områdena kring Säterdalen har en välkänd och omtyckt MTBO-terräng med täta stignät på sandiga tallhedar och snabba åspartier."
+          ],
+          "race_notes": {
+            "1": "Svenska Cupen #7 — Sprint",
+            "2": "Svenska Cupen #8 — Medeldistans"
+          }
+        },
+        "en": {
+          "title": "Swedish Cup #7–8 — Sätervurpan",
+          "subtitle": "Sprint and middle distance in Säter hosted by Säterbygdens OK",
+          "paragraphs": [
+            "After the mid-summer break, the autumn part of the Swedish Cup resumes in Dalarna on 14–15 August as Säterbygdens OK hosts Sätervurpan, featuring a sprint on Saturday and a middle distance on Sunday.",
+            "The terrain around Säter and Säterdalen is well known in Swedish MTBO for its dense trail networks on sandy pine heaths and fast ridge formations."
+          ],
+          "race_notes": {
+            "1": "Swedish Cup #7 — Sprint",
+            "2": "Swedish Cup #8 — Middle distance"
+          }
+        }
+      }
+    },
+    {
+      "slug": "sm-mtbo-tranemo-2027",
+      "event_ids": ["SWE_57942", "SWE_57943"],
+      "start_date": "2027-08-21",
+      "end_date": "2027-08-22",
+      "organisers": ["OK Tranan"],
+      "region": "Västergötland (Tranemo)",
+      "content": {
+        "sv": {
+          "title": "SM i MTBO — Helg 2 i Tranemo (Sprint & Lång)",
+          "subtitle": "Svenska mästerskapen och final i Svenska Cupen (#9–10) med OK Tranan",
+          "paragraphs": [
+            "Årets andra SM-helg och samtidigt avslutningen i Svenska Cupen 2027 arrangeras av OK Tranan i Tranemo den 21–22 augusti. På lördagen avgörs SM i sprint och på söndagen SM i långdistans för seniorer, juniorer, ungdomar och veteraner.",
+            "OK Tranan är en rutinerad MTBO-arrangör i Västergötland med fina skogs- och åsområden kring Tranemo som ger en bra avslutning på den nationella cupsäsongen."
+          ],
+          "race_notes": {
+            "1": "SM Sprint & Svenska Cupen #9",
+            "2": "SM Långdistans & Svenska Cupen #10 (Cupfinal)"
+          }
+        },
+        "en": {
+          "title": "Swedish MTBO Championships — Weekend 2 in Tranemo (Sprint & Long)",
+          "subtitle": "Swedish Championships and Swedish Cup finals (#9–10) hosted by OK Tranan",
+          "paragraphs": [
+            "The second Swedish Championship weekend of 2027, which also serves as the final weekend of the Swedish Cup, is hosted by OK Tranan in Tranemo on 21–22 August. Saturday features the Sprint Championship and Sunday the Long Distance Championship across Senior, Junior, Youth and Masters classes.",
+            "OK Tranan is an experienced MTBO organiser in Västergötland, offering fine forest and ridge terrain around Tranemo to conclude the national cup season."
+          ],
+          "race_notes": {
+            "1": "Swedish Championship Sprint & Swedish Cup #9",
+            "2": "Swedish Championship Long distance & Swedish Cup #10 (Final)"
+          }
+        }
+      }
+    }
+  ]
+}

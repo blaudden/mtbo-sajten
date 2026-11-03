@@ -23,6 +23,7 @@ export default defineMarkdocConfig({
       render: component('./src/components/widgets/Carousel.astro'),
       attributes: {
         images: { type: Array },
+        captions: { type: Array },
         id: { type: 'String' },
       },
     },
@@ -74,6 +75,14 @@ export default defineMarkdocConfig({
         float: { type: 'String' },
         width: { type: 'String' },
         cropPosition: { type: 'String' },
+      },
+    },
+    EventCard: {
+      render: component('./src/components/markdoc/EventCardTag.astro'),
+      attributes: {
+        id: { type: 'String' },
+        title: { type: 'String' },
+        lang: { type: 'String' },
       },
     },
   },

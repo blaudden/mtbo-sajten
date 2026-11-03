@@ -1,9 +1,9 @@
 ---
 /**
  * Full event detail layout for the event detail page.
- * Orchestrates atomic components: Header, InfoGrid, RaceTable, Documents, Links.
+ * Orchestrates atomic components: Header, InfoGrid, Editorial Augmentation, RaceTable, Documents, Links.
  */
-import type { ScraperEvent } from '~/types/events';
+import type { EventAugmentation, ScraperEvent } from '~/types/events';
 import {
   formatEventDateRange,
   resolveCountryCode,
@@ -24,9 +24,11 @@ import EventMap from './EventMap.astro';
 
 interface Props {
   event: ScraperEvent;
+  augmentation?: EventAugmentation;
+  parentGroup?: EventAugmentation;
 }
 
-const { event } = Astro.props;
+const { event, augmentation, parentGroup } = Astro.props;
 const countryCode = resolveCountryCode(event);
 const organiserName = getOrganiserName(event);
 const isMultiDaySpan = event.start_time !== event.end_time;
@@ -66,10 +68,42 @@ const externalLinkLabel = isEventor
 const isSvenskaCupen =
   event.name.toLowerCase().includes('svenska cupen') ||
   event.races.some((r) => r.name?.toLowerCase().includes('svenska cupen'));
+
+const svAug = augmentation?.content?.sv;
+const enAug = augmentation?.content?.en;
 ---
 
 <article class="event-detail max-w-4xl mx-auto">
-  <EventHeader event={event} countryCode={countryCode} statusLabel={statusLabel} statusColor={statusColor} />
+  {
+    parentGroup && (
+      <div class="mb-6 p-4 rounded-2xl bg-primary/5 dark:bg-primary/10 border border-primary/20 dark:border-primary/30 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-sm">
+        <div class="flex items-start sm:items-center gap-3">
+          <div class="rounded-xl bg-primary/15 p-2 text-primary shrink-0">
+            <Icon name="tabler:calendar-event" class="w-5 h-5" />
+          </div>
+          <div class="text-sm">
+            <span class="text-muted dark:text-slate-300">Denna tävling ingår i tävlingshelgen </span>
+            <strong class="font-semibold text-default">{parentGroup.content.sv.title}</strong>
+          </div>
+        </div>
+        <a
+          href={`/events/${parentGroup.slug}`}
+          class="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline whitespace-nowrap shrink-0"
+        >
+          <span>Visa hela tävlingshelgen</span>
+          <Icon name="tabler:arrow-right" class="w-4 h-4" />
+        </a>
+      </div>
+    )
+  }
+
+  <EventHeader
+    event={event}
+    countryCode={countryCode}
+    statusLabel={statusLabel}
+    statusColor={statusColor}
+    augmentation={augmentation}
+  />
 
   <div class="mb-6">
     <EventInfoGrid
@@ -84,10 +118,90 @@ const isSvenskaCupen =
   </div>
 
   <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mt-6">
-    {/* Left Column: Information, Classes, Map, Races, Documents, Links */}
+    {/* Left Column: Augmentation / Information, RaceTable, Map, Classes, Documents, Links */}
     <div class="lg:col-span-8 space-y-8">
       {
-        event.information && (
+        svAug && (
+          <div class="space-y-6">
+            {/* Swedish augmentation content */}
+            <div data-event-lang-section="sv" class="space-y-6">
+              <div class="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm space-y-4">
+                {svAug.paragraphs.map((p) => (
+                  <p class="text-base text-default leading-relaxed">{p}</p>
+                ))}
+              </div>
+
+              {svAug.registration_info && (
+                <div class="p-6 bg-blue-50/60 dark:bg-blue-950/20 rounded-2xl border border-blue-200/80 dark:border-blue-800/50 shadow-sm space-y-3">
+                  {svAug.registration_info.title && (
+                    <h2 class="text-lg font-bold text-default font-heading flex items-center gap-2">
+                      <Icon name="tabler:user-check" class="w-5 h-5 text-primary shrink-0" />
+                      <span>{svAug.registration_info.title}</span>
+                    </h2>
+                  )}
+                  {svAug.registration_info.paragraphs.map((p) => (
+                    <p class="text-sm md:text-base text-default/90 leading-relaxed">{p}</p>
+                  ))}
+                  {svAug.registration_info.cta_url && svAug.registration_info.cta_label && (
+                    <div class="pt-2">
+                      <a
+                        href={svAug.registration_info.cta_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-primary py-2 px-4 text-sm font-medium inline-flex items-center gap-2 rounded-xl"
+                      >
+                        <Icon name="tabler:external-link" class="w-4 h-4" />
+                        <span>{svAug.registration_info.cta_label}</span>
+                      </a>
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+
+            {/* English augmentation content */}
+            {enAug && (
+              <div data-event-lang-section="en" class="hidden space-y-6">
+                <div class="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm space-y-4">
+                  {enAug.paragraphs.map((p) => (
+                    <p class="text-base text-default leading-relaxed">{p}</p>
+                  ))}
+                </div>
+
+                {enAug.registration_info && (
+                  <div class="p-6 bg-blue-50/60 dark:bg-blue-950/20 rounded-2xl border border-blue-200/80 dark:border-blue-800/50 shadow-sm space-y-3">
+                    {enAug.registration_info.title && (
+                      <h2 class="text-lg font-bold text-default font-heading flex items-center gap-2">
+                        <Icon name="tabler:user-check" class="w-5 h-5 text-primary shrink-0" />
+                        <span>{enAug.registration_info.title}</span>
+                      </h2>
+                    )}
+                    {enAug.registration_info.paragraphs.map((p) => (
+                      <p class="text-sm md:text-base text-default/90 leading-relaxed">{p}</p>
+                    ))}
+                    {enAug.registration_info.cta_url && enAug.registration_info.cta_label && (
+                      <div class="pt-2">
+                        <a
+                          href={enAug.registration_info.cta_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="btn btn-primary py-2 px-4 text-sm font-medium inline-flex items-center gap-2 rounded-xl"
+                        >
+                          <Icon name="tabler:external-link" class="w-4 h-4" />
+                          <span>{enAug.registration_info.cta_label}</span>
+                        </a>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+        )
+      }
+
+      {
+        !svAug && event.information && (
           <div class="p-5 bg-gray-50 dark:bg-slate-800/50 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
             <p class="text-base text-default leading-relaxed whitespace-pre-line">
               {event.information.replace(/\\n/g, '\n')}
@@ -96,11 +210,11 @@ const isSvenskaCupen =
         )
       }
 
-      <EventClasses classes={event.classes} />
+      {event.races.length > 1 && <EventRaceTable event={event} />}
 
       <EventMap event={event} />
 
-      {event.races.length > 1 && <EventRaceTable event={event} />}
+      <EventClasses classes={event.classes} />
 
       <EventDocuments event={event} />
 
@@ -110,6 +224,41 @@ const isSvenskaCupen =
     {/* Right Column (Sidebar): Sticky CTA, Svenska Cupen Card & Deadlines */}
     <div class="lg:col-span-4 lg:sticky lg:top-24 space-y-6">
       {
+        augmentation?.photo_album_url && (
+          <div class="p-5 bg-emerald-50/60 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-800/40 rounded-2xl space-y-3 shadow-sm">
+            <div class="flex items-start gap-3">
+              <div class="rounded-xl bg-emerald-500/20 p-2.5 text-emerald-600 dark:text-emerald-400 shrink-0">
+                <Icon name="tabler:photo" class="w-6 h-6" />
+              </div>
+              <div class="space-y-1">
+                <h3 class="font-bold text-base text-default" data-i18n-sv="Fotoalbum" data-i18n-en="Photo album">
+                  Fotoalbum
+                </h3>
+                <p
+                  class="text-sm text-muted"
+                  data-i18n-sv="Se bilder från tävlingshelgen."
+                  data-i18n-en="View photos from the competition weekend."
+                >
+                  Se bilder från tävlingshelgen.
+                </p>
+              </div>
+            </div>
+            <a
+              href={augmentation.photo_album_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full btn btn-secondary py-2 px-4 text-sm font-medium inline-flex items-center justify-center gap-2 rounded-xl"
+            >
+              <Icon name="tabler:external-link" class="w-4 h-4" />
+              <span data-i18n-sv="Öppna fotoalbum" data-i18n-en="Open photo album">
+                Öppna fotoalbum
+              </span>
+            </a>
+          </div>
+        )
+      }
+
+      {
         isSvenskaCupen && (
           <div class="p-5 bg-gradient-to-br from-amber-500/10 via-primary-500/10 to-transparent border border-amber-500/30 dark:border-amber-500/40 rounded-2xl space-y-4 shadow-sm">
             <div class="flex items-start gap-3">
@@ -117,8 +266,18 @@ const isSvenskaCupen =
                 <Icon name="tabler:trophy" class="w-6 h-6" />
               </div>
               <div class="space-y-1">
-                <h3 class="font-bold text-base text-default">Svenska Cupen MTBO</h3>
-                <p class="text-sm text-muted">
+                <h3
+                  class="font-bold text-base text-default"
+                  data-i18n-sv="Svenska Cupen MTBO"
+                  data-i18n-en="Swedish Cup MTBO"
+                >
+                  Svenska Cupen MTBO
+                </h3>
+                <p
+                  class="text-sm text-muted"
+                  data-i18n-sv="Denna tävling ingår i Svenska Cupen – Sveriges nationella tävlingsserie i MTBO."
+                  data-i18n-en="This competition is part of the Swedish Cup – Sweden's national MTBO series."
+                >
                   Denna tävling ingår i Svenska Cupen – Sveriges nationella tävlingsserie i MTBO.
                 </p>
               </div>
@@ -130,7 +289,9 @@ const isSvenskaCupen =
                 class="w-full btn btn-primary py-2.5 px-4 text-sm font-medium inline-flex items-center justify-center gap-2 rounded-xl transition-all shadow-sm shadow-primary/10 hover:shadow-md hover:shadow-primary/20"
               >
                 <Icon name="tabler:calendar" class="w-4 h-4" />
-                Se programmet
+                <span data-i18n-sv="Se programmet" data-i18n-en="View programme">
+                  Se programmet
+                </span>
               </a>
 
               <div class="grid grid-cols-2 gap-2 pt-1">
@@ -141,7 +302,9 @@ const isSvenskaCupen =
                   class="py-2 px-2.5 text-xs font-medium inline-flex items-center justify-center gap-1 rounded-xl border border-gray-200 dark:border-slate-800 text-gray-700 dark:text-slate-300 hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors text-center"
                 >
                   <Icon name="tabler:trophy" class="w-3.5 h-3.5 text-gray-500 dark:text-slate-400 shrink-0" />
-                  <span>Cupställning</span>
+                  <span data-i18n-sv="Cupställning" data-i18n-en="Standings">
+                    Cupställning
+                  </span>
                 </a>
 
                 <a
@@ -149,7 +312,9 @@ const isSvenskaCupen =
                   class="py-2 px-2.5 text-xs font-medium inline-flex items-center justify-center gap-1 rounded-xl border border-gray-200 dark:border-slate-800 text-gray-700 dark:text-slate-300 hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors text-center"
                 >
                   <Icon name="tabler:list-numbers" class="w-3.5 h-3.5 text-gray-500 dark:text-slate-400 shrink-0" />
-                  <span>Seedning</span>
+                  <span data-i18n-sv="Seedning" data-i18n-en="Seeding">
+                    Seedning
+                  </span>
                 </a>
               </div>
             </div>
@@ -161,8 +326,14 @@ const isSvenskaCupen =
         externalUrl && (
           <div class="p-5 bg-blue-50/50 dark:bg-blue-950/10 border border-blue-100 dark:border-blue-900/30 rounded-2xl space-y-4 shadow-sm">
             <div class="space-y-1">
-              <h3 class="font-bold text-base text-default">Sugen på MTBO?</h3>
-              <p class="text-sm text-muted">
+              <h3 class="font-bold text-base text-default" data-i18n-sv="Sugen på MTBO?" data-i18n-en="Ready for MTBO?">
+                Sugen på MTBO?
+              </h3>
+              <p
+                class="text-sm text-muted"
+                data-i18n-sv={`Upplev orientering i full fart, anmäl dig till tävlingen på ${isEventor ? 'Eventor' : 'tävlingens webbplats'}.`}
+                data-i18n-en={`Register and find official competition details on ${isEventor ? 'Eventor' : 'the event website'}.`}
+              >
                 Upplev orientering i full fart, anmäl dig till tävlingen på{' '}
                 {isEventor ? 'Eventor' : 'tävlingens webbplats'}.
               </p>
@@ -175,7 +346,9 @@ const isSvenskaCupen =
               class="w-full btn btn-primary py-2.5 px-5 text-sm font-medium inline-flex items-center justify-center gap-2 rounded-xl transition-all shadow-sm shadow-primary/10 hover:shadow-md hover:shadow-primary/20"
             >
               <Icon name="tabler:external-link" class="w-4 h-4" />
-              Gå till anmälan
+              <span data-i18n-sv="Gå till anmälan" data-i18n-en="Go to registration">
+                Gå till anmälan
+              </span>
             </a>
           </div>
         )
@@ -204,3 +377,73 @@ const isSvenskaCupen =
     )
   }
 </article>
+
+<script>
+  function initEventLanguageSwitcher() {
+    const buttons = document.querySelectorAll<HTMLButtonElement>('[data-event-lang-btn]');
+    if (buttons.length === 0) return;
+
+    function setLanguage(lang: 'sv' | 'en', updateUrl = true) {
+      // Toggle sections
+      document.querySelectorAll<HTMLElement>('[data-event-lang-section]').forEach((el) => {
+        const elLang = el.getAttribute('data-event-lang-section');
+        if (elLang === lang) {
+          el.classList.remove('hidden');
+        } else {
+          el.classList.add('hidden');
+        }
+      });
+
+      // Toggle inline labels
+      document.querySelectorAll<HTMLElement>('[data-i18n-sv]').forEach((el) => {
+        const text = el.getAttribute(lang === 'en' ? 'data-i18n-en' : 'data-i18n-sv');
+        if (text) {
+          const spanTarget = el.querySelector('span');
+          if (spanTarget && el.children.length > 1) {
+            spanTarget.textContent = text;
+          } else {
+            el.textContent = text;
+          }
+        }
+      });
+
+      // Update button active states
+      buttons.forEach((btn) => {
+        const isCurrent = btn.getAttribute('data-event-lang-btn') === lang;
+        btn.setAttribute('aria-pressed', isCurrent ? 'true' : 'false');
+        if (isCurrent) {
+          btn.classList.add('bg-white', 'dark:bg-slate-900', 'text-default', 'shadow-sm');
+          btn.classList.remove('text-muted');
+        } else {
+          btn.classList.remove('bg-white', 'dark:bg-slate-900', 'text-default', 'shadow-sm');
+          btn.classList.add('text-muted');
+        }
+      });
+
+      if (updateUrl && typeof window !== 'undefined') {
+        const url = new URL(window.location.href);
+        if (lang === 'en') {
+          url.searchParams.set('lang', 'en');
+        } else {
+          url.searchParams.delete('lang');
+        }
+        window.history.replaceState({}, '', url.toString());
+      }
+    }
+
+    buttons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const lang = btn.getAttribute('data-event-lang-btn') === 'en' ? 'en' : 'sv';
+        setLanguage(lang, true);
+      });
+    });
+
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('lang') === 'en') {
+      setLanguage('en', false);
+    }
+  }
+
+  initEventLanguageSwitcher();
+  document.addEventListener('astro:after-swap', initEventLanguageSwitcher);
+</script>

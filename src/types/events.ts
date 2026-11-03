@@ -54,6 +54,13 @@ export interface ScraperRace {
   entry_counts?: ScraperCounts | null;
   start_counts?: ScraperCounts | null;
   result_counts?: ScraperCounts | null;
+  /** Optional direct external URL (e.g. Eventor link) for this specific race in a grouped arrangement */
+  external_url?: string | null;
+  /** Optional bilingual location/arena note for this specific race/stage */
+  location_note?: {
+    sv?: string;
+    en?: string;
+  };
 }
 
 export interface ScraperEntryDeadline {
@@ -144,3 +151,47 @@ export interface RaceWithEvent {
 
 /** Page type for the catch-all route */
 export type EventPageType = 'landing' | 'year' | 'detail';
+
+/** Bilingual editorial text and notes for an event or grouped weekend */
+export interface EventAugmentationLocaleContent {
+  title: string;
+  subtitle?: string;
+  /** Paragraphs of editorial description */
+  paragraphs: string[];
+  /** Optional registration & practical entry information callout */
+  registration_info?: {
+    title?: string;
+    paragraphs: string[];
+    cta_label?: string;
+    cta_url?: string;
+  };
+  /** Optional per-race location or stage notes keyed by race_number (1-indexed) or event_id */
+  race_notes?: Record<string, string>;
+}
+
+/** Augmentation or multi-event weekend group definition */
+export interface EventAugmentation {
+  /** Primary canonical slug under /events/[slug] (e.g. "mtbo-camp-skaane-2027" or "swe-59350") */
+  slug: string;
+  /** Optional additional alias slugs that also resolve to this augmented event (e.g. ["oringen-stockholm-2027"]) */
+  aliases?: string[];
+  /** Upstream scraper event IDs belonging to this weekend/event */
+  event_ids: string[];
+  start_date: string;
+  end_date: string;
+  organisers?: string[];
+  region?: string;
+  website?: string;
+  /** Optional future photo album URL */
+  photo_album_url?: string;
+  /** Optional custom links (e.g. previous Livelox maps, extra websites) */
+  custom_links?: Array<{
+    title: string;
+    url: string;
+    type?: string;
+  }>;
+  content: {
+    sv: EventAugmentationLocaleContent;
+    en?: EventAugmentationLocaleContent;
+  };
+}

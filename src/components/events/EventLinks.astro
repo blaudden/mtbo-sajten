@@ -62,7 +62,9 @@ for (let i = 0; i < event.races.length; i++) {
 {
   relatedUrls.length > 0 && (
     <div class="mb-8">
-      <h2 class="text-xl font-semibold mb-4 dark:text-white">Länkar</h2>
+      <h2 class="text-xl font-semibold mb-4 dark:text-white" data-i18n-sv="Länkar" data-i18n-en="Links">
+        Länkar
+      </h2>
       <ul class="space-y-2">
         {relatedUrls.map((url) => {
           const iconInfo = getSmartIconInfo(url.url, url.title, url.type);

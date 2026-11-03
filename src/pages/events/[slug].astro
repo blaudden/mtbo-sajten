@@ -7,24 +7,27 @@ import EventDetail from '~/components/events/EventDetail.astro';
 import { Icon } from 'astro-icon/components';
 
 import type { MetaData } from '~/types';
-import {
-  loadAllEvents,
-  getEventBySlug,
-  resolveCountryCode,
-  formatEventDateRange,
-  countryCodeToName,
-} from '~/utils/events';
+import { loadAllEvents, resolveCountryCode, formatEventDateRange, countryCodeToName } from '~/utils/events';
+import { getAllAugmentedAndEventSlugs, resolveEventPage } from '~/utils/eventAugmentations';
 import { generateEventJsonLd } from '~/utils/jsonLd';
 
 export async function getStaticPaths() {
   const allEvents = await loadAllEvents();
-  return allEvents.map((event) => ({
-    params: { slug: event.slug },
+  const augSlugs = await getAllAugmentedAndEventSlugs();
+  const slugSet = new Set<string>(allEvents.map((event) => event.slug));
+  for (const s of augSlugs) {
+    slugSet.add(s);
+  }
+  return Array.from(slugSet).map((slug) => ({
+    params: { slug },
   }));
 }
 
 const { slug } = Astro.params;
-const event = await getEventBySlug(slug);
+const resolved = await resolveEventPage(slug);
+const event = resolved?.event;
+const augmentation = resolved?.augmentation;
+const parentGroup = resolved?.parentGroup;
 
 let metadata: MetaData = {};
 let jsonLd: Record<string, unknown> | null = null;
@@ -64,7 +67,7 @@ if (event) {
 
     {
       event ? (
-        <EventDetail event={event} />
+        <EventDetail event={event} augmentation={augmentation} parentGroup={parentGroup} />
       ) : (
         <div class="text-center py-12">
           <Icon name="tabler:alert-circle" class="w-12 h-12 mx-auto mb-3 text-gray-300" />

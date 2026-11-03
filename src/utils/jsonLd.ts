@@ -112,6 +112,9 @@ function getEndOfTheDay(dateStr: string): string {
  * Falls back to parent external URL if not available.
  */
 function resolveRaceExternalUrl(race: ScraperRace, parentExternalUrl: string | null): string | null {
+  if (race.external_url) {
+    return race.external_url;
+  }
   const pathUrl = race.urls?.find((u) => u.type === 'Path');
   if (pathUrl && parentExternalUrl) {
     try {
@@ -303,7 +306,7 @@ export function generateEventJsonLd(event: ScraperEvent): Record<string, unknown
 
       const subLocation: Record<string, unknown> = {
         '@type': 'Place',
-        name: locationName,
+        name: race.location_note?.sv || locationName,
         address: address,
       };
       if (race.position) {
