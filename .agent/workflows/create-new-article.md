@@ -60,6 +60,11 @@ metadata: {}
 ---
 ```
 
+### Tag Guidelines:
+
+- **Do not invent new tags!** Use only the fixed, established subset of tags (e.g. `svenska-cupen`, `sm-2026`, `svenska-cupen-2026`, `wmtboc26`, `wre`, `regler`, `eventor`, `bulletin`, `training`), or leave empty (`tags: []`).
+- For general Swedish Cup and championship articles, use `svenska-cupen`. Do not invent one-off tags like `svenska-cupen-2027` or `sm-2027`.
+
 ## 5. Hero Image Workflow
 
 All hero images must use a **16:9** aspect ratio (**1280x720 pixels**) and stay under **800 KB**.
