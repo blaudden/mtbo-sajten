@@ -35,6 +35,7 @@
     "submit:indexnow": "node scripts/submit-indexnow.js",
     "import:events": "node scripts/import-events.mjs",
     "generate:og": "node scripts/generate-og-image.mjs",
+    "stamp:hero": "node scripts/stamp-hero-logo.mjs",
     "fetch-youtube": "tsx scripts/fetch-youtube.ts",
     "prepare": "husky"
   },
