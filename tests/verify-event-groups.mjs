@@ -1,13 +1,17 @@
 import { existsSync, readFileSync, readdirSync } from 'fs';
 import { join } from 'path';
+import { instantiateAugmentedEvent, synthesizeCombinedEvent } from '../src/utils/augmentedEventModel.ts';
 
 const AUGMENTATIONS_PATH = './src/data/events/augmentations.json';
 const EVENTS_DIR = './src/data/events';
 const OG_DIR = './public/og-images/events';
 const DIST_EVENTS_DIR = './dist/events';
 
-function loadAllUpstreamEventIds() {
-  const ids = new Set();
+/**
+ * Load all upstream ScraperEvent objects indexed by event.id (e.g. "SWE_60899", "IOF_8277").
+ */
+function loadAllUpstreamEventsById() {
+  const map = new Map();
   const entries = readdirSync(EVENTS_DIR, { withFileTypes: true });
   for (const entry of entries) {
     if (entry.isDirectory() && /^\d{4}$/.test(entry.name)) {
@@ -15,12 +19,18 @@ function loadAllUpstreamEventIds() {
       if (existsSync(file)) {
         const parsed = JSON.parse(readFileSync(file, 'utf-8'));
         for (const ev of parsed.events || []) {
-          ids.add(ev.id);
+          map.set(ev.id, {
+            ...ev,
+            year: parseInt(ev.start_time.substring(0, 4), 10),
+            slug: ev.id.toLowerCase().replace(/_/g, '-'),
+            countryCode: ev.id.startsWith('SWE_') ? 'SWE' : 'INT',
+            isFeatured: true,
+          });
         }
       }
     }
   }
-  return ids;
+  return map;
 }
 
 function verifyEventGroups() {
@@ -36,7 +46,7 @@ function verifyEventGroups() {
     process.exit(1);
   }
 
-  const upstreamIds = loadAllUpstreamEventIds();
+  const upstreamEvents = loadAllUpstreamEventsById();
   const hasDist = existsSync(DIST_EVENTS_DIR);
   let failed = false;
 
@@ -58,16 +68,20 @@ function verifyEventGroups() {
       failed = true;
     }
 
-    // Verify all referenced event_ids exist in upstream scraper partitions
+    // 1. Verify all referenced event_ids exist in upstream scraper partitions
     const ownedIds = new Set(aug.event_ids);
+    const rawChildEvents = [];
     for (const id of aug.event_ids) {
-      if (!upstreamIds.has(id)) {
+      const ev = upstreamEvents.get(id);
+      if (!ev) {
         console.error(`❌ [FAIL] Augmentation "${aug.slug}" references unknown event_id "${id}".`);
         failed = true;
+      } else {
+        rawChildEvents.push(ev);
       }
     }
 
-    // Verify all race_notes keys point to an owned event_id or event_id:race_number
+    // 2. Verify all race_notes keys point to an owned event_id or event_id:race_number
     for (const lang of ['sv', 'en']) {
       const notes = aug.content?.[lang]?.race_notes;
       if (notes) {
@@ -83,7 +97,66 @@ function verifyEventGroups() {
       }
     }
 
-    // Verify OG images exist for canonical slug and all aliases
+    // 3. Instantiate AugmentedEvent and verify the object graph:
+    //    AugmentedEvent -> owns ScraperEvent[] -> each ScraperEvent owns ScraperRace[] with resolved race_notes
+    if (rawChildEvents.length === aug.event_ids.length) {
+      const augmentedInstance = instantiateAugmentedEvent(
+        aug,
+        rawChildEvents,
+        (ev) => `https://eventor.orientering.se/Events/Show/${ev.id.replace('SWE_', '')}`
+      );
+
+      if (!Array.isArray(augmentedInstance.events) || augmentedInstance.events.length !== aug.event_ids.length) {
+        console.error(
+          `❌ [FAIL] Instantiated AugmentedEvent "${aug.slug}" expected ${aug.event_ids.length} owned ScraperEvents, got ${augmentedInstance.events?.length}.`
+        );
+        failed = true;
+      }
+
+      for (const ownedEvent of augmentedInstance.events) {
+        if (!Array.isArray(ownedEvent.races) || ownedEvent.races.length === 0) {
+          console.error(`❌ [FAIL] Owned ScraperEvent "${ownedEvent.id}" in "${aug.slug}" has no races.`);
+          failed = true;
+        }
+        for (const race of ownedEvent.races) {
+          const expectedSv =
+            aug.content.sv.race_notes?.[`${ownedEvent.id}:${race.race_number}`] ??
+            aug.content.sv.race_notes?.[ownedEvent.id];
+          const expectedEn =
+            aug.content.en?.race_notes?.[`${ownedEvent.id}:${race.race_number}`] ??
+            aug.content.en?.race_notes?.[ownedEvent.id];
+
+          if (expectedSv && race.location_note?.sv !== expectedSv) {
+            console.error(
+              `❌ [FAIL] Race ${ownedEvent.id}:${race.race_number} in "${aug.slug}" expected sv note "${expectedSv}", got "${race.location_note?.sv}".`
+            );
+            failed = true;
+          }
+          if (expectedEn && race.location_note?.en !== expectedEn) {
+            console.error(
+              `❌ [FAIL] Race ${ownedEvent.id}:${race.race_number} in "${aug.slug}" expected en note "${expectedEn}", got "${race.location_note?.en}".`
+            );
+            failed = true;
+          }
+          if (!race.external_url) {
+            console.error(`❌ [FAIL] Race ${ownedEvent.id}:${race.race_number} is missing its external_url.`);
+            failed = true;
+          }
+        }
+      }
+
+      // Verify synthesized combined view preserves all races across owned ScraperEvents
+      const expectedTotalRaces = rawChildEvents.reduce((sum, e) => sum + e.races.length, 0);
+      const synthesized = synthesizeCombinedEvent(augmentedInstance);
+      if (!synthesized || synthesized.races.length !== expectedTotalRaces) {
+        console.error(
+          `❌ [FAIL] Synthesized view for "${aug.slug}" expected ${expectedTotalRaces} total races, got ${synthesized?.races.length}.`
+        );
+        failed = true;
+      }
+    }
+
+    // 4. Verify OG images and built HTML pages exist for canonical slug and all aliases
     const allSlugs = [aug.slug, ...(aug.aliases || [])];
     for (const slug of allSlugs) {
       const ogFile = join(OG_DIR, `${slug}.jpg`);
@@ -126,7 +199,7 @@ function verifyEventGroups() {
       }
     }
 
-    // For multi-event groups, verify individual child event routes still exist and link to parent group
+    // 5. For multi-event groups, verify individual child event routes still exist and link to parent group
     if (hasDist && aug.event_ids.length > 1) {
       for (const id of aug.event_ids) {
         const childSlug = id.toLowerCase().replace(/_/g, '-');
@@ -149,7 +222,72 @@ function verifyEventGroups() {
     }
   }
 
-  // Verify lead vs excerpt separation on new articles when dist exists
+  // 6. Verify multi-stage World Championships (IOF_8277: 4 races — Middle, Long, Sprint, Relay)
+  //    locks down the AugmentedEvent -> ScraperEvent -> ScraperRace hierarchy on IOF multi-stage events.
+  const wmtboc2026 = upstreamEvents.get('IOF_8277');
+  if (!wmtboc2026 || wmtboc2026.races.length !== 4) {
+    console.error(`❌ [FAIL] Expected upstream World Championships event IOF_8277 with 4 races.`);
+    failed = true;
+  } else {
+    const wmtbocAug = instantiateAugmentedEvent(
+      {
+        slug: 'wmtboc-2026-mora',
+        event_ids: ['IOF_8277'],
+        start_date: wmtboc2026.start_time,
+        end_date: wmtboc2026.end_time,
+        content: {
+          sv: {
+            title: 'VM i MTBO 2026 i Mora',
+            paragraphs: ['Fyra VM-distanser i Dalarna.'],
+            race_notes: {
+              'IOF_8277:1': 'Medeldistans, Mora',
+              'IOF_8277:2': 'Långdistans, Mora',
+              'IOF_8277:3': 'Sprint, Mora',
+              'IOF_8277:4': 'Stafett, Mora',
+            },
+          },
+          en: {
+            title: 'WMTBOC 2026 in Mora',
+            paragraphs: ['Four World Championship races in Dalarna.'],
+            race_notes: {
+              'IOF_8277:1': 'Middle distance, Mora',
+              'IOF_8277:2': 'Long distance, Mora',
+              'IOF_8277:3': 'Sprint, Mora',
+              'IOF_8277:4': 'Relay, Mora',
+            },
+          },
+        },
+      },
+      [wmtboc2026],
+      () => 'https://eventor.orienteering.org/Events/Show/8277'
+    );
+
+    const ownedWmtboc = wmtbocAug.events[0];
+    const expectedDisciplines = ['Middle', 'Long', 'Sprint', 'Relay'];
+    for (let i = 0; i < 4; i++) {
+      const race = ownedWmtboc.races[i];
+      const stageNum = i + 1;
+      if (race.discipline !== expectedDisciplines[i]) {
+        console.error(
+          `❌ [FAIL] WMTBOC IOF_8277 race ${stageNum} expected discipline "${expectedDisciplines[i]}", got "${race.discipline}".`
+        );
+        failed = true;
+      }
+      if (race.location_note?.sv !== wmtbocAug.content.sv.race_notes[`IOF_8277:${stageNum}`]) {
+        console.error(`❌ [FAIL] WMTBOC IOF_8277 race ${stageNum} failed to attach sv location_note.`);
+        failed = true;
+      }
+      if (race.location_note?.en !== wmtbocAug.content.en.race_notes[`IOF_8277:${stageNum}`]) {
+        console.error(`❌ [FAIL] WMTBOC IOF_8277 race ${stageNum} failed to attach en location_note.`);
+        failed = true;
+      }
+    }
+    console.log(
+      `✓ Verified AugmentedEvent -> ScraperEvent -> ScraperRace hierarchy across ${augmentations.length} augmentations + multi-stage WMTBOC (IOF_8277).`
+    );
+  }
+
+  // 7. Verify lead vs excerpt separation on new articles when dist exists
   if (hasDist && existsSync('./src/content/posts/mtbo-wre-i-sverige/index.mdoc')) {
     const wreHtmlPath = './dist/mtbo-wre-i-sverige/index.html';
     if (!existsSync(wreHtmlPath)) {
