@@ -1,0 +1,181 @@
+---
+/**
+ * Markdoc component for embedding events directly into articles.
+ */
+import type { EventGroup, ScraperEvent } from '~/types/events';
+import {
+  getEventBySlug,
+  formatEventDateRange,
+  formatRaceDate,
+  resolveCountryCode,
+  getOrganiserName,
+} from '~/utils/events';
+import { getEventGroupBySlug, getEventsForGroup } from '~/utils/eventGroups';
+import DisciplineBadge from '~/components/events/DisciplineBadge.astro';
+import CountryFlag from '~/components/events/CountryFlag.astro';
+import { Icon } from 'astro-icon/components';
+
+export interface Props {
+  slug?: string;
+  id?: string;
+  ids?: string[];
+  title?: string;
+}
+
+const { slug, id, ids, title } = Astro.props;
+
+let group: EventGroup | undefined = undefined;
+let groupEvents: ScraperEvent[] = [];
+let singleEvent: ScraperEvent | undefined = undefined;
+let multipleEvents: ScraperEvent[] = [];
+
+if (slug) {
+  // Check if slug matches an event group
+  group = getEventGroupBySlug(slug);
+  if (group) {
+    groupEvents = await getEventsForGroup(group);
+  } else {
+    // Check if slug matches a single event
+    singleEvent = await getEventBySlug(slug);
+  }
+} else if (id) {
+  const eventSlug = id.toLowerCase().replace(/_/g, '-');
+  singleEvent = await getEventBySlug(eventSlug);
+} else if (ids && ids.length > 0) {
+  for (const item of ids) {
+    const itemSlug = item.toLowerCase().replace(/_/g, '-');
+    const ev = await getEventBySlug(itemSlug);
+    if (ev) multipleEvents.push(ev);
+  }
+}
+---
+
+{
+  group ? (
+    <div class="my-6 not-prose rounded-xl border border-blue-200/80 dark:border-blue-900/50 bg-gradient-to-br from-blue-50/70 via-white to-indigo-50/50 dark:from-slate-800 dark:via-slate-800 dark:to-slate-900/80 p-5 shadow-sm hover:shadow-md transition-shadow">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+        <div class="flex flex-wrap items-center gap-2">
+          {group.name.toLowerCase().includes('svenska cupen') && (
+            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300 border border-amber-300 dark:border-amber-700/50">
+              Svenska Cupen MTBO
+            </span>
+          )}
+        </div>
+        <span class="text-xs font-semibold text-muted dark:text-slate-400 flex items-center gap-1">
+          <Icon name="tabler:calendar" class="w-3.5 h-3.5 text-primary" />
+          {formatEventDateRange(group.start_date, group.end_date)}
+        </span>
+      </div>
+
+      <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1 font-heading">
+        <a href={`/events/${group.slug}`} class="hover:text-primary transition-colors">
+          {title || group.name}
+        </a>
+      </h3>
+
+      {group.subtitle && <p class="text-sm text-gray-600 dark:text-gray-300 mb-3">{group.subtitle}</p>}
+
+      {/* Sub-competitions list */}
+      {groupEvents.length > 0 && (
+        <div class="mt-3 mb-4 space-y-2 border-t border-gray-100 dark:border-gray-700/60 pt-3">
+          {groupEvents.map((ev) => {
+            const raceDate =
+              ev.races.length > 0
+                ? formatRaceDate(ev.races[0].datetimez, { includeYear: false, includeTime: false })
+                : formatEventDateRange(ev.start_time, ev.end_time);
+            const disciplines = [...new Set(ev.races.map((r) => r.discipline))];
+
+            return (
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-3 py-1.5 px-3 rounded-lg bg-white/80 dark:bg-slate-700/50 border border-gray-100 dark:border-slate-600/50 text-xs">
+                <div class="flex items-center gap-2">
+                  <span class="font-medium text-gray-500 dark:text-gray-400 w-16">{raceDate}</span>
+                  <a
+                    href={`/events/${group?.slug ?? ev.slug}`}
+                    class="font-semibold text-gray-900 dark:text-white hover:text-primary"
+                  >
+                    {ev.name}
+                  </a>
+                </div>
+                <div class="flex items-center gap-1.5 shrink-0">
+                  {disciplines.map((d) => (
+                    <DisciplineBadge discipline={d} />
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
+
+      <div class="flex flex-wrap items-center justify-between gap-3 pt-2 text-xs">
+        <div class="text-muted dark:text-slate-400">
+          {group.organisers && <span>Arrangör: {group.organisers.join(', ')}</span>}
+          {group.region && <span class="ml-2">• {group.region}</span>}
+        </div>
+        <a
+          href={`/events/${group.slug}`}
+          class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary text-white hover:bg-primary/90 font-medium transition-colors"
+        >
+          Visa tävlingar i kalendern →
+        </a>
+      </div>
+    </div>
+  ) : singleEvent ? (
+    <div class="my-6 not-prose rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 p-5 shadow-xs hover:border-primary/50 transition-colors">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+        <div class="flex items-center gap-2">
+          <CountryFlag countryCode={resolveCountryCode(singleEvent)} size="sm" />
+          <span class="text-xs text-muted dark:text-slate-400 font-medium">
+            {formatEventDateRange(singleEvent.start_time, singleEvent.end_time)}
+          </span>
+        </div>
+        <div class="flex items-center gap-1.5">
+          {[...new Set(singleEvent.races.map((r) => r.discipline))].map((d) => (
+            <DisciplineBadge discipline={d} />
+          ))}
+        </div>
+      </div>
+
+      <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-1 font-heading">
+        <a href={`/events/${singleEvent.slug}`} class="hover:text-primary transition-colors">
+          {title || singleEvent.name}
+        </a>
+      </h3>
+
+      <div class="flex flex-wrap items-center justify-between gap-3 pt-3 mt-3 border-t border-gray-100 dark:border-gray-700/60 text-xs">
+        <div class="text-muted dark:text-slate-400">
+          {getOrganiserName(singleEvent) && <span>Arrangör: {getOrganiserName(singleEvent)}</span>}
+        </div>
+        <a
+          href={`/events/${singleEvent.slug}`}
+          class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary text-white hover:bg-primary/90 font-medium transition-colors"
+        >
+          Visa i tävlingskalendern →
+        </a>
+      </div>
+    </div>
+  ) : multipleEvents.length > 0 ? (
+    <div class="my-6 not-prose space-y-3">
+      {multipleEvents.map((ev) => (
+        <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div>
+            <div class="text-xs text-muted dark:text-slate-400 mb-1">
+              {formatEventDateRange(ev.start_time, ev.end_time)}
+            </div>
+            <h4 class="font-bold text-gray-900 dark:text-white">
+              <a href={`/events/${ev.slug}`} class="hover:text-primary">
+                {ev.name}
+              </a>
+            </h4>
+          </div>
+          <a
+            href={`/events/${ev.slug}`}
+            class="inline-flex items-center gap-1 text-xs px-3 py-1.5 rounded-lg bg-primary text-white hover:bg-primary/90 shrink-0 self-start sm:self-auto font-medium"
+          >
+            Visa tävling →
+          </a>
+        </div>
+      ))}
+    </div>
+  ) : null
+}
