@@ -68,6 +68,12 @@
           "url": "Events/Show/8559",
           "title": null,
           "last_updated_at": "2026-02-07T19:49:12.021127+00:00"
+        },
+        {
+          "type": "Website",
+          "url": "https://mtbo-wcup.lv/",
+          "title": null,
+          "last_updated_at": "2026-11-04T05:32:10.807690+00:00"
         }
       ],
       "documents": [
@@ -76,6 +82,12 @@
           "title": "Embargo areas",
           "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8559/7dbc6d6d-8ee6-4011-a8e8-d72b01e87c82/Embargo areas.Pdf",
           "published_time": "2026-10-27"
+        },
+        {
+          "type": "Bulletin",
+          "title": "Bulletin 2",
+          "url": "https://mtbo-wcup.lv/sadala.php?s=bulletin",
+          "published_time": null
         }
       ],
       "information": null,
@@ -92,7 +104,34 @@
             "lat": 56.8463782183206,
             "lng": 26.2146425045767
           },
-          "areas": [],
+          "areas": [
+            {
+              "lat": 56.8463782183206,
+              "lng": 26.2146425045767,
+              "polygon": [
+                [
+                  56.65588398979264,
+                  25.702816901143752
+                ],
+                [
+                  56.65890327550443,
+                  25.733578632466607
+                ],
+                [
+                  56.63413800243373,
+                  25.73907179652911
+                ],
+                [
+                  56.63413800243373,
+                  25.714901866272207
+                ],
+                [
+                  56.65588398979264,
+                  25.702816901143752
+                ]
+              ]
+            }
+          ],
           "urls": [],
           "documents": [],
           "entry_counts": null,
@@ -122,7 +161,20 @@
           "country_code": "LVA"
         }
       ],
-      "officials": [],
+      "officials": [
+        {
+          "role": "Event directors",
+          "name": "Gunars Ikaunieks"
+        },
+        {
+          "role": "Event directors",
+          "name": "Ildze Straume"
+        },
+        {
+          "role": "Course controller",
+          "name": "Guntars Mankus"
+        }
+      ],
       "classes": [],
       "urls": [
         {
@@ -130,6 +182,12 @@
           "url": "Events/Show/8560",
           "title": null,
           "last_updated_at": "2026-02-07T19:49:12.021116+00:00"
+        },
+        {
+          "type": "Website",
+          "url": "https://mtbo-wcup.lv/",
+          "title": null,
+          "last_updated_at": "2026-11-04T05:32:10.807675+00:00"
         }
       ],
       "documents": [
@@ -138,6 +196,12 @@
           "title": "Embargo areas",
           "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8560/8e45743a-e0f0-43f3-befe-0739ba0dec3d/Embargo areas.Pdf",
           "published_time": "2026-10-27"
+        },
+        {
+          "type": "Bulletin",
+          "title": "Bulletin 2",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/8560/322a8a85-c51a-4d81-9ec3-b33b5ecf45cf/Bulletin 2.Pdf",
+          "published_time": "2026-11-02"
         }
       ],
       "information": null,
@@ -788,6 +852,530 @@
       "is_date_preliminary": false
     },
     {
+      "id": "IOF_9155",
+      "name": "Nationale Moyenne Distance",
+      "start_time": "2027-03-27",
+      "end_time": "2027-03-27",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "World Ranking Event"
+      ],
+      "tags": [],
+      "form": null,
+      "organisers": [
+        {
+          "name": "France",
+          "country_code": "FRA"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact phone number",
+          "name": "+33687322299"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:DBoGHUgbBgAMFREyDBsOQU4cDg=="
+        }
+      ],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/9155",
+          "title": null,
+          "last_updated_at": "2026-11-04T05:32:10.807743+00:00"
+        },
+        {
+          "type": "Website",
+          "url": "http://samois.coursedorientation.fr",
+          "title": null,
+          "last_updated_at": "2026-11-04T05:32:10.807743+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": null,
+      "punching_system": null,
+      "races": [
+        {
+          "race_number": 1,
+          "name": "Nationale Moyenne Distance",
+          "datetimez": "2027-03-27T00:00:00+01:00",
+          "discipline": "Other",
+          "night_or_day": null,
+          "position": null,
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": [],
+      "is_date_preliminary": false
+    },
+    {
+      "id": "IOF_9156",
+      "name": "Championnat de France Mass Start",
+      "start_time": "2027-03-29",
+      "end_time": "2027-03-29",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "World Ranking Event"
+      ],
+      "tags": [],
+      "form": null,
+      "organisers": [
+        {
+          "name": "France",
+          "country_code": "FRA"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact phone number",
+          "name": "+33687322299"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:DBoGHUgbBgAMFREyDBsOQU4cDg=="
+        }
+      ],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/9156",
+          "title": null,
+          "last_updated_at": "2026-11-04T05:32:10.807841+00:00"
+        },
+        {
+          "type": "Website",
+          "url": "http://samois.coursedorientation.fr",
+          "title": null,
+          "last_updated_at": "2026-11-04T05:32:10.807841+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": null,
+      "punching_system": null,
+      "races": [
+        {
+          "race_number": 1,
+          "name": "Championnat de France Mass Start",
+          "datetimez": "2027-03-29T00:00:00+02:00",
+          "discipline": "Other",
+          "night_or_day": null,
+          "position": null,
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": [],
+      "is_date_preliminary": false
+    },
+    {
+      "id": "IOF_9158",
+      "name": "Championnat de France Moyenne Distance",
+      "start_time": "2027-05-15",
+      "end_time": "2027-05-15",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "World Ranking Event"
+      ],
+      "tags": [],
+      "form": null,
+      "organisers": [
+        {
+          "name": "France",
+          "country_code": "FRA"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact phone number",
+          "name": "+33608856985"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:AQEBQU8WERAEBBEyChkDBkFdAB0M"
+        }
+      ],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/9158",
+          "title": null,
+          "last_updated_at": "2026-11-04T05:32:10.807788+00:00"
+        },
+        {
+          "type": "Website",
+          "url": "https://www.3j-vtto-aude-2027.fr/",
+          "title": null,
+          "last_updated_at": "2026-11-04T05:32:10.807788+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": null,
+      "punching_system": null,
+      "races": [
+        {
+          "race_number": 1,
+          "name": "Championnat de France Moyenne Distance",
+          "datetimez": "2027-05-15T00:00:00+02:00",
+          "discipline": "Other",
+          "night_or_day": null,
+          "position": null,
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": [],
+      "is_date_preliminary": false
+    },
+    {
+      "id": "IOF_9159",
+      "name": "Championnat de France Longue Distance",
+      "start_time": "2027-05-16",
+      "end_time": "2027-05-16",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "World Ranking Event"
+      ],
+      "tags": [],
+      "form": null,
+      "organisers": [
+        {
+          "name": "France",
+          "country_code": "FRA"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact phone number",
+          "name": "+33608856985"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:AQEBQU8WERAEBBEyChkDBkFdAB0M"
+        }
+      ],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/9159",
+          "title": null,
+          "last_updated_at": "2026-11-04T05:32:10.807733+00:00"
+        },
+        {
+          "type": "Website",
+          "url": "https://www.3j-vtto-aude-2027.fr/",
+          "title": null,
+          "last_updated_at": "2026-11-04T05:32:10.807733+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": null,
+      "punching_system": null,
+      "races": [
+        {
+          "race_number": 1,
+          "name": "Championnat de France Longue Distance",
+          "datetimez": "2027-05-16T00:00:00+02:00",
+          "discipline": "Other",
+          "night_or_day": null,
+          "position": null,
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": [],
+      "is_date_preliminary": false
+    },
+    {
+      "id": "IOF_9210",
+      "name": "1. Austria Cup Sprint Distance",
+      "start_time": "2027-04-24",
+      "end_time": "2027-04-24",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "World Ranking Event"
+      ],
+      "tags": [],
+      "form": null,
+      "organisers": [
+        {
+          "name": "Austria",
+          "country_code": "AUT"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact phone number",
+          "name": "+43 676 3270442"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:CgEHAVkWEVwKAgQWBAcBB0MaBDIIHhEXCgYDG0gXAB0PAxAeGR0MCAMSFw=="
+        }
+      ],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/9210",
+          "title": null,
+          "last_updated_at": "2026-11-04T05:32:10.807850+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": null,
+      "punching_system": null,
+      "races": [
+        {
+          "race_number": 1,
+          "name": "1. Austria Cup Sprint Distance",
+          "datetimez": "2027-04-24T00:00:00+02:00",
+          "discipline": "Other",
+          "night_or_day": null,
+          "position": null,
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": [],
+      "is_date_preliminary": false
+    },
+    {
+      "id": "IOF_9211",
+      "name": "2. Austria Cup Middle Distance",
+      "start_time": "2027-04-25",
+      "end_time": "2027-04-25",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "World Ranking Event"
+      ],
+      "tags": [],
+      "form": null,
+      "organisers": [
+        {
+          "name": "Austria",
+          "country_code": "AUT"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact phone number",
+          "name": "+43 676 3270442"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:CgEHAVkWEVwKAgQWBAcBB0MaBDIIHhEXCgYDG0gXAB0PAxAeGR0MCAMSFw=="
+        }
+      ],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/9211",
+          "title": null,
+          "last_updated_at": "2026-11-04T05:32:10.807804+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": null,
+      "punching_system": null,
+      "races": [
+        {
+          "race_number": 1,
+          "name": "2. Austria Cup Middle Distance",
+          "datetimez": "2027-04-25T00:00:00+02:00",
+          "discipline": "Other",
+          "night_or_day": null,
+          "position": null,
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": [],
+      "is_date_preliminary": false
+    },
+    {
+      "id": "IOF_9251",
+      "name": "MTBO Camp, Swedish Cup, Long distance",
+      "start_time": "2027-04-17",
+      "end_time": "2027-04-17",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "World Ranking Event"
+      ],
+      "tags": [],
+      "form": null,
+      "organisers": [
+        {
+          "name": "Sweden",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact phone number",
+          "name": "+46768955969"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:ABUOBkNdAhUTFQtFXzQFAkwaD1wCHwg="
+        }
+      ],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/9251",
+          "title": null,
+          "last_updated_at": "2026-11-04T05:32:10.807778+00:00"
+        },
+        {
+          "type": "Website",
+          "url": "http://mtbocamp.dk",
+          "title": null,
+          "last_updated_at": "2026-11-04T05:32:10.807778+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": null,
+      "punching_system": null,
+      "races": [
+        {
+          "race_number": 1,
+          "name": "MTBO Camp, Swedish Cup, Long distance",
+          "datetimez": "2027-04-17T00:00:00+02:00",
+          "discipline": "Other",
+          "night_or_day": null,
+          "position": null,
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": [],
+      "is_date_preliminary": false
+    },
+    {
+      "id": "IOF_9252",
+      "name": "MTBO Camp, Swedish Cup, Middle distance",
+      "start_time": "2027-04-18",
+      "end_time": "2027-04-18",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "World Ranking Event"
+      ],
+      "tags": [],
+      "form": null,
+      "organisers": [
+        {
+          "name": "Sweden",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact phone number",
+          "name": "+46768955969"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:ABUOBkNdAhUTFQtFXzQFAkwaD1wCHwg="
+        }
+      ],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/9252",
+          "title": null,
+          "last_updated_at": "2026-11-04T05:32:10.807796+00:00"
+        },
+        {
+          "type": "Website",
+          "url": "http://mtbocamp.dk",
+          "title": null,
+          "last_updated_at": "2026-11-04T05:32:10.807796+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": null,
+      "punching_system": null,
+      "races": [
+        {
+          "race_number": 1,
+          "name": "MTBO Camp, Swedish Cup, Middle distance",
+          "datetimez": "2027-04-18T00:00:00+02:00",
+          "discipline": "Other",
+          "night_or_day": null,
+          "position": null,
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": [],
+      "is_date_preliminary": false
+    },
+    {
       "id": "SWE_57010",
       "name": "MTBO, Svenska cupen, Karlskrona, lång",
       "start_time": "2027-05-15",
@@ -1101,8 +1689,58 @@
           "datetimez": "2027-08-21T00:00:00+02:00",
           "discipline": "Sprint",
           "night_or_day": "day",
-          "position": null,
-          "areas": [],
+          "position": {
+            "lat": 57.471787316313,
+            "lng": 13.3408230365458
+          },
+          "areas": [
+            {
+              "lat": 57.471787316313,
+              "lng": 13.3408230365458,
+              "polygon": [
+                [
+                  57.47167580539232,
+                  13.3434814701245
+                ],
+                [
+                  57.47530555618653,
+                  13.370581871085667
+                ],
+                [
+                  57.48498312891712,
+                  13.368233821904916
+                ],
+                [
+                  57.49192415616346,
+                  13.361091838980132
+                ],
+                [
+                  57.49697134736442,
+                  13.350721288431815
+                ],
+                [
+                  57.498811295594976,
+                  13.34573168392272
+                ],
+                [
+                  57.49870615819438,
+                  13.331349882690622
+                ],
+                [
+                  57.48845380745311,
+                  13.32430573514837
+                ],
+                [
+                  57.48067061428418,
+                  13.326262442798994
+                ],
+                [
+                  57.47167580539232,
+                  13.3434814701245
+                ]
+              ]
+            }
+          ],
           "urls": [],
           "documents": [],
           "entry_counts": null,
@@ -1176,8 +1814,70 @@
           "datetimez": "2027-08-22T00:00:00+02:00",
           "discipline": "Long",
           "night_or_day": "day",
-          "position": null,
-          "areas": [],
+          "position": {
+            "lat": 57.4717843462897,
+            "lng": 13.3408835885214
+          },
+          "areas": [
+            {
+              "lat": 57.4717843462897,
+              "lng": 13.3408835885214,
+              "polygon": [
+                [
+                  57.4771661519691,
+                  13.343214789173773
+                ],
+                [
+                  57.423965083115064,
+                  13.287784135466119
+                ],
+                [
+                  57.415227030291504,
+                  13.392559165275328
+                ],
+                [
+                  57.426368354628096,
+                  13.44689159757685
+                ],
+                [
+                  57.43540093493513,
+                  13.442124044877064
+                ],
+                [
+                  57.444292889144236,
+                  13.421016150133417
+                ],
+                [
+                  57.45687980004752,
+                  13.40322532186205
+                ],
+                [
+                  57.46154246556213,
+                  13.436722023298186
+                ],
+                [
+                  57.4687684219526,
+                  13.442851733912196
+                ],
+                [
+                  57.48135216049917,
+                  13.422914695349467
+                ],
+                [
+                  57.486710584960605,
+                  13.3926376398924
+                ],
+                [
+                  57.48594514388208,
+                  13.365394481607911
+                ],
+                [
+                  57.4771661519691,
+                  13.343214789173773
+                ]
+              ]
+            }
+          ],
           "urls": [],
           "documents": [],
           "entry_counts": null,
@@ -2365,7 +3065,7 @@
         }
       ],
       "documents": [],
-      "information": null,
+      "information": "Denna tävling ingår i Nordisk MTBO-Camp 2027.",
       "region": "Skåne",
       "punching_system": "Sportident",
       "races": [
@@ -2484,7 +3184,7 @@
         }
       ],
       "documents": [],
-      "information": null,
+      "information": "Denna tävling ingår i Nordisk MTBO-Camp 2027.",
       "region": "Skåne",
       "punching_system": "Sportident",
       "races": [
@@ -2599,7 +3299,7 @@
         }
       ],
       "documents": [],
-      "information": null,
+      "information": "Denna tävling ingår i Nordisk MTBO-Camp 2027.",
       "region": "Skåne",
       "punching_system": "Sportident",
       "races": [
@@ -2728,7 +3428,7 @@
         }
       ],
       "documents": [],
-      "information": null,
+      "information": "Denna tävlingen ingår i Nordisk MTBO-camp 2027",
       "region": "Blekinge\nSkåne",
       "punching_system": "Sportident",
       "races": [
@@ -2871,7 +3571,7 @@
         }
       ],
       "documents": [],
-      "information": null,
+      "information": "Denna tävling ingår i Nordisk MTBO-Camp 2027.",
       "region": "Skåne",
       "punching_system": "Sportident",
       "races": [
