@@ -9,6 +9,51 @@ import type {
   ScraperUrl,
 } from '../types/events.ts';
 
+export function getSourceUrls(): Record<string, string> {
+  return {
+    SWE: 'https://eventor.orientering.se',
+    IOF: 'https://eventor.orienteering.org',
+    NOR: 'https://eventor.orientering.no',
+    FIN: 'https://kiti.kartat.fi',
+    DEN: 'https://orientering.dk',
+  };
+}
+
+export function getEventSource(event: ScraperEvent): string {
+  const underscoreIdx = event.id.indexOf('_');
+  return underscoreIdx > 0 ? event.id.substring(0, underscoreIdx) : event.id;
+}
+
+export function resolveExternalUrl(event: ScraperEvent): string | null {
+  const source = getEventSource(event);
+  const sourceUrls = getSourceUrls();
+  const baseUrl = sourceUrls[source] || sourceUrls[event.countryCode];
+
+  // Find the Path URL
+  const pathUrl = event.urls?.find((u) => u.type === 'Path');
+  if (pathUrl) {
+    if (pathUrl.url.startsWith('http://') || pathUrl.url.startsWith('https://')) {
+      return pathUrl.url;
+    }
+    if (baseUrl) {
+      return `${baseUrl}/${pathUrl.url.replace(/^\//, '')}`;
+    }
+  }
+
+  // Fall back to Website URL
+  const websiteUrl = event.urls?.find((u) => u.type === 'Website');
+  if (websiteUrl) {
+    return websiteUrl.url;
+  }
+
+  // For MAN events, try the first available URL
+  if (event.urls && event.urls.length > 0) {
+    return event.urls[0].url;
+  }
+
+  return null;
+}
+
 /**
  * Resolve a race note from an EventAugmentationLocaleContent.race_notes map.
  * Supports:
@@ -165,13 +210,73 @@ export function synthesizeCombinedEvent(
   // Deduplicated URLs
   const urls: ScraperUrl[] = [];
   const seenUrls = new Set<string>();
-  if (aug.website) {
+
+  // Ensure primary Path url is preserved so resolveExternalUrl resolves to primary Eventor/upstream page
+  const primaryPathUrl = primaryChild.urls?.find((u) => u.type === 'Path');
+  const primaryExtUrl = resolveExtUrl(primaryChild);
+  const synthesizedPath = primaryExtUrl || primaryPathUrl?.url;
+  if (synthesizedPath) {
+    urls.push({
+      type: 'Path',
+      url: synthesizedPath,
+    });
+  }
+
+  // 1. For multi-event groups, add individual Eventor links for all child events
+  if (!isSingleEvent) {
+    for (const ev of childEvents) {
+      const extUrl = resolveExtUrl(ev);
+      if (extUrl && !seenUrls.has(extUrl)) {
+        seenUrls.add(extUrl);
+        urls.push({
+          type: 'Eventor',
+          url: extUrl,
+          title: `Eventor: ${ev.name}`,
+        });
+      }
+    }
+  }
+
+  // 2. Add series standings links from child events
+  for (const ev of childEvents) {
+    for (const u of ev.urls || []) {
+      if (u.type === 'Series') {
+        const absUrl = resolveRelUrl(u.url, ev);
+        if (!seenUrls.has(absUrl)) {
+          seenUrls.add(absUrl);
+          urls.push({ ...u, url: absUrl });
+        }
+      }
+    }
+  }
+
+  // 3. Add organizer website (from augmentation or child events) and custom links
+  if (aug.website && !seenUrls.has(aug.website)) {
     seenUrls.add(aug.website);
     urls.push({
       type: 'Website',
       url: aug.website,
       title: aug.website.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, ''),
     });
+  }
+
+  for (const ev of childEvents) {
+    for (const u of ev.urls || []) {
+      if (u.type === 'Path' || u.type === 'Series') continue;
+      const absUrl = resolveRelUrl(u.url, ev);
+      if (!seenUrls.has(absUrl)) {
+        seenUrls.add(absUrl);
+        const cleanTitle =
+          u.title && u.title.toLowerCase() !== 'website'
+            ? u.title
+            : absUrl.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
+        urls.push({
+          ...u,
+          url: absUrl,
+          title: cleanTitle,
+        });
+      }
+    }
   }
 
   if (aug.custom_links) {
@@ -184,34 +289,6 @@ export function synthesizeCombinedEvent(
           title: link.title,
         });
       }
-    }
-  }
-
-  for (const ev of childEvents) {
-    const extUrl = resolveExtUrl(ev);
-    if (extUrl && !seenUrls.has(extUrl) && !isSingleEvent) {
-      seenUrls.add(extUrl);
-      urls.push({
-        type: 'Series',
-        url: extUrl,
-        title: `Eventor: ${ev.name}`,
-      });
-    }
-    for (const u of ev.urls || []) {
-      if (u.type === 'Path') continue;
-      const absUrl = resolveRelUrl(u.url, ev);
-      if (!seenUrls.has(absUrl)) {
-        seenUrls.add(absUrl);
-        urls.push({ ...u, url: absUrl });
-      }
-    }
-  }
-
-  // Ensure primary Path url is preserved for single event so resolveExternalUrl works
-  if (isSingleEvent && primaryChild.urls) {
-    const pathUrl = primaryChild.urls.find((u) => u.type === 'Path');
-    if (pathUrl && !urls.some((u) => u.type === 'Path')) {
-      urls.unshift(pathUrl);
     }
   }
 

@@ -29,8 +29,12 @@ for (const url of event.urls || []) {
   const resolvedUrl = resolveRelativeUrl(url.url, event);
   if (!seenUrls.has(resolvedUrl)) {
     seenUrls.add(resolvedUrl);
+    const cleanTitle =
+      url.title && url.title.toLowerCase() !== 'website'
+        ? url.title
+        : resolvedUrl.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
     relatedUrls.push({
-      title: url.title || url.type,
+      title: cleanTitle,
       url: resolvedUrl,
       type: url.type,
     });
@@ -49,8 +53,12 @@ for (let i = 0; i < event.races.length; i++) {
     const resolvedUrl = resolveRelativeUrl(url.url, event);
     if (!seenUrls.has(resolvedUrl)) {
       seenUrls.add(resolvedUrl);
+      const cleanTitle =
+        url.title && url.title.toLowerCase() !== 'website'
+          ? url.title
+          : resolvedUrl.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
       relatedUrls.push({
-        title: prefix + (url.title || url.type),
+        title: prefix + cleanTitle,
         url: resolvedUrl,
         type: url.type,
       });

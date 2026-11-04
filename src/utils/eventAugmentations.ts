@@ -1,6 +1,6 @@
 import { getCollection, getEntry, type CollectionEntry } from 'astro:content';
 import type { AugmentedEvent, EventAugmentation, ScraperEvent } from '~/types/events';
-import { getEventBySlug, resolveExternalUrl, resolveRelativeUrl } from '~/utils/events';
+import { getEventBySlug, resolveExternalUrl, resolveRelativeUrl, slugToEventId } from '~/utils/events';
 import { instantiateAugmentedEvent, synthesizeCombinedEvent } from '~/utils/augmentedEventModel';
 
 let cachedAugmentations: EventAugmentation[] | null = null;
@@ -114,6 +114,20 @@ export async function resolveEventPage(slug: string): Promise<
   const rawAug = await getAugmentationBySlug(slug);
   if (rawAug) {
     const augmentedEvent = await resolveAugmentedEvent(rawAug);
+    if (augmentedEvent) {
+      const event = await buildAugmentedEvent(augmentedEvent, slug);
+      if (event) {
+        return { event, augmentation: augmentedEvent };
+      }
+    }
+  }
+
+  // If slug matches a child event ID of an augmentation (e.g. swe-58993 in Svenska Cupen Sätervurpan),
+  // render the combined group page directly so all child routes render the combined page.
+  const eventId = slugToEventId(slug);
+  const parentAug = await getAugmentationByEventId(eventId);
+  if (parentAug) {
+    const augmentedEvent = await resolveAugmentedEvent(parentAug);
     if (augmentedEvent) {
       const event = await buildAugmentedEvent(augmentedEvent, slug);
       if (event) {

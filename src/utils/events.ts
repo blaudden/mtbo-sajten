@@ -126,12 +126,18 @@ export function getOrganiserName(event: ScraperEvent): string {
 /** Build the external Eventor URL for this event */
 export function resolveExternalUrl(event: ScraperEvent): string | null {
   const source = getEventSource(event);
-  const baseUrl = getSourceUrls()[source];
+  const sourceUrls = getSourceUrls();
+  const baseUrl = sourceUrls[source] || sourceUrls[event.countryCode];
 
   // Find the Path URL
   const pathUrl = event.urls?.find((u) => u.type === 'Path');
-  if (pathUrl && baseUrl) {
-    return `${baseUrl}/${pathUrl.url}`;
+  if (pathUrl) {
+    if (pathUrl.url.startsWith('http://') || pathUrl.url.startsWith('https://')) {
+      return pathUrl.url;
+    }
+    if (baseUrl) {
+      return `${baseUrl}/${pathUrl.url.replace(/^\//, '')}`;
+    }
   }
 
   // Fall back to Website URL

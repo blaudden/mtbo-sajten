@@ -10,6 +10,7 @@ import type { MetaData } from '~/types';
 import { loadAllEvents, resolveCountryCode, formatEventDateRange, countryCodeToName } from '~/utils/events';
 import { getAllAugmentedAndEventSlugs, resolveEventPage } from '~/utils/eventAugmentations';
 import { generateEventJsonLd } from '~/utils/jsonLd';
+import { getCanonical } from '~/utils/permalinks';
 
 export async function getStaticPaths() {
   const allEvents = await loadAllEvents();
@@ -37,12 +38,16 @@ if (event) {
   const countryName = countryCodeToName(country);
   const dateRange = formatEventDateRange(event.start_time, event.end_time);
 
+  const canonicalSlug = augmentation ? augmentation.slug : event.slug;
+  const canonicalUrl = String(getCanonical(`/events/${canonicalSlug}`));
+
   metadata = {
     title: `${event.name} | MTBO Tävlingskalender`,
     description: `${event.name} (${dateRange}) — Information, anmälningslänkar, klasser, karta och program för detta MTBO-event (mountainbikeorientering) i ${countryName}.`,
+    canonical: canonicalUrl,
     openGraph: {
       type: 'website',
-      images: [{ url: new URL(`/og-images/events/${event.slug}.jpg`, Astro.site).toString() }],
+      images: [{ url: new URL(`/og-images/events/${canonicalSlug}.jpg`, Astro.site).toString() }],
     },
   };
 

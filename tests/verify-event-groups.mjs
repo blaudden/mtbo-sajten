@@ -1,6 +1,10 @@
 import { existsSync, readFileSync, readdirSync } from 'fs';
 import { join } from 'path';
-import { instantiateAugmentedEvent, synthesizeCombinedEvent } from '../src/utils/augmentedEventModel.ts';
+import {
+  instantiateAugmentedEvent,
+  synthesizeCombinedEvent,
+  resolveExternalUrl,
+} from '../src/utils/augmentedEventModel.ts';
 
 const AUGMENTATIONS_PATH = './src/data/events/augmentations.json';
 const EVENTS_DIR = './src/data/events';
@@ -147,12 +151,36 @@ function verifyEventGroups() {
 
       // Verify synthesized combined view preserves all races across owned ScraperEvents
       const expectedTotalRaces = rawChildEvents.reduce((sum, e) => sum + e.races.length, 0);
-      const synthesized = synthesizeCombinedEvent(augmentedInstance);
+      const synthesized = synthesizeCombinedEvent(augmentedInstance, {
+        resolveExtUrl: (ev) => `https://eventor.orientering.se/Events/Show/${ev.id.replace('SWE_', '')}`,
+      });
       if (!synthesized || synthesized.races.length !== expectedTotalRaces) {
         console.error(
           `❌ [FAIL] Synthesized view for "${aug.slug}" expected ${expectedTotalRaces} total races, got ${synthesized?.races.length}.`
         );
         failed = true;
+      }
+
+      // Verify primary external URL resolves to Eventor, not organizer website
+      const primaryChildExtUrl = rawChildEvents[0].urls?.find((u) => u.type === 'Path')
+        ? `https://eventor.orientering.se/${rawChildEvents[0].urls.find((u) => u.type === 'Path').url.replace(/^\//, '')}`
+        : null;
+      if (primaryChildExtUrl) {
+        const resolvedUrl = resolveExternalUrl(synthesized);
+        if (resolvedUrl !== primaryChildExtUrl) {
+          console.error(
+            `❌ [FAIL] Synthesized view for "${aug.slug}" expected primary external URL "${primaryChildExtUrl}", got "${resolvedUrl}".`
+          );
+          failed = true;
+        }
+      }
+      for (const u of synthesized.urls || []) {
+        if (u.type === 'Website' && u.title?.toLowerCase() === 'website') {
+          console.error(
+            `❌ [FAIL] Synthesized view for "${aug.slug}" has a Website link with raw title "Website". Expected clean domain name.`
+          );
+          failed = true;
+        }
       }
     }
 
@@ -195,11 +223,34 @@ function verifyEventGroups() {
               failed = true;
             }
           }
+
+          // Issue 1: "Gå till anmälan" must link to Eventor (for Eventor-backed events)
+          const primaryChildExtUrl = rawChildEvents[0].urls?.find((u) => u.type === 'Path')
+            ? `https://eventor.orientering.se/${rawChildEvents[0].urls.find((u) => u.type === 'Path').url.replace(/^\//, '')}`
+            : null;
+          if (primaryChildExtUrl) {
+            if (!html.includes(`href="${primaryChildExtUrl}"`)) {
+              console.error(
+                `❌ [FAIL] Built page ${htmlFile} does not link "Gå till anmälan" to primary Eventor URL "${primaryChildExtUrl}".`
+              );
+              failed = true;
+            }
+            if (html.includes('anmäl dig till tävlingen på tävlingens webbplats.')) {
+              console.error(`❌ [FAIL] Built page ${htmlFile} says "på tävlingens webbplats" instead of "på Eventor".`);
+              failed = true;
+            }
+          }
+
+          // Issue 1: No generic "Website" label in links
+          if (html.includes('>Website<') || html.includes('>website<')) {
+            console.error(`❌ [FAIL] Built page ${htmlFile} renders generic link text "Website".`);
+            failed = true;
+          }
         }
       }
     }
 
-    // 5. For multi-event groups, verify individual child event routes still exist and link to parent group
+    // 5. For multi-event groups, verify all child event routes render the full combined page directly
     if (hasDist && aug.event_ids.length > 1) {
       for (const id of aug.event_ids) {
         const childSlug = id.toLowerCase().replace(/_/g, '-');
@@ -210,10 +261,38 @@ function verifyEventGroups() {
           );
           failed = true;
         } else {
-          const childHtml = readFileSync(childHtmlFile, 'utf-8');
-          if (!childHtml.includes(`/events/${aug.slug}`)) {
+          const childHtml = readFileSync(childHtmlFile, 'utf-8')
+            .replace(/&#39;/g, "'")
+            .replace(/&quot;/g, '"')
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>')
+            .replace(/&amp;/g, '&');
+
+          // Child route must render the full combined page title
+          if (!childHtml.includes(aug.content.sv.title)) {
             console.error(
-              `❌ [FAIL] Individual child event route "${childSlug}" does not link to parent group "/events/${aug.slug}".`
+              `❌ [FAIL] Child event route "${childSlug}" does not render combined title "${aug.content.sv.title}".`
+            );
+            failed = true;
+          }
+
+          // Canonical URL must point to the canonical group page
+          if (
+            !childHtml.includes(`rel="canonical" href="https://www.mountainbikeorientering.se/events/${aug.slug}"`) &&
+            !childHtml.includes(`rel="canonical" href="http://localhost:4321/events/${aug.slug}"`) &&
+            !childHtml.includes(`href="https://www.mountainbikeorientering.se/events/${aug.slug}" rel="canonical"`) &&
+            !childHtml.includes(`href="http://localhost:4321/events/${aug.slug}" rel="canonical"`)
+          ) {
+            console.error(
+              `❌ [FAIL] Child event route "${childSlug}" canonical tag does not point to "/events/${aug.slug}".`
+            );
+            failed = true;
+          }
+
+          // Child route must NOT render the old single-race parent group banner
+          if (childHtml.includes('Denna tävling ingår i tävlingshelgen')) {
+            console.error(
+              `❌ [FAIL] Child event route "${childSlug}" renders single-race parent group banner instead of full combined page.`
             );
             failed = true;
           }
