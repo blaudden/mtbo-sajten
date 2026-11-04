@@ -23,6 +23,7 @@ export default defineMarkdocConfig({
       render: component('./src/components/widgets/Carousel.astro'),
       attributes: {
         images: { type: Array },
+        captions: { type: Array },
         id: { type: 'String' },
       },
     },

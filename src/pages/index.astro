@@ -5,8 +5,6 @@ import HeroFullSpeed from '~/components/widgets/HeroFullSpeed.astro';
 import Features from '~/components/widgets/Features.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FeaturedItem from '~/components/widgets/FeaturedItem.astro';
-import wmtbocLogo from '~/assets/images/wmtboc26-logo-transparent.png';
-import wmtbocImage from '~/assets/images/posts/wmtboc26/image.png';
 ---
 
 <Layout>
@@ -31,19 +29,16 @@ import wmtbocImage from '~/assets/images/posts/wmtboc26/image.png';
   </HeroFullSpeed>
 
   <FeaturedItem
-    title="VM i Sverige 2026"
-    excerpt={`Världsmästerskapen och Junior-VM i mountainbikeorientering avgörs i Mora den 24–30 augusti 2026.
-Här på mountainbikeorientering.se samlar vi allt du behöver veta för att heja, följa loppen eller själv delta i publiktävlingarna. Hitta praktisk information, program, banor, anmälningar och boende på ett och samma ställe.
-Observera att all information på VM-sidorna presenteras på engelska.`}
+    title="Säsongssummering 2026"
+    excerpt={`MTBO-säsongen 2026 är i mål! Det blev ett speciellt år där Sverige höll i taktpinnen internationellt med VM i Mora, SM i Uppsala och O-Ringen i Göteborg. Läs sammanfattningen av årets tävlingar, medaljer och prestationer.`}
     image={{
-      src: wmtbocImage,
-      alt: 'WMTBOC 2026 will be organized in Mora, Sweden. Experience high level mtb orieentering, as a spectator or participant.',
+      src: '~/assets/images/posts/mtbo-sasongen-2026-sammanfattning/hero.jpg',
+      alt: 'MTBO-säsongen 2026 sammanfattning',
     }}
-    link="/wmtboc26"
-    linkLabel="Till den officiella VM-sajten"
-    isPrimaryGlowing={true}
-    animatedLogo={wmtbocLogo}
-    ><Fragment slot="bg">
+    link="/mtbo-sasongen-2026-sammanfattning"
+    linkLabel="Läs hela säsongssummeringen"
+  >
+    <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-100 dark:bg-transparent"></div>
     </Fragment>
   </FeaturedItem>
