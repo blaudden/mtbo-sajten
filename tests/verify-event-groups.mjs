@@ -59,10 +59,27 @@ function verifyEventGroups() {
     }
 
     // Verify all referenced event_ids exist in upstream scraper partitions
+    const ownedIds = new Set(aug.event_ids);
     for (const id of aug.event_ids) {
       if (!upstreamIds.has(id)) {
         console.error(`❌ [FAIL] Augmentation "${aug.slug}" references unknown event_id "${id}".`);
         failed = true;
+      }
+    }
+
+    // Verify all race_notes keys point to an owned event_id or event_id:race_number
+    for (const lang of ['sv', 'en']) {
+      const notes = aug.content?.[lang]?.race_notes;
+      if (notes) {
+        for (const key of Object.keys(notes)) {
+          const eventIdPart = key.split(':')[0];
+          if (!ownedIds.has(eventIdPart)) {
+            console.error(
+              `❌ [FAIL] Augmentation "${aug.slug}" (${lang}) has race_notes key "${key}" which does not match any owned event_id in [${aug.event_ids.join(', ')}].`
+            );
+            failed = true;
+          }
+        }
       }
     }
 

@@ -33,11 +33,11 @@ let augmentation: EventAugmentation | undefined;
 
 if (id) {
   // 1. Check if `id` is an augmentation slug or alias
-  augmentation = getAugmentationBySlug(id);
+  augmentation = await getAugmentationBySlug(id);
   if (!augmentation) {
     // 2. Check if `id` is an event ID (e.g. "SWE_59350") that has an augmentation
     const asEventId = id.includes('_') ? id.toUpperCase() : slugToEventId(id);
-    augmentation = getAugmentationByEventId(asEventId);
+    augmentation = await getAugmentationByEventId(asEventId);
   }
 
   if (augmentation) {

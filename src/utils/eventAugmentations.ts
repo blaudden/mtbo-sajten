@@ -1,7 +1,6 @@
-import fs from 'node:fs';
-import path from 'node:path';
-import { getEntry, type CollectionEntry } from 'astro:content';
+import { getCollection, getEntry, type CollectionEntry } from 'astro:content';
 import type {
+  AugmentedEvent,
   EventAugmentation,
   ScraperDocument,
   ScraperEntryDeadline,
@@ -15,17 +14,12 @@ import { getEventBySlug, resolveExternalUrl, resolveRelativeUrl } from '~/utils/
 let cachedAugmentations: EventAugmentation[] | null = null;
 
 /**
- * Load all event augmentations and weekend groups from src/data/events/augmentations.json.
+ * Load all validated event augmentations from the Astro 'augmentations' Content Collection.
  */
-export function loadAllAugmentations(): EventAugmentation[] {
+export async function loadAllAugmentations(): Promise<EventAugmentation[]> {
   if (cachedAugmentations) return cachedAugmentations;
-  const filePath = path.join(process.cwd(), 'src/data/events/augmentations.json');
-  if (!fs.existsSync(filePath)) {
-    cachedAugmentations = [];
-    return [];
-  }
-  const raw = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-  const list: EventAugmentation[] = Array.isArray(raw.augmentations) ? raw.augmentations : [];
+  const entries = await getCollection('augmentations');
+  const list: EventAugmentation[] = entries.map((entry) => entry.data as EventAugmentation);
   cachedAugmentations = list;
   return list;
 }
@@ -33,9 +27,10 @@ export function loadAllAugmentations(): EventAugmentation[] {
 /**
  * Find an augmentation by its canonical slug or any of its aliases.
  */
-export function getAugmentationBySlug(slug: string): EventAugmentation | undefined {
+export async function getAugmentationBySlug(slug: string): Promise<EventAugmentation | undefined> {
   const normalized = slug.toLowerCase();
-  return loadAllAugmentations().find(
+  const all = await loadAllAugmentations();
+  return all.find(
     (aug) => aug.slug.toLowerCase() === normalized || aug.aliases?.some((a) => a.toLowerCase() === normalized)
   );
 }
@@ -43,17 +38,18 @@ export function getAugmentationBySlug(slug: string): EventAugmentation | undefin
 /**
  * Find an augmentation that includes a given scraper event ID (e.g. "SWE_57010").
  */
-export function getAugmentationByEventId(eventId: string): EventAugmentation | undefined {
+export async function getAugmentationByEventId(eventId: string): Promise<EventAugmentation | undefined> {
   const upperId = eventId.toUpperCase();
-  return loadAllAugmentations().find((aug) => aug.event_ids.some((id) => id.toUpperCase() === upperId));
+  const all = await loadAllAugmentations();
+  return all.find((aug) => aug.event_ids.some((id) => id.toUpperCase() === upperId));
 }
 
 /**
  * Find a multi-event weekend group containing the given event ID.
  * Returns undefined for single-event augmentations (where the event IS the canonical page).
  */
-export function getParentGroupForEvent(eventId: string): EventAugmentation | undefined {
-  const aug = getAugmentationByEventId(eventId);
+export async function getParentGroupForEvent(eventId: string): Promise<EventAugmentation | undefined> {
+  const aug = await getAugmentationByEventId(eventId);
   if (aug && aug.event_ids.length > 1) {
     return aug;
   }
@@ -69,34 +65,48 @@ export async function getEventById(eventId: string): Promise<ScraperEvent | unde
 }
 
 /**
- * Construct a unified ScraperEvent for an EventAugmentation (either a multi-event weekend
- * or an augmented single event), attaching per-race external URLs and bilingual location notes.
+ * Resolve a race note from an EventAugmentationLocaleContent.race_notes map.
+ * Supports:
+ * 1. Explicit "EventID:RaceNumber" key (e.g. "SWE_59350:1") for multi-stage single events
+ * 2. Explicit "EventID" key (e.g. "SWE_60899") for multi-event weekends
+ * 3. Fallback 1-indexed sequential number (e.g. "1")
  */
-export async function buildAugmentedEvent(
-  aug: EventAugmentation,
-  requestedSlug?: string
-): Promise<ScraperEvent | undefined> {
-  const childEvents: ScraperEvent[] = [];
+function lookupRaceNote(
+  notes: Record<string, string> | undefined,
+  eventId: string,
+  raceNumber: number,
+  sequentialNum?: number
+): string | undefined {
+  if (!notes) return undefined;
+  return (
+    notes[`${eventId}:${raceNumber}`] ??
+    notes[eventId] ??
+    (sequentialNum !== undefined ? notes[String(sequentialNum)] : undefined)
+  );
+}
+
+/**
+ * Build the resolved AugmentedEvent domain object that owns its 1..* child ScraperEvents
+ * (each owning its 1..* ScraperRaces enriched with bilingual notes and external URLs).
+ */
+export async function resolveAugmentedEvent(aug: EventAugmentation): Promise<AugmentedEvent | undefined> {
+  const rawEvents: ScraperEvent[] = [];
   for (const id of aug.event_ids) {
     const ev = await getEventById(id);
     if (ev) {
-      childEvents.push(ev);
+      rawEvents.push(ev);
     }
   }
 
-  if (childEvents.length === 0) {
+  if (rawEvents.length === 0) {
     return undefined;
   }
 
-  const effectiveSlug = requestedSlug || aug.slug;
-  const isSingleEvent = childEvents.length === 1;
-  const primaryChild = childEvents[0];
+  const isSingleEvent = rawEvents.length === 1;
 
-  // Collect and sort all races across child events
-  const combinedRaces: ScraperRace[] = [];
-  for (const ev of childEvents) {
+  const ownedEvents: ScraperEvent[] = rawEvents.map((ev) => {
     const evExternalUrl = resolveExternalUrl(ev);
-    for (const race of ev.races) {
+    const enrichedRaces: ScraperRace[] = ev.races.map((race) => {
       let discipline = race.discipline;
       if (
         discipline === 'Long' &&
@@ -111,22 +121,64 @@ export async function buildAugmentedEvent(
           ? `${ev.name} – ${race.name}`
           : ev.name;
 
-      combinedRaces.push({
+      const svNote = lookupRaceNote(aug.content.sv.race_notes, ev.id, race.race_number);
+      const enNote = lookupRaceNote(aug.content.en?.race_notes, ev.id, race.race_number);
+
+      return {
         ...race,
         name: raceName,
         discipline,
         external_url: evExternalUrl,
-      });
+        location_note: svNote || enNote ? { sv: svNote, en: enNote } : race.location_note,
+      };
+    });
+
+    return {
+      ...ev,
+      races: enrichedRaces,
+    };
+  });
+
+  return {
+    ...aug,
+    events: ownedEvents,
+  };
+}
+
+/**
+ * Construct a unified ScraperEvent view from an EventAugmentation or AugmentedEvent,
+ * aggregating its owned ScraperEvents' races, classes, documents, URLs, and deadlines.
+ */
+export async function buildAugmentedEvent(
+  augInput: EventAugmentation | AugmentedEvent,
+  requestedSlug?: string
+): Promise<ScraperEvent | undefined> {
+  const aug: AugmentedEvent | undefined = 'events' in augInput ? augInput : await resolveAugmentedEvent(augInput);
+
+  if (!aug || aug.events.length === 0) {
+    return undefined;
+  }
+
+  const childEvents = aug.events;
+  const effectiveSlug = requestedSlug || aug.slug;
+  const isSingleEvent = childEvents.length === 1;
+  const primaryChild = childEvents[0];
+
+  // Collect and sort all races across owned ScraperEvents
+  const combinedRaces: Array<{ race: ScraperRace; eventId: string }> = [];
+  for (const ev of childEvents) {
+    for (const race of ev.races) {
+      combinedRaces.push({ race, eventId: ev.id });
     }
   }
 
-  combinedRaces.sort((a, b) => new Date(a.datetimez).getTime() - new Date(b.datetimez).getTime());
+  combinedRaces.sort((a, b) => new Date(a.race.datetimez).getTime() - new Date(b.race.datetimez).getTime());
 
-  // Re-number races sequentially and attach bilingual race_notes
-  const numberedRaces: ScraperRace[] = combinedRaces.map((race, idx) => {
+  // Number races sequentially across the weekend and ensure notes are attached
+  const numberedRaces: ScraperRace[] = combinedRaces.map(({ race, eventId }, idx) => {
     const num = idx + 1;
-    const svNote = aug.content.sv.race_notes?.[String(num)];
-    const enNote = aug.content.en?.race_notes?.[String(num)];
+    const svNote = race.location_note?.sv ?? lookupRaceNote(aug.content.sv.race_notes, eventId, race.race_number, num);
+    const enNote = race.location_note?.en ?? lookupRaceNote(aug.content.en?.race_notes, eventId, race.race_number, num);
     return {
       ...race,
       race_number: num,
@@ -259,22 +311,26 @@ export async function buildAugmentedEvent(
 
 /**
  * Resolve any /events/[slug] page request:
- * - If slug matches an augmentation or group (or its alias), returns the augmented/grouped event.
+ * - If slug matches an augmentation or group (or its alias), returns the resolved AugmentedEvent
+ *   (which owns its 1..* ScraperEvents) alongside its aggregated view.
  * - Otherwise looks up the individual ScraperEvent and attaches parentGroup if it belongs to a multi-event weekend.
  */
 export async function resolveEventPage(slug: string): Promise<
   | {
       event: ScraperEvent;
-      augmentation?: EventAugmentation;
+      augmentation?: AugmentedEvent;
       parentGroup?: EventAugmentation;
     }
   | undefined
 > {
-  const aug = getAugmentationBySlug(slug);
-  if (aug) {
-    const event = await buildAugmentedEvent(aug, slug);
-    if (event) {
-      return { event, augmentation: aug };
+  const rawAug = await getAugmentationBySlug(slug);
+  if (rawAug) {
+    const augmentedEvent = await resolveAugmentedEvent(rawAug);
+    if (augmentedEvent) {
+      const event = await buildAugmentedEvent(augmentedEvent, slug);
+      if (event) {
+        return { event, augmentation: augmentedEvent };
+      }
     }
   }
 
@@ -283,7 +339,7 @@ export async function resolveEventPage(slug: string): Promise<
     return undefined;
   }
 
-  const parentGroup = getParentGroupForEvent(individualEvent.id);
+  const parentGroup = await getParentGroupForEvent(individualEvent.id);
   return {
     event: individualEvent,
     parentGroup,
@@ -292,12 +348,12 @@ export async function resolveEventPage(slug: string): Promise<
 
 /**
  * Return all static slugs to generate for /events/[slug], including:
- * - All individual scraper event slugs
  * - All canonical augmentation/group slugs and their aliases
  */
 export async function getAllAugmentedAndEventSlugs(): Promise<string[]> {
   const slugs = new Set<string>();
-  for (const aug of loadAllAugmentations()) {
+  const all = await loadAllAugmentations();
+  for (const aug of all) {
     slugs.add(aug.slug);
     for (const alias of aug.aliases || []) {
       slugs.add(alias);

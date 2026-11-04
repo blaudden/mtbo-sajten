@@ -19,11 +19,11 @@
             "Precis som vanligt under MTBO Camp erbjuds även goda träningsmöjligheter på banor i området runt tävlingsdagarna. Mer information om träningspaketet och lägret i sin helhet finns på MTBO Camps hemsida (mtbocamp.dk)."
           ],
           "race_notes": {
-            "1": "Natt-medel (Lunds OK & OK Pan-Kristianstad)",
-            "2": "Medeldistans (Lunds OK)",
-            "3": "Høkeren — Ultralång distans (Lunds OK & OK Pan-Kristianstad)",
-            "4": "Svenska Cupen #1 — Långdistans (BroSö OK, Hässleholms OK, Lunds OK)",
-            "5": "Svenska Cupen #2 — Medeldistans (Härlövs IF, Hässleholms OK, Lunds OK)"
+            "SWE_60819": "Natt-medel (Lunds OK & OK Pan-Kristianstad)",
+            "SWE_60818": "Medeldistans (Lunds OK)",
+            "SWE_60820": "Høkeren — Ultralång distans (Lunds OK & OK Pan-Kristianstad)",
+            "SWE_60823": "Svenska Cupen #1 — Långdistans (BroSö OK, Hässleholms OK, Lunds OK)",
+            "SWE_60824": "Svenska Cupen #2 — Medeldistans (Härlövs IF, Hässleholms OK, Lunds OK)"
           }
         },
         "en": {
@@ -35,11 +35,11 @@
             "As always, MTBO Camp also offers dedicated training opportunities in and around the competitions throughout the week. Full details on training maps and camp registration can be found on the MTBO Camp website (mtbocamp.dk)."
           ],
           "race_notes": {
-            "1": "Night middle distance (Lunds OK & OK Pan-Kristianstad)",
-            "2": "Middle distance (Lunds OK)",
-            "3": "Høkeren — Ultra-long distance (Lunds OK & OK Pan-Kristianstad)",
-            "4": "Swedish Cup #1 — Long distance (BroSö OK, Hässleholms OK, Lunds OK)",
-            "5": "Swedish Cup #2 — Middle distance (Härlövs IF, Hässleholms OK, Lunds OK)"
+            "SWE_60819": "Night middle distance (Lunds OK & OK Pan-Kristianstad)",
+            "SWE_60818": "Middle distance (Lunds OK)",
+            "SWE_60820": "Høkeren — Ultra-long distance (Lunds OK & OK Pan-Kristianstad)",
+            "SWE_60823": "Swedish Cup #1 — Long distance (BroSö OK, Hässleholms OK, Lunds OK)",
+            "SWE_60824": "Swedish Cup #2 — Middle distance (Härlövs IF, Hässleholms OK, Lunds OK)"
           }
         }
       }
@@ -60,8 +60,8 @@
             "Terrängen kring Karlskrona bjuder på kuperade kustnära skogspartier och detaljrika sprintmiljöer som ställer höga krav på både vägval och kartläsning i hög fart."
           ],
           "race_notes": {
-            "1": "Svenska Cupen #3 — Långdistans",
-            "2": "Svenska Cupen #4 — Sprint"
+            "SWE_57010": "Svenska Cupen #3 — Långdistans",
+            "SWE_57011": "Svenska Cupen #4 — Sprint"
           }
         },
         "en": {
@@ -72,8 +72,8 @@
             "The terrain around Karlskrona offers coastal forest sections and intricate sprint areas that demand sharp route choices and map reading at speed."
           ],
           "race_notes": {
-            "1": "Swedish Cup #3 — Long distance",
-            "2": "Swedish Cup #4 — Sprint"
+            "SWE_57010": "Swedish Cup #3 — Long distance",
+            "SWE_57011": "Swedish Cup #4 — Sprint"
           }
         }
       }
@@ -93,8 +93,8 @@
             "Helgen den 22–23 maj arrangerar OK Bävern distriktsmästerskap i MTBO för Småland, Blekinge och Skåne med öppna klasser för alla. Lördagen bjuder på sprint och söndagen på medeldistans."
           ],
           "race_notes": {
-            "1": "DM Sprint",
-            "2": "DM Medeldistans"
+            "SWE_58263": "DM Sprint",
+            "SWE_58264": "DM Medeldistans"
           }
         },
         "en": {
@@ -104,8 +104,8 @@
             "On 22–23 May, OK Bävern organises the regional MTBO championships for Småland, Blekinge and Skåne, open to all entrants, with a sprint on Saturday and a middle distance on Sunday."
           ],
           "race_notes": {
-            "1": "District Championship Sprint",
-            "2": "District Championship Middle distance"
+            "SWE_58263": "District Championship Sprint",
+            "SWE_58264": "District Championship Middle distance"
           }
         }
       }
@@ -126,8 +126,8 @@
             "På lördagen den 29 maj står SM i medeldistans på programmet och på söndagen den 30 maj avgörs SM i masstart (SM, JSM, USM och VSM). OK Kåre har lång erfarenhet av stora MTBO-arrangemang i Falun, bland annat från VM 2022, med fina och tekniskt utmanande stigsystem kring Lugnet."
           ],
           "race_notes": {
-            "1": "SM Medeldistans & Svenska Cupen #5",
-            "2": "SM Masstart & Svenska Cupen #6"
+            "SWE_60899": "SM Medeldistans & Svenska Cupen #5",
+            "SWE_60900": "SM Masstart & Svenska Cupen #6"
           }
         },
         "en": {
@@ -138,8 +138,8 @@
             "Saturday 29 May features the Swedish Middle Distance Championship, followed on Sunday 30 May by the Mass Start Championship (Senior, Junior, Youth and Masters). OK Kåre brings extensive championship experience from WMTBOC 2022 in Falun, offering technical trail networks around Lugnet."
           ],
           "race_notes": {
-            "1": "Swedish Championship Middle distance & Swedish Cup #5",
-            "2": "Swedish Championship Mass start & Swedish Cup #6"
+            "SWE_60899": "Swedish Championship Middle distance & Swedish Cup #5",
+            "SWE_60900": "Swedish Championship Mass start & Swedish Cup #6"
           }
         }
       }
@@ -171,9 +171,9 @@
             "cta_url": "https://www.oringen.se"
           },
           "race_notes": {
-            "1": "Lidingö, Stockholm",
-            "2": "Brantbrink (Tullinge SK), Tullinge",
-            "3": "Brantbrink (Tullinge SK), Tullinge"
+            "SWE_59350:1": "Lidingö, Stockholm",
+            "SWE_59350:2": "Brantbrink (Tullinge SK), Tullinge",
+            "SWE_59350:3": "Brantbrink (Tullinge SK), Tullinge"
           }
         },
         "en": {
@@ -193,9 +193,9 @@
             "cta_url": "https://www.oringen.se"
           },
           "race_notes": {
-            "1": "Lidingö, Stockholm",
-            "2": "Brantbrink (Tullinge SK), Tullinge",
-            "3": "Brantbrink (Tullinge SK), Tullinge"
+            "SWE_59350:1": "Lidingö, Stockholm",
+            "SWE_59350:2": "Brantbrink (Tullinge SK), Tullinge",
+            "SWE_59350:3": "Brantbrink (Tullinge SK), Tullinge"
           }
         }
       }
@@ -216,8 +216,8 @@
             "Säter och områdena kring Säterdalen har en välkänd och omtyckt MTBO-terräng med täta stignät på sandiga tallhedar och snabba åspartier."
           ],
           "race_notes": {
-            "1": "Svenska Cupen #7 — Sprint",
-            "2": "Svenska Cupen #8 — Medeldistans"
+            "SWE_58993": "Svenska Cupen #7 — Sprint",
+            "SWE_58994": "Svenska Cupen #8 — Medeldistans"
           }
         },
         "en": {
@@ -228,8 +228,8 @@
             "The terrain around Säter and Säterdalen is well known in Swedish MTBO for its dense trail networks on sandy pine heaths and fast ridge formations."
           ],
           "race_notes": {
-            "1": "Swedish Cup #7 — Sprint",
-            "2": "Swedish Cup #8 — Middle distance"
+            "SWE_58993": "Swedish Cup #7 — Sprint",
+            "SWE_58994": "Swedish Cup #8 — Middle distance"
           }
         }
       }
@@ -250,8 +250,8 @@
             "OK Tranan är en rutinerad MTBO-arrangör i Västergötland med fina skogs- och åsområden kring Tranemo som ger en bra avslutning på den nationella cupsäsongen."
           ],
           "race_notes": {
-            "1": "SM Sprint & Svenska Cupen #9",
-            "2": "SM Långdistans & Svenska Cupen #10 (Cupfinal)"
+            "SWE_57942": "SM Sprint & Svenska Cupen #9",
+            "SWE_57943": "SM Långdistans & Svenska Cupen #10 (Cupfinal)"
           }
         },
         "en": {
@@ -262,8 +262,8 @@
             "OK Tranan is an experienced MTBO organiser in Västergötland, offering fine forest and ridge terrain around Tranemo to conclude the national cup season."
           ],
           "race_notes": {
-            "1": "Swedish Championship Sprint & Swedish Cup #9",
-            "2": "Swedish Championship Long distance & Swedish Cup #10 (Final)"
+            "SWE_57942": "Swedish Championship Sprint & Swedish Cup #9",
+            "SWE_57943": "Swedish Championship Long distance & Swedish Cup #10 (Final)"
           }
         }
       }

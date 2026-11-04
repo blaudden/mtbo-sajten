@@ -165,13 +165,16 @@ export interface EventAugmentationLocaleContent {
     cta_label?: string;
     cta_url?: string;
   };
-  /** Optional per-race location or stage notes keyed by the 1-indexed position in the combined, date-sorted race list */
+  /**
+   * Optional per-race location or stage notes keyed by ScraperEvent ID (e.g. "SWE_60899")
+   * for multi-event weekends, or by "EventID:RaceNumber" (e.g. "SWE_59350:1") for multi-stage events.
+   */
   race_notes?: Record<string, string>;
 }
 
-/** Augmentation or multi-event weekend group definition */
+/** Augmentation or multi-event weekend group definition (Astro 'augmentations' collection entry) */
 export interface EventAugmentation {
-  /** Primary canonical slug under /events/[slug] (e.g. "mtbo-camp-skaane-2027" or "swe-59350") */
+  /** Primary canonical slug under /events/[slug] (e.g. "mtbo-camp-skane-2027" or "swe-59350") */
   slug: string;
   /** Optional additional alias slugs that also resolve to this augmented event (e.g. ["oringen-stockholm-2027"]) */
   aliases?: string[];
@@ -194,4 +197,13 @@ export interface EventAugmentation {
     sv: EventAugmentationLocaleContent;
     en?: EventAugmentationLocaleContent;
   };
+}
+
+/**
+ * Resolved domain model where AugmentedEvent owns 1..* ScraperEvent instances
+ * (each owning 1..* ScraperRace instances) and 1..2 LocaleContent languages (sv, en).
+ */
+export interface AugmentedEvent extends EventAugmentation {
+  /** The 1..* child ScraperEvent instances owned by this AugmentedEvent */
+  events: ScraperEvent[];
 }

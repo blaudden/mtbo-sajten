@@ -447,11 +447,11 @@ export function countryCodeToName(code: string): string {
 // --- Race listing builders ---
 
 /** Flatten events into race-level rows for listing */
-export function buildRaceRows(events: ScraperEvent[]): RaceWithEvent[] {
+export async function buildRaceRows(events: ScraperEvent[]): Promise<RaceWithEvent[]> {
   const rows: RaceWithEvent[] = [];
 
   for (const event of events) {
-    const parentGroup = getParentGroupForEvent(event.id);
+    const parentGroup = await getParentGroupForEvent(event.id);
     const slug = parentGroup ? parentGroup.slug : eventToSlug(event);
     const countryCode = resolveCountryCode(event);
     const organiser = getOrganiserName(event);
@@ -513,7 +513,7 @@ export async function getRacesForLanding(
   const allEvents = relevantEvents.map((e) => e.data);
 
   // Build rows and add the isFeatured flag
-  const rows = buildRaceRows(allEvents).map((row) => ({
+  const rows = (await buildRaceRows(allEvents)).map((row) => ({
     ...row,
     isFeatured: row.event.isFeatured,
   }));
