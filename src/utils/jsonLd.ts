@@ -131,7 +131,7 @@ function resolveRaceExternalUrl(race: ScraperRace, parentExternalUrl: string | n
  * Generates JSON-LD for a SportsEvent.
  * Used on event detail pages for SEO and rich results.
  */
-export function generateEventJsonLd(event: ScraperEvent): Record<string, unknown> {
+export function generateEventJsonLd(event: ScraperEvent, canonicalSlug?: string): Record<string, unknown> {
   const country = resolveCountryCode(event);
   const organiser = getOrganiserName(event);
   const externalUrl = resolveExternalUrl(event);
@@ -229,7 +229,8 @@ export function generateEventJsonLd(event: ScraperEvent): Record<string, unknown
 
   // Promote our site for the canonical event URL (using fallback if config is empty)
   const siteUrl = SITE.site || 'https://www.mountainbikeorientering.se';
-  ld.url = `${siteUrl}/events/${event.slug}`;
+  const effectiveSlug = canonicalSlug || event.slug;
+  ld.url = `${siteUrl}/events/${effectiveSlug}`;
 
   // Add missing offers fields (price, priceCurrency, validFrom)
   if (externalUrl) {
@@ -268,7 +269,7 @@ export function generateEventJsonLd(event: ScraperEvent): Record<string, unknown
   }
 
   // Map image (using absolute fallback url if empty)
-  ld.image = [`${siteUrl}/og-images/events/${event.slug}.jpg`];
+  ld.image = [`${siteUrl}/og-images/events/${effectiveSlug}.jpg`];
 
   // Map location Place schema (always generated to satisfy Schema/Search Console requirements)
   const address: Record<string, unknown> = {
