@@ -1,0 +1,155 @@
+---
+/**
+ * Markdoc {% EventCard %} component for embedding rich event / weekend cards in articles.
+ * Supports augmentation slugs (e.g. "mtbo-camp-skane-2027"), scraper IDs ("SWE_59350", "IOF_8559"),
+ * or event slugs ("swe-59350").
+ * Optional `lang="en"` renders English labels and links to `?lang=en`.
+ */
+import { Icon } from 'astro-icon/components';
+import CountryFlag from '~/components/events/CountryFlag.astro';
+import DisciplineBadge from '~/components/events/DisciplineBadge.astro';
+import {
+  formatEventDateRange,
+  formatRaceDate,
+  getEventBySlug,
+  getOrganiserName,
+  resolveCountryCode,
+  slugToEventId,
+} from '~/utils/events';
+import { buildAugmentedEvent, getAugmentationByEventId, getAugmentationBySlug } from '~/utils/eventAugmentations';
+import type { EventAugmentation, ScraperEvent } from '~/types/events';
+
+interface Props {
+  id: string;
+  title?: string;
+  lang?: string;
+}
+
+const { id, title: customTitle, lang = 'sv' } = Astro.props;
+const isEn = lang === 'en';
+
+let event: ScraperEvent | undefined;
+let augmentation: EventAugmentation | undefined;
+
+if (id) {
+  // 1. Check if `id` is an augmentation slug or alias
+  augmentation = await getAugmentationBySlug(id);
+  if (!augmentation) {
+    // 2. Check if `id` is an event ID (e.g. "SWE_59350") that has an augmentation
+    const asEventId = id.includes('_') ? id.toUpperCase() : slugToEventId(id);
+    augmentation = await getAugmentationByEventId(asEventId);
+  }
+
+  if (augmentation) {
+    event = await buildAugmentedEvent(augmentation, augmentation.slug);
+  } else {
+    // 3. Regular individual scraper event
+    const eventSlug = id.toLowerCase().replace(/_/g, '-');
+    event = await getEventBySlug(eventSlug);
+  }
+}
+
+const targetSlug = augmentation ? augmentation.slug : event?.slug;
+const detailHref = targetSlug
+  ? `/events/${targetSlug}${isEn && augmentation?.content?.en ? '?lang=en' : ''}`
+  : '/events';
+
+const displayTitle =
+  customTitle ||
+  (isEn && augmentation?.content?.en?.title
+    ? augmentation.content.en.title
+    : augmentation?.content?.sv?.title || event?.name || id);
+
+const displaySubtitle = isEn ? augmentation?.content?.en?.subtitle : augmentation?.content?.sv?.subtitle;
+
+const countryCode = event ? resolveCountryCode(event) : 'SWE';
+const organiserName = event ? getOrganiserName(event) : '';
+const dateRange = event ? formatEventDateRange(event.start_time, event.end_time) : '';
+---
+
+{
+  event ? (
+    <div class="not-prose my-6 rounded-2xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+      {/* Card Header */}
+      <div class="p-5 sm:p-6 bg-gradient-to-br from-blue-50/60 via-white to-white dark:from-slate-800/80 dark:via-slate-900 dark:to-slate-900 border-b border-gray-100 dark:border-slate-800">
+        <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+          <div class="space-y-1.5">
+            <div class="flex flex-wrap items-center gap-2 text-xs font-medium text-muted dark:text-slate-400">
+              <CountryFlag countryCode={countryCode} size="sm" />
+              <span class="inline-flex items-center gap-1 font-semibold text-primary">
+                <Icon name="tabler:calendar" class="w-3.5 h-3.5" />
+                {dateRange}
+              </span>
+              {event.is_date_preliminary && (
+                <span class="px-1.5 py-0.5 text-[11px] font-semibold rounded bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300">
+                  Prel.
+                </span>
+              )}
+              {event.region && (
+                <span class="inline-flex items-center gap-1">
+                  <span>·</span>
+                  <Icon name="tabler:map-pin" class="w-3.5 h-3.5" />
+                  <span>{event.region.replace(/\\n/g, ', ')}</span>
+                </span>
+              )}
+            </div>
+
+            <h3 class="text-xl sm:text-2xl font-bold font-heading text-default leading-snug">
+              <a href={detailHref} class="hover:text-primary transition-colors">
+                {displayTitle}
+              </a>
+            </h3>
+
+            {displaySubtitle && <p class="text-sm text-muted dark:text-slate-300">{displaySubtitle}</p>}
+
+            {organiserName && (
+              <p class="text-xs text-muted dark:text-slate-400 flex items-center gap-1.5 pt-0.5">
+                <Icon name="tabler:users" class="w-3.5 h-3.5 shrink-0" />
+                <span>{organiserName}</span>
+              </p>
+            )}
+          </div>
+
+          <div class="shrink-0 self-start">
+            <a
+              href={detailHref}
+              class="btn btn-primary py-2 px-4 text-xs sm:text-sm font-semibold inline-flex items-center gap-1.5 rounded-xl shadow-sm"
+            >
+              <span>{isEn ? 'Event details & map' : 'Tävlingsinfo & karta'}</span>
+              <Icon name="tabler:arrow-right" class="w-4 h-4" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Races / Stages List */}
+      {event.races && event.races.length > 0 && (
+        <div class="divide-y divide-gray-100 dark:divide-slate-800/80 px-5 sm:px-6 py-2 bg-white dark:bg-slate-900">
+          {event.races.map((race) => {
+            const note = isEn ? race.location_note?.en || race.location_note?.sv : race.location_note?.sv;
+            return (
+              <div class="py-2.5 flex items-center justify-between gap-3 text-sm">
+                <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 min-w-0">
+                  <span class="text-xs font-medium text-muted dark:text-slate-400 whitespace-nowrap w-28 shrink-0">
+                    {formatRaceDate(race.datetimez, { includeYear: false, includeTime: false })}
+                  </span>
+                  <div class="min-w-0">
+                    <span class="font-medium text-default block truncate">{race.name || event.name}</span>
+                    {note && <span class="text-xs text-muted dark:text-slate-400 block truncate">{note}</span>}
+                  </div>
+                </div>
+                <div class="shrink-0">
+                  <DisciplineBadge discipline={race.discipline} />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  ) : (
+    <div class="not-prose my-4 p-4 rounded-xl border border-amber-200 bg-amber-50 dark:bg-amber-950/20 dark:border-amber-800 text-sm text-amber-800 dark:text-amber-300">
+      Tävlingen ({id}) kunde inte hittas i kalendern.
+    </div>
+  )
+}

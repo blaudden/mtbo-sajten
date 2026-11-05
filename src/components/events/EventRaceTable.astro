@@ -1,6 +1,7 @@
 ---
 /**
  * Race table for the event detail page.
+ * Supports stage/race location notes and per-race Eventor links for grouped weekends.
  */
 import type { ScraperEvent } from '~/types/events';
 import { formatRaceDate, getRaceTerminology } from '~/utils/events';
@@ -14,7 +15,16 @@ interface Props {
 const { event } = Astro.props;
 const raceCount = event.races.length;
 const { singular: raceTypeSingular, plural: raceTypePlural } = getRaceTerminology(event);
-const raceHeadingText = raceCount === 1 ? raceTypeSingular : `${raceTypePlural} (${raceCount})`;
+const isStageEvent = raceTypeSingular === 'Etapp';
+const raceHeadingSv = raceCount === 1 ? raceTypeSingular : `${raceTypePlural} (${raceCount})`;
+const raceHeadingEn =
+  raceCount === 1
+    ? isStageEvent
+      ? 'Stage'
+      : 'Competition'
+    : `${isStageEvent ? 'Stages' : 'Competitions'} (${raceCount})`;
+const isGroupedEvent = event.id.startsWith('GRP_');
+const hasPerRaceLinks = isGroupedEvent && event.races.some((r) => Boolean(r.external_url));
 ---
 
 {
@@ -22,7 +32,9 @@ const raceHeadingText = raceCount === 1 ? raceTypeSingular : `${raceTypePlural} 
     <div class="mb-10">
       <h2 class="text-xl font-bold mb-4 flex items-center gap-2 font-heading text-default">
         <Icon name="tabler:flag" class="w-5 h-5 text-primary" />
-        {raceHeadingText}
+        <span data-i18n-sv={raceHeadingSv} data-i18n-en={raceHeadingEn}>
+          {raceHeadingSv}
+        </span>
       </h2>
 
       {/* Desktop table */}
@@ -31,9 +43,36 @@ const raceHeadingText = raceCount === 1 ? raceTypeSingular : `${raceTypePlural} 
           <thead>
             <tr class="border-b-2 border-gray-200 dark:border-gray-700">
               <th class="py-3 px-4 text-xs font-bold uppercase tracking-widest text-muted">#</th>
-              <th class="py-3 px-4 text-xs font-bold uppercase tracking-widest text-muted">Datum</th>
-              <th class="py-3 px-4 text-xs font-bold uppercase tracking-widest text-muted">{raceTypeSingular}</th>
-              <th class="py-3 px-4 text-xs font-bold uppercase tracking-widest text-muted text-center">Distans</th>
+              <th
+                class="py-3 px-4 text-xs font-bold uppercase tracking-widest text-muted"
+                data-i18n-sv="Datum"
+                data-i18n-en="Date"
+              >
+                Datum
+              </th>
+              <th
+                class="py-3 px-4 text-xs font-bold uppercase tracking-widest text-muted"
+                data-i18n-sv={raceTypeSingular}
+                data-i18n-en={isStageEvent ? 'Stage' : 'Competition'}
+              >
+                {raceTypeSingular}
+              </th>
+              <th
+                class="py-3 px-4 text-xs font-bold uppercase tracking-widest text-muted text-center"
+                data-i18n-sv="Distans"
+                data-i18n-en="Discipline"
+              >
+                Distans
+              </th>
+              {hasPerRaceLinks && (
+                <th
+                  class="py-3 px-4 text-xs font-bold uppercase tracking-widest text-muted text-right"
+                  data-i18n-sv="Länk"
+                  data-i18n-en="Link"
+                >
+                  Länk
+                </th>
+              )}
             </tr>
           </thead>
           <tbody class="divide-y divide-gray-100 dark:divide-gray-800">
@@ -43,10 +82,38 @@ const raceHeadingText = raceCount === 1 ? raceTypeSingular : `${raceTypePlural} 
                 <td class="py-3 px-4 text-sm text-muted whitespace-nowrap">
                   {formatRaceDate(race.datetimez, { includeYear: false })}
                 </td>
-                <td class="py-3 px-4 text-sm text-default font-semibold">{race.name || event.name}</td>
+                <td class="py-3 px-4 text-sm text-default">
+                  <div class="font-semibold">{race.name || event.name}</div>
+                  {race.location_note?.sv && (
+                    <div
+                      class="text-xs text-muted dark:text-slate-400 mt-0.5 flex items-center gap-1"
+                      data-i18n-sv={race.location_note.sv}
+                      data-i18n-en={race.location_note.en || race.location_note.sv}
+                    >
+                      <Icon name="tabler:info-circle" class="w-3.5 h-3.5 text-primary/70 shrink-0" />
+                      <span>{race.location_note.sv}</span>
+                    </div>
+                  )}
+                </td>
                 <td class="py-3 px-4 text-center">
                   <DisciplineBadge discipline={race.discipline} />
                 </td>
+                {hasPerRaceLinks && (
+                  <td class="py-3 px-4 text-right whitespace-nowrap">
+                    {race.external_url && (
+                      <a
+                        href={race.external_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center gap-1 text-xs font-medium text-primary hover:underline"
+                        title="Öppna i Eventor"
+                      >
+                        <span>Eventor</span>
+                        <Icon name="tabler:external-link" class="w-3.5 h-3.5" />
+                      </a>
+                    )}
+                  </td>
+                )}
               </tr>
             ))}
           </tbody>
@@ -60,9 +127,31 @@ const raceHeadingText = raceCount === 1 ? raceTypeSingular : `${raceTypePlural} 
             <div class="flex items-start justify-between gap-2">
               <div>
                 <p class="text-sm font-bold text-default">{race.name || event.name}</p>
+                {race.location_note?.sv && (
+                  <p
+                    class="text-xs text-muted dark:text-slate-400 mt-0.5"
+                    data-i18n-sv={race.location_note.sv}
+                    data-i18n-en={race.location_note.en || race.location_note.sv}
+                  >
+                    {race.location_note.sv}
+                  </p>
+                )}
                 <p class="text-xs text-muted mt-1">{formatRaceDate(race.datetimez, { includeYear: false })}</p>
               </div>
-              <DisciplineBadge discipline={race.discipline} />
+              <div class="flex flex-col items-end gap-2 shrink-0">
+                <DisciplineBadge discipline={race.discipline} />
+                {hasPerRaceLinks && race.external_url && (
+                  <a
+                    href={race.external_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1 text-xs font-medium text-primary hover:underline"
+                  >
+                    <span>Eventor</span>
+                    <Icon name="tabler:external-link" class="w-3.5 h-3.5" />
+                  </a>
+                )}
+              </div>
             </div>
           </div>
         ))}

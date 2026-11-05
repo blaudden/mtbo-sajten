@@ -18,6 +18,7 @@ const postCollection = defineCollection({
     title: z.string(),
     subtitle: z.string().optional(),
     excerpt: z.string().optional(),
+    lead: z.string().optional(),
     image: z.string(),
 
     category: z.string().optional(),
@@ -266,7 +267,77 @@ const eventCollection = defineCollection({
   schema: eventSchema,
 });
 
+const augmentationLocaleContentSchema = z.object({
+  title: z.string(),
+  subtitle: z.string().optional(),
+  paragraphs: z.array(z.string()).min(1),
+  registration_info: z
+    .object({
+      title: z.string().optional(),
+      paragraphs: z.array(z.string()).min(1),
+      cta_label: z.string().optional(),
+      cta_url: z.string().optional(),
+    })
+    .optional(),
+  race_notes: z.record(z.string(), z.string()).optional(),
+});
+
+const augmentationSchema = z.object({
+  slug: z.string(),
+  aliases: z.array(z.string()).optional(),
+  event_ids: z.array(z.string()).min(1),
+  start_date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+  end_date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+  organisers: z.array(z.string()).optional(),
+  region: z.string().optional(),
+  website: z.string().optional(),
+  photo_album_url: z.string().optional(),
+  custom_links: z
+    .array(
+      z.object({
+        title: z.string(),
+        url: z.string(),
+        type: z.string().optional(),
+      })
+    )
+    .optional(),
+  content: z.object({
+    sv: augmentationLocaleContentSchema,
+    en: augmentationLocaleContentSchema.optional(),
+  }),
+});
+
+const augmentationCollection = defineCollection({
+  loader: {
+    name: 'mtbo-augmentations-loader',
+    load: async ({ store, logger, parseData, generateDigest }) => {
+      const filePath = path.join(process.cwd(), 'src/data/events/augmentations.json');
+      if (!fs.existsSync(filePath)) {
+        logger.warn(`Augmentations file not found at ${filePath}`);
+        return;
+      }
+
+      const raw = JSON.parse(await fs.promises.readFile(filePath, 'utf-8'));
+      const list = Array.isArray(raw.augmentations) ? raw.augmentations : [];
+
+      store.clear();
+      for (const item of list) {
+        const parsed = await parseData({ id: item.slug, data: item });
+        store.set({
+          id: item.slug,
+          data: parsed,
+          digest: generateDigest(parsed),
+        });
+      }
+
+      logger.info(`MTBO Augmentations Loader: Loaded and validated ${list.length} augmentations.`);
+    },
+  },
+  schema: augmentationSchema,
+});
+
 export const collections = {
   posts: postCollection,
   events: eventCollection,
+  augmentations: augmentationCollection,
 };

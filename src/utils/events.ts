@@ -6,6 +6,7 @@ import type { ScraperEvent, ScraperUmbrellaIndex, RaceWithEvent, ScraperRace } f
 import fs from 'node:fs';
 import path from 'node:path';
 import { getCollection, getEntry, type CollectionEntry } from 'astro:content';
+import { getParentGroupForEvent } from '~/utils/eventAugmentations';
 
 // --- Configuration ---
 
@@ -125,12 +126,18 @@ export function getOrganiserName(event: ScraperEvent): string {
 /** Build the external Eventor URL for this event */
 export function resolveExternalUrl(event: ScraperEvent): string | null {
   const source = getEventSource(event);
-  const baseUrl = getSourceUrls()[source];
+  const sourceUrls = getSourceUrls();
+  const baseUrl = sourceUrls[source] || sourceUrls[event.countryCode];
 
   // Find the Path URL
   const pathUrl = event.urls?.find((u) => u.type === 'Path');
-  if (pathUrl && baseUrl) {
-    return `${baseUrl}/${pathUrl.url}`;
+  if (pathUrl) {
+    if (pathUrl.url.startsWith('http://') || pathUrl.url.startsWith('https://')) {
+      return pathUrl.url;
+    }
+    if (baseUrl) {
+      return `${baseUrl}/${pathUrl.url.replace(/^\//, '')}`;
+    }
   }
 
   // Fall back to Website URL
@@ -446,16 +453,26 @@ export function countryCodeToName(code: string): string {
 // --- Race listing builders ---
 
 /** Flatten events into race-level rows for listing */
-export function buildRaceRows(events: ScraperEvent[]): RaceWithEvent[] {
+export async function buildRaceRows(events: ScraperEvent[]): Promise<RaceWithEvent[]> {
   const rows: RaceWithEvent[] = [];
 
   for (const event of events) {
-    const slug = eventToSlug(event);
+    const parentGroup = await getParentGroupForEvent(event.id);
+    const slug = parentGroup ? parentGroup.slug : eventToSlug(event);
     const countryCode = resolveCountryCode(event);
     const organiser = getOrganiserName(event);
     const externalUrl = resolveExternalUrl(event);
 
-    for (const race of event.races) {
+    for (const rawRace of event.races) {
+      let discipline = rawRace.discipline;
+      if (
+        discipline === 'Long' &&
+        (event.name.toLowerCase().includes('masstart') || event.information?.toLowerCase().includes('masstart'))
+      ) {
+        discipline = 'Mass start';
+      }
+      const race = discipline !== rawRace.discipline ? { ...rawRace, discipline } : rawRace;
+
       rows.push({
         race,
         event,
@@ -502,7 +519,7 @@ export async function getRacesForLanding(
   const allEvents = relevantEvents.map((e) => e.data);
 
   // Build rows and add the isFeatured flag
-  const rows = buildRaceRows(allEvents).map((row) => ({
+  const rows = (await buildRaceRows(allEvents)).map((row) => ({
     ...row,
     isFeatured: row.event.isFeatured,
   }));
@@ -609,12 +626,11 @@ export function getSmartIconInfo(urlStr: string, title?: string, docType?: strin
 
 /**
  * Resolves the Swedish singular and plural terminology for event races.
- * - Sweden (SWE) and Norway (NOR) multi-race events use "Etapp" / "Etapper".
- * - Other/IOF events use "Tävling" / "Tävlingar".
+ * - O-Ringen multi-stage events use "Etapp" / "Etapper".
+ * - Other events use "Tävling" / "Tävlingar".
  */
 export function getRaceTerminology(event: ScraperEvent): { singular: string; plural: string } {
-  const country = resolveCountryCode(event);
-  if (country === 'SWE' || country === 'NOR') {
+  if (event.name.toLowerCase().includes('o-ringen')) {
     return { singular: 'Etapp', plural: 'Etapper' };
   }
   return { singular: 'Tävling', plural: 'Tävlingar' };

@@ -22,7 +22,8 @@
     "fix:eslint": "eslint --fix .",
     "fix:prettier": "prettier -w .",
     "fix:css": "stylelint \"**/*.{css,astro,mdoc}\" --fix",
-    "test": "npm run test:og && npm run test:meta && npm run test:hreflang && npm run test:jsonld && npm run test:maps",
+    "test": "npm run test:og && npm run test:meta && npm run test:hreflang && npm run test:jsonld && npm run test:maps && npm run test:groups",
+    "test:groups": "node tests/verify-event-groups.mjs",
     "test:maps": "node tests/verify-map-rendering.mjs",
     "test:og": "node tests/verify-og-images.mjs",
     "test:meta": "node tests/verify-meta-descriptions.mjs",
@@ -34,6 +35,7 @@
     "submit:indexnow": "node scripts/submit-indexnow.js",
     "import:events": "node scripts/import-events.mjs",
     "generate:og": "node scripts/generate-og-image.mjs",
+    "stamp:hero": "node scripts/stamp-hero-logo.mjs",
     "fetch-youtube": "tsx scripts/fetch-youtube.ts",
     "prepare": "husky"
   },

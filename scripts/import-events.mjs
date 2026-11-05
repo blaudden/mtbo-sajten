@@ -51,15 +51,105 @@ function parseArgs() {
   const args = process.argv.slice(2);
   let scraperPath = null;
   let shouldCommit = false;
+  let ogOnly = false;
   for (let i = 0; i < args.length; i++) {
     if (args[i] === '--scraper-path' && args[i + 1]) {
       scraperPath = path.resolve(args[i + 1]);
       i++;
     } else if (args[i] === '--commit') {
       shouldCommit = true;
+    } else if (args[i] === '--og-only') {
+      ogOnly = true;
     }
   }
-  return { scraperPath, shouldCommit };
+  return { scraperPath, shouldCommit, ogOnly };
+}
+
+async function generateOgImageFile(ogPath, titleText, subtitleStr) {
+  if (fs.existsSync(ogPath)) return;
+
+  const escapeHtml = (unsafe) => (unsafe || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+  const wrapText = (text, maxChars) => {
+    const words = text.split(' ');
+    const lines = [];
+    let currentLine = '';
+
+    words.forEach((word) => {
+      if ((currentLine + word).length > maxChars) {
+        const lastCommaIndex = currentLine.lastIndexOf(',');
+        if (lastCommaIndex !== -1 && lastCommaIndex !== currentLine.length - 1) {
+          const breakPoint = lastCommaIndex + 1;
+          const lineToKeep = currentLine.slice(0, breakPoint).trim();
+          const leftover = currentLine.slice(breakPoint).trim();
+
+          lines.push(lineToKeep);
+          currentLine = leftover ? leftover + ' ' + word + ' ' : word + ' ';
+        } else {
+          if (currentLine) lines.push(currentLine.trim());
+          currentLine = word + ' ';
+        }
+      } else {
+        currentLine += word + ' ';
+      }
+    });
+    if (currentLine) lines.push(currentLine.trim());
+    return lines;
+  };
+
+  const nameLines = wrapText(titleText, 32);
+  const subtitleLines = wrapText(subtitleStr, 50);
+  const startY = 240 + 50;
+
+  const titleTspans = nameLines
+    .map((line, i) => `<tspan x="80" dy="${i === 0 ? 0 : 75}">${escapeHtml(line)}</tspan>`)
+    .join('');
+
+  const subTspans = subtitleLines
+    .map((line, i) => `<tspan x="80" dy="${i === 0 ? 80 : 50}">${escapeHtml(line)}</tspan>`)
+    .join('');
+
+  const svgText = `
+    <svg width="1280" height="720">
+      <style>
+        .title { fill: #ffffff; font-size: 64px; font-family: sans-serif; font-weight: bold; text-anchor: start; }
+        .subtitle { fill: #e2e8f0; font-size: 40px; font-family: sans-serif; text-anchor: start; }
+      </style>
+      <text x="80" y="${startY}" class="title">${titleTspans}</text>
+      <text x="80" y="${startY + (nameLines.length - 1) * 75}" class="subtitle">${subTspans}</text>
+    </svg>
+  `;
+
+  const templatePath = getTemplateForEvent();
+  await sharp(templatePath)
+    .composite([{ input: Buffer.from(svgText) }])
+    .jpeg({ quality: 90, mozjpeg: true })
+    .toFile(ogPath);
+}
+
+async function generateAugmentedOgImages() {
+  const augPath = path.join(DEST_DIR, 'augmentations.json');
+  if (!fs.existsSync(augPath)) return;
+
+  fs.mkdirSync(OG_DEST_DIR, { recursive: true });
+  const raw = JSON.parse(fs.readFileSync(augPath, 'utf-8'));
+  const augmentations = Array.isArray(raw.augmentations) ? raw.augmentations : [];
+
+  for (const aug of augmentations) {
+    const slugs = [aug.slug, ...(aug.aliases || [])];
+    const organiser = aug.organisers && aug.organisers.length > 0 ? aug.organisers.join(', ') : '';
+    const subtitleStr = `${aug.start_date}${organiser ? ' - ' + organiser : ''}`;
+    const titleText = aug.content?.sv?.title || aug.slug;
+
+    for (const slug of slugs) {
+      const ogPath = path.join(OG_DEST_DIR, `${slug}.jpg`);
+      try {
+        await generateOgImageFile(ogPath, titleText, subtitleStr);
+      } catch (err) {
+        console.error(`  ⚠ Failed to create OG image for augmented event ${slug}:`, err.message);
+      }
+    }
+  }
 }
 
 function cloneScraper() {
@@ -218,12 +308,21 @@ async function importData(scraperRoot) {
     console.log(`✓ Copied cups data to ${CUPS_DEST_DIR}`);
   }
 
+  // Ensure augmented / grouped event OG images are also generated
+  await generateAugmentedOgImages();
+
   console.log(`\nDone! Imported ${years.length} years, ${totalEvents} total events.`);
   console.log(`Destination: ${DEST_DIR}`);
 }
 
 // Main
-const { scraperPath, shouldCommit } = parseArgs();
+const { scraperPath, shouldCommit, ogOnly } = parseArgs();
+
+if (ogOnly) {
+  await generateAugmentedOgImages();
+  console.log('✓ Generated OG images for augmented/grouped events.');
+  process.exit(0);
+}
 let scraperRoot;
 let shouldCleanup = false;
 

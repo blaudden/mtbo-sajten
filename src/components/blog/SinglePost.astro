@@ -30,11 +30,13 @@ const { post, url, overlayAnimation } = Astro.props;
       >
         {post.title}
       </h1>
-      <p
-        class="max-w-3xl mx-auto mt-4 mb-8 px-4 sm:px-6 text-xl md:text-2xl text-muted dark:text-slate-400 text-justify"
-      >
-        {post.excerpt}
-      </p>
+      {
+        (post.lead ?? post.excerpt) && (
+          <p class="max-w-3xl mx-auto mt-4 mb-8 px-4 sm:px-6 text-xl md:text-2xl text-muted dark:text-slate-400 text-justify">
+            {post.lead ?? post.excerpt}
+          </p>
+        )
+      }
 
       {
         post.image ? (

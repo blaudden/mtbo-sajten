@@ -49,7 +49,9 @@ draft: false
 evergreen: false
 publishDate: [YYYY-MM-DD]
 excerpt: >-
-  [Factual, grounded summary in Magnus's voice]
+  [Short SEO and card summary in Magnus's voice, max 160 chars]
+lead: >-
+  [Opening paragraph of the article shown above the hero image; no character limit. If omitted, falls back to excerpt.]
 image: ~/assets/images/posts/[slug]/image.png
 category: [valid-category]
 tags: []
@@ -57,6 +59,11 @@ author: Magnus Blåudd
 metadata: {}
 ---
 ```
+
+### Tag Guidelines:
+
+- **Do not invent new tags!** Use only the fixed, established subset of tags (e.g. `svenska-cupen`, `sm-2026`, `svenska-cupen-2026`, `wmtboc26`, `wre`, `regler`, `eventor`, `bulletin`, `training`), or leave empty (`tags: []`).
+- For general Swedish Cup and championship articles, use `svenska-cupen`. Do not invent one-off tags like `svenska-cupen-2027` or `sm-2027`.
 
 ## 5. Hero Image Workflow
 

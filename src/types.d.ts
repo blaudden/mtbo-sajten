@@ -18,8 +18,10 @@ export interface Post {
 
   /**  */
   title: string;
-  /** Optional summary of post content. */
+  /** Optional summary of post content (used for SEO meta description and blog cards). */
   excerpt?: string;
+  /** Optional opening lead paragraph rendered at the top of the article (defaults to excerpt if omitted). */
+  lead?: string;
   /**  */
   image?: string | import('astro').ImageMetadata;
 
