@@ -867,9 +867,17 @@
         {
           "name": "France",
           "country_code": "FRA"
+        },
+        {
+          "name": "AS Samois",
+          "country_code": "FRA"
         }
       ],
       "officials": [
+        {
+          "role": "Contact person",
+          "name": "Andre Hermet"
+        },
         {
           "role": "Contact phone number",
           "name": "+33687322299"
@@ -877,9 +885,28 @@
         {
           "role": "Contact email",
           "name": "enc:DBoGHUgbBgAMFREyDBsOQU4cDg=="
+        },
+        {
+          "role": "Event director",
+          "name": "Frederic Pinsard"
+        },
+        {
+          "role": "Course setter",
+          "name": "Andre Hermet"
+        },
+        {
+          "role": "Event controller",
+          "name": "Bernard Mortellier"
+        },
+        {
+          "role": "Course controller",
+          "name": "Bernard Mortellier"
         }
       ],
-      "classes": [],
+      "classes": [
+        "M21E",
+        "W21E"
+      ],
       "urls": [
         {
           "type": "Path",
@@ -894,18 +921,28 @@
           "last_updated_at": "2026-11-04T05:32:10.807743+00:00"
         }
       ],
-      "documents": [],
+      "documents": [
+        {
+          "type": "Bulletin",
+          "title": "Bulletin 1",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/9155/b2e0d28e-6c3f-41f8-b6f4-3bc08c45ac56/Bulletin 1.Pdf",
+          "published_time": "2026-11-10"
+        }
+      ],
       "information": null,
       "region": null,
-      "punching_system": null,
+      "punching_system": "Sportident",
       "races": [
         {
           "race_number": 1,
           "name": "Nationale Moyenne Distance",
-          "datetimez": "2027-03-27T00:00:00+01:00",
+          "datetimez": "2027-03-27T01:00:00+01:00",
           "discipline": "Other",
           "night_or_day": null,
-          "position": null,
+          "position": {
+            "lat": 48.0296765174179,
+            "lng": 2.73551573090611
+          },
           "areas": [],
           "urls": [],
           "documents": [],
@@ -934,9 +971,17 @@
         {
           "name": "France",
           "country_code": "FRA"
+        },
+        {
+          "name": "AS Samois",
+          "country_code": "FRA"
         }
       ],
       "officials": [
+        {
+          "role": "Contact person",
+          "name": "Andre Hermet"
+        },
         {
           "role": "Contact phone number",
           "name": "+33687322299"
@@ -944,9 +989,24 @@
         {
           "role": "Contact email",
           "name": "enc:DBoGHUgbBgAMFREyDBsOQU4cDg=="
+        },
+        {
+          "role": "Event director",
+          "name": "Frederic Pinsard"
+        },
+        {
+          "role": "Course setter",
+          "name": "Andre Hermet"
+        },
+        {
+          "role": "Event controller",
+          "name": "Bernard Mortellier"
         }
       ],
-      "classes": [],
+      "classes": [
+        "M21E",
+        "W21E"
+      ],
       "urls": [
         {
           "type": "Path",
@@ -961,18 +1021,28 @@
           "last_updated_at": "2026-11-04T05:32:10.807841+00:00"
         }
       ],
-      "documents": [],
+      "documents": [
+        {
+          "type": "Bulletin",
+          "title": "Bulletin 1",
+          "url": "https://eventor-iof-storage.orientering.se/eventdocuments/9156/b3b44157-f874-4d44-aac5-6fac51ceb2be/Bulletin 1.Pdf",
+          "published_time": "2026-11-10"
+        }
+      ],
       "information": null,
       "region": null,
-      "punching_system": null,
+      "punching_system": "Sportident",
       "races": [
         {
           "race_number": 1,
           "name": "Championnat de France Mass Start",
-          "datetimez": "2027-03-29T00:00:00+02:00",
+          "datetimez": "2027-03-29T07:30:00+00:00",
           "discipline": "Other",
           "night_or_day": null,
-          "position": null,
+          "position": {
+            "lat": 48.4319224802551,
+            "lng": 2.63648711484851
+          },
           "areas": [],
           "urls": [],
           "documents": [],
@@ -3014,11 +3084,11 @@
         },
         {
           "role": "Contact phone number",
-          "name": "0768-955969"
+          "name": "+46(0)768-955969"
         },
         {
           "role": "Contact email",
-          "name": "enc:ABUOBkNdAhUTFQtFXzQFAkwaD1wCHwg="
+          "name": "enc:BBoEAG0eFxAOEwQfHVoGBA=="
         },
         {
           "role": "Event director",
@@ -3027,34 +3097,48 @@
         {
           "role": "Course setter",
           "name": "Nils Pistora"
+        },
+        {
+          "role": "Event controller",
+          "name": "Stefan Kollberg"
+        },
+        {
+          "role": "Course controller",
+          "name": "Stefan Kollberg"
         }
       ],
       "classes": [
-        "D12",
-        "D16",
-        "D17-20",
-        "D21",
-        "D45",
-        "D50",
-        "D55",
-        "D60",
-        "D65",
-        "D70",
-        "H14",
-        "H16",
-        "H17-20",
-        "H21",
-        "H40",
-        "H45",
-        "H50",
-        "H55",
-        "H60",
-        "H65",
-        "H70",
-        "H75",
-        "Öppen Kort",
-        "Öppen Lång",
-        "Öppen Mellan"
+        "M14",
+        "M16",
+        "M17-20",
+        "M21",
+        "M35",
+        "M40",
+        "M45",
+        "M50",
+        "M55",
+        "M60",
+        "M65",
+        "M70",
+        "M75",
+        "M80",
+        "M85",
+        "W14",
+        "W16",
+        "W17-20",
+        "W21",
+        "W35",
+        "W40",
+        "W45",
+        "W50",
+        "W55",
+        "W60",
+        "W65",
+        "W70",
+        "W75",
+        "W80",
+        "W85",
+        "WM12"
       ],
       "urls": [
         {
@@ -3062,10 +3146,16 @@
           "url": "Events/Show/60818",
           "title": null,
           "last_updated_at": "2026-10-08T21:02:41.480616+00:00"
+        },
+        {
+          "type": "Website",
+          "url": "http://mtbocamp.dk",
+          "title": null,
+          "last_updated_at": "2026-11-11T05:24:29.156870+00:00"
         }
       ],
       "documents": [],
-      "information": "Denna tävling ingår i Nordisk MTBO-Camp 2027.",
+      "information": "This event is included in Nordisk MTBO-Camp 2027.",
       "region": "Skåne",
       "punching_system": "Sportident",
       "races": [
@@ -3159,11 +3249,11 @@
         },
         {
           "role": "Contact phone number",
-          "name": "0768-955969"
+          "name": "+46 (0)768-955969"
         },
         {
           "role": "Contact email",
-          "name": "enc:ABUOBkNdAhUTFQtFXzQFAkwaD1wCHwg="
+          "name": "enc:BBoEAG0eFxAOEwQfHVoGBA=="
         },
         {
           "role": "Event director",
@@ -3172,19 +3262,38 @@
         {
           "role": "Course setter",
           "name": "Max Svensson"
+        },
+        {
+          "role": "Event controller",
+          "name": "Stefan Kollberg"
+        },
+        {
+          "role": "Course controller",
+          "name": "Stefan Kollberg"
         }
       ],
-      "classes": [],
+      "classes": [
+        "Easy",
+        "Long",
+        "Middle",
+        "Short"
+      ],
       "urls": [
         {
           "type": "Path",
           "url": "Events/Show/60819",
           "title": null,
           "last_updated_at": "2026-10-08T21:02:41.480664+00:00"
+        },
+        {
+          "type": "Website",
+          "url": "http://mtbocamp.dk",
+          "title": null,
+          "last_updated_at": "2026-11-11T05:24:29.156827+00:00"
         }
       ],
       "documents": [],
-      "information": "Denna tävling ingår i Nordisk MTBO-Camp 2027.",
+      "information": "This event is included in Nordisk MTBO-Camp 2027.",
       "region": "Skåne",
       "punching_system": "Sportident",
       "races": [
@@ -3529,12 +3638,8 @@
           "name": "enc:ABUOBkNdAhUTFQtFXzQFAkwaD1wCHwg="
         },
         {
-          "role": "Event directors",
-          "name": "Björn Nilsson"
-        },
-        {
-          "role": "Event directors",
-          "name": "Carina Rydlund"
+          "role": "Event director",
+          "name": "Peo Olsson"
         },
         {
           "role": "Course setters",
@@ -3546,6 +3651,10 @@
         },
         {
           "role": "Event controller",
+          "name": "Stefan Kollberg"
+        },
+        {
+          "role": "Course controller",
           "name": "Stefan Kollberg"
         }
       ],
@@ -4039,6 +4148,159 @@
               ]
             }
           ],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": [],
+      "is_date_preliminary": false
+    },
+    {
+      "id": "SWE_61221",
+      "name": "MTBO Camp training 1",
+      "start_time": "2027-04-15",
+      "end_time": "2027-04-15",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Local"
+      ],
+      "tags": [
+        "FootO"
+      ],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "Lunds OK",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Ingela Andersson"
+        },
+        {
+          "role": "Contact phone number",
+          "name": "+46 (0)768-95 59 69"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:BBoEAG0eFxAOEwQfHVoGBA=="
+        }
+      ],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/61221",
+          "title": null,
+          "last_updated_at": "2026-11-11T05:24:29.156942+00:00"
+        },
+        {
+          "type": "Website",
+          "url": "http://mtbocamp.dk",
+          "title": null,
+          "last_updated_at": "2026-11-11T05:24:29.156942+00:00"
+        }
+      ],
+      "documents": [],
+      "information": "Denna träning ingår i Nordisk MTBO-Camp 2027",
+      "region": "Skåne",
+      "punching_system": "other",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "MTBO Camp training 1",
+          "datetimez": "2027-04-15T13:00:00+02:00",
+          "discipline": "Middle",
+          "night_or_day": "day",
+          "position": {
+            "lat": 55.6249650546946,
+            "lng": 13.7215767656462
+          },
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": [],
+      "is_date_preliminary": false
+    },
+    {
+      "id": "SWE_61222",
+      "name": "MTBO Camp training 2",
+      "start_time": "2027-04-17",
+      "end_time": "2027-04-17",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Local"
+      ],
+      "tags": [
+        "FootO"
+      ],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "BroSö OK",
+          "country_code": "SWE"
+        },
+        {
+          "name": "Lunds OK",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Ingela Andersson"
+        },
+        {
+          "role": "Contact phone number",
+          "name": "+46 (0)768-95 59 69"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:BBoEAG0eFxAOEwQfHVoGBA=="
+        }
+      ],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/61222",
+          "title": null,
+          "last_updated_at": "2026-11-11T05:24:29.156859+00:00"
+        },
+        {
+          "type": "Website",
+          "url": "http://mtbocamp.dk",
+          "title": null,
+          "last_updated_at": "2026-11-11T05:24:29.156859+00:00"
+        }
+      ],
+      "documents": [],
+      "information": "Denna träning ingår i Nordisk MTBO-Camp 2027",
+      "region": "Blekinge\nSkåne",
+      "punching_system": "other",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "MTBO Camp training 2",
+          "datetimez": "2027-04-17T13:00:00+02:00",
+          "discipline": "Middle",
+          "night_or_day": "day",
+          "position": null,
+          "areas": [],
           "urls": [],
           "documents": [],
           "entry_counts": null,

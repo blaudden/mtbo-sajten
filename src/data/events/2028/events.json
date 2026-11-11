@@ -779,6 +779,110 @@
       ],
       "entry_deadlines": [],
       "is_date_preliminary": true
+    },
+    {
+      "id": "IOF_9283",
+      "name": "(Preliminary Dates) - European MTB Orienteering Championships 2028",
+      "start_time": "2028-06-14",
+      "end_time": "2028-06-17",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Regional Championships"
+      ],
+      "tags": [],
+      "form": null,
+      "organisers": [
+        {
+          "name": "Italy",
+          "country_code": "ITA"
+        }
+      ],
+      "officials": [],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/9283",
+          "title": null,
+          "last_updated_at": "2026-11-11T05:24:29.157485+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": null,
+      "punching_system": null,
+      "races": [
+        {
+          "race_number": 1,
+          "name": "(Preliminary Dates) - European MTB Orienteering Championships 2028",
+          "datetimez": "2028-06-14T00:00:00+02:00",
+          "discipline": "Other",
+          "night_or_day": null,
+          "position": null,
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": [],
+      "is_date_preliminary": true
+    },
+    {
+      "id": "IOF_9284",
+      "name": "(Preliminary Dates) - European Junior and Youth MTB Orienteering Championships 2028",
+      "start_time": "2028-06-14",
+      "end_time": "2028-06-17",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Regional Championships"
+      ],
+      "tags": [],
+      "form": null,
+      "organisers": [
+        {
+          "name": "Italy",
+          "country_code": "ITA"
+        }
+      ],
+      "officials": [],
+      "classes": [],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/9284",
+          "title": null,
+          "last_updated_at": "2026-11-11T05:24:29.157476+00:00"
+        }
+      ],
+      "documents": [],
+      "information": null,
+      "region": null,
+      "punching_system": null,
+      "races": [
+        {
+          "race_number": 1,
+          "name": "(Preliminary Dates) - European Junior and Youth MTB Orienteering Championships 2028",
+          "datetimez": "2028-06-14T00:00:00+02:00",
+          "discipline": "Other",
+          "night_or_day": null,
+          "position": null,
+          "areas": [],
+          "urls": [],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
+        }
+      ],
+      "entry_deadlines": [],
+      "is_date_preliminary": true
     }
   ]
 }

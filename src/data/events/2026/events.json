@@ -24317,8 +24317,8 @@
         {
           "type": "Other",
           "title": "ÖVIKSSERIEN 2027",
-          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/60695/6c4f6792-3d86-4f0b-87f5-7fdb0f00088d/ÖVIKSSERIEN 2027.Pdf",
-          "published_time": "2026-10-26"
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/60695/a65dc0dd-48e4-4ae9-a56d-8742c374dbcf/ÖVIKSSERIEN 2027.Pdf",
+          "published_time": "2026-11-10"
         }
       ],
       "information": "Välkomna på en klassiker. Barmarks-Skido. Dvs skidorientering fast utan skidor! Man får endast springa på de på kartan grönmarkerade spåren (stigar) samt \"pistade\" ytor ( skog). Tre banor 2,5 km-4 km- 6 km. Bra träning inför vinterns stora arrangemang med Stora SM för alla i Skellefteå i februari samt VeteranVM i Umeå i mars med  Världscup samt nationell tävling för yngre! Pannlampa på och masstart 18.30. Övriga klubbar också välkomna. Vill man hellre cykla så får man ju det.\nVi ses",
@@ -24555,6 +24555,154 @@
             "e56fa549ef049fd47e4853cde49ac9c16c6a835a71ba3a2c325adfe810b85d72",
             "f57ba00f1da7c31a955f9d3a11c9914aed240600383a6e3c594f351bbc8fc186"
           ]
+        }
+      ],
+      "entry_deadlines": [],
+      "is_date_preliminary": false
+    },
+    {
+      "id": "SWE_61203",
+      "name": "KM MTBO Lunds OK",
+      "start_time": "2026-12-06",
+      "end_time": "2026-12-06",
+      "status": "Sanctioned",
+      "original_status": "Active",
+      "types": [
+        "Club"
+      ],
+      "tags": [],
+      "form": "Individual",
+      "organisers": [
+        {
+          "name": "Lunds OK",
+          "country_code": "SWE"
+        }
+      ],
+      "officials": [
+        {
+          "role": "Contact person",
+          "name": "Nils Pistora"
+        },
+        {
+          "role": "Contact email",
+          "name": "enc:AAAAAG0fFhwFAwoZQwcH"
+        }
+      ],
+      "classes": [
+        "D14",
+        "D16",
+        "D20",
+        "D21",
+        "D40",
+        "D50",
+        "D60",
+        "D70",
+        "H14",
+        "H16",
+        "H20",
+        "H21",
+        "H40",
+        "H50",
+        "H60",
+        "H70"
+      ],
+      "urls": [
+        {
+          "type": "Path",
+          "url": "Events/Show/61203",
+          "title": null,
+          "last_updated_at": "2026-11-11T05:24:29.156770+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "type": "Invitation",
+          "title": "Inbjudan",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/61203/9d32df7b-74d5-4548-98d2-50e65e4cefd5/Inbjudan.Pdf",
+          "published_time": "2026-11-10"
+        }
+      ],
+      "information": "Slutet KM, alltså endast öppet för medlemmar i Lunds OK. Området ska användas senare för MTBO Camp.",
+      "region": "Skåne",
+      "punching_system": "Sportident",
+      "races": [
+        {
+          "race_number": 1,
+          "name": "KM MTBO Lunds OK",
+          "datetimez": "2026-12-06T00:00:00+01:00",
+          "discipline": "Middle",
+          "night_or_day": "day",
+          "position": {
+            "lat": 55.6250281177377,
+            "lng": 13.7215110772074
+          },
+          "areas": [
+            {
+              "lat": 55.6250281177377,
+              "lng": 13.7215110772074,
+              "polygon": [
+                [
+                  55.626599053145895,
+                  13.712858956164522
+                ],
+                [
+                  55.62883450536194,
+                  13.72439831434712
+                ],
+                [
+                  55.628706768757326,
+                  13.750079032676009
+                ],
+                [
+                  55.6217444870903,
+                  13.772705223583129
+                ],
+                [
+                  55.61388648179377,
+                  13.779040554102512
+                ],
+                [
+                  55.60609080946119,
+                  13.774741575197643
+                ],
+                [
+                  55.60174500862459,
+                  13.753812352600491
+                ],
+                [
+                  55.60954154594839,
+                  13.72066499010704
+                ],
+                [
+                  55.61708356425035,
+                  13.704944731911796
+                ],
+                [
+                  55.626599053145895,
+                  13.712858956164522
+                ]
+              ]
+            }
+          ],
+          "urls": [
+            {
+              "type": "EntryList",
+              "url": "/Entry?eventId=61203",
+              "title": "Enter",
+              "last_updated_at": "2026-11-11T05:24:29.156773+00:00"
+            },
+            {
+              "type": "EntryList",
+              "url": "/Events/Entries?eventId=61203&groupBy=EventClass",
+              "title": "All entries",
+              "last_updated_at": "2026-11-11T05:24:29.156773+00:00"
+            }
+          ],
+          "documents": [],
+          "entry_counts": null,
+          "start_counts": null,
+          "result_counts": null,
+          "fingerprints": []
         }
       ],
       "entry_deadlines": [],
