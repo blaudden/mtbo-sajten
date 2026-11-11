@@ -4,7 +4,7 @@
  * Shows: date | flag | race name (linked) | organiser | discipline | external link
  */
 import type { RaceWithEvent } from '~/types/events';
-import { formatRaceDate, getRaceDisplayName, getRaceTimeStatus } from '~/utils/events';
+import { formatRaceDate, formatEventDateRange, getRaceDisplayName, getRaceTimeStatus } from '~/utils/events';
 import CountryFlag from './CountryFlag.astro';
 import DisciplineBadge from './DisciplineBadge.astro';
 import { Icon } from 'astro-icon/components';
@@ -15,7 +15,11 @@ interface Props {
 
 const { race } = Astro.props;
 const { race: r, event, slug, countryCode, organiser, externalUrl } = race;
-const dateStr = formatRaceDate(r.datetimez, { includeTime: false });
+const isMultiDaySpan = event.start_time !== event.end_time && event.races.length === 1;
+const dateStr = isMultiDaySpan
+  ? formatEventDateRange(event.start_time, event.end_time, { includeYear: false })
+  : formatRaceDate(r.datetimez, { includeTime: false });
+const isPreliminary = Boolean(event.is_date_preliminary);
 const raceName = getRaceDisplayName(r, event);
 const detailUrl = `/events/${slug}`;
 const isCanceled = event.status === 'Canceled';
@@ -44,7 +48,16 @@ if (isCanceled) {
 <tr class={rowStyles} data-country={countryCode} data-featured={race.isFeatured ? 'true' : 'false'}>
   {/* Date */}
   <td class={dateCellStyles}>
-    {dateStr}
+    <div class="flex items-center gap-1.5">
+      <span>{dateStr}</span>
+      {
+        isPreliminary && (
+          <span class="px-1.5 py-0.5 text-[10px] font-semibold rounded bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300">
+            Prel.
+          </span>
+        )
+      }
+    </div>
   </td>
 
   {/* Country flag */}

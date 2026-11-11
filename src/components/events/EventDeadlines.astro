@@ -23,7 +23,9 @@ function translateDeadlineType(type: string): string {
     <div class="mb-8 p-5 bg-white dark:bg-slate-900 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
       <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-default font-heading">
         <Icon name="tabler:calendar-time" class="w-5 h-5 text-primary" />
-        Anmälningstider
+        <span data-i18n-sv="Anmälningstider" data-i18n-en="Entry deadlines">
+          Anmälningstider
+        </span>
       </h2>
       <ul class="divide-y divide-gray-100 dark:divide-gray-800">
         {deadlines.map((dl) => (

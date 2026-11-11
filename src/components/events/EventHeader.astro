@@ -1,9 +1,9 @@
 ---
 /**
  * Header section for EventDetail.
- * Shows country flag, status, and event name.
+ * Shows country flag, status, optional in-page language switcher, and event name.
  */
-import type { ScraperEvent } from '~/types/events';
+import type { EventAugmentation, ScraperEvent } from '~/types/events';
 import CountryFlag from './CountryFlag.astro';
 
 interface Props {
@@ -11,35 +11,102 @@ interface Props {
   countryCode: string;
   statusLabel: string;
   statusColor: string;
+  augmentation?: EventAugmentation;
 }
 
-const { event, countryCode, statusLabel, statusColor } = Astro.props;
+const { event, countryCode, statusLabel, statusColor, augmentation } = Astro.props;
 const isCanceled = event.status === 'Canceled';
+const hasEnglish = Boolean(augmentation?.content?.en);
+const svContent = augmentation?.content?.sv;
+const enContent = augmentation?.content?.en;
 ---
 
 <div class="mb-8">
-  <div class="flex items-center gap-3 mb-3">
-    <CountryFlag countryCode={countryCode} size="md" />
-    <span class={`px-2.5 py-0.5 rounded-full text-xs font-medium ${statusColor}`} title={`Status: ${event.status}`}>
-      {statusLabel}
-    </span>
+  <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
+    <div class="flex items-center gap-3">
+      <CountryFlag countryCode={countryCode} size="md" />
+      <span class={`px-2.5 py-0.5 rounded-full text-xs font-medium ${statusColor}`} title={`Status: ${event.status}`}>
+        {statusLabel}
+      </span>
+    </div>
+
+    {
+      hasEnglish && (
+        <div
+          class="inline-flex items-center rounded-xl border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800/80 p-1 text-xs font-semibold shadow-sm"
+          role="group"
+          aria-label="Language switcher"
+        >
+          <button
+            type="button"
+            data-event-lang-btn="sv"
+            aria-pressed="true"
+            class="inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1 transition-colors bg-white dark:bg-slate-900 text-default shadow-sm"
+          >
+            <span aria-hidden="true">🇸🇪</span>
+            <span>Svenska</span>
+          </button>
+          <button
+            type="button"
+            data-event-lang-btn="en"
+            aria-pressed="false"
+            class="inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1 transition-colors text-muted hover:text-default"
+          >
+            <span aria-hidden="true">🇬🇧</span>
+            <span>English</span>
+          </button>
+        </div>
+      )
+    }
   </div>
 
-  <h1
-    class={`text-3xl md:text-5xl font-bold leading-tighter tracking-tighter mb-2 font-heading ${isCanceled ? 'line-through text-muted' : 'text-default'}`}
-  >
-    {event.name}
-  </h1>
   {
-    event.races.length === 1 &&
-      event.races[0].name &&
-      event.races[0].name.toLowerCase() !== event.name.toLowerCase() && (
-        <p class="text-xl md:text-2xl text-muted font-heading font-semibold mt-1">{event.races[0].name}</p>
-      )
+    hasEnglish && svContent && enContent ? (
+      <>
+        <div data-event-lang-section="sv">
+          <h1
+            class={`text-3xl md:text-5xl font-bold leading-tighter tracking-tighter mb-2 font-heading ${isCanceled ? 'line-through text-muted' : 'text-default'}`}
+          >
+            {svContent.title}
+          </h1>
+          {svContent.subtitle && (
+            <p class="text-lg md:text-xl text-muted dark:text-slate-300 font-heading font-medium mt-1">
+              {svContent.subtitle}
+            </p>
+          )}
+        </div>
+        <div data-event-lang-section="en" class="hidden">
+          <h1
+            class={`text-3xl md:text-5xl font-bold leading-tighter tracking-tighter mb-2 font-heading ${isCanceled ? 'line-through text-muted' : 'text-default'}`}
+          >
+            {enContent.title}
+          </h1>
+          {enContent.subtitle && (
+            <p class="text-lg md:text-xl text-muted dark:text-slate-300 font-heading font-medium mt-1">
+              {enContent.subtitle}
+            </p>
+          )}
+        </div>
+      </>
+    ) : (
+      <>
+        <h1
+          class={`text-3xl md:text-5xl font-bold leading-tighter tracking-tighter mb-2 font-heading ${isCanceled ? 'line-through text-muted' : 'text-default'}`}
+        >
+          {event.name}
+        </h1>
+        {event.races.length === 1 &&
+          event.races[0].name &&
+          event.races[0].name.toLowerCase() !== event.name.toLowerCase() && (
+            <p class="text-xl md:text-2xl text-muted font-heading font-semibold mt-1">{event.races[0].name}</p>
+          )}
+      </>
+    )
   }
+
   {
     event.types && event.types.length > 0 && (
-      <div class="flex flex-wrap gap-1.5 mt-2">
+      <div class="flex flex-wrap gap-1.5 mt-3">
         {event.types.map((type) => (
           <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-gray-100 dark:bg-slate-800 text-muted dark:text-slate-400 border border-gray-200 dark:border-gray-700">
             {type}

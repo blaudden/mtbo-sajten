@@ -64,7 +64,9 @@ const polygonsString = JSON.stringify(polygons);
     <div class="mb-10">
       <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-default font-heading">
         <Icon name="tabler:map" class="w-5 h-5 text-primary" />
-        Karta med arena & tävlingsområden
+        <span data-i18n-sv="Karta med arena & tävlingsområden" data-i18n-en="Map with arena & competition areas">
+          Karta med arena & tävlingsområden
+        </span>
       </h2>
       <div class="border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden shadow-sm">
         <LeafletMap markers={markersString} polygons={polygonsString} height="400px" zoom={12} />
