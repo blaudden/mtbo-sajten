@@ -24315,6 +24315,12 @@
       ],
       "documents": [
         {
+          "type": "Bulletin",
+          "title": "PM",
+          "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/60695/3ece692b-5e90-4731-8c4f-0df8c070ec1f/PM.Pdf",
+          "published_time": "2026-11-11"
+        },
+        {
           "type": "Other",
           "title": "ÖVIKSSERIEN 2027",
           "url": "https://eventor-sweden-storage.orientering.se/eventdocuments/60695/a65dc0dd-48e4-4ae9-a56d-8742c374dbcf/ÖVIKSSERIEN 2027.Pdf",
@@ -24379,6 +24385,12 @@
               "url": "/Events/Entries?eventId=60695&groupBy=EventClass",
               "title": "All entries",
               "last_updated_at": "2026-10-08T21:01:09.590454+00:00"
+            },
+            {
+              "type": "Livelox",
+              "url": "/Home/RedirectToLivelox?redirectUrl=/Events/Show/208553",
+              "title": "Map, courses and routes will be available in Livelox",
+              "last_updated_at": "2026-11-12T09:30:03.554014+00:00"
             }
           ],
           "documents": [],
