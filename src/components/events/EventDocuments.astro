@@ -45,6 +45,7 @@ function wrapEventorUrl(url: string): string {
 
 // Add event-level documents
 for (const doc of event.documents || []) {
+  if (doc.url.startsWith('file://')) continue;
   if (doc.type === 'EmbargoMap' && !doc.url.startsWith('http')) continue;
   const resolvedUrl = resolveRelativeUrl(doc.url, event);
   if (!seenUrls.has(resolvedUrl)) {
@@ -65,6 +66,7 @@ for (let i = 0; i < event.races.length; i++) {
   const race = event.races[i];
   const prefix = hasMultipleRaces ? `${term} ${race.race_number || i + 1}: ` : '';
   for (const doc of race.documents || []) {
+    if (doc.url.startsWith('file://')) continue;
     if (doc.type === 'EmbargoMap' && !doc.url.startsWith('http')) continue;
     const resolvedUrl = resolveRelativeUrl(doc.url, event);
     if (!seenUrls.has(resolvedUrl)) {
