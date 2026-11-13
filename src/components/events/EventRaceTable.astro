@@ -42,31 +42,31 @@ const hasPerRaceLinks = isGroupedEvent && event.races.some((r) => Boolean(r.exte
         <table class="w-full text-left">
           <thead>
             <tr class="border-b-2 border-gray-200 dark:border-gray-700">
-              <th class="py-3 px-4 text-xs font-bold uppercase tracking-widest text-muted">#</th>
+              <th class="w-8 py-3 px-2.5 text-xs font-bold uppercase tracking-widest text-muted">#</th>
               <th
-                class="py-3 px-4 text-xs font-bold uppercase tracking-widest text-muted"
+                class="w-px whitespace-nowrap py-3 px-2.5 text-xs font-bold uppercase tracking-widest text-muted"
                 data-i18n-sv="Datum"
                 data-i18n-en="Date"
               >
                 Datum
               </th>
               <th
-                class="py-3 px-4 text-xs font-bold uppercase tracking-widest text-muted"
+                class="py-3 px-3 text-xs font-bold uppercase tracking-widest text-muted"
                 data-i18n-sv={raceTypeSingular}
                 data-i18n-en={isStageEvent ? 'Stage' : 'Competition'}
               >
                 {raceTypeSingular}
               </th>
               <th
-                class="py-3 px-4 text-xs font-bold uppercase tracking-widest text-muted text-center"
-                data-i18n-sv="Distans"
-                data-i18n-en="Discipline"
+                class="w-px whitespace-nowrap py-3 px-2.5 text-xs font-bold uppercase tracking-widest text-muted text-center"
+                data-i18n-sv="Dist."
+                data-i18n-en="Dist."
               >
-                Distans
+                Dist.
               </th>
               {hasPerRaceLinks && (
                 <th
-                  class="py-3 px-4 text-xs font-bold uppercase tracking-widest text-muted text-right"
+                  class="w-px whitespace-nowrap py-3 px-2.5 text-xs font-bold uppercase tracking-widest text-muted text-right"
                   data-i18n-sv="Länk"
                   data-i18n-en="Link"
                 >
@@ -78,11 +78,11 @@ const hasPerRaceLinks = isGroupedEvent && event.races.some((r) => Boolean(r.exte
           <tbody class="divide-y divide-gray-100 dark:divide-gray-800">
             {event.races.map((race) => (
               <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-800/30 transition-colors">
-                <td class="py-3 px-4 text-sm text-muted">{race.race_number}</td>
-                <td class="py-3 px-4 text-sm text-muted whitespace-nowrap">
+                <td class="py-3 px-2.5 text-sm text-muted">{race.race_number}</td>
+                <td class="py-3 px-2.5 text-sm text-muted whitespace-nowrap">
                   {formatRaceDate(race.datetimez, { includeYear: false })}
                 </td>
-                <td class="py-3 px-4 text-sm text-default">
+                <td class="py-3 px-3 text-sm text-default">
                   <div class="font-semibold flex items-center gap-2 flex-wrap">
                     <span>{race.name || event.name}</span>
                     {race.is_wre && (
@@ -105,12 +105,12 @@ const hasPerRaceLinks = isGroupedEvent && event.races.some((r) => Boolean(r.exte
                     </div>
                   )}
                 </td>
-                <td class="py-3 px-4 text-center">
+                <td class="py-3 px-2.5 text-center whitespace-nowrap">
                   <DisciplineBadge discipline={race.discipline} />
                 </td>
                 {hasPerRaceLinks && (
-                  <td class="py-3 px-4 text-right whitespace-nowrap">
-                    <div class="inline-flex items-center justify-end gap-3">
+                  <td class="py-3 px-2.5 text-right whitespace-nowrap">
+                    <div class="inline-flex flex-col items-end gap-1">
                       {race.external_url && (
                         <a
                           href={race.external_url}

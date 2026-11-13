@@ -58,6 +58,8 @@ export interface ScraperRace {
   external_url?: string | null;
   /** Optional companion IOF Eventor URL when this race is paired with a WRE event */
   wre_external_url?: string | null;
+  /** Optional companion IOF Eventor event name when paired with a WRE event */
+  wre_event_name?: string | null;
   /** True when this race is paired with a World Ranking Event (WRE) */
   is_wre?: boolean;
   /** Optional bilingual location/arena note for this specific race/stage */
