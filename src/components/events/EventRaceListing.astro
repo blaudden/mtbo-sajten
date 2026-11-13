@@ -129,6 +129,14 @@ const hasFeatured = races.some((r) => r.isFeatured);
                     <div class="flex items-center gap-2 mb-1">
                       <CountryFlag countryCode={countryCode} />
                       <DisciplineBadge discipline={r.discipline} />
+                      {race.isWre && (
+                        <span
+                          class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300"
+                          title="World Ranking Event"
+                        >
+                          WRE
+                        </span>
+                      )}
                       {isCanceled && <span class="text-xs text-red-500 font-medium uppercase">Inställd</span>}
                     </div>
                     <a

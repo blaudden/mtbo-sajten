@@ -6,7 +6,7 @@ import type { ScraperEvent, ScraperUmbrellaIndex, RaceWithEvent, ScraperRace } f
 import fs from 'node:fs';
 import path from 'node:path';
 import { getCollection, getEntry, type CollectionEntry } from 'astro:content';
-import { getParentGroupForEvent, getWreCompanionEventIds } from '~/utils/eventAugmentations';
+import { getParentGroupForEvent, getWreCompanionEventIds, getWrePrimaryEventIds } from '~/utils/eventAugmentations';
 
 // --- Configuration ---
 
@@ -457,9 +457,11 @@ export function countryCodeToName(code: string): string {
 export async function buildRaceRows(events: ScraperEvent[]): Promise<RaceWithEvent[]> {
   const rows: RaceWithEvent[] = [];
   const wreCompanionIds = await getWreCompanionEventIds();
+  const wrePrimaryIds = await getWrePrimaryEventIds();
 
   for (const event of events) {
     if (wreCompanionIds.has(event.id.toUpperCase())) continue;
+    const isWre = wrePrimaryIds.has(event.id.toUpperCase());
     const parentGroup = await getParentGroupForEvent(event.id);
     const slug = parentGroup ? parentGroup.slug : eventToSlug(event);
     const countryCode = resolveCountryCode(event);
@@ -483,6 +485,7 @@ export async function buildRaceRows(events: ScraperEvent[]): Promise<RaceWithEve
         countryCode,
         organiser,
         externalUrl,
+        ...(isWre ? { isWre: true } : {}),
       });
     }
   }
