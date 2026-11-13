@@ -93,6 +93,7 @@ export function instantiateAugmentedEvent(
     const companionId = aug.wre_pairs?.[ev.id];
     const companionEvent = companionId ? companionEvents.get(companionId.toUpperCase()) : undefined;
     const wreExternalUrl = companionEvent ? resolveExtUrl(companionEvent) : null;
+    const wreEventName = companionEvent?.name || null;
     const isWre = Boolean(companionEvent);
 
     const enrichedRaces: ScraperRace[] = ev.races.map((race) => {
@@ -119,6 +120,7 @@ export function instantiateAugmentedEvent(
         discipline,
         external_url: evExternalUrl,
         ...(wreExternalUrl ? { wre_external_url: wreExternalUrl } : {}),
+        ...(wreEventName ? { wre_event_name: wreEventName } : {}),
         ...(isWre ? { is_wre: true } : {}),
         location_note: svNote || enNote ? { sv: svNote, en: enNote } : race.location_note,
       };
@@ -230,7 +232,7 @@ export function synthesizeCombinedEvent(
     });
   }
 
-  // 1. For multi-event groups, add individual Eventor links for all child events
+  // 1. For multi-event groups, add individual Eventor links for all child events (and paired IOF WRE links)
   if (!isSingleEvent) {
     for (const ev of childEvents) {
       const extUrl = resolveExtUrl(ev);
@@ -241,6 +243,16 @@ export function synthesizeCombinedEvent(
           url: extUrl,
           title: `Eventor: ${ev.name}`,
         });
+      }
+      for (const r of ev.races) {
+        if (r.wre_external_url && !seenUrls.has(r.wre_external_url)) {
+          seenUrls.add(r.wre_external_url);
+          urls.push({
+            type: 'Eventor',
+            url: r.wre_external_url,
+            title: `IOF Eventor (WRE): ${r.wre_event_name || ev.name}`,
+          });
+        }
       }
     }
   }
