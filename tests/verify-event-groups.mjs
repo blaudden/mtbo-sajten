@@ -102,6 +102,28 @@ function verifyEventGroups() {
       }
     }
 
+    // 1b. Verify any wre_pairs keys are owned event_ids and values exist in upstream scraper partitions
+    const companionEvents = new Map();
+    if (aug.wre_pairs) {
+      for (const [primaryId, companionId] of Object.entries(aug.wre_pairs)) {
+        if (!ownedIds.has(primaryId)) {
+          console.error(
+            `❌ [FAIL] Augmentation "${aug.slug}" wre_pairs key "${primaryId}" is not in event_ids [${aug.event_ids.join(', ')}].`
+          );
+          failed = true;
+        }
+        const companionEv = upstreamEvents.get(companionId);
+        if (!companionEv) {
+          console.error(
+            `❌ [FAIL] Augmentation "${aug.slug}" wre_pairs companion "${companionId}" does not exist in upstream events.`
+          );
+          failed = true;
+        } else {
+          companionEvents.set(companionId.toUpperCase(), companionEv);
+        }
+      }
+    }
+
     // 2. Verify all race_notes keys point to an owned event_id or event_id:race_number
     for (const lang of ['sv', 'en']) {
       const notes = aug.content?.[lang]?.race_notes;
@@ -124,7 +146,8 @@ function verifyEventGroups() {
       const augmentedInstance = instantiateAugmentedEvent(
         aug,
         rawChildEvents,
-        (ev) => `https://eventor.orientering.se/Events/Show/${ev.id.replace('SWE_', '')}`
+        (ev) => `https://eventor.orientering.se/Events/Show/${ev.id.replace(/^(SWE|IOF)_/, '')}`,
+        companionEvents
       );
 
       if (!Array.isArray(augmentedInstance.events) || augmentedInstance.events.length !== aug.event_ids.length) {
@@ -276,9 +299,9 @@ function verifyEventGroups() {
       }
     }
 
-    // 5. Verify all non-canonical child event routes redirect (301) to the canonical augmentation page
+    // 5. Verify all non-canonical child event routes (including wre_pairs companions) redirect (301) to the canonical augmentation page
     if (hasDist) {
-      for (const id of aug.event_ids) {
+      for (const id of [...aug.event_ids, ...Object.values(aug.wre_pairs || {})]) {
         const childSlug = id.toLowerCase().replace(/_/g, '-');
         if (childSlug === aug.slug) continue;
 

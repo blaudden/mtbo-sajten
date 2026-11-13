@@ -83,12 +83,18 @@ export function lookupRaceNote(
 export function instantiateAugmentedEvent(
   aug: EventAugmentation,
   rawEvents: ScraperEvent[],
-  resolveExtUrl: (ev: ScraperEvent) => string | null = () => null
+  resolveExtUrl: (ev: ScraperEvent) => string | null = () => null,
+  companionEvents: Map<string, ScraperEvent> = new Map()
 ): AugmentedEvent {
   const isSingleEvent = rawEvents.length === 1;
 
   const ownedEvents: ScraperEvent[] = rawEvents.map((ev) => {
     const evExternalUrl = resolveExtUrl(ev);
+    const companionId = aug.wre_pairs?.[ev.id];
+    const companionEvent = companionId ? companionEvents.get(companionId.toUpperCase()) : undefined;
+    const wreExternalUrl = companionEvent ? resolveExtUrl(companionEvent) : null;
+    const isWre = Boolean(companionEvent);
+
     const enrichedRaces: ScraperRace[] = ev.races.map((race) => {
       let discipline = race.discipline;
       if (
@@ -112,6 +118,8 @@ export function instantiateAugmentedEvent(
         name: raceName,
         discipline,
         external_url: evExternalUrl,
+        ...(wreExternalUrl ? { wre_external_url: wreExternalUrl } : {}),
+        ...(isWre ? { is_wre: true } : {}),
         location_note: svNote || enNote ? { sv: svNote, en: enNote } : race.location_note,
       };
     });

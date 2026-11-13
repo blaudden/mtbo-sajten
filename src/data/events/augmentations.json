@@ -4,6 +4,10 @@
       "slug": "mtbo-camp-skane-2027",
       "aliases": ["mtbo-camp-skaane-2027"],
       "event_ids": ["SWE_60819", "SWE_60818", "SWE_60820", "SWE_60823", "SWE_60824"],
+      "wre_pairs": {
+        "SWE_60823": "IOF_9251",
+        "SWE_60824": "IOF_9252"
+      },
       "start_date": "2027-04-14",
       "end_date": "2027-04-18",
       "organisers": ["Lunds OK", "OK Pan-Kristianstad", "BroSö OK", "Hässleholms OK", "Härlövs IF"],
@@ -22,8 +26,8 @@
             "SWE_60819": "Natt-medel (Lunds OK & OK Pan-Kristianstad)",
             "SWE_60818": "Medeldistans (Lunds OK)",
             "SWE_60820": "Høkeren — Ultralång distans (Lunds OK & OK Pan-Kristianstad)",
-            "SWE_60823": "Svenska Cupen #1 — Långdistans (BroSö OK, Hässleholms OK, Lunds OK)",
-            "SWE_60824": "Svenska Cupen #2 — Medeldistans (Härlövs IF, Hässleholms OK, Lunds OK)"
+            "SWE_60823": "Svenska Cupen #1 (WRE) — Långdistans (BroSö OK, Hässleholms OK, Lunds OK)",
+            "SWE_60824": "Svenska Cupen #2 (WRE) — Medeldistans (Härlövs IF, Hässleholms OK, Lunds OK)"
           }
         },
         "en": {
@@ -38,8 +42,8 @@
             "SWE_60819": "Night middle distance (Lunds OK & OK Pan-Kristianstad)",
             "SWE_60818": "Middle distance (Lunds OK)",
             "SWE_60820": "Høkeren — Ultra-long distance (Lunds OK & OK Pan-Kristianstad)",
-            "SWE_60823": "Swedish Cup #1 — Long distance (BroSö OK, Hässleholms OK, Lunds OK)",
-            "SWE_60824": "Swedish Cup #2 — Middle distance (Härlövs IF, Hässleholms OK, Lunds OK)"
+            "SWE_60823": "Swedish Cup #1 (WRE) — Long distance (BroSö OK, Hässleholms OK, Lunds OK)",
+            "SWE_60824": "Swedish Cup #2 (WRE) — Middle distance (Härlövs IF, Hässleholms OK, Lunds OK)"
           }
         }
       }

@@ -286,6 +286,7 @@ const augmentationSchema = z.object({
   slug: z.string(),
   aliases: z.array(z.string()).optional(),
   event_ids: z.array(z.string()).min(1),
+  wre_pairs: z.record(z.string(), z.string()).optional(),
   start_date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
   end_date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
   organisers: z.array(z.string()).optional(),
