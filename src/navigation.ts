@@ -11,6 +11,7 @@ export const headerData = {
       links: [
         { text: 'Tävlingskalender', href: getPermalink('/events') },
         { text: 'Tävlingsprogram 2027', href: getPermalink('/mtbo-program') },
+        { text: 'Framtidens program', href: getPermalink('/framtidens-program') },
         { text: 'SM i MTBO 2027', href: getPermalink('/svenska-maesterskapen-mtbo') },
         { text: 'MTBO Camp Skåne 2027', href: getPermalink('/events/mtbo-camp-skane-2027') },
         { text: 'O-Ringen Stockholm 2027', href: getPermalink('/mtbo-oringen') },
@@ -49,6 +50,7 @@ export const footerData = {
       links: [
         { text: 'Tävlingskalender', href: getPermalink('/events') },
         { text: 'Tävlingsprogram 2027', href: getPermalink('/mtbo-program') },
+        { text: 'Framtidens program', href: getPermalink('/framtidens-program') },
         { text: 'Svenska Cupen 2027', href: getPermalink('/svenska-cupen-mtbo') },
         { text: 'SM i MTBO 2027', href: getPermalink('/svenska-maesterskapen-mtbo') },
         { text: 'O-Ringen Stockholm 2027', href: getPermalink('/mtbo-oringen') },
