@@ -63,30 +63,30 @@ const enContent = augmentation?.content?.en;
   {
     hasEnglish && svContent && enContent ? (
       <>
-        <div data-event-lang-section="sv">
-          <h1
-            class={`text-3xl md:text-5xl font-bold leading-tighter tracking-tighter mb-2 font-heading ${isCanceled ? 'line-through text-muted' : 'text-default'}`}
-          >
-            {svContent.title}
-          </h1>
-          {svContent.subtitle && (
-            <p class="text-lg md:text-xl text-muted dark:text-slate-300 font-heading font-medium mt-1">
-              {svContent.subtitle}
-            </p>
-          )}
-        </div>
-        <div data-event-lang-section="en" class="hidden">
-          <h1
-            class={`text-3xl md:text-5xl font-bold leading-tighter tracking-tighter mb-2 font-heading ${isCanceled ? 'line-through text-muted' : 'text-default'}`}
-          >
+        <h1
+          class={`text-3xl md:text-5xl font-bold leading-tighter tracking-tighter mb-2 font-heading ${isCanceled ? 'line-through text-muted' : 'text-default'}`}
+        >
+          <span data-event-lang-section="sv">{svContent.title}</span>
+          <span data-event-lang-section="en" class="hidden">
             {enContent.title}
-          </h1>
-          {enContent.subtitle && (
-            <p class="text-lg md:text-xl text-muted dark:text-slate-300 font-heading font-medium mt-1">
-              {enContent.subtitle}
-            </p>
-          )}
-        </div>
+          </span>
+        </h1>
+        {svContent.subtitle && (
+          <p
+            data-event-lang-section="sv"
+            class="text-lg md:text-xl text-muted dark:text-slate-300 font-heading font-medium mt-1"
+          >
+            {svContent.subtitle}
+          </p>
+        )}
+        {enContent.subtitle && (
+          <p
+            data-event-lang-section="en"
+            class="hidden text-lg md:text-xl text-muted dark:text-slate-300 font-heading font-medium mt-1"
+          >
+            {enContent.subtitle}
+          </p>
+        )}
       </>
     ) : (
       <>
