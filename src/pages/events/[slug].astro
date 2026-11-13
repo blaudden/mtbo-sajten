@@ -8,18 +8,14 @@ import { Icon } from 'astro-icon/components';
 
 import type { MetaData } from '~/types';
 import { loadAllEvents, resolveCountryCode, formatEventDateRange, countryCodeToName } from '~/utils/events';
-import { getAllAugmentedAndEventSlugs, resolveEventPage } from '~/utils/eventAugmentations';
+import { getCanonicalEventPageSlugs, resolveEventPage } from '~/utils/eventAugmentations';
 import { generateEventJsonLd } from '~/utils/jsonLd';
 import { getCanonical } from '~/utils/permalinks';
 
 export async function getStaticPaths() {
   const allEvents = await loadAllEvents();
-  const augSlugs = await getAllAugmentedAndEventSlugs();
-  const slugSet = new Set<string>(allEvents.map((event) => event.slug));
-  for (const s of augSlugs) {
-    slugSet.add(s);
-  }
-  return Array.from(slugSet).map((slug) => ({
+  const canonicalSlugs = await getCanonicalEventPageSlugs(allEvents);
+  return canonicalSlugs.map((slug) => ({
     params: { slug },
   }));
 }

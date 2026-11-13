@@ -149,17 +149,28 @@ export async function resolveEventPage(slug: string): Promise<
 }
 
 /**
- * Return all static slugs to generate for /events/[slug], including:
- * - All canonical augmentation/group slugs and their aliases
+ * Return only the canonical slugs to generate as static HTML pages for /events/[slug]:
+ * - Primary canonical augmentation/group slugs
+ * - Individual event slugs that are NOT owned by any augmentation (owned child IDs and aliases
+ *   are handled via HTTP 301 redirects in astro.config.ts).
  */
-export async function getAllAugmentedAndEventSlugs(): Promise<string[]> {
-  const slugs = new Set<string>();
-  const all = await loadAllAugmentations();
-  for (const aug of all) {
-    slugs.add(aug.slug);
-    for (const alias of aug.aliases || []) {
-      slugs.add(alias);
+export async function getCanonicalEventPageSlugs(allEvents: ScraperEvent[]): Promise<string[]> {
+  const allAugs = await loadAllAugmentations();
+  const ownedEventIds = new Set<string>();
+  const slugSet = new Set<string>();
+
+  for (const aug of allAugs) {
+    slugSet.add(aug.slug);
+    for (const id of aug.event_ids) {
+      ownedEventIds.add(id.toUpperCase());
     }
   }
-  return Array.from(slugs);
+
+  for (const event of allEvents) {
+    if (!ownedEventIds.has(event.id.toUpperCase())) {
+      slugSet.add(event.slug);
+    }
+  }
+
+  return Array.from(slugSet);
 }

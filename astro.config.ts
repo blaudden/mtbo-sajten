@@ -90,6 +90,38 @@ const getExcludedSlugs = () => {
 
 const excludedSlugs = getExcludedSlugs();
 
+// Build 301 redirects from non-canonical event child slugs and aliases to their canonical augmentation page
+const getEventAugmentationRedirects = (): Record<string, string> => {
+  const augPath = './src/data/events/augmentations.json';
+  const result: Record<string, string> = {};
+  if (!fs.existsSync(augPath)) return result;
+
+  try {
+    const parsed = JSON.parse(fs.readFileSync(augPath, 'utf8')) as {
+      augmentations?: Array<{ slug: string; aliases?: string[]; event_ids?: string[] }>;
+    };
+    for (const aug of parsed.augmentations || []) {
+      const target = `/events/${aug.slug}`;
+      for (const alias of aug.aliases || []) {
+        if (alias && alias !== aug.slug) {
+          result[`/events/${alias}`] = target;
+        }
+      }
+      for (const id of aug.event_ids || []) {
+        const childSlug = id.toLowerCase().replace(/_/g, '-');
+        if (childSlug && childSlug !== aug.slug) {
+          result[`/events/${childSlug}`] = target;
+        }
+      }
+    }
+  } catch {
+    // ignore malformed json
+  }
+  return result;
+};
+
+const eventAugmentationRedirects = getEventAugmentationRedirects();
+
 const getSite = () => {
   if (process.env.CONTEXT === 'deploy-preview' || process.env.CONTEXT === 'branch-deploy') {
     return process.env.DEPLOY_PRIME_URL || SITE.site;
@@ -195,6 +227,7 @@ export default defineConfig({
   },
 
   redirects: {
+    ...eventAugmentationRedirects,
     '/en/mtbo-': '/en/mtbo-oringen-smalandskusten-2024',
     '/mtbo-': '/',
     '/ny-': '/',
