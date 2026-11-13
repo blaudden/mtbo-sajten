@@ -56,6 +56,10 @@ export interface ScraperRace {
   result_counts?: ScraperCounts | null;
   /** Optional direct external URL (e.g. Eventor link) for this specific race in a grouped arrangement */
   external_url?: string | null;
+  /** Optional companion IOF Eventor URL when this race is paired with a WRE event */
+  wre_external_url?: string | null;
+  /** True when this race is paired with a World Ranking Event (WRE) */
+  is_wre?: boolean;
   /** Optional bilingual location/arena note for this specific race/stage */
   location_note?: {
     sv?: string;
@@ -180,6 +184,8 @@ export interface EventAugmentation {
   aliases?: string[];
   /** Upstream scraper event IDs belonging to this weekend/event */
   event_ids: string[];
+  /** Optional mapping of primary event ID -> companion WRE event ID (e.g. { "SWE_60823": "IOF_9251" }) */
+  wre_pairs?: Record<string, string>;
   start_date: string;
   end_date: string;
   organisers?: string[];

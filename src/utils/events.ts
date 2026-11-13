@@ -6,7 +6,7 @@ import type { ScraperEvent, ScraperUmbrellaIndex, RaceWithEvent, ScraperRace } f
 import fs from 'node:fs';
 import path from 'node:path';
 import { getCollection, getEntry, type CollectionEntry } from 'astro:content';
-import { getParentGroupForEvent } from '~/utils/eventAugmentations';
+import { getParentGroupForEvent, getWreCompanionEventIds } from '~/utils/eventAugmentations';
 
 // --- Configuration ---
 
@@ -456,8 +456,10 @@ export function countryCodeToName(code: string): string {
 /** Flatten events into race-level rows for listing */
 export async function buildRaceRows(events: ScraperEvent[]): Promise<RaceWithEvent[]> {
   const rows: RaceWithEvent[] = [];
+  const wreCompanionIds = await getWreCompanionEventIds();
 
   for (const event of events) {
+    if (wreCompanionIds.has(event.id.toUpperCase())) continue;
     const parentGroup = await getParentGroupForEvent(event.id);
     const slug = parentGroup ? parentGroup.slug : eventToSlug(event);
     const countryCode = resolveCountryCode(event);

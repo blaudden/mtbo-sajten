@@ -98,7 +98,12 @@ const getEventAugmentationRedirects = (): Record<string, string> => {
 
   try {
     const parsed = JSON.parse(fs.readFileSync(augPath, 'utf8')) as {
-      augmentations?: Array<{ slug: string; aliases?: string[]; event_ids?: string[] }>;
+      augmentations?: Array<{
+        slug: string;
+        aliases?: string[];
+        event_ids?: string[];
+        wre_pairs?: Record<string, string>;
+      }>;
     };
     for (const aug of parsed.augmentations || []) {
       const target = `/events/${aug.slug}`;
@@ -107,7 +112,7 @@ const getEventAugmentationRedirects = (): Record<string, string> => {
           result[`/events/${alias}`] = target;
         }
       }
-      for (const id of aug.event_ids || []) {
+      for (const id of [...(aug.event_ids || []), ...Object.values(aug.wre_pairs || {})]) {
         const childSlug = id.toLowerCase().replace(/_/g, '-');
         if (childSlug && childSlug !== aug.slug) {
           result[`/events/${childSlug}`] = target;

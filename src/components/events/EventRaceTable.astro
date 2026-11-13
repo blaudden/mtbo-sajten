@@ -83,7 +83,17 @@ const hasPerRaceLinks = isGroupedEvent && event.races.some((r) => Boolean(r.exte
                   {formatRaceDate(race.datetimez, { includeYear: false })}
                 </td>
                 <td class="py-3 px-4 text-sm text-default">
-                  <div class="font-semibold">{race.name || event.name}</div>
+                  <div class="font-semibold flex items-center gap-2 flex-wrap">
+                    <span>{race.name || event.name}</span>
+                    {race.is_wre && (
+                      <span
+                        class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300"
+                        title="World Ranking Event"
+                      >
+                        WRE
+                      </span>
+                    )}
+                  </div>
                   {race.location_note?.sv && (
                     <div
                       class="text-xs text-muted dark:text-slate-400 mt-0.5 flex items-center gap-1"
@@ -100,18 +110,32 @@ const hasPerRaceLinks = isGroupedEvent && event.races.some((r) => Boolean(r.exte
                 </td>
                 {hasPerRaceLinks && (
                   <td class="py-3 px-4 text-right whitespace-nowrap">
-                    {race.external_url && (
-                      <a
-                        href={race.external_url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="inline-flex items-center gap-1 text-xs font-medium text-primary hover:underline"
-                        title="Öppna i Eventor"
-                      >
-                        <span>Eventor</span>
-                        <Icon name="tabler:external-link" class="w-3.5 h-3.5" />
-                      </a>
-                    )}
+                    <div class="inline-flex items-center justify-end gap-3">
+                      {race.external_url && (
+                        <a
+                          href={race.external_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="inline-flex items-center gap-1 text-xs font-medium text-primary hover:underline"
+                          title="Öppna i Eventor"
+                        >
+                          <span>Eventor</span>
+                          <Icon name="tabler:external-link" class="w-3.5 h-3.5" />
+                        </a>
+                      )}
+                      {race.wre_external_url && (
+                        <a
+                          href={race.wre_external_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="inline-flex items-center gap-1 text-xs font-medium text-amber-700 dark:text-amber-300 hover:underline"
+                          title="Öppna WRE i IOF Eventor"
+                        >
+                          <span>IOF Eventor</span>
+                          <Icon name="tabler:external-link" class="w-3.5 h-3.5" />
+                        </a>
+                      )}
+                    </div>
                   </td>
                 )}
               </tr>
@@ -126,7 +150,17 @@ const hasPerRaceLinks = isGroupedEvent && event.races.some((r) => Boolean(r.exte
           <div class="border border-gray-200 dark:border-gray-700 rounded-xl p-4 bg-white dark:bg-slate-900 shadow-sm">
             <div class="flex items-start justify-between gap-2">
               <div>
-                <p class="text-sm font-bold text-default">{race.name || event.name}</p>
+                <p class="text-sm font-bold text-default flex items-center gap-2 flex-wrap">
+                  <span>{race.name || event.name}</span>
+                  {race.is_wre && (
+                    <span
+                      class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300"
+                      title="World Ranking Event"
+                    >
+                      WRE
+                    </span>
+                  )}
+                </p>
                 {race.location_note?.sv && (
                   <p
                     class="text-xs text-muted dark:text-slate-400 mt-0.5"
@@ -140,16 +174,31 @@ const hasPerRaceLinks = isGroupedEvent && event.races.some((r) => Boolean(r.exte
               </div>
               <div class="flex flex-col items-end gap-2 shrink-0">
                 <DisciplineBadge discipline={race.discipline} />
-                {hasPerRaceLinks && race.external_url && (
-                  <a
-                    href={race.external_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="inline-flex items-center gap-1 text-xs font-medium text-primary hover:underline"
-                  >
-                    <span>Eventor</span>
-                    <Icon name="tabler:external-link" class="w-3.5 h-3.5" />
-                  </a>
+                {hasPerRaceLinks && (race.external_url || race.wre_external_url) && (
+                  <div class="flex items-center gap-3">
+                    {race.external_url && (
+                      <a
+                        href={race.external_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center gap-1 text-xs font-medium text-primary hover:underline"
+                      >
+                        <span>Eventor</span>
+                        <Icon name="tabler:external-link" class="w-3.5 h-3.5" />
+                      </a>
+                    )}
+                    {race.wre_external_url && (
+                      <a
+                        href={race.wre_external_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center gap-1 text-xs font-medium text-amber-700 dark:text-amber-300 hover:underline"
+                      >
+                        <span>IOF Eventor</span>
+                        <Icon name="tabler:external-link" class="w-3.5 h-3.5" />
+                      </a>
+                    )}
+                  </div>
                 )}
               </div>
             </div>

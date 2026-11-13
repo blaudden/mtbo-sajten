@@ -27,13 +27,31 @@ export async function getAugmentationBySlug(slug: string): Promise<EventAugmenta
   );
 }
 
+function getAllOwnedEventIds(aug: EventAugmentation): string[] {
+  return [...aug.event_ids, ...Object.values(aug.wre_pairs || {})];
+}
+
 /**
- * Find an augmentation that includes a given scraper event ID (e.g. "SWE_57010").
+ * Return the set of uppercase companion WRE event IDs (values of `wre_pairs`) across all augmentations.
+ */
+export async function getWreCompanionEventIds(): Promise<Set<string>> {
+  const all = await loadAllAugmentations();
+  const ids = new Set<string>();
+  for (const aug of all) {
+    for (const id of Object.values(aug.wre_pairs || {})) {
+      ids.add(id.toUpperCase());
+    }
+  }
+  return ids;
+}
+
+/**
+ * Find an augmentation that includes a given scraper event ID (e.g. "SWE_57010" or paired "IOF_9251").
  */
 export async function getAugmentationByEventId(eventId: string): Promise<EventAugmentation | undefined> {
   const upperId = eventId.toUpperCase();
   const all = await loadAllAugmentations();
-  return all.find((aug) => aug.event_ids.some((id) => id.toUpperCase() === upperId));
+  return all.find((aug) => getAllOwnedEventIds(aug).some((id) => id.toUpperCase() === upperId));
 }
 
 /**
@@ -73,7 +91,15 @@ export async function resolveAugmentedEvent(aug: EventAugmentation): Promise<Aug
     return undefined;
   }
 
-  return instantiateAugmentedEvent(aug, rawEvents, resolveExternalUrl);
+  const companionEvents = new Map<string, ScraperEvent>();
+  for (const companionId of Object.values(aug.wre_pairs || {})) {
+    const ev = await getEventById(companionId);
+    if (ev) {
+      companionEvents.set(companionId.toUpperCase(), ev);
+    }
+  }
+
+  return instantiateAugmentedEvent(aug, rawEvents, resolveExternalUrl, companionEvents);
 }
 
 /**
@@ -161,7 +187,7 @@ export async function getCanonicalEventPageSlugs(allEvents: ScraperEvent[]): Pro
 
   for (const aug of allAugs) {
     slugSet.add(aug.slug);
-    for (const id of aug.event_ids) {
+    for (const id of getAllOwnedEventIds(aug)) {
       ownedEventIds.add(id.toUpperCase());
     }
   }
