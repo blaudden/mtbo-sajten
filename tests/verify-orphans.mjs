@@ -64,21 +64,29 @@ function verifyOrphans() {
     let match;
     while ((match = anchorRegex.exec(html)) !== null) {
       const rawHref = match[2].trim();
-      if (!rawHref || rawHref.startsWith('#') || rawHref.startsWith('mailto:') || rawHref.startsWith('tel:')) {
+      const lowerHref = rawHref.toLowerCase();
+      if (
+        !rawHref ||
+        rawHref.startsWith('#') ||
+        lowerHref.startsWith('mailto:') ||
+        lowerHref.startsWith('tel:') ||
+        lowerHref.startsWith('javascript:') ||
+        lowerHref.startsWith('data:') ||
+        lowerHref.startsWith('vbscript:') ||
+        lowerHref.startsWith('file://')
+      ) {
         continue;
       }
 
       let pathPart;
-      if (rawHref.startsWith('http://') || rawHref.startsWith('https://')) {
+      if (lowerHref.startsWith('http://') || lowerHref.startsWith('https://') || rawHref.startsWith('//')) {
         try {
-          const parsed = new URL(rawHref);
+          const parsed = new URL(rawHref, SITE_ORIGIN);
           if (parsed.origin !== SITE_ORIGIN) continue;
           pathPart = parsed.pathname;
         } catch {
           continue;
         }
-      } else if (rawHref.startsWith('javascript:') || rawHref.startsWith('file://')) {
-        continue;
       } else {
         pathPart = rawHref.split('#')[0].split('?')[0];
       }

@@ -159,7 +159,7 @@ export function resolveExternalUrl(event: ScraperEvent): string | null {
  * If URL is already absolute, returns it as-is.
  */
 export function resolveRelativeUrl(url: string, event: ScraperEvent): string {
-  if (!url || url.startsWith('http')) return url;
+  if (!url || url.startsWith('http') || url.startsWith('file://')) return url;
 
   const source = getEventSource(event);
   const baseUrl = getSourceUrls()[source];

@@ -86,27 +86,34 @@ function verifyInternalLinks() {
     let match;
     while ((match = anchorRegex.exec(html)) !== null) {
       const rawHref = match[2].trim();
-      if (!rawHref || rawHref.startsWith('#') || rawHref.startsWith('mailto:') || rawHref.startsWith('tel:')) {
+      const lowerHref = rawHref.toLowerCase();
+      if (
+        !rawHref ||
+        rawHref.startsWith('#') ||
+        lowerHref.startsWith('mailto:') ||
+        lowerHref.startsWith('tel:') ||
+        lowerHref.startsWith('javascript:') ||
+        lowerHref.startsWith('data:') ||
+        lowerHref.startsWith('vbscript:')
+      ) {
         continue;
       }
 
-      if (rawHref.startsWith('file://')) {
+      if (lowerHref.startsWith('file://')) {
         errors.push({ source: file, ref: rawHref, reason: 'Local file:// URL leaked into HTML' });
         continue;
       }
 
       let pathPart;
-      if (rawHref.startsWith('http://') || rawHref.startsWith('https://')) {
+      if (lowerHref.startsWith('http://') || lowerHref.startsWith('https://') || rawHref.startsWith('//')) {
         try {
-          const parsed = new URL(rawHref);
+          const parsed = new URL(rawHref, SITE_ORIGIN);
           if (parsed.origin !== SITE_ORIGIN) continue;
           pathPart = parsed.pathname;
         } catch {
           // Malformed external URLs from upstream scraper data are out of scope for internal link checks
           continue;
         }
-      } else if (rawHref.startsWith('javascript:')) {
-        continue;
       } else {
         pathPart = rawHref.split('#')[0].split('?')[0];
       }

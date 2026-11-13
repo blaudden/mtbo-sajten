@@ -66,7 +66,10 @@ function verifySitemap() {
       }
 
       const content = readFileSync(filePath, 'utf-8');
-      if (/<meta[^>]+name=["']robots["'][^>]+content=["'][^"']*noindex/i.test(content)) {
+      const hasNoindex = (content.match(/<meta\b[^>]*>/gi) || []).some(
+        (tag) => /\bname=["']robots["']/i.test(tag) && /\bcontent=["'][^"']*noindex/i.test(tag)
+      );
+      if (hasNoindex) {
         console.error(`❌ [FAIL] ${url}: Found in sitemap but has noindex tag.`);
         failed = true;
       }
@@ -79,8 +82,9 @@ function verifySitemap() {
         console.error(`❌ [FAIL] ${url}: Missing <link rel="canonical"> tag.`);
         failed = true;
       } else {
-        const canonicalPath = normalizePath(new URL(canonicalMatch[1], parsedUrl.origin).pathname);
-        if (canonicalPath !== urlPath) {
+        const canonicalUrl = new URL(canonicalMatch[1], parsedUrl.origin);
+        const canonicalPath = normalizePath(canonicalUrl.pathname);
+        if (canonicalUrl.origin !== parsedUrl.origin || canonicalPath !== urlPath) {
           console.error(`❌ [FAIL] ${url}: Non-canonical page in sitemap! Canonical points to "${canonicalMatch[1]}".`);
           failed = true;
         }
