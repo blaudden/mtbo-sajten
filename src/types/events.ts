@@ -151,6 +151,8 @@ export interface RaceWithEvent {
   externalUrl: string | null;
   /** Whether the event is featured on the landing page default view */
   isFeatured?: boolean;
+  /** Whether this race is paired with a World Ranking Event (WRE) */
+  isWre?: boolean;
 }
 
 /** Page type for the catch-all route */

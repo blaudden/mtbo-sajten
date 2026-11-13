@@ -46,6 +46,20 @@ export async function getWreCompanionEventIds(): Promise<Set<string>> {
 }
 
 /**
+ * Return the set of uppercase primary event IDs (keys of `wre_pairs`) across all augmentations.
+ */
+export async function getWrePrimaryEventIds(): Promise<Set<string>> {
+  const all = await loadAllAugmentations();
+  const ids = new Set<string>();
+  for (const aug of all) {
+    for (const id of Object.keys(aug.wre_pairs || {})) {
+      ids.add(id.toUpperCase());
+    }
+  }
+  return ids;
+}
+
+/**
  * Find an augmentation that includes a given scraper event ID (e.g. "SWE_57010" or paired "IOF_9251").
  */
 export async function getAugmentationByEventId(eventId: string): Promise<EventAugmentation | undefined> {
