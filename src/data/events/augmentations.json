@@ -145,8 +145,8 @@
       }
     },
     {
-      "slug": "swe-59350",
-      "aliases": ["oringen-stockholm-2027"],
+      "slug": "oringen-stockholm-2027",
+      "aliases": ["swe-59350"],
       "event_ids": ["SWE_59350"],
       "start_date": "2027-07-26",
       "end_date": "2027-07-28",

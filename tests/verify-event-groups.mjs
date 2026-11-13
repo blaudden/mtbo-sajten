@@ -10,6 +10,22 @@ const AUGMENTATIONS_PATH = './src/data/events/augmentations.json';
 const EVENTS_DIR = './src/data/events';
 const OG_DIR = './public/og-images/events';
 const DIST_EVENTS_DIR = './dist/events';
+const DIST_REDIRECTS_PATH = './dist/_redirects';
+
+function loadRedirectsMap() {
+  const map = new Map();
+  if (!existsSync(DIST_REDIRECTS_PATH)) return map;
+  const lines = readFileSync(DIST_REDIRECTS_PATH, 'utf-8').split('\n');
+  for (const line of lines) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith('#')) continue;
+    const parts = trimmed.split(/\s+/);
+    if (parts.length >= 3) {
+      map.set(parts[0], { dest: parts[1], status: parts[2] });
+    }
+  }
+  return map;
+}
 
 /**
  * Load all upstream ScraperEvent objects indexed by event.id (e.g. "SWE_60899", "IOF_8277").
@@ -52,6 +68,7 @@ function verifyEventGroups() {
 
   const upstreamEvents = loadAllUpstreamEventsById();
   const hasDist = existsSync(DIST_EVENTS_DIR);
+  const redirectsMap = hasDist ? loadRedirectsMap() : new Map();
   let failed = false;
 
   console.log(`Verifying ${augmentations.length} augmented/grouped event configurations...`);
@@ -184,118 +201,101 @@ function verifyEventGroups() {
       }
     }
 
-    // 4. Verify OG images and built HTML pages exist for canonical slug and all aliases
-    const allSlugs = [aug.slug, ...(aug.aliases || [])];
-    for (const slug of allSlugs) {
-      const ogFile = join(OG_DIR, `${slug}.jpg`);
-      if (!existsSync(ogFile)) {
-        console.error(`❌ [FAIL] Missing OG image for augmented slug "${slug}" at ${ogFile}.`);
+    // 4. Verify OG image and built HTML page exist for the canonical slug,
+    //    and all aliases redirect (301) to the canonical slug without generating duplicate HTML.
+    const ogFile = join(OG_DIR, `${aug.slug}.jpg`);
+    if (!existsSync(ogFile)) {
+      console.error(`❌ [FAIL] Missing OG image for augmented slug "${aug.slug}" at ${ogFile}.`);
+      failed = true;
+    }
+
+    if (hasDist) {
+      const htmlFile = join(DIST_EVENTS_DIR, aug.slug, 'index.html');
+      if (!existsSync(htmlFile)) {
+        console.error(`❌ [FAIL] Missing built HTML page for augmented slug "${aug.slug}" at ${htmlFile}.`);
         failed = true;
+      } else {
+        const html = readFileSync(htmlFile, 'utf-8')
+          .replace(/&#39;/g, "'")
+          .replace(/&quot;/g, '"')
+          .replace(/&lt;/g, '<')
+          .replace(/&gt;/g, '>')
+          .replace(/&amp;/g, '&');
+        if (!html.includes(aug.content.sv.title)) {
+          console.error(`❌ [FAIL] Built page ${htmlFile} does not contain Swedish title "${aug.content.sv.title}".`);
+          failed = true;
+        }
+        if (aug.content.en?.title) {
+          if (!html.includes(aug.content.en.title)) {
+            console.error(`❌ [FAIL] Built page ${htmlFile} does not contain English title "${aug.content.en.title}".`);
+            failed = true;
+          }
+          if (!html.includes('data-event-lang-btn="en"')) {
+            console.error(`❌ [FAIL] Built page ${htmlFile} is missing the in-page English language switcher button.`);
+            failed = true;
+          }
+        }
+
+        // Issue 1: "Gå till anmälan" must link to Eventor (for Eventor-backed events)
+        const primaryChildExtUrl = rawChildEvents[0].urls?.find((u) => u.type === 'Path')
+          ? `https://eventor.orientering.se/${rawChildEvents[0].urls.find((u) => u.type === 'Path').url.replace(/^\//, '')}`
+          : null;
+        if (primaryChildExtUrl) {
+          if (!html.includes(`href="${primaryChildExtUrl}"`)) {
+            console.error(
+              `❌ [FAIL] Built page ${htmlFile} does not link "Gå till anmälan" to primary Eventor URL "${primaryChildExtUrl}".`
+            );
+            failed = true;
+          }
+          if (html.includes('anmäl dig till tävlingen på tävlingens webbplats.')) {
+            console.error(`❌ [FAIL] Built page ${htmlFile} says "på tävlingens webbplats" instead of "på Eventor".`);
+            failed = true;
+          }
+        }
+
+        // Issue 1: No generic "Website" label in links
+        if (html.includes('>Website<') || html.includes('>website<')) {
+          console.error(`❌ [FAIL] Built page ${htmlFile} renders generic link text "Website".`);
+          failed = true;
+        }
       }
 
-      if (hasDist) {
-        const htmlFile = join(DIST_EVENTS_DIR, slug, 'index.html');
-        if (!existsSync(htmlFile)) {
-          console.error(`❌ [FAIL] Missing built HTML page for augmented slug "${slug}" at ${htmlFile}.`);
+      for (const alias of aug.aliases || []) {
+        const aliasHtmlFile = join(DIST_EVENTS_DIR, alias, 'index.html');
+        if (existsSync(aliasHtmlFile)) {
+          console.error(`❌ [FAIL] Alias "${alias}" should redirect, not emit duplicate HTML at ${aliasHtmlFile}.`);
           failed = true;
-        } else {
-          const html = readFileSync(htmlFile, 'utf-8')
-            .replace(/&#39;/g, "'")
-            .replace(/&quot;/g, '"')
-            .replace(/&lt;/g, '<')
-            .replace(/&gt;/g, '>')
-            .replace(/&amp;/g, '&');
-          if (!html.includes(aug.content.sv.title)) {
-            console.error(`❌ [FAIL] Built page ${htmlFile} does not contain Swedish title "${aug.content.sv.title}".`);
-            failed = true;
-          }
-          if (aug.content.en?.title) {
-            if (!html.includes(aug.content.en.title)) {
-              console.error(
-                `❌ [FAIL] Built page ${htmlFile} does not contain English title "${aug.content.en.title}".`
-              );
-              failed = true;
-            }
-            if (!html.includes('data-event-lang-btn="en"')) {
-              console.error(
-                `❌ [FAIL] Built page ${htmlFile} is missing the in-page English language switcher button.`
-              );
-              failed = true;
-            }
-          }
-
-          // Issue 1: "Gå till anmälan" must link to Eventor (for Eventor-backed events)
-          const primaryChildExtUrl = rawChildEvents[0].urls?.find((u) => u.type === 'Path')
-            ? `https://eventor.orientering.se/${rawChildEvents[0].urls.find((u) => u.type === 'Path').url.replace(/^\//, '')}`
-            : null;
-          if (primaryChildExtUrl) {
-            if (!html.includes(`href="${primaryChildExtUrl}"`)) {
-              console.error(
-                `❌ [FAIL] Built page ${htmlFile} does not link "Gå till anmälan" to primary Eventor URL "${primaryChildExtUrl}".`
-              );
-              failed = true;
-            }
-            if (html.includes('anmäl dig till tävlingen på tävlingens webbplats.')) {
-              console.error(`❌ [FAIL] Built page ${htmlFile} says "på tävlingens webbplats" instead of "på Eventor".`);
-              failed = true;
-            }
-          }
-
-          // Issue 1: No generic "Website" label in links
-          if (html.includes('>Website<') || html.includes('>website<')) {
-            console.error(`❌ [FAIL] Built page ${htmlFile} renders generic link text "Website".`);
-            failed = true;
-          }
+        }
+        const redir = redirectsMap.get(`/events/${alias}`);
+        if (!redir || redir.dest !== `/events/${aug.slug}` || redir.status !== '301') {
+          console.error(
+            `❌ [FAIL] Alias "/events/${alias}" missing 301 redirect to "/events/${aug.slug}" in ${DIST_REDIRECTS_PATH}.`
+          );
+          failed = true;
         }
       }
     }
 
-    // 5. For multi-event groups, verify all child event routes render the full combined page directly
-    if (hasDist && aug.event_ids.length > 1) {
+    // 5. Verify all non-canonical child event routes redirect (301) to the canonical augmentation page
+    if (hasDist) {
       for (const id of aug.event_ids) {
         const childSlug = id.toLowerCase().replace(/_/g, '-');
+        if (childSlug === aug.slug) continue;
+
         const childHtmlFile = join(DIST_EVENTS_DIR, childSlug, 'index.html');
-        if (!existsSync(childHtmlFile)) {
+        if (existsSync(childHtmlFile)) {
           console.error(
-            `❌ [FAIL] Individual child event route "${childSlug}" was lost! Expected ${childHtmlFile} to exist.`
+            `❌ [FAIL] Child event route "${childSlug}" should 301-redirect to "/events/${aug.slug}", not emit duplicate HTML at ${childHtmlFile}.`
           );
           failed = true;
-        } else {
-          const childHtml = readFileSync(childHtmlFile, 'utf-8')
-            .replace(/&#39;/g, "'")
-            .replace(/&quot;/g, '"')
-            .replace(/&lt;/g, '<')
-            .replace(/&gt;/g, '>')
-            .replace(/&amp;/g, '&');
+        }
 
-          // Child route must render the full combined page title
-          if (!childHtml.includes(aug.content.sv.title)) {
-            console.error(
-              `❌ [FAIL] Child event route "${childSlug}" does not render combined title "${aug.content.sv.title}".`
-            );
-            failed = true;
-          }
-
-          // Canonical URL must point to the canonical group page
-          if (
-            !childHtml.includes(`rel="canonical" href="https://www.mountainbikeorientering.se/events/${aug.slug}"`) &&
-            !childHtml.includes(`rel="canonical" href="http://localhost:4321/events/${aug.slug}"`) &&
-            !childHtml.includes(`href="https://www.mountainbikeorientering.se/events/${aug.slug}" rel="canonical"`) &&
-            !childHtml.includes(`href="http://localhost:4321/events/${aug.slug}" rel="canonical"`)
-          ) {
-            console.error(
-              `❌ [FAIL] Child event route "${childSlug}" canonical tag does not point to "/events/${aug.slug}".`
-            );
-            failed = true;
-          }
-
-          // Child route must NOT render the old single-race parent group banner
-          if (childHtml.includes('Denna tävling ingår i tävlingshelgen')) {
-            console.error(
-              `❌ [FAIL] Child event route "${childSlug}" renders single-race parent group banner instead of full combined page.`
-            );
-            failed = true;
-          }
+        const redir = redirectsMap.get(`/events/${childSlug}`);
+        if (!redir || redir.dest !== `/events/${aug.slug}` || redir.status !== '301') {
+          console.error(
+            `❌ [FAIL] Child event route "/events/${childSlug}" missing 301 redirect to "/events/${aug.slug}" in ${DIST_REDIRECTS_PATH}.`
+          );
+          failed = true;
         }
       }
     }
