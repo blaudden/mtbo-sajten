@@ -93,6 +93,7 @@ function verifyInternalLinks() {
         lowerHref.startsWith('mailto:') ||
         lowerHref.startsWith('tel:') ||
         lowerHref.startsWith('javascript:') ||
+        // Include data: and vbscript: alongside javascript: for CodeQL js/incomplete-url-scheme-sanitization
         lowerHref.startsWith('data:') ||
         lowerHref.startsWith('vbscript:')
       ) {
