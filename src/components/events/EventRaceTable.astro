@@ -83,17 +83,7 @@ const hasPerRaceLinks = isGroupedEvent && event.races.some((r) => Boolean(r.exte
                   {formatRaceDate(race.datetimez, { includeYear: false })}
                 </td>
                 <td class="py-3 px-3 text-sm text-default">
-                  <div class="font-semibold flex items-center gap-2 flex-wrap">
-                    <span>{race.name || event.name}</span>
-                    {race.is_wre && (
-                      <span
-                        class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300"
-                        title="World Ranking Event"
-                      >
-                        WRE
-                      </span>
-                    )}
-                  </div>
+                  <div class="font-semibold">{race.name || event.name}</div>
                   {race.location_note?.sv && (
                     <div
                       class="text-xs text-muted dark:text-slate-400 mt-0.5 flex items-center gap-1"
@@ -150,17 +140,7 @@ const hasPerRaceLinks = isGroupedEvent && event.races.some((r) => Boolean(r.exte
           <div class="border border-gray-200 dark:border-gray-700 rounded-xl p-4 bg-white dark:bg-slate-900 shadow-sm">
             <div class="flex items-start justify-between gap-2">
               <div>
-                <p class="text-sm font-bold text-default flex items-center gap-2 flex-wrap">
-                  <span>{race.name || event.name}</span>
-                  {race.is_wre && (
-                    <span
-                      class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300"
-                      title="World Ranking Event"
-                    >
-                      WRE
-                    </span>
-                  )}
-                </p>
+                <p class="text-sm font-bold text-default">{race.name || event.name}</p>
                 {race.location_note?.sv && (
                   <p
                     class="text-xs text-muted dark:text-slate-400 mt-0.5"
