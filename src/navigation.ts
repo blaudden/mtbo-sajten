@@ -41,7 +41,6 @@ export const footerData = {
       links: [
         { text: 'Om Svenska Cupen', href: getPermalink('/svenska-cupen') },
         { text: 'O-Ringen', href: getPermalink('/oringen') },
-        { text: 'WRE i Sverige', href: getPermalink('/mtbo-wre-i-sverige') },
         { text: 'Eventor', href: getPermalink('/eventor') },
       ],
     },
@@ -50,12 +49,18 @@ export const footerData = {
       links: [
         { text: 'Tävlingskalender', href: getPermalink('/events') },
         { text: 'Tävlingsprogram 2027', href: getPermalink('/mtbo-program') },
-        { text: 'Framtidens program', href: getPermalink('/framtidens-program') },
         { text: 'Svenska Cupen 2027', href: getPermalink('/svenska-cupen-mtbo') },
         { text: 'SM i MTBO 2027', href: getPermalink('/svenska-maesterskapen-mtbo') },
         { text: 'O-Ringen Stockholm 2027', href: getPermalink('/mtbo-oringen') },
         { text: 'Säsongen 2026', href: getPermalink('/mtbo-sasongen-2026-sammanfattning') },
         { text: 'WMTBOC 2026', href: getPermalink('/wmtboc26') },
+      ],
+    },
+    {
+      title: 'För arrangörer',
+      links: [
+        { text: 'Framtidens program', href: getPermalink('/framtidens-program') },
+        { text: 'WRE i Sverige', href: getPermalink('/mtbo-wre-i-sverige') },
       ],
     },
     {
