@@ -3,7 +3,7 @@
     {
       "slug": "mtbo-camp-skane-2027",
       "aliases": ["mtbo-camp-skaane-2027"],
-      "event_ids": ["SWE_60819", "SWE_60818", "SWE_60820", "SWE_60823", "SWE_60824"],
+      "event_ids": ["SWE_60819", "SWE_60818", "SWE_61221", "SWE_60820", "SWE_60823", "SWE_61222", "SWE_60824"],
       "wre_pairs": {
         "SWE_60823": "IOF_9251",
         "SWE_60824": "IOF_9252"
@@ -22,20 +22,13 @@
             "Onsdagen bjuder på nattorientering (medeldistans), följt av medeldistans på torsdagen och klassiska ultralångdistansen Høkeren på fredagen – en riktig MTBO Camp-tradition där man cyklar med flera kartor och verkligen får njuta av orienteringen. Till helgen den 17–18 april ansluter Svenska Cupen med årets två första deltävlingar: långdistans på lördagen och medeldistans på söndagen. Båda helgens tävlingar har dessutom status som World Ranking Event (WRE) för elitklasserna och ingår i World Masters Series (WMS) för veteranklasserna.",
             "Precis som vanligt under MTBO Camp erbjuds även goda träningsmöjligheter på banor i området runt tävlingsdagarna. Mer information om träningspaketet och lägret i sin helhet finns på MTBO Camps hemsida (mtbocamp.dk)."
           ],
-          "registration_info": {
-            "title": "Anmälan till MTBO Camp & enskilda tävlingar",
-            "paragraphs": [
-              "Det finns två sätt att anmäla sig: antingen anmäler du dig till hela MTBO Camp-paketet via mtbocamp.dk, eller så anmäler du dig till enskilda tävlingar via Eventor.",
-              "Se respektive tävlings inbjudan i Eventor för exakta anmälningsregler, klasser och sista anmälningsdag."
-            ],
-            "cta_label": "Anmälan & lägerpaket på mtbocamp.dk",
-            "cta_url": "http://mtbocamp.dk"
-          },
           "race_notes": {
             "SWE_60819": "Natt-medel (Lunds OK & OK Pan-Kristianstad)",
             "SWE_60818": "Medeldistans (Lunds OK)",
+            "SWE_61221": "Träning 1 (Lunds OK)",
             "SWE_60820": "Høkeren — Ultralång distans (Lunds OK & OK Pan-Kristianstad)",
             "SWE_60823": "Svenska Cupen #1 (WRE) — Långdistans (BroSö OK, Hässleholms OK, Lunds OK)",
+            "SWE_61222": "Träning 2 (BroSö OK & Lunds OK)",
             "SWE_60824": "Svenska Cupen #2 (WRE) — Medeldistans (Härlövs IF, Hässleholms OK, Lunds OK)"
           }
         },
@@ -47,20 +40,13 @@
             "Wednesday starts with a night middle distance, followed by a middle distance on Thursday and the classic Høkeren ultra-long distance on Friday – a signature MTBO Camp race featuring multiple maps for anyone who loves plenty of map reading. On the weekend of 17–18 April, the Swedish Cup kicks off with its first two rounds of the year: long distance on Saturday and middle distance on Sunday. Both weekend competitions also carry World Ranking Event (WRE) status for elite classes and are part of the World Masters Series (WMS) for masters classes.",
             "As always, MTBO Camp also offers dedicated training opportunities in and around the competitions throughout the week. Full details on training maps and camp registration can be found on the MTBO Camp website (mtbocamp.dk)."
           ],
-          "registration_info": {
-            "title": "Registration for MTBO Camp & individual races",
-            "paragraphs": [
-              "There are two ways to enter: you can either register for the full MTBO Camp package via mtbocamp.dk, or enter individual competitions via Eventor.",
-              "Check each event's invitation in Eventor for exact entry rules, classes, and registration deadlines."
-            ],
-            "cta_label": "Camp registration at mtbocamp.dk",
-            "cta_url": "http://mtbocamp.dk"
-          },
           "race_notes": {
             "SWE_60819": "Night middle distance (Lunds OK & OK Pan-Kristianstad)",
             "SWE_60818": "Middle distance (Lunds OK)",
+            "SWE_61221": "Training 1 (Lunds OK)",
             "SWE_60820": "Høkeren — Ultra-long distance (Lunds OK & OK Pan-Kristianstad)",
             "SWE_60823": "Swedish Cup #1 (WRE) — Long distance (BroSö OK, Hässleholms OK, Lunds OK)",
+            "SWE_61222": "Training 2 (BroSö OK & Lunds OK)",
             "SWE_60824": "Swedish Cup #2 (WRE) — Middle distance (Härlövs IF, Hässleholms OK, Lunds OK)"
           }
         }
