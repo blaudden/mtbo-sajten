@@ -37,8 +37,13 @@ function verifyHeadings() {
     }
 
     if (h1Matches.length === 1) {
-      const text = h1Matches[0].replace(/<[^>]+>/g, '').trim();
-      if (!text) {
+      let text = h1Matches[0];
+      let prev;
+      do {
+        prev = text;
+        text = text.replace(/<[^>]+>/g, '');
+      } while (text !== prev);
+      if (!text.trim()) {
         console.error(`❌ [FAIL] ${file}: <h1> element is empty.`);
         failed = true;
       }
