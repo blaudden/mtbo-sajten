@@ -13,9 +13,6 @@ import Analytics from '~/components/common/Analytics.astro';
 import BasicScripts from '~/components/common/BasicScripts.astro';
 import Schema from '~/components/common/Schema.astro';
 
-// Comment the line below to disable View Transitions
-import { ClientRouter } from 'astro:transitions';
-
 import type { MetaData as MetaDataType } from '~/types';
 
 export interface Props {
@@ -38,9 +35,6 @@ const language = metadata.openGraph?.locale || I18N.language || 'sv';
     <SiteVerification />
     <Analytics />
     <Schema metadata={metadata} />
-
-    <!-- Comment the line below to disable View Transitions -->
-    <ClientRouter fallback="swap" />
   </head>
 
   <body class="text-default bg-page tracking-tight overflow-x-hidden">
