@@ -21,7 +21,7 @@ const postCollection = defineCollection({
     lead: z.string().optional(),
     image: z.string(),
 
-    category: z.string().optional(),
+    category: z.enum(['', 'svenska-cupen', 'oringen', 'wmtboc26']).optional(),
     tags: z.array(z.string()).optional(),
     author: z.string().optional(),
 
