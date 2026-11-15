@@ -43,6 +43,9 @@ updates:
     # Review security updates more frequently
     # (they will still be created even if weekly limit is reached)
     versioning-strategy: "increase"
+    ignore:
+      - dependency-name: "typescript"
+        versions: ["7.0.x"]
 
   # Monitor GitHub Actions
   - package-ecosystem: "github-actions"
