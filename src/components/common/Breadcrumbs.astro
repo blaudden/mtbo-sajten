@@ -66,32 +66,30 @@ const breadcrumbs = [
   aria-label="Breadcrumb"
 >
   <ol class="inline-flex items-center space-x-1 md:space-x-2">
-    {
-      breadcrumbs.map((item, index) => (
-        <li class="inline-flex items-center">
-          {index > 0 && <Icon name="tabler:chevron-right" class="w-4 h-4 text-gray-400/70 mx-1" />}
+    {breadcrumbs.map((item, index) => (
+      <li class="inline-flex items-center">
+        {index > 0 && <Icon name="tabler:chevron-right" class="w-4 h-4 text-gray-400/70 mx-1" />}
 
-          {item.isLinkable ? (
-            <a
-              href={item.href}
-              class="inline-flex items-center hover:text-primary dark:hover:text-primary-400 transition-colors"
-            >
-              {index === 0 && !hideHomeIcon && <Icon name="tabler:home" class="w-3.5 h-3.5 mr-1.5" />}
-              {item.name}
-            </a>
-          ) : (
-            <span
-              class={`ml-1 font-medium ${item.isCurrent ? 'text-gray-600 dark:text-gray-300' : 'text-gray-400 dark:text-gray-500'} md:ml-1 truncate max-w-[200px] sm:max-w-none`}
-              aria-current={item.isCurrent ? 'page' : undefined}
-            >
-              {index === 0 && !hideHomeIcon && !item.isCurrent && (
-                <Icon name="tabler:home" class="w-3.5 h-3.5 mr-1.5 inline-block" />
-              )}
-              {item.name}
-            </span>
-          )}
-        </li>
-      ))
-    }
+        {item.isLinkable ? (
+          <a
+            href={item.href}
+            class="inline-flex items-center hover:text-primary dark:hover:text-primary-400 transition-colors"
+          >
+            {index === 0 && !hideHomeIcon && <Icon name="tabler:home" class="w-3.5 h-3.5 mr-1.5" />}
+            {item.name}
+          </a>
+        ) : (
+          <span
+            class={`ml-1 font-medium ${item.isCurrent ? 'text-gray-600 dark:text-gray-300' : 'text-gray-400 dark:text-gray-500'} md:ml-1 truncate max-w-[200px] sm:max-w-none`}
+            aria-current={item.isCurrent ? 'page' : undefined}
+          >
+            {index === 0 && !hideHomeIcon && !item.isCurrent && (
+              <Icon name="tabler:home" class="w-3.5 h-3.5 mr-1.5 inline-block" />
+            )}
+            {item.name}
+          </span>
+        )}
+      </li>
+    ))}
   </ol>
 </nav>

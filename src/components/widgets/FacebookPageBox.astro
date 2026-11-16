@@ -17,25 +17,18 @@ const { pageName, pageUrl, title = 'Join the Action on Facebook', id, isDark = f
 ---
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-4xl mx-auto ${classes?.container ?? ''}`}>
-  <div
-    class="relative group overflow-hidden rounded-2xl shadow-xl min-h-[250px] flex items-center justify-center text-center dark:border dark:border-slate-700"
-  >
+  <div class="relative group overflow-hidden rounded-2xl shadow-xl min-h-[250px] flex items-center justify-center text-center dark:border dark:border-slate-700">
     <!-- Background Image with Overlay -->
     <div class="absolute inset-0 z-0">
       <Image src={bgImage} class="w-full h-full object-cover grayscale-[0.2]" alt="Background" />
-      <div
-        class="absolute inset-0 bg-blue-900/80 group-hover:bg-blue-900/75 transition-colors duration-500 ease-in-out mix-blend-multiply"
-      >
-      </div>
+      <div class="absolute inset-0 bg-blue-900/80 group-hover:bg-blue-900/75 transition-colors duration-500 ease-in-out mix-blend-multiply"></div>
       <div class="absolute inset-0 bg-black/20"></div>
     </div>
 
     <!-- Content -->
     <div class="relative z-10 p-6 sm:p-8 flex flex-col items-center max-w-2xl mx-auto">
       <!-- Icon -->
-      <div
-        class="mb-4 bg-white/10 dark:bg-white/5 backdrop-blur-sm p-3 rounded-full shadow-2xl ring-1 ring-white/20 transform group-hover:scale-110 transition-transform duration-300"
-      >
+      <div class="mb-4 bg-white/10 dark:bg-white/5 backdrop-blur-sm p-3 rounded-full shadow-2xl ring-1 ring-white/20 transform group-hover:scale-110 transition-transform duration-300">
         <Icon name="tabler:brand-facebook" class="w-8 h-8 text-white" />
       </div>
 

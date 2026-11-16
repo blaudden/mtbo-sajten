@@ -15,21 +15,19 @@ const { src, alt, title, class: className = '' } = Astro.props;
 const imageMetadata = await findImage(src);
 ---
 
-{
-  imageMetadata ? (
-    <Picture
-      src={imageMetadata as ImageMetadata}
-      alt={alt}
-      title={title}
-      class={className}
-      widths={[400, 768, 1024, 2040]}
-      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 750px"
-      loading="lazy"
-      decoding="async"
-      formats={['avif', 'webp']}
-      fallbackFormat="webp"
-    />
-  ) : (
-    <img src={src} alt={alt} title={title} class={className} loading="lazy" decoding="async" />
-  )
-}
+{imageMetadata ? (
+  <Picture
+    src={imageMetadata as ImageMetadata}
+    alt={alt}
+    title={title}
+    class={className}
+    widths={[400, 768, 1024, 2040]}
+    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 750px"
+    loading="lazy"
+    decoding="async"
+    formats={['avif', 'webp']}
+    fallbackFormat="webp"
+  />
+) : (
+  <img src={src} alt={alt} title={title} class={className} loading="lazy" decoding="async" />
+)}

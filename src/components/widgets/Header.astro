@@ -54,8 +54,8 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
     { sticky: isSticky, relative: !isSticky, dark: isDark },
     'top-0 z-40 flex-none mx-auto w-full border-b border-gray-50/0 transition-opacity ease-in-out',
   ]}
-  {...isSticky ? { 'data-aw-sticky-header': true } : {}}
-  {...id ? { id } : {}}
+  {...(isSticky ? { 'data-aw-sticky-header': true } : {})}
+  {...(id ? { id } : {})}
 >
   <div class="absolute inset-0"></div>
   <div
@@ -86,51 +86,47 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
       class="items-center w-full md:w-auto hidden md:flex md:mx-5 text-default overflow-y-auto overflow-x-hidden md:overflow-y-visible md:overflow-x-auto md:justify-self-center"
       aria-label="Main navigation"
     >
-      <ul
-        class="flex flex-col md:flex-row md:self-center w-full md:w-auto text-xl md:text-[0.9375rem] tracking-[0.01rem] font-medium md:justify-center"
-      >
-        {
-          links.map(({ text, href, links }) => (
-            <li class={links?.length ? 'dropdown' : ''}>
-              {links?.length ? (
-                <>
-                  <button
-                    type="button"
-                    class="hover:text-link dark:hover:text-white px-4 py-3 flex items-center whitespace-nowrap"
-                  >
-                    {text}{' '}
-                    <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 rtl:ml-0 rtl:mr-0.5 hidden md:inline" />
-                  </button>
-                  <ul class="dropdown-menu md:backdrop-blur-md dark:md:bg-dark rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white/90 md:min-w-[200px] drop-shadow-xl dark:md:border dark:md:border-slate-800">
-                    {links.map(({ text: text2, href: href2 }) => (
-                      <li>
-                        <a
-                          class:list={[
-                            'first:rounded-t last:rounded-b md:hover:bg-gray-100 hover:text-link dark:hover:text-white dark:hover:bg-gray-700 py-2 px-5 block whitespace-no-wrap',
-                            { 'aw-link-active': href2 === currentPath },
-                          ]}
-                          href={href2}
-                        >
-                          {text2}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              ) : (
-                <a
-                  class:list={[
-                    'hover:text-link dark:hover:text-white px-4 py-3 flex items-centers whitespace-nowrap',
-                    { 'aw-link-active': href === currentPath },
-                  ]}
-                  href={href}
+      <ul class="flex flex-col md:flex-row md:self-center w-full md:w-auto text-xl md:text-[0.9375rem] tracking-[0.01rem] font-medium md:justify-center">
+        {links.map(({ text, href, links }) => (
+          <li class={links?.length ? 'dropdown' : ''}>
+            {links?.length ? (
+              <>
+                <button
+                  type="button"
+                  class="hover:text-link dark:hover:text-white px-4 py-3 flex items-center whitespace-nowrap"
                 >
-                  {text}
-                </a>
-              )}
-            </li>
-          ))
-        }
+                  {text}{' '}
+                  <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 rtl:ml-0 rtl:mr-0.5 hidden md:inline" />
+                </button>
+                <ul class="dropdown-menu md:backdrop-blur-md dark:md:bg-dark rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white/90 md:min-w-[200px] drop-shadow-xl dark:md:border dark:md:border-slate-800">
+                  {links.map(({ text: text2, href: href2 }) => (
+                    <li>
+                      <a
+                        class:list={[
+                          'first:rounded-t last:rounded-b md:hover:bg-gray-100 hover:text-link dark:hover:text-white dark:hover:bg-gray-700 py-2 px-5 block whitespace-no-wrap',
+                          { 'aw-link-active': href2 === currentPath },
+                        ]}
+                        href={href2}
+                      >
+                        {text2}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            ) : (
+              <a
+                class:list={[
+                  'hover:text-link dark:hover:text-white px-4 py-3 flex items-centers whitespace-nowrap',
+                  { 'aw-link-active': href === currentPath },
+                ]}
+                href={href}
+              >
+                {text}
+              </a>
+            )}
+          </li>
+        ))}
       </ul>
     </nav>
     <div
@@ -142,32 +138,28 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
       <div class="items-center flex justify-between w-full md:w-auto">
         <div class="flex">
           {showToggleTheme && <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" />}
-          {
-            showRssFeed && (
-              <a
-                class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
-                aria-label="RSS Feed"
-                href={getAsset('/rss.xml')}
-              >
-                <Icon name="tabler:rss" class="w-5 h-5" />
-              </a>
-            )
-          }
+          {showRssFeed && (
+            <a
+              class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+              aria-label="RSS Feed"
+              href={getAsset('/rss.xml')}
+            >
+              <Icon name="tabler:rss" class="w-5 h-5" />
+            </a>
+          )}
         </div>
-        {
-          actions?.length ? (
-            <span class="ml-4 rtl:ml-0 rtl:mr-4">
-              {actions.map((btnProps) => (
-                <Button
-                  {...btnProps}
-                  class={`ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm w-auto ${btnProps.class || ''}`}
-                />
-              ))}
-            </span>
-          ) : (
-            ''
-          )
-        }
+        {actions?.length ? (
+          <span class="ml-4 rtl:ml-0 rtl:mr-4">
+            {actions.map((btnProps) => (
+              <Button
+                {...btnProps}
+                class={`ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm w-auto ${btnProps.class || ''}`}
+              />
+            ))}
+          </span>
+        ) : (
+          ''
+        )}
       </div>
     </div>
   </div>

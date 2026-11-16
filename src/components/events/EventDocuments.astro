@@ -81,37 +81,35 @@ for (let i = 0; i < event.races.length; i++) {
 }
 ---
 
-{
-  documents.length > 0 && (
-    <div class="mb-8">
-      <h2 class="text-xl font-semibold mb-4 dark:text-white" data-i18n-sv="Dokument" data-i18n-en="Documents">
-        Dokument
-      </h2>
-      <ul class="space-y-2">
-        {documents.map((doc) => {
-          const iconInfo = getSmartIconInfo(doc.url, doc.title, doc.type);
-          const isLivelox = iconInfo.type === 'image' && iconInfo.source === 'livelox';
+{documents.length > 0 && (
+  <div class="mb-8">
+    <h2 class="text-xl font-semibold mb-4 dark:text-white" data-i18n-sv="Dokument" data-i18n-en="Documents">
+      Dokument
+    </h2>
+    <ul class="space-y-2">
+      {documents.map((doc) => {
+        const iconInfo = getSmartIconInfo(doc.url, doc.title, doc.type);
+        const isLivelox = iconInfo.type === 'image' && iconInfo.source === 'livelox';
 
-          return (
-            <li>
-              <a
-                href={doc.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 text-sm text-primary hover:underline"
-              >
-                {isLivelox ? (
-                  <Image src={liveloxIcon} alt="Livelox" class="w-4 h-4 object-contain" />
-                ) : (
-                  <Icon name={iconInfo.name || 'tabler:file-text'} class="w-4 h-4" />
-                )}
-                {doc.title}
-                {doc.type === 'Bulletin' && <span class="text-xs text-muted dark:text-slate-500">({doc.type})</span>}
-              </a>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
-  )
-}
+        return (
+          <li>
+            <a
+              href={doc.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-sm text-primary hover:underline"
+            >
+              {isLivelox ? (
+                <Image src={liveloxIcon} alt="Livelox" class="w-4 h-4 object-contain" />
+              ) : (
+                <Icon name={iconInfo.name || 'tabler:file-text'} class="w-4 h-4" />
+              )}
+              {doc.title}
+              {doc.type === 'Bulletin' && <span class="text-xs text-muted dark:text-slate-500">({doc.type})</span>}
+            </a>
+          </li>
+        );
+      })}
+    </ul>
+  </div>
+)}

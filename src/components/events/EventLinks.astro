@@ -67,43 +67,41 @@ for (let i = 0; i < event.races.length; i++) {
 }
 ---
 
-{
-  relatedUrls.length > 0 && (
-    <div class="mb-8">
-      <h2 class="text-xl font-semibold mb-4 dark:text-white" data-i18n-sv="Länkar" data-i18n-en="Links">
-        Länkar
-      </h2>
-      <ul class="space-y-2">
-        {relatedUrls.map((url) => {
-          const iconInfo = getSmartIconInfo(url.url, url.title, url.type);
+{relatedUrls.length > 0 && (
+  <div class="mb-8">
+    <h2 class="text-xl font-semibold mb-4 dark:text-white" data-i18n-sv="Länkar" data-i18n-en="Links">
+      Länkar
+    </h2>
+    <ul class="space-y-2">
+      {relatedUrls.map((url) => {
+        const iconInfo = getSmartIconInfo(url.url, url.title, url.type);
 
-          let iconImage: ImageMetadata | undefined;
-          if (iconInfo.type === 'image') {
-            if (iconInfo.source === 'livelox') iconImage = liveloxIcon;
-            else if (iconInfo.source === 'eventor-swe') iconImage = eventorSweIcon;
-            else if (iconInfo.source === 'eventor-iof') iconImage = eventorIofIcon;
-            else if (iconInfo.source === 'eventor-nor') iconImage = eventorNorIcon;
-          }
+        let iconImage: ImageMetadata | undefined;
+        if (iconInfo.type === 'image') {
+          if (iconInfo.source === 'livelox') iconImage = liveloxIcon;
+          else if (iconInfo.source === 'eventor-swe') iconImage = eventorSweIcon;
+          else if (iconInfo.source === 'eventor-iof') iconImage = eventorIofIcon;
+          else if (iconInfo.source === 'eventor-nor') iconImage = eventorNorIcon;
+        }
 
-          return (
-            <li>
-              <a
-                href={url.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 text-sm text-primary hover:underline"
-              >
-                {iconInfo.type === 'image' && iconImage ? (
-                  <Image src={iconImage as ImageMetadata} alt="" class="w-4 h-4 object-contain" />
-                ) : (
-                  <Icon name={iconInfo.name || 'tabler:link'} class="w-4 h-4" />
-                )}
-                {url.title}
-              </a>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
-  )
-}
+        return (
+          <li>
+            <a
+              href={url.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-sm text-primary hover:underline"
+            >
+              {iconInfo.type === 'image' && iconImage ? (
+                <Image src={iconImage as ImageMetadata} alt="" class="w-4 h-4 object-contain" />
+              ) : (
+                <Icon name={iconInfo.name || 'tabler:link'} class="w-4 h-4" />
+              )}
+              {url.title}
+            </a>
+          </li>
+        );
+      })}
+    </ul>
+  </div>
+)}

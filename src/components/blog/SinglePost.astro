@@ -18,51 +18,41 @@ const { post, url } = Astro.props;
   <article>
     <header class={post.image ? '' : ''}>
       <div class="flex justify-between flex-col sm:flex-row max-w-3xl mx-auto mt-0 mb-2 px-4 sm:px-6 sm:items-center">
-        <p>
-          {!post.evergreen && <SinglePostCategory category={post.category} publishDate={post.publishDate} />}
-        </p>
+        <p>{!post.evergreen && <SinglePostCategory category={post.category} publishDate={post.publishDate} />}</p>
       </div>
-      <h1
-        class="px-4 sm:px-6 max-w-3xl mx-auto text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading"
-      >
+      <h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
         {post.title}
       </h1>
-      {
-        (post.lead ?? post.excerpt) && (
-          <p class="max-w-3xl mx-auto mt-4 mb-8 px-4 sm:px-6 text-xl md:text-2xl text-muted dark:text-slate-400 text-justify">
-            {post.lead ?? post.excerpt}
-          </p>
-        )
-      }
+      {(post.lead ?? post.excerpt) && (
+        <p class="max-w-3xl mx-auto mt-4 mb-8 px-4 sm:px-6 text-xl md:text-2xl text-muted dark:text-slate-400 text-justify">
+          {post.lead ?? post.excerpt}
+        </p>
+      )}
 
-      {
-        post.image ? (
-          <div class="relative overflow-hidden max-w-full lg:max-w-[900px] mx-auto mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700">
-            <Picture
-              src={post.image as ImageMetadata}
-              class="w-full h-full object-cover"
-              widths={[400, 900]}
-              sizes="(max-width: 900px) 400px, 900px"
-              alt={post?.excerpt || ''}
-              width={900}
-              height={506}
-              loading="eager"
-              fetchpriority="high"
-              decoding="async"
-              formats={['avif', 'webp']}
-              fallbackFormat="webp"
-            />
-          </div>
-        ) : (
-          <div class="max-w-3xl mx-auto px-4 sm:px-6">
-            <div class="border-t dark:border-slate-700" />
-          </div>
-        )
-      }
+      {post.image ? (
+        <div class="relative overflow-hidden max-w-full lg:max-w-[900px] mx-auto mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700">
+          <Picture
+            src={post.image as ImageMetadata}
+            class="w-full h-full object-cover"
+            widths={[400, 900]}
+            sizes="(max-width: 900px) 400px, 900px"
+            alt={post?.excerpt || ''}
+            width={900}
+            height={506}
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+            formats={['avif', 'webp']}
+            fallbackFormat="webp"
+          />
+        </div>
+      ) : (
+        <div class="max-w-3xl mx-auto px-4 sm:px-6">
+          <div class="border-t dark:border-slate-700" />
+        </div>
+      )}
     </header>
-    <div
-      class="mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8 prose-headings:scroll-mt-[80px] prose-li:my-0"
-    >
+    <div class="mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8 prose-headings:scroll-mt-[80px] prose-li:my-0">
       <slot />
     </div>
     <div class="mx-auto px-6 sm:px-6 max-w-3xl mt-8 flex justify-between flex-col sm:flex-row">

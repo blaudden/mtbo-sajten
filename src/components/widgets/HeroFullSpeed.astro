@@ -24,74 +24,70 @@ const {
 
 <section
   class="relative h-[50vh] md:h-[60vh] min-h-[500px] md:min-h-[500px] flex items-center justify-center overflow-hidden not-prose"
-  {...id ? { id } : {}}
+  {...(id ? { id } : {})}
 >
   {/* Background Layer (Blurred) */}
   <div class="absolute inset-0 z-0 overflow-hidden">
-    {
-      image && (
-        <>
-          <div class="absolute inset-0 scale-110 blur-md opacity-40">
-            {typeof image === 'string' ? (
-              <Fragment set:html={image} />
-            ) : (
-              <Image
-                class="w-full h-full object-cover"
-                widths={[400, 768, 1024, 1400, 2040]}
-                sizes="100vw"
-                loading="eager"
-                width={2040}
-                height={1148}
-                quality={40}
-                layout="fullWidth"
-                {...image}
-              />
-            )}
-          </div>
-          <div class="absolute inset-0 scale-110 blur-md opacity-40 -scale-x-100">
-            {typeof image === 'string' ? (
-              <Fragment set:html={image} />
-            ) : (
-              <Image
-                class="w-full h-full object-cover"
-                widths={[400, 768, 1024, 1400, 2040]}
-                sizes="100vw"
-                loading="eager"
-                width={2040}
-                height={1148}
-                quality={40}
-                layout="fullWidth"
-                {...image}
-              />
-            )}
-          </div>
-        </>
-      )
-    }
+    {image && (
+      <>
+        <div class="absolute inset-0 scale-110 blur-md opacity-40">
+          {typeof image === 'string' ? (
+            <Fragment set:html={image} />
+          ) : (
+            <Image
+              class="w-full h-full object-cover"
+              widths={[400, 768, 1024, 1400, 2040]}
+              sizes="100vw"
+              loading="eager"
+              width={2040}
+              height={1148}
+              quality={40}
+              layout="fullWidth"
+              {...image}
+            />
+          )}
+        </div>
+        <div class="absolute inset-0 scale-110 blur-md opacity-40 -scale-x-100">
+          {typeof image === 'string' ? (
+            <Fragment set:html={image} />
+          ) : (
+            <Image
+              class="w-full h-full object-cover"
+              widths={[400, 768, 1024, 1400, 2040]}
+              sizes="100vw"
+              loading="eager"
+              width={2040}
+              height={1148}
+              quality={40}
+              layout="fullWidth"
+              {...image}
+            />
+          )}
+        </div>
+      </>
+    )}
 
     {/* Foreground Layer (Centered & Fully Visible) */}
     <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
       <div class="relative h-full w-full lg:max-w-[150vh] mx-auto overflow-hidden">
-        {
-          image && (
-            <>
-              {typeof image === 'string' ? (
-                <Fragment set:html={image} />
-              ) : (
-                <Image
-                  class="w-full h-full object-cover object-[50%_25%] scale-[1.25] translate-x-[10%]"
-                  widths={[400, 768, 1024, 1400, 2040]}
-                  sizes="100vw"
-                  loading="eager"
-                  width={2040}
-                  height={1148}
-                  quality={95}
-                  {...image}
-                />
-              )}
-            </>
-          )
-        }
+        {image && (
+          <>
+            {typeof image === 'string' ? (
+              <Fragment set:html={image} />
+            ) : (
+              <Image
+                class="w-full h-full object-cover object-[50%_25%] scale-[1.25] translate-x-[10%]"
+                widths={[400, 768, 1024, 1400, 2040]}
+                sizes="100vw"
+                loading="eager"
+                width={2040}
+                height={1148}
+                quality={95}
+                {...image}
+              />
+            )}
+          </>
+        )}
       </div>
 
       <div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
@@ -108,15 +104,11 @@ const {
         >
           <div class="grid grid-cols-1 grid-rows-1 place-items-center max-w-full" aria-hidden="true">
             {/* Swedish Text - State A */}
-            <span
-              class="col-start-1 row-start-1 w-full animate-bike-text-sv motion-reduce:animate-none motion-reduce:opacity-100 motion-reduce:translate-y-0 will-change-transform will-change-opacity"
-            >
+            <span class="col-start-1 row-start-1 w-full animate-bike-text-sv motion-reduce:animate-none motion-reduce:opacity-100 motion-reduce:translate-y-0 will-change-transform will-change-opacity">
               MTBO – Orientering i <span class="text-accent highlight">full fart</span>
             </span>
             {/* English Text - State B */}
-            <span
-              class="col-start-1 row-start-1 w-full animate-bike-text-en motion-reduce:hidden will-change-transform will-change-opacity"
-            >
+            <span class="col-start-1 row-start-1 w-full animate-bike-text-en motion-reduce:hidden will-change-transform will-change-opacity">
               MTBO – Orienteering at <span class="text-accent highlight">full speed</span>
             </span>
           </div>
@@ -126,21 +118,19 @@ const {
           {subtitle && <div class="text-lg md:text-xl text-gray-100 mb-8 leading-relaxed" set:html={subtitle} />}
           {content && <Fragment set:html={content} />}
 
-          {
-            actions && (
-              <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
-                {Array.isArray(actions) ? (
-                  actions.map((action) => (
-                    <div class="flex w-full sm:w-auto">
-                      <Button {...(action || {})} class="w-full sm:mb-0" />
-                    </div>
-                  ))
-                ) : (
-                  <Fragment set:html={actions} />
-                )}
-              </div>
-            )
-          }
+          {actions && (
+            <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
+              {Array.isArray(actions) ? (
+                actions.map((action) => (
+                  <div class="flex w-full sm:w-auto">
+                    <Button {...(action || {})} class="w-full sm:mb-0" />
+                  </div>
+                ))
+              ) : (
+                <Fragment set:html={actions} />
+              )}
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -148,9 +138,9 @@ const {
 
   <style>
     /*
-    Animation Logic (8s Loop) - "Upward Flow"
-    State A (Swedish): Dwell 0-45% -> Exit Up -> Teleport Down -> Enter Up
-  */
+      Animation Logic (8s Loop) - "Upward Flow"
+      State A (Swedish): Dwell 0-45% -> Exit Up -> Teleport Down -> Enter Up
+    */
     @keyframes bike-text-sv {
       0%,
       45% {
@@ -180,8 +170,8 @@ const {
     }
 
     /*
-    State B (English): Wait Down 0-45% -> Enter Up -> Dwell -> Exit Up
-  */
+      State B (English): Wait Down 0-45% -> Enter Up -> Dwell -> Exit Up
+    */
     @keyframes bike-text-en {
       0%,
       45% {

@@ -32,27 +32,25 @@ const imageMetadata = await findImage(src);
   style={style}
 >
   <div class="aspect-4/5 sm:aspect-square w-full h-full">
-    {
-      imageMetadata ? (
-        <Picture
-          src={imageMetadata as ImageMetadata}
-          alt={alt}
-          width={widthNum}
-          widths={[400, widthNum]}
-          sizes={`(max-width: 640px) 100vw, ${widthNum}px`}
-          class="w-full h-full object-cover"
-          style={`object-position: ${cropPosition};`}
-          formats={['avif', 'webp']}
-          fallbackFormat={(imageMetadata as ImageMetadata).format === 'png' ? 'png' : 'jpg'}
-        />
-      ) : (
-        <img
-          src={src}
-          alt={alt}
-          class="w-full h-full object-cover"
-          style={`width: 100%; max-width: ${width}; object-position: ${cropPosition};`}
-        />
-      )
-    }
+    {imageMetadata ? (
+      <Picture
+        src={imageMetadata as ImageMetadata}
+        alt={alt}
+        width={widthNum}
+        widths={[400, widthNum]}
+        sizes={`(max-width: 640px) 100vw, ${widthNum}px`}
+        class="w-full h-full object-cover"
+        style={`object-position: ${cropPosition};`}
+        formats={['avif', 'webp']}
+        fallbackFormat={(imageMetadata as ImageMetadata).format === 'png' ? 'png' : 'jpg'}
+      />
+    ) : (
+      <img
+        src={src}
+        alt={alt}
+        class="w-full h-full object-cover"
+        style={`width: 100%; max-width: ${width}; object-position: ${cropPosition};`}
+      />
+    )}
   </div>
 </div>

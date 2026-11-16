@@ -38,35 +38,31 @@ const normalizedImages = images.map((item, index) => {
   class="instagram-carousel relative w-full max-w-4xl mx-auto my-8 rounded-xl overflow-hidden shadow-lg border border-gray-200/80 dark:border-slate-800 bg-neutral-950 group select-none"
 >
   <!-- Slide Counter Badge (Instagram Style) -->
-  <div
-    class="carousel-counter absolute top-3 right-3 z-30 px-2.5 py-1 text-xs font-medium tracking-wide text-white bg-black/60 backdrop-blur-md rounded-full shadow-sm pointer-events-none"
-  >
+  <div class="carousel-counter absolute top-3 right-3 z-30 px-2.5 py-1 text-xs font-medium tracking-wide text-white bg-black/60 backdrop-blur-md rounded-full shadow-sm pointer-events-none">
     1 / {normalizedImages.length}
   </div>
 
   <!-- Carousel Scroll Track -->
   <div class="carousel-track flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar aspect-[3/2] w-full">
-    {
-      normalizedImages.map((image, index) => (
-        <div class="carousel-slide min-w-full w-full snap-center snap-always shrink-0 relative aspect-[3/2] flex items-center justify-center bg-neutral-950">
-          <Image
-            src={image.src}
-            class="w-full h-full object-cover select-none pointer-events-none"
-            widths={[600, 900, 1400]}
-            width={1200}
-            sizes="(max-width: 900px) 100vw, 900px"
-            alt={image.alt || `Bild ${index + 1}`}
-            aspectRatio="3:2"
-            loading={index === 0 ? 'eager' : 'lazy'}
-          />
-          {image.caption && (
-            <div class="absolute bottom-0 inset-x-0 bg-linear-to-t from-black/80 via-black/30 to-transparent pt-8 pb-3 px-4 pointer-events-none">
-              <p class="text-white/95 text-xs sm:text-sm font-medium drop-shadow-md line-clamp-2">{image.caption}</p>
-            </div>
-          )}
-        </div>
-      ))
-    }
+    {normalizedImages.map((image, index) => (
+      <div class="carousel-slide min-w-full w-full snap-center snap-always shrink-0 relative aspect-[3/2] flex items-center justify-center bg-neutral-950">
+        <Image
+          src={image.src}
+          class="w-full h-full object-cover select-none pointer-events-none"
+          widths={[600, 900, 1400]}
+          width={1200}
+          sizes="(max-width: 900px) 100vw, 900px"
+          alt={image.alt || `Bild ${index + 1}`}
+          aspectRatio="3:2"
+          loading={index === 0 ? 'eager' : 'lazy'}
+        />
+        {image.caption && (
+          <div class="absolute bottom-0 inset-x-0 bg-linear-to-t from-black/80 via-black/30 to-transparent pt-8 pb-3 px-4 pointer-events-none">
+            <p class="text-white/95 text-xs sm:text-sm font-medium drop-shadow-md line-clamp-2">{image.caption}</p>
+          </div>
+        )}
+      </div>
+    ))}
   </div>
 
   <!-- Previous Button -->
@@ -92,21 +88,17 @@ const normalizedImages = images.map((item, index) => {
   </button>
 
   <!-- Dot Indicators -->
-  <div
-    class="carousel-dots absolute bottom-3 left-1/2 -translate-x-1/2 z-30 flex items-center gap-1.5 px-2 py-1 bg-black/40 backdrop-blur-md rounded-full"
-  >
-    {
-      normalizedImages.map((_, index) => (
-        <button
-          type="button"
-          class={`carousel-dot rounded-full transition-all duration-300 ${
-            index === 0 ? 'w-4 h-1.5 bg-white' : 'w-1.5 h-1.5 bg-white/40 hover:bg-white/70'
-          }`}
-          data-index={index}
-          aria-label={`Gå till bild ${index + 1}`}
-        />
-      ))
-    }
+  <div class="carousel-dots absolute bottom-3 left-1/2 -translate-x-1/2 z-30 flex items-center gap-1.5 px-2 py-1 bg-black/40 backdrop-blur-md rounded-full">
+    {normalizedImages.map((_, index) => (
+      <button
+        type="button"
+        class={`carousel-dot rounded-full transition-all duration-300 ${
+          index === 0 ? 'w-4 h-1.5 bg-white' : 'w-1.5 h-1.5 bg-white/40 hover:bg-white/70'
+        }`}
+        data-index={index}
+        aria-label={`Gå till bild ${index + 1}`}
+      />
+    ))}
   </div>
 </div>
 
