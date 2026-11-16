@@ -3,18 +3,15 @@ import { Picture } from 'astro:assets';
 import PostTags from '~/components/blog/Tags.astro';
 import SinglePostCategory from '~/components/blog/SinglePostCategory.astro';
 import SocialShare from '~/components/common/SocialShare.astro';
-import wmtbocLogo from '~/assets/images/wmtboc26-logo-transparent.png';
 import type { Post } from '~/types';
 import type { ImageMetadata } from 'astro';
 
 export interface Props {
   post: Post & { image?: string | ImageMetadata };
   url: string | URL;
-  /** Enable animation overlay. Pass a string identifier (e.g. 'dalahorse') to select the animation. */
-  overlayAnimation?: string;
 }
 
-const { post, url, overlayAnimation } = Astro.props;
+const { post, url } = Astro.props;
 ---
 
 <section class="py-8 sm:py-16 lg:py-20 mx-auto">
@@ -55,25 +52,6 @@ const { post, url, overlayAnimation } = Astro.props;
               formats={['avif', 'webp']}
               fallbackFormat="webp"
             />
-            {overlayAnimation === 'dalahorse' && (
-              <div class="absolute inset-x-0 bottom-0 pointer-events-none z-10 overflow-hidden h-full w-full">
-                <div
-                  class="animate-horse-ride absolute left-[-100px] w-full bottom-8"
-                  style="mix-blend-mode: multiply;"
-                  aria-hidden="true"
-                >
-                  <Picture
-                    src={wmtbocLogo}
-                    alt=""
-                    width={80}
-                    height={80}
-                    class="object-contain"
-                    formats={['avif', 'webp']}
-                    fallbackFormat="png"
-                  />
-                </div>
-              </div>
-            )}
           </div>
         ) : (
           <div class="max-w-3xl mx-auto px-4 sm:px-6">
