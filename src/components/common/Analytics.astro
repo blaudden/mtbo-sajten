@@ -2,12 +2,11 @@
 import { ANALYTICS } from '~/utils/config';
 ---
 
-{
-  ANALYTICS?.vendors?.googleAnalytics?.id && (
-    <script
-      is:inline
-      data-gtm-id={String(ANALYTICS.vendors.googleAnalytics.id)}
-      set:html={`
+{ANALYTICS?.vendors?.googleAnalytics?.id && (
+  <script
+    is:inline
+    data-gtm-id={String(ANALYTICS.vendors.googleAnalytics.id)}
+    set:html={`
 (function() {
   const id = document.currentScript.getAttribute('data-gtm-id');
   let scriptLoaded = false;
@@ -32,9 +31,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   setTimeout(loadGTM, 4000);
 })();
       `}
-    />
-  )
-}
+  />
+)}
 
 {/* Metricool tracker - supports SPA/ViewTransitions */}
 <script is:inline>

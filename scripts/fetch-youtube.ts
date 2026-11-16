@@ -2,12 +2,13 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { Readable } from 'node:stream';
 import { finished } from 'node:stream/promises';
-import ytdl from '@distube/ytdl-core';
+import { Ytdl, chooseFormat } from '@distube/ytdl-core';
 import slugify from 'slugify';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 
 const execFileAsync = promisify(execFile);
+const ytdl = new Ytdl();
 
 const INFO_LOG = '\x1b[34m[INFO]\x1b[0m';
 const SUCCESS_LOG = '\x1b[32m[SUCCESS]\x1b[0m';
@@ -59,7 +60,7 @@ async function main() {
     const title = videoDetails.title;
     const authorName = videoDetails.author.name;
     const description = videoDetails.description;
-    const videoId = videoDetails.videoId;
+    const videoId = videoDetails.id;
     const publishDate = videoDetails.publishDate; // YYYY-MM-DD format usually
 
     console.log(`${INFO_LOG} Found video: "${title}" by ${authorName}`);
@@ -74,7 +75,7 @@ async function main() {
 
     // Download Thumbnail
     const thumbnail = videoDetails.thumbnails.reduce((prev, current) => {
-      return prev.width > current.width ? prev : current;
+      return (prev.width ?? 0) > (current.width ?? 0) ? prev : current;
     }); // Get max res
 
     if (thumbnail) {
@@ -86,11 +87,12 @@ async function main() {
 
     // Try to extract frames?
     // We need a direct video URL for ffmpeg. ytdl formats can give us that.
-    const format = ytdl.chooseFormat(info.formats, { quality: 'highest' });
+    const directVideoFormats = info.formats.filter((f) => f.hasVideo && Boolean(f.url) && !f.isDrm && !f.isOtf);
+    const format = directVideoFormats.length > 0 ? chooseFormat(directVideoFormats, { quality: 'highest' }) : undefined;
     if (format && format.url) {
       console.log(`${INFO_LOG} Attempting to extract frames (this might take a moment)...`);
       // Extract 3 frames: 20%, 50%, 80%
-      const duration = parseInt(videoDetails.lengthSeconds);
+      const duration = videoDetails.lengthSeconds;
       if (duration > 0) {
         const t1 = Math.floor(duration * 0.2);
         const t2 = Math.floor(duration * 0.5);
@@ -143,7 +145,7 @@ ${description ? `<!-- \nDescription from YouTube:\n${description}\n-->` : ''}
 
 **${authorName}** ... (Add bio here)
 
-Se hela kanalen här: [${authorName}](${videoDetails.author.channel_url})
+Se hela kanalen här: [${authorName}](${videoDetails.author.url})
 `;
 
     fs.writeFileSync(path.join(postDir, 'index.mdoc'), mdocContent);

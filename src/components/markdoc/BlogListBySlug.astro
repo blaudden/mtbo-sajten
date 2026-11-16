@@ -31,33 +31,31 @@ const {
 const posts = APP_BLOG.isEnabled ? await findPostsBySlugs(slugs) : [];
 ---
 
-{
-  APP_BLOG.isEnabled ? (
-    <WidgetWrapper id={id} isDark={isDark} containerClass={'bg-blue-50 dark:bg-slate-900 py-4 md:py-6 lg:py-6'} bg={bg}>
-      <div class="flex flex-col lg:justify-between lg:flex-row mb-2">
-        {title && (
-          <div class="">
-            <h2
-              class="text-md font-bold tracking-tight sm:text-xl sm:leading-none group font-heading mb-2"
-              set:html={title}
-            />
-            {APP_BLOG.list.isEnabled && linkText && linkUrl && (
-              <a
-                class="text-muted dark:text-slate-400 hover:text-primary transition ease-in duration-200 block mb-6 lg:mb-0"
-                href={linkUrl}
-              >
-                {linkText} »
-              </a>
-            )}
-          </div>
-        )}
+{APP_BLOG.isEnabled ? (
+  <WidgetWrapper id={id} isDark={isDark} containerClass={'bg-blue-50 dark:bg-slate-900 py-4 md:py-6 lg:py-6'} bg={bg}>
+    <div class="flex flex-col lg:justify-between lg:flex-row mb-2">
+      {title && (
+        <div class="">
+          <h2
+            class="text-md font-bold tracking-tight sm:text-xl sm:leading-none group font-heading mb-2"
+            set:html={title}
+          />
+          {APP_BLOG.list.isEnabled && linkText && linkUrl && (
+            <a
+              class="text-muted dark:text-slate-400 hover:text-primary transition ease-in duration-200 block mb-6 lg:mb-0"
+              href={linkUrl}
+            >
+              {linkText} »
+            </a>
+          )}
+        </div>
+      )}
 
-        {information && <p class="text-muted dark:text-slate-400 lg:text-sm lg:max-w-md" set:html={information} />}
-      </div>
+      {information && <p class="text-muted dark:text-slate-400 lg:text-sm lg:max-w-md" set:html={information} />}
+    </div>
 
-      <BlogList posts={posts} />
-    </WidgetWrapper>
-  ) : (
-    <Fragment />
-  )
-}
+    <BlogList posts={posts} />
+  </WidgetWrapper>
+) : (
+  <Fragment />
+)}

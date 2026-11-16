@@ -20,24 +20,9 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
 
 <article class="mb-6 transition">
   <div class="relative bg-gray-400 dark:bg-slate-700 rounded shadow-lg mb-6">
-    {
-      image &&
-        (link ? (
-          <a href={link} class="block w-full h-auto">
-            <Image
-              src={image}
-              class="w-full h-auto rounded shadow-lg bg-gray-400 dark:bg-slate-700"
-              widths={[400, 600, 900]}
-              width={400}
-              sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 400px"
-              alt={post.title}
-              layout="responsive"
-              loading="lazy"
-              decoding="async"
-              quality={80}
-            />
-          </a>
-        ) : (
+    {image &&
+      (link ? (
+        <a href={link} class="block w-full h-auto">
           <Image
             src={image}
             class="w-full h-auto rounded shadow-lg bg-gray-400 dark:bg-slate-700"
@@ -50,20 +35,31 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
             decoding="async"
             quality={80}
           />
-        ))
-    }
+        </a>
+      ) : (
+        <Image
+          src={image}
+          class="w-full h-auto rounded shadow-lg bg-gray-400 dark:bg-slate-700"
+          widths={[400, 600, 900]}
+          width={400}
+          sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 400px"
+          alt={post.title}
+          layout="responsive"
+          loading="lazy"
+          decoding="async"
+          quality={80}
+        />
+      ))}
   </div>
 
   <h3 class="text-xl sm:text-2xl font-bold leading-tight mb-2 font-heading dark:text-slate-300">
-    {
-      link ? (
-        <a class="inline-block hover:text-primary dark:hover:text-blue-700 transition ease-in duration-200" href={link}>
-          {post.title}
-        </a>
-      ) : (
-        post.title
-      )
-    }
+    {link ? (
+      <a class="inline-block hover:text-primary dark:hover:text-blue-700 transition ease-in duration-200" href={link}>
+        {post.title}
+      </a>
+    ) : (
+      post.title
+    )}
   </h3>
 
   {/* Truncate excerpt for grid view to keep layout consistent */}

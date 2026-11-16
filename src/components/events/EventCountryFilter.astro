@@ -20,18 +20,16 @@ const hasSweden = countries.includes('SWE');
   role="group"
   aria-label="Filtrera tävlingar"
 >
-  {
-    hasFeatured && (
-      <button
-        class="filter-btn active px-4 py-1.5 text-sm font-medium rounded-md transition-all flex items-center"
-        data-filter-type="featured"
-        type="button"
-      >
-        <Icon name="tabler:star-filled" class="w-4 h-4 text-orange-400 mr-1.5" />
-        <span>Rekommenderade</span>
-      </button>
-    )
-  }
+  {hasFeatured && (
+    <button
+      class="filter-btn active px-4 py-1.5 text-sm font-medium rounded-md transition-all flex items-center"
+      data-filter-type="featured"
+      type="button"
+    >
+      <Icon name="tabler:star-filled" class="w-4 h-4 text-orange-400 mr-1.5" />
+      <span>Rekommenderade</span>
+    </button>
+  )}
   <button
     class={`filter-btn ${!hasFeatured ? 'active' : ''} px-4 py-1.5 text-sm font-medium rounded-md transition-all flex items-center`}
     data-filter-type="all"
@@ -39,19 +37,17 @@ const hasSweden = countries.includes('SWE');
   >
     <span>Alla</span>
   </button>
-  {
-    hasSweden && (
-      <button
-        class="filter-btn px-4 py-1.5 text-sm font-medium rounded-md transition-all flex items-center"
-        data-filter-type="country"
-        data-filter-value="SWE"
-        type="button"
-      >
-        <span aria-hidden="true">{countryCodeToFlag('SWE')}</span>
-        <span class="ml-1.5">Sverige</span>
-      </button>
-    )
-  }
+  {hasSweden && (
+    <button
+      class="filter-btn px-4 py-1.5 text-sm font-medium rounded-md transition-all flex items-center"
+      data-filter-type="country"
+      data-filter-value="SWE"
+      type="button"
+    >
+      <span aria-hidden="true">{countryCodeToFlag('SWE')}</span>
+      <span class="ml-1.5">Sverige</span>
+    </button>
+  )}
 </div>
 
 <style>

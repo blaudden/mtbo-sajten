@@ -23,27 +23,9 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
 ---
 
 <article class={`max-w-md mx-auto md:max-w-none grid gap-6 md:gap-8 ${image ? 'lg:grid-cols-2' : ''}`}>
-  {
-    image &&
-      (link ? (
-        <a class="relative block group" href={link ?? 'javascript:void(0)'}>
-          <div class="relative bg-gray-400 dark:bg-slate-700 rounded shadow-lg overflow-hidden">
-            {image && (
-              <Image
-                src={image}
-                class="w-full h-auto rounded shadow-lg bg-gray-400 dark:bg-slate-700"
-                widths={[400, 900]}
-                width={900}
-                sizes="(max-width: 900px) 400px, 900px"
-                alt={post.title}
-                layout="responsive"
-                loading="lazy"
-                decoding="async"
-              />
-            )}
-          </div>
-        </a>
-      ) : (
+  {image &&
+    (link ? (
+      <a class="relative block group" href={link ?? 'javascript:void(0)'}>
         <div class="relative bg-gray-400 dark:bg-slate-700 rounded shadow-lg overflow-hidden">
           {image && (
             <Image
@@ -59,53 +41,65 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
             />
           )}
         </div>
-      ))
-  }
+      </a>
+    ) : (
+      <div class="relative bg-gray-400 dark:bg-slate-700 rounded shadow-lg overflow-hidden">
+        {image && (
+          <Image
+            src={image}
+            class="w-full h-auto rounded shadow-lg bg-gray-400 dark:bg-slate-700"
+            widths={[400, 900]}
+            width={900}
+            sizes="(max-width: 900px) 400px, 900px"
+            alt={post.title}
+            layout="responsive"
+            loading="lazy"
+            decoding="async"
+          />
+        )}
+      </div>
+    ))}
   <div class="mt-2">
     <header>
       <div class="mb-1">
         <span class="text-sm">
           <Icon name="tabler:clock" class="w-3.5 h-3.5 inline-block -mt-0.5 mr-1 dark:text-gray-400" />
-          <time datetime={String(post.publishDate)} class="inline-block">{getFormattedDate(post.publishDate)}</time>
-          {
-            post.category && (
-              <>
-                {' '}
-                ·{' '}
-                <a class="capitalize hover:underline" href={getPermalink(post.category.slug, 'category')}>
-                  {getPrettyCategory(post.category.title)}
-                </a>
-              </>
-            )
-          }
+          <time datetime={String(post.publishDate)} class="inline-block">
+            {getFormattedDate(post.publishDate)}
+          </time>
+          {post.category && (
+            <>
+              {' '}
+              ·{' '}
+              <a class="capitalize hover:underline" href={getPermalink(post.category.slug, 'category')}>
+                {getPrettyCategory(post.category.title)}
+              </a>
+            </>
+          )}
         </span>
       </div>
       <h2 class="text-xl sm:text-2xl font-bold leading-tight mb-2 font-heading dark:text-slate-300">
-        {
-          link ? (
-            <a
-              class="inline-block hover:text-primary dark:hover:text-blue-700 transition ease-in duration-200"
-              href={link}
-            >
-              {post.title}
-            </a>
-          ) : (
-            post.title
-          )
-        }
+        {link ? (
+          <a
+            class="inline-block hover:text-primary dark:hover:text-blue-700 transition ease-in duration-200"
+            href={link}
+          >
+            {post.title}
+          </a>
+        ) : (
+          post.title
+        )}
       </h2>
     </header>
 
     {/* Show full excerpt in list view for better context */}
     {post.excerpt && <p class="grow text-muted dark:text-slate-400 text-lg">{post.excerpt}</p>}
-    {
-      post.tags && Array.isArray(post.tags) ? (
-        <footer class="mt-5">
-          <PostTags tags={post.tags} />
-        </footer>
-      ) : (
-        <Fragment />
-      )
-    }
+    {post.tags && Array.isArray(post.tags) ? (
+      <footer class="mt-5">
+        <PostTags tags={post.tags} />
+      </footer>
+    ) : (
+      <Fragment />
+    )}
   </div>
 </article>

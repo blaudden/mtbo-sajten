@@ -27,141 +27,86 @@ const isGroupedEvent = event.id.startsWith('GRP_');
 const hasPerRaceLinks = isGroupedEvent && event.races.some((r) => Boolean(r.external_url));
 ---
 
-{
-  raceCount >= 1 && (
-    <div class="mb-10">
-      <h2 class="text-xl font-bold mb-4 flex items-center gap-2 font-heading text-default">
-        <Icon name="tabler:flag" class="w-5 h-5 text-primary" />
-        <span data-i18n-sv={raceHeadingSv} data-i18n-en={raceHeadingEn}>
-          {raceHeadingSv}
-        </span>
-      </h2>
+{raceCount >= 1 && (
+  <div class="mb-10">
+    <h2 class="text-xl font-bold mb-4 flex items-center gap-2 font-heading text-default">
+      <Icon name="tabler:flag" class="w-5 h-5 text-primary" />
+      <span data-i18n-sv={raceHeadingSv} data-i18n-en={raceHeadingEn}>
+        {raceHeadingSv}
+      </span>
+    </h2>
 
-      {/* Desktop table */}
-      <div class="hidden md:block overflow-x-auto">
-        <table class="w-full text-left">
-          <thead>
-            <tr class="border-b-2 border-gray-200 dark:border-gray-700">
-              <th class="w-8 py-3 px-2.5 text-xs font-bold uppercase tracking-widest text-muted">#</th>
+    {/* Desktop table */}
+    <div class="hidden md:block overflow-x-auto">
+      <table class="w-full text-left">
+        <thead>
+          <tr class="border-b-2 border-gray-200 dark:border-gray-700">
+            <th class="w-8 py-3 px-2.5 text-xs font-bold uppercase tracking-widest text-muted">#</th>
+            <th
+              class="w-px whitespace-nowrap py-3 px-2.5 text-xs font-bold uppercase tracking-widest text-muted"
+              data-i18n-sv="Datum"
+              data-i18n-en="Date"
+            >
+              Datum
+            </th>
+            <th
+              class="py-3 px-3 text-xs font-bold uppercase tracking-widest text-muted"
+              data-i18n-sv={raceTypeSingular}
+              data-i18n-en={isStageEvent ? 'Stage' : 'Competition'}
+            >
+              {raceTypeSingular}
+            </th>
+            <th
+              class="w-px whitespace-nowrap py-3 px-2.5 text-xs font-bold uppercase tracking-widest text-muted text-center"
+              data-i18n-sv="Dist."
+              data-i18n-en="Dist."
+            >
+              Dist.
+            </th>
+            {hasPerRaceLinks && (
               <th
-                class="w-px whitespace-nowrap py-3 px-2.5 text-xs font-bold uppercase tracking-widest text-muted"
-                data-i18n-sv="Datum"
-                data-i18n-en="Date"
+                class="w-px whitespace-nowrap py-3 px-2.5 text-xs font-bold uppercase tracking-widest text-muted text-right"
+                data-i18n-sv="Länk"
+                data-i18n-en="Link"
               >
-                Datum
+                Länk
               </th>
-              <th
-                class="py-3 px-3 text-xs font-bold uppercase tracking-widest text-muted"
-                data-i18n-sv={raceTypeSingular}
-                data-i18n-en={isStageEvent ? 'Stage' : 'Competition'}
-              >
-                {raceTypeSingular}
-              </th>
-              <th
-                class="w-px whitespace-nowrap py-3 px-2.5 text-xs font-bold uppercase tracking-widest text-muted text-center"
-                data-i18n-sv="Dist."
-                data-i18n-en="Dist."
-              >
-                Dist.
-              </th>
-              {hasPerRaceLinks && (
-                <th
-                  class="w-px whitespace-nowrap py-3 px-2.5 text-xs font-bold uppercase tracking-widest text-muted text-right"
-                  data-i18n-sv="Länk"
-                  data-i18n-en="Link"
-                >
-                  Länk
-                </th>
-              )}
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-gray-100 dark:divide-gray-800">
-            {event.races.map((race) => (
-              <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-800/30 transition-colors">
-                <td class="py-3 px-2.5 text-sm text-muted">{race.race_number}</td>
-                <td class="py-3 px-2.5 text-sm text-muted whitespace-nowrap">
-                  {formatRaceDate(race.datetimez, { includeYear: false })}
-                </td>
-                <td class="py-3 px-3 text-sm text-default">
-                  <div class="font-semibold">{race.name || event.name}</div>
-                  {race.location_note?.sv && (
-                    <div
-                      class="text-xs text-muted dark:text-slate-400 mt-0.5 flex items-center gap-1"
-                      data-i18n-sv={race.location_note.sv}
-                      data-i18n-en={race.location_note.en || race.location_note.sv}
-                    >
-                      <Icon name="tabler:info-circle" class="w-3.5 h-3.5 text-primary/70 shrink-0" />
-                      <span>{race.location_note.sv}</span>
-                    </div>
-                  )}
-                </td>
-                <td class="py-3 px-2.5 text-center whitespace-nowrap">
-                  <DisciplineBadge discipline={race.discipline} />
-                </td>
-                {hasPerRaceLinks && (
-                  <td class="py-3 px-2.5 text-right whitespace-nowrap">
-                    <div class="inline-flex flex-col items-end gap-1">
-                      {race.external_url && (
-                        <a
-                          href={race.external_url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          class="inline-flex items-center gap-1 text-xs font-medium text-primary hover:underline"
-                          title="Öppna i Eventor"
-                        >
-                          <span>Eventor</span>
-                          <Icon name="tabler:external-link" class="w-3.5 h-3.5" />
-                        </a>
-                      )}
-                      {race.wre_external_url && (
-                        <a
-                          href={race.wre_external_url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          class="inline-flex items-center gap-1 text-xs font-medium text-amber-700 dark:text-amber-300 hover:underline"
-                          title="Öppna WRE i IOF Eventor"
-                        >
-                          <span>IOF Eventor</span>
-                          <Icon name="tabler:external-link" class="w-3.5 h-3.5" />
-                        </a>
-                      )}
-                    </div>
-                  </td>
-                )}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-
-      {/* Mobile race cards */}
-      <div class="md:hidden space-y-3">
-        {event.races.map((race) => (
-          <div class="border border-gray-200 dark:border-gray-700 rounded-xl p-4 bg-white dark:bg-slate-900 shadow-sm">
-            <div class="flex items-start justify-between gap-2">
-              <div>
-                <p class="text-sm font-bold text-default">{race.name || event.name}</p>
+            )}
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100 dark:divide-gray-800">
+          {event.races.map((race) => (
+            <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-800/30 transition-colors">
+              <td class="py-3 px-2.5 text-sm text-muted">{race.race_number}</td>
+              <td class="py-3 px-2.5 text-sm text-muted whitespace-nowrap">
+                {formatRaceDate(race.datetimez, { includeYear: false })}
+              </td>
+              <td class="py-3 px-3 text-sm text-default">
+                <div class="font-semibold">{race.name || event.name}</div>
                 {race.location_note?.sv && (
-                  <p
-                    class="text-xs text-muted dark:text-slate-400 mt-0.5"
+                  <div
+                    class="text-xs text-muted dark:text-slate-400 mt-0.5 flex items-center gap-1"
                     data-i18n-sv={race.location_note.sv}
                     data-i18n-en={race.location_note.en || race.location_note.sv}
                   >
-                    {race.location_note.sv}
-                  </p>
+                    <Icon name="tabler:info-circle" class="w-3.5 h-3.5 text-primary/70 shrink-0" />
+                    <span>{race.location_note.sv}</span>
+                  </div>
                 )}
-                <p class="text-xs text-muted mt-1">{formatRaceDate(race.datetimez, { includeYear: false })}</p>
-              </div>
-              <div class="flex flex-col items-end gap-2 shrink-0">
+              </td>
+              <td class="py-3 px-2.5 text-center whitespace-nowrap">
                 <DisciplineBadge discipline={race.discipline} />
-                {hasPerRaceLinks && (race.external_url || race.wre_external_url) && (
-                  <div class="flex items-center gap-3">
+              </td>
+              {hasPerRaceLinks && (
+                <td class="py-3 px-2.5 text-right whitespace-nowrap">
+                  <div class="inline-flex flex-col items-end gap-1">
                     {race.external_url && (
                       <a
                         href={race.external_url}
                         target="_blank"
                         rel="noopener noreferrer"
                         class="inline-flex items-center gap-1 text-xs font-medium text-primary hover:underline"
+                        title="Öppna i Eventor"
                       >
                         <span>Eventor</span>
                         <Icon name="tabler:external-link" class="w-3.5 h-3.5" />
@@ -173,18 +118,71 @@ const hasPerRaceLinks = isGroupedEvent && event.races.some((r) => Boolean(r.exte
                         target="_blank"
                         rel="noopener noreferrer"
                         class="inline-flex items-center gap-1 text-xs font-medium text-amber-700 dark:text-amber-300 hover:underline"
+                        title="Öppna WRE i IOF Eventor"
                       >
                         <span>IOF Eventor</span>
                         <Icon name="tabler:external-link" class="w-3.5 h-3.5" />
                       </a>
                     )}
                   </div>
-                )}
-              </div>
+                </td>
+              )}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    {/* Mobile race cards */}
+    <div class="md:hidden space-y-3">
+      {event.races.map((race) => (
+        <div class="border border-gray-200 dark:border-gray-700 rounded-xl p-4 bg-white dark:bg-slate-900 shadow-sm">
+          <div class="flex items-start justify-between gap-2">
+            <div>
+              <p class="text-sm font-bold text-default">{race.name || event.name}</p>
+              {race.location_note?.sv && (
+                <p
+                  class="text-xs text-muted dark:text-slate-400 mt-0.5"
+                  data-i18n-sv={race.location_note.sv}
+                  data-i18n-en={race.location_note.en || race.location_note.sv}
+                >
+                  {race.location_note.sv}
+                </p>
+              )}
+              <p class="text-xs text-muted mt-1">{formatRaceDate(race.datetimez, { includeYear: false })}</p>
+            </div>
+            <div class="flex flex-col items-end gap-2 shrink-0">
+              <DisciplineBadge discipline={race.discipline} />
+              {hasPerRaceLinks && (race.external_url || race.wre_external_url) && (
+                <div class="flex items-center gap-3">
+                  {race.external_url && (
+                    <a
+                      href={race.external_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center gap-1 text-xs font-medium text-primary hover:underline"
+                    >
+                      <span>Eventor</span>
+                      <Icon name="tabler:external-link" class="w-3.5 h-3.5" />
+                    </a>
+                  )}
+                  {race.wre_external_url && (
+                    <a
+                      href={race.wre_external_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center gap-1 text-xs font-medium text-amber-700 dark:text-amber-300 hover:underline"
+                    >
+                      <span>IOF Eventor</span>
+                      <Icon name="tabler:external-link" class="w-3.5 h-3.5" />
+                    </a>
+                  )}
+                </div>
+              )}
             </div>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
-  )
-}
+  </div>
+)}

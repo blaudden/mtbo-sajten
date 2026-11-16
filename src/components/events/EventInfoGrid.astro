@@ -31,52 +31,40 @@ const {
   <span class="flex items-center gap-1.5 flex-wrap">
     <Icon name="tabler:calendar" class="w-4 h-4" />
     <span>{dateRange}</span>
-    {
-      isDatePreliminary && (
-        <span class="px-1.5 py-0.5 text-xs font-semibold rounded bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300">
-          Prel.
-        </span>
-      )
-    }
+    {isDatePreliminary && (
+      <span class="px-1.5 py-0.5 text-xs font-semibold rounded bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300">
+        Prel.
+      </span>
+    )}
   </span>
-  {
-    organiserName && (
-      <span class="flex items-center gap-1.5">
-        <Icon name="tabler:users" class="w-4 h-4" />
-        {organiserName}
-      </span>
-    )
-  }
-  {
-    region && (
-      <span class="flex items-center gap-1.5">
-        <Icon name="tabler:map-pin" class="w-4 h-4" />
-        {region.replace(/\\n/g, ', ')}
-      </span>
-    )
-  }
-  {
-    punchingSystem && (
-      <span class="flex items-center gap-1.5">
-        <Icon name="tabler:device-watch" class="w-4 h-4" />
-        {punchingSystem}
-      </span>
-    )
-  }
-  {
-    discipline && (
-      <span class="flex items-center gap-1.5 font-medium">
-        <Icon name="tabler:bike" class="w-4 h-4" />
-        {translateDiscipline(discipline)}
-      </span>
-    )
-  }
-  {
-    nightOrDay === 'night' && (
-      <span class="flex items-center gap-1.5 font-medium">
-        <Icon name="tabler:moon" class="w-4 h-4 text-indigo-500" />
-        Natt
-      </span>
-    )
-  }
+  {organiserName && (
+    <span class="flex items-center gap-1.5">
+      <Icon name="tabler:users" class="w-4 h-4" />
+      {organiserName}
+    </span>
+  )}
+  {region && (
+    <span class="flex items-center gap-1.5">
+      <Icon name="tabler:map-pin" class="w-4 h-4" />
+      {region.replace(/\\n/g, ', ')}
+    </span>
+  )}
+  {punchingSystem && (
+    <span class="flex items-center gap-1.5">
+      <Icon name="tabler:device-watch" class="w-4 h-4" />
+      {punchingSystem}
+    </span>
+  )}
+  {discipline && (
+    <span class="flex items-center gap-1.5 font-medium">
+      <Icon name="tabler:bike" class="w-4 h-4" />
+      {translateDiscipline(discipline)}
+    </span>
+  )}
+  {nightOrDay === 'night' && (
+    <span class="flex items-center gap-1.5 font-medium">
+      <Icon name="tabler:moon" class="w-4 h-4 text-indigo-500" />
+      Natt
+    </span>
+  )}
 </div>

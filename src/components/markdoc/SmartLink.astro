@@ -108,34 +108,29 @@ const rel = isResource || isExternal ? 'noopener noreferrer' : undefined;
   data-resource-type={isResource ? type : undefined}
   class="group smart-link relative transition-colors"
 >
-  {
-    isResource ? (
-      <>
-        <span class="smart-icon hidden mr-3 shrink-0 w-8 h-8 items-center justify-center rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 group-hover:bg-primary-50 dark:group-hover:bg-primary-900/20 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
-          {imageMap[type] ? (
-            <Image src={imageMap[type]} alt={type} class="w-5 h-5 object-contain" />
-          ) : (
-            <Icon
-              name={icons[type as keyof typeof icons] || 'tabler:link'}
-              class={`w-5 h-5 ${iconColors[type] || ''}`}
-            />
-          )}
-        </span>
+  {isResource ? (
+    <>
+      <span class="smart-icon hidden mr-3 shrink-0 w-8 h-8 items-center justify-center rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 group-hover:bg-primary-50 dark:group-hover:bg-primary-900/20 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+        {imageMap[type] ? (
+          <Image src={imageMap[type]} alt={type} class="w-5 h-5 object-contain" />
+        ) : (
+          <Icon name={icons[type as keyof typeof icons] || 'tabler:link'} class={`w-5 h-5 ${iconColors[type] || ''}`} />
+        )}
+      </span>
 
-        <span class="smart-content border-b border-transparent group-hover:border-current leading-tight">
-          <slot />
-        </span>
-
-        <span class="smart-suffix hidden text-gray-500 font-normal ml-1">{suffix}</span>
-
-        <span class="smart-external-box hidden ml-2 p-0.5 rounded border border-gray-300 dark:border-gray-600 text-gray-400 group-hover:text-primary-600 dark:group-hover:text-primary-400 group-hover:border-primary-300 dark:group-hover:border-primary-700">
-          <Icon name="tabler:arrow-up-right" class="w-3 h-3" />
-        </span>
-      </>
-    ) : (
-      <span class="smart-content border-b border-transparent group-hover:border-current">
+      <span class="smart-content border-b border-transparent group-hover:border-current leading-tight">
         <slot />
       </span>
-    )
-  }
+
+      <span class="smart-suffix hidden text-gray-500 font-normal ml-1">{suffix}</span>
+
+      <span class="smart-external-box hidden ml-2 p-0.5 rounded border border-gray-300 dark:border-gray-600 text-gray-400 group-hover:text-primary-600 dark:group-hover:text-primary-400 group-hover:border-primary-300 dark:group-hover:border-primary-700">
+        <Icon name="tabler:arrow-up-right" class="w-3 h-3" />
+      </span>
+    </>
+  ) : (
+    <span class="smart-content border-b border-transparent group-hover:border-current">
+      <slot />
+    </span>
+  )}
 </a>
