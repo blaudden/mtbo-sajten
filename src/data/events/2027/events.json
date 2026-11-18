@@ -1327,6 +1327,18 @@
         {
           "name": "Sweden",
           "country_code": "SWE"
+        },
+        {
+          "name": "BroSo OK",
+          "country_code": "SWE"
+        },
+        {
+          "name": "Hassleholms OK",
+          "country_code": "SWE"
+        },
+        {
+          "name": "Lunds OK",
+          "country_code": "SWE"
         }
       ],
       "officials": [
@@ -1354,7 +1366,14 @@
           "last_updated_at": "2026-11-04T05:32:10.807778+00:00"
         }
       ],
-      "documents": [],
+      "documents": [
+        {
+          "type": "Other",
+          "title": "Entry",
+          "url": "https://eventor.orientering.se/Events/Show/60823",
+          "published_time": null
+        }
+      ],
       "information": null,
       "region": null,
       "punching_system": null,
@@ -1394,6 +1413,18 @@
         {
           "name": "Sweden",
           "country_code": "SWE"
+        },
+        {
+          "name": "Harlovs IF",
+          "country_code": "SWE"
+        },
+        {
+          "name": "Hassleholms OK",
+          "country_code": "SWE"
+        },
+        {
+          "name": "Lunds OK",
+          "country_code": "SWE"
         }
       ],
       "officials": [
@@ -1421,7 +1452,14 @@
           "last_updated_at": "2026-11-04T05:32:10.807796+00:00"
         }
       ],
-      "documents": [],
+      "documents": [
+        {
+          "type": "Other",
+          "title": "Entry",
+          "url": "https://eventor.orientering.se/Events/Show/60824",
+          "published_time": null
+        }
+      ],
       "information": null,
       "region": null,
       "punching_system": null,
@@ -1888,66 +1926,7 @@
             "lat": 57.4717843462897,
             "lng": 13.3408835885214
           },
-          "areas": [
-            {
-              "lat": 57.4717843462897,
-              "lng": 13.3408835885214,
-              "polygon": [
-                [
-                  57.4771661519691,
-                  13.343214789173773
-                ],
-                [
-                  57.423965083115064,
-                  13.287784135466119
-                ],
-                [
-                  57.415227030291504,
-                  13.392559165275328
-                ],
-                [
-                  57.426368354628096,
-                  13.44689159757685
-                ],
-                [
-                  57.43540093493513,
-                  13.442124044877064
-                ],
-                [
-                  57.444292889144236,
-                  13.421016150133417
-                ],
-                [
-                  57.45687980004752,
-                  13.40322532186205
-                ],
-                [
-                  57.46154246556213,
-                  13.436722023298186
-                ],
-                [
-                  57.4687684219526,
-                  13.442851733912196
-                ],
-                [
-                  57.48135216049917,
-                  13.422914695349467
-                ],
-                [
-                  57.486710584960605,
-                  13.3926376398924
-                ],
-                [
-                  57.48594514388208,
-                  13.365394481607911
-                ],
-                [
-                  57.4771661519691,
-                  13.343214789173773
-                ]
-              ]
-            }
-          ],
+          "areas": [],
           "urls": [],
           "documents": [],
           "entry_counts": null,
@@ -3155,7 +3134,7 @@
         }
       ],
       "documents": [],
-      "information": "This event is included in Nordisk MTBO-Camp 2027.",
+      "information": "Den här tävlingen är en del av Nordisk MTBO-camp 2027.\nIngår i World Master Series.\nThis event is included in Nordisk MTBO-Camp 2027.\nThis event is included in World Master Series.",
       "region": "Skåne",
       "punching_system": "Sportident",
       "races": [
@@ -3222,7 +3201,7 @@
     },
     {
       "id": "SWE_60819",
-      "name": "MTBO Camp, medel, natt",
+      "name": "MTBO Camp, natt",
       "start_time": "2027-04-14",
       "end_time": "2027-04-14",
       "status": "Sanctioned",
@@ -3293,13 +3272,13 @@
         }
       ],
       "documents": [],
-      "information": "This event is included in Nordisk MTBO-Camp 2027.",
+      "information": "Den här tävlingen ingår i Nordisk MTBO-Camp 2027.\nThis event is included in Nordisk MTBO-Camp 2027.",
       "region": "Skåne",
       "punching_system": "Sportident",
       "races": [
         {
           "race_number": 1,
-          "name": "MTBO Camp, medel, natt",
+          "name": "MTBO Camp, natt",
           "datetimez": "2027-04-14T19:00:00+02:00",
           "discipline": "Middle",
           "night_or_day": "night",
@@ -4161,7 +4140,7 @@
     },
     {
       "id": "SWE_61221",
-      "name": "MTBO Camp training 1",
+      "name": "MTBO Camp, training 1",
       "start_time": "2027-04-15",
       "end_time": "2027-04-15",
       "status": "Sanctioned",
@@ -4193,7 +4172,9 @@
           "name": "enc:BBoEAG0eFxAOEwQfHVoGBA=="
         }
       ],
-      "classes": [],
+      "classes": [
+        "Training 1"
+      ],
       "urls": [
         {
           "type": "Path",
@@ -4209,13 +4190,13 @@
         }
       ],
       "documents": [],
-      "information": "Denna träning ingår i Nordisk MTBO-Camp 2027",
+      "information": "Denna träning ingår i Nordisk MTBO-Camp 2027.\nThis training is part of Nordisk MTBO-Camp 2027.",
       "region": "Skåne",
       "punching_system": "other",
       "races": [
         {
           "race_number": 1,
-          "name": "MTBO Camp training 1",
+          "name": "MTBO Camp, training 1",
           "datetimez": "2027-04-15T13:00:00+02:00",
           "discipline": "Middle",
           "night_or_day": "day",
@@ -4237,7 +4218,7 @@
     },
     {
       "id": "SWE_61222",
-      "name": "MTBO Camp training 2",
+      "name": "MTBO Camp, training 2",
       "start_time": "2027-04-17",
       "end_time": "2027-04-17",
       "status": "Sanctioned",
@@ -4295,7 +4276,7 @@
       "races": [
         {
           "race_number": 1,
-          "name": "MTBO Camp training 2",
+          "name": "MTBO Camp, training 2",
           "datetimez": "2027-04-17T13:00:00+02:00",
           "discipline": "Middle",
           "night_or_day": "day",
