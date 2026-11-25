@@ -796,6 +796,10 @@
         {
           "name": "Italy",
           "country_code": "ITA"
+        },
+        {
+          "name": "NIRVANA VERDE",
+          "country_code": "ITA"
         }
       ],
       "officials": [],
@@ -847,6 +851,10 @@
       "organisers": [
         {
           "name": "Italy",
+          "country_code": "ITA"
+        },
+        {
+          "name": "NIRVANA VERDE",
           "country_code": "ITA"
         }
       ],
