@@ -158,7 +158,7 @@
       "event_ids": ["SWE_59350"],
       "start_date": "2027-07-26",
       "end_date": "2027-07-28",
-      "organisers": ["Svensk Orientering Events", "Tullinge SK"],
+      "organisers": ["Svensk Orientering Events"],
       "region": "Stockholm (Lidingö & Tullinge)",
       "website": "https://www.oringen.se",
       "content": {
@@ -166,8 +166,8 @@
           "title": "MTBO vid O-Ringen Stockholm 2027",
           "subtitle": "Tre etapper MTBO på Lidingö och vid Brantbrink i Tullinge den 26–28 juli",
           "paragraphs": [
-            "Under O-Ringen i Stockholm 2027 avgörs MTBO som en treetapperstävling måndag till onsdag den 26–28 juli. Den första etappen (medeldistans) måndagen den 26 juli cyklas på Lidingö i ett kuperat och stigrikt friluftsområde.",
-            "Etapp 2 (sprint) tisdagen den 27 juli och etapp 3 (långdistans) onsdagen den 28 juli har gemensam arena vid Brantbrink i Tullinge, som är Tullinge SK:s klubbstuga. Här väntar omväxlande Södertörnsterräng med snabba stigar, motionsspår och vägval på åsarna söder om Stockholm."
+            "Under O-Ringen i Stockholm 2027 avgörs MTBO som en tredagarstävling måndag till onsdag den 26–28 juli. Den första etappen (medeldistans) måndagen den 26 juli cyklas på Lidingö i ett kuperat och stigrikt friluftsområde.",
+            "Etapp 2 (sprint) tisdagen den 27 juli och etapp 3 (långdistans) onsdagen den 28 juli har gemensam arena vid Brantbrink i Tullinge, som är Tullinge SK:s klubbstuga. Här väntar omväxlande Södertörnsterräng med snabba stigar, motionsspår och vägval på sandåsen söder om Stockholm."
           ],
           "registration_info": {
             "title": "Så anmäler du dig till MTBO på O-Ringen",
@@ -180,8 +180,8 @@
           },
           "race_notes": {
             "SWE_59350:1": "Lidingö, Stockholm",
-            "SWE_59350:2": "Brantbrink (Tullinge SK), Tullinge",
-            "SWE_59350:3": "Brantbrink (Tullinge SK), Tullinge"
+            "SWE_59350:2": "Brantbrink, Tullinge",
+            "SWE_59350:3": "Brantbrink, Tullinge"
           }
         },
         "en": {
@@ -202,8 +202,8 @@
           },
           "race_notes": {
             "SWE_59350:1": "Lidingö, Stockholm",
-            "SWE_59350:2": "Brantbrink (Tullinge SK), Tullinge",
-            "SWE_59350:3": "Brantbrink (Tullinge SK), Tullinge"
+            "SWE_59350:2": "Brantbrink, Tullinge",
+            "SWE_59350:3": "Brantbrink, Tullinge"
           }
         }
       }
